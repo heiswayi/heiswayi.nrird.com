@@ -15,7 +15,6 @@ Unless otherwise stated, all original code presented on this site is licensed un
 ```
 Version 4.3
 ===========
-- ~~Removed Google Analytics code tracking.~~ (Re-added using prose.io)
 - Removed Disqus comment.
 
 Version 4.2
