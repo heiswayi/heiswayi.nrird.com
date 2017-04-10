@@ -2,9 +2,10 @@
 title: "Heiswayi Nrird • Software Engineer"
 description: "Heiswayi Nrird is just another Software Engineer who loves coffee ☕ more than anything else."
 keywords: "heiswayi nrird, software engineer, minimalist, php and csharp developer, freelancer, full stack engineer"
-#url: "https://heiswayi.github.io" # Site url (default: "")
+url: https://heiswayi.nrird.com # Site url (default: "")
 #baseurl: "" # Apply repo name if use it under gh-pages branch
 baseurl: null # Apply null if repo name is something like username.github.io
+enforce_ssl: heiswayi.nrird.com
 brand: "Heiswayi Nrird"
 
 # Disqus
