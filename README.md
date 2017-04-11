@@ -1,4 +1,4 @@
-# Version 4.3
+# Version 4.4
 
 ### About this repo
 
@@ -13,6 +13,10 @@ Unless otherwise stated, all original code presented on this site is licensed un
 ### Changelogs (for personal purpose only)
 
 ```
+Version 4.4
+===========
+- Optimized few things...
+
 Version 4.3
 ===========
 - Removed Disqus comment.
