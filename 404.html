@@ -9,9 +9,9 @@ layout: null
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Error 404 - heiswayiNrird(site);</title>
+    <title>Error 404 - {{ site.title }}</title>
     <meta name="description" content="Error 404 - Page not found">
-    <meta name="author" content="Heiswayi Nrird">
+    <meta name="author" content="{{ site.author.name }}">
 
     <style>
         * {
@@ -300,7 +300,7 @@ layout: null
         });
 
         shuffler.addEventListener('click', function() {
-            window.location.href = 'http://heiswayi.github.io';
+            window.location.href = '{{ "/" | prepend: site.baseurl | prepend: site.url }}';
         });
     </script>
 </body>

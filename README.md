@@ -1,4 +1,4 @@
-# Version 4.4
+# Version 4.5
 
 ### About this repo
 
@@ -8,11 +8,15 @@ This repo contains the source code of my site (referred to SITE_URL), which is b
 
 ### License
 
-Unless otherwise stated, all original code presented on this site is licensed under the [MIT](LICENSE.md) license. All original photographs and text on this website ([heiswayi.github.io](http://heiswayi.github.io)) are licensed under a [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/) license. If you have any questions about using any of this material for commercial purposes, please write me an email at hnrird(at)gmail.com.
+Unless otherwise stated, all original code snippets presented on this site is licensed under the [MIT](LICENSE.md) license. All original photographs and text (my blog posts) on this website ([heiswayi.github.io](http://heiswayi.github.io)) are licensed under a [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/) license. If you have any questions about using any part of these materials for commercial purposes, please write me an email at hnrird(at)gmail.com.
 
 ### Changelogs (for personal purpose only)
 
 ```
+Version 4.5
+===========
+- Updated few things, few page restructured and content revision of About page.
+
 Version 4.4
 ===========
 - Optimized few things...

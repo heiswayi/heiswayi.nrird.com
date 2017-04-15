@@ -1,63 +1,56 @@
-# SEO settings
-title: "Heiswayi Nrird • Software Engineer"
-description: "Heiswayi Nrird is just another Software Engineer who loves coffee ☕ more than anything else."
-keywords: "heiswayi nrird, software engineer, minimalist, php and csharp developer, freelancer, full stack engineer"
-url: https://heiswayi.nrird.com # Site url (default: "")
-#baseurl: "" # Apply repo name if use it under gh-pages branch
-baseurl: null # Apply null if repo name is something like username.github.io
-enforce_ssl: heiswayi.nrird.com
-brand: "Heiswayi Nrird"
+# Basic site info
+title:              "heiswayi nrird •••"
+description:        "Life Experience, Technology & Research"
+keywords:           "heiswayi nrird, personal blog, software engineer, life experience, technology and research"
+logo_text:          "Heiswayi Nrird"
+show_tagline:       true # edit file in /_includes/tagline.html
+show_social_icons:  true # edit file in /_includes/social_links.html
+og_locale:          "en_US"
+cover:              "/assets/logo.png" # site image cover
 
-# Disqus
-disqus_enabled: false
-disqus_shortname: hnbloggithub
+# Site URL settings
+url:                https://heiswayi.nrird.com # main url
+baseurl:            null # for gh-pages
+enforce_ssl:        heiswayi.nrird.com
 
 # Site author info
 author:
-  name: "Heiswayi Nrird"
-  email: hnrird@gmail.com
-  nickname: "Wayi"
-  display_bio: true # Edit file in /_includes/bio.html
-  website: http://heiswayi.github.io
+  name:             "Heiswayi Nrird"
+  email:            hnrird@gmail.com
+  github_username:  heiswayi
+  twitter_username: HeiswayiNrird
+  facebook_url:     https://www.facebook.com/heiswayi.nrird
 
-# Social settings
-og_locale: "en_US"
-display_social_icons: true # Edit file in /_includes/social_links.html
-github:
-  username: heiswayi
-facebook:
-  profile_url: https://www.facebook.com/heiswayi.nrird
-twitter:
-  username: HeiswayiNrird
+# Disqus comment settings
+disqus_enabled:     false
+disqus_shortname:   hnbloggithub
+
+# GA
+google_analytics_code: UA-58296043-7
 
 # Build settings
-#source: ./
-#destination: ../heiswayi.github.io/
-source: ./
-destination: ./_site
-
-permalink: /:year/:title
-markdown: kramdown
-highlighter: rouge
-
-timezone: Asia/Kuala_Lumpur
-
-exclude: ["README.md", "LICENSE.md", "CHANGELOG.md"]
+source:             ./
+destination:        ./_site
+permalink:          /:year/:title
+markdown:           kramdown
+highlighter:        rouge
+timezone:           Asia/Kuala_Lumpur
+exclude:            ["README.md", "LICENSE.md", "CHANGELOG.md"]
 
 # Site configurations
 compress_html:
-  clippings: all
-  comments: ["<!-- ", " -->"]
-  endings: all
+  clippings:        all
+  comments:         ["<!-- ", " -->"]
+  endings:          all
   ignore:
-    envs: [local]
-  blanklines: false
-  profile: false
-  startings: [html, head, body]
+    envs:           [local]
+  blanklines:       false
+  profile:          false
+  startings:        [html, head, body]
 
 sass:
-  sass_dir: assets/scss
-  style: compressed # expanded
+  sass_dir:         assets/scss
+  style:            compressed # expanded
 
 gems:
   - jekyll-sitemap

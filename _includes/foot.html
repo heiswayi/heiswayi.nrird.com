@@ -1,5 +1,5 @@
 <div class="footer">
-	<div class="copyright">Handmade with <span style="color:#e00"><i class="fa fa-heart-o"></i></span> using <a href="http://jekyllrb.com">Jekyll</a> &middot; <i class="fa fa-code"></i> on <a href="https://github.com/heiswayi/heiswayi.github.io">GitHub</a> <i class="fa fa-github-alt"></i><br><i class="fa fa-copyright"></i> 2015 - {{ site.time | date: "%Y" }} {{ site.author.name }}</div>
+	<div class="copyright">Handmade with <span style="color:#e00"><i class="fa fa-heart-o"></i></span> using <a href="http://jekyllrb.com">Jekyll</a> &middot; <i class="fa fa-code"></i> on <a href="https://github.com/heiswayi/heiswayi.github.io">GitHub</a> <i class="fa fa-github-alt"></i><br><i class="fa fa-copyright"></i> 2015 - {{ site.time | date: "%Y" }} {{ site.title }}</div>
 </div>
 
 <script>
@@ -22,7 +22,7 @@
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-  ga('create', 'UA-58296043-7', 'auto');
+  ga('create', '{{ site.google_analytics_code }}', 'auto');
   ga('send', 'pageview');
 
 </script>
