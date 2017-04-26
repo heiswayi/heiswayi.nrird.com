@@ -1,7 +1,7 @@
 ---
 layout: post
 title: My Free Minimalist Jekyll Themes
-description: Collection of my minimalist Jekyll themes from 2015 - 2017. Free to use, open source and live demo available.
+description: Collection of my minimalist Jekyll themes from 2015 - 2017, available for free and open source.
 keywords: free jekyll themes, minimalist jekyll themes, open source jekyll themes
 tags: [Jekyll]
 comments: true
@@ -9,7 +9,7 @@ comments: true
 
 <script async defer src="https://buttons.github.io/buttons.js"></script>
 
-[Jekyll](https://en.wikipedia.org/wiki/Jekyll_(software)) is a simple static site generator that is designed for building minimal, static blogs which you can host it with free on [GitHub Pages](https://pages.github.com/). Few years ago, I moved from [self-hosted WordPress](https://wordpress.org/) to Jekyll and have been blogging occasionally with Jekyll. Within that period, I have been making and publish few minimalist Jekyll themes myself.
+Jekyll theme is a template for the best static site generator called [Jekyll](https://en.wikipedia.org/wiki/Jekyll_(software)), which is written in Ruby by Tom Preston-Werner, GutHub's co-founder. Jekyll is designed for building minimal, static blogs which you can easily host it with free using [GitHub Pages](https://pages.github.com/). Few years ago I was using a [self-hosted WordPress](https://wordpress.org/) for my blog, but due to I blogged occasionally, I moved to Jekyll which suits me better. I also made few minimalist Jekyll themes myself for free. Here they are...
 
 ### 1. The Plain (2015)
 
