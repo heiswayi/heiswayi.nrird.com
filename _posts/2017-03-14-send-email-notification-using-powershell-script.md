@@ -112,7 +112,7 @@ Then, you can execute your PowerShell script in something looked like this way d
 
 ### Handling complex huge script
 
-Sometimes, your PowerShell script may become complex and contains thousand lines of code. In this case, you might want to organize and separate them into multiple functions where each functions might have its own parameters too. The example snippet below shows you how it should be done or looked like.
+Sometimes, your PowerShell script may become complex and contains thousand lines of code. In this case, you might want to organize and separate them into multiple functions where each function might have its own parameters too. The example snippet below shows you how it should be done or looked like.
 
 > However, I do not recommend for you to write huge and complex script into a single file. It's best for you to keep your script as simple as possible. If you really need complex operations, it's best for you to create something more like command-line program which you can execute with a set of arguments or configuration file.
 
