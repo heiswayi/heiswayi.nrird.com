@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Send email notification using PowerShell script
-description: Automate sending email task on Windows using lightweight PowerShell script with SMTP client.
+description: Automate your task for sending email notification with PowerShell script and Windows SMTP Client.
 keywords: software build automation, send email notification, using smtp client in powershell, software build notification
 tags: [PowerShell]
 comments: true
