@@ -1,33 +1,35 @@
 ---
 layout: post
-title: Creating my GitHub repo list site using GitHub API
-description: Creating dedicated site for listing GitHub repositories and gists for better clarity especially where there are a lot of repos/gists.
-keywords: gird layout, github repo list site, github gist list site, listing site, github api v3, jquery ajax, muuri plugin
+title: Creating my GitHub repo listing page using GitHub API
+description: Creating dedicated sites to list my GitHub repos and gists for better clarity especially when the numbers of my repo and gist started increasing.
+keywords: listing site, github repo gist listing, grid layout site, github api v3, muuri jquery plugin
 tags: [JavaScript, AJAX, GitHub API]
 comments: true
 ---
 
-Sometimes, I found that the best way to display all of my GitHub repositories for better clarity is to create its own dedicated site for that. Well, especially when I have a lot of repos, it will be quite helpful to look all those repos in one glance. Like [Twitter](https://twitter.github.io/), [IBM](https://ibm.github.io/) or [Uber](https://uber.github.io/) did. All of these are possible by using [GitHub API](https://developer.github.com/v3/).
+Sometimes, I found that the best way to display all of my GitHub repositories for a better clarity is to create its own dedicated site for that, especially when the number of my repo started increasing. It will be quite helpful to look all those repos in one glance. Like [Twitter](https://twitter.github.io/), [IBM](https://ibm.github.io/) or [Uber](https://uber.github.io/) did. All of these are possible by using [GitHub API](https://developer.github.com/v3/).
 
-Previously, my repo list dedicated site was using the same layout as I did for [my gists](http://heiswayi.github.io/my-gists/). Below is the screenshot for my gist list dedicated site, and for now I don't plan to change the site interface. Oh if you never heard or don't know what is gist, actually [gist](https://help.github.com/articles/about-gists/) is a great service provided by GitHub to offer a great way to share your work. It can be a single files, parts of files or full application. Best place to save or share your code snippet too!
+Previously, my repo listing page was using the same layout as I did for [my gists](http://heiswayi.github.io/my-gists/). Below is the screenshot for my gist listing page, and for now I don't have a plan to change the page layout.
+
+> GitHub Gist is a great service provided by GitHub to easily share your code snippets or save your notes online. [More about gist here...](https://help.github.com/articles/about-gists/)
 
 ![my-gists](http://i.imgur.com/5OpkLPM.png)
 
-**Site URL:** [heiswayi.github.io/my-gists](http://heiswayi.github.io/my-gists/)
+**URL:** [heiswayi.github.io/my-gists](http://heiswayi.github.io/my-gists/)
 
-### My new GitHub repo listing site
+### My new GitHub repo listing page
 
-Now it's 2017 and I thought I should change my repo list site layout to a new interface, and today I did it!
+Now it's 2017 and I thought I should change my repo listing page layout to a new layout, and here it is!
 
 ![my-repos](http://i.imgur.com/KYNh11h.png)
 
-**Site URL:** [heiswayi.github.io/my-repos](http://heiswayi.github.io/my-repos/)
+**URL:** [heiswayi.github.io/my-repos](http://heiswayi.github.io/my-repos/)
 
-This new site layout provides more clarity and also supports pagination if my repos count reaches 100+ repos as [GitHub Search API only provides items in sets of 100](https://developer.github.com/guides/traversing-with-pagination/). It's build from scratch and passion using [jQuery](https://jquery.com/) (working alot with AJAX request), [Bulma - A modern CSS framework based on Flexbox](http://bulma.io/), [Font Awesome](http://fontawesome.io/), [Muuri plugin](https://haltu.github.io/muuri/) and [GitHub API v3](https://developer.github.com/v3/).
+This new page layout provides more clarity and also supports pagination if my repos count reaches 100+ repos as [GitHub Search API only provides items in sets of 100](https://developer.github.com/guides/traversing-with-pagination/). It's built from scratch and passion using [jQuery](https://jquery.com/) (for AJAX request), [Bulma - A modern CSS framework based on Flexbox](http://bulma.io/), [Font Awesome](http://fontawesome.io/), [Muuri plugin](https://haltu.github.io/muuri/) and [GitHub API v3](https://developer.github.com/v3/).
 
 ### Example of code snippets
 
-Mostly I query the GitHub API using jQuery `$.ajax` and process the return response data received in JSON format.
+I use jQuery `$.ajax` to query GitHub API and then process the returned response data of JSON.
 
 ```js
 var github_username = 'heiswayi';
@@ -120,8 +122,6 @@ function generateElements(data) {
 }
 ```
 
-### It's open source!
+### Free and open source
 
-Well, if you explore more on the source code, or you want to use this site source code directly for your own GitHub repo list, feel free to do so. It's open source and licensed under [MIT License](http://heiswayi.github.io/mit-license). **You may fork or download the source code on [GitHub](https://github.com/heiswayi/my-repos).**
-
-**Similar to [my-gists site](http://heiswayi.github.io/my-gists), the [source code](https://github.com/heiswayi/my-gists) is available on GitHub too!**
+If you like my GitHub repo listing page, the source code is available on [GitHub](https://github.com/heiswayi/my-repos). Feel free to fork it. Similar to my gist listing page, the source code also is available on [GitHub](http://heiswayi.github.io/my-gists). All source code are licensed under [MIT License](http://heiswayi.github.io/mit-license).
