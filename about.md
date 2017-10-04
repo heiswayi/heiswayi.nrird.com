@@ -7,9 +7,11 @@ keywords: about page, about me
 
 Hello.
 
-Heiswayi Nrird is my formal alias. Call me **wayi**. Currently a Software Engineer at [Keysight Technologies](http://www.keysight.com), Penang, Malaysia. In my spare time, I love to experiment, code or build some stuffs ― some of my other works can be found on [GitHub](http://heiswayi.github.io/my-repos/), [Gist](http://heiswayi.github.io/my-gists/), [CodePen](http://codepen.io/heiswayi/) and [JSFiddle](http://jsfiddle.net/user/heiswayi/). Sometimes, I love to click with my camera ― check out [my landscape photography](https://heiswayi.github.io/my-photography/).
+**I am Heiswayi Nrird.** It is my formal handle, or just another alias of me. To be short, just call me "WAYI".
 
-For contact, you may write an email to me at **hnrird(at)gmail.com**.
+Currently working as _Web Development & Global IT Manager_ at ITD World (HQ), Penang, MY. In my spare time, I love to experiment, code or build some stuffs ― some of my other works can be found on [GitHub](http://heiswayi.github.io/my-repos/), [Gist](http://heiswayi.github.io/my-gists/), [CodePen](http://codepen.io/heiswayi/) and [JSFiddle](http://jsfiddle.net/user/heiswayi/). Sometimes, I love to click with my camera ― check out [my landscape photography](https://heiswayi.github.io/my-photography/). For more professional details, check out [my resume](https://heiswayi.github.io/resume/).
+
+For contact, you may write an email to me at **hnrird@gmail.com**.
 
 ---
 
@@ -23,4 +25,4 @@ This site (blog) is a place I share my thoughts, opinions, reviews, ideas, proje
 
 #### License
 
-Unless otherwise stated, all original code snippets presented on this site is licensed under [MIT License](http://heiswayi.github.io/mit-license). All original photographs and text (my blog posts) on this website are licensed under [CC BY-NC 4.0 License](https://creativecommons.org/licenses/by-nc/4.0/). If you have any questions about using any part of these materials for commercial purposes, please write me an email at **hnrird(at)gmail.com**.
+Unless otherwise stated, all original code snippets presented on this site is licensed under [MIT License](http://heiswayi.github.io/mit-license). All original photographs and text (my blog posts) on this website are licensed under [CC BY-NC 4.0 License](https://creativecommons.org/licenses/by-nc/4.0/). If you have any questions about using any part of these materials for commercial purposes, please write me an email at **hnrird@gmail.com**.
