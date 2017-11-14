@@ -410,6 +410,8 @@ blockquote p:last-child {
     margin: 0 auto 1rem;
     padding: 0 1rem 1rem;
     max-width: 28rem;
+    z-index: 99;
+    position: relative;
 }
 
 .master-nav {
