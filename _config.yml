@@ -12,6 +12,7 @@ cover:              "/assets/logo.png" # site image cover
 url:                https://heiswayi.nrird.com # main url
 baseurl:            null # for gh-pages
 enforce_ssl:        heiswayi.nrird.com
+github_post_dir:    https://github.com/heiswayi/heiswayi.github.io/blob/master/
 
 # Site author info
 author:

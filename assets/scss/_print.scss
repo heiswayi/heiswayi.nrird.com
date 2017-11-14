@@ -5,7 +5,7 @@
     margin: 1in;
   }
   body {
-    font-family: Georgia, serif;
+    font-family: Arial, Helvetica, sans-serif;
     background: none;
     color: black;
   }
@@ -13,7 +13,7 @@
     width: 100%;
     max-width: none;
   }
-  .master-nav, .nav, .footer-social-links, .back, #disqus {
+  .master-nav, .nav, .footer-social-links, .back, #disqus, .edit-this-page {
     display: none;
   }
   .hrline {
@@ -34,9 +34,22 @@
     background: none;
     a {
       border-bottom: 0;
+      font-weight: bold;
       &:after {
         content: " [" attr(href) "] ";
-        font-size: 80%;
+        font-weight: normal;
+        font-style: italic;
+      }
+    }
+  }
+  .tagged {
+    margin-bottom: 20px;
+    a {
+      font-weight: normal;
+      &:after {
+        font-weight: normal;
+        font-style: normal;
+        content: none;
       }
     }
   }

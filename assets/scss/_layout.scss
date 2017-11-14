@@ -211,15 +211,18 @@ h2.year i.fa {
     margin-left: auto;
     margin-right: auto;
     max-width: 28rem;
+    z-index: 99;
+    position: relative;
 }
 
 .masthead {
     padding-top: 1rem;
     padding-bottom: 1rem;
     margin-bottom: 3rem;
-    border-bottom: 1px solid #ddd;
+    /*border-bottom: 1px solid #ddd;*/
     background-color: #f3f3f3;
-    box-shadow: 0 1px 1px rgba(0,0,0,0.05);
+    /*box-shadow: 0 1px 1px rgba(0,0,0,0.05);*/
+    position: relative;
 }
 
 .masthead-title {
@@ -335,6 +338,24 @@ blockquote p:last-child {
 
 .page-title,
 .post-title {
+}
+
+.edit-this-page {
+  padding-bottom: 10px;
+  text-align: right;
+  a {
+    text-transform: uppercase;
+    font-size: 12px;
+    text-decoration: none;
+    border-bottom: none;
+    color: #aaa;
+    padding: 0;
+    letter-spacing: 1px;
+    &:hover {
+      background: #333;
+      color: #eee;
+    }
+  }
 }
 
 .post-date {
@@ -466,6 +487,10 @@ blockquote p:last-child {
         -o-transition: all 0.27s cubic-bezier(0.3, 0.1, 0.58, 1);
         -ms-transition: all 0.27s cubic-bezier(0.3, 0.1, 0.58, 1);
         transition: all 0.27s cubic-bezier(0.3, 0.1, 0.58, 1);
+        background: rgba(0, 0, 0, 0.03);
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        border-radius: 3px;
 
         &:hover {
             color: #fff;

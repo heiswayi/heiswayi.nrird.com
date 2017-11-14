@@ -4,6 +4,7 @@ layout: default
 
 <div class="post">
   <div class="post-top-meta">
+    <div class="edit-this-page"><a href="{{ page.path | prepend: site.github_post_dir }}">Edit this page</a></div>
     <div class="post-date">{{ page.date | date: "%B %d, %Y" }} &middot; {% include read_time.html %}</div>
     <h1 class="post-title">{{ page.title }}</h1>
   </div>

@@ -1,4 +1,4 @@
-# Version 4.5
+# Version 4.6
 
 ### About this repo
 
@@ -13,6 +13,12 @@ Unless otherwise stated, all original code snippets presented on this site is li
 ### Changelogs (for personal purpose only)
 
 ```
+Version 4.6
+===========
+- Added slow moving pattern effect on site header
+- Enhanced site print-friendly and social icon anchor background
+- Added "Edit this page" link to site source code on GitHub repo
+
 Version 4.5
 ===========
 - Updated few things, few page restructured and content revision of About page.
