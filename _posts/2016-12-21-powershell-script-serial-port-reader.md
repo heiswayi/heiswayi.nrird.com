@@ -1,13 +1,13 @@
 ---
 layout: post
 title: PowerShell Script - Serial Port Reader
-description: My PowerShell script for reading data from a serial port and export the captured data into a file.
+description: Initial release of my PowerShell script for reading data from a serial port and able to export the captured data into a log file.
 keywords: powershell script, serial port, serial communication, ps1
 tags: [PowerShell, SerialPort]
 comments: true
 ---
 
-Initial release of my PowerShell script `SerialPortReader.ps1` for reading data from a serial port and export the captured data into a file. This script also available on [my public gist](https://gist.github.com/heiswayi/10b412aa96d3f35d85f5f8c2e0075a33).
+This is an initial release of my PowerShell script for reading data from a serial port and able to export the captured data into a log file. If you're going to use it, you may copy and paste the script below and save it as `SerialPortReader.ps1`.
 
 ```powershell
 <#
@@ -264,3 +264,7 @@ if (-not ($myinvocation.line.Contains("`$here\`$sut"))) {
     SerialPortReader -PortName $PortName -BaudRate $BaudRate -Parity $Parity -DataBits $DataBits -StopBits $StopBits -Handshake $Handshake -OutputFile $OutputFile -ReadInterval $ReadInterval
 }
 ```
+
+### Contributing
+
+If you like this script and want to improve for better, [you may fork it on my Gist](https://gist.github.com/heiswayi/10b412aa96d3f35d85f5f8c2e0075a33). Thanks!

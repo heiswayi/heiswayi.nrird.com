@@ -7,13 +7,17 @@ tags: [PowerShell]
 comments: true
 ---
 
-Today, I just want to share a snippet of PowerShell script that can make your task for sending email becomes easier if you're using Windows. However, it still depends on your requirements and the script I share not necessarily can provide you a complete solution or solve your whole problem. Some may need you to modify or derive the script to suit your case.
+**Are you working with PowerShell script in your day job?**
 
-At work, I have been implementing software build automation a lot. I also have been creating some internal tools or writing some scripts to automate tasks. One of the common tasks in my automation is sending email notification. If the build machine is using Windows, batch and PowerScript are my best friends to the automation process. For this case, I would like to use PowerShell script because it is lightweight and flexible to any further change, no IDE required. I can just use [Notepad2](https://xhmikosr.github.io/notepad2-mod/) to edit it.
+If yes, this might be interesting for you. Today, I just want to share a snippet of PowerShell script that can make your task for sending email becomes easier. However, it still depends on your requirements and the script I share may not necessarily be able to provide you a complete solution or solve the big problem. Some may need you to modify or derive the script to suit your case.
 
-> Please note that the snippet below is very straightforward and simply send email notification using SMTP client. If you want to use it, you may go through the code so you can get the idea how it works and where you can get started.
+At work, I have been implementing software build automation and it's part of my day job as Build and Release Engineer. I also have been creating some internal tools or writing some scripts to automate the tasks. One thing that is common in my automation work is sending email notification. If my build machine is using Windows OS, batch and PowerShell script will be my best friends for the automation process. Most likely I will use PowerShell script as it is lightweight and flexible to any further modification. No need for IDE, no need to compile. I can just use [Notepad2](https://xhmikosr.github.io/notepad2-mod/) to edit it.
 
-**EmailNotification.ps1**
+### Script
+
+Please note that the snippet below is very straightforward and simply send email notification using SMTP client. If you want to use it, you need to go through the code so you can get the idea how it works and where you can get started.
+
+_EmailNotification.ps1_
 
 ```powershell
 # SETTING UP NECESSARY PARAMETERS
@@ -89,7 +93,7 @@ try {
 
 ### Executing the script with passing arguments
 
-To execute the script from other program with argument(s) to pass, basically you just need to include `[CmdletBinding()]` and `Param()` on top of your main script code.
+To execute the script from other program with some arguments to pass, basically you just need to include `[CmdletBinding()]` and `Param()` on top of your main script code.
 
 ```powershell
 [CmdletBinding()]
@@ -98,13 +102,13 @@ Param
     [string]$EmailTo = "",
     [string]$EmailCC = "",
     [string]$EmailFrom = "sender@example.com"
-    
+
     # ...more parameters that suit your needs
     # continue here...
 )
 ```
 
-Then, you can execute your PowerShell script in something looked like this way depending on what kind of program you use. Some program may need you to provide the path of script and the arguments explicitly.
+Then, you can execute your PowerShell script in something looked like this way, depending on what kind of program you use. Some program may need you to provide the path of script and the arguments explicitly.
 
 ```
 ./EmailNotification.ps1 -EmailTo "qa-engineer@email.com" -EmailCC "manager@email.com" ...
@@ -114,7 +118,7 @@ Then, you can execute your PowerShell script in something looked like this way d
 
 Sometimes, your PowerShell script may become complex and contains thousand lines of code. In this case, you might want to organize and separate them into multiple functions where each function might have its own parameters too. The example snippet below shows you how it should be done or looked like.
 
-> However, I do not recommend for you to write huge and complex script into a single file. It's best for you to keep your script as simple as possible. If you really need complex operations, it's best for you to create something more like command-line program which you can execute with a set of arguments or configuration file.
+**However, I do not recommend for you to write huge and complex script into a single file. It's best for you to keep your script as simple as possible. If you really need complex operations, it's best for you to create something more like command-line program which you can execute with a set of arguments or configuration file.**
 
 ```powershell
 [CmdletBinding(SupportsShouldProcess=$true, ConfirmImpact='Medium')]
@@ -129,7 +133,7 @@ Param
     [Parameter(Position=1)]
     [ValidateNotNullOrEmpty()]
     [string]$EmailFrom = "sender@example.com",
-    
+
     [switch]$EnableLog
 
     # ...more parameters that suit your needs
@@ -164,15 +168,15 @@ function EmailNotification
     )
 
     # YOUR MAIN SCRIPT GOES HERE WITH OTHER FUNCTIONS...
-    
+
     # Example:
     $otherVar1 = "..."
     $otherVar2 = "..."
     $template = GenerateEmailTemplate -Var1 "..." -Var2 1 -Var3
-    
+
     # Process variable $template...
     # Do other things...
-    
+
     # YOUR MAIN SCRIPT ENDS HERE...
 }
 

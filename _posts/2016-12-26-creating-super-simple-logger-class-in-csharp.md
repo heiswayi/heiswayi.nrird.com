@@ -1,13 +1,15 @@
 ---
 layout: post
 title: Creating super simple logger class in C#
-description: SimpleLogger.cs is simply my super simple logger class I wrote for my own use in mini C# project development.
+description: SimpleLogger.cs is a very simple logger class that I wrote for my own use in some of my mini C# project developments.
 keywords: c# programming, simple logger class
 tags: [CSharp]
 comments: true
 ---
 
 Nothing much to say here, nah I just want to share my super simple logger class that I wrote for my own use in my mini C# projects. If you like it, you may use it. It's free for commercial use. This code snippet also available on my [gist](https://gist.github.com/heiswayi/69ef5413c0f28b3a58d964447c275058).
+
+It may look too hype to say that buzzword "super" here, but what I actually mean this logger class is simpler enough to get the job done well. I wrote this class for my own use in some of my mini C# projects. If you think you like this class, you may use it freely, both privately and commercially. It's [WTFPL](http://www.wtfpl.net/txt/copying/)!
 
 _SimpleLogger.cs_
 
@@ -164,9 +166,9 @@ namespace HeiswayiNrird.SimpleLogger
 
 ### Usage example
 
-To get started, just initialize the `SimpleLogger` class. Initializing the constructor without parameter will create a fresh new log file or overwrite the file if already exists by default. **Log file will be created in the same folder with the application assembly file and the log filename will follow the executing assembly name.** For example, let say the application filename is `SimpleLoggerDemo.exe`, so the log filename would be `SimpleLoggerDemo.log`.
+To get started, just initialize the `SimpleLogger` class. Initializing the constructor without parameter will create a fresh new log file or overwrite the existing log file if already exists. **The log file will be created in the same folder with the application assembly file and the log file name will follow the executing assembly name.** For example, let say the application filename is `SimpleLoggerDemo.exe`, so the log file name would be `SimpleLoggerDemo.log`.
 
-Here is the "how-to-use" example:
+Here's the example code may look like:
 
 ```csharp
 using HeiswayiNrird.SimpleLogger;
@@ -206,4 +208,8 @@ namespace SimpleLoggerDemo
 var logger = new SimpleLogger(true); // Will not overwrite the existing log file
 ```
 
-Initializing the constructor with parameter like above will not overwrite or clear the existing log file. Next log message added will be appended to the existing log file. Unless if the log file is not exist, then it will create a fresh new one. This is useful when I instantiate this class in different class within the same project, my log messages continue to append to my single log file without overwriting the existing log file.
+Initializing the constructor with parameter like above will **not overwrite or clear** the existing log file. Next log message added will be appended to the existing log file. Unless if the log file is not exist, then it will create a fresh new one. This is useful when I instantiate this logger class in different other class within the same project, my log messages will continue to append to my single log file without overwriting the existing log file.
+
+### Contributing
+
+If you think you want to improve this logger class and make it more useful to others, [you may fork it on my Gist](https://gist.github.com/heiswayi/69ef5413c0f28b3a58d964447c275058). I will appreciate that!
