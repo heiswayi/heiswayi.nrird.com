@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Manually Install Apache, PHP, MySQL Server and Composer on Windows
-description: Tutorial on set up your own fully functional WAMP server on Windows without using any ready-to-use package like WampServer, XAMPP and whatnots.
+description: Tutorial to set up your own fully functional WAMP server on Windows without using any ready-made package like WampServer, XAMPP, etc.
 keywords: manual install, apache, php, mysql, composer, wamp server
 tags: [PHP, Composer, MySQL, Apache]
 comments: true
 ---
 
-Instead of using any ready-to-use package like WampServer, XAMPP and whatnots, you can make your own fully functional WAMP server. So, this tutorial is about **how you can manually install Apache, PHP, MySQL server and Composer on your Windows PC**. As for your information, when writing this I'm currently using **Windows 10 Pro 64-bit**. So, this tutorial is based on it. Let's start!
+Instead of using any ready-made package like WampServer, XAMPP and whatnots, you can make your own fully functional WAMP server. The term **WAMP** here stands for Windows, Apache, MySQL and PHP. So, this tutorial is about **how you can manually install Apache, PHP, MySQL server and Composer on your Windows PC**. As for your information, when writing this I'm currently using **Windows 10 Pro 64-bit**. So, this tutorial is based on it. Let's start!
 
 ### Apache
 
@@ -19,7 +19,7 @@ From that website, we can download either the 32-bit version or 64-bit version. 
 
 Here's the latest version that I used when writing this: **Apache 2.4.17 Win64** ([httpd-2.4.17-win64-VC14.zip](http://www.apachelounge.com/download/VC14/binaries/httpd-2.4.17-win64-VC14.zip)).
 
-Once downloaded, just extract the `Apache24` folder to the root of your C drive, so that you will have a path like this; `C:\Apache24\bin`.
+Once downloaded, just extract the `Apache24` folder to the root of your `C` drive, so that you will have a path like this `C:\Apache24\bin`.
 
 Open a command line window (Windows+R and type `cmd` then press Enter), change directory into `C:\Apache24\bin` or type the following:
 
@@ -49,7 +49,7 @@ cd C:\Apache24\bin
 httpd.exe -k install
 ```
 
-If it's currently still running, you need to terminate it first by pressing Ctrl+C in the command prompt.
+If it's currently still running, you need to terminate it first by pressing `Ctrl+C` in the command prompt.
 
 Now you have a new service in Services (Windows+R, then type `services.msc` then press Enter) named as "Apache2.4". You can control just like other Windows services to start, stop or restart.
 
@@ -115,7 +115,7 @@ To fix the bug, I just downloaded this DLL file ([HtmlRenderer.dll](https://bugs
 
 ### Besides MySQL Workbench, I also installed phpMyAdmin
 
-Previously, I rarely use MySQL Workbench. Most of the time, I use phpMyAdmin.
+Previously, I rarely use MySQL Workbench. Most of the time, I use phpMyAdmin. Another alternative is you can use [Adminer](https://www.adminer.org/) - Database management in a single PHP file.
 
 Go to [phpMyAdmin download page](https://www.phpmyadmin.net/downloads/), as for me I chose [phpMyAdmin-4.5.0.2-english.zip](https://files.phpmyadmin.net/phpMyAdmin/4.5.0.2/phpMyAdmin-4.5.0.2-english.zip). Extract the archive into the Apache `htdocs` folder and rename `phpMyAdmin-4.5.0.2-english` into `phpmyadmin`. You should have a path like this; `C:\Apache24\htdocs\phpmyadmin`.
 
@@ -161,4 +161,4 @@ ______
 Composer version 1.0-dev (a54f84f05f915c6d42bed94de0cdcb4406a4707b) 2015-10-13 13:09:04
 ```
 
-That's it! You now have a fully functional WAMP server (with Composer) that runs as a service and doesn't depend on any user (accessible even if no one is logged in). If you set up for production instead development, you might need to read carefully their notes or instruction manual, configure your firewall properly and try to consult with expert in order to maximize the security and performance.
+That's it! You now have a fully functional WAMP server (with Composer) that runs as a service and doesn't depend on any user (accessible even if no one is logged in). If you set up for production instead development, you might need to read carefully their notes or instruction manual, configure your firewall properly and try to consult with expert in order to maximize the security and performance. Thanks for reading anyway!

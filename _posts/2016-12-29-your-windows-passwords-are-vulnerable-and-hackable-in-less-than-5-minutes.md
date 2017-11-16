@@ -7,9 +7,9 @@ tags: [Windows, PowerShell, Vulnerability, Encryption, Decryption]
 comments: true
 ---
 
-> Did you know that your Windows passwords are vulnerable and hackable in less than 5 minutes?
+**Did you know that your Windows passwords are vulnerable and hackable in less than 5 minutes?**
 
-Yep, even in Windows 10, the method is still working nicely. **The method is not new at all.** So, let me show how you can reproduce it by using a simple exploitation tool and a PowerShell script. **Anyone can perform this hacking when you left your computer unlocked.** I'm not really going to explain the details, just go straight to the steps. Google is on your fingertips if you are keen to explore more.
+Yep, even in Windows 10, the method is still working nicely. **The method is not new at all.** So, let me show how you can reproduce it by using a simple exploitation tool and a PowerShell script. **Anyone can perform this hacking when you left your computer unlocked.** I'm not really going to explain the details, just go straight to the steps. Google Search is on your fingertips if you are keen to explore more.
 
 ### Getting started
 
@@ -50,12 +50,12 @@ sekurlsa::logonPasswords full
 
 ![mimikatz logonPasswords](http://i.imgur.com/nWPZUIR.jpg)
 
-Tadaa... Now I can see my actual Microsoft Account username and password in **a plain text**. As you imagine, most of people nowadays are still using the same password for almost everything. So, I expected you can picture all the consequences with this vulnerability...
+Tadaa... Now I can see my actual Microsoft Account username and password in **a plain text**. As you imagine, most of people nowadays are still using the same password for almost everything. _Too bad.._ So, I expected you can picture all the consequences with this vulnerability...
 
-### The existing vulnerability
+### The existing vulnerability info
 
 The fact is that the password is encrypted but it's useless as the implementation depends on two basic Win32 functions; [LsaProtectMemory](https://msdn.microsoft.com/en-us/library/windows/desktop/ff714509%28v=vs.85%29.aspx) (the encryption function) and [LsaUnprotectMemory](https://msdn.microsoft.com/en-us/library/windows/desktop/ff714510(v=vs.85).aspx) (the decryption function). And Windows stores encrypted user passwords in memory without using one-way hash which is decryptable using **LsaUnprotectMemory** function to a plain text.
 
 ### The bottom line
 
-You will be safe as long as you always lock your computer when you're away. For more explanations and security advices, you might want to check the [original article here](http://www.fixedbyvonnie.com/2015/02/hack-passwords-of-windows-in-5-minutes). This short article is just to remind me or anyone else to always be careful in whatever we do especially with anything to do with passwords and personal credential information. No system is perfect!
+You will be safe as long as you always lock your computer when you're away. For more explanations and security advices, you might want to check the [original article here](http://www.fixedbyvonnie.com/2015/02/hack-passwords-of-windows-in-5-minutes). This short article is just to remind me or anyone else to always be careful in whatever we do especially with anything to do with our passwords and personal credential information. No system is perfect! DON'T LEAVE YOUR COMPUTER UNLOCKED.

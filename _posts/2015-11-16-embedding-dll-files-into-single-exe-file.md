@@ -1,19 +1,21 @@
 ---
 layout: post
 title: Embedding .DLL files into a single .EXE file
-description: Here is the trick to create a single binary .EXE file with embedded external .DLL files in C# WinForms.
+description: Here's the trick to create a single binary .EXE file with embedded external .DLL files in C# WinForms.
 keywords: embedded dll, visual studio
 tags: [WinForms, CSharp]
 comments: true
 ---
 
-This method is unusual and rarely people do it, but it still works for me when I want to hide one or two external library binaries/assemblies like .DLL files into my single .EXE application file. I use .NET C# and Visual Studio as the IDE. Let's say I want to compile a simple application called a Mini Browser and these are external .DLL files used in my project:-
+This method is unusual and rarely people do it, but it still works for me when I want to hide one or two external library binaries/assemblies like .DLL files into my single .EXE application file. I use .NET C# and Visual Studio as the IDE. Let's say I want to compile a simple application called Mini Browser and these are external .DLL files used in my project:-
 
-- DevExpress.BonusSkins.v13.2.dll
-- DevExpress.Data.v13.2.dll
-- DevExpress.Sparkline.v13.2.Core.dll
-- DevExpress.Utils.v13.2.dll
-- DevExpress.XtraEditors.v13.2.dll
+```
+DevExpress.BonusSkins.v13.2.dll
+DevExpress.Data.v13.2.dll
+DevExpress.Sparkline.v13.2.Core.dll
+DevExpress.Utils.v13.2.dll
+DevExpress.XtraEditors.v13.2.dll
+```
 
 To get started, I put them all in a folder called `lib` and include it in my project as shown in the picture below:
 
@@ -57,4 +59,4 @@ AppDomain.CurrentDomain.AssemblyResolve += (sender, args) =>
 };
 ```
 
-And compile it! We should now have our single .EXE application file without any external assembly (.DLL) files. Please note that, embedding these .DLL files into our main application file (.EXE) will result in increasing of our .EXE file size as this sums up everything.
+Finally, compile it! We should now have our single .EXE application file without any external assembly (.DLL) files. Please note that, embedding these .DLL files into our main assembly application file (.EXE) will result in increasing of our .EXE file size as this sums up everything. Have a try!

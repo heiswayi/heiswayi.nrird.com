@@ -9,7 +9,7 @@ comments: true
 
 <script async defer src="https://buttons.github.io/buttons.js"></script>
 
-Jekyll theme is a template for the best static site generator called [Jekyll](https://en.wikipedia.org/wiki/Jekyll_(software)), which is written in Ruby by Tom Preston-Werner, GutHub's co-founder. Jekyll is designed for building minimal, static blogs which you can easily host it with free using [GitHub Pages](https://pages.github.com/). Few years ago I was using a [self-hosted WordPress](https://wordpress.org/) for my blog, but due to I blogged occasionally, I moved to Jekyll which suits me better. I also made few minimalist Jekyll themes myself for free. Here they are...
+Jekyll theme is a template for the best static site generator called [Jekyll](https://en.wikipedia.org/wiki/Jekyll_(software)), which is written in Ruby by Tom Preston-Werner, GitHub's co-founder. Jekyll is designed for building minimal, static blogs which you can easily host it with free using [GitHub Pages](https://pages.github.com/). Few years ago I was using a [self-hosted WordPress](https://wordpress.org/) for my blog, but due to I have been blogging occasionally, I moved to Jekyll which suits me better. Of course, you need some geeky knowledge about it before you can set up your Jekyll site. I also made few minimalist Jekyll themes myself for FREE and open source. Here they are...
 
 ---
 
@@ -53,7 +53,7 @@ TextLog is a minimalist Jekyll theme best for documentation.
 
 ![This site screenshot](http://i.imgur.com/pdd5iPN.png)
 
-This is my personal Jekyll theme for my blog (this blog) and I have been using it since few years ago. Since then, I kept updating or making changes, from time to time until what it looked like today.
+This is my personal Jekyll theme for my blog (this site) and I have been using it since few years ago. Since then, I kept updating or making changes, from time to time until what it looked like today.
 <br>
 [**Live Demo**](https://heiswayi.github.io) // [Source Code](https://github.com/heiswayi/heiswayi.github.io) // MIT License
 
