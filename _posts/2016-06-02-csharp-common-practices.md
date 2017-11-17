@@ -1,15 +1,17 @@
 ---
 layout: post
 title: C# common practices
-description: Here are some sort of C# common coding practices I have been using in my coding style at work.
+description: Just sharing some sort of good common coding practices that I have been practicing in my coding style at work for C# programming.
 keywords: csharp common practices, self-documented code, code optimization, good coding practices
 tags: [CSharp, Best Practices]
 comments: true
 ---
 
-There are a lot of articles about C# good common practices available online, some may written in any programming book. Just _google_ it, the magic is there! Previously, I don't really care about the good common practices in my C# programming, as long as my application works. Just a couple of years ago I started working in team of developers, in big software company, then the coding standards have been practiced widely among software developers.
+> "Any fool can write code that a computer can understand. Good programmers write code that humans can understand."- Martin Fowler
 
-So, here are some of my common coding practices I have been using for C# programming. If you're a beginner or new .NET developer, these coding practices might be useful for you. Let's begin!
+Good coding practices will guide you to write better, maintainable and clean code.  There are a lot of articles sharing about good common practices for C# programming, and some may be written in any programming book. Previously, I don't really care about the good common practices in my C# programming as long as my code works. Just a couple years ago when I started working in multiple teams of developers from a big software company, then the coding standards have been practiced widely among the software developers.
+
+What I'm going to share to you here are some of my common coding practices that I have been practicing when I do programming in C#. Now they all become a habit to me to always trying my best to write clean code in whatever programming I'm working on. If you're a beginner or new .NET developer, these coding practices would be useful for you to start practicing in your work.
 
 ### Use of proper naming conventions
 

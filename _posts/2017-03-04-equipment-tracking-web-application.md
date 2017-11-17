@@ -1,15 +1,15 @@
 ---
 layout: post
 title: Equipment Tracking web application
-description: Simple CRUD application with basic user authentication system for internal equipment tracking.
+description: Simple CRUD application with basic user authentication system for internal equipment tracking use.
 keywords: cured application, php application, datatables, equipment tracking web app, crud ajax web application
 tags: [PHP, CRUD, AJAX, DataTables, Web Application]
 comments: true
 ---
 
-A couple of weeks ago I was asked to gather and compile a list of equipment that have been borrowed by a group of engineers and the list I received is in MS Excel file. So, I thought instead of waiting them to send me the list file once in a year, I should create a simple web application where they can easily update the equipment info anywhere and anytime - live update. Then, I decided to spend few times to write this simple web application called Equipment Tracking (Etrac).
+A couple of weeks ago I was asked to gather and compile a proper list of equipment that have been borrowed by any engineer who is working with my department. However, the list that I received is recorded in a MS Excel file. So, I have thought instead of waiting any of the engineers to send me the updated list file whenever I need to check the status of the equipment, I should create a simple web application hosted in my company network for them to easily update the equipment records instantly, and they can do that at anywhere and anytime. Then, I decided to spend some hours during my weekend to develop that kind of application.
 
-Technically, Etrac is built from scratch using [DataTables](https://datatables.net/), [jQuery](https://jquery.com/), [PHP](http://php.net/), [MySQL](https://www.mysql.com/) and [Bootstrap](http://getbootstrap.com/) with [Google-style theme](https://todc.github.io/todc-bootstrap/). Etrac uses a very simple user authentication module that I created before in PHP for use in other old projects. Now with this web app, whenever I need the latest list of borrowed equipment, I can just go to the app URL (set to intranet accessible only) and export or print the list as the user can easily update the equipment info to the latest info. Etrac supports exporting to PDF, Excel and CSV file format.
+The idea has been realized! I called it "Equipment Tracking" or "Etrac" in short. Etrac is built from scratch [DataTables](https://datatables.net/), [jQuery](https://jquery.com/), [PHP](http://php.net/), [MySQL](https://www.mysql.com/) and [Bootstrap](http://getbootstrap.com/) with [Google-style theme](https://todc.github.io/todc-bootstrap/). Etrac uses a very simple user authentication module that I created before to use in old PHP projects. Now, with this application set up on intranet web server, whenever I need to get the latest updated list of borrowed equipment, I can just go the application URL, export/print the list immediately. Etrac supports exporting to PDF, Excel and CSV file format. Below are some screenshots showing how Etrac looked like.
 
 ### Equipment Tracking (Etrac) v1.0 Screenshots
 
@@ -39,7 +39,7 @@ Technically, Etrac is built from scratch using [DataTables](https://datatables.n
 
 ### Etrac v1.0 DataTables Code Snippets
 
-JavaScript:
+This is the customized version of DataTable JavaScript code that I did for Etrac:
 
 ```js
 var table = $('.datatables-table').DataTable({
@@ -170,7 +170,7 @@ var table = $('.datatables-table').DataTable({
 });
 ```
 
-PHP (server-side):
+Below is PHP code to work with DataTable for server-side processing:
 
 ```php
 <?php
@@ -224,8 +224,4 @@ echo json_encode(
 );
 ```
 
-Note: **ssp.class.php** is available on [DataTables' repo on GitHub here](https://github.com/DataTables/DataTables/blob/master/examples/server_side/scripts/ssp.class.php).
-
-### Etrac v1.0 Full Source Code
-
-Etrac v1.0 full source code will be available soon and I will update the link here later. If you're really interested and can't wait for it, you may just drop me an email at hnrird(at)gmail.com.
+NOTE: **ssp.class.php** is available on [DataTables' repo on GitHub here](https://github.com/DataTables/DataTables/blob/master/examples/server_side/scripts/ssp.class.php).
