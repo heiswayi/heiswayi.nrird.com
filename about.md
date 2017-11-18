@@ -9,23 +9,15 @@ keywords: about page, about me
 
 Hi.
 
-I am **Heiswayi Nrird**, or just call me "WAYI" for short. Currently working as _Senior Software Engineer_ at [Keysight Technologies (Malaysia)](https://www.keysight.com/main/home.jspx?lc=eng&cc=MY), Penang. In my spare time, I love to experiment, code and build some geeky stuffs. Sometimes I love to [click with my camera](https://heiswayi.github.io/my-photography/) and explore around.
+I am **Heiswayi Nrird**, or just call me "WAYI" for short. Currently working as _Senior Software Engineer_ at [Keysight Technologies (Malaysia)](https://www.keysight.com/main/home.jspx?lc=eng&cc=MY), Penang. In my spare time, I love to experiment, code and build some geeky stuffs. Sometimes I love to [click with my camera](https://heiswayi.github.io/my-photography/) and explore around. Some of my works can be found on following sites; [GitHub](http://heiswayi.github.io/my-repos/), [Gist](http://heiswayi.github.io/my-gists/), [CodePen](http://codepen.io/heiswayi/) and [JSFiddle](http://jsfiddle.net/user/heiswayi/). Check out [my online resume](https://heiswayi.github.io/resume/) for professional details or connect with me on [LinkedIn](https://my.linkedin.com/in/nrird), [Facebook](https://www.facebook.com/heiswayi.nrird) or [Instagram](https://instagram.com/heiswayi.nrird/). If you have any inquiry, you may contact me via email; [hnrird@gmail.com](mailto:hnrird@gmail.com).
 
-Some of my works can be found on following sites:
-
-[GitHub](http://heiswayi.github.io/my-repos/) // [Gist](http://heiswayi.github.io/my-gists/) // [CodePen](http://codepen.io/heiswayi/) // [JSFiddle](http://jsfiddle.net/user/heiswayi/)
-
-Check out [my online resume](https://heiswayi.github.io/resume/) for professional details or connect with me on [LinkedIn](https://my.linkedin.com/in/nrird), [Facebook](https://www.facebook.com/heiswayi.nrird) or [Instagram](https://instagram.com/heiswayi.nrird/).
-
-I run [nrird·xyz](http://nrird.xyz), a creative studio that focuses on UX design, frontend app development and data visualization.
-
-If you have any inquiry, you may contact me via email: [hnrird@gmail.com](mailto:hnrird@gmail.com).
+I also run [nrird·xyz](http://nrird.xyz), a personal project called creative studio that focuses on UX design, frontend app development and data visualization.
 
 ---
 
 #### Site Colophon
 
-This blog is a place I share my thoughts, opinions, reviews, ideas, personal projects or findings. This blog is built with the excellent [Jekyll](http://jekyllrb.com), a static site generator and proudly hosted on [GitHub Pages](https://pages.github.com/) with FREE. The layout of this site (Jekyll theme) is designed or hand-made by me with a passion of simplicity. Its typeface is powered by [Fira](https://github.com/mozilla/Fira) from Mozilla. The [source code](http://github.com/heiswayi/heiswayi.github.io) of this blog is available as open source under [MIT License](http://heiswayi.github.io/mit-license).
+This blog is a place I share my thoughts, opinions, reviews, ideas, personal projects or findings. This blog is built with the excellent [Jekyll](http://jekyllrb.com), a static site generator and proudly hosted on [GitHub Pages](https://pages.github.com/) with FREE. The layout of this site (Jekyll theme) is designed or hand-made by me with a passion of simplicity. Its typeface is powered by [Fira](https://github.com/mozilla/Fira) from Mozilla. The [source code of this blog](http://github.com/heiswayi/heiswayi.github.io) is available as open source under [MIT License](http://heiswayi.github.io/mit-license).
 
 #### Site Disclaimer
 
