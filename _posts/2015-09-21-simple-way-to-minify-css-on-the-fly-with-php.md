@@ -7,11 +7,15 @@ tags: [PHP, Compression]
 comments: true
 ---
 
-If you website contains a lot of CSS files and is built using PHP, then this simple trick may help to minify all your CSS code on the fly. You may check the sample PHP code snippet below.
+If you website is built using PHP and contains a lot of CSS files to be loaded, then this simple trick may help you to reduce HTTP file requests and compress all of your CSS code into one single file. Take a look on the example code below.
+
+The trick is by loading all of your CSS files, process it, then using the output buffering to output the result into a single file which we can load like we do to CSS file. Assuming the code below is saved into a file called `minified-css.php`.
 
 ```php
 <?php
+
 header('Content-type: text/css');
+
 ob_start("compress");
 
 function compress($buffer) {
@@ -26,28 +30,29 @@ function compress($buffer) {
 }
 
 // CSS files to compress..
-include('grid.css');
-include('typography.css');
-include('button.css');
-include('form.css');
-include('table.css');
-include('backgrounds.css');
-include('pagination.css');
-include('breadcrumbs.css');
-include('font.css');
-include('helpers.css');
-include('print.css');
-include('animation.css');
-include('responsive.css');
+include('css/grid.css');
+include('css/typography.css');
+include('css/button.css');
+include('css/form.css');
+include('css/table.css');
+include('css/backgrounds.css');
+include('css/pagination.css');
+include('css/breadcrumbs.css');
+include('css/font.css');
+include('css/helpers.css');
+include('css/print.css');
+include('css/animation.css');
+include('css/responsive.css');
 
 ob_end_flush();
+
 ?>
 ```
 
-The code above will include all of your CSS files, minify the code and output itself as a functional CSS-compressed file. Then, this file you can include the same way you include CSS file in your `<head>` section but using `.php` extension file as shown in the example code below:
+Then, you can load the file above using `.php` extension like below within your `<head>...</head>` section:
 
 ```HTML
-<link href="assets/css/minified.css.php" rel="stylesheet">
+<link href="minified-css.php" rel="stylesheet">
 ```
 
-That's it!
+Go ahead, try it!
