@@ -38,5 +38,6 @@ keywords: projects page, hyperlinks, my snippets
 
 ### Misc.
 
-- [**Web Developer Checklist**](http://wdc.nrird.xyz/) -  For my web development checklist reference.
+- [**Web Developer Checklist**](http://nrird.xyz/web-developer-checklist) -  For my web development checklist reference.
+- [**Web Launch Checklist**](http://nrird.xyz/web-launch-checklist) -  For my web launch checklist reference.
 - [**Just Write**](http://nrird.xyz/just-write/) - Minimalist writing tool to focus on writing stuffs that matters.
