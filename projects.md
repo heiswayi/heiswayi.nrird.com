@@ -23,18 +23,17 @@ keywords: projects page, hyperlinks, my snippets
 
 ### Scripts
 
-- [**Web Proxy Script**](http://proxy.nrird.xyz/) - Free web proxy script.
-- [**Whois Script**](http://script.nrird.xyz/whois/) - Domain whois script that supports up to 1195 domain name extensions.
-- [**Indenter Tool**](http://script.nrird.xyz/indenter-tool/) - Prettify or fix indentation of the source code.
-- [**JS Packer**](http://script.nrird.xyz/js-packer/) - Compress and obfuscate JavaScript.
-- [**ZeroPaste**](http://nrird.xyz/0/) - A zero-knowledge pastebin (old stuff).
+- [**Web Proxy Script**](http://nrird.xyz/proxy/) - Free web proxy script.
+- [**Whois Script**](http://nrird.xyz/scripts/whois/) - Domain whois script that supports up to 1195 domain name extensions.
+- [**Indenter Tool**](http://nrird.xyz/scripts/indenter-tool/) - Prettify or fix indentation of the source code.
+- [**JS Packer**](http://nrird.xyz/scripts/js-packer/) - Compress and obfuscate JavaScript.
 
 ### Generators
 
-- [**FREE Ultimate Blocks**](http://ub.nrird.xyz/) - A FREE block-based HTML drag and drop bootstrap theme builder with 126+ predesigned unique blocks and unlimited variants.
-- [**Personal URL Shortening Service**](http://script.nrird.xyz/url-shortener/) - My personal URL shortener script
-- [**Static Sparkline Image Generator**](http://script.nrird.xyz/sparkline/) - PHP script to generate sparklines, with browser cachine with ETag.
-- [**Webpage Screenshot Mockup Generator**](http://script.nrird.xyz/website-screenshot/) - PHP script to generate webpage screenshot mockup (framed inside a web browser look).
+- [**FREE Ultimate Blocks**](http://nrird.xyz/ultimate-blocks) - A FREE block-based HTML drag and drop bootstrap theme builder with 126+ predesigned unique blocks and unlimited variants.
+- [**Personal URL Shortening Service**](http://nrird.xyz/scripts/url-shortener/) - My personal URL shortener script
+- [**Static Sparkline Image Generator**](http://nrird.xyz/scripts/sparkline/) - PHP script to generate sparklines, with browser cachine with ETag.
+- [**Webpage Screenshot Mockup Generator**](http://nrird.xyz/scripts/website-screenshot/) - PHP script to generate webpage screenshot mockup (framed inside a web browser look).
 
 ### Misc.
 
