@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Creating minimalist, web-based writing tool - Document Writer
-description:
+description: A minimalist web-based writing tool to write document using web browser and save it as a plain text, HTML or markdown format file.
 keywords: minimalist, web-based app, writing tool, document writer
 tags: [PHP, JavaScript, AJAX, jQuery]
 comments: true
