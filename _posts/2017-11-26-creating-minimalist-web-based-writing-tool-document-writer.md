@@ -9,7 +9,7 @@ comments: true
 
 This weekend, I have been spending some of my times creating a web-based tool called [**Document Writer**](https://nrird.xyz/document-writer). Document Writer is very simple web-based writing tool to write document using the web browser and save the written document into a plain text, HTML or markdown format.
 
-The **reason** behind this web tool is because I need o write document easier and faster with the help of [TinyMCE editor plugin](https://www.tinymce.com/), then save it into the format I needed (HTML or markdown, mostly).
+The **reason** behind this web tool is because I need to write document easier and faster with the help of [TinyMCE editor plugin](https://www.tinymce.com/), then save it into the format I needed (HTML or markdown, mostly).
 
 ![Screenshot](https://i.imgur.com/3FRdl5R.png)
 
