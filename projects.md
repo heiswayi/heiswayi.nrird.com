@@ -37,5 +37,5 @@ keywords: projects page, hyperlinks, my snippets
 
 - [**Web Developer Checklist**](http://nrird.xyz/web-developer-checklist) -  For my web development checklist reference.
 - [**Web Launch Checklist**](http://nrird.xyz/web-launch-checklist) -  For my web launch checklist reference.
-- [**Just Write**](http://nrird.xyz/just-write/) - Minimalist writing tool to focus on writing stuffs that matters.
 - [**Encrypto Zero**](https://nrird.xyz/encrypto-zero) - Just another minimalist, secure and encrypted pastebin app for personal use purpose.
+- [**Document Writer**](https://nrird.xyz/document-writer) - A minimalist web-based writing tool to write document using web browser.
