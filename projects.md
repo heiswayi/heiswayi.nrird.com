@@ -19,6 +19,7 @@ keywords: projects page, hyperlinks, my snippets
 - [**EncryptJS**](http://heiswayi.github.io/encryptjs/) - A JavaScript library for encrypting message and embed it as HTML code into your web content.
 - [**W4Y1**](http://heiswayi.github.io/w4y1/) - Just another AI chatbot for my personal memories storage.
 - [**Random Name Picker**](http://heiswayi.github.io/random-name-picker/) - Simple HTML tool to randomly pick a name from a list I made to use for indoor events.
+- [**Markdown-HTML Live Preview Editor**](http://heiswayi.github.io/markdown-editor) - A very simple markdown-to-HTML live preview editor made of pure JavaScript.
 
 ### Scripts
 
