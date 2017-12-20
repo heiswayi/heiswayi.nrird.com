@@ -37,11 +37,13 @@ Time equals life.
 And you only have one chance to make it right.
 Every human being is fighting a battle inside themselves.
 It’s your obligation to help and inspire them.
-Regardless of what you do, you can always inspire others to do good.
+Regardless of what you do,
+you can always inspire others to do good.
 Nobody is better than you.
 And you’re not better than anybody else.
 Be humble.
-Being in the comfort zone is wonderful, but nothing ever grows there.
+Being in the comfort zone is wonderful,
+but nothing ever grows there.
 Keep studying.
 Keep creating.
 Haters will come if you have the audacity to build something new.
