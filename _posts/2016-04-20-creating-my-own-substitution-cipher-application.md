@@ -7,7 +7,7 @@ tags: [CSharp, WPF, Cryptography]
 comments: true
 ---
 
-> Please note that, this application is intended for experimental and learning purpose. Sometimes, I just do it for fun. There's no guarantee that this application would be practical for the real world use.
+> Please note that this application is just for fun (experimental) and it is totally unsecure for any practical use.
 
 ### What is cipher?
 
@@ -228,12 +228,12 @@ Another feature that I added to this application is a functionality to export in
 
 So simple huh?!
 
-### Here's why this cipher is not practical for the real world use
+### Here's why this cipher is not practically suitable for the real world use
 
 Substitution cipher is weak, easily broken and the cryptanalyst can deduce the probable meaning of the most common symbols by analyzing the frequency distribution of the ciphertext.
 
 ### Source code and download
 
-If you like to see the full source code of this application, you can download it from my [GitHub](https://github.com/heiswayi/HeiswayiNrirdCipherProgram) repository. If you want to try the compiled version, you can download the binary [here](https://www.dropbox.com/s/p9lc58cgw059mka/HeiswayiNrirdCipherProgramV1.zip?dl=0).
+If you like to see the full source code of this application, you can download it from my [GitHub](https://github.com/heiswayi/HeiswayiNrirdCipherProgram) repository. If you want to try to play with the compiled version, you can download the binary [here](https://www.dropbox.com/s/p9lc58cgw059mka/HeiswayiNrirdCipherProgramV1.zip?dl=0) or you can compile it by yourself from the source code provided.
 
 Prerequisite: [.NET Framework 4.5.2](https://www.microsoft.com/en-us/download/details.aspx?id=42642)
