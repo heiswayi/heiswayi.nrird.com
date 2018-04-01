@@ -570,3 +570,23 @@ a.skip:hover {
   margin: 0 auto;
   height: 3rem;
 }
+
+.footnotes {
+    margin-top: 1rem;
+    font-size: 0.7rem;
+
+    ol {
+        
+
+        li p {
+            margin-bottom: 0;
+        }
+    }
+
+    &:before {
+        content: 'Footnote:';
+        display: block;
+        border-top: 1px solid #ddd;
+        padding-top: 0.5rem;
+    }
+}

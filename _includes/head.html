@@ -84,8 +84,13 @@
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
   <link rel="alternate" type="application/rss+xml" title="RSS" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
 
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgo=">
+  
+  <!-- Stylesheets -->
   <link rel="stylesheet" href="{{ "/assets/css/main.css" | prepend: site.baseurl | prepend: site.url }}">
 
+  <!-- Scripts -->
   <script src="{{ "/assets/js/modernizr.custom.js" | prepend: site.baseurl | prepend: site.url }}"></script>
 
   <!--[if lt IE 9]>

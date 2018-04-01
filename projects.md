@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Projects
+title: Projects Online
 description: Hyperlinks to some of my projects and snippets.
 keywords: projects page, hyperlinks, my snippets
 ---
