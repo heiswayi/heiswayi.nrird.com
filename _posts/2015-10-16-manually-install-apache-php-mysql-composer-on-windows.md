@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Manually Install Apache, PHP, MySQL Server and Composer on Windows
-description: Tutorial to set up your own fully functional WAMP server on Windows without using any ready-made package like WampServer, XAMPP, etc.
+title: Manually install Apache, PHP, MySQL and Composer on Windows
+description: Set up your own fully functional WAMP (Windows-Apache-MySQL-PHP) server on Windows without using any ready-made package like WampServer, XAMPP and so on.
 keywords: manual install, apache, php, mysql, composer, wamp server
 tags: [PHP, Composer, MySQL, Apache]
 comments: true
 ---
 
-Instead of using any ready-made package like WampServer, XAMPP and whatnots, you can make your own fully functional WAMP server. The term **WAMP** here stands for Windows, Apache, MySQL and PHP. So, this tutorial is about **how you can manually install Apache, PHP, MySQL server and Composer on your Windows PC**. As for your information, when writing this I'm currently using **Windows 10 Pro 64-bit**. So, this tutorial is based on it. Let's start!
+Instead of using any ready-made package like WampServer, XAMPP and so on, you can make your own fully functional WAMP server. The term **WAMP** here stands for Windows, Apache, MySQL and PHP. So, this tutorial is about **how you can manually install Apache, PHP, MySQL server and Composer (optional) on your Windows PC**. As for your information, when writing this I'm currently using **Windows 10 Pro 64-bit**. So, this tutorial is based on it. Let's start!
 
 ### Apache
 
@@ -135,7 +135,7 @@ $cfg['blowfish_secret'] = 'W4Y1'; /* YOU MUST FILL IN THIS FOR COOKIE AUTH! */
 
 By default, nothing much need to configure since phpMyAdmin automatically detect the port used by MySQL Server. So, you can directly access `http://localhost/phpmyadmin` and login (username and password) as what you set during MySQL installation.
 
-### Composer (Optional)
+### Composer (optional)
 
 Composer is a tool for dependency management in PHP, like a package manager. It allows to easily install PHP packages and even entire frameworks.
 
@@ -161,4 +161,4 @@ ______
 Composer version 1.0-dev (a54f84f05f915c6d42bed94de0cdcb4406a4707b) 2015-10-13 13:09:04
 ```
 
-That's it! You now have a fully functional WAMP server (with Composer) that runs as a service and doesn't depend on any user (accessible even if no one is logged in). If you set up for production instead development, you might need to read carefully their notes or instruction manual, configure your firewall properly and try to consult with expert in order to maximize the security and performance. Thanks for reading anyway!
+That's it! You now have a fully functional WAMP server (with Composer as the extra) that runs as a service and doesn't depend on any user (accessible even if no one is logged in). If you set up for production instead development, you might need to read carefully their notes or instruction manual, configure your firewall properly and try to consult with expert in order to maximize the security and performance. Thanks for reading anyway!
