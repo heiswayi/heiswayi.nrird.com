@@ -9,18 +9,18 @@ comments: true
 
 ### The boring story and AI chatbot development in mIRC
 
-The first chatbot program I created is using [mIRC](http://www.mirc.com/) scripting. Back in 2004 - 2007, I had used mIRC program to connect to [IRC](https://en.wikipedia.org/wiki/Internet_Relay_Chat) network and started chatting with other people. However, other than just for chatting, mIRC has a powerful scripting language which we called it 'remote'. From there, I had been exploring and writing my own mIRC script. There are many things we can do with the scripting. People started writing the script to protect the chat room (IRC channel) from user spamming (we called it 'channel flooding'), creating music player, hosting a quiz bot in the IRC channel and many more.
+The first chatbot program I ever created is using [mIRC](http://www.mirc.com/) scripting. Back in 2004 - 2007, I used mIRC program to connect to [IRC](https://en.wikipedia.org/wiki/Internet_Relay_Chat) network and started chatting with other people. However, other than just for chatting, mIRC has a powerful scripting language which we called it 'remote'. From there, I had been exploring and writing my own mIRC script. There are many things we can do with the scripting. People started writing the script to protect the chat room (IRC channel) from user spamming (we called it 'channel flooding'), creating music player, hosting a quiz bot in the IRC channel and many more.
 
-But for user like me, I play 'revenge' - a scripting battle to test who writes the best, powerful script - by _kicking_ each other from the IRC channel. After some time, things get boring and I started bulding a chatbot. I had a dream to make my IRC chatbot intelligence enough, but due to scripting skill constraint, I was not able to create proper AI chatbot. What I can do is I created my chatbot using direct input-output response method by matching certain keywords in the input. Almost the same concept used to create the quiz bot. At the end, it was good enough for me as my chatbot can do "simple conversation" with the users in the IRC channel. Good enough to keep the channel from silence. To be advanced, my chatbot also can play 'revenge' and retrieve certain commands from me to execute certain tasks.
+But for user like me, I played 'revenge' - a scripting battle to test who writes the best, powerful script - by _kicking_ each other from the IRC channel. After some time, things get boring and I started bulding a chatbot. I had a dream to make my IRC chatbot intelligence enough, but due to lack of scripting skills, I was not able to create proper AI chatbot. What I can do was I created my chatbot using direct input-output response method by matching certain keywords in the input. Almost the same concept used to create the quiz bot. At the end, it was good enough for me as my chatbot can do "simple conversation" with the users in the IRC channel. Good enough to keep the channel from silence. To be advanced, my chatbot also can play 'revenge' and retrieve certain commands from me to execute certain tasks.
 
-Here are my legacy mIRC scripts I built. No chatbot feature, just to share for the sake of some 'sweet' memories I had:
+Here are my legacy mIRC scripts I built and successfuly backed up. No chatbot feature inside, just to share for the sake of the legacy 'sweet' memories I had:
 - [Dino IRC Script (Final Dev)](https://drive.google.com/open?id=0B7VfNqY3LHBXaUQ2cDJxNENiS1U)
 - [Nikotin3](https://drive.google.com/open?id=0B7VfNqY3LHBXaUNyWjh5WTE4Q1E)
 - [WarLord](https://drive.google.com/open?id=0B7VfNqY3LHBXeWcwTGMtVmFoNUk)
 
 ### Developing AI chatbot using .NET Framework and SQLite database
 
-After few years passed, this "AI chatbot" thing came back into my mind. As this time, I had tried to develop them using .NET C# and SQLite as its database. I used SQLite to save each possible input and output responses, so whenever the application received input that is matched, the application will immediately respond with possible outputs. Quite basic, no framework involved and not really "AI". Below are the screenshots how the application is looked like:
+After few years passed, this "AI chatbot" thing came back into my mind. As this time, I tried to develop them using .NET C# and SQLite as its database. I used SQLite to save each possible input and output responses, so whenever the application received input that is matched, the application will immediately respond with possible outputs. Quite basic, no framework involved and not really "AI". Below are the screenshots how the application is looked like:
 
 [![WAYI v1](http://i.imgur.com/F1n1W0N.png)](http://i.imgur.com/F1n1W0N.png)
 
@@ -32,7 +32,7 @@ After few years passed, this "AI chatbot" thing came back into my mind. As this 
 
 After I had done some researches on Internet, I found one so-called the "first framework" that I can start with. It was called [Artificial Intelligence Markup Language (AIML)](http://www.alicebot.org/aiml.html), a standard XML format markup language for defining the responses from the chatbot. AIML was developed by **Richard S. Wallace** and a worldwide free software community between 1995 and 2002. AIML formed the basis for what was initially a highly extended [Eliza](https://en.wikipedia.org/wiki/ELIZA) called ["A.L.I.C.E." (Artificial Linguistic Internet Computer Entity)](https://en.wikipedia.org/wiki/Artificial_Linguistic_Internet_Computer_Entity) which won the annual [Loebner Prize Competition](https://en.wikipedia.org/wiki/Loebner_Prize) in Artificial Intelligence three times and was also the Chatterbox Challenge Champion in 2004.
 
-So, I had used [AIMLbot.dll](http://aimlbot.sourceforge.net/) library for my chatbot application while getting myself to learn more about the markup language structures used in AIML as published in [this paper](http://arxiv.org/ftp/arxiv/papers/1307/1307.3091.pdf). AIML provided much better way of defining the knowledge database of my chatbot and made it looked more natural to call as an "artificial intelligence" chatbot. Below are the screenshots of my chatbot that used AIML library.
+So, I used [AIMLbot.dll](http://aimlbot.sourceforge.net/) library for my chatbot application while getting myself to learn more about the markup language structures used in AIML as published in [this paper](http://arxiv.org/ftp/arxiv/papers/1307/1307.3091.pdf). AIML provided much better way of defining the knowledge database of my chatbot and made it looked more natural to call as an "artificial intelligence" chatbot. Below are the screenshots of my chatbot that used the AIML library.
 
 [![WAYI v1](http://i.imgur.com/UJjTodD.png)](http://i.imgur.com/UJjTodD.png)
 _WAYI v1_
@@ -42,7 +42,7 @@ _WAYI v2_
 
 #### Found better library... called SIML
 
-After some time, I found another chatbot markup language known as [Synthetic Intelligence Markup Language (SIML)](http://simlbot.com/), which was more powerful than AIML. SIML provided much better features compared to AIML. So, I changed the current markup language of my chatbot from AIML to use SIML as SIML already provided their own chatbot studio program called Syn Chatbot Studio.
+After some time, I found another chatbot markup language library known as [Synthetic Intelligence Markup Language (SIML)](http://simlbot.com/), which was more powerful than AIML. SIML provided much better features compared to AIML. So, I changed the current markup language of my chatbot from AIML to use SIML as SIML already provided their own chatbot studio program called Syn Chatbot Studio.
 
 Based on their website, Syn Chatbot Studio offers a comprehensive collection of tools to develop intelligent chatbots that targeted desktops, mobile and web platforms. It has Code Analysis, AIML to SIML converter, JavaScript Editor, Regex Tester and smooth Auto-Complete. Much more interestingly, it has ability to execute JavaScript function from its routine of responses. That was very cool feature since I had a lot of things I could do with JavaScript.
 
