@@ -4,6 +4,7 @@
 _site/
 .sass-cache
 *.draft
+_deleted/
 
 #################
 ## Eclipse
