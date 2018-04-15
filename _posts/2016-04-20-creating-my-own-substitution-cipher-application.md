@@ -1,19 +1,19 @@
 ---
 layout: post
 title: Creating my own substitution cipher application
-description: Demonstrating my own substitution cipher application created in C# WPF using my own encoding method to encode the plaintext message into the encrypted strings.
+description: Demonstrating my own substitution cipher created in C# WPF using my own encoding method to encode the plaintext message into the encrypted strings.
 keywords: substitution cipher, custom encoding method, heiswayi nrird cipher program, c# wpf, encryption and decryption
 tags: [CSharp, WPF, Cryptography]
 comments: true
 ---
 
-> Please note that this application is just for fun (experimental) and it is totally unsecure for any practical use.
+> Please note that this project is JUST FOR FUN and it is totally unsecure for any practical use.
 
 ### What is cipher?
 
 In cryptography, a cipher is an algorithm for performing encryption or decryption of information into some kind of secret codes. For a **substitution cipher**, it's a method of encoding characters from the plaintext message into something called ciphertext. There are few popular cipher algorithms such as steganography, ROT13, Caesar shift cipher, Vigenere, etc. which I can simply use. There are also the modern unbreakable of encryption algorithms available such as Triple DES, RSA, Blowfish, Twofish, AES, etc.
 
-But to be epic and for the sake of fun, I decided to use a substitution method with my own designed keys and encoding algorithm. So, I created my own cipher application in C# WPF which obviously I named as _Heiswayi Nrird Cipher Program_. Not really a nice name huh?
+But today I want to create my own cipher program and experiment with it. I decided to use a substitution method with my own designed keys and encoding algorithm. So, I have created my own cipher application in C# WPF which obviously I have named it as _Heiswayi Nrird Cipher Program_.
 
 ### Screenshot of the application
 
@@ -21,7 +21,7 @@ But to be epic and for the sake of fun, I decided to use a substitution method w
 
 ### Here's how I implemented my encoding method
 
-First, since this is a substitution cipher, so I have defined two my own dictionaries; one for encryption, another one for decryption.
+First, since this is a substitution cipher, so I have to define two my own dictionaries; one for encryption, another one for decryption.
 
 Encryption dictionary:
 
@@ -187,7 +187,7 @@ Array.Reverse(charArrayReverse);
 string data2 = new string(charArrayReverse);
 ```
 
-Next, I will loop through each input character, replace it with my substitution dictionary, and creat new string using `StringBuilder`.
+Next, I will loop through each input character, replace it with my substitution dictionary, and then create new string using `StringBuilder`.
 
 ```csharp
 StringBuilder sb = new StringBuilder();
@@ -204,7 +204,7 @@ for (int i = 0; i < data2.Length; i++)
 string data3 = sb.ToString();
 ```
 
-Finally, I will prepend the hash code of user password, then append the output characters by separating it using `$` character, then append again with my signature characters which is `$HN`.
+Finally, I will prepend the hash code of the password, then append the output characters by separating it using `$` character, then append again with my signature characters which is `$HN`.
 
 ```csharp
 outputData = hashCode.ToUpper() + "$" + data4.ToUpper() + "$HN";
@@ -234,6 +234,6 @@ Substitution cipher is weak, easily broken and the cryptanalyst can deduce the p
 
 ### Source code and download
 
-If you like to see the full source code of this application, you can download it from my [GitHub](https://github.com/heiswayi/HeiswayiNrirdCipherProgram) repository. If you want to try to play with the compiled version, you can download the binary [here](https://www.dropbox.com/s/p9lc58cgw059mka/HeiswayiNrirdCipherProgramV1.zip?dl=0) or you can compile it by yourself from the source code provided.
+If you like to see the full source code of this application, you can download it from my [GitHub](https://github.com/heiswayi/HeiswayiNrirdCipherProgram) repository. If you want to try to play with the compiled version, you can download the binary [here](https://www.dropbox.com/s/p9lc58cgw059mka/HeiswayiNrirdCipherProgramV1.zip?dl=0) or you can compile it by yourself from the source code that is provided.
 
 Prerequisite: [.NET Framework 4.5.2](https://www.microsoft.com/en-us/download/details.aspx?id=42642)
