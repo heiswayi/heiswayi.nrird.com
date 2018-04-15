@@ -1,19 +1,17 @@
 ---
 layout: post
 title: Understanding multithreading vs single threading programming
-description: Full source code written in .NET C# demonstrating multithreading programming using Windows Console application.
+description: Full example code for Windows Console application to demonstrate the multithreading programming in .NET C#.
 keywords: multithreading, single threading, sample source code, demonstration, threadpool, task, backgroundworker, windows console application
 tags: [CSharp, Multithreading, Console Application]
 comments: true
 ---
 
-
-
 Multithreading is a widespread programming and execution model that allows multiple threads to exist within the context of one process. They share the process's resources, but they are able to execute independently while the single threading is the processing of one command at a time.
 
 The purpose of threading is to allow computer to do more than one thing at a time. In a single core computer, multithreading won't give much advantages for overall speed. But for computer with multiple processor cores (which is so common these days), multithreading can take advantage of additional cores to perform separate instructions at the same time or by splitting the tasks between the cores.
 
-Below is full source of Windows Console application written in C# that will demonstrate multithreading programming vs single threading programming. You may copy and paste the source code into your Visual Studio to have a try. The demonstration covers four multithreading options; `Thread()`, `ThreadPool.QueueUserWorkItem()`, `Task()` and `BackgroundWorker()`.
+Below is the full example source code of Windows Console application written in C# that will demonstrate multithreading programming versus single threading programming. You may copy and paste the source code into your Visual Studio to have a try. The demonstration covers four multithreading options; `Thread()`, `ThreadPool.QueueUserWorkItem()`, `Task()` and `BackgroundWorker()`.
 
 ```csharp
 using System;
@@ -267,7 +265,7 @@ _Figure 1 (above): Showing few options of multithreadings._
 
 _Figure 2 (above): Example of multithreading using `ThreadPool.QueueUserWorkItem()`._
 
-### Notes
+### Notes on multithreading classes
 
 - The `Thread` class is used for creating and manipulating a [thread](http://msdn.microsoft.com/en-us/library/windows/desktop/ms684841%28v=vs.85%29.aspx) in Windows.
 - A `Task` represents asynchronous operation and is part of the [Task Parallel Library](http://msdn.microsoft.com/en-us/library/dd460717%28v=vs.110%29.aspx), a set of APIs for running tasks asynchronously and in parallel.
@@ -320,4 +318,4 @@ Work complete!
 Time elapsed: 00:00:01.6416939
 ```
 
-Based on the results above (using my PC), multithreading programming provides about 4x faster compared to single threading.
+Based on the results above (using my PC), multithreading programming provides about **4x faster** compared to single threading.
