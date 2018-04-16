@@ -7,7 +7,7 @@ tags: [CSharp, SerialPort, Singleton]
 comments: true
 ---
 
-In my projects, some of them involves serial data communication. So, I think there is a desire for me to create a reusable class that I could always reuse whenever I develop any application that uses serial data communication protocol. Most likely when I work with the projects that is using [Arduino](https://www.arduino.cc/) board. Here is my singleton class called `SerialPortManager` which is basically based on [System.IO.Ports.SerialPort](https://msdn.microsoft.com/en-us/library/system.io.ports.serialport(v=vs.110).aspx) class.
+In my projects, some of them sometimes involves serial data communication. So, I think there is a need for me to create a reusable class that I could always reuse whenever I develop any application that uses serial data communication protocol. Most likely when I work with the projects that is interfacing with [Arduino](https://www.arduino.cc/) board. Here is my singleton class called `SerialPortManager` which is basically based on [System.IO.Ports.SerialPort](https://msdn.microsoft.com/en-us/library/system.io.ports.serialport(v=vs.110).aspx) class.
 
 ### SerialPortManager.cs
 
@@ -331,7 +331,7 @@ SerialPortManager.Instance.Open("COM4", 9600);
 SerialPortManager.Instance.Close();
 ```
 
-`SerialPortManager` also provides a public event to be subscribe for receiving any status update/response. To get the status message, just subscribe to `OnStatusChanged` event or `OnSerialPortOpened` event for getting boolean return either the serial port is opened or closed.
+`SerialPortManager` also provides a public event to be subscribe for receiving any status update/response. To get the status message, just subscribe to `OnStatusChanged` event or `OnSerialPortOpened` event for getting Boolean return either the serial port is opened or closed.
 
 **Example:**
 
@@ -371,4 +371,4 @@ Don't worry, this class doesn't have the issue with that. Here is the design app
 
 As you can see from the class source code, there is no `System.IO.Ports.SerialPort.Close()` is used as this will cause a deadlock issue or hang the application. This is because the serial port base stream is locked while serial port events are handled.
 
-Instead, use `ReadPort()` method to be run on a new thread and use `while` loop statement for acquiring or reading data from the serial port. When `SerialPortManager.Instance.Close()` is called, `_keepReading` will be set to `FALSE` which will stop UI from receiving and updating the data while waiting the thread to fully terminate.
+Instead, use `ReadPort()` method to be run on a new thread and use `while` loop statement for acquiring or reading data from the serial port. When `SerialPortManager.Instance.Close()` is called, `_keepReading` will be set to `false` which will stop UI from receiving and updating the data while waiting the thread to fully terminate.
