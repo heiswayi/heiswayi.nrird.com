@@ -1,17 +1,17 @@
 ---
 layout: post
 title: Simple XML serialization and deserialization helper class in C#
-description: XmlHelper.cs is a helper class for XML data serialization and deserialization that I wrote to use in my C# projects.
+description: XmlHelper.cs is a helper class for XML data serialization and deserialization that I wrote to be used in my C# projects.
 keywords: c# programming, xml serialization, xml deserialization, xml helper class, readable dataset format
 tags: [CSharp, XML, Utility]
 comments: true
 ---
 
-I wrote this helper class because sometimes I have some projects that need to use XML file format to save some states or configurations and to retrieve the configurations back. I like to work with XML file as the content is easy to be edited and human readable by using any code editor application. So, this is my own version of simple XML helper class to ease my work with data serialization and deserialization.
+I wrote this helper class because sometimes I have some projects that need to use XML file format to save some states or configurations and to retrieve the configurations back. I like to work with XML file as the content is easy to be edited and human readable by using any code editor application. So, this is my own version of simple XML helper class to ease my work with XML data serialization and deserialization.
 
 ### Helper class source code
 
-_XmlHelper.cs_ | Also available on my [Gist](https://gist.github.com/heiswayi/cb66748bc11efe360ad6c233fa8e603f)
+_XmlHelper.cs_ // Also available on my [Gist](https://gist.github.com/heiswayi/cb66748bc11efe360ad6c233fa8e603f) too.
 
 ```csharp
 using System;
@@ -259,13 +259,13 @@ John Cornor
 Jason Bourne
 ```
 
-### Byte Order Mark (BOM)
+### Resolving Byte Order Mark (BOM) bug
 
 > "Data at the root level is invalid. Line 1, position 1."
 
-At the beginning I encountered with this kind of exception message when I tried to deserialize the XML string. So, after some researches on Google, I found a [blog](http://www.ipreferjim.com/2014/09/data-at-the-root-level-is-invalid-line-1-position-1/) that explains the root cause and detailed solution which it is called **BOM**, a Unicode character used to signal the endianness (byte order) of a text file or stream.
+In the beginning of writing this helper class, I have encountered with this kind of exception message when I tried to deserialize the XML string. After I did some researches on Google, I found a [blog](http://www.ipreferjim.com/2014/09/data-at-the-root-level-is-invalid-line-1-position-1/) that explained the root cause and detailed solution. That bug is known as **BOM**, a Unicode character used to signal the endianness (byte order) of a text file or stream.
 
-Below is the code snippet I applied inside serializing method before outputting to XML string to solve the issue:
+Below is the code snippet fix that I have applied inside serializing method before outputting to XML string in order to resolve the issue:
 
 ```csharp
 string _byteOrderMarkUtf8 = Encoding.UTF8.GetString(Encoding.UTF8.GetPreamble());
