@@ -1,17 +1,17 @@
 ---
 layout: post
 title: C# common practices
-description: Just sharing some sort of good common coding practices that I have been practicing in my coding style at work for C# programming.
+description: Just sharing some of the good common coding practices that I have been practicing in my coding style at work for C# programming.
 keywords: csharp common practices, self-documented code, code optimization, good coding practices
 tags: [CSharp, Best Practices]
 comments: true
 ---
 
-> "Any fool can write code that a computer can understand. Good programmers write code that humans can understand."- Martin Fowler
+> "Any fool can write code that a computer can understand. Good programmers write code that humans can understand." -- Martin Fowler
 
-Good coding practices will guide you to write better, maintainable and clean code.  There are a lot of articles sharing about good common practices for C# programming, and some may be written in any programming book. Previously, I don't really care about the good common practices in my C# programming as long as my code works. Just a couple years ago when I started working in multiple teams of developers from a big software company, then the coding standards have been practiced widely among the software developers.
+Good coding practices will guide you to write better, maintainable and clean code. There are a lot of articles sharing about good common practices for C# programming, and some may be written in any programming book. Previously, I don't really care about the good common practices in my C# programming as long as my code works. Just a couple years ago when I started working in multiple teams of developers from a big software company, then the coding standards have been practiced widely among the software developers.
 
-What I'm going to share to you here are some of my common coding practices that I have been practicing when I do programming in C#. Now they all become a habit to me to always trying my best to write clean code in whatever programming I'm working on. If you're a beginner or new .NET developer, these coding practices would be useful for you to start practicing in your work.
+What I'm going to share to you here are some of my common coding practices that I have been practicing when I do programming in C#. Now they all become a habit to me to always trying my best to write clean code in whatever programming I have been working on. If you're a beginner or new .NET developer, these coding practices would be useful for you to start practicing in your work.
 
 ### Use of proper naming conventions
 
