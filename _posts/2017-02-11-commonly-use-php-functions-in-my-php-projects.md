@@ -7,7 +7,7 @@ tags: [PHP]
 comments: true
 ---
 
-Few years ago, I have been actively developing web applications in PHP and some of my old PHP project source codes are backed up on my [GitHub](https://github.com/heiswayi). Within that period, I have been using these PHP custom functions for most of my PHP projects. Some of these code snippets are created by my own to suit my development requirements.
+Few years ago, I have been actively developing web applications in PHP and some of my old PHP project source code are backed up on my [GitHub](https://github.com/heiswayi). Within that period, I have been using these PHP custom functions for most of my PHP projects. Some of these code snippets are created by my own to suit my development requirements.
 
 ### Hash user password
 
