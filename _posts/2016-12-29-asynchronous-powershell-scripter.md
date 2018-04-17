@@ -1,17 +1,17 @@
 ---
 layout: post
 title: Asynchronous PowerShell Scripter
-description: Asynchronous PowerShell Scripter is a tool built in C# WPF to easily manage, asynchronously execute or learn the PowerShell scripts.
+description: Just another PowerShell scripter tool built in .NET C# and WPF to simply manages the PowerShell scripts, or to run the script asynchronously and also a basic tool to learn PowerShell programming.
 keywords: c# programming, asynchronous powershell scripter, learn powershell, manage powershell preset scripts, powershell scripts, execute powershell asynchronously
 tags: [CSharp, WPF, PowerShell]
 comments: true
 ---
 
-Asynchronous PowerShell Scripter is a .NET C# **WPF-version** application for executing PowerShell script **asynchronously** with few following interesting features;-
+Asynchronous PowerShell Scripter is just another PowerShell scripter tool made in .NET C# and **WPF** for executing PowerShell script **asynchronously** and has the abilities to:-
 
-- save new or remove PowerShell preset scripts
-- import PowerShell script file directly
-- drag-n-drop PowerShell script file onto Script Editor
+- save new or remove PowerShell preset scripts.
+- import PowerShell script file directly.
+- drag-n-drop PowerShell script file onto the Script Editor.
 - export selected lines or all lines output into a text file.
 
 ### Screenshots
@@ -53,10 +53,10 @@ Preset scripts are stored in the plain text file format in "presets" folder wher
 
 ### Source Code and Downloads
 
-Asynchronous PowerShell Scripter source code is available on [GitHub](https://github.com/heiswayi/AsyncPowerShellScripter) repository and licensed under [MIT License](https://github.com/heiswayi/AsyncPowerShellScripter/blob/master/LICENSE.md). The source code is personally maintained by me, however if anyone interested to contribute, the person is free to do so; just fork out the repository, make changes and pull request.
+Asynchronous PowerShell Scripter source code is available on [GitHub](https://github.com/heiswayi/AsyncPowerShellScripter) and licensed under [MIT License](https://github.com/heiswayi/AsyncPowerShellScripter/blob/master/LICENSE.md). The source code is personally maintained by me, however if anyone interested to contribute, feel free to fork, make changes and pull request.
 
-To download the binary package (executable file), please visit Asynchronous PowerShell Scripter [release page here](https://github.com/heiswayi/AsyncPowerShellScripter/releases).
+To download the binary package (executable file), you may visit the [release page here](https://github.com/heiswayi/AsyncPowerShellScripter/releases).
 
 ### Credits
 
-This project is originally inspired from or a derivative works of [Asynchronously Execute PowerShell Scripts from C# by jpmik](https://www.codeproject.com/Articles/18409/Asynchronously-Execute-PowerShell-Scripts-from-C).
+This project is originally inspired from or a derivative works of [Asynchronously Execute PowerShell Scripts from C# WinForms by jpmik](https://www.codeproject.com/Articles/18409/Asynchronously-Execute-PowerShell-Scripts-from-C).
