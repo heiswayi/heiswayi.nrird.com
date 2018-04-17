@@ -1,15 +1,15 @@
 ---
 layout: post
 title: Creating my GitHub repo listing page using GitHub API
-description: Creating dedicated sites to list my GitHub repos and gists for better clarity especially when the number of my repos and gists started increasing.
+description: Creating dedicated sites to list all of my GitHub repos and gists for better clarity especially when the number of my repos and gists started increasing.
 keywords: listing site, github repo gist listing, grid layout site, github api v3, muuri jquery plugin
 tags: [JavaScript, AJAX, GitHub API]
 comments: true
 ---
 
-Sometimes, I found that the best way to display all of my GitHub repositories for a better clarity is to create its own dedicated site for that, especially when the number of my **_repos_** (short term for repositories) started increasing. It will be quite helpful to look all those repos in one glance. Like [Twitter](https://twitter.github.io/), [IBM](https://ibm.github.io/) or [Uber](https://uber.github.io/) have done. All of these are possible by using [GitHub API](https://developer.github.com/v3/).
+Sometimes, I found that the best way to display all of my GitHub repos for a better clarity is to create its own dedicated site/page for that, especially when the number of my repos  started increasing. It will be quite helpful to look at all those repos in a glance. Similarly to what has been done by [Twitter](https://twitter.github.io/), [IBM](https://ibm.github.io/) and [Uber](https://uber.github.io/). All of these are made possible and easy by using [GitHub API](https://developer.github.com/v3/).
 
-Previously, my repo listing page was using the same layout as I did for [my gists](http://heiswayi.github.io/my-gists/) (gist is like a code snippet service by GitHub). Below is the screenshot for my gist listing page, and for now I don't have a plan to change the layout.
+Previously, my repo listing page was using the same layout as I did for [my gists](http://heiswayi.github.io/my-gists/) (gist is like a code snippet service from GitHub). Below is the screenshot for my gist listing page, and for now I don't have a plan to change the layout.
 
 > GitHub Gist is a great service provided by GitHub to easily share your code snippets or save your notes online, either for private use or public. [More about gist here...](https://help.github.com/articles/about-gists/)
 
@@ -19,17 +19,17 @@ Previously, my repo listing page was using the same layout as I did for [my gist
 
 ### My new GitHub repo listing page
 
-Now it's 2017 and I thought I should change my repo listing page layout to a new layout, and here it is!
+A new layout for my repo listing page:
 
 ![my-repos](http://i.imgur.com/KYNh11h.png)
 
 **Demo URL:** [heiswayi.github.io/my-repos](http://heiswayi.github.io/my-repos/)
 
-This new page layout provides more clarity and also supports pagination if my repos count reaches 100+ repos as [GitHub Search API only provides items in sets of 100](https://developer.github.com/guides/traversing-with-pagination/). It's built from scratch and passion using [jQuery](https://jquery.com/) (for AJAX request), [Bulma - A modern CSS framework based on Flexbox](http://bulma.io/), [Font Awesome](http://fontawesome.io/), [Muuri plugin](https://haltu.github.io/muuri/) and [GitHub API v3](https://developer.github.com/v3/).
+This new page layout provides more clarity and also supports pagination if my repo count reaches 100+ repos as [GitHub Search API only provides items in sets of 100](https://developer.github.com/guides/traversing-with-pagination/). It's built from scratch and passion using [jQuery](https://jquery.com/) (for AJAX request), [Bulma - A modern CSS framework based on Flexbox](http://bulma.io/), [Font Awesome](http://fontawesome.io/), [Muuri plugin](https://haltu.github.io/muuri/) and [GitHub API v3](https://developer.github.com/v3/).
 
 ### Example of code snippets
 
-I use jQuery `$.ajax` to query GitHub API and then process the returned response data of JSON.
+I used jQuery `$.ajax` to query the GitHub API and then process the returned response data of JSON.
 
 ```js
 var github_username = 'heiswayi';
