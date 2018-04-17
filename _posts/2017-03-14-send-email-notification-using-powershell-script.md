@@ -11,7 +11,7 @@ comments: true
 
 If yes, this might be interesting for you. Today, I just want to share a snippet of PowerShell script that can make your task for sending email becomes easier. However, it still depends on your requirements and the script I share may not necessarily be able to provide you a complete solution or solve the big problem. Some may need you to modify or derive the script to suit your case.
 
-At work, I have been implementing software build automation and it's part of my day job as Build and Release Engineer. I also have been creating some internal tools or writing some scripts to automate the tasks. One thing that is common in my automation work is sending email notification. If my build machine is using Windows OS, batch and PowerShell script will be my best friends for the automation process. Most likely I will use PowerShell script as it is lightweight and flexible to any further modification. No need for IDE, no need to compile. I can just use [Notepad2](https://xhmikosr.github.io/notepad2-mod/) to edit it.
+At work, I have been implementing software build automation and it's part of my day job as Build and Release Engineer. I also have been creating some internal tools or writing some scripts to automate the tasks. One thing that is common in my automation work is sending email notification. If my build machine is using Windows OS, batch and PowerShell script will be my best friends for the automation process. Most likely I will use PowerShell script as it is lightweight and flexible to any further modification. No need for IDE, no need to compile. I can just simply use [Notepad2](https://xhmikosr.github.io/notepad2-mod/) to edit it.
 
 ### Script
 
