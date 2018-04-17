@@ -7,7 +7,7 @@ tags: [CSharp]
 comments: true
 ---
 
-When I work with mini C# projects, sometimes I need a logger to easily for me to debug the application during the run-time. So, I have wrote my own super simple logger class that I can simply use for my projects without using any other logger library. Here it is!
+When I work with mini C# projects, sometimes I need a logger to easily for me to debug the application during the run-time. So, I have wrote my own super simple logger class that I can simply use for my projects without using any other logger library.
 
 _SimpleLogger.cs_
 
@@ -194,4 +194,4 @@ If you think you want to improve this logger class and make it more useful for o
 
 ### Licensing
 
-MIT
+[MIT](https://heiswayi.nrird.com/mit-license/)
