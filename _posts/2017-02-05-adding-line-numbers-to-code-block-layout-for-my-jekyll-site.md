@@ -7,9 +7,9 @@ tags: [Jekyll, CSS, JavaScript]
 comments: true
 ---
 
-Previously, my code block for this site is just a simply boring code block. So, I thought I want to add the line numbers for my code block and I did it using few lines of JavaScript and then styled it nicely using CSS code. I thought I want to share it here, so what you will see on my code block here later, that's how I implemented it for my Jekyll theme (this site) without using other code syntax-highlighting plugin whatsoever.
+Previously, my code block for this site is just a simply boring code block. Then, I thought I want to make it a little bit fancy by adding the line numbers into it. Finally, I realized it by using few lines of JavaScript code and a little bit of styles using CSS code. Let's the code on how I implemented it for this site (a Jekyll powered site) without using any code syntax-highlighting plugin.
 
-Since the markdown will output the code block into something like `<pre><code>...</code></pre>`, so I can use pure JavaScript to create the line numbers and inject the HTML code into my `<pre><code>` block.
+Since the markdown will output the code block into something like `<pre><code>...</code></pre>`, so I can use the JavaScript vanilla to create the line numbers and inject the HTML code into my `<pre><code>` block.
 
 ```js
 (function() {
@@ -26,9 +26,9 @@ Since the markdown will output the code block into something like `<pre><code>..
 })();
 ```
 
-If you want to implement into your site, you can use the JavaScript above and include it before the `</body>` tag of your Jekyll layout.
+If you want to implement into your site, you can use the JavaScript code above and include it before the `</body>` tag of your Jekyll layout.
 
-Below is my SCSS code for styling my code block layout as you can see on this article right now:
+Below is my SCSS code for styling the code block layout as you can see on this page right now:
 
 ```css
 pre {
@@ -73,4 +73,4 @@ pre {
 }
 ```
 
-If you want to try and play around with the demo, you can check my [CodePen here](http://codepen.io/heiswayi/pen/jyKYyg), but please note that the markdown in the CodePen does not have automatic code syntax-highlighting like GitHub Pages does for this Jekyll site. Have fun coding!
+If you want to try and play around with the demo, you can check my [CodePen here](http://codepen.io/heiswayi/pen/jyKYyg), but please note that the markdown in the CodePen does not have automatic code syntax-highlighting like GitHub Pages did for this Jekyll site. Have fun coding!
