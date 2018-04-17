@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Your Windows passwords are vulnerable and hackable in less than 5 minutes
-description: This is simple how-to article demonstrating existing vulnerability that makes your Windows passwords are hackable.
+description: This is a simple how-to article demonstrating existing vulnerability that makes your Windows passwords are hackable.
 keywords: Windows passwords, logon password, LsaProtectMemory, LsaUnprotectMemory, lsass.exe, Windows vulnerability, mimikatz terminal, powershell script, out-minidump, minidump
 tags: [Windows, PowerShell, Vulnerability, Encryption, Decryption]
 comments: true
