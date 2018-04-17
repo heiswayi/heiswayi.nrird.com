@@ -1,13 +1,13 @@
 ---
 layout: post
 title: SerialLog - a simple serial data logger console application
-description: Lightweight console application built in .NET C# to log serial data received from a serial data communication protocol.
+description: A lightweight console application built in .NET C# to log serial data received from a serial data communication protocol.
 keywords: c# programming, serial port, serial communication, console application, serial data logging, logger console, rs232 serial data
 tags: [CSharp, SerialPort, Console Application]
 comments: true
 ---
 
-SerialLog is a simple console application built in .NET C# to simply log serial data received into a text file automatically at a certain interval of time from a device that connected to the PC using serial data communication protocol. It is lightweight, easy-to-use and open source program.
+SerialLog is a simple console application built in .NET C# to simply log serial data received and save it into a text file automatically at a certain interval of time from a device that connected to the PC using serial data communication protocol.
 
 [**Download latest release here**](https://github.com/heiswayi/SerialLog/releases) // [Source Code on GitHub](https://github.com/heiswayi/SerialLog)
 
