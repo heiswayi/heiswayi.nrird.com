@@ -21,9 +21,9 @@ This site is a place I share my thoughts, opinions, reviews, ideas, personal[^2]
 
 > The information in this site is provided "AS IS" with no warranties, and confers no rights. **This blog does not represent the thoughts, intentions, plans or strategies of my employer.** It is solely my opinion. My thoughts and opinions change from time to time as I come to learn more and develop my understanding about the things and issues that I am blogging about. This site just provides a snapshot of the knowledge, views, and opinions that I hold at a particular point of time and these might most probably change over a period of time. I reserve the right to evolve my knowledge, thoughts, and viewpoints over time and to change them without assigning any reason.
 
-#### Content Licensing
+#### Licensing
 
-Unless otherwise stated, all original code snippets presented on this blog is licensed under [MIT License](http://heiswayi.github.io/mit-license). All original photographs and text (my blog articles) on this site are licensed under [CC BY-NC 4.0 License](https://creativecommons.org/licenses/by-nc/4.0/).
+Unless otherwise stated, all original code snippets presented on this blog are licensed under [MIT License](http://heiswayi.github.io/mit-license). All original photographs and texts (blog articles) on this blog are licensed under [CC BY-NC 4.0 License](https://creativecommons.org/licenses/by-nc/4.0/).
 
 [^1]: Some of the projects may be obselete or unmaintained, only for the archive purpose.
 [^2]: Sometimes, it could be just a hobby stuff.
