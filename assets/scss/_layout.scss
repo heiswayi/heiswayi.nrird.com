@@ -20,7 +20,7 @@ body {
     background-color: #fff;
     -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
-    font-family: 'Fira Sans', sans-serif;
+    font-family: 'Work Sans', sans-serif;
     font-size: 16px;
     line-height: 1.5;
 }
@@ -48,6 +48,7 @@ h6 {
     margin-bottom: 1rem;
     line-height: 1.25;
     color: #313131;
+    font-family: 'Gamja Flower', cursive;
 }
 
 h1 {
@@ -101,7 +102,7 @@ abbr {
 
 code,
 pre {
-    font-family: "Fira Mono", monospace;
+    font-family: monospace;
 }
 
 code {
@@ -217,8 +218,8 @@ h2.year i.fa {
 
 .masthead {
     padding-top: 1rem;
-    padding-bottom: 1rem;
-    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    margin-bottom: 2rem;
     /*border-bottom: 1px solid #ddd;*/
     background-color: #f3f3f3;
     /*box-shadow: 0 1px 1px rgba(0,0,0,0.05);*/
@@ -234,7 +235,7 @@ h2.year i.fa {
     a {
         color: #505050;
         font-weight: bold;
-        font-family: 'Fira Mono', monospace;
+        font-family: monospace;
 
         &:hover {
             background-color: transparent;

@@ -1,18 +1,24 @@
-# Version 4.6
+# Version 5.0
 
-### About this repo
+This repository contains the source code of my personal blog, viewable at https://heiswayi.nrird.com. Built from scratch using [Jekyll](http://jekyllrb.com/) and being hosted automatically by GitHub Pages. Icons by [Font Awesome](https://fortawesome.github.io/Font-Awesome/), Typefaces by [Work Sans](https://fonts.google.com/specimen/Work+Sans) and [Gamja Flower](https://fonts.google.com/specimen/Gamja+Flower).
 
-This repo contains the source code of my site (referred to SITE_URL), which is built from scratch with [Jekyll](http://jekyllrb.com/) and generously hosted automatically on GitHub with free (Thanks, GitHub Pages!). This Jekyll theme is using [Font Awesome](https://fortawesome.github.io/Font-Awesome/) for the awesome icons and [Fira](https://github.com/mozilla/Fira) fonts by Mozilla for the awesome typeface.
+Web URL: https://heiswayi.nrird.com
 
-**SITE_URL:** [http://heiswayi.github.io](http://heiswayi.github.io)
+### Content License
 
-### License
-
-Unless otherwise stated, all original code snippets presented on this site is licensed under the [MIT](LICENSE.md) license. All original photographs and text (my blog posts) on this website ([heiswayi.github.io](http://heiswayi.github.io)) are licensed under a [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/) license. If you have any questions about using any part of these materials for commercial purposes, please write me an email at hnrird(at)gmail.com.
+Unless otherwise stated, all original code snippets presented on this site is licensed under the [MIT](LICENSE.md) license. All original photographs and text (my blog posts) on this website ([heiswayi.github.io](http://heiswayi.github.io)) are licensed under a [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/) license. If you have any questions about using any part of these materials (my contents) for commercial purposes, please write me an email at hnrird@gmail.com.
 
 ### Changelogs (for personal purpose only)
 
 ```
+v5.0 - 2018-04-21
+=================
+- Changed typeface from Fira to Work Sans and Gamja Flower
+- Removed slow moving pattern effect on site header
+- Removed "Edit this page" link to site source code on GitHub repo
+- Revised some contents; removed, modified
+- Few minor updates...
+
 Version 4.6
 ===========
 - Added slow moving pattern effect on site header
