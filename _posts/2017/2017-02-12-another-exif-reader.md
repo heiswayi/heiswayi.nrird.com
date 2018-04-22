@@ -3,7 +3,7 @@ layout: post
 title: Another EXIF Reader
 description: A simple GUI tool to simply extract the image metadata or the EXIF data. Coded in .NET C# using MetadataExtractor library.
 keywords: another exif reader, extract metadata, image exif data, export exif data, image preview
-tags: [CSharp, WPF, EXIF]
+tags: [CSharp, WPF, EXIF, Project]
 comments: true
 ---
 

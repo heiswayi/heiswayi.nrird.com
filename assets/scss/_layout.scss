@@ -307,6 +307,23 @@ h2.year i.fa {
 .page a,
 .post a {
     border-bottom: 1px solid #069;
+
+    &.reversefootnote {
+        border-bottom: none;
+    }
+
+    &.footnote {
+        border-bottom: none;
+        background: transparent;
+        color: #FF4136;
+        padding-left: 3px;
+        padding-right: 3px;
+
+        &:hover {
+            background: #069 !important;
+            color: #fff;
+        }
+    }
 }
 
 .notes a,
@@ -335,10 +352,6 @@ blockquote p:last-child {
 .post-list-date {
     float: right;
     margin: 0 0 0 20px;
-}
-
-.page-title,
-.post-title {
 }
 
 .edit-this-page {
@@ -463,6 +476,14 @@ blockquote p:last-child {
                 background: #666;
                 color: #fff;
                 box-shadow: 0 1px 2px rgba(0,0,0,0.35);
+            }
+
+            &.bg-red {
+                color: #FF4136;
+
+                &:hover {
+                    color: #fff;
+                }
             }
         }
     }

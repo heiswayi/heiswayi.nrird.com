@@ -3,7 +3,7 @@ layout: post
 title: My Free Minimalist Jekyll Themes
 description: Collection of my minimalist Jekyll themes from 2015 - 2017, available for free and open source.
 keywords: free jekyll themes, minimalist jekyll themes, open source jekyll themes
-tags: [Jekyll]
+tags: [Jekyll, Project]
 comments: true
 ---
 
