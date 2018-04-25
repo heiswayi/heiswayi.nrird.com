@@ -1,4 +1,4 @@
-# Version 5.0
+# Version 5.x
 
 This repository contains the source code of my personal blog, viewable at https://heiswayi.nrird.com. Built from scratch using [Jekyll](http://jekyllrb.com/) and being hosted automatically by GitHub Pages. The site is using icons from [Font Awesome](https://fortawesome.github.io/Font-Awesome/), and typefaces from [Work Sans](https://fonts.google.com/specimen/Work+Sans) and [Gamja Flower](https://fonts.google.com/specimen/Gamja+Flower) which are hosted by [Google Fonts](https://fonts.google.com/).
 

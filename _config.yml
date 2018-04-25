@@ -19,14 +19,14 @@ author:
   name:             "Heiswayi Nrird"
   email:            hnrird@gmail.com
   github_username:  heiswayi
-  twitter_username: 
+  twitter_username: heiswayi
   facebook_url:     
 
 # Disqus comment settings
 disqus_enabled:     false
 disqus_shortname:   hnbloggithub
 
-# GA
+# Google Analytics ID
 google_analytics_code: UA-58296043-7
 
 # Build settings
@@ -36,7 +36,7 @@ permalink:          /:year/:title
 markdown:           kramdown
 highlighter:        rouge
 timezone:           Asia/Kuala_Lumpur
-exclude:            ["README.md", "LICENSE.md", "CHANGELOG.md"]
+exclude:            ["README.md", "LICENSE.md", "CHANGELOG.md", "google9bb6a6dc60c4e360.html"]
 
 # Site configurations
 compress_html:

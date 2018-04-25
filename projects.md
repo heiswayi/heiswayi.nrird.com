@@ -5,14 +5,14 @@ description: Hyperlinks to some of my projects and snippets.
 keywords: projects page, hyperlinks, my snippets
 ---
 
-## Published Posts Tagged with "Project"...
+## Published Posts tagged with "Project"...
 
 <ul>
   {% for post in site.posts %}
     {% if post.tags contains "Project" %}
 
     <li>
-        <a href="{{ post.url }}"><strong>{{ post.title }}</strong></a> - {{ post.description }} <small><em>Published on {{ post.date | date: "%b %d, %Y" }}</em></small>
+        <a href="{{ post.url }}"><strong>{{ post.title }}</strong></a> - {{ post.description }}
     </li>
 
     {% endif %}
