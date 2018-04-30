@@ -1,13 +1,13 @@
 ---
 layout: post
 title: PHP - Encryption, Decryption and Password Hashing
-description: If you need custom PHP function to secure your confidential information or to hash user password in unbreakable manner, these code snippets may help and ease up your work.
+description: If you need custom PHP function to secure your confidential information or to hash user password in unbreakable manner, these PHP code snippets may help and ease up your work.
 keywords: php encryption function, php decryption function, secure password hashing using php
 tags: [PHP, Encryption, Decryption, Password Hashing]
 comments: true
 ---
 
-It is a software developer responsibility to write a software that is safe for its user. Any sensitive content or confidential information that does not need to be public or searchable, that kind of data practically must not be kept in a plain text. If you are writing a custom PHP application and if you need custom function that can encrypt and decrypt any sensitive string, you may use these code snippets. These are the common custom functions I have been using when developing web application or building a PHP website to ensure any sensitive data is not easily been disclosed, including custom function for user password hashing.
+It is a software developer's responsibility to write a software that is safe for its user. Any sensitive content or confidential information that does not need to be public or searchable, that kind of data practically must not be kept in a plain text. If you are writing a custom PHP application and if you need custom function that can encrypt and decrypt any sensitive string, you may use these code snippets. These are the common custom functions I have been using when developing web application or building a PHP website to ensure any sensitive data is not easily been disclosed, including custom function for user password hashing.
 
 ### Data encryption
 
@@ -116,5 +116,3 @@ echo hashPassword('myPa55w0rd', 'Flipp@ncy25');
 ```
 
 Those are how I do to keep the user data secured and most importantly despite of whatever methods you're using, security is always the top priority mindset. If you are keen to learn more about password hashing, I recommend you to read [this article](https://crackstation.net/hashing-security.htm). It is a very good article talking about salted password hashing.
-
-P/S: All the code snippets shared above are public domain. You may use it in your commercial project. No attribution required.
