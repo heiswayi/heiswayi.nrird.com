@@ -17,6 +17,6 @@ comments: true
 
 ### Downloads
 
-[**Download Dotfuscated Checker v1.0**](https://www.dropbox.com/s/8lss51zhhx0p4xq/DotfuscatedCheckerV1.zip?dl=0) (EXE, 1.46 MB)
+[**Dotfuscated Checker v1.0**](https://www.dropbox.com/s/8lss51zhhx0p4xq/DotfuscatedCheckerV1.zip?dl=0) (ZIP, 1.46 MB)
 
 Minimum prerequisite: [.NET Framework 4.6.1](https://www.microsoft.com/en-us/download/details.aspx?id=49981)
