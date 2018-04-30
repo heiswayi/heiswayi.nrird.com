@@ -235,5 +235,3 @@ Substitution cipher is weak, easily broken and the cryptanalyst can deduce the p
 ### Source code and download
 
 If you like to see the full source code of this application, you can download it from my [GitHub](https://github.com/heiswayi/HeiswayiNrirdCipherProgram) repository. If you want to try to play with the compiled version, you can download the binary [here](https://www.dropbox.com/s/p9lc58cgw059mka/HeiswayiNrirdCipherProgramV1.zip?dl=0) or you can compile it by yourself from the source code that is provided.
-
-Prerequisite: [.NET Framework 4.5.2](https://www.microsoft.com/en-us/download/details.aspx?id=42642)
