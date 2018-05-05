@@ -20,9 +20,11 @@ body {
     background-color: #fff;
     -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
-    font-family: 'Work Sans', sans-serif;
+    font-family: 'Work Sans', -apple-system, BlinkMacSystemFont, 'avenir next', avenir, helvetica, 'helvetica neue', ubuntu, roboto, noto, 'segoe ui', arial, sans-serif;
     font-size: 16px;
     line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+	  -moz-osx-font-smoothing: grayscale;
 }
 
 a {
@@ -102,7 +104,7 @@ abbr {
 
 code,
 pre {
-    font-family: monospace;
+    font-family: Consolas, monaco, monospace;
 }
 
 code {
@@ -594,7 +596,7 @@ a.skip:hover {
     font-size: 0.7rem;
 
     ol {
-        
+
 
         li p {
             margin-bottom: 0;
