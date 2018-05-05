@@ -29,17 +29,17 @@ published: true
 
           <div class="nav">
               <ul class="top-menu">
-                <li><a href="/" title="Home"><i class="fa fa-home"></i></a></li>
-                <li><a href="/about">About</a></li>
+                <li><a href="{{ "/" | prepend: site.baseurl | prepend: site.url }}" title="Home"><i class="fa fa-home"></i></a></li>
+                <li><a href="{{ "/about" | prepend: site.baseurl | prepend: site.url }}">About</a></li>
                 <!--<li><a href="/resume">Resume <i class="fa fa-external-link-square"></i></a></li>-->
-                <li><a href="/projects" class="bg-red"><i class="fa fa-space-shuttle" aria-hidden="true"></i> Projects</a></li>
+                <li><a href="{{ "/projects" | prepend: site.baseurl | prepend: site.url }}" class="bg-red"><i class="fa fa-space-shuttle" aria-hidden="true"></i> Projects</a></li>
                 {% if page.title == "Home" %}
-                <li><a href="/#Tags">Tags</a></li>
+                <li><a href="{{ "/#Tags" | prepend: site.baseurl | prepend: site.url }}">Tags</a></li>
                 {% else %}
-                <li><a href="/tagged">Tags</a></li>
+                <li><a href="{{ "/tagged" | prepend: site.baseurl | prepend: site.url }}">Tags</a></li>
                 {% endif %}
-                <li><a href="/my-photography">Photography <i class="fa fa-external-link-square"></i></a></li>
-                <li><a href="/reminder">Reminder</a></li>
+                <li><a href="http://heiswayi.github.io/my-photography">Photography <i class="fa fa-external-link-square"></i></a></li>
+                <li><a href="{{ "/reminder" | prepend: site.baseurl | prepend: site.url }}">Reminder</a></li>
               </ul>
           </div>
 
