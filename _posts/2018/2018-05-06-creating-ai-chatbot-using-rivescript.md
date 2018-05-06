@@ -21,8 +21,7 @@ By using RiveScript, I have created two kind of chatbot apps for testing purpose
 
 HelloBot is built using [Jekyll](https://jekyllrb.com/) and [rivescript-js](https://github.com/aichaos/rivescript-js) for the bot interpreter engine. HelloBot is live and currently being hosted using GitHub Pages for demo purpose. HelloBot contains terminal-like interface designed using [Bootstrap](https://getbootstrap.com/), [jQueryTerminal](https://terminal.jcubic.pl/) and [jquery-mousewheel](https://github.com/jquery/jquery-mousewheel).
 
-**Demo URL:** https://heiswayi.nrird.com/hellobot
-**Source code:** https://github.com/heiswayi/hellobot
+[**Demo**](https://heiswayi.nrird.com/hellobot) // [**Source code on GitHub**](https://github.com/heiswayi/hellobot)
 
 ### hnbot - AI chatbot web app built using Node.js and Socket.IO
 
@@ -30,9 +29,9 @@ HelloBot is built using [Jekyll](https://jekyllrb.com/) and [rivescript-js](http
 
 hnbot is using a similar interface design with HelloBot, and the only difference is that hnbot is built based on [Node.js](https://nodejs.org/en/) and [Socket.IO](https://socket.io/). Also similarly to HelloBot, hnbot's interpreter engine is based on [RiveScript NPM package](https://www.npmjs.com/package/rivescript).
 
-**Source code:** https://github.com/heiswayi/hnbot
+[**Source code on GitHub**](https://github.com/heiswayi/hnbot)
 
-To run the demo, you need Git and Node.js installed, then run following commands:
+To run the demo locally, you need Git and Node.js installed, then run following commands:
 
 ```shell
 git clone https://github.com/heiswayi/hnbot.git
