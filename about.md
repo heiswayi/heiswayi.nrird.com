@@ -5,19 +5,19 @@ description: Little information about the human behind this site.
 keywords: about page, about me, heiswayi nrird, the author
 ---
 
-Hello. I'm Heiswayi Nrird -- or just call me "Wayi" for short. Currently I work as a Software Engineer at [Keysight Technologies](https://www.keysight.com), Penang, Malaysia. I experiment, code and build stuffs, especially in desktop based apps in .NET, web stuffs and build automation scripting. Sometimes, I love to do [landscape photography](https://heiswayi.github.io/my-photography/) and explore the beauty of mother nature.
+Hello. I'm Heiswayi Nrird -- or just call me "Wayi" for short. Currently I work as a Software Engineer at [Keysight Technologies](https://www.keysight.com), Penang, Malaysia. I love to experiment, code and build stuffs. Sometimes, I love to capture [beautiful landscapes](https://heiswayi.github.io/my-photography/) and explore the beauty of the nature.
 
-Some of my works[^1] that I shared/published can be found on these following sites:-
+As I'm part of the Internet citizen, some of my stuffs[^1] that I have shared/published online can be found on these following sites:-
 - [GitHub](http://github.com/heiswayi)
 - [Gist](http://heiswayi.github.io/my-gists/)
 - [CodePen](http://codepen.io/heiswayi/)
 - [JSFiddle](http://jsfiddle.net/user/heiswayi/)
 
-For my professional experience, I can be found on these following links:-
+If you're looking for my professional experience, you can check on these following links:-
 - [My Online Résumé](https://heiswayi.github.io/resume/)
 - [LinkedIn](https://my.linkedin.com/in/nrird)
 
-I can be contacted at [hnrird@gmail.com](mailto:hnrird@gmail.com) (the most preferred one).
+I also can be reached via email at [hnrird@gmail.com](mailto:hnrird@gmail.com).
 
 I also run [nrird·xyz](http://nrird.xyz), a personal project called creative studio that focuses on UX design, front-end app development and data visualization.
 
@@ -25,7 +25,7 @@ I also run [nrird·xyz](http://nrird.xyz), a personal project called creative st
 
 #### Site Colophon
 
-This site is a place I share my thoughts, opinions, reviews, ideas, personal[^2] projects or findings. This site is built with the excellent [Jekyll](http://jekyllrb.com), a static site generator and automatically hosted on [GitHub Pages](https://pages.github.com/). The layout of this site (Jekyll theme) is designed or hand-made by me with a passion of simplicity. The source code for this site is available on [GitHub](http://github.com/heiswayi/heiswayi.github.io) and licensed under [MIT License](http://heiswayi.github.io/mit-license).
+This site is a place I share my thoughts, opinions, reviews, ideas, rantings, personal[^2] projects and findings. This site is built with the excellent [Jekyll](http://jekyllrb.com), a static site generator and automatically hosted on [GitHub Pages](https://pages.github.com/). The layout of this site (Jekyll theme) is designed or hand-made by me with a passion for the simplicity. The source code for this site is available on [GitHub](http://github.com/heiswayi/heiswayi.github.io) and licensed under [MIT License](http://heiswayi.github.io/mit-license).
 
 #### Site Disclaimer
 
@@ -36,4 +36,4 @@ This site is a place I share my thoughts, opinions, reviews, ideas, personal[^2]
 Unless otherwise stated, all original code snippets presented on this blog are licensed under [MIT License](http://heiswayi.github.io/mit-license). All original photographs and texts (blog articles) on this blog are licensed under [CC BY-NC 4.0 License](https://creativecommons.org/licenses/by-nc/4.0/).
 
 [^1]: Some of the projects may be obsolete or unmaintained, the only reason it's still there is for the archive purpose.
-[^2]: Sometimes, it could be just a hobby stuff and I did it for fun.
+[^2]: Sometimes, it could be just a hobby stuff, and I did it just for fun.
