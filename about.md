@@ -5,9 +5,19 @@ description: Little information about the human behind this site.
 keywords: about page, about me, heiswayi nrird, the author
 ---
 
-Hello.
+Hello. I'm Heiswayi Nrird -- or just call me "Wayi" for short. Currently I work as a Software Engineer at [Keysight Technologies](https://www.keysight.com), Penang, Malaysia. I experiment, code and build stuffs, especially in desktop based apps in .NET, web stuffs and build automation scripting. Sometimes, I love to do [landscape photography](https://heiswayi.github.io/my-photography/) and explore the beauty of mother nature.
 
-I'm Heiswayi Nrird, or just call me "Wayi" for short. A Software Engineer at [Keysight Technologies](https://www.keysight.com), Penang, Malaysia. I experiment, code and build some stuffs. Sometimes, I love to [click with my camera](https://heiswayi.github.io/my-photography/) and explore the beauty of nature (hiking). Some of my works[^1] have shared/published on [GitHub](http://github.com/heiswayi), [Gist](http://heiswayi.github.io/my-gists/), [CodePen](http://codepen.io/heiswayi/) and [JSFiddle](http://jsfiddle.net/user/heiswayi/). For professional experience, check out [my online resume here ⤯•••](https://heiswayi.github.io/resume/) or connect with me on [LinkedIn](https://my.linkedin.com/in/nrird). I can be contacted at [hnrird@gmail.com](mailto:hnrird@gmail.com).
+Some of my works[^1] that I shared/published can be found on these following sites:-
+- [GitHub](http://github.com/heiswayi)
+- [Gist](http://heiswayi.github.io/my-gists/)
+- [CodePen](http://codepen.io/heiswayi/)
+- [JSFiddle](http://jsfiddle.net/user/heiswayi/)
+
+For my professional experience, I can be found on these following links:-
+- [My Online Résumé](https://heiswayi.github.io/resume/)
+- [LinkedIn](https://my.linkedin.com/in/nrird)
+
+I can be contacted at [hnrird@gmail.com](mailto:hnrird@gmail.com) (the most preferred one).
 
 I also run [nrird·xyz](http://nrird.xyz), a personal project called creative studio that focuses on UX design, front-end app development and data visualization.
 
@@ -25,5 +35,5 @@ This site is a place I share my thoughts, opinions, reviews, ideas, personal[^2]
 
 Unless otherwise stated, all original code snippets presented on this blog are licensed under [MIT License](http://heiswayi.github.io/mit-license). All original photographs and texts (blog articles) on this blog are licensed under [CC BY-NC 4.0 License](https://creativecommons.org/licenses/by-nc/4.0/).
 
-[^1]: Some of the projects may be obselete or unmaintained, only for the archive purpose.
-[^2]: Sometimes, it could be just a hobby stuff.
+[^1]: Some of the projects may be obsolete or unmaintained, the only reason it's still there is for the archive purpose.
+[^2]: Sometimes, it could be just a hobby stuff and I did it for fun.
