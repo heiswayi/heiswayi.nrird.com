@@ -44,7 +44,7 @@ keywords: projects page, hyperlinks, my snippets
 - [Whois Script](http://nrird.xyz/scripts/whois/) - Simple domain whois script that supports up to 1195 domain name extensions.
 - [Indenter Tool](http://nrird.xyz/scripts/indenter-tool/) - Simple script to prettify and fix indentation of the code.
 - [JS Packer](http://nrird.xyz/scripts/js-packer/) - Simple script to compress and obfuscate JavaScript code.
-- [__More scripts...__](https://nrird.xyz/scripts/)
+- [_More scripts..._](https://nrird.xyz/scripts/)
 
 ### Generators hosted by nrird.xyz
 
