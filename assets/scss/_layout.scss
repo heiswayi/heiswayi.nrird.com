@@ -20,8 +20,9 @@ body {
     background-color: #fff;
     -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
-    font-family: 'Work Sans', -apple-system, BlinkMacSystemFont, 'avenir next', avenir, helvetica, 'helvetica neue', ubuntu, roboto, noto, 'segoe ui', arial, sans-serif;
+    font-family: 'Inter UI', -apple-system, BlinkMacSystemFont, 'avenir next', avenir, helvetica, 'helvetica neue', ubuntu, roboto, noto, 'segoe ui', arial, sans-serif;
     font-size: 16px;
+    letter-spacing: -0.004em;
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
 	  -moz-osx-font-smoothing: grayscale;
@@ -50,7 +51,10 @@ h6 {
     margin-bottom: 1rem;
     line-height: 1.25;
     color: #313131;
-    font-family: 'Gamja Flower', cursive;
+    font-family: 'Inter UI', sans-serif;
+    font-weight: 500;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 h1 {
@@ -104,7 +108,7 @@ abbr {
 
 code,
 pre {
-    font-family: Consolas, monaco, monospace;
+    font-family: "SFMono-Regular", Menlo, Consolas, Inconsolata, monospace;
 }
 
 code {
@@ -216,6 +220,8 @@ h2.year i.fa {
     max-width: 28rem;
     z-index: 99;
     position: relative;
+    font-size: 0.75rem;
+    letter-spacing: 0.008em;
 }
 
 .masthead {
@@ -237,7 +243,7 @@ h2.year i.fa {
     a {
         color: #505050;
         font-weight: bold;
-        font-family: monospace;
+        font-family: "SFMono-Regular", Menlo, Consolas, Inconsolata, monospace;
 
         &:hover {
             background-color: transparent;
@@ -249,12 +255,13 @@ h2.year i.fa {
     }
 
     small {
-        font-size: 75%;
+        font-size: 70%;
         font-weight: normal;
         color: #aaa;
         letter-spacing: 0;
         display: block;
         clear: both;
+        font-family: "SFMono-Regular", Menlo, Consolas, Inconsolata, monospace;
     }
 }
 
@@ -303,7 +310,8 @@ h2.year i.fa {
 
 .post-list {
     margin: 0 0 0.75em;
-    font-size: 1.2em;
+    font-size: 0.875rem;
+    letter-spacing: 0.001em;
 }
 
 .page a,
@@ -387,8 +395,9 @@ blockquote p:last-child {
 }
 
 .post-list-desc {
-    color: #888;
-    font-size: 80%;
+    color: #777;
+    font-size: 0.75rem;
+    letter-spacing: 0.008em;
 }
 
 .page-top-meta,
@@ -411,7 +420,8 @@ blockquote p:last-child {
 }
 
 .copyright {
-    font-size: 80%;
+    font-size: 0.625rem;
+    letter-spacing: 0.019em;
     color: #888;
 }
 
@@ -576,7 +586,8 @@ a.skip:hover {
 
 .tag-cloud-small {
   a.tag-anchor {
-    font-size: 80%;
+    font-size: 0.625rem;
+    letter-spacing: 0.019em;
   }
 }
 
@@ -596,7 +607,8 @@ a.skip:hover {
 
 .footnotes {
     margin-top: 1rem;
-    font-size: 0.7rem;
+    font-size: 0.5625rem;
+    letter-spacing: 0.026em;
 
     ol {
 
