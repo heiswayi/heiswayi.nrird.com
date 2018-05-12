@@ -21,9 +21,8 @@ body {
     -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
     font-family: 'Inter UI', -apple-system, BlinkMacSystemFont, 'avenir next', avenir, helvetica, 'helvetica neue', ubuntu, roboto, noto, 'segoe ui', arial, sans-serif;
-    font-size: 16px;
-    letter-spacing: -0.004em;
-    line-height: 1.5;
+    font-size: 18px;
+    line-height: 1.6;
     -webkit-font-smoothing: antialiased;
 	  -moz-osx-font-smoothing: grayscale;
 }
@@ -95,7 +94,6 @@ hr {
 }
 
 abbr {
-    font-size: 85%;
     font-weight: 700;
     color: #555;
     text-transform: uppercase;
@@ -113,14 +111,12 @@ pre {
 
 code {
     color: #f14e32;
-    font-size: 0.8rem;
 }
 
 pre {
     display: block;
     margin-top: 0;
     margin-bottom: 1rem;
-    font-size: 0.7rem;
     line-height: 1.4;
     white-space: pre;
     overflow: auto;
@@ -130,7 +126,6 @@ pre {
     max-height: 800px;
 
     code {
-        font-size: 0.7rem;
         color: inherit;
         background-color: transparent;
         display: block;
@@ -220,8 +215,6 @@ h2.year i.fa {
     max-width: 28rem;
     z-index: 99;
     position: relative;
-    font-size: 0.75rem;
-    letter-spacing: 0.008em;
 }
 
 .masthead {
@@ -242,8 +235,8 @@ h2.year i.fa {
 
     a {
         color: #505050;
-        font-weight: bold;
-        font-family: "SFMono-Regular", Menlo, Consolas, Inconsolata, monospace;
+        font-weight: 900;
+        font-size: 3rem;
 
         &:hover {
             background-color: transparent;
@@ -255,10 +248,9 @@ h2.year i.fa {
     }
 
     small {
-        font-size: 70%;
-        font-weight: normal;
+        font-size: 1.2rem;
+        font-weight: 700;
         color: #aaa;
-        letter-spacing: 0;
         display: block;
         clear: both;
         font-family: "SFMono-Regular", Menlo, Consolas, Inconsolata, monospace;
@@ -268,6 +260,8 @@ h2.year i.fa {
 .page,
 .post {
     margin-bottom: 4em;
+    font-size: 0.9rem;
+    letter-spacing: -0.004em;
 }
 
 .post {
@@ -287,7 +281,7 @@ h2.year i.fa {
         -moz-user-select: none;
         -ms-user-select: none;
         user-select: none;
-        font-size: 70%;
+        font-size: 0.8rem;
         -webkit-border-radius: 3px;
         -moz-border-radius: 3px;
         border-radius: 3px;
@@ -310,8 +304,6 @@ h2.year i.fa {
 
 .post-list {
     margin: 0 0 0.75em;
-    font-size: 0.875rem;
-    letter-spacing: 0.001em;
 }
 
 .page a,
@@ -369,7 +361,7 @@ blockquote p:last-child {
   text-align: right;
   a {
     text-transform: uppercase;
-    font-size: 12px;
+    font-size: 0.8rem;
     text-decoration: none;
     border-bottom: none;
     color: #aaa;
@@ -396,8 +388,8 @@ blockquote p:last-child {
 
 .post-list-desc {
     color: #777;
-    font-size: 0.75rem;
-    letter-spacing: 0.008em;
+    font-size: 0.9rem;
+    letter-spacing: -0.004em;
 }
 
 .page-top-meta,
@@ -420,13 +412,12 @@ blockquote p:last-child {
 }
 
 .copyright {
-    font-size: 0.625rem;
-    letter-spacing: 0.019em;
+    font-size: 0.8rem;
     color: #888;
 }
 
 .license {
-    font-size: 80%;
+    font-size: 0.6rem;
     color: #888;
     text-align: justify;
 }
@@ -460,8 +451,8 @@ blockquote p:last-child {
 .top-menu {
     list-style-type: none;
     margin: 20px 0 0 -42px;
-    line-height: 2.8;
     overflow: hidden;
+    line-height: 2;
 
     li {
         float: left;
@@ -480,6 +471,7 @@ blockquote p:last-child {
             -moz-border-radius: 3px;
             border-radius: 3px;
             box-shadow: 0 1px 2px rgba(0,0,0,0.15);
+            font-size: 0.75rem;
 
             &:hover {
                 border: 1px solid #777;
@@ -505,12 +497,11 @@ blockquote p:last-child {
 }
 
 .footer-social-links {
-    font-size: 14px;
+    font-size: 1rem;
     margin-top: 5px;
 
     a {
-        padding: 3px 5px;
-        width: 25px;
+        padding: 3px 10px;
         height: auto;
         position: relative;
         text-align: center;
@@ -573,7 +564,8 @@ a.skip:hover {
         color: #444;
         -webkit-border-radius: 3px;
         -moz-border-radius: 3px;
-        border-radius: 3px
+        border-radius: 3px;
+        line-height: 2;
     }
     a.tag-anchor:active,
     a.tag-anchor:focus,
@@ -585,8 +577,8 @@ a.skip:hover {
 
 .tag-cloud-small {
   a.tag-anchor {
-    font-size: 0.625rem;
-    letter-spacing: 0.019em;
+    font-size: 0.8rem;
+    letter-spacing: -0.002em;
   }
 }
 
@@ -606,8 +598,8 @@ a.skip:hover {
 
 .footnotes {
     margin-top: 1rem;
-    font-size: 0.5625rem;
-    letter-spacing: 0.026em;
+    font-size: 0.75rem;
+    letter-spacing: 0.001em;
 
     ol {
 
@@ -621,6 +613,7 @@ a.skip:hover {
         content: 'Footnote:';
         display: block;
         border-top: 1px solid #ddd;
-        padding-top: 0.5rem;
+        padding-top: 1rem;
+        margin-top: 2rem;
     }
 }
