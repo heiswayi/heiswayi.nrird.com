@@ -1,7 +1,7 @@
 /*! Responsive Styles */
 
 @media only screen and (min-width: 768px) {
-  html {
+  html, body {
     font-size: 20px;
   }
   .container, .footer, .nav {
@@ -50,8 +50,8 @@
 }
 
 @media only screen and (max-width: 480px) {
-  body {
-    font-size: 0.9rem;
+  html, body {
+    font-size: 1.25rem;
   }
   .container img {
     max-width: 100vw;
