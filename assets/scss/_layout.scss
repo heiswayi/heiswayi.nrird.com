@@ -222,9 +222,10 @@ h2.year i.fa {
     padding-bottom: 2rem;
     margin-bottom: 2rem;
     /*background-color: #f3f3f3;*/
-    background: #f3f3f3 repeating-linear-gradient(135deg, #dfdfdf 0,#dfdfdf 1%, #f3f3f3 0,#f3f3f3 50%) 0 / 20px 20px;
+    /*background: repeating-linear-gradient(135deg, #dfdfdf 0,#dfdfdf 1%, #f3f3f3 0,#f3f3f3 50%) 0 / 20px 20px;*/
+    background: repeating-linear-gradient(135deg, #dfdfdf 0,#dfdfdf 1%, #ffffff 0,#ffffff 50%) 0 / 20px 20px;
     position: relative;
-    /*border-bottom: 1px solid #dfdfdf;*/
+    border-bottom: 1px solid #eeeeee;
     /*box-shadow: 0 1px 1px rgba(0,0,0,0.05);*/
 }
 
@@ -262,6 +263,17 @@ h2.year i.fa {
     margin-bottom: 4em;
     font-size: 0.9rem;
     letter-spacing: -0.004em;
+
+    ul {
+      padding-left: 20px;
+      list-style: none;
+
+      li:before {
+        font-family: 'FontAwesome';
+        content: '\f096';
+        margin:0 5px 0 -20px;
+      }
+    }
 }
 
 .post {

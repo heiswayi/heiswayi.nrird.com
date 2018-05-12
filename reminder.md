@@ -5,29 +5,144 @@ description: Self reminder.
 keywords: self reminder, manifesto, tick-tock
 ---
 
-<h4><span id="myClock" style="font-family:'Fira Mono',monospace;letter-spacing:2px;color:#FF4136;text-transform:uppercase"></span></h4>
+<div class="clock-container">
+<div class="clock">
+  <div class="block" data-num="0"></div>
+  <div class="block" data-num="1"></div>
+  <div class="block" data-num="2"></div>
+  <div class="block" data-num="3"></div>
+  <div class="block" data-num="4"></div>
+  <div class="block" data-num="5"></div>
+  <div class="block" data-num="6"></div>
+  <div class="block" data-num="7"></div>
+  <div class="block" data-num="8"></div>
+  <div class="block" data-num="9"></div>
+  <div class="block" data-num="10"></div>
+  <div class="block" data-num="11"></div>
+  <div class="block" data-num="12"></div>
+  <div class="block" data-num="13"></div>
+  <div class="block" data-num="14"></div>
+  <div class="block" data-num="15"></div>
+  <div class="block" data-num="16"></div>
+  <div class="block" data-num="17"></div>
+  <div class="block" data-num="18"></div>
+  <div class="block" data-num="19"></div>
+  <div class="block" data-num="20"></div>
+  <div class="block" data-num="21"></div>
+  <div class="block" data-num="22"></div>
+  <div class="block" data-num="23"></div>
+  <div class="block" data-num="24"></div>
+  <div class="block" data-num="25"></div>
+  <div class="block" data-num="26"></div>
+  <div class="block" data-num="27"></div>
+  <div class="block" data-num="28"></div>
+  <div class="block" data-num="29"></div>
+  <div class="block" data-num="30"></div>
+  <div class="block" data-num="31"></div>
+  <div class="block" data-num="32"></div>
+  <div class="block" data-num="33"></div>
+  <div class="block" data-num="34"></div>
+  <div class="block" data-num="35"></div>
+  <div class="block" data-num="36"></div>
+  <div class="block" data-num="37"></div>
+  <div class="block" data-num="38"></div>
+  <div class="block" data-num="39"></div>
+  <div class="block" data-num="40"></div>
+  <div class="block" data-num="41"></div>
+  <div class="block" data-num="42"></div>
+  <div class="block" data-num="43"></div>
+  <div class="block" data-num="44"></div>
+  <div class="block" data-num="45"></div>
+  <div class="block" data-num="46"></div>
+  <div class="block" data-num="47"></div>
+  <div class="block" data-num="48"></div>
+  <div class="block" data-num="49"></div>
+  <div class="block" data-num="50"></div>
+  <div class="block" data-num="51"></div>
+  <div class="block" data-num="52"></div>
+  <div class="block" data-num="53"></div>
+  <div class="block" data-num="54"></div>
+  <div class="block" data-num="55"></div>
+  <div class="block" data-num="56"></div>
+  <div class="block" data-num="57"></div>
+  <div class="block" data-num="58"></div>
+  <div class="block" data-num="59"></div>
+  <div class="divider"></div>
+</div>
+</div>
 <script>
-var myClock = document.getElementById('myClock');
-function renderTime () {
-    var currentTime = new Date();
-    var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-    var mo = currentTime.getMonth();
-  	var d = currentTime.getDate();
-  	var y = currentTime.getFullYear();
-    var h = currentTime.getHours();
-    var m = currentTime.getMinutes();
-    var s = currentTime.getSeconds();
-    var ms = currentTime.getMilliseconds();
-    if (h < 10) { h = "0" + h; }   
-    if (m < 10) { m = "0" + m; }    
-    if (s < 10) { s = "0" + s; }
-    myClock.textContent = months[mo] + " " + d + ", " + y + " • " + h + ":" + m + ":" + s + ":" + ms;
-    myClock.innerText = months[mo] + " " + d + ", " + y + " • " + h + ":" + m + ":" + s + ":" + ms;
+const numbers = [
+	[1, 1, 1, 1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 1, 1],
+	[1, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1],
+	[1, 0, 1, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 0, 1],
+	[1, 0, 1, 0, 1, 1, 0, 1, 0, 1, 1, 1, 1, 1, 1],
+	[1, 1, 1, 0, 0, 0, 0, 1, 0, 0, 1, 1, 1, 1, 1],
+	[1, 1, 1, 0, 1, 1, 0, 1, 0, 1, 1, 0, 1, 1, 1],
+	[1, 1, 1, 1, 1, 1, 0, 1, 0, 1, 1, 0, 1, 1, 1],
+	[1, 0, 0, 0, 0, 1, 0, 1, 1, 1, 1, 1, 0, 0, 0],
+	[1, 1, 1, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 1, 1],
+	[1, 1, 1, 0, 1, 1, 0, 1, 0, 1, 1, 1, 1, 1, 1]
+];
+
+const blocks = [];
+const digits = Array.from(document.querySelectorAll('.block'));
+
+for (let i = 0; i < 4; i++) {
+	blocks.push(digits.slice( i * 15, i * 15 + 15 ));
 }
 
-setInterval(function(){
-    renderTime();
-}, 1);
+const setNum = (block, num) => {
+	let n = numbers[num];
+	for (let i = 0; i < block.length; i++) {
+		 block[i].classList[ n[i] === 1 ?  'add' : 'remove']('active');
+	}
+};
+
+const time = {
+	s: '',
+	m: '',
+	h: '',
+	p: null
+};
+
+const animator = () => {
+	let d = new Date(),
+		 h = d.getHours().toString(),
+		 m = d.getMinutes().toString(),
+		 s = d.getSeconds().toString();
+
+	s = s.length === 1 ? '0' + s : s;
+	m = m.length === 1 ? '0' + m : m;
+	h = h.length === 1 ? '0' + h : h;
+
+	if (s !== time.s) {
+		for (let i = 0; i < digits.length; i++) {
+			let d = digits[i];
+			if (i === +s) {
+				d.classList.add('second');
+				if (time.p !== null)
+					digits[time.p].classList.remove('second');
+				time.p = i;
+				time.s = s;
+			}
+		}
+	}
+
+	if (m !== time.m) {
+		setNum(blocks[2], m[0]);
+		setNum(blocks[3], m[1]);
+		time.m = m;
+	}
+
+	if (h !== time.h) {
+		setNum(blocks[0], h[0]);
+		setNum(blocks[1], h[1]);
+		time.h = h;
+	}
+ 	window.requestAnimationFrame(animator);
+};
+
+window.requestAnimationFrame(animator);
 </script>
 
 ```

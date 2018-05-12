@@ -1,0 +1,69 @@
+.clock-container {
+	display: flex;
+	transition: .4s;
+	font-weight: 300;
+  margin-bottom: 1rem;
+  text-align: center;
+  background: #f3f3f3;
+}
+
+.clock {
+  position: relative;
+  display: flex;
+  flex-flow: column wrap;
+  width: 280px;
+  height: 100px;
+}
+
+.block {
+  width: calc(100% / 12);
+  height: 20%;
+  color: darken(silver, 8%);
+  transition: 0.4s;
+
+  &:not(:nth-child(n + 16)):nth-child(n + 11),
+  &:not(:nth-child(n + 46)):nth-child(n + 41) {
+    margin-right: 10px;
+  }
+
+  &:not(:nth-child(n + 31)):nth-child(n + 26) {
+    margin-right: 20px;
+  }
+
+  &:before {
+    content: attr(data-num);
+    position: relative;
+    display: block;
+    font-size: 16px;
+    width: 100%;
+    height: 100%;
+    line-height: 20px;
+    text-align: center;
+  }
+
+  &:nth-child(-n + 10):before {
+    content: '0' attr(data-num);
+  }
+
+  &.active:before {
+    color: #333;
+    font-weight: 500;
+  }
+
+  &.second {
+    background: lighten(silver, 8%);
+  }
+
+  &.second:before {
+    color: #333;
+  }
+}
+
+.divider {
+  position: absolute;
+  width: 2px;
+  background:#aaa;
+  height: 60%;
+  top: 20%;
+  left: calc(50% + 19px);
+}
