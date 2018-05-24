@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Get started with Inno Setup scripts
-description: Example sharing of my basic Inno Setup scripts and some advanced scripts for prerequisites, downgrade prevention and automatic uninstall old version.
+description: Inno Setup is the best alternative, non-MSI installation software for creating Windows app installer that is easy-to-use, completely free of charge, rich of feature set and wide range of community supports.
 keywords: inno setup, windows installer, creating windows app installer
 tags: [Inno Setup, Pascal]
 comments: true
 ---
 
-I would like to share some [Inno Setup](http://www.jrsoftware.org/isinfo.php) scripts for those who are looking to create Windows installer for your Windows applications. Also for those who never heard about Inno Setup but looking for alternative software to create Windows installer that is easy-to-use, completely free of charge (even for commercial use) and [open source](https://github.com/jrsoftware/issrc), you may learn few things about it here for you to immediately get started.
+I would like to share some [Inno Setup](http://www.jrsoftware.org/isinfo.php) scripts for those who are looking to create Windows app installer for your applications. Also for those who never heard about Inno Setup but looking for alternative software to create Windows app installer that is easy-to-use, completely free of charge (even for commercial use) and [open source](https://github.com/jrsoftware/issrc), you may learn few things about it here for you to immediately get started.
 
 ### Getting started
 
