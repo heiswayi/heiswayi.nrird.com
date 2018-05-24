@@ -1,34 +1,30 @@
 ---
 layout: post
 title: Get started with Inno Setup scripts
-description: Inno Setup is the best alternative, non-MSI installation software for creating Windows app installer that is easy-to-use, completely free of charge, rich of feature set and wide range of community supports.
+description: Inno Setup is the best freeware alternative, non-MSI and script-driven installation system software for creating Windows app installer that is easy-to-use, rich of features and Open Source.
 keywords: inno setup, windows installer, creating windows app installer
 tags: [Inno Setup, Pascal]
 comments: true
 ---
 
-I would like to share some [Inno Setup](http://www.jrsoftware.org/isinfo.php) scripts for those who are looking to create Windows app installer for your applications. Also for those who never heard about Inno Setup but looking for alternative software to create Windows app installer that is easy-to-use, completely free of charge (even for commercial use) and [open source](https://github.com/jrsoftware/issrc), you may learn few things about it here for you to immediately get started.
+[Inno Setup](http://www.jrsoftware.org/isinfo.php) is the best freeware alternative, non-MSI and **script-driven** installation system software for creating Windows app installer that is easy-to-use, rich of features and [open source](https://github.com/jrsoftware/issrc). In this post you will find some of sample scripts I have been using to create my Windows app installer using Inno Setup Compiler. Inno Setup is completely free of charge even for commercial use.mediately get started.
 
 ### Getting started
 
-**Requirements**
-
-To get started, you need to download and install [**Inno Setup**](http://www.jrsoftware.org/isdl.php) software in your PC. Any version will do, for me I use the "unicode" version.
+First thing first, you need to [install Inno Setup software](http://www.jrsoftware.org/isdl.php) into your PC to get started, so you can have the Inno Setup Compiler program and some sample scripts. Any version will do, for me I use the "unicode" version.
 
 **Using Inno Script Studio**
 
-If you want better intuitive graphical interface for generating and compiling Inno Setup scripts, you can download and install [**Inno Script Studio**](https://www.kymoto.org/products/inno-script-studio) software.
+If you want better intuitive graphical interface for generating and compiling Inno Setup scripts, you can [download and install **Inno Script Studio** software](https://www.kymoto.org/products/inno-script-studio).
 
 **Using VS Code or Atom**
 
-If you are using [VS Code](https://code.visualstudio.com/)/[Atom](https://atom.io/) editor to edit Inno Setup scripts, you download and install Inno Setup extension for the syntax coloring:
+If you are using [VS Code](https://code.visualstudio.com/)/[Atom](https://atom.io/) editor to edit Inno Setup scripts, you download and install Inno Setup extension for the script syntax highlighting:
 
 - VS Code: [Inno Setup for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=idleberg.innosetup)
 - Atom: [Inno Setup for Atom](https://atom.io/packages/language-innosetup)
 
-I use both of them because I use both VS Code and Atom. I really love both editors!
-
-_PS: As far as I know, VS Code and Atom are using Inno Setup to create their Windows installer package._
+_P/S: For your information, VS Code and Atom are also using Inno Setup to create their Windows installer package._
 
 **Using Inno Setup in your automated build system**
 
@@ -46,9 +42,11 @@ iscc path\to\myinstaller.iss
 
 For more info on what command-line options are available, just run `iscc /?` from a command prompt.
 
-### Showcase of my basic Inno Setup script
+### Full example of my basic Inno Setup script
 
-The script is written based on the example of my file structure below:
+The script is written based on the example of my app file structure as shown below. If you use the script below, you may need to modify it to suit your app output and file structure. Any feature you don't need, you can simply remove or comment it out. I always reuse this script as a starter and make some modifications that suit the app output and requirements to create another app installer.
+
+_Example of app file structure:_
 
 ```
 .\
@@ -75,7 +73,7 @@ The script is written based on the example of my file structure below:
         └── VerticalBanner.bmp
 ```
 
-And here's the script:
+_Example of the complete script:_
 
 {% raw %}
 ```
@@ -189,13 +187,9 @@ end;
 ```
 {% endraw %}
 
-You may use the example script above as a starter and modify it based on your file structure and requirements. Any feature you don't need, you can just remove or comment it out.
-
 Please note that any line that starts with `;` character is a comment. For `[Code]` section, the comment line is started with `//` characters.
 
-### Explanation of common Flags used
-
-These are commonly used **Flags** under `[Files]` section:
+These are commonly used **Flags** under `[Files]` section and its meaning:
 - `ignoreversion` - replace existing files regardless of their version number
 - `onlyifdoesntexist` - only install the file if it doesn't already exist on the user's system
 - `recursesubdirs` - use this when you use wildcard for the `Source` as shown in the script above
@@ -205,12 +199,20 @@ These are commonly used **Flags** under `[Files]` section:
 
 You can refer to [Inno Setup documentation here](http://www.jrsoftware.org/ishelp/index.php?topic=filessection) for more details about other Flags that are available.
 
-### Example of components-based installation
+### Using components-based installation style
 
-If you want to design your app installer using components-based installation, you may need to modify your script to use `[Types]` and `[Components]` section as shown in the example below:
+If you want to design your app installer using components-based installation, you may need to modify the script and add two extra sections; `[Types]` and `[Components]`. Basically you can find this example script from `Components.iss` file that located in `C:\Program Files (x86)\Inno Setup 5\Examples` folder.
 
 {% raw %}
 ```
+[Setup]
+AppName=My Program
+AppVersion=1.5
+DefaultDirName={pf}\My Program
+DefaultGroupName=My Program
+UninstallDisplayIcon={app}\MyProg.exe
+OutputDir=userdocs:Inno Setup Examples Output
+
 [Types]
 Name: "full"; Description: "Full installation"
 Name: "compact"; Description: "Compact installation"
@@ -224,12 +226,19 @@ Name: "readme\en"; Description: "English"; Flags: exclusive
 Name: "readme\de"; Description: "German"; Flags: exclusive
 
 [Files]
-Source: "ExifReader.exe"; DestDir: "{app}"; Components: program
-Source: "ExifReader.Help.chm"; DestDir: "{app}"; Components: help
+Source: "MyProg.exe"; DestDir: "{app}"; Components: program
+Source: "MyProg.chm"; DestDir: "{app}"; Components: help
 Source: "Readme.txt"; DestDir: "{app}"; Components: readme\en; Flags: isreadme
-Source: "Readme-de.txt"; DestName: "Liesmich.txt"; DestDir: "{app}"; Components: readme\de; Flags: isreadme
+Source: "Readme-German.txt"; DestName: "Liesmich.txt"; DestDir: "{app}"; Components: readme\de; Flags: isreadme
+
+[Icons]
+Name: "{group}\My Program"; Filename: "{app}\MyProg.exe"
 ```
 {% endraw %}
+
+Meaning of the **Flags** used:
+- `fixed` - usually used in the main program file where user cannot unselect that component
+- `exclusive` - user only can select one of the exclusive components, mostly used for localized files
 
 ### Creating installer prerequisites
 
