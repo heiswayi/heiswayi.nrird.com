@@ -13,11 +13,11 @@ comments: true
 
 First thing first, you need to [install Inno Setup software](http://www.jrsoftware.org/isdl.php) into your PC to get started, so you can have the Inno Setup Compiler program and some sample scripts. Any version will do, for me I use the "unicode" version.
 
-**Using Inno Script Studio**
+**Create installer using Inno Script Studio software**
 
 If you want better intuitive graphical interface for generating and compiling Inno Setup scripts, you can [download and install **Inno Script Studio** software](https://www.kymoto.org/products/inno-script-studio).
 
-**Using VS Code or Atom**
+**Edit Inno Setup scripts using VS Code or Atom editor**
 
 If you are using [VS Code](https://code.visualstudio.com/)/[Atom](https://atom.io/) editor to edit Inno Setup scripts, you download and install Inno Setup extension for the script syntax highlighting:
 
@@ -26,7 +26,7 @@ If you are using [VS Code](https://code.visualstudio.com/)/[Atom](https://atom.i
 
 _P/S: For your information, VS Code and Atom are also using Inno Setup to create their Windows installer package._
 
-**Using Inno Setup in your automated build system**
+**Compile Inno Setup scripts using Inno Setup Compiler in your automated build system**
 
 If you have automated build system set up that builds your app source code such as CI/CD, you can simply integrate Inno Setup Compiler into your build system to compile the `*.iss` file. You need to use `ISCC.exe` for the command-line compiler.
 
@@ -42,9 +42,9 @@ iscc path\to\myinstaller.iss
 
 For more info on what command-line options are available, just run `iscc /?` from a command prompt.
 
-### Full example of my basic Inno Setup script
+### Complete example of Inno Setup script for my app installer
 
-The script is written based on the example of my app file structure as shown below. If you use the script below, you may need to modify it to suit your app output and file structure. Any feature you don't need, you can simply remove or comment it out. I always reuse this script as a starter and make some modifications that suit the app output and requirements to create another app installer.
+The script is written based on the example of my app file structure as shown below. If you use the script below, you may need to modify it to suit your app's file structure. Any feature you don't need, you can simply remove or comment it out. I always reuse this script as a starter and make some modifications that suit the app files and requirements to create a new app installer.
 
 _Example of app file structure:_
 
@@ -189,7 +189,7 @@ end;
 
 Please note that any line that starts with `;` character is a comment. For `[Code]` section, the comment line is started with `//` characters.
 
-These are commonly used **Flags** under `[Files]` section and its meaning:
+In the script above, there are some common **Flags** under `[Files]` section and here what they mean:
 - `ignoreversion` - replace existing files regardless of their version number
 - `onlyifdoesntexist` - only install the file if it doesn't already exist on the user's system
 - `recursesubdirs` - use this when you use wildcard for the `Source` as shown in the script above
@@ -197,11 +197,11 @@ These are commonly used **Flags** under `[Files]` section and its meaning:
 - `uninsneveruninstall` - never remove the file during uninstallation
 - `deleteafterinstall` - delete file once the installation is completed/aborted
 
-You can refer to [Inno Setup documentation here](http://www.jrsoftware.org/ishelp/index.php?topic=filessection) for more details about other Flags that are available.
+For other available flags, you can refer to [Inno Setup documentation here](http://www.jrsoftware.org/ishelp/index.php?topic=filessection) for more details.
 
-### Using components-based installation style
+### Implement components-based installation in your installer
 
-If you want to design your app installer using components-based installation, you may need to modify the script and add two extra sections; `[Types]` and `[Components]`. Basically you can find this example script from `Components.iss` file that located in `C:\Program Files (x86)\Inno Setup 5\Examples` folder.
+If you want to design your app installer using components-based installation, you may need to modify the script and add two extra sections called `[Types]` and `[Components]`. Check the example script below which taken from `Components.iss` file that located in `C:\Program Files (x86)\Inno Setup 5\Examples` folder.
 
 {% raw %}
 ```
@@ -240,17 +240,17 @@ Meaning of the **Flags** used:
 - `fixed` - usually used in the main program file where user cannot unselect that component
 - `exclusive` - user only can select one of the exclusive components, mostly used for localized files
 
-### Creating installer prerequisites
+### Creating prerequisites for your installer
 
 **.NET Framework**
 
-If your app requires particular .NET Framework to be installed as part of the prerequisites, there are few ways you can do with Inno Setup script:-
-- Include the offline installer of .NET Framework into your app installer
-- Just check and if not installed, inform user to download and install particular .NET Framework manually
+If your app requires particular .NET Framework to be installed as part of the prerequisites, there are few ways you can do with Inno Setup script. You either can;-
+- include or package together the offline installer of .NET Framework into your app installer, or
+- just check and if not installed, inform the user to download and install particular .NET Framework manually, and then abort your app installer.
 
 You can use the [Check](http://jrsoftware.org/ishelp/topic_scriptcheck.htm) parameter to run check if particular .NET Framework is installed.
 
-**Using offline .NET Framework installer**
+**Here's how to include the offline installer of .NET Framework into your app installer**
 
 Add a new `Source` under the `[Files]` section:
 {% raw %}
@@ -321,9 +321,9 @@ end;
 ```
 {% endraw %}
 
-**Check and inform user to download and install if particular .NET Framework is not installed**
+**Here's how you can just implement the checking and inform the user to download and install if particular .NET Framework is not installed**
 
-Another way is to check the required .NET Framework at the beginning of installation, if not installed, inform user to download and install, then abort the installer.
+Another way is to check the required .NET Framework at the beginning of installation, if not installed, inform the user to download and install the required .NET Framework. Check the code below how to implement it. The code below is taken from [http://www.kynosarges.de/DotNetVersion.html](http://www.kynosarges.de/DotNetVersion.html).
 
 {% raw %}
 ```pascal
@@ -421,11 +421,9 @@ end;
 ```
 {% endraw %}
 
-(Code taken from here: [http://www.kynosarges.de/DotNetVersion.html](http://www.kynosarges.de/DotNetVersion.html))
+### How to prevent install if newer version already installed
 
-### Prevent install if newer version already installed
-
-In case you want to prevent install if newer version already installed in user PC, you can apply this code within `InitializeSetup`, so your installer wouldn't downgrade existing installation.
+In case you want to prevent install if newer version already installed in user PC, you can apply this code within `InitializeSetup` function, so your installer wouldn't downgrade existing installation.
 
 Add a custom message under `[CustomMessages]` section:
 {% raw %}
@@ -464,9 +462,9 @@ end;
 ```
 {% endraw %}
 
-### Automatically uninstall previous installed version
+### How to automatically uninstall previous installed version
 
-Using solution from [Craig McQueen at StackOverflow](https://stackoverflow.com/a/2099805):
+Based on the solution from [Craig McQueen at StackOverflow](https://stackoverflow.com/a/2099805), your installer can check if user already installed your app and if found, your installer will grab the `UninstallString` from the registry and run the uninstallation command in silent mode.
 
 {% raw %}
 ```pascal
@@ -526,9 +524,9 @@ end;
 ```
 {% endraw %}
 
-### Kill existing running services before re-install (or upgrade)
+### How to kill existing running services before re-install (or upgrade)
 
-What you need to do is to apply [BeforeInstall](https://www.kymoto.org/documentation/scriptstudio/index.html?common_beforeinstall.html) parameter at the service file you're going to (re)install. Take a look on the example script below:
+To kill existing running services, what you need to do is to apply [BeforeInstall](https://www.kymoto.org/documentation/scriptstudio/index.html?common_beforeinstall.html) parameter at the service file you're going to (re)install. Take a look on the example script below:
 
 {% raw %}
 ```
@@ -544,5 +542,28 @@ begin
     Exec(ExpandConstant('taskkill.exe'), '/f /im ' + '"' + FileName + '"', '', SW_HIDE,
      ewWaitUntilTerminated, ResultCode);
 end;
+```
+{% endraw %}
+
+### How to associate a program with an extension during installation
+
+Add a property as per below in `[Setup]` section:
+{% raw %}
+```
+[Setup]
+ChangesAssociations = yes
+```
+{% endraw %}
+
+This will tell Explorer to refresh its file associations information at the end of the installation, and similarly for the uninstallation. Then, add these following registry keys:
+
+{% raw %}
+```
+[Registry]
+; Associate file extension ".exif" to my app program
+Root: HKCR; Subkey: ".exif"; ValueData: "{#MyAppName}"; Flags: uninsdeletevalue; ValueType: string; ValueName: ""
+Root: HKCR; Subkey: "{#MyAppName}"; ValueData: "Program {#MyAppName}"; Flags: uninsdeletekey; ValueType: string; ValueName: ""
+Root: HKCR; Subkey: "{#MyAppName}\DefaultIcon"; ValueData: "{app}\{#MyAppExeName},0"; ValueType: string; ValueName: ""
+Root: HKCR; Subkey: "{#MyAppName}\shell\open\command"; ValueData: """{app}\{#MyAppExeName}"" ""%1"""; ValueType: string; ValueName: ""
 ```
 {% endraw %}
