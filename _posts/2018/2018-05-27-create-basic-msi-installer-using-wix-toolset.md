@@ -482,6 +482,6 @@ Here's the final project file structure after I run `MakeInstaller.bat`:
 Example of my MSI installer in action
 ![Installing action](https://i.imgur.com/DZAhwKu.png)
 
-### References
+### WiX references
 
-This project is done based on **WiX 3.11** ([GitHub](https://github.com/wixtoolset/wix3)). If you need to support **multiple localizations and UI customizations**, you can refer to [this repository](https://github.com/wixtoolset/wix3/tree/develop/src/ext/UIExtension/wixlib) on GitHub.
+This project is done based on **WiX v3.11** ([GitHub](https://github.com/wixtoolset/wix3)) at the time I'm writing this blog post. If you need to customize your installer UI or to support multiple localizations, you can refer to [this repository](https://github.com/wixtoolset/wix3/tree/develop/src/ext/UIExtension/wixlib) on GitHub.
