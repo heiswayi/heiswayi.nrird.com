@@ -1,39 +1,58 @@
 ---
 layout: post
-title: Create basic MSI installer using Windows Installer XML (WiX) Toolset
-description: Example of WiX project source code to create my MSI installer for my application installation called MiniAppKiller.
+title: Create a basic MSI installer using WiX Toolset
+description: Here's how I create a basic MSI installer for my application using Windows Installler (WiX) Toolset. Full example source code provided.
 keywords: wix toolset, windows installer, msi, windows installer xml
 tags: [WiX Toolset, Windows Installer, MSI]
 comments: true
 ---
 
-I have been working with MSI-based installation development for some time, and for some software projects that required simple, straightforward installation, I preferred to create the installer using WiX toolset. There are a lot of advantages working with WiX toolset for creating Windows app installer, and here are some of the advantages I can highlight based on my personal experience, in case you are new to WiX toolset:-
+![Welcome dialog](https://i.imgur.com/9RPzlsd.png)
 
-- The source code is in XML format, this gives you a better clarity to know what's happening in your app installation process, and also would be easy for you to debug if your installer went wrong.
-- You will get a fresh clean installer, no extra stuffs embedded so the your installer file size would as small as possible.
-- Compiling MSI installer using WiX toolset is quite easy as everything can be done using command-line. This will provide you automation advantages. You can simply integrate it into your automated build system.
-- Your WiX project files can be simply source-controlled using Git, TFS, SVN, etc. and can be edit using any kind of code editor that could provide you XML syntax highlighting.
-- Most importantly, WiX has a good community support and a lot of examples out there you could find that you can grab, learn and get started building your MSI installer, including this blog post.
+I have been working with Windows-based installation development for some time, and for some software projects that required simple, straightforward installation and no additional prerequisites, I preferred to create a basic `.msi` installer. And to do that, first go-to tool is [WiX Toolset](http://wixtoolset.org/) since it's free!.
 
-Here I share the example WiX project of mine. Hopefully it could help for those who are looking to get started with WiX toolset, or for those may need more examples of WiX-based projects.
+It takes me some time to learn both technologies (WiX and Windows Installer), but it's worth spending the time. There are some advantages working with WiX toolset for creating Windows app installer and here are some of them that I can highlight based on personal experience, in case you are new to WiX toolset:
 
-### Example of my WiX project files structure
+- Source code in XML format, better clarity, easy to modify and debug.
+- Fresh clean `.msi` installer, no extra stuffs embedded, smaller file size.
+- Everything can be done using command-line, easy to integrated into CI build.
+- Easy to source-control and edit using any code editor.
+- Good community support and a lot of examples. (You get one here too!)
 
-Assuming shown in the screenshot below is the overall files structure of my WiX project:
+Here I share the example WiX project of mine. Hopefully it could help for those who are looking to get started with WiX toolset, or for those may need more examples of WiX-based projects for reference.
 
-![Example of project files structure](https://i.imgur.com/y3IECoK.png)
+### Example of file structure for my WiX project
 
-There are two folders; `app` for my application files that need to be installed and `images` for the graphic resources needed to customize my MSI installer. Other files are my WiX project whereas:
+```
+<root>
+├── app\
+|   ├── config.ini
+|   ├── Eula-en.rtf
+|   ├── filters.txt
+|   └── MiniAppKiller.exe
+├── images\
+|   ├── app.ico
+|   ├── Dialog.bmp
+|   └── TopBanner.bmp
+├── MakeInstaller.bat
+├── Product.Loc-en.wxl
+├── Product.Var.wxi
+└── Poduct.wxs
+```
 
-- `Product.wxs` - the main file
-- `Product.Var.wxi` - the variables file that will be included in the main file during the build time
-- `Product.Loc-en.wxl` - the localization file for custom strings used in the main file
-- `Product.Files.wxs` - the fragment file that is **generated automatically during build time** using `heat.exe` tool to automatically harvest my application files that need to be installed
-- `MakeInstaller.bat` - the batch file that contains some commands to automatically create several versions of MSI installer for testing purpose
+Folders:
+- `app` - Contains my application files to be installed
+- `images` - Contains graphic resource for customizing the installer UI.
 
-The variables file can simply be combined into the main file, but I separate it on purpose. Let's take a close look on each file to understand more. The source code itself is self-documented, so I don't have to explain much.
+WiX project files:
+- `Product.wxs` - Main file
+- `Product.Var.wxi` - Variables file. Included automatically into the main file during compile time.
+- `Product.Loc-en.wxl` - Localization file for custom strings used in the main file
+- `MakeInstaller.bat` - The batch script to compile WiX project files
 
-### Product.Var.wxi - The variables file
+### Preprocessor variables file
+
+_Product.Var.wxi_
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -85,19 +104,21 @@ The variables file can simply be combined into the main file, but I separate it 
 </Include>
 ```
 
-`BUILD_VERSION`, `BUILD_GUID` and `BUILD_PROJECTDIR` variable will be used in  `MakeInstaller.bat` file and applied by the commands in this batch script.
+**Note:** `BUILD_VERSION`, `BUILD_GUID` and `BUILD_PROJECTDIR` are the variables that will be use in the `MakeInstaller.bat` file and passed during compile time.
 
-### Product.wxs - The main file
+### Main WiX file
 
-This is the main file for my MSI installer. The source code is self-document. In this file, I have combined the code for my installer UI and contains two custom dialogs; _License Agreement Dialog_ and _Upgrade Welcome Dialog_.
+Below is the source code for my main WiX file to create the MSI installer. In this file, I have combined the code for my installer UI which contains two custom dialogs; **License Agreement Dialog** and **Upgrade Welcome Dialog**.
 
-Extra features other than defaults:-
+These are the **extra features other the defaults** that implemented into the source code:
 - Detect for minimum .NET Framework and OS version.
 - Detect if newer version is installed, and abort the installation.
 - Detect if older version is installed, show Upgrade Welcome Dialog, and skip License Agreement Dialog.
 - Prompt user to close if the application executable file is running during upgrade.
 - Create registry to memorize the installation directory path.
 - Create Start Menu shortcut and Desktop shortcut.
+
+_Product.wxs_
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -355,7 +376,16 @@ Extra features other than defaults:-
 </Wix>
 ```
 
-### Product.Loc-en.wxl - The localization file
+Example of license agreement dialog
+![License agreement dialog](https://i.imgur.com/sXeMVyS.png)
+
+Example of upgrade welcome dialog when found existing version already installed
+![Upgrade welcome dialog](https://i.imgur.com/WaHqBhg.png)
+
+
+### Localization file
+
+_Product.Loc-en.wxl_
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -386,16 +416,16 @@ Extra features other than defaults:-
 </WixLocalization>
 ```
 
-### MakeInstaller.bat - The batch script for compiling WiX project files
+### Batch script for compiling the project
 
-This is the batch script I use to automatically harvest my application files that needed to be install where it creates `Product.Files.wxs` automatically using `heat.exe` tool from WiX toolset.
+These are the WiX tools I use in the script below:-
+- **heat.exe** - To automatically harvest my application files and generate a collection of `<Component>` elements and `<ComponentGroup>` that will be used in _Product.wxs_ file under `<Feature>` element. Output from this tool is _Product.Files.wxs_ file.
+- **candle.exe** - To generate `*.wixobj` file with some preprocessor variables.
+- **light.exe** - To compile `*.wixobj` and localization file using WiX extensions and generate `*.msi` file.
 
-These are the WiX toolset that I used:-
-- **heat.exe** - to automatically harvest my application files and generate a collection of `<Component>` elements and `<ComponentGroup>` that will be used in **Product.wxs** file under `<Feature>` element.
-- **candle.exe** - to create `*.wixobj` file with some parameters.
-- **light.exe** - to compile `*.wixobj` files and localization files with some extensions for building the `*.msi` file.
+_MakeInstaller.bat_
 
-```batch
+```shell
 @echo off
 
 set projectDir=.
@@ -417,20 +447,9 @@ rem Create setup-2.0.msi
 "%WIX%bin\light.exe" "_Product.Files.wixobj" "_Product.wixobj" -loc "Product.Loc-en.wxl" -cultures:en-US -ext WixUtilExtension -ext WixUIExtension -ext WixNetFxExtension -out "setup-2.0.msi" -nologo
 ```
 
-Here's the final output after I run `MakeInstaller.bat`:
+Here's the final project file structure after I run `MakeInstaller.bat`:
 
 ![Project files structure after compile](https://i.imgur.com/2tFxHpB.png)
 
-### My MSI installer example screenshots
-
-Welcome dialog
-![Welcome dialog](https://i.imgur.com/9RPzlsd.png)
-
-License agreement dialog
-![License agreement dialog](https://i.imgur.com/sXeMVyS.png)
-
-Upgrade welcome dialog when found existing version is installed
-![Upgrade welcome dialog](https://i.imgur.com/WaHqBhg.png)
-
-Installing...
+Example of my MSI installer in action
 ![Installing action](https://i.imgur.com/DZAhwKu.png)
