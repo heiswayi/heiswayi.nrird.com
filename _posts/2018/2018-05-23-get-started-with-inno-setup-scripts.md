@@ -7,7 +7,7 @@ tags: [Inno Setup, Pascal]
 comments: true
 ---
 
-[Inno Setup](http://www.jrsoftware.org/isinfo.php) is the best freeware alternative, non-MSI and **script-driven** installation system software for creating Windows app installer that is easy-to-use, rich of features and [open source](https://github.com/jrsoftware/issrc). In this post you will find some of sample scripts I have been using to create my Windows app installer using Inno Setup Compiler. Inno Setup is completely free of charge even for commercial use.mediately get started.
+[Inno Setup](http://www.jrsoftware.org/isinfo.php) is the best freeware alternative, non-MSI and **script-driven** installation system software for creating Windows app installer that is easy-to-use, rich of features and [open source](https://github.com/jrsoftware/issrc). In this post you will find some of sample scripts I have been using to create my Windows app installer using Inno Setup Compiler. Inno Setup is completely free of charge even for commercial use.
 
 ### Getting started
 
