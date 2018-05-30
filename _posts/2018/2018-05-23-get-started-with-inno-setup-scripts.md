@@ -1,54 +1,34 @@
 ---
 layout: post
-title: Get started with Inno Setup scripts
-description: Inno Setup is the best freeware alternative, non-MSI and script-driven installation system software for creating Windows app installer that is easy-to-use, rich of features and Open Source.
+title: Create a Windows app installer using Inno Setup
+description: Inno Setup is the best FREE alternative, non-MSI and script-driven installation system software for creating Windows app installer that is easy-to-use, rich of features and open source.
 keywords: inno setup, windows installer, creating windows app installer
 tags: [Inno Setup, Pascal]
 comments: true
 ---
 
-[Inno Setup](http://www.jrsoftware.org/isinfo.php) is the best freeware alternative, non-MSI and **script-driven** installation system software for creating Windows app installer that is easy-to-use, rich of features and [open source](https://github.com/jrsoftware/issrc). In this post you will find some of sample scripts I have been using to create my Windows app installer using Inno Setup Compiler. Inno Setup is completely free of charge even for commercial use.
+I have tried few other FREE installation software, and I found that [Inno Setup](http://www.jrsoftware.org/isinfo.php) is the best alternative, non-MSI and **script-driven** installation system software for creating Windows app installer as it's easy to use, rich of features, free for commercial use and also [open source](https://github.com/jrsoftware/issrc). In this post I would like to share the Inno Setup script that I have been using for creating one of my applications installer.
 
-### Getting started
-
-First thing first, you need to [install Inno Setup software](http://www.jrsoftware.org/isdl.php) into your PC to get started, so you can have the Inno Setup Compiler program and some sample scripts. Any version will do, for me I use the "unicode" version.
-
-**Create installer using Inno Script Studio software**
-
-If you want better intuitive graphical interface for generating and compiling Inno Setup scripts, you can [download and install **Inno Script Studio** software](https://www.kymoto.org/products/inno-script-studio).
-
-**Edit Inno Setup scripts using VS Code or Atom editor**
-
-If you are using [VS Code](https://code.visualstudio.com/)/[Atom](https://atom.io/) editor to edit Inno Setup scripts, you download and install Inno Setup extension for the script syntax highlighting:
-
-- VS Code: [Inno Setup for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=idleberg.innosetup)
-- Atom: [Inno Setup for Atom](https://atom.io/packages/language-innosetup)
-
-_P/S: For your information, VS Code and Atom are also using Inno Setup to create their Windows installer package._
+You can download and install Inno Setup from [here](http://www.jrsoftware.org/isdl.php). Unicode version is recommended. If you need a better intuitive GUI software, you can download and install [**Inno Script Studio**](https://www.kymoto.org/products/inno-script-studio) software. If you use [VS Code](https://code.visualstudio.com/) or [Atom](https://atom.io/) editor to edit Inno Setup scripts, you can install Inno Setup extension for the script syntax highlighting; [Inno Setup for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=idleberg.innosetup) or [Inno Setup for Atom](https://atom.io/packages/language-innosetup).
 
 **Compile Inno Setup scripts using Inno Setup Compiler in your automated build system**
 
-If you have automated build system set up that builds your app source code such as CI/CD, you can simply integrate Inno Setup Compiler into your build system to compile the `*.iss` file. You need to use `ISCC.exe` for the command-line compiler.
+If you have automated build system set up that builds your app source code like CI/CD, you can simply integrate Inno Setup Compiler into your build system to compile Inno Setup script file (`*.iss`). You need to use `ISCC.exe` for the command-line compiler.
 
-Example:
-```
-"C:\Program Files (x86)\Inno Setup 5\ISCC.exe" path\to\myinstaller.iss
-```
-
-If you add `C:\Program Files (x86)\Inno Setup 5` into the PATH environment, you can simply use:
+Example: Just add `C:\Program Files (x86)\Inno Setup 5` into the PATH environment, then you can simply use:
 ```
 iscc path\to\myinstaller.iss
 ```
 
 For more info on what command-line options are available, just run `iscc /?` from a command prompt.
 
-### Complete example of Inno Setup script for my app installer
+### Example of Inno Setup script for my app installer
 
 ![EXIF Reader installer](https://i.imgur.com/rodYZ00.png)
 
-The script is written based on the example of my app file structure as shown below. If you use the script below, you may need to modify it to suit your app's file structure. Any feature you don't need, you can simply remove or comment it out. I always reuse this script as a starter and make some modifications that suit the app files and requirements to create a new app installer.
+The script is written based on the example of the app files structure below. If you use the script below, you may need to modify it to suit your app's files structure. Any feature you don't need, you can simply remove or comment it out. I always reuse this script as a starter and make some modifications that suit the app files and requirements to create a new app installer.
 
-_Example of app file structure:_
+_Example of app files structure:_
 
 ```
 .\
@@ -75,17 +55,18 @@ _Example of app file structure:_
         └── VerticalBanner.bmp
 ```
 
-_Example of the complete script:_
+_Example of script:_
 
 {% raw %}
 ```
-; Define app basic info
+; Preprocessor variables
 #define MyAppName "EXIF Reader"
 #define MyAppVersion "0.0.1"
 #define MyAppPublisher "Heiswayi Nrird"
 #define MyAppURL "https://heiswayi.nrird.com/exifreader"
 #define MyAppExeName "ExifReader.exe"
 #define MyAppCopyright "Copyright (C) 2018 Heiswayi Nrird"
+#define IncludeFramework true
 
 [Setup]
 ; NOTE: The value of AppId uniquely identifies this application.
@@ -94,7 +75,7 @@ _Example of the complete script:_
 AppId={{41045341-CB76-446F-8180-6489D9474F1F}
 AppName={#MyAppName}
 AppVersion={#MyAppVersion}
-;AppVerName={#MyAppName} {#MyAppVersion}
+AppVerName={#MyAppName}
 AppPublisher={#MyAppPublisher}
 AppPublisherURL={#MyAppURL}
 AppSupportURL={#MyAppURL}
@@ -122,7 +103,6 @@ WizardImageFile=.\basic\res\VerticalBanner.bmp
 ;WizardSmallImageFile=TopLogo.bmp
 ; Installer FileVersion
 VersionInfoVersion=1.0.0.0
-UserInfoPage=yes
 ;CreateUninstallRegKey=no
 PrivilegesRequired=admin
 ; Installer output is the same as source (.iss file)
@@ -188,8 +168,6 @@ begin
 end;
 ```
 {% endraw %}
-
-Please note that any line that starts with `;` character is a comment. For `[Code]` section, the comment line is started with `//` characters.
 
 In the script above, there are some common **Flags** under `[Files]` section and here what they mean:
 - `ignoreversion` - replace existing files regardless of their version number
@@ -437,7 +415,7 @@ english.NewerVersionExists=A newer version of {#AppName} is already installed.%n
 ```
 {% endraw %}
 
-Apply this code to check for existing installation version:
+Apply this code under `[Code]` section to check for existing installation version:
 {% raw %}
 ```pascal
 [Code]
