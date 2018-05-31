@@ -1,15 +1,15 @@
 ---
 layout: post
 title: Create a Windows app installer using Inno Setup
-description: Inno Setup is the best FREE alternative, non-MSI and script-driven installation system software for creating Windows app installer that is easy-to-use, rich of features and open source.
+description: Inno Setup is the best FREE open source alternative, non-MSI and script-driven installation system software for creating Windows app installer that surpasses many commercial installers in feature set and stability.
 keywords: inno setup, windows installer, creating windows app installer
 tags: [Inno Setup, Pascal]
 comments: true
 ---
 
-I have tried few other FREE installation software, and I found that [Inno Setup](http://www.jrsoftware.org/isinfo.php) is the best alternative, non-MSI and **script-driven** installation system software for creating Windows app installer as it's easy to use, rich of features, free for commercial use and also [open source](https://github.com/jrsoftware/issrc). In this post I would like to share the Inno Setup script that I have been using for creating one of my applications installer.
+I have tried few other FREE installation software, and I found that [Inno Setup](http://www.jrsoftware.org/isinfo.php) is the best FREE [open source](https://github.com/jrsoftware/issrc) alternative, non-MSI and script-driven installation system software for creating Windows app installer that surpasses many commercial installers in feature set and stability. In this post I would like to share the Inno Setup script that I have been using for creating one of my applications installer.
 
-You can download and install Inno Setup from [here](http://www.jrsoftware.org/isdl.php). Unicode version is recommended. If you need a better intuitive GUI software, you can download and install [**Inno Script Studio**](https://www.kymoto.org/products/inno-script-studio) software. If you use [VS Code](https://code.visualstudio.com/) or [Atom](https://atom.io/) editor to edit Inno Setup scripts, you can install Inno Setup extension for the script syntax highlighting; [Inno Setup for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=idleberg.innosetup) or [Inno Setup for Atom](https://atom.io/packages/language-innosetup).
+To get started, you can download and install Inno Setup from [here](http://www.jrsoftware.org/isdl.php). Unicode version is recommended. If you need a better intuitive GUI software, you can download and install [**Inno Script Studio**](https://www.kymoto.org/products/inno-script-studio) software. If you use [VS Code](https://code.visualstudio.com/) or [Atom](https://atom.io/) editor to edit Inno Setup scripts, you can install Inno Setup extension for the script syntax highlighting; [Inno Setup for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=idleberg.innosetup) or [Inno Setup for Atom](https://atom.io/packages/language-innosetup).
 
 **Compile Inno Setup scripts using Inno Setup Compiler in your automated build system**
 
@@ -26,7 +26,7 @@ For more info on what command-line options are available, just run `iscc /?` fro
 
 ![EXIF Reader installer](https://i.imgur.com/rodYZ00.png)
 
-The script is written based on the example of the app files structure below. If you use the script below, you may need to modify it to suit your app's files structure. Any feature you don't need, you can simply remove or comment it out. I always reuse this script as a starter and make some modifications that suit the app files and requirements to create a new app installer.
+The script is written based on the example of the app files structure below. If you use the script below, you may need to modify it to suit your app files structure. Any feature you don't need, you can simply remove or comment it out. I always reuse this script as a starter and make some modifications that suit the app files structure and requirements to create a new app installer.
 
 _Example of app files structure:_
 
@@ -140,7 +140,7 @@ LicenseAccepted=&Agree
 LicenseNotAccepted=&Do Not Agree
 
 [Code]
-// Customized installer top banner
+// I'm using horizontal top banner instead of logo
 procedure InitializeWizard();
 var
   BitmapImage: TBitmapImage;
@@ -177,13 +177,13 @@ In the script above, there are some common **Flags** under `[Files]` section and
 - `uninsneveruninstall` - never remove the file during uninstallation
 - `deleteafterinstall` - delete file once the installation is completed/aborted
 
-For other available flags, you can refer to [Inno Setup documentation here](http://www.jrsoftware.org/ishelp/index.php?topic=filessection) for more details.
+For other available flags, you can refer to [Inno Setup documentation here](http://www.jrsoftware.org/ishelp/index.php?topic=filessection) for more details. It's too robust to explain everything here.
 
 ### Implement components-based installation in your installer
 
 ![Components-based installation](https://i.imgur.com/BeKgNvo.png)
 
-If you want to design your app installer using components-based installation, you may need to modify the script and add two extra sections called `[Types]` and `[Components]`. Check the example script below which taken from `Components.iss` file that located in `C:\Program Files (x86)\Inno Setup 5\Examples` folder.
+If you want to design your app installer using components-based installation, you may need to modify the script and add two extra sections called `[Types]` and `[Components]`. Check the provided example script below which taken from `Components.iss` file that located in `C:\Program Files (x86)\Inno Setup 5\Examples` folder.
 
 {% raw %}
 ```
@@ -231,6 +231,8 @@ If your app requires particular .NET Framework to be installed as part of the pr
 - just check and if not installed, inform the user to download and install particular .NET Framework manually, and then abort your app installer.
 
 You can use the [Check](http://jrsoftware.org/ishelp/topic_scriptcheck.htm) parameter to run check if particular .NET Framework is installed.
+
+Inno Setup [scripting](http://www.jrsoftware.org/ishelp/index.php?topic=scriptintro) is based on [Pascal](https://en.wikipedia.org/wiki/Pascal_(programming_language)) programming language which adds lots of new possibilities to customize your Setup or Uninstall at run-time.
 
 **Here's how to include the offline installer of .NET Framework into your app installer**
 

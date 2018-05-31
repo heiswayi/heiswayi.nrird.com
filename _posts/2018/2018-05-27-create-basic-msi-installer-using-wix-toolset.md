@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Create a basic MSI installer using WiX Toolset
-description: Here's how I create a basic MSI installer for my application using Windows Installler (WiX) Toolset. Full example source code provided.
+description: Here's how I create a basic MSI installer for my application using Windows Installler XML (WiX) Toolset. Full example source code provided.
 keywords: wix toolset, windows installer, msi, windows installer xml
 tags: [WiX Toolset, Windows Installer, MSI]
 comments: true
@@ -9,9 +9,11 @@ comments: true
 
 ![Welcome dialog](https://i.imgur.com/9RPzlsd.png)
 
-I have been working with Windows-based installation development for some time, and for some software projects that required simple, straightforward installation and no additional prerequisites, I preferred to create a basic `.msi` installer. And to do that, first go-to tool is [WiX Toolset](http://wixtoolset.org/) since it's free!.
+I have been working with Windows-based installation development for some time, and for some software projects that required simple (read: file copy), deployment and no prerequisites installation, I preferred to create a basic `.msi` installer. And to do that, my first go-to tool is [WiX Toolset](http://wixtoolset.org/).
 
-It takes me some time to learn both technologies (WiX and Windows Installer), but it's worth spending the time. There are some advantages working with WiX toolset for creating Windows app installer and here are some of them that I can highlight based on personal experience, in case you are new to WiX toolset:
+Windows Installer XML (WiX) Toolset is a Microsoft open source project used to create the Office 2007 installer. WiX includes some advanced capabilities, but it has a steep learning curve even though the scripting language is XML-based. It took me some time to learn both technologies (WiX and Windows Installer itself), but it's worth spending the time.
+
+There are some advantages working with WiX toolset for creating Windows app installer and here are some of them that I can highlight based on my personal experience, in case you are new to WiX toolset:
 
 - Source code in XML format, better clarity, easy to modify and debug.
 - Fresh clean `.msi` installer, no extra stuffs embedded, smaller file size.
@@ -19,9 +21,9 @@ It takes me some time to learn both technologies (WiX and Windows Installer), bu
 - Easy to source-control and edit using any code editor.
 - Good community support and a lot of examples. (You get one here too!)
 
-Here I share the example WiX project of mine. Hopefully it could help for those who are looking to get started with WiX toolset, or for those may need more examples of WiX-based projects for reference.
+Here I would like to share example of my WiX project. Hopefully it could help for those who are looking to get started with WiX toolset, or for those may need to see more examples of WiX-based projects for personal reference.
 
-### Example of file structure for my WiX project
+### Example of my WiX project files structure
 
 ```
 <root>
@@ -104,18 +106,18 @@ _Product.Var.wxi_
 </Include>
 ```
 
-**Note:** `BUILD_VERSION`, `BUILD_GUID` and `BUILD_PROJECTDIR` are the variables that will be use in the `MakeInstaller.bat` file and passed during compile time.
+**Note:** `BUILD_VERSION`, `BUILD_GUID` and `BUILD_PROJECTDIR` are preprocessor variables that will be used in `MakeInstaller.bat` file to compile the WiX files.
 
 ### Main WiX file
 
-Below is the source code for my main WiX file to create the MSI installer. In this file, I have combined the code for my installer UI which contains **few custom dialogs**:
+Below is the source code for my main WiX file to create a `.msi` installer. In this file, I have combined the code for my installer UI which includes **few custom dialogs**:
 - Custom license agreement dialog
 - Custom upgrade dialog
 - Custom install dir dialog (for Desktop shortcut option checkbox)
 
 ![Create Desktop shortcut option](https://i.imgur.com/FPHfm08.png)
 
-These are the **extra features other the defaults** that implemented into the source code:
+Following are the **extra features other the defaults** that have been implemented into the source code:
 - Detect for minimum .NET Framework and OS version.
 - Detect if newer version is installed, and abort the installation.
 - Detect if older version is installed, show Upgrade Welcome Dialog, and skip License Agreement Dialog.
@@ -444,9 +446,9 @@ _Product.Loc-en.wxl_
 </WixLocalization>
 ```
 
-### Batch script for compiling the project
+### Batch script for compiling the WiX project
 
-These are the WiX tools I use in the script below:-
+These are the WiX toolset that I use in the script below:-
 - **heat.exe** - To automatically harvest my application files and generate a collection of `<Component>` elements and `<ComponentGroup>` that will be used in _Product.wxs_ file under `<Feature>` element. Output from this tool is _Product.Files.wxs_ file.
 - **candle.exe** - To generate `*.wixobj` file with some preprocessor variables.
 - **light.exe** - To compile `*.wixobj` and localization file using WiX extensions and generate `*.msi` file.
@@ -475,7 +477,7 @@ rem Create setup-2.0.msi
 "%WIX%bin\light.exe" "_Product.Files.wixobj" "_Product.wixobj" -loc "Product.Loc-en.wxl" -cultures:en-US -ext WixUtilExtension -ext WixUIExtension -ext WixNetFxExtension -out "setup-2.0.msi" -nologo
 ```
 
-Here's the final project file structure after I run `MakeInstaller.bat`:
+Here's the final project files structure after I run `MakeInstaller.bat`:
 
 ![Project files structure after compile](https://i.imgur.com/2tFxHpB.png)
 
@@ -484,4 +486,4 @@ Example of my MSI installer in action
 
 ### WiX references
 
-This project is done based on **WiX v3.11** ([GitHub](https://github.com/wixtoolset/wix3)) at the time I'm writing this blog post. If you need to customize your installer UI or to support multiple localizations, you can refer to [this repository](https://github.com/wixtoolset/wix3/tree/develop/src/ext/UIExtension/wixlib) on GitHub.
+This project is done based on **WiX v3.11** ([GitHub](https://github.com/wixtoolset/wix3)) at the time I'm writing this blog post. If you need to customize your installer UI or to support multiple localizations, you can refer to [this repository](https://github.com/wixtoolset/wix3/tree/develop/src/ext/UIExtension/wixlib) on GitHub for the source code references.

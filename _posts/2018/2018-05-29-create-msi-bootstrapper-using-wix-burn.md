@@ -7,12 +7,12 @@ tags: [WiX Toolset, Windows Installer, MSI]
 comments: true
 ---
 
-In my previous blog post "[Create a basic MSI installer using WiX Toolset](https://heiswayi.nrird.com/2018/create-basic-msi-installer-using-wix-toolset)", I have shared about how I created a basic MSI installer using WiX toolset for my app installation. And today, I'm going to share how I create a bootstrapper (e.g. setup.exe) using WiX to chain the installations that are packaged as MSIs. One of the reasons you need a bootstrapper is because Windows Installer cannot execute two `.msi` files (nest) at the same time. Using a bootstrapper, you can install the required prerequisites for your app installation, e.g. .NET Framework.
+In my previous blog post "[Create a basic MSI installer using WiX Toolset](https://heiswayi.nrird.com/2018/create-basic-msi-installer-using-wix-toolset)", I have shared about how I created a basic `.msi` installer using WiX toolset for my app deployment. And today, I'm going to share how I create a bootstrapper i.e. setup.exe using WiX to chain the installations that are packaged as `*.msi`. One of the reasons you need a bootstrapper is because there is only one instance of `.msi` can be run at a time. Using a bootstrapper, you can install the required prerequisites for your app deployment, e.g. .NET Framework.
 
-Example of my bootstrapper interface
-![Example of my bootstrapper interface](https://i.imgur.com/G6mL3rE.png)
+Example of my bootstrapper UI
+![Example of my bootstrapper UI](https://i.imgur.com/G6mL3rE.png)
 
-### Example of project file structure for creating the bootstrapper
+### Example of project files structure for creating the bootstrapper
 
 ```
 <root>
@@ -29,7 +29,7 @@ Example of my bootstrapper interface
 ```
 
 Folders:
-- `bootstrapper_res` - Contains graphic resource and theme files for my WiX bootstrapper interface
+- `bootstrapper_res` - Contains graphic resource and theme files for my WiX bootstrapper UI
 - `prereq` - Contains necessary prerequisites to be bundled into my bootstrapper
 
 WiX project files:
@@ -100,11 +100,11 @@ _Bootstrapper.wxs_
 </Wix>
 ```
 
-For more detailed on other element properties, please take a look on [WiX Bundle Element documentation here](http://wixtoolset.org/documentation/manual/v3/xsd/wix/bundle.html).
+For more detailed on other available element properties, please take a look on [WiX Bundle Element documentation here](http://wixtoolset.org/documentation/manual/v3/xsd/wix/bundle.html).
 
-### Batch script for compiling the project
+### Batch script for compiling the WiX project
 
-These are the WiX tools I use in the script below:-
+These are the WiX toolset that I use in the script below:-
 - **candle.exe** - To generate `*.wixobj` file
 - **light.exe** - To compile `*.wixobj` and generate the bootstrapper file (`*.exe`).
 
@@ -117,7 +117,7 @@ _MakeBootstrapper.bat_
 "%WIX%bin\light.exe" "_Bootstrapper.wixobj" -out "Bootstrapper.exe" -ext WixNetFxExtension -ext WixBalExtension -ext WixUtilExtension -nologo
 ```
 
-### More screenshots
+### More screenshots of my bootstrapper
 
 Installing the packages
 ![Installing the packages](https://i.imgur.com/0dMOkiD.png)
@@ -125,7 +125,7 @@ Installing the packages
 When user cancelled installation
 ![When user cancelled installtion](https://i.imgur.com/3Ou5t8d.png)
 
-### Extra good readings
+### Extra good readings and references
 
 - [Windows Installer Basics: Bootstrapper EXE Programs](http://makemsi-manual.dennisbareis.com/bootstrapper_exe_programs.htm)
 - [Joy of Setup - Best Practices](https://www.joyofsetup.com/tag/best-practices/)
