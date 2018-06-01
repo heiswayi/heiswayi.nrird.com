@@ -1,30 +1,32 @@
 ---
 layout: post
 title: Directory Crawler
-description: A simple lightweight command-line application to crawl all accessible directories recursively within a target directory and output the results into a text file.
+description: A simple command-line program to crawl all accessible directories recursively within a target directory and outputs the results into a text file.
 keywords: c# programming, console application, directory crawler, get directories
 tags: [CSharp, Console Application, Project]
 comments: true
 ---
 
-> 2018-03-25 Updated to v2.0: Optimized the code and changed application type to command-line application.
+Directory Crawler is a simple command-line program that is built in .NET C# to crawl all accessible directories within a target directory (entry point) and output the results to a text file. I created this program because I need to monitor some shared directories within a local network.
 
-Directory Crawler is a simple lightweight command-line application built in .NET C# to crawl all accessible directories within a target directory (entry point) and output the results to a text file.
+Command:
 
-I created this program because I need to monitor some shared directories within a local network.
+```shell
+DirectoryCrawler.exe /targetdir=<PATH_TO_TARGET_FOLDER> 
+```
 
-### Screenshot
-
-Here's how the program looked like and works, executed from Command Prompt, in animated GIF:
+### Animated screenshot
 
 ![DirectoryCrawler](https://i.imgur.com/Re1267D.gif)
 
-After the program finished running, an output text file will be created within the program base folder and if you open the text file, this is how it looked like; a list of accessible directories within the target directory.
+After the program finished running, an output text file will be created within the program base folder and if you open the text file, you will get a list of accessible directories within the target directory.
 
-Example (opened using Notepad2-mod app):
+Example of output text file:
 
 ![Output file](http://i.imgur.com/qaUZ9n3.png)
 
-### Source Code and Downloads
+### Source Code
 
-The source code is available on my [GitHub](https://github.com/heiswayi/DirectoryCrawler) repository and compiled using Visual Studio 2015 Community. The source code is released under [MIT](http://heiswayi.github.io/mit-license) license. The latest binary package can be download from the [release page](https://github.com/heiswayi/DirectoryCrawler/releases).
+You may need to compile by your own. You may use the latest version Visual Studio Community.
+
+[View source code on GitHub](https://github.com/heiswayi/DirectoryCrawler)
