@@ -9,7 +9,7 @@ comments: true
 
 I have made a complete PowerShell script to read data from a serial port and export the data into a log file. Sometimes, when I work with Arduino project, I just use this script to quickly connect to the Arduino board and check the data output.
 
-This script is also available on my [Gist](https://git.io/vpfrC) in case you want to contribute or help to improve this script.
+Also available on my [Gist](https://git.io/vpfrC) in case you want to contribute or help to improve this script.
 
 ```powershell
 <#

@@ -64,4 +64,4 @@ Indoor Temperature Monitor is a simple WPF application I created in .NET C#. Thi
 
 ![Indoor Temperature Monitor](http://i.imgur.com/8CPtSVg.png)
 
-[**Source code on GitHub**](http://github.com/heiswayi/IndoorTempMonitor) // [Download binary package](https://github.com/heiswayi/IndoorTempMonitor/releases)
+[**View source code on GitHub**](http://github.com/heiswayi/IndoorTempMonitor)
