@@ -1,19 +1,17 @@
 ---
 layout: post
 title: Mini App Killer
-description: A mini lightweight application created in .NET C# that will sit in your system tray for easy access to simply kill or end task any running application.
+description: A simple utility program to kill any running application or process.
 keywords: c# programming, mini app killer, end task process, system tray, notify icon
 tags: [CSharp, WPF, Project]
 comments: true
 ---
 
-Mini App Killer is a mini lightweight application I created in .NET C# that will sit in your system tray for easy access to simply kill or end task any running application. Other than terminating the running application, you also can open the running application directory (Open file location) or show application File Properties.
+Mini App Killer is a simple utility program I created in .NET C# that will sit in the system tray for easy access and can be used to kill or end task of any running application or process.
 
-[**Download MiniAppKillerV1.zip**](https://www.dropbox.com/s/4gibswk7iz7gg9d/MiniAppKillerV1.zip?dl=0) · 55.2 KB
+[**Download Mini App Killer v1.0 (zipped)**](https://www.dropbox.com/s/4gibswk7iz7gg9d/MiniAppKillerV1.zip?dl=0) · 55.2 KB
 
-By default, Mini App Killer program will list all running applications or processes that contain `MainWindowTitle` property from the WMI query.
-
-C# code snippet:
+By default, Mini App Killer program will list all running applications or processes that contain `MainWindowTitle` property from the WMI query. Below is the C# code I use to get all running applications:
 
 ```csharp
 var wmiQueryString = "SELECT ProcessId, ExecutablePath FROM Win32_Process";
@@ -43,7 +41,7 @@ Screenshot:
 
 ![To kill the running application](http://i.imgur.com/TJG1sV1.png)
 
-Here are the C# code I use to kill the application, open file location or show application File Properties dialog from the WMI query results:
+Here are the C# code I use to kill the application, open file location or show application **File Properties** dialog from the WMI query results:
 
 ```csharp
 // To kill the running application based on Process Id.
@@ -97,13 +95,13 @@ public static bool ShowFileProperties(string Filename) {
 #endregion
 ```
 
-#### Customize filter...
+#### Customizing filtering
 
-To filter for specific process name (application executable name without extension), there is a function called "Customize filter..." on the Mini App Killer. When you click it, a window for adding process name will be shown as below:
+To filter for specific process name (application executable name without extension), there is a menu called **"Customize filter..."** in the program. When you click it, a window for adding process name will be shown as below:
 
 ![Customize filter...](http://i.imgur.com/CxYg1gU.png)
 
-Mini App Killer program will list all running applications that contain the process name as defined in the "Customize filter..." window when "Enable filtered by process name..." checkbox is **checked**.
+The program will list all running applications that contain the process name as defined in the **"Customize filter..."** window when **"Enable filtered by process name..."** checkbox is **checked**.
 
 ![Filtered by process name](http://i.imgur.com/jHb3HqI.png)
 
@@ -124,7 +122,7 @@ var query = from p in Process.GetProcesses()
 
 #### App settings
 
-All filtered process names will be saved to a text file named as `filters.txt`, which is easy for user to read or modify directly from the file.
+All filtered process names will be saved into a text file named as `filters.txt`, which is easy for user to read or modify directly from this file.
 
 _filters.txt_
 
@@ -133,5 +131,3 @@ _filters.txt_
 chrome
 ccleaner64
 ```
-
-I use .INI file for saving the Mini App Killer application settings as it's simple and easy. The source code for .INI file helper class is available on [my gist here](https://gist.github.com/heiswayi/56f4707a6cf45161807989db24dc3cea).
