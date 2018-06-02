@@ -309,7 +309,7 @@ When you use the built-in WixUI dialog set, you need to define your license file
 
 If your program requires a certain minimum version of .NET Framework needs to be installed in order to work, you can include a detection using `<Condition>` element to **check and then inform the user** that they need a particular version of .NET Framework to be installed before they can install and use your program files. Let's say your program requires .NET Framework 4.7.1, here what you need to do:
 
-First, you need to include a reference `xmlns:netfx="http://schemas.microsoft.com/wix/NetFxExtension` into your WiX file:
+First, you need to include a reference `xmlns:netfx="...` into your WiX file:
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <Wix xmlns="http://schemas.microsoft.com/wix/2006/wi" 
