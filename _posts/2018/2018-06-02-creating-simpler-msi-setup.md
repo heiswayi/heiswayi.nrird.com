@@ -7,11 +7,13 @@ tags: [WiX Toolset, Windows Installer, MSI]
 comments: true
 ---
 
-In my previous blog post "[Create a basic MSI installer using WiX Toolset](https://heiswayi.nrird.com/2018/create-basic-msi-installer-using-wix-toolset)", I shared how I create a _basic_ MSI installer for my app, however the WiX project that I shared, the example of the WiX code is **a little bit of exaggerating**. This is because I need to add some extra features and also some customizations to the setup dialogs. Well, if file copy is the only thing you need, perhaps this article can guide you through in creating a simpler MSI setup. **Using WiX toolset, of course!**
+![Simpler MSI setup](https://i.imgur.com/hut5Op0.png)
+
+In my previous blog post "[Create a basic MSI installer using WiX Toolset](https://heiswayi.nrird.com/2018/create-basic-msi-installer-using-wix-toolset)", I shared how I create a _basic_ MSI installer for my app, however the WiX project that I shared, the example of the WiX code is **a little bit of exaggerating**. This is because I need to add some extra features and also some customizations to the setup dialogs. Well, if **file copy** is the only thing you need, perhaps this article can guide you through in creating a simpler MSI setup. Using [WiX toolset](http://wixtoolset.org/), of course!
 
 ### Getting started
 
-To get started, you will need a [Product](http://wixtoolset.org/documentation/manual/v3/xsd/wix/product.html) element and this is the main structure of your XML code:
+To get started, you will need a [Product](http://wixtoolset.org/documentation/manual/v3/xsd/wix/product.html) element and this is the main structure of your WiX code:
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
@@ -53,7 +55,7 @@ Let's add some preprocessor variables and our `<Product>` attributes:
 </Wix>
 ```
 
-Now let's define our Setup `<Package>` and `<MediaTemplate>` into our `<Product>`:
+Now let's define our MSI setup `<Package>` and `<MediaTemplate>` into our `<Product>`:
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
@@ -89,10 +91,11 @@ Now let's define our Setup `<Package>` and `<MediaTemplate>` into our `<Product>
 </Wix>
 ```
 
-### Implement a Major Upgrade in your Setup
+### Implementing a Major Upgrade in your Setup
 
 When creating an `.msi`-based installer, you are strongly encouraged to include logic that supports [Windows Installer major upgrades](http://msdn.microsoft.com/library/aa369786.aspx). Major upgrades are the most common form of updates for `.msi`'s, and including support in your initial `.msi` release gives you flexibility in the future. Without including support for major upgrades you risk greatly complicating your distribution story if you ever need to release updates later on.
 
+The steps you need to do:-
 1. You will need to set `Id="*"` (auto-generate) and define `UpgradeCode="<GUID>"` in your `<Product>` attributes.
 2. Add [Upgrade](http://wixtoolset.org/documentation/manual/v3/xsd/wix/upgrade.html) element into your `<Product>` element.
 3. Then, schedule the removal of older version in [InstallExecuteSequence](http://wixtoolset.org/documentation/manual/v3/xsd/wix/installexecutesequence.html) element.
@@ -133,7 +136,7 @@ When creating an `.msi`-based installer, you are strongly encouraged to include 
 
 ### Files and shortcuts installation
 
-There are few things we need to do here for installing our files and shortcuts;-
+There are few things we need to do here for installing our files and shortcuts:-
 1. We need to create a target directory using [Directory](http://wixtoolset.org/documentation/manual/v3/xsd/wix/directory.html) element.
 2. We need to create a reference to a particular target directory using [DirectoryRef](http://wixtoolset.org/documentation/manual/v3/xsd/wix/directoryref.html) element.
 3. For each reference, we need to create one or more components using [Component](http://wixtoolset.org/documentation/manual/v3/xsd/wix/component.html) elements.
@@ -151,7 +154,7 @@ Application shortcuts to be created:
 --> "Start Menu\ExampleApp\Uninstall ExampleApp" (to uninstall ExampleApp)
 ```
 
-**Create target directories for our program files and our shortcuts**
+**Target directories for our program files and our shortcuts**
 
 ```xml
 <Directory Id="TARGETDIR" Name="SourceDir">
@@ -166,7 +169,7 @@ Application shortcuts to be created:
 </Directory>
 ```
 
-**Create a directory reference for our shortcuts**
+**A directory reference for our shortcuts**
 
 ```xml
 <DirectoryRef Id="ApplicationShortcutFolder">
@@ -176,7 +179,7 @@ Application shortcuts to be created:
 
 NOTE: A directory reference for our program file(s) will be automatically generated using [Fragment](http://wixtoolset.org/documentation/manual/v3/xsd/wix/fragment.html) element. Will be explained later.
 
-**Create components for shortcuts**
+**Components for shortcuts**
 
 We have two components for our shortcuts; one if Windows architecture is 32-bit, another one if 64-bit. The reason for this is the location of `msiexec.exe` might be located in different system folder since we have a shortcut to uninstall our program using `msiexec.exe`. Only one of these two components will be used and it's based on [Condition](http://wixtoolset.org/documentation/manual/v3/xsd/wix/condition.html) element defined value in each component.
 
@@ -201,7 +204,7 @@ We have two components for our shortcuts; one if Windows architecture is 32-bit,
 
 NOTE: Components for our program file(s) will be automatically generated using [Fragment](http://wixtoolset.org/documentation/manual/v3/xsd/wix/fragment.html) element. Will be explained later.
 
-**Create features for our program files and our shortcuts**
+**Features for our program files and our shortcuts**
 
 ```xml
 <Feature Id="ProgramFeature" Title="Program Files" Level="1">
@@ -214,7 +217,7 @@ NOTE: Components for our program file(s) will be automatically generated using [
 </Feature>
 ```
 
-### Generate component for each file to be installed automatically
+### Generating component for each file to be installed automatically
 
 Instead of manually creating one-by-one the component for each of our program files, we can use `heat.exe` tool along with `candle.exe` tool from WiX toolset to automatically harvest our program files and creates each component automatically.
 
@@ -266,7 +269,7 @@ Since we have **two features** defined, and we want to let the user to choose wh
                  Comments="$(var.ProductCopyright)" />
         <MediaTemplate EmbedCab="yes" />
 
-        <!-- Implemention a Major Upgrade here -->
+        <!-- Implemention of Major Upgrade here -->
 
         <!-- Installation of files and shortcuts here -->
 
@@ -279,13 +282,14 @@ Since we have **two features** defined, and we want to let the user to choose wh
 
 ### Installer graphics and icon
 
-If you want to customize your installer graphics instead of using the default reddish WiX graphics, you can add these two WiX variables under your `<Product>` element. You can check [here](http://wixtoolset.org/documentation/manual/v3/wixui/wixui_customizations.html) for the graphics dimension:
+If you want to customize your MSI setup graphics instead of using the default reddish WiX graphics, you can add these two WiX variables under your `<Product>` element. Assuming all of your resource files are located under `<WIX_PROJECT_DIR>\res` folder. To get the dimension for `WixUIBannerBmp` and `WixUIDialogBmp`, you can check  [here](http://wixtoolset.org/documentation/manual/v3/wixui/wixui_customizations.html).
+
 ```xml
-<WixVariable Id="WixUIBannerBmp" Value="res\logo.bmp" />
+<WixVariable Id="WixUIBannerBmp" Value="res\banner.bmp" />
 <WixVariable Id="WixUIDialogBmp" Value="res\dialog.bmp" />
 ```
 
-Here's for the installer icon, similarly it goes under your `<Product>` element:
+Here's for the MSI setup icon, similarly it goes under your `<Product>` element:
 ```xml
 <Icon Id="icon.ico" SourceFile="res\appIcon.ico"/>
 <Property Id="ARPPRODUCTICON" Value="icon.ico" />
@@ -293,7 +297,8 @@ Here's for the installer icon, similarly it goes under your `<Product>` element:
 
 ### License file
 
-When you use the built-in WixUI dialog set, you need to define your license file. Simply get your `License.rtf` ready and add this under your `<Product>` element:
+When you use the built-in WixUI dialog set, you need to define your license file. Simply get your `License.rtf` ready and add this under your `<Product>` element. Assuming your license file is located under `<WIX_PROJECT_DIR>\doc` folder.
+
 ```xml
 <WixVariable Id="WixUILicenseRtf" Value="doc\License.rtf" />
 ```
@@ -314,7 +319,7 @@ rem Compile and create mySetup.msi
 "%WIX%bin\light.exe" "_Product.Files.wixobj" "_Product.wixobj" -cultures:en-US -ext WixUIExtension -out "mySetup.msi" -nologo
 ```
 
-Please note that if you're **using built-in WixUI dialog set**, you need to add `-cultures:en-US -ext WixUIExtension` to your `light.exe` commands.
+Please note that if you're **using built-in WixUI dialog set**, you need to add `-cultures:en-US -ext WixUIExtension` to your `light.exe` commands as shown above.
 
 ### Complete source code
 
@@ -333,16 +338,20 @@ _Product.wxs_
     <?define MainProgramFileFullname = "ExampleApp.exe" ?>
     <?define GuidProgramShortcut = "9ACF08F5-CFF4-43C1-84F9-418ADAAD772D" ?>
     <?define GuidProgramShortcut64 = "CEA4CD03-0819-4A30-903A-22E09B254F04" ?>
+    <?define LicenseEulaFile = "License.rtf" ?>
+    <?define BannerBmp = "banner.bmp" ?>
+    <?define DialogBmp = "dialog.bmp" ?>
+    <?define AppIcon = "appIcon.ico" ?>
 
     <Product Id="$(var.MyProductCode)" Name="$(var.MyProductName)" Language="1033" Version="$(var.MyProductVersion)" Manufacturer="$(var.ManufacturerName)" UpgradeCode="$(var.MyUpgradeCode)">
         <Package Compressed="yes" InstallScope="perMachine" Manufacturer="$(var.ManufacturerName)" Description="$(var.ProductDescription)" Comments="$(var.ProductCopyright)" />
         <MediaTemplate EmbedCab="yes" />
 
-        <WixVariable Id="WixUILicenseRtf" Value="doc\License.rtf" />
-        <WixVariable Id="WixUIBannerBmp" Value="res\logo.bmp" />
-        <WixVariable Id="WixUIDialogBmp" Value="res\dialog.bmp" />
+        <WixVariable Id="WixUILicenseRtf" Value="$(var.LicenseEulaFile)" />
+        <WixVariable Id="WixUIBannerBmp" Value="$(var.BannerBmp)" />
+        <WixVariable Id="WixUIDialogBmp" Value="$(var.DialogBmp)" />
 
-        <Icon Id="icon.ico" SourceFile="res\appIcon.ico"/>
+        <Icon Id="icon.ico" SourceFile="$(var.AppIcon)"/>
         <Property Id="ARPPRODUCTICON" Value="icon.ico" />
 
         <Upgrade Id="$(var.MyUpgradeCode)">
