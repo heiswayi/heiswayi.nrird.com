@@ -1,13 +1,11 @@
 ---
 layout: post
 title: Creating a simpler MSI setup
-description: This is a how-to tutorial to create a simpler MSI setup using WiX toolset
+description: This is a how-to tutorial to create a simpler MSI setup using WiX toolset.
 keywords: wix toolset, windows installer, msi, windows installer xml, simpler msi setup
 tags: [WiX Toolset, Windows Installer, MSI]
 comments: true
 ---
-
-![Simpler MSI setup](https://i.imgur.com/hut5Op0.png)
 
 In my previous blog post "[Create a basic MSI installer using WiX Toolset](https://heiswayi.nrird.com/2018/create-basic-msi-installer-using-wix-toolset)", I shared how I create a _basic_ MSI installer for my app, however the WiX project that I shared, the example of the WiX code is **a little bit of exaggerating**. This is because I need to add some extra features and also some customizations to the setup dialogs. Well, if **file copy** is the only thing you need, perhaps this article can guide you through in creating a simpler MSI setup. Using [WiX toolset](http://wixtoolset.org/), of course!
 
@@ -134,7 +132,7 @@ The steps you need to do:-
 </Wix>
 ```
 
-### Files and shortcuts installation
+### Installing program files and creating shortcuts
 
 There are few things we need to do here for installing our files and shortcuts:-
 1. We need to create a target directory using [Directory](http://wixtoolset.org/documentation/manual/v3/xsd/wix/directory.html) element.
@@ -280,6 +278,10 @@ Since we have **two features** defined, and we want to let the user to choose wh
 </Wix>
 ```
 
+Example screenshot:
+
+![Simpler MSI setup](https://i.imgur.com/hut5Op0.png)
+
 ### Installer graphics and icon
 
 If you want to customize your MSI setup graphics instead of using the default reddish WiX graphics, you can add these two WiX variables under your `<Product>` element. Assuming all of your resource files are located under `<WIX_PROJECT_DIR>\res` folder. To get the dimension for `WixUIBannerBmp` and `WixUIDialogBmp`, you can check  [here](http://wixtoolset.org/documentation/manual/v3/wixui/wixui_customizations.html).
@@ -303,6 +305,38 @@ When you use the built-in WixUI dialog set, you need to define your license file
 <WixVariable Id="WixUILicenseRtf" Value="doc\License.rtf" />
 ```
 
+### Detecting a required minimum version of .NET Framework (Optional)
+
+If your program requires a certain minimum version of .NET Framework needs to be installed in order to work, you can include a detection using `<Condition>` element to **check and then inform the user** that they need a particular version of .NET Framework to be installed before they can install and use your program files. Let's say your program requires .NET Framework 4.7.1, here what you need to do:
+
+First, you need to include a reference `xmlns:netfx="http://schemas.microsoft.com/wix/NetFxExtension` into your WiX file:
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi" 
+     xmlns:netfx="http://schemas.microsoft.com/wix/NetFxExtension">
+
+    <Product>
+        <!-- Your MSI setup design here -->
+    </Product>
+
+</Wix>
+```
+
+And then, include this **Condition** under your `<Product>` element:
+```xml
+<PropertyRef Id="NETFRAMEWORK45" />
+<Condition Message="[ProductName] requires .NET Framework 4.7.1. Please install the .NET Framework then run this installer again. Setup will now exit.">
+    <![CDATA[Installed OR (NETFRAMEWORK45 AND NETFRAMEWORK45 >= "#461308")]]>
+</Condition>
+```
+
+Please note that `#461308` represents a .NET Framework version for 4.7.1. You can check [here](https://docs.microsoft.com/en-us/dotnet/framework/migration-guide/how-to-determine-which-versions-are-installed) for more details about .NET Framework versions.
+
+Example screenshot:
+
+![Required .NET Framework 4.7.1 to be installed](https://i.imgur.com/7TpjFrq.png)
+
+
 ### Commands to build your MSI setup
 
 I'm using a batch scripting and these are the commands I use to build my MSI setup output:
@@ -316,18 +350,18 @@ rem Automatically harvest program files and create each component
 
 rem Compile and create mySetup.msi
 "%WIX%bin\candle.exe" "Product.wxs" -out "_Product.wixobj" -nologo
-"%WIX%bin\light.exe" "_Product.Files.wixobj" "_Product.wixobj" -cultures:en-US -ext WixUIExtension -out "mySetup.msi" -nologo
+"%WIX%bin\light.exe" "_Product.Files.wixobj" "_Product.wixobj" -cultures:en-US -ext WixUIExtension -ext WixNetFxExtension -out "mySetup.msi" -nologo
 ```
 
-Please note that if you're **using built-in WixUI dialog set**, you need to add `-cultures:en-US -ext WixUIExtension` to your `light.exe` commands as shown above.
+Please note that if you're **using built-in WixUI dialog set**, you need to include `-cultures:en-US -ext WixUIExtension` into your `light.exe` commands as shown above. For **.NET Framework detection**, you need to append `-ext WixNetFxExtension` into the commands.
 
-### Complete source code
+### Full complete source code
 
 _Product.wxs_
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
-<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi" xmlns:netfx="http://schemas.microsoft.com/wix/NetFxExtension">
     <?define MyProductName = "ExampleApp" ?>
     <?define MyProductVersion = "2.0.0" ?>
     <?define MyProductCode = "*" ?>
@@ -361,8 +395,13 @@ _Product.wxs_
         <InstallExecuteSequence>
             <RemoveExistingProducts After="InstallInitialize" />
         </InstallExecuteSequence>
-
         <Condition Message="A later version of [ProductName] is already installed. Setup will now exit.">NOT DOWNGRADE_DETECTED</Condition>
+
+        <PropertyRef Id="NETFRAMEWORK45" />
+        <Condition Message="[ProductName] requires .NET Framework 4.7.1. Please install the .NET Framework then run this installer again. Setup will now exit.">
+            <![CDATA[Installed OR (NETFRAMEWORK45 AND NETFRAMEWORK45 >= "#461308")]]>
+        </Condition>
+
         <Directory Id="TARGETDIR" Name="SourceDir">
             <Directory Id="ProgramFilesFolder">
                 <Directory Id="MyProgramFiles" Name="$(var.ManufacturerName)">
