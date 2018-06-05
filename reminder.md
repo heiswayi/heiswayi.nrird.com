@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Tick-tock. Tick-tock.
+title: Reminder to myself
 description: Self reminder.
 keywords: self reminder, manifesto, tick-tock
 ---
