@@ -21,4 +21,4 @@ This site is a place I share my thoughts, opinions, reviews, ideas, rantings, pe
 
 #### Licensing
 
-Unless otherwise stated, all contents on this blog are licensed under [CC BY-NC 4.0 License](https://creativecommons.org/licenses/by-nc/4.0/).
+Unless otherwise stated, all contents on this site are licensed under [CC BY-NC 4.0 License](https://creativecommons.org/licenses/by-nc/4.0/).
