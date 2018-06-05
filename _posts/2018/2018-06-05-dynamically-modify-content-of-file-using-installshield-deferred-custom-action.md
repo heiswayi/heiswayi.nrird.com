@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Dynamically modify the content of a file using InstallShield deferred custom action
-description: Provided solution shows how to use deferred custom action to do a find-and-replace of particular string in a file during installation time in InstallShield Basic MSI.
+description: Provided solution shows how to use deferred custom action to do a find-and-replace of particular string in a file during installation time using InstallShield Basic MSI.
 keywords: problem resolution, installshield 2016, basic msi project, deferred custom action, customactiondata, find-and-replace installscript
 tags: [InstallShield, Basic MSI, InstallScript]
 comments: true
@@ -35,7 +35,7 @@ The purpose of this type-51 custom action is to pass other property value to `Cu
 
 Below are the InstallScript that I used to associate with my deferred custom action above in my `Setup.rul`.
 
-```vb
+```cs
 #include "ifx.h"
 #include "isrt.h"
 #include "iswi.h"
