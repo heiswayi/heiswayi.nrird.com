@@ -40,7 +40,7 @@ Below are the InstallScript that I used to associate with my deferred custom act
 #include "isrt.h"
 #include "iswi.h"
 
-prototype FindAndReplace(STRING, STRING, STRING); 
+prototype FindAndReplace(STRING, STRING, STRING);
 
 //Global Variables
 STRING SrcDirFileName, SrchString, RplcString;
@@ -49,19 +49,19 @@ NUMBER SrchLen, nvLineNumber;
 
 function FindAndReplace(SrcDirFileName, SrchString, RplcString)
 	STRING svReturnLine,szString, secPart;
-	NUMBER nReturn, subPos;   
+	NUMBER nReturn, subPos;
 begin
-	Disable(STATUSEX);	//stop displaying the progress bar
-    ShowObjWizardPages(NEXT);	//WARNING this may throw a user interface 
+	Disable(STATUSEX); //stop displaying the progress bar
+    ShowObjWizardPages(NEXT); //WARNING this may throw a user interface
     SrchLen = StrLength(SrchString); //length of search string
     nvLineNumber = 0; //pre-set file line number to 0
     
     Din: 
 		while (FileGrep (SrcDirFileName, SrchString, svReturnLine, nvLineNumber, RESTART)=0)
-			//subPos is the number where the first char of search string was found 
-			subPos	= StrFind(svReturnLine, SrchString); 
-    		//firstPart is the string upto search string but not including searchString
-			StrSub (firstPart, svReturnLine, 0, subPos);         
+			//subPos is the number where the first char of search string was found
+			subPos	= StrFind(svReturnLine, SrchString);
+			//firstPart is the string upto search string but not including searchString
+			StrSub (firstPart, svReturnLine, 0, subPos);
 			//secPart is the string after search string
 			StrSub (secPart, svReturnLine, subPos+SrchLen, 50);
 			//new string is firstPart followed by replace string followed by secPart
@@ -72,14 +72,13 @@ begin
 			FileInsertLine (SrcDirFileName, szString, nvLineNumber, REPLACE);
 			//the code below examines the line written back for any other occurences
 			//systematically searching and re-writting back to file
-					
 			//search first line again for search string
-			if (FileGrep (SrcDirFileName, SrchString, svReturnLine, nvLineNumber, RESTART)=0) then 
+			if (FileGrep (SrcDirFileName, SrchString, svReturnLine, nvLineNumber, RESTART)=0) then
 				goto Din;  //another occurence found
-			else 
+			else
 				//increment line number and start all over again
 				nvLineNumber = nvLineNumber + 1;
-			endif;				 		 
+			endif;
 		endwhile;  //while loop exited when END_OF_FILE reached  
 end;
 
@@ -99,7 +98,7 @@ begin
 	else
 		if Is(FILE_EXISTS, "<PATH_TO_METADATA_FILE>") = TRUE then
 			FindAndReplace("<PATH_TO_METADATA_FILE>","<STRING_TO_FIND>", installDirPath);
-		endif; 
+		endif;
 	endif;
 end;
 ```
