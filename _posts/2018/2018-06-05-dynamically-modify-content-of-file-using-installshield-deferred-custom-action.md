@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Dynamically modify the content of a file using InstallShield deferred custom action during installation time
+title: Dynamically modify the content of a file using InstallShield deferred custom action
 description: Provided solution shows how to use deferred custom action to do a find-and-replace of particular string in a file during installation time in InstallShield Basic MSI.
 keywords: problem resolution, installshield 2016, basic msi project, deferred custom action, customactiondata, find-and-replace installscript
 tags: [InstallShield, Basic MSI, InstallScript]
