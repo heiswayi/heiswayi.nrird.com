@@ -1,11 +1,16 @@
-# Version 5.x
+This repo contains source code for my personal Jekyll blog, viewable at https://heiswayi.nrird.com.
 
-This repository contains the source code of my personal blog, viewable at https://heiswayi.nrird.com. Built from scratch using [Jekyll](http://jekyllrb.com/) and being hosted automatically by GitHub Pages. The site is using icons from [Font Awesome](https://fortawesome.github.io/Font-Awesome/), and typefaces from [Inter UI](https://rsms.me/inter/).
+### Credits
 
-Blog URL: https://heiswayi.nrird.com
+- [Jekyll](http://jekyllrb.com/)
+- [Font Awesome](https://fortawesome.github.io/Font-Awesome/)
+- [Inter UI](https://rsms.me/inter/)
 
 ### Licensing
 
-Unless otherwise stated, all original code snippets presented inside this source code are licensed under the [MIT license](https://heiswayi.github.io/mit-license). All original photographs and texts (blog articles) inside this source code are licensed under a [CC BY-NC 4.0 license](https://creativecommons.org/licenses/by-nc/4.0/). If you have any questions about using any part of these materials (photographs or texts) for commercial purposes, please write me an email at hnrird@gmail.com.
+- Site source code and all of original code snippets are licensed under [MIT license](https://heiswayi.github.io/mit-license).
+- Site contents and images are licensed under [CC BY-NC 4.0 license](https://creativecommons.org/licenses/by-nc/4.0/).
 
-© Handcrafted by [Heiswayi Nrird](http://heiswayi.github.io) with love.
+Any question, shoot me an email at _hnrird (at) gmail.com_.
+
+© 2015 - 2018 [Heiswayi Nrird](https://heiswayi.nrird.com/about)
