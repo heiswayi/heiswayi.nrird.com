@@ -5,9 +5,7 @@ description: Little information about the human behind this site.
 keywords: about page, about me, heiswayi nrird, the author
 ---
 
-Hi. I'm Heiswayi Nrird. Fixing bugs at [Keysight Technologies](https://www.keysight.com) (Penang, MY). Some of my spare time works are on [GitHub](http://github.com/heiswayi), [Gist](http://heiswayi.github.io/my-gists/), [CodePen](http://codepen.io/heiswayi/), and [JSFiddle](http://jsfiddle.net/user/heiswayi/). Sometimes, I'm off grid to capture some [beautiful landscapes](https://heiswayi.github.io/photography/).
-
-For my personal experience, check out [my résumé here](https://heiswayi.github.io/resume/) or [my LinkedIn](https://my.linkedin.com/in/nrird). Any question, shoot me an email at **hnrird (at) gmail.com**.
+Hi. I'm Heiswayi Nrird. Fixing bugs at [Keysight Technologies](https://www.keysight.com) (Penang, MY). Some of my spare time works are on [GitHub](http://github.com/heiswayi), [Gist](http://heiswayi.github.io/my-gists/), [CodePen](http://codepen.io/heiswayi/), and [JSFiddle](http://jsfiddle.net/user/heiswayi/). Sometimes, I'm off grid to capture some [beautiful landscapes](https://heiswayi.github.io/photography/). For my personal experience, check out [my résumé here](https://heiswayi.github.io/resume/) or [my LinkedIn](https://my.linkedin.com/in/nrird). Any question, shoot me an email at **hnrird (at) gmail.com**.
 
 I also own [nrird·xyz](http://nrird.xyz), a personal project called creative studio that focuses on UX design, front-end app development and data visualization.
 
