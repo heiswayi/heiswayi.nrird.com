@@ -1,10 +1,10 @@
 Gem::Specification.new do |spec|
 	spec.name          = "heiswayi.nrird.com"
-	spec.version       = "5"
+	spec.version       = "6.0.0"
 	spec.authors       = ["Heiswayi Nrird"]
-	spec.email         = ["hnrird@gmail.com"]
-
-	spec.summary       = "Between coding and random stuffs"
+    spec.email         = ["hnrird@gmail.com"]
+    
+	spec.summary       = "Heiswayi Nrird's Personal Blog"
 	spec.homepage      = "https://heiswayi.nrird.com"
 	spec.license       = "MIT"
 
