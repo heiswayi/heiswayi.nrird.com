@@ -1,0 +1,297 @@
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en" class="no-js" itemscope itemtype="http://schema.org/WebPage"><link href="http://gmpg.org/xfn/11" rel="profile"><meta charset="UTF-8"><meta name="apple-mobile-web-app-capable" content="yes"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1"><title> Creating a simpler MSI setup · heiswayi nrird •••</title><meta name="description" content=" This is a how-to tutorial to create a simpler MSI setup using WiX toolset. "/><meta name="keywords" content="wix toolset, windows installer, msi, windows installer xml, simpler msi setup"><meta name="author" content="Heiswayi Nrird"><meta name="HandheldFriendly" content="True"><meta name="MobileOptimized" content="320"><meta property="og:type" content="article"><meta property="article:author" content="Heiswayi Nrird"><meta property="article:section" content=""><meta property="article:tag" content="wix toolset, windows installer, msi, windows installer xml, simpler msi setup"><meta property="article:published_time" content="2018-06-02 00:00:00 +0800"><meta property="og:url" content="https://heiswayi.nrird.com/2018/creating-simpler-msi-setup"><meta property="og:title" content=" Creating a simpler MSI setup · heiswayi nrird ••• "><meta property="og:image" content="https://heiswayi.nrird.com/assets/logo.png"><meta property="og:description" content=" This is a how-to tutorial to create a simpler MSI setup using WiX toolset. "><meta property="og:site_name" content="Heiswayi Nrird"><meta property="og:locale" content="en_US"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:site" content="@heiswayi"><meta name="twitter:title" content=" Creating a simpler MSI setup · heiswayi nrird ••• "><meta name="twitter:description" content=" This is a how-to tutorial to create a simpler MSI setup using WiX toolset. "><meta name="twitter:image:src" content="https://heiswayi.nrird.com/assets/logo.png"><meta itemprop="name" content=" Creating a simpler MSI setup · heiswayi nrird ••• "><meta itemprop="description" content=" This is a how-to tutorial to create a simpler MSI setup using WiX toolset. "><meta itemprop="image" content="https://heiswayi.nrird.com/assets/logo.png"><link rel="canonical" href="https://heiswayi.nrird.com/2018/creating-simpler-msi-setup"><link rel="alternate" type="application/rss+xml" title="RSS" href="https://heiswayi.nrird.com/feed.xml"><link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgo="><link rel="stylesheet" href="https://heiswayi.nrird.com/assets/css/main.css?20180603"> <script src="https://heiswayi.nrird.com/assets/js/modernizr.custom.js"></script> <!--[if lt IE 9]> <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script> <script src="http://cdnjs.cloudflare.com/ajax/libs/respond.js/1.1.0/respond.min.js"></script> <script src="https://heiswayi.nrird.com/assets/js/rem.min.js"></script> <![endif]--> <a href="#content" class="skip">Skip to content</a><div class="wrap"><div class="masthead"> <canvas id="canvas" style="width:100%;height:100%;max-height:230px;position:absolute;z-index:1;opacity:0.5"></canvas><div class="container"><h2 class="masthead-title"> <a href="https://heiswayi.nrird.com" title="heiswayi nrird •••" class="title">heiswayi nrird <span class="dot-red">•</span><span class="dot-yellow">•</span><span class="dot-green">•</span></a> <small>Between coding and random stuffs </small></h2><div class="footer-social-links"> <a href="http://heiswayi.github.io/feed.xml" title="RSS Feed" target="_blank"><i class="fa fa-rss"></i></a> <a href="https://my.linkedin.com/in/nrird" title="LinkedIn" target="_blank"><i class="fa fa-linkedin"></i></a> <!--<a href="https://www.facebook.com/heiswayi.nrird" title="Facebook" target="_blank"><i class="fa fa-facebook"></i></a>--> <!--<a href="https://twitter.com/HeiswayiNrird" title="Twitter" target="_blank"><i class="fa fa-twitter"></i></a>--> <a href="http://heiswayi.github.io/my-repos/" title="GitHub Repositories" target="_blank"><i class="fa fa-github-alt"></i></a> <a href="http://heiswayi.github.io/my-gists/" title="GitHub Gists" target="_blank"><i class="fa fa-code"></i></a> <a href="http://codepen.io/heiswayi/" title="CodePen" target="_blank"><i class="fa fa-codepen"></i></a> <a href="https://instagram.com/heiswayi.nrird/" title="Instagram" target="_blank"><i class="fa fa-instagram"></i></a> <a href="http://jsfiddle.net/user/heiswayi/" title="JSFiddle" target="_blank"><i class="fa fa-jsfiddle"></i></a></div><div class="nav"><ul class="top-menu"><li><a href="https://heiswayi.nrird.com/" title="Home"><i class="fa fa-home"></i></a><li><a href="https://heiswayi.nrird.com/about">About</a> <!--<li><a href="/resume">Resume <i class="fa fa-external-link-square"></i></a>--><li><a href="https://heiswayi.nrird.com/projects" class="bg-red"><i class="fa fa-space-shuttle" aria-hidden="true"></i> Projects</a><li><a href="https://heiswayi.nrird.com/tagged">Tags</a><li><a href="https://heiswayi.github.io/photography">Photography <i class="fa fa-external-link-square"></i></a><li><a href="https://heiswayi.nrird.com/reminder">Reminder</a></ul></div></div></div><div id="content" class="container content"><div class="post"><div class="post-top-meta"> <!--<div class="edit-this-page"><a href="https://github.com/heiswayi/heiswayi.github.io/blob/master/_posts/2018/2018-06-02-creating-simpler-msi-setup.md">Edit this page</a></div>--><div class="post-date">June 02, 2018</div><h1 class="post-title">Creating a simpler MSI setup</h1></div><p>In my previous blog post “<a href="https://heiswayi.nrird.com/2018/create-basic-msi-installer-using-wix-toolset">Create a basic MSI installer using WiX Toolset</a>”, I shared how I create a <em>basic</em> MSI installer for my app, however the WiX project that I shared, the example of the WiX code is <strong>a little bit of exaggerating</strong>. This is because I need to add some extra features and also some customizations to the setup dialogs. Well, if <strong>file copy</strong> is the only thing you need, perhaps this article can guide you through in creating a simpler MSI setup. This tutorial is based on <a href="http://wixtoolset.org/releases/v3.11.1/stable">WiX Toolset Compiler 3.11.1.2318</a>.<h3 id="getting-started">Getting started</h3><p>To get started, you will need a <a href="http://wixtoolset.org/documentation/manual/v3/xsd/wix/product.html">Product</a> element and this is the main structure of your WiX code:<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+<span class="nt">&lt;Wix</span> <span class="na">xmlns=</span><span class="s">"http://schemas.microsoft.com/wix/2006/wi"</span><span class="nt">&gt;</span>
+
+    <span class="c">&lt;!-- We'll include some preprocessor variables here --&gt;</span>
+
+    <span class="nt">&lt;Product&gt;</span>
+        <span class="c">&lt;!-- Anything goes here will define the design of our setup --&gt;</span>
+    <span class="nt">&lt;/Product&gt;</span>
+
+<span class="nt">&lt;/Wix&gt;</span>
+</code></pre></div></div><p>Let’s add some preprocessor variables and our <code class="highlighter-rouge">&lt;Product&gt;</code> attributes:<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+<span class="nt">&lt;Wix</span> <span class="na">xmlns=</span><span class="s">"http://schemas.microsoft.com/wix/2006/wi"</span><span class="nt">&gt;</span>
+
+    <span class="cp">&lt;?define MyProductName = "ExampleApp" ?&gt;</span>
+    <span class="cp">&lt;?define MyProductVersion = "1.0.0" ?&gt;</span>
+    <span class="cp">&lt;?define MyProductCode = "*" ?&gt;</span>
+    <span class="cp">&lt;?define MyUpgradeCode = "DA3EEBC7-5812-4380-BDAE-1605417230CB" ?&gt;</span>
+    <span class="cp">&lt;?define ManufacturerName = "Heiswayi Nrird" ?&gt;</span>
+    <span class="cp">&lt;?define ProductDescription = "Simplest MSI setup" ?&gt;</span>
+    <span class="cp">&lt;?define ProductCopyright = "(c) 2018 $(var.ManufacturerName)" ?&gt;</span>
+    <span class="cp">&lt;?define MainProgramFileFullname = "ExampleApp.exe" ?&gt;</span>
+    <span class="cp">&lt;?define GuidProgramShortcut = "9ACF08F5-CFF4-43C1-84F9-418ADAAD772D" ?&gt;</span>
+    <span class="cp">&lt;?define GuidProgramShortcut64 = "CEA4CD03-0819-4A30-903A-22E09B254F04" ?&gt;</span>
+
+    <span class="nt">&lt;Product</span> <span class="na">Id=</span><span class="s">"$(var.MyProductCode)"</span> 
+             <span class="na">Name=</span><span class="s">"$(var.MyProductName)"</span>
+             <span class="na">Language=</span><span class="s">"1033"</span> 
+             <span class="na">Version=</span><span class="s">"$(var.MyProductVersion)"</span> 
+             <span class="na">Manufacturer=</span><span class="s">"$(var.ManufacturerName)"</span> 
+             <span class="na">UpgradeCode=</span><span class="s">"$(var.MyUpgradeCode)"</span><span class="nt">&gt;</span>
+        <span class="c">&lt;!-- Anything goes here will define the design of our setup --&gt;</span>
+    <span class="nt">&lt;/Product&gt;</span>
+
+<span class="nt">&lt;/Wix&gt;</span>
+</code></pre></div></div><p>Now let’s define our MSI setup <code class="highlighter-rouge">&lt;Package&gt;</code> and <code class="highlighter-rouge">&lt;MediaTemplate&gt;</code> into our <code class="highlighter-rouge">&lt;Product&gt;</code>:<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+<span class="nt">&lt;Wix</span> <span class="na">xmlns=</span><span class="s">"http://schemas.microsoft.com/wix/2006/wi"</span><span class="nt">&gt;</span>
+
+    <span class="cp">&lt;?define MyProductName = "ExampleApp" ?&gt;</span>
+    <span class="cp">&lt;?define MyProductVersion = "1.0.0" ?&gt;</span>
+    <span class="cp">&lt;?define MyProductCode = "*" ?&gt;</span>
+    <span class="cp">&lt;?define MyUpgradeCode = "DA3EEBC7-5812-4380-BDAE-1605417230CB" ?&gt;</span>
+    <span class="cp">&lt;?define ManufacturerName = "Heiswayi Nrird" ?&gt;</span>
+    <span class="cp">&lt;?define ProductDescription = "Simplest MSI setup" ?&gt;</span>
+    <span class="cp">&lt;?define ProductCopyright = "(c) 2018 $(var.ManufacturerName)" ?&gt;</span>
+    <span class="cp">&lt;?define MainProgramFileFullname = "ExampleApp.exe" ?&gt;</span>
+    <span class="cp">&lt;?define GuidProgramShortcut = "9ACF08F5-CFF4-43C1-84F9-418ADAAD772D" ?&gt;</span>
+    <span class="cp">&lt;?define GuidProgramShortcut64 = "CEA4CD03-0819-4A30-903A-22E09B254F04" ?&gt;</span>
+
+    <span class="nt">&lt;Product</span> <span class="na">Id=</span><span class="s">"$(var.MyProductCode)"</span> 
+             <span class="na">Name=</span><span class="s">"$(var.MyProductName)"</span>
+             <span class="na">Language=</span><span class="s">"1033"</span> 
+             <span class="na">Version=</span><span class="s">"$(var.MyProductVersion)"</span> 
+             <span class="na">Manufacturer=</span><span class="s">"$(var.ManufacturerName)"</span> 
+             <span class="na">UpgradeCode=</span><span class="s">"$(var.MyUpgradeCode)"</span><span class="nt">&gt;</span>
+
+        <span class="nt">&lt;Package</span> <span class="na">Compressed=</span><span class="s">"yes"</span> 
+                 <span class="na">InstallScope=</span><span class="s">"perMachine"</span> 
+                 <span class="na">Manufacturer=</span><span class="s">"$(var.ManufacturerName)"</span> 
+                 <span class="na">Description=</span><span class="s">"$(var.ProductDescription)"</span> 
+                 <span class="na">Comments=</span><span class="s">"$(var.ProductCopyright)"</span> <span class="nt">/&gt;</span>
+
+        <span class="nt">&lt;MediaTemplate</span> <span class="na">EmbedCab=</span><span class="s">"yes"</span> <span class="nt">/&gt;</span>
+
+    <span class="nt">&lt;/Product&gt;</span>
+
+<span class="nt">&lt;/Wix&gt;</span>
+</code></pre></div></div><h3 id="implementing-a-major-upgrade-in-your-setup">Implementing a Major Upgrade in your Setup</h3><p>When creating an <code class="highlighter-rouge">.msi</code>-based installer, you are strongly encouraged to include logic that supports <a href="http://msdn.microsoft.com/library/aa369786.aspx">Windows Installer major upgrades</a>. Major upgrades are the most common form of updates for <code class="highlighter-rouge">.msi</code>’s, and including support in your initial <code class="highlighter-rouge">.msi</code> release gives you flexibility in the future. Without including support for major upgrades you risk greatly complicating your distribution story if you ever need to release updates later on.<p>The steps you need to do:-<ol><li>You will need to set <code class="highlighter-rouge">Id="*"</code> (auto-generate) and define <code class="highlighter-rouge">UpgradeCode="&lt;GUID&gt;"</code> in your <code class="highlighter-rouge">&lt;Product&gt;</code> attributes.<li>Add <a href="http://wixtoolset.org/documentation/manual/v3/xsd/wix/upgrade.html">Upgrade</a> element into your <code class="highlighter-rouge">&lt;Product&gt;</code> element.<li>Then, schedule the removal of older version in <a href="http://wixtoolset.org/documentation/manual/v3/xsd/wix/installexecutesequence.html">InstallExecuteSequence</a> element.</ol><div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+<span class="nt">&lt;Wix</span> <span class="na">xmlns=</span><span class="s">"http://schemas.microsoft.com/wix/2006/wi"</span><span class="nt">&gt;</span>
+
+    <span class="c">&lt;!-- List of preprocessor variables --&gt;</span>
+
+    <span class="nt">&lt;Product</span> <span class="na">Id=</span><span class="s">"$(var.MyProductCode)"</span> 
+             <span class="na">Name=</span><span class="s">"$(var.MyProductName)"</span>
+             <span class="na">Language=</span><span class="s">"1033"</span> 
+             <span class="na">Version=</span><span class="s">"$(var.MyProductVersion)"</span> 
+             <span class="na">Manufacturer=</span><span class="s">"$(var.ManufacturerName)"</span> 
+             <span class="na">UpgradeCode=</span><span class="s">"$(var.MyUpgradeCode)"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;Package</span> <span class="na">Compressed=</span><span class="s">"yes"</span> 
+                 <span class="na">InstallScope=</span><span class="s">"perMachine"</span> 
+                 <span class="na">Manufacturer=</span><span class="s">"$(var.ManufacturerName)"</span> 
+                 <span class="na">Description=</span><span class="s">"$(var.ProductDescription)"</span> 
+                 <span class="na">Comments=</span><span class="s">"$(var.ProductCopyright)"</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;MediaTemplate</span> <span class="na">EmbedCab=</span><span class="s">"yes"</span> <span class="nt">/&gt;</span>
+
+        <span class="c">&lt;!-- //Implement a Major Upgrade --&gt;</span>
+        <span class="nt">&lt;Upgrade</span> <span class="na">Id=</span><span class="s">"$(var.MyUpgradeCode)"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;UpgradeVersion</span> <span class="na">Minimum=</span><span class="s">"$(var.MyProductVersion)"</span> <span class="na">OnlyDetect=</span><span class="s">"yes"</span> <span class="na">IncludeMinimum=</span><span class="s">"yes"</span> <span class="na">Property=</span><span class="s">"DOWNGRADE_DETECTED"</span> <span class="nt">/&gt;</span>
+            <span class="nt">&lt;UpgradeVersion</span> <span class="na">IncludeMinimum=</span><span class="s">"no"</span> <span class="na">Maximum=</span><span class="s">"$(var.MyProductVersion)"</span> <span class="na">IncludeMaximum=</span><span class="s">"no"</span> <span class="na">MigrateFeatures=</span><span class="s">"yes"</span> <span class="na">Property=</span><span class="s">"UPGRADE_DETECTED"</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;/Upgrade&gt;</span>
+        <span class="nt">&lt;InstallExecuteSequence&gt;</span>
+            <span class="nt">&lt;RemoveExistingProducts</span> <span class="na">After=</span><span class="s">"InstallInitialize"</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;/InstallExecuteSequence&gt;</span>
+        <span class="nt">&lt;Condition</span> <span class="na">Message=</span><span class="s">"A later version of [ProductName] is already installed. Setup will now exit."</span><span class="nt">&gt;</span>NOT DOWNGRADE_DETECTED<span class="nt">&lt;/Condition&gt;</span>
+
+    <span class="nt">&lt;/Product&gt;</span>
+
+<span class="nt">&lt;/Wix&gt;</span>
+</code></pre></div></div><h3 id="installing-program-files-and-creating-shortcuts">Installing program files and creating shortcuts</h3><p>There are few things we need to do here for installing our files and shortcuts:-<ol><li>We need to create a target directory using <a href="http://wixtoolset.org/documentation/manual/v3/xsd/wix/directory.html">Directory</a> element.<li>We need to create a reference to a particular target directory using <a href="http://wixtoolset.org/documentation/manual/v3/xsd/wix/directoryref.html">DirectoryRef</a> element.<li>For each reference, we need to create one or more components using <a href="http://wixtoolset.org/documentation/manual/v3/xsd/wix/component.html">Component</a> elements.<li>We need to create one or more features using <a href="http://wixtoolset.org/documentation/manual/v3/xsd/wix/feature.html">Feature</a> element and associates particular components into a particular feature.</ol><div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Source of file(s) to be installed:
+--&gt; "&lt;WIX_PROJECT_DIR&gt;\bin\ExampleApp.exe"
+
+Installation target directory:
+--&gt; "C:\Program Files (x86)\Heiswayi Nrird\ExampleApp"
+
+Application shortcuts to be created:
+--&gt; "Start Menu\ExampleApp\ExampleApp" (to launch ExampleApp.exe)
+--&gt; "Start Menu\ExampleApp\Uninstall ExampleApp" (to uninstall ExampleApp)
+</code></pre></div></div><p><strong>Target directories for our program files and our shortcuts</strong><div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;Directory</span> <span class="na">Id=</span><span class="s">"TARGETDIR"</span> <span class="na">Name=</span><span class="s">"SourceDir"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;Directory</span> <span class="na">Id=</span><span class="s">"ProgramFilesFolder"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;Directory</span> <span class="na">Id=</span><span class="s">"MyProgramFiles"</span> <span class="na">Name=</span><span class="s">"$(var.ManufacturerName)"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;Directory</span> <span class="na">Id=</span><span class="s">"APPLICATIONFOLDER"</span> <span class="na">Name=</span><span class="s">"$(var.MyProductName)"</span><span class="nt">&gt;&lt;/Directory&gt;</span>
+        <span class="nt">&lt;/Directory&gt;</span>
+        <span class="nt">&lt;Directory</span> <span class="na">Id=</span><span class="s">"ProgramMenuFolder"</span> <span class="na">Name=</span><span class="s">"$(var.ManufacturerName)"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;Directory</span> <span class="na">Id=</span><span class="s">"ApplicationShortcutFolder"</span> <span class="na">Name=</span><span class="s">"$(var.MyProductName)"</span><span class="nt">&gt;&lt;/Directory&gt;</span>
+        <span class="nt">&lt;/Directory&gt;</span>
+    <span class="nt">&lt;/Directory&gt;</span>
+<span class="nt">&lt;/Directory&gt;</span>
+</code></pre></div></div><p><strong>A directory reference for our shortcuts</strong><div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;DirectoryRef</span> <span class="na">Id=</span><span class="s">"ApplicationShortcutFolder"</span><span class="nt">&gt;</span>
+    <span class="c">&lt;!-- Component(s) will be here --&gt;</span>
+<span class="nt">&lt;/DirectoryRef&gt;</span>
+</code></pre></div></div><p>NOTE: A directory reference for our program file(s) will be automatically generated using <a href="http://wixtoolset.org/documentation/manual/v3/xsd/wix/fragment.html">Fragment</a> element. Will be explained later.<p><strong>Components for shortcuts</strong><p>We have two components for our shortcuts; one if Windows architecture is 32-bit, another one if 64-bit. The reason for this is the location of <code class="highlighter-rouge">msiexec.exe</code> might be located in different system folder since we have a shortcut to uninstall our program using <code class="highlighter-rouge">msiexec.exe</code>. Only one of these two components will be used and it’s based on <a href="http://wixtoolset.org/documentation/manual/v3/xsd/wix/condition.html">Condition</a> element defined value in each component.<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;DirectoryRef</span> <span class="na">Id=</span><span class="s">"ApplicationProgramsFolder"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;Component</span> <span class="na">Id=</span><span class="s">"APPSHORTCUT64_comp"</span> <span class="na">Guid=</span><span class="s">"$(var.GuidProgramShortcut)"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;Condition&gt;</span>VersionNT64<span class="nt">&lt;/Condition&gt;</span>
+        <span class="nt">&lt;Shortcut</span> <span class="na">Id=</span><span class="s">"ApplicationStartMenuShortcut"</span> <span class="na">Name=</span><span class="s">"$(var.MyProductName)"</span> <span class="na">Description=</span><span class="s">"$(var.ProductDescription)"</span> <span class="na">Target=</span><span class="s">"[APPLICATIONFOLDER]$(var.MainProgramFileFullname)"</span> <span class="na">WorkingDirectory=</span><span class="s">"APPLICATIONROOTDIRECTORY"</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;Shortcut</span> <span class="na">Id=</span><span class="s">"UninstallAppShortcut"</span> <span class="na">Name=</span><span class="s">"Uninstall $(var.MyProductName)"</span> <span class="na">Target=</span><span class="s">"[System64Folder]msiexec.exe"</span> <span class="na">Arguments=</span><span class="s">"/x [ProductCode]"</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;RemoveFolder</span> <span class="na">Id=</span><span class="s">"CleanUpShortCut"</span> <span class="na">Directory=</span><span class="s">"ApplicationProgramsFolder"</span> <span class="na">On=</span><span class="s">"uninstall"</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;RegistryValue</span> <span class="na">Root=</span><span class="s">"HKCU"</span> <span class="na">Key=</span><span class="s">"Software\$(var.ManufacturerName)\$(var.MyProductName)"</span> <span class="na">Name=</span><span class="s">"installed"</span> <span class="na">Type=</span><span class="s">"integer"</span> <span class="na">Value=</span><span class="s">"1"</span> <span class="na">KeyPath=</span><span class="s">"yes"</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;/Component&gt;</span>
+    <span class="nt">&lt;Component</span> <span class="na">Id=</span><span class="s">"APPSHORTCUT_comp"</span> <span class="na">Guid=</span><span class="s">"$(var.GuidProgramShortcut)"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;Condition&gt;</span>NOT VersionNT64<span class="nt">&lt;/Condition&gt;</span>
+        <span class="nt">&lt;Shortcut</span> <span class="na">Id=</span><span class="s">"ApplicationStartMenuShortcut"</span> <span class="na">Name=</span><span class="s">"$(var.MyProductName)"</span> <span class="na">Description=</span><span class="s">"$(var.ProductDescription)"</span> <span class="na">Target=</span><span class="s">"[APPLICATIONFOLDER]$(var.MainProgramFileFullname)"</span> <span class="na">WorkingDirectory=</span><span class="s">"APPLICATIONROOTDIRECTORY"</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;Shortcut</span> <span class="na">Id=</span><span class="s">"UninstallAppShortcut"</span> <span class="na">Name=</span><span class="s">"Uninstall $(var.MyProductName)"</span> <span class="na">Target=</span><span class="s">"[SystemFolder]msiexec.exe"</span> <span class="na">Arguments=</span><span class="s">"/x [ProductCode]"</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;RemoveFolder</span> <span class="na">Id=</span><span class="s">"CleanUpShortCut"</span> <span class="na">Directory=</span><span class="s">"ApplicationProgramsFolder"</span> <span class="na">On=</span><span class="s">"uninstall"</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;RegistryValue</span> <span class="na">Root=</span><span class="s">"HKCU"</span> <span class="na">Key=</span><span class="s">"Software\$(var.ManufacturerName)\$(var.MyProductName)"</span> <span class="na">Name=</span><span class="s">"installed"</span> <span class="na">Type=</span><span class="s">"integer"</span> <span class="na">Value=</span><span class="s">"1"</span> <span class="na">KeyPath=</span><span class="s">"yes"</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;/Component&gt;</span>
+<span class="nt">&lt;/DirectoryRef&gt;</span>
+</code></pre></div></div><p>NOTE: Components for our program file(s) will be automatically generated using <a href="http://wixtoolset.org/documentation/manual/v3/xsd/wix/fragment.html">Fragment</a> element. Will be explained later.<p><strong>Features for our program files and our shortcuts</strong><div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;Feature</span> <span class="na">Id=</span><span class="s">"ProgramFeature"</span> <span class="na">Title=</span><span class="s">"Program Files"</span> <span class="na">Level=</span><span class="s">"1"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;ComponentGroupRef</span> <span class="na">Id=</span><span class="s">"APPLICATIONFOLDER_comp"</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;/Feature&gt;</span>
+
+<span class="nt">&lt;Feature</span> <span class="na">Id=</span><span class="s">"ShortcutFeature"</span> <span class="na">Title=</span><span class="s">"Shortcuts"</span> <span class="na">Level=</span><span class="s">"1"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;ComponentRef</span> <span class="na">Id=</span><span class="s">"APPSHORTCUT64_comp"</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;ComponentRef</span> <span class="na">Id=</span><span class="s">"APPSHORTCUT_comp"</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;/Feature&gt;</span>
+</code></pre></div></div><h3 id="generating-component-for-each-file-to-be-installed-automatically">Generating component for each file to be installed automatically</h3><p>Instead of manually creating one-by-one the component for each of our program files, we can use <code class="highlighter-rouge">heat.exe</code> tool along with <code class="highlighter-rouge">candle.exe</code> tool from WiX toolset to automatically harvest our program files and creates each component automatically.<p>Example commands:<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="s2">"%WIX%bin</span><span class="se">\h</span><span class="s2">eat.exe"</span> dir <span class="s2">"bin"</span> <span class="nt">-cg</span> APPLICATIONFOLDER_comp <span class="nt">-gg</span> <span class="nt">-scom</span> <span class="nt">-sreg</span> <span class="nt">-sfrag</span> <span class="nt">-srd</span> <span class="nt">-dr</span> APPLICATIONFOLDER <span class="nt">-var</span> var.ProjectDir <span class="nt">-out</span> <span class="s2">"Product.Files.wxs"</span>
+<span class="s2">"%WIX%bin</span><span class="se">\c</span><span class="s2">andle.exe"</span> <span class="s2">"Product.Files.wxs"</span> <span class="nt">-out</span> <span class="s2">"_Product.Files.wixobj"</span> <span class="nt">-dProjectDir</span><span class="o">=</span><span class="s2">".</span><span class="se">\b</span><span class="s2">in"</span>
+</code></pre></div></div><p>Those commands above will generate two files; <code class="highlighter-rouge">Product.Files.wxs</code> and <code class="highlighter-rouge">_Product.Files.wixobj</code>. Here is the content of <code class="highlighter-rouge">Product.Files.wxs</code> file:<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?xml version="1.0" encoding="utf-8"?&gt;</span>
+<span class="nt">&lt;Wix</span> <span class="na">xmlns=</span><span class="s">"http://schemas.microsoft.com/wix/2006/wi"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;Fragment&gt;</span>
+        <span class="nt">&lt;DirectoryRef</span> <span class="na">Id=</span><span class="s">"APPLICATIONFOLDER"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;Component</span> <span class="na">Id=</span><span class="s">"cmp40DD4A73DF828C932073F22AA254E961"</span> <span class="na">Guid=</span><span class="s">"{746B1D16-E4BD-421B-BEAA-1F290EBB4276}"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;File</span> <span class="na">Id=</span><span class="s">"fil3BA6726ABBBBF1BB587CA7587F5F7FA8"</span> <span class="na">KeyPath=</span><span class="s">"yes"</span> <span class="na">Source=</span><span class="s">"$(var.ProjectDir)\ExampleApp.exe"</span> <span class="nt">/&gt;</span>
+            <span class="nt">&lt;/Component&gt;</span>
+        <span class="nt">&lt;/DirectoryRef&gt;</span>
+    <span class="nt">&lt;/Fragment&gt;</span>
+    <span class="nt">&lt;Fragment&gt;</span>
+        <span class="nt">&lt;ComponentGroup</span> <span class="na">Id=</span><span class="s">"APPLICATIONFOLDER_comp"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;ComponentRef</span> <span class="na">Id=</span><span class="s">"cmp40DD4A73DF828C932073F22AA254E961"</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;/ComponentGroup&gt;</span>
+    <span class="nt">&lt;/Fragment&gt;</span>
+<span class="nt">&lt;/Wix&gt;</span>
+</code></pre></div></div><h3 id="using-built-in-wixui-dialog-sets">Using built-in WixUI dialog sets</h3><p>Since we have <strong>two features</strong> defined, and we want to let the user to choose which feature they want to install, so the simplest and best suited dialog set is <a href="http://wixtoolset.org/documentation/manual/v3/wixui/dialog_reference/WixUI_featuretree.html">WixUI_FeatureTree</a>.<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+<span class="nt">&lt;Wix</span> <span class="na">xmlns=</span><span class="s">"http://schemas.microsoft.com/wix/2006/wi"</span><span class="nt">&gt;</span>
+
+    <span class="c">&lt;!-- List of preprocessor variables --&gt;</span>
+
+    <span class="nt">&lt;Product</span> <span class="na">Id=</span><span class="s">"$(var.MyProductCode)"</span> 
+             <span class="na">Name=</span><span class="s">"$(var.MyProductName)"</span>
+             <span class="na">Language=</span><span class="s">"1033"</span> 
+             <span class="na">Version=</span><span class="s">"$(var.MyProductVersion)"</span> 
+             <span class="na">Manufacturer=</span><span class="s">"$(var.ManufacturerName)"</span> 
+             <span class="na">UpgradeCode=</span><span class="s">"$(var.MyUpgradeCode)"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;Package</span> <span class="na">Compressed=</span><span class="s">"yes"</span> 
+                 <span class="na">InstallScope=</span><span class="s">"perMachine"</span> 
+                 <span class="na">Manufacturer=</span><span class="s">"$(var.ManufacturerName)"</span> 
+                 <span class="na">Description=</span><span class="s">"$(var.ProductDescription)"</span> 
+                 <span class="na">Comments=</span><span class="s">"$(var.ProductCopyright)"</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;MediaTemplate</span> <span class="na">EmbedCab=</span><span class="s">"yes"</span> <span class="nt">/&gt;</span>
+
+        <span class="c">&lt;!-- Implemention of Major Upgrade here --&gt;</span>
+
+        <span class="c">&lt;!-- Installation of files and shortcuts here --&gt;</span>
+
+        <span class="nt">&lt;UIRef</span> <span class="na">Id=</span><span class="s">"WixUI_FeatureTree"</span><span class="nt">/&gt;</span>
+
+    <span class="nt">&lt;/Product&gt;</span>
+
+<span class="nt">&lt;/Wix&gt;</span>
+</code></pre></div></div><p>Example screenshot:<p><img src="https://i.imgur.com/hut5Op0.png" alt="Simpler MSI setup" /><h3 id="installer-graphics-and-icon">Installer graphics and icon</h3><p>If you want to customize your MSI setup graphics instead of using the default reddish WiX graphics, you can add these two WiX variables under your <code class="highlighter-rouge">&lt;Product&gt;</code> element. Assuming all of your resource files are located under <code class="highlighter-rouge">&lt;WIX_PROJECT_DIR&gt;\res</code> folder. To get the dimension for <code class="highlighter-rouge">WixUIBannerBmp</code> and <code class="highlighter-rouge">WixUIDialogBmp</code>, you can check <a href="http://wixtoolset.org/documentation/manual/v3/wixui/wixui_customizations.html">here</a>.<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;WixVariable</span> <span class="na">Id=</span><span class="s">"WixUIBannerBmp"</span> <span class="na">Value=</span><span class="s">"res\banner.bmp"</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;WixVariable</span> <span class="na">Id=</span><span class="s">"WixUIDialogBmp"</span> <span class="na">Value=</span><span class="s">"res\dialog.bmp"</span> <span class="nt">/&gt;</span>
+</code></pre></div></div><p>Here’s for the MSI setup icon, similarly it goes under your <code class="highlighter-rouge">&lt;Product&gt;</code> element:<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;Icon</span> <span class="na">Id=</span><span class="s">"icon.ico"</span> <span class="na">SourceFile=</span><span class="s">"res\appIcon.ico"</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;Property</span> <span class="na">Id=</span><span class="s">"ARPPRODUCTICON"</span> <span class="na">Value=</span><span class="s">"icon.ico"</span> <span class="nt">/&gt;</span>
+</code></pre></div></div><h3 id="license-file">License file</h3><p>When you use the built-in WixUI dialog set, you need to define your license file. Simply get your <code class="highlighter-rouge">License.rtf</code> ready and add this under your <code class="highlighter-rouge">&lt;Product&gt;</code> element. Assuming your license file is located under <code class="highlighter-rouge">&lt;WIX_PROJECT_DIR&gt;\doc</code> folder.<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;WixVariable</span> <span class="na">Id=</span><span class="s">"WixUILicenseRtf"</span> <span class="na">Value=</span><span class="s">"doc\License.rtf"</span> <span class="nt">/&gt;</span>
+</code></pre></div></div><h3 id="detecting-a-required-minimum-version-of-net-framework-optional">Detecting a required minimum version of .NET Framework (Optional)</h3><p>If your program requires a certain minimum version of .NET Framework needs to be installed in order to work, you can include a detection using <code class="highlighter-rouge">&lt;Condition&gt;</code> element to <strong>check and then inform the user</strong> that they need a particular version of .NET Framework to be installed before they can install and use your program files. Let’s say your program requires .NET Framework 4.7.1, here what you need to do:<p>First, you need to include a reference <code class="highlighter-rouge">xmlns:netfx="...</code> into your WiX file:<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+<span class="nt">&lt;Wix</span> <span class="na">xmlns=</span><span class="s">"http://schemas.microsoft.com/wix/2006/wi"</span> 
+     <span class="na">xmlns:netfx=</span><span class="s">"http://schemas.microsoft.com/wix/NetFxExtension"</span><span class="nt">&gt;</span>
+
+    <span class="nt">&lt;Product&gt;</span>
+        <span class="c">&lt;!-- Your MSI setup design here --&gt;</span>
+    <span class="nt">&lt;/Product&gt;</span>
+
+<span class="nt">&lt;/Wix&gt;</span>
+</code></pre></div></div><p>And then, include this <strong>Condition</strong> under your <code class="highlighter-rouge">&lt;Product&gt;</code> element:<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;PropertyRef</span> <span class="na">Id=</span><span class="s">"NETFRAMEWORK45"</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;Condition</span> <span class="na">Message=</span><span class="s">"[ProductName] requires .NET Framework 4.7.1. Please install the .NET Framework then run this installer again. Setup will now exit."</span><span class="nt">&gt;</span>
+    <span class="cp">&lt;![CDATA[Installed OR (NETFRAMEWORK45 AND NETFRAMEWORK45 &gt;= "#461308")]]&gt;</span>
+<span class="nt">&lt;/Condition&gt;</span>
+</code></pre></div></div><p>Please note that <code class="highlighter-rouge">#461308</code> represents a .NET Framework version for 4.7.1. You can check <a href="https://docs.microsoft.com/en-us/dotnet/framework/migration-guide/how-to-determine-which-versions-are-installed">here</a> for more details about .NET Framework versions.<p>Example screenshot:<p><img src="https://i.imgur.com/7TpjFrq.png" alt="Required .NET Framework 4.7.1 to be installed" /><h3 id="commands-to-build-your-msi-setup">Commands to build your MSI setup</h3><p>I’m using a batch scripting and these are the commands I use to build my MSI setup output:<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@echo off
+<span class="nb">set </span><span class="nv">projectDir</span><span class="o">=</span>.<span class="se">\b</span><span class="k">in
+
+</span>rem Automatically harvest program files and create each component
+<span class="s2">"%WIX%bin</span><span class="se">\h</span><span class="s2">eat.exe"</span> dir <span class="s2">"bin"</span> <span class="nt">-cg</span> APPLICATIONFOLDER_comp <span class="nt">-gg</span> <span class="nt">-scom</span> <span class="nt">-sreg</span> <span class="nt">-sfrag</span> <span class="nt">-srd</span> <span class="nt">-dr</span> APPLICATIONFOLDER <span class="nt">-var</span> var.ProjectDir <span class="nt">-out</span> <span class="s2">"Product.Files.wxs"</span>
+<span class="s2">"%WIX%bin</span><span class="se">\c</span><span class="s2">andle.exe"</span> <span class="s2">"Product.Files.wxs"</span> <span class="nt">-out</span> <span class="s2">"_Product.Files.wixobj"</span> <span class="nt">-dProjectDir</span><span class="o">=</span><span class="s2">"%projectDir%"</span>
+
+rem Compile and create mySetup.msi
+<span class="s2">"%WIX%bin</span><span class="se">\c</span><span class="s2">andle.exe"</span> <span class="s2">"Product.wxs"</span> <span class="nt">-out</span> <span class="s2">"_Product.wixobj"</span> <span class="nt">-nologo</span>
+<span class="s2">"%WIX%bin</span><span class="se">\l</span><span class="s2">ight.exe"</span> <span class="s2">"_Product.Files.wixobj"</span> <span class="s2">"_Product.wixobj"</span> <span class="nt">-cultures</span>:en-US <span class="nt">-ext</span> WixUIExtension <span class="nt">-ext</span> WixNetFxExtension <span class="nt">-out</span> <span class="s2">"mySetup.msi"</span> <span class="nt">-nologo</span>
+</code></pre></div></div><p>Please note that if you’re <strong>using built-in WixUI dialog set</strong>, you need to include <code class="highlighter-rouge">-cultures:en-US -ext WixUIExtension</code> into your <code class="highlighter-rouge">light.exe</code> commands as shown above. For <strong>.NET Framework detection</strong>, you need to append <code class="highlighter-rouge">-ext WixNetFxExtension</code> into the commands.<h3 id="full-complete-source-code">Full complete source code</h3><p><em>Product.wxs</em><div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+<span class="nt">&lt;Wix</span> <span class="na">xmlns=</span><span class="s">"http://schemas.microsoft.com/wix/2006/wi"</span> <span class="na">xmlns:netfx=</span><span class="s">"http://schemas.microsoft.com/wix/NetFxExtension"</span><span class="nt">&gt;</span>
+    <span class="cp">&lt;?define MyProductName = "ExampleApp" ?&gt;</span>
+    <span class="cp">&lt;?define MyProductVersion = "2.0.0" ?&gt;</span>
+    <span class="cp">&lt;?define MyProductCode = "*" ?&gt;</span>
+    <span class="cp">&lt;?define MyUpgradeCode = "DA3EEBC7-5812-4380-BDAE-1605417230CB" ?&gt;</span>
+    <span class="cp">&lt;?define ManufacturerName = "Heiswayi Nrird" ?&gt;</span>
+    <span class="cp">&lt;?define ProductDescription = "Demo installer for WiX basics" ?&gt;</span>
+    <span class="cp">&lt;?define ProductCopyright = "(c) 2018 $(var.ManufacturerName)" ?&gt;</span>
+    <span class="cp">&lt;?define MainProgramFileFullname = "ExampleApp.exe" ?&gt;</span>
+    <span class="cp">&lt;?define GuidProgramShortcut = "9ACF08F5-CFF4-43C1-84F9-418ADAAD772D" ?&gt;</span>
+    <span class="cp">&lt;?define GuidProgramShortcut64 = "CEA4CD03-0819-4A30-903A-22E09B254F04" ?&gt;</span>
+    <span class="cp">&lt;?define LicenseEulaFile = "License.rtf" ?&gt;</span>
+    <span class="cp">&lt;?define BannerBmp = "banner.bmp" ?&gt;</span>
+    <span class="cp">&lt;?define DialogBmp = "dialog.bmp" ?&gt;</span>
+    <span class="cp">&lt;?define AppIcon = "appIcon.ico" ?&gt;</span>
+
+    <span class="nt">&lt;Product</span> <span class="na">Id=</span><span class="s">"$(var.MyProductCode)"</span> <span class="na">Name=</span><span class="s">"$(var.MyProductName)"</span> <span class="na">Language=</span><span class="s">"1033"</span> <span class="na">Version=</span><span class="s">"$(var.MyProductVersion)"</span> <span class="na">Manufacturer=</span><span class="s">"$(var.ManufacturerName)"</span> <span class="na">UpgradeCode=</span><span class="s">"$(var.MyUpgradeCode)"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;Package</span> <span class="na">Compressed=</span><span class="s">"yes"</span> <span class="na">InstallScope=</span><span class="s">"perMachine"</span> <span class="na">Manufacturer=</span><span class="s">"$(var.ManufacturerName)"</span> <span class="na">Description=</span><span class="s">"$(var.ProductDescription)"</span> <span class="na">Comments=</span><span class="s">"$(var.ProductCopyright)"</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;MediaTemplate</span> <span class="na">EmbedCab=</span><span class="s">"yes"</span> <span class="nt">/&gt;</span>
+
+        <span class="nt">&lt;WixVariable</span> <span class="na">Id=</span><span class="s">"WixUILicenseRtf"</span> <span class="na">Value=</span><span class="s">"$(var.LicenseEulaFile)"</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;WixVariable</span> <span class="na">Id=</span><span class="s">"WixUIBannerBmp"</span> <span class="na">Value=</span><span class="s">"$(var.BannerBmp)"</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;WixVariable</span> <span class="na">Id=</span><span class="s">"WixUIDialogBmp"</span> <span class="na">Value=</span><span class="s">"$(var.DialogBmp)"</span> <span class="nt">/&gt;</span>
+
+        <span class="nt">&lt;Icon</span> <span class="na">Id=</span><span class="s">"icon.ico"</span> <span class="na">SourceFile=</span><span class="s">"$(var.AppIcon)"</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;Property</span> <span class="na">Id=</span><span class="s">"ARPPRODUCTICON"</span> <span class="na">Value=</span><span class="s">"icon.ico"</span> <span class="nt">/&gt;</span>
+
+        <span class="nt">&lt;Upgrade</span> <span class="na">Id=</span><span class="s">"$(var.MyUpgradeCode)"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;UpgradeVersion</span> <span class="na">Minimum=</span><span class="s">"$(var.MyProductVersion)"</span> <span class="na">OnlyDetect=</span><span class="s">"yes"</span> <span class="na">IncludeMinimum=</span><span class="s">"yes"</span> <span class="na">Property=</span><span class="s">"DOWNGRADE_DETECTED"</span> <span class="nt">/&gt;</span>
+            <span class="nt">&lt;UpgradeVersion</span> <span class="na">IncludeMinimum=</span><span class="s">"no"</span> <span class="na">Maximum=</span><span class="s">"$(var.MyProductVersion)"</span> <span class="na">IncludeMaximum=</span><span class="s">"no"</span> <span class="na">MigrateFeatures=</span><span class="s">"yes"</span> <span class="na">Property=</span><span class="s">"UPGRADE_DETECTED"</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;/Upgrade&gt;</span>
+        <span class="nt">&lt;InstallExecuteSequence&gt;</span>
+            <span class="nt">&lt;RemoveExistingProducts</span> <span class="na">After=</span><span class="s">"InstallInitialize"</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;/InstallExecuteSequence&gt;</span>
+        <span class="nt">&lt;Condition</span> <span class="na">Message=</span><span class="s">"A later version of [ProductName] is already installed. Setup will now exit."</span><span class="nt">&gt;</span>NOT DOWNGRADE_DETECTED<span class="nt">&lt;/Condition&gt;</span>
+
+        <span class="nt">&lt;PropertyRef</span> <span class="na">Id=</span><span class="s">"NETFRAMEWORK45"</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;Condition</span> <span class="na">Message=</span><span class="s">"[ProductName] requires .NET Framework 4.7.1. Please install the .NET Framework then run this installer again. Setup will now exit."</span><span class="nt">&gt;</span>
+            <span class="cp">&lt;![CDATA[Installed OR (NETFRAMEWORK45 AND NETFRAMEWORK45 &gt;= "#461308")]]&gt;</span>
+        <span class="nt">&lt;/Condition&gt;</span>
+
+        <span class="nt">&lt;Directory</span> <span class="na">Id=</span><span class="s">"TARGETDIR"</span> <span class="na">Name=</span><span class="s">"SourceDir"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;Directory</span> <span class="na">Id=</span><span class="s">"ProgramFilesFolder"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;Directory</span> <span class="na">Id=</span><span class="s">"MyProgramFiles"</span> <span class="na">Name=</span><span class="s">"$(var.ManufacturerName)"</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;Directory</span> <span class="na">Id=</span><span class="s">"APPLICATIONFOLDER"</span> <span class="na">Name=</span><span class="s">"$(var.MyProductName)"</span><span class="nt">&gt;&lt;/Directory&gt;</span>
+                <span class="nt">&lt;/Directory&gt;</span>
+                <span class="nt">&lt;Directory</span> <span class="na">Id=</span><span class="s">"ProgramMenuFolder"</span> <span class="na">Name=</span><span class="s">"$(var.ManufacturerName)"</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;Directory</span> <span class="na">Id=</span><span class="s">"ApplicationShortcutFolder"</span> <span class="na">Name=</span><span class="s">"$(var.MyProductName)"</span><span class="nt">&gt;&lt;/Directory&gt;</span>
+                <span class="nt">&lt;/Directory&gt;</span>
+            <span class="nt">&lt;/Directory&gt;</span>
+        <span class="nt">&lt;/Directory&gt;</span>
+
+        <span class="nt">&lt;DirectoryRef</span> <span class="na">Id=</span><span class="s">"ApplicationShortcutFolder"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;Component</span> <span class="na">Id=</span><span class="s">"APPSHORTCUT64_comp"</span> <span class="na">Guid=</span><span class="s">"$(var.GuidProgramShortcut64)"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;Condition&gt;</span>VersionNT64<span class="nt">&lt;/Condition&gt;</span>
+                <span class="nt">&lt;Shortcut</span> <span class="na">Id=</span><span class="s">"ApplicationStartMenuShortcut64"</span> <span class="na">Name=</span><span class="s">"$(var.MyProductName)"</span> <span class="na">Description=</span><span class="s">"$(var.ProductDescription)"</span> <span class="na">Target=</span><span class="s">"[APPLICATIONFOLDER]$(var.MainProgramFileFullname)"</span> <span class="na">WorkingDirectory=</span><span class="s">"APPLICATIONROOTDIRECTORY"</span><span class="nt">/&gt;</span>
+                <span class="nt">&lt;Shortcut</span> <span class="na">Id=</span><span class="s">"UninstallAppShortcut64"</span> <span class="na">Name=</span><span class="s">"Uninstall $(var.MyProductName)"</span> <span class="na">Target=</span><span class="s">"[System64Folder]msiexec.exe"</span> <span class="na">Arguments=</span><span class="s">"/x [ProductCode]"</span><span class="nt">/&gt;</span>
+                <span class="nt">&lt;RemoveFolder</span> <span class="na">Id=</span><span class="s">"CleanUpShortCut64"</span> <span class="na">Directory=</span><span class="s">"ApplicationShortcutFolder"</span> <span class="na">On=</span><span class="s">"uninstall"</span><span class="nt">/&gt;</span>
+                <span class="nt">&lt;RegistryValue</span> <span class="na">Root=</span><span class="s">"HKCU"</span> <span class="na">Key=</span><span class="s">"Software\$(var.ManufacturerName)\$(var.MyProductName)"</span> <span class="na">Name=</span><span class="s">"installed"</span> <span class="na">Type=</span><span class="s">"integer"</span> <span class="na">Value=</span><span class="s">"1"</span> <span class="na">KeyPath=</span><span class="s">"yes"</span> <span class="nt">/&gt;</span>
+            <span class="nt">&lt;/Component&gt;</span>
+            <span class="nt">&lt;Component</span> <span class="na">Id=</span><span class="s">"APPSHORTCUT_comp"</span> <span class="na">Guid=</span><span class="s">"$(var.GuidProgramShortcut)"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;Condition&gt;</span>NOT VersionNT64<span class="nt">&lt;/Condition&gt;</span>
+                <span class="nt">&lt;Shortcut</span> <span class="na">Id=</span><span class="s">"ApplicationStartMenuShortcut"</span> <span class="na">Name=</span><span class="s">"$(var.MyProductName)"</span> <span class="na">Description=</span><span class="s">"$(var.ProductDescription)"</span> <span class="na">Target=</span><span class="s">"[APPLICATIONFOLDER]$(var.MainProgramFileFullname)"</span> <span class="na">WorkingDirectory=</span><span class="s">"APPLICATIONROOTDIRECTORY"</span><span class="nt">/&gt;</span>
+                <span class="nt">&lt;Shortcut</span> <span class="na">Id=</span><span class="s">"UninstallAppShortcut"</span> <span class="na">Name=</span><span class="s">"Uninstall $(var.MyProductName)"</span> <span class="na">Target=</span><span class="s">"[SystemFolder]msiexec.exe"</span> <span class="na">Arguments=</span><span class="s">"/x [ProductCode]"</span><span class="nt">/&gt;</span>
+                <span class="nt">&lt;RemoveFolder</span> <span class="na">Id=</span><span class="s">"CleanUpShortCut"</span> <span class="na">Directory=</span><span class="s">"ApplicationShortcutFolder"</span> <span class="na">On=</span><span class="s">"uninstall"</span><span class="nt">/&gt;</span>
+                <span class="nt">&lt;RegistryValue</span> <span class="na">Root=</span><span class="s">"HKCU"</span> <span class="na">Key=</span><span class="s">"Software\$(var.ManufacturerName)\$(var.MyProductName)"</span> <span class="na">Name=</span><span class="s">"installed"</span> <span class="na">Type=</span><span class="s">"integer"</span> <span class="na">Value=</span><span class="s">"1"</span> <span class="na">KeyPath=</span><span class="s">"yes"</span> <span class="nt">/&gt;</span>
+            <span class="nt">&lt;/Component&gt;</span>
+        <span class="nt">&lt;/DirectoryRef&gt;</span>
+
+        <span class="nt">&lt;Feature</span> <span class="na">Id=</span><span class="s">"ProgramFeature"</span> <span class="na">Title=</span><span class="s">"Program Files"</span> <span class="na">Level=</span><span class="s">"1"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;ComponentGroupRef</span> <span class="na">Id=</span><span class="s">"APPLICATIONFOLDER_comp"</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;/Feature&gt;</span>
+        <span class="nt">&lt;Feature</span> <span class="na">Id=</span><span class="s">"ShortcutFeature"</span> <span class="na">Title=</span><span class="s">"Shortcuts"</span> <span class="na">Level=</span><span class="s">"1"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;ComponentRef</span> <span class="na">Id=</span><span class="s">"APPSHORTCUT64_comp"</span> <span class="nt">/&gt;</span>
+            <span class="nt">&lt;ComponentRef</span> <span class="na">Id=</span><span class="s">"APPSHORTCUT_comp"</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;/Feature&gt;</span>
+
+        <span class="nt">&lt;UIRef</span> <span class="na">Id=</span><span class="s">"WixUI_FeatureTree"</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;/Product&gt;</span>
+<span class="nt">&lt;/Wix&gt;</span>
+</code></pre></div></div><div class="tagged"> <a href="https://heiswayi.nrird.com/tagged#wix-toolset"><i class="fa fa-hashtag muted" aria-hidden="true"></i>WiX Toolset</a> <a href="https://heiswayi.nrird.com/tagged#windows-installer"><i class="fa fa-hashtag muted" aria-hidden="true"></i>Windows Installer</a> <a href="https://heiswayi.nrird.com/tagged#msi"><i class="fa fa-hashtag muted" aria-hidden="true"></i>MSI</a></div><div id="disqus" style="margin-top:2em"><div id="disqus_thread"></div><script> var disqus_config = function() { this.page.url = "https://heiswayi.nrird.com/2018/creating-simpler-msi-setup"; this.page.identifier = "/2018/creating-simpler-msi-setup"; }; (function() { var d = document, s = d.createElement('script'); s.src = '//hnbloggithub.disqus.com/embed.js'; s.setAttribute('data-timestamp', +new Date()); (d.head || d.body).appendChild(s); })(); </script> <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript></div></div></div></div><div class="footer"><div class="copyright"><i class="fa fa-copyright"></i> 2015 - 2018 Heiswayi Nrird // <a href="https://heiswayi.nrird.com/cookie-policy">Cookie Policy</a> // <a href="https://heiswayi.github.io/feed.xml">RSS</a></div></div><script> // Line numbering for code block (function() { var pre = document.getElementsByTagName('pre'), pl = pre.length; for (var i = 0; i < pl; i++) { pre[i].innerHTML = '<span class="line-number"></span>' + pre[i].innerHTML + '<span class="cl"></span>'; var num = pre[i].innerHTML.split(/\n/).length; for (var j = 0; j < (num - 1); j++) { var line_num = pre[i].getElementsByTagName('span')[0]; line_num.innerHTML += '<span>' + (j + 1) + '</span>'; } } })(); </script> <script> (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m) })(window,document,'script','https://www.google-analytics.com/analytics.js','ga'); ga('create', 'UA-58296043-7', 'auto'); ga('send', 'pageview'); </script>

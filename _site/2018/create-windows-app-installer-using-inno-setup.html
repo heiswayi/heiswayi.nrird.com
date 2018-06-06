@@ -1,0 +1,405 @@
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en" class="no-js" itemscope itemtype="http://schema.org/WebPage"><link href="http://gmpg.org/xfn/11" rel="profile"><meta charset="UTF-8"><meta name="apple-mobile-web-app-capable" content="yes"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1"><title> Create a Windows app installer using Inno Setup · heiswayi nrird •••</title><meta name="description" content=" Inno Setup is the best FREE open source alternative, non-MSI and script-driven installation system software for creating Windows app installer that surpasses... "/><meta name="keywords" content="inno setup, windows installer, creating windows app installer"><meta name="author" content="Heiswayi Nrird"><meta name="HandheldFriendly" content="True"><meta name="MobileOptimized" content="320"><meta property="og:type" content="article"><meta property="article:author" content="Heiswayi Nrird"><meta property="article:section" content=""><meta property="article:tag" content="inno setup, windows installer, creating windows app installer"><meta property="article:published_time" content="2018-05-23 00:00:00 +0800"><meta property="og:url" content="https://heiswayi.nrird.com/2018/create-windows-app-installer-using-inno-setup"><meta property="og:title" content=" Create a Windows app installer using Inno Setup · heiswayi nrird ••• "><meta property="og:image" content="https://heiswayi.nrird.com/assets/logo.png"><meta property="og:description" content=" Inno Setup is the best FREE open source alternative, non-MSI and script-driven installation system software for creating Windows app installer that surpasses... "><meta property="og:site_name" content="Heiswayi Nrird"><meta property="og:locale" content="en_US"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:site" content="@heiswayi"><meta name="twitter:title" content=" Create a Windows app installer using Inno Setup · heiswayi nrird ••• "><meta name="twitter:description" content=" Inno Setup is the best FREE open source alternative, non-MSI and script-driven installation system software for creating Windows app installer that surpasses... "><meta name="twitter:image:src" content="https://heiswayi.nrird.com/assets/logo.png"><meta itemprop="name" content=" Create a Windows app installer using Inno Setup · heiswayi nrird ••• "><meta itemprop="description" content=" Inno Setup is the best FREE open source alternative, non-MSI and script-driven installation system software for creating Windows app installer that surpasses... "><meta itemprop="image" content="https://heiswayi.nrird.com/assets/logo.png"><link rel="canonical" href="https://heiswayi.nrird.com/2018/create-windows-app-installer-using-inno-setup"><link rel="alternate" type="application/rss+xml" title="RSS" href="https://heiswayi.nrird.com/feed.xml"><link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgo="><link rel="stylesheet" href="https://heiswayi.nrird.com/assets/css/main.css?20180603"> <script src="https://heiswayi.nrird.com/assets/js/modernizr.custom.js"></script> <!--[if lt IE 9]> <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script> <script src="http://cdnjs.cloudflare.com/ajax/libs/respond.js/1.1.0/respond.min.js"></script> <script src="https://heiswayi.nrird.com/assets/js/rem.min.js"></script> <![endif]--> <a href="#content" class="skip">Skip to content</a><div class="wrap"><div class="masthead"> <canvas id="canvas" style="width:100%;height:100%;max-height:230px;position:absolute;z-index:1;opacity:0.5"></canvas><div class="container"><h2 class="masthead-title"> <a href="https://heiswayi.nrird.com" title="heiswayi nrird •••" class="title">heiswayi nrird <span class="dot-red">•</span><span class="dot-yellow">•</span><span class="dot-green">•</span></a> <small>Between coding and random stuffs </small></h2><div class="footer-social-links"> <a href="http://heiswayi.github.io/feed.xml" title="RSS Feed" target="_blank"><i class="fa fa-rss"></i></a> <a href="https://my.linkedin.com/in/nrird" title="LinkedIn" target="_blank"><i class="fa fa-linkedin"></i></a> <!--<a href="https://www.facebook.com/heiswayi.nrird" title="Facebook" target="_blank"><i class="fa fa-facebook"></i></a>--> <!--<a href="https://twitter.com/HeiswayiNrird" title="Twitter" target="_blank"><i class="fa fa-twitter"></i></a>--> <a href="http://heiswayi.github.io/my-repos/" title="GitHub Repositories" target="_blank"><i class="fa fa-github-alt"></i></a> <a href="http://heiswayi.github.io/my-gists/" title="GitHub Gists" target="_blank"><i class="fa fa-code"></i></a> <a href="http://codepen.io/heiswayi/" title="CodePen" target="_blank"><i class="fa fa-codepen"></i></a> <a href="https://instagram.com/heiswayi.nrird/" title="Instagram" target="_blank"><i class="fa fa-instagram"></i></a> <a href="http://jsfiddle.net/user/heiswayi/" title="JSFiddle" target="_blank"><i class="fa fa-jsfiddle"></i></a></div><div class="nav"><ul class="top-menu"><li><a href="https://heiswayi.nrird.com/" title="Home"><i class="fa fa-home"></i></a><li><a href="https://heiswayi.nrird.com/about">About</a> <!--<li><a href="/resume">Resume <i class="fa fa-external-link-square"></i></a>--><li><a href="https://heiswayi.nrird.com/projects" class="bg-red"><i class="fa fa-space-shuttle" aria-hidden="true"></i> Projects</a><li><a href="https://heiswayi.nrird.com/tagged">Tags</a><li><a href="https://heiswayi.github.io/photography">Photography <i class="fa fa-external-link-square"></i></a><li><a href="https://heiswayi.nrird.com/reminder">Reminder</a></ul></div></div></div><div id="content" class="container content"><div class="post"><div class="post-top-meta"> <!--<div class="edit-this-page"><a href="https://github.com/heiswayi/heiswayi.github.io/blob/master/_posts/2018/2018-05-23-create-windows-app-installer-using-inno-setup.md">Edit this page</a></div>--><div class="post-date">May 23, 2018</div><h1 class="post-title">Create a Windows app installer using Inno Setup</h1></div><p>I have tried few other FREE installation software, and I found that <a href="http://www.jrsoftware.org/isinfo.php">Inno Setup</a> is the best FREE <a href="https://github.com/jrsoftware/issrc">open source</a> alternative, non-MSI and script-driven installation system software for creating Windows app installer that surpasses many commercial installers in feature set and stability. In this post I would like to share the Inno Setup script that I have been using for creating one of my applications installer.<p>To get started, you can download and install Inno Setup from <a href="http://www.jrsoftware.org/isdl.php">here</a>. Unicode version is recommended. If you need a better intuitive GUI software, you can download and install <a href="https://www.kymoto.org/products/inno-script-studio"><strong>Inno Script Studio</strong></a> software. If you use <a href="https://code.visualstudio.com/">VS Code</a> or <a href="https://atom.io/">Atom</a> editor to edit Inno Setup scripts, you can install Inno Setup extension for the script syntax highlighting; <a href="https://marketplace.visualstudio.com/items?itemName=idleberg.innosetup">Inno Setup for Visual Studio Code</a> or <a href="https://atom.io/packages/language-innosetup">Inno Setup for Atom</a>.<p><strong>Compile Inno Setup scripts using Inno Setup Compiler in your automated build system</strong><p>If you have automated build system set up that builds your app source code like CI/CD, you can simply integrate Inno Setup Compiler into your build system to compile Inno Setup script file (<code class="highlighter-rouge">*.iss</code>). You need to use <code class="highlighter-rouge">ISCC.exe</code> for the command-line compiler.<p>Example: Just add <code class="highlighter-rouge">C:\Program Files (x86)\Inno Setup 5</code> into the PATH environment, then you can simply use:<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>iscc path\to\myinstaller.iss
+</code></pre></div></div><p>For more info on what command-line options are available, just run <code class="highlighter-rouge">iscc /?</code> from a command prompt.<h3 id="example-of-inno-setup-script-for-my-app-installer">Example of Inno Setup script for my app installer</h3><p><img src="https://i.imgur.com/rodYZ00.png" alt="EXIF Reader installer" /><p>The script is written based on the example of the app files structure below. If you use the script below, you may need to modify it to suit your app files structure. Any feature you don’t need, you can simply remove or comment it out. I always reuse this script as a starter and make some modifications that suit the app files structure and requirements to create a new app installer.<p><em>Example of app files structure:</em><div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.\
+├── basic.iss
+└── basic\
+    ├── app\
+    |   ├── Resources\
+    |   |   ├── map.xml
+    |   |   └── res.ini
+    |   ├── ExifReader.exe
+    |   ├── ICSharpCode.SharpZipLib.dll
+    |   ├── MetadataExtractor.dll
+    |   ├── Ookii.Dialogs.Wpf.dll
+    |   └── XmpCore.dll
+    ├── appconfig\
+    |   └── config.ini
+    ├── doc\
+    |   ├── EULA.rtf
+    |   ├── Readme.rtf
+    |   └── Requirements.rtf
+    └── res\
+        ├── app.ico
+        ├── TopBanner.bmp
+        └── VerticalBanner.bmp
+</code></pre></div></div><p><em>Example of script:</em><div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>; Preprocessor variables
+#define MyAppName "EXIF Reader"
+#define MyAppVersion "0.0.1"
+#define MyAppPublisher "Heiswayi Nrird"
+#define MyAppURL "https://heiswayi.nrird.com/exifreader"
+#define MyAppExeName "ExifReader.exe"
+#define MyAppCopyright "Copyright (C) 2018 Heiswayi Nrird"
+#define IncludeFramework true
+
+[Setup]
+; NOTE: The value of AppId uniquely identifies this application.
+; Do not use the same AppId value in installers for other applications.
+; (To generate a new GUID, click Tools | Generate GUID inside the IDE.)
+AppId={{41045341-CB76-446F-8180-6489D9474F1F}
+AppName={#MyAppName}
+AppVersion={#MyAppVersion}
+AppVerName={#MyAppName}
+AppPublisher={#MyAppPublisher}
+AppPublisherURL={#MyAppURL}
+AppSupportURL={#MyAppURL}
+AppUpdatesURL={#MyAppURL}
+AppCopyright={#MyAppCopyright}
+; Default location of installation
+DefaultDirName={pf}\{#MyAppPublisher}\{#MyAppName}
+DefaultGroupName={#MyAppPublisher}\{#MyAppName}
+; Installer name
+OutputBaseFilename="ExifReaderSetup"
+; Installer icon
+SetupIconFile=.\basic\res\app.ico
+Compression=lzma
+SolidCompression=yes
+LicenseFile=.\basic\doc\EULA.rtf
+InfoBeforeFile=.\basic\doc\Requirements.rtf
+InfoAfterFile=.\basic\doc\Readme.rtf
+; Uninstaller icon
+UninstallDisplayIcon={app}\{#MyAppExeName}
+DisableWelcomePage=no
+; Installer vertical banner, max resolution: 164x314 px
+WizardImageFile=.\basic\res\VerticalBanner.bmp
+; Installer top logo, max resolution: 55x58 px
+; I'm not using this as I'm using top banner instead (see below), so I commented it out.
+;WizardSmallImageFile=TopLogo.bmp
+; Installer FileVersion
+VersionInfoVersion=1.0.0.0
+;CreateUninstallRegKey=no
+PrivilegesRequired=admin
+; Installer output is the same as source (.iss file)
+OutputDir=.
+
+[Languages]
+Name: "english"; MessagesFile: "compiler:Default.isl"
+
+[Tasks]
+Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Flags: unchecked
+Name: "quicklaunchicon"; Description: "{cm:CreateQuickLaunchIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Flags: unchecked; OnlyBelowVersion: 0,6.1
+
+[Files]
+; NOTE: Don't use "Flags: ignoreversion" on any shared system files
+Source: ".\basic\app\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: ".\basic\doc\*"; DestDir: "{app}\Docs"; Flags: ignoreversion
+; These files will not be removed during uninstallation
+; {userdocs} = My Documents folder
+Source: ".\basic\appconfig\*"; DestDir: "{userdocs}\{#MyAppName}"; Flags: ignoreversion uninsneveruninstall
+; Customized top banner, max resolution: 499x58 px
+Source: ".\basic\res\TopBanner.bmp"; Flags: dontcopy
+
+[Icons]
+Name: "{group}\{#MyAppName}"; Filename: "{app}\{#MyAppExeName}"
+Name: "{group}\{cm:UninstallProgram,{#MyAppName}}"; Filename: "{uninstallexe}"
+Name: "{commondesktop}\{#MyAppName}"; Filename: "{app}\{#MyAppExeName}"; Tasks: desktopicon
+Name: "{userappdata}\Microsoft\Internet Explorer\Quick Launch\{#MyAppName}"; Filename: "{app}\{#MyAppExeName}"; Tasks: quicklaunchicon
+
+[Run]
+Filename: "{app}\{#MyAppExeName}"; Description: "{cm:LaunchProgram,{#StringChange(MyAppName, '&amp;', '&amp;&amp;')}}"; Flags: nowait postinstall skipifsilent
+
+[Messages]
+; Customized license agreement checkbox messages
+LicenseAccepted=&amp;Agree
+LicenseNotAccepted=&amp;Do Not Agree
+
+[Code]
+// I'm using horizontal top banner instead of logo
+procedure InitializeWizard();
+var
+  BitmapImage: TBitmapImage;
+begin
+  ExtractTemporaryFile('TopBanner.bmp');
+  BitmapImage := TBitmapImage.Create(WizardForm);
+  BitmapImage.Parent := WizardForm.MainPanel;
+  BitmapImage.Width := WizardForm.MainPanel.Width;
+  BitmapImage.Height := WizardForm.MainPanel.Height;
+  BitmapImage.Stretch := True;
+  BitmapImage.AutoSize := False;
+  BitmapImage.Bitmap.LoadFromFile(ExpandConstant('{tmp}\TopBanner.bmp'));
+
+  WizardForm.WizardSmallBitmapImage.Visible := False;
+  WizardForm.PageDescriptionLabel.Visible := True;
+  WizardForm.PageNameLabel.Visible := True;
+
+  WizardForm.PageDescriptionLabel.Color := TColor($E8E8E8);
+  WizardForm.PageNameLabel.Color := TColor($E8E8E8);
+
+  WizardForm.PageDescriptionLabel.Width :=
+    WizardForm.PageDescriptionLabel.Width - ScaleX(60);
+  WizardForm.PageNameLabel.Width :=
+    WizardForm.PageNameLabel.Width - ScaleX(60);
+end;
+</code></pre></div></div><p>In the script above, there are some common <strong>Flags</strong> under <code class="highlighter-rouge">[Files]</code> section and here what they mean:<ul><li><code class="highlighter-rouge">ignoreversion</code> - replace existing files regardless of their version number<li><code class="highlighter-rouge">onlyifdoesntexist</code> - only install the file if it doesn’t already exist on the user’s system<li><code class="highlighter-rouge">recursesubdirs</code> - use this when you use wildcard for the <code class="highlighter-rouge">Source</code> as shown in the script above<li><code class="highlighter-rouge">createallsubdirs</code> - create all subdirectories, and must be combined with <code class="highlighter-rouge">recursesubdirs</code><li><code class="highlighter-rouge">uninsneveruninstall</code> - never remove the file during uninstallation<li><code class="highlighter-rouge">deleteafterinstall</code> - delete file once the installation is completed/aborted</ul><p>For other available flags, you can refer to <a href="http://www.jrsoftware.org/ishelp/index.php?topic=filessection">Inno Setup documentation here</a> for more details. It’s too robust to explain everything here.<h3 id="implement-components-based-installation-in-your-installer">Implement components-based installation in your installer</h3><p><img src="https://i.imgur.com/BeKgNvo.png" alt="Components-based installation" /><p>If you want to design your app installer using components-based installation, you may need to modify the script and add two extra sections called <code class="highlighter-rouge">[Types]</code> and <code class="highlighter-rouge">[Components]</code>. Check the provided example script below which taken from <code class="highlighter-rouge">Components.iss</code> file that located in <code class="highlighter-rouge">C:\Program Files (x86)\Inno Setup 5\Examples</code> folder.<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[Setup]
+AppName=My Program
+AppVersion=1.5
+DefaultDirName={pf}\My Program
+DefaultGroupName=My Program
+UninstallDisplayIcon={app}\MyProg.exe
+OutputDir=userdocs:Inno Setup Examples Output
+
+[Types]
+Name: "full"; Description: "Full installation"
+Name: "compact"; Description: "Compact installation"
+Name: "custom"; Description: "Custom installation"; Flags: iscustom
+
+[Components]
+Name: "program"; Description: "Program Files"; Types: full compact custom; Flags: fixed
+Name: "help"; Description: "Help File"; Types: full
+Name: "readme"; Description: "Readme File"; Types: full
+Name: "readme\en"; Description: "English"; Flags: exclusive
+Name: "readme\de"; Description: "German"; Flags: exclusive
+
+[Files]
+Source: "MyProg.exe"; DestDir: "{app}"; Components: program
+Source: "MyProg.chm"; DestDir: "{app}"; Components: help
+Source: "Readme.txt"; DestDir: "{app}"; Components: readme\en; Flags: isreadme
+Source: "Readme-German.txt"; DestName: "Liesmich.txt"; DestDir: "{app}"; Components: readme\de; Flags: isreadme
+
+[Icons]
+Name: "{group}\My Program"; Filename: "{app}\MyProg.exe"
+</code></pre></div></div><p>Meaning of the <strong>Flags</strong> used:<ul><li><code class="highlighter-rouge">fixed</code> - usually used in the main program file where user cannot unselect that component<li><code class="highlighter-rouge">exclusive</code> - user only can select one of the exclusive components, mostly used for localized files</ul><h3 id="creating-prerequisites-for-your-installer">Creating prerequisites for your installer</h3><p><strong>.NET Framework</strong><p>If your app requires particular .NET Framework to be installed as part of the prerequisites, there are few ways you can do with Inno Setup script. You either can;-<ul><li>include or package together the offline installer of .NET Framework into your app installer, or<li>just check and if not installed, inform the user to download and install particular .NET Framework manually, and then abort your app installer.</ul><p>You can use the <a href="http://jrsoftware.org/ishelp/topic_scriptcheck.htm">Check</a> parameter to run check if particular .NET Framework is installed.<p>Inno Setup <a href="http://www.jrsoftware.org/ishelp/index.php?topic=scriptintro">scripting</a> is based on <a href="https://en.wikipedia.org/wiki/Pascal_(programming_language)">Pascal</a> programming language which adds lots of new possibilities to customize your Setup or Uninstall at run-time.<p><strong>Here’s how to include the offline installer of .NET Framework into your app installer</strong><p>Add a new <code class="highlighter-rouge">Source</code> under the <code class="highlighter-rouge">[Files]</code> section:<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[Files]
+; .NET Framework v4.7.1 offline installer
+Source: ".\basic\dependencies\NDP471-KB4033342-x86-x64-AllOS-ENU.exe"; DestDir: {tmp}; Flags: deleteafterinstall; AfterInstall: InstallFramework; Check: FrameworkIsNotInstalled
+</code></pre></div></div><p>Add these two code under <code class="highlighter-rouge">[Code]</code> section:<div class="language-pascal highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">[</span><span class="n">Code</span><span class="p">]</span>
+<span class="c1">// Check for installed .NET Framework 4.7.1 in the registry
+// MSDN page: https://msdn.microsoft.com/en-us/library/hh925568.aspx
+</span><span class="k">function</span> <span class="n">FrameworkIsNotInstalled</span><span class="p">:</span> <span class="kt">Boolean</span><span class="p">;</span>
+<span class="k">var</span>
+  <span class="n">readVal</span><span class="p">:</span> <span class="kt">cardinal</span><span class="p">;</span>
+  <span class="n">success</span><span class="p">:</span> <span class="kt">Boolean</span><span class="p">;</span>
+<span class="k">begin</span>               
+  <span class="n">success</span> <span class="p">:=</span> <span class="n">RegQueryDWordValue</span><span class="p">(</span><span class="n">HKLM</span><span class="p">,</span> <span class="s">'SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full'</span><span class="p">,</span> <span class="s">'Release'</span><span class="p">,</span> <span class="n">readVal</span><span class="p">);</span>
+  <span class="n">success</span> <span class="p">:=</span> <span class="n">success</span> <span class="k">and</span> <span class="p">(</span><span class="n">readVal</span> <span class="p">&lt;</span> <span class="m">461308</span><span class="p">);</span>
+  <span class="n">Result</span> <span class="p">:=</span> <span class="k">not</span> <span class="n">success</span><span class="p">;</span>
+<span class="k">end</span><span class="p">;</span>
+
+<span class="c1">// Create progress dialog for installing .NET Framework 4.7.1
+</span><span class="k">procedure</span> <span class="n">InstallFramework</span><span class="p">;</span>
+<span class="k">var</span>
+    <span class="n">StatusText</span><span class="p">:</span> <span class="k">string</span><span class="p">;</span>
+    <span class="n">ResultCode</span><span class="p">:</span> <span class="kt">Integer</span><span class="p">;</span>
+<span class="k">begin</span>
+   <span class="n">StatusText</span> <span class="p">:=</span> <span class="n">WizardForm</span><span class="p">.</span><span class="n">StatusLabel</span><span class="p">.</span><span class="n">Caption</span><span class="p">;</span>
+   <span class="n">WizardForm</span><span class="p">.</span><span class="n">StatusLabel</span><span class="p">.</span><span class="n">Caption</span> <span class="p">:=</span> <span class="s">'Installing .NET Framework 4.5.2. This might take a few minutes...'</span><span class="p">;</span>
+   <span class="n">WizardForm</span><span class="p">.</span><span class="n">ProgressGauge</span><span class="p">.</span><span class="n">Style</span> <span class="p">:=</span> <span class="n">npbstMarquee</span><span class="p">;</span>
+
+   <span class="k">try</span>
+       <span class="n">Exec</span><span class="p">(</span><span class="n">ExpandConstant</span><span class="p">(</span><span class="s">'{tmp}\NDP471-KB4033342-x86-x64-AllOS-ENU.exe'</span><span class="p">),</span> <span class="s">'/passive /norestart'</span><span class="p">,</span> <span class="s">''</span><span class="p">,</span> <span class="n">SW_SHOW</span><span class="p">,</span> <span class="n">ewWaitUntilTerminated</span><span class="p">,</span> <span class="n">ResultCode</span><span class="p">)</span>
+       <span class="k">if</span> <span class="n">ResultCode</span> <span class="p">&lt;&gt;</span> <span class="m">0</span> <span class="k">then</span>
+       <span class="k">begin</span>
+           <span class="n">MsgBox</span><span class="p">(</span><span class="s">'.NET installation failed with code: '</span> <span class="p">+</span> <span class="n">IntToStr</span><span class="p">(</span><span class="n">ResultCode</span><span class="p">)</span> <span class="p">+</span> <span class="s">'.'</span> <span class="p">+</span> <span class="p">#</span><span class="m">13</span><span class="p">#</span><span class="m">10</span> <span class="p">+</span> <span class="p">#</span><span class="m">13</span><span class="p">#</span><span class="m">10</span> <span class="p">+</span> <span class="s">'Setup will now terminate.'</span><span class="p">,</span> <span class="n">mbError</span><span class="p">,</span> <span class="n">MB_OK</span><span class="p">);</span>
+           <span class="n">DeleteFile</span><span class="p">(</span><span class="n">ExpandConstant</span><span class="p">(</span><span class="s">'{tmp}\NDP471-KB4033342-x86-x64-AllOS-ENU.exe'</span><span class="p">));</span>
+           <span class="n">Exterminate</span><span class="p">;</span>
+       <span class="k">end</span>
+       <span class="k">else</span>
+       <span class="k">begin</span>
+           <span class="n">WizardForm</span><span class="p">.</span><span class="n">StatusLabel</span><span class="p">.</span><span class="n">Caption</span> <span class="p">:=</span> <span class="n">StatusText</span><span class="p">;</span>
+           <span class="n">WizardForm</span><span class="p">.</span><span class="n">ProgressGauge</span><span class="p">.</span><span class="n">Style</span> <span class="p">:=</span> <span class="n">npbstNormal</span><span class="p">;</span>
+       <span class="k">end</span><span class="p">;</span>
+   <span class="k">finally</span>
+           <span class="n">DeleteFile</span><span class="p">(</span><span class="n">ExpandConstant</span><span class="p">(</span><span class="s">'{tmp}\NDP471-KB4033342-x86-x64-AllOS-ENU.exe'</span><span class="p">));</span>
+   <span class="k">end</span><span class="p">;</span>
+<span class="k">end</span><span class="p">;</span>
+
+<span class="k">var</span>
+    <span class="n">ForceClose</span><span class="p">:</span> <span class="kt">Boolean</span><span class="p">;</span>
+
+<span class="k">procedure</span> <span class="n">Exterminate</span><span class="p">;</span>
+<span class="k">begin</span>
+    <span class="n">ForceClose</span><span class="p">:=</span> <span class="nb">True</span><span class="p">;</span>
+    <span class="n">WizardForm</span><span class="p">.</span><span class="n">Close</span><span class="p">;</span>  
+<span class="k">end</span><span class="p">;</span>
+
+<span class="k">procedure</span> <span class="n">CancelButtonClick</span><span class="p">(</span><span class="n">CurPageID</span><span class="p">:</span> <span class="kt">Integer</span><span class="p">;</span> <span class="k">var</span> <span class="n">Cancel</span><span class="p">,</span> <span class="n">Confirm</span><span class="p">:</span> <span class="kt">Boolean</span><span class="p">);</span>
+<span class="k">begin</span>
+    <span class="n">Confirm</span><span class="p">:=</span> <span class="k">not</span> <span class="n">ForceClose</span><span class="p">;</span>
+<span class="k">end</span><span class="p">;</span>
+</code></pre></div></div><p><strong>Here’s how you can just implement the checking and inform the user to download and install if particular .NET Framework is not installed</strong><p>Another way is to check the required .NET Framework at the beginning of installation, if not installed, inform the user to download and install the required .NET Framework. Check the code below how to implement it. The code below is taken from <a href="http://www.kynosarges.de/DotNetVersion.html">http://www.kynosarges.de/DotNetVersion.html</a>.<div class="language-pascal highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">[</span><span class="n">Code</span><span class="p">]</span>
+<span class="k">function</span> <span class="n">IsDotNetDetected</span><span class="p">(</span><span class="n">version</span><span class="p">:</span> <span class="k">string</span><span class="p">;</span> <span class="n">service</span><span class="p">:</span> <span class="kt">cardinal</span><span class="p">):</span> <span class="kt">boolean</span><span class="p">;</span>
+<span class="c1">// Indicates whether the specified version and service pack of the .NET Framework is installed.
+//
+// version -- Specify one of these strings for the required .NET Framework version:
+//    'v1.1'          .NET Framework 1.1
+//    'v2.0'          .NET Framework 2.0
+//    'v3.0'          .NET Framework 3.0
+//    'v3.5'          .NET Framework 3.5
+//    'v4\Client'     .NET Framework 4.0 Client Profile
+//    'v4\Full'       .NET Framework 4.0 Full Installation
+//    'v4.5'          .NET Framework 4.5
+//    'v4.5.1'        .NET Framework 4.5.1
+//    'v4.5.2'        .NET Framework 4.5.2
+//    'v4.6'          .NET Framework 4.6
+//    'v4.6.1'        .NET Framework 4.6.1
+//    'v4.6.2'        .NET Framework 4.6.2
+//    'v4.7'          .NET Framework 4.7
+//    'v4.7.1'        .NET Framework 4.7.1
+//    'v4.7.2'        .NET Framework 4.7.2
+//
+// service -- Specify any non-negative integer for the required service pack level:
+//    0               No service packs required
+//    1, 2, etc.      Service pack 1, 2, etc. required
+</span><span class="k">var</span>
+    <span class="n">key</span><span class="p">,</span> <span class="n">versionKey</span><span class="p">:</span> <span class="k">string</span><span class="p">;</span>
+    <span class="n">install</span><span class="p">,</span> <span class="n">release</span><span class="p">,</span> <span class="n">serviceCount</span><span class="p">,</span> <span class="n">versionRelease</span><span class="p">:</span> <span class="kt">cardinal</span><span class="p">;</span>
+    <span class="n">success</span><span class="p">:</span> <span class="kt">boolean</span><span class="p">;</span>
+<span class="k">begin</span>
+    <span class="n">versionKey</span> <span class="p">:=</span> <span class="n">version</span><span class="p">;</span>
+    <span class="n">versionRelease</span> <span class="p">:=</span> <span class="m">0</span><span class="p">;</span>
+
+    <span class="c1">// .NET 1.1 and 2.0 embed release number in version key
+</span>    <span class="k">if</span> <span class="n">version</span> <span class="p">=</span> <span class="s">'v1.1'</span> <span class="k">then</span> <span class="k">begin</span>
+        <span class="n">versionKey</span> <span class="p">:=</span> <span class="s">'v1.1.4322'</span><span class="p">;</span>
+    <span class="k">end</span> <span class="k">else</span> <span class="k">if</span> <span class="n">version</span> <span class="p">=</span> <span class="s">'v2.0'</span> <span class="k">then</span> <span class="k">begin</span>
+        <span class="n">versionKey</span> <span class="p">:=</span> <span class="s">'v2.0.50727'</span><span class="p">;</span>
+    <span class="k">end</span>
+
+    <span class="c1">// .NET 4.5 and newer install as update to .NET 4.0 Full
+</span>    <span class="k">else</span> <span class="k">if</span> <span class="n">Pos</span><span class="p">(</span><span class="s">'v4.'</span><span class="p">,</span> <span class="n">version</span><span class="p">)</span> <span class="p">=</span> <span class="m">1</span> <span class="k">then</span> <span class="k">begin</span>
+        <span class="n">versionKey</span> <span class="p">:=</span> <span class="s">'v4\Full'</span><span class="p">;</span>
+        <span class="k">case</span> <span class="n">version</span> <span class="k">of</span>
+          <span class="s">'v4.5'</span><span class="p">:</span>   <span class="n">versionRelease</span> <span class="p">:=</span> <span class="m">378389</span><span class="p">;</span>
+          <span class="s">'v4.5.1'</span><span class="p">:</span> <span class="n">versionRelease</span> <span class="p">:=</span> <span class="m">378675</span><span class="p">;</span> <span class="c1">// 378758 on Windows 8 and older
+</span>          <span class="s">'v4.5.2'</span><span class="p">:</span> <span class="n">versionRelease</span> <span class="p">:=</span> <span class="m">379893</span><span class="p">;</span>
+          <span class="s">'v4.6'</span><span class="p">:</span>   <span class="n">versionRelease</span> <span class="p">:=</span> <span class="m">393295</span><span class="p">;</span> <span class="c1">// 393297 on Windows 8.1 and older
+</span>          <span class="s">'v4.6.1'</span><span class="p">:</span> <span class="n">versionRelease</span> <span class="p">:=</span> <span class="m">394254</span><span class="p">;</span> <span class="c1">// 394271 before Win10 November Update
+</span>          <span class="s">'v4.6.2'</span><span class="p">:</span> <span class="n">versionRelease</span> <span class="p">:=</span> <span class="m">394802</span><span class="p">;</span> <span class="c1">// 394806 before Win10 Anniversary Update
+</span>          <span class="s">'v4.7'</span><span class="p">:</span>   <span class="n">versionRelease</span> <span class="p">:=</span> <span class="m">460798</span><span class="p">;</span> <span class="c1">// 460805 before Win10 Creators Update
+</span>          <span class="s">'v4.7.1'</span><span class="p">:</span> <span class="n">versionRelease</span> <span class="p">:=</span> <span class="m">461308</span><span class="p">;</span> <span class="c1">// 461310 before Win10 Fall Creators Update
+</span>          <span class="s">'v4.7.2'</span><span class="p">:</span> <span class="n">versionRelease</span> <span class="p">:=</span> <span class="m">461808</span><span class="p">;</span> <span class="c1">// 461814 before Win10 April 2018 Update
+</span>        <span class="k">end</span><span class="p">;</span>
+    <span class="k">end</span><span class="p">;</span>
+
+    <span class="c1">// installation key group for all .NET versions
+</span>    <span class="n">key</span> <span class="p">:=</span> <span class="s">'SOFTWARE\Microsoft\NET Framework Setup\NDP\'</span> <span class="p">+</span> <span class="n">versionKey</span><span class="p">;</span>
+
+    <span class="c1">// .NET 3.0 uses value InstallSuccess in subkey Setup
+</span>    <span class="k">if</span> <span class="n">Pos</span><span class="p">(</span><span class="s">'v3.0'</span><span class="p">,</span> <span class="n">version</span><span class="p">)</span> <span class="p">=</span> <span class="m">1</span> <span class="k">then</span> <span class="k">begin</span>
+        <span class="n">success</span> <span class="p">:=</span> <span class="n">RegQueryDWordValue</span><span class="p">(</span><span class="n">HKLM</span><span class="p">,</span> <span class="n">key</span> <span class="p">+</span> <span class="s">'\Setup'</span><span class="p">,</span> <span class="s">'InstallSuccess'</span><span class="p">,</span> <span class="n">install</span><span class="p">);</span>
+    <span class="k">end</span> <span class="k">else</span> <span class="k">begin</span>
+        <span class="n">success</span> <span class="p">:=</span> <span class="n">RegQueryDWordValue</span><span class="p">(</span><span class="n">HKLM</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="s">'Install'</span><span class="p">,</span> <span class="n">install</span><span class="p">);</span>
+    <span class="k">end</span><span class="p">;</span>
+
+    <span class="c1">// .NET 4.0 and newer use value Servicing instead of SP
+</span>    <span class="k">if</span> <span class="n">Pos</span><span class="p">(</span><span class="s">'v4'</span><span class="p">,</span> <span class="n">version</span><span class="p">)</span> <span class="p">=</span> <span class="m">1</span> <span class="k">then</span> <span class="k">begin</span>
+        <span class="n">success</span> <span class="p">:=</span> <span class="n">success</span> <span class="k">and</span> <span class="n">RegQueryDWordValue</span><span class="p">(</span><span class="n">HKLM</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="s">'Servicing'</span><span class="p">,</span> <span class="n">serviceCount</span><span class="p">);</span>
+    <span class="k">end</span> <span class="k">else</span> <span class="k">begin</span>
+        <span class="n">success</span> <span class="p">:=</span> <span class="n">success</span> <span class="k">and</span> <span class="n">RegQueryDWordValue</span><span class="p">(</span><span class="n">HKLM</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="s">'SP'</span><span class="p">,</span> <span class="n">serviceCount</span><span class="p">);</span>
+    <span class="k">end</span><span class="p">;</span>
+
+    <span class="c1">// .NET 4.5 and newer use additional value Release
+</span>    <span class="k">if</span> <span class="n">versionRelease</span> <span class="p">&gt;</span> <span class="m">0</span> <span class="k">then</span> <span class="k">begin</span>
+        <span class="n">success</span> <span class="p">:=</span> <span class="n">success</span> <span class="k">and</span> <span class="n">RegQueryDWordValue</span><span class="p">(</span><span class="n">HKLM</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="s">'Release'</span><span class="p">,</span> <span class="n">release</span><span class="p">);</span>
+        <span class="n">success</span> <span class="p">:=</span> <span class="n">success</span> <span class="k">and</span> <span class="p">(</span><span class="n">release</span> <span class="p">&gt;=</span> <span class="n">versionRelease</span><span class="p">);</span>
+    <span class="k">end</span><span class="p">;</span>
+
+    <span class="n">result</span> <span class="p">:=</span> <span class="n">success</span> <span class="k">and</span> <span class="p">(</span><span class="n">install</span> <span class="p">=</span> <span class="m">1</span><span class="p">)</span> <span class="k">and</span> <span class="p">(</span><span class="n">serviceCount</span> <span class="p">&gt;=</span> <span class="n">service</span><span class="p">);</span>
+<span class="k">end</span><span class="p">;</span>
+
+<span class="k">function</span> <span class="n">InitializeSetup</span><span class="p">():</span> <span class="kt">Boolean</span><span class="p">;</span>
+<span class="k">begin</span>
+    <span class="k">if</span> <span class="k">not</span> <span class="n">IsDotNetDetected</span><span class="p">(</span><span class="s">'v4.7.1'</span><span class="p">,</span> <span class="m">0</span><span class="p">)</span> <span class="k">then</span> <span class="k">begin</span>
+        <span class="n">MsgBox</span><span class="p">(</span><span class="s">'EXIF Reader requires Microsoft .NET Framework 4.7.1.'</span><span class="p">#</span><span class="m">13</span><span class="p">#</span><span class="m">13</span>
+            <span class="s">'Please use Windows Update to install this version,'</span><span class="p">#</span><span class="m">13</span>
+            <span class="s">'and then re-run the EXIF Reader setup program.'</span><span class="p">,</span> <span class="n">mbInformation</span><span class="p">,</span> <span class="n">MB_OK</span><span class="p">);</span>
+        <span class="n">result</span> <span class="p">:=</span> <span class="nb">false</span><span class="p">;</span>
+    <span class="k">end</span> <span class="k">else</span>
+        <span class="n">result</span> <span class="p">:=</span> <span class="nb">true</span><span class="p">;</span>
+<span class="k">end</span><span class="p">;</span>
+</code></pre></div></div><h3 id="how-to-prevent-install-if-newer-version-already-installed">How to prevent install if newer version already installed</h3><p>In case you want to prevent install if newer version already installed in user PC, you can apply this code within <code class="highlighter-rouge">InitializeSetup</code> function, so your installer wouldn’t downgrade existing installation.<p>Add a custom message under <code class="highlighter-rouge">[CustomMessages]</code> section:<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[CustomMessages]
+english.NewerVersionExists=A newer version of {#AppName} is already installed.%n%nInstaller version: {#AppVersion}%nCurrent version:
+</code></pre></div></div><p>Apply this code under <code class="highlighter-rouge">[Code]</code> section to check for existing installation version:<div class="language-pascal highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">[</span><span class="n">Code</span><span class="p">]</span>
+<span class="c1">// Check for existing installation version
+</span><span class="k">function</span> <span class="n">InitializeSetup</span><span class="p">:</span> <span class="kt">Boolean</span><span class="p">;</span>
+<span class="k">var</span> <span class="n">Version</span><span class="p">:</span> <span class="k">String</span><span class="p">;</span>
+<span class="k">begin</span>
+  <span class="k">if</span> <span class="n">RegValueExists</span><span class="p">(</span><span class="n">HKEY_LOCAL_MACHINE</span><span class="p">,</span><span class="s">'Software\Microsoft\Windows\CurrentVersion\Uninstall\{#AppId}_is1'</span><span class="p">,</span> <span class="s">'DisplayVersion'</span><span class="p">)</span> <span class="k">then</span>
+    <span class="k">begin</span>
+      <span class="n">RegQueryStringValue</span><span class="p">(</span><span class="n">HKEY_LOCAL_MACHINE</span><span class="p">,</span><span class="s">'Software\Microsoft\Windows\CurrentVersion\Uninstall\{#AppId}_is1'</span><span class="p">,</span> <span class="s">'DisplayVersion'</span><span class="p">,</span> <span class="n">Version</span><span class="p">);</span>
+      <span class="k">if</span> <span class="n">Version</span> <span class="p">&gt;</span> <span class="s">'{#AppVersion}'</span> <span class="k">then</span>
+        <span class="k">begin</span>
+          <span class="n">MsgBox</span><span class="p">(</span><span class="n">ExpandConstant</span><span class="p">(</span><span class="s">'{cm:NewerVersionExists} '</span><span class="p">+</span><span class="n">Version</span><span class="p">),</span> <span class="n">mbInformation</span><span class="p">,</span> <span class="n">MB_OK</span><span class="p">);</span>
+          <span class="n">Result</span> <span class="p">:=</span> <span class="nb">False</span><span class="p">;</span>
+        <span class="k">end</span>
+      <span class="k">else</span>
+        <span class="k">begin</span>
+          <span class="n">Result</span> <span class="p">:=</span> <span class="nb">True</span><span class="p">;</span>
+        <span class="k">end</span>
+    <span class="k">end</span>
+  <span class="k">else</span>
+    <span class="k">begin</span>
+      <span class="n">Result</span> <span class="p">:=</span> <span class="nb">True</span><span class="p">;</span>
+    <span class="k">end</span>
+<span class="k">end</span><span class="p">;</span>
+</code></pre></div></div><h3 id="how-to-automatically-uninstall-previous-installed-version">How to automatically uninstall previous installed version</h3><p>Based on the solution from <a href="https://stackoverflow.com/a/2099805">Craig McQueen at StackOverflow</a>, your installer can check if user already installed your app and if found, your installer will grab the <code class="highlighter-rouge">UninstallString</code> from the registry and run the uninstallation command in silent mode.<div class="language-pascal highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">[</span><span class="n">Code</span><span class="p">]</span>
+<span class="k">function</span> <span class="n">GetUninstallString</span><span class="p">():</span> <span class="k">String</span><span class="p">;</span>
+<span class="k">var</span>
+  <span class="n">sUnInstPath</span><span class="p">:</span> <span class="k">String</span><span class="p">;</span>
+  <span class="n">sUnInstallString</span><span class="p">:</span> <span class="k">String</span><span class="p">;</span>
+<span class="k">begin</span>
+  <span class="n">sUnInstPath</span> <span class="p">:=</span> <span class="n">ExpandConstant</span><span class="p">(</span><span class="s">'Software\Microsoft\Windows\CurrentVersion\Uninstall\{#emit SetupSetting("AppId")}_is1'</span><span class="p">);</span>
+  <span class="n">sUnInstallString</span> <span class="p">:=</span> <span class="s">''</span><span class="p">;</span>
+  <span class="k">if</span> <span class="k">not</span> <span class="n">RegQueryStringValue</span><span class="p">(</span><span class="n">HKLM</span><span class="p">,</span> <span class="n">sUnInstPath</span><span class="p">,</span> <span class="s">'UninstallString'</span><span class="p">,</span> <span class="n">sUnInstallString</span><span class="p">)</span> <span class="k">then</span>
+    <span class="n">RegQueryStringValue</span><span class="p">(</span><span class="n">HKCU</span><span class="p">,</span> <span class="n">sUnInstPath</span><span class="p">,</span> <span class="s">'UninstallString'</span><span class="p">,</span> <span class="n">sUnInstallString</span><span class="p">);</span>
+  <span class="n">Result</span> <span class="p">:=</span> <span class="n">sUnInstallString</span><span class="p">;</span>
+<span class="k">end</span><span class="p">;</span>
+
+<span class="k">function</span> <span class="n">IsUpgrade</span><span class="p">():</span> <span class="kt">Boolean</span><span class="p">;</span>
+<span class="k">begin</span>
+  <span class="n">Result</span> <span class="p">:=</span> <span class="p">(</span><span class="n">GetUninstallString</span><span class="p">()</span> <span class="p">&lt;&gt;</span> <span class="s">''</span><span class="p">);</span>
+<span class="k">end</span><span class="p">;</span>
+
+<span class="k">function</span> <span class="n">UnInstallOldVersion</span><span class="p">():</span> <span class="kt">Integer</span><span class="p">;</span>
+<span class="k">var</span>
+  <span class="n">sUnInstallString</span><span class="p">:</span> <span class="k">String</span><span class="p">;</span>
+  <span class="n">iResultCode</span><span class="p">:</span> <span class="kt">Integer</span><span class="p">;</span>
+<span class="k">begin</span>
+  <span class="c1">// Return Values:
+</span>  <span class="c1">// 1 - uninstall string is empty
+</span>  <span class="c1">// 2 - error executing the UnInstallString
+</span>  <span class="c1">// 3 - successfully executed the UnInstallString
+</span>
+  <span class="c1">// default return value
+</span>  <span class="n">Result</span> <span class="p">:=</span> <span class="m">0</span><span class="p">;</span>
+
+  <span class="c1">// get the uninstall string of the old app
+</span>  <span class="n">sUnInstallString</span> <span class="p">:=</span> <span class="n">GetUninstallString</span><span class="p">();</span>
+  <span class="k">if</span> <span class="n">sUnInstallString</span> <span class="p">&lt;&gt;</span> <span class="s">''</span> <span class="k">then</span> <span class="k">begin</span>
+    <span class="n">sUnInstallString</span> <span class="p">:=</span> <span class="n">RemoveQuotes</span><span class="p">(</span><span class="n">sUnInstallString</span><span class="p">);</span>
+    <span class="k">if</span> <span class="n">Exec</span><span class="p">(</span><span class="n">sUnInstallString</span><span class="p">,</span> <span class="s">'/SILENT /NORESTART /SUPPRESSMSGBOXES'</span><span class="p">,</span><span class="s">''</span><span class="p">,</span> <span class="n">SW_HIDE</span><span class="p">,</span> <span class="n">ewWaitUntilTerminated</span><span class="p">,</span> <span class="n">iResultCode</span><span class="p">)</span> <span class="k">then</span>
+      <span class="n">Result</span> <span class="p">:=</span> <span class="m">3</span>
+    <span class="k">else</span>
+      <span class="n">Result</span> <span class="p">:=</span> <span class="m">2</span><span class="p">;</span>
+  <span class="k">end</span> <span class="k">else</span>
+    <span class="n">Result</span> <span class="p">:=</span> <span class="m">1</span><span class="p">;</span>
+<span class="k">end</span><span class="p">;</span>
+
+<span class="k">procedure</span> <span class="n">CurStepChanged</span><span class="p">(</span><span class="n">CurStep</span><span class="p">:</span> <span class="n">TSetupStep</span><span class="p">);</span>
+<span class="k">begin</span>
+  <span class="k">if</span> <span class="p">(</span><span class="n">CurStep</span><span class="p">=</span><span class="n">ssInstall</span><span class="p">)</span> <span class="k">then</span>
+  <span class="k">begin</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">IsUpgrade</span><span class="p">())</span> <span class="k">then</span>
+    <span class="k">begin</span>
+      <span class="n">UnInstallOldVersion</span><span class="p">();</span>
+    <span class="k">end</span><span class="p">;</span>
+  <span class="k">end</span><span class="p">;</span>
+<span class="k">end</span><span class="p">;</span>
+</code></pre></div></div><h3 id="how-to-kill-existing-running-services-before-re-install-or-upgrade">How to kill existing running services before re-install (or upgrade)</h3><p>To kill existing running services, what you need to do is to apply <a href="https://www.kymoto.org/documentation/scriptstudio/index.html?common_beforeinstall.html">BeforeInstall</a> parameter at the service file you’re going to (re)install. Take a look on the example script below:<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[Files]
+Source: ".\bin\Service1.exe"; DestDir: "{app}"; Flags: ignoreversion; BeforeInstall: TaskKill('Service1.exe')
+Source: ".\bin\Service2.exe"; DestDir: "{app}"; Flags: ignoreversion; BeforeInstall: TaskKill('Service2.exe')
+
+[Code]
+procedure TaskKill(FileName: String);
+var
+  ResultCode: Integer;
+begin
+    Exec(ExpandConstant('taskkill.exe'), '/f /im ' + '"' + FileName + '"', '', SW_HIDE,
+     ewWaitUntilTerminated, ResultCode);
+end;
+</code></pre></div></div><h3 id="how-to-associate-a-program-with-an-extension-during-installation">How to associate a program with an extension during installation</h3><p>Add a property as per below in <code class="highlighter-rouge">[Setup]</code> section:<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[Setup]
+ChangesAssociations = yes
+</code></pre></div></div><p>This will tell Explorer to refresh its file associations information at the end of the installation, and similarly for the uninstallation. Then, add these following registry keys:<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[Registry]
+; Associate file extension ".exif" to my app program
+Root: HKCR; Subkey: ".exif"; ValueData: "{#MyAppName}"; Flags: uninsdeletevalue; ValueType: string; ValueName: ""
+Root: HKCR; Subkey: "{#MyAppName}"; ValueData: "Program {#MyAppName}"; Flags: uninsdeletekey; ValueType: string; ValueName: ""
+Root: HKCR; Subkey: "{#MyAppName}\DefaultIcon"; ValueData: "{app}\{#MyAppExeName},0"; ValueType: string; ValueName: ""
+Root: HKCR; Subkey: "{#MyAppName}\shell\open\command"; ValueData: """{app}\{#MyAppExeName}"" ""%1"""; ValueType: string; ValueName: ""
+</code></pre></div></div><div class="tagged"> <a href="https://heiswayi.nrird.com/tagged#inno-setup"><i class="fa fa-hashtag muted" aria-hidden="true"></i>Inno Setup</a> <a href="https://heiswayi.nrird.com/tagged#pascal"><i class="fa fa-hashtag muted" aria-hidden="true"></i>Pascal</a></div><div id="disqus" style="margin-top:2em"><div id="disqus_thread"></div><script> var disqus_config = function() { this.page.url = "https://heiswayi.nrird.com/2018/create-windows-app-installer-using-inno-setup"; this.page.identifier = "/2018/create-windows-app-installer-using-inno-setup"; }; (function() { var d = document, s = d.createElement('script'); s.src = '//hnbloggithub.disqus.com/embed.js'; s.setAttribute('data-timestamp', +new Date()); (d.head || d.body).appendChild(s); })(); </script> <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript></div></div></div></div><div class="footer"><div class="copyright"><i class="fa fa-copyright"></i> 2015 - 2018 Heiswayi Nrird // <a href="https://heiswayi.nrird.com/cookie-policy">Cookie Policy</a> // <a href="https://heiswayi.github.io/feed.xml">RSS</a></div></div><script> // Line numbering for code block (function() { var pre = document.getElementsByTagName('pre'), pl = pre.length; for (var i = 0; i < pl; i++) { pre[i].innerHTML = '<span class="line-number"></span>' + pre[i].innerHTML + '<span class="cl"></span>'; var num = pre[i].innerHTML.split(/\n/).length; for (var j = 0; j < (num - 1); j++) { var line_num = pre[i].getElementsByTagName('span')[0]; line_num.innerHTML += '<span>' + (j + 1) + '</span>'; } } })(); </script> <script> (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m) })(window,document,'script','https://www.google-analytics.com/analytics.js','ga'); ga('create', 'UA-58296043-7', 'auto'); ga('send', 'pageview'); </script>

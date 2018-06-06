@@ -1,0 +1,214 @@
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en" class="no-js" itemscope itemtype="http://schema.org/WebPage"><link href="http://gmpg.org/xfn/11" rel="profile"><meta charset="UTF-8"><meta name="apple-mobile-web-app-capable" content="yes"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1"><title> Simple XML serialization and deserialization helper class in C# · heiswayi nrird •••</title><meta name="description" content=" XmlHelper.cs is a helper class for XML data serialization and deserialization that I wrote to be used in my C# projects. "/><meta name="keywords" content="c# programming, xml serialization, xml deserialization, xml helper class, readable dataset format"><meta name="author" content="Heiswayi Nrird"><meta name="HandheldFriendly" content="True"><meta name="MobileOptimized" content="320"><meta property="og:type" content="article"><meta property="article:author" content="Heiswayi Nrird"><meta property="article:section" content=""><meta property="article:tag" content="c# programming, xml serialization, xml deserialization, xml helper class, readable dataset format"><meta property="article:published_time" content="2016-12-06 00:00:00 +0800"><meta property="og:url" content="https://heiswayi.nrird.com/2016/simple-xml-serialization-and-deserialization-helper-class-in-csharp"><meta property="og:title" content=" Simple XML serialization and deserialization helper class in C# · heiswayi nrird ••• "><meta property="og:image" content="https://heiswayi.nrird.com/assets/logo.png"><meta property="og:description" content=" XmlHelper.cs is a helper class for XML data serialization and deserialization that I wrote to be used in my C# projects. "><meta property="og:site_name" content="Heiswayi Nrird"><meta property="og:locale" content="en_US"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:site" content="@heiswayi"><meta name="twitter:title" content=" Simple XML serialization and deserialization helper class in C# · heiswayi nrird ••• "><meta name="twitter:description" content=" XmlHelper.cs is a helper class for XML data serialization and deserialization that I wrote to be used in my C# projects. "><meta name="twitter:image:src" content="https://heiswayi.nrird.com/assets/logo.png"><meta itemprop="name" content=" Simple XML serialization and deserialization helper class in C# · heiswayi nrird ••• "><meta itemprop="description" content=" XmlHelper.cs is a helper class for XML data serialization and deserialization that I wrote to be used in my C# projects. "><meta itemprop="image" content="https://heiswayi.nrird.com/assets/logo.png"><link rel="canonical" href="https://heiswayi.nrird.com/2016/simple-xml-serialization-and-deserialization-helper-class-in-csharp"><link rel="alternate" type="application/rss+xml" title="RSS" href="https://heiswayi.nrird.com/feed.xml"><link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgo="><link rel="stylesheet" href="https://heiswayi.nrird.com/assets/css/main.css?20180603"> <script src="https://heiswayi.nrird.com/assets/js/modernizr.custom.js"></script> <!--[if lt IE 9]> <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script> <script src="http://cdnjs.cloudflare.com/ajax/libs/respond.js/1.1.0/respond.min.js"></script> <script src="https://heiswayi.nrird.com/assets/js/rem.min.js"></script> <![endif]--> <a href="#content" class="skip">Skip to content</a><div class="wrap"><div class="masthead"> <canvas id="canvas" style="width:100%;height:100%;max-height:230px;position:absolute;z-index:1;opacity:0.5"></canvas><div class="container"><h2 class="masthead-title"> <a href="https://heiswayi.nrird.com" title="heiswayi nrird •••" class="title">heiswayi nrird <span class="dot-red">•</span><span class="dot-yellow">•</span><span class="dot-green">•</span></a> <small>Between coding and random stuffs </small></h2><div class="footer-social-links"> <a href="http://heiswayi.github.io/feed.xml" title="RSS Feed" target="_blank"><i class="fa fa-rss"></i></a> <a href="https://my.linkedin.com/in/nrird" title="LinkedIn" target="_blank"><i class="fa fa-linkedin"></i></a> <!--<a href="https://www.facebook.com/heiswayi.nrird" title="Facebook" target="_blank"><i class="fa fa-facebook"></i></a>--> <!--<a href="https://twitter.com/HeiswayiNrird" title="Twitter" target="_blank"><i class="fa fa-twitter"></i></a>--> <a href="http://heiswayi.github.io/my-repos/" title="GitHub Repositories" target="_blank"><i class="fa fa-github-alt"></i></a> <a href="http://heiswayi.github.io/my-gists/" title="GitHub Gists" target="_blank"><i class="fa fa-code"></i></a> <a href="http://codepen.io/heiswayi/" title="CodePen" target="_blank"><i class="fa fa-codepen"></i></a> <a href="https://instagram.com/heiswayi.nrird/" title="Instagram" target="_blank"><i class="fa fa-instagram"></i></a> <a href="http://jsfiddle.net/user/heiswayi/" title="JSFiddle" target="_blank"><i class="fa fa-jsfiddle"></i></a></div><div class="nav"><ul class="top-menu"><li><a href="https://heiswayi.nrird.com/" title="Home"><i class="fa fa-home"></i></a><li><a href="https://heiswayi.nrird.com/about">About</a> <!--<li><a href="/resume">Resume <i class="fa fa-external-link-square"></i></a>--><li><a href="https://heiswayi.nrird.com/projects" class="bg-red"><i class="fa fa-space-shuttle" aria-hidden="true"></i> Projects</a><li><a href="https://heiswayi.nrird.com/tagged">Tags</a><li><a href="https://heiswayi.github.io/photography">Photography <i class="fa fa-external-link-square"></i></a><li><a href="https://heiswayi.nrird.com/reminder">Reminder</a></ul></div></div></div><div id="content" class="container content"><div class="post"><div class="post-top-meta"> <!--<div class="edit-this-page"><a href="https://github.com/heiswayi/heiswayi.github.io/blob/master/_posts/2016/2016-12-06-simple-xml-serialization-and-deserialization-helper-class-in-csharp.md">Edit this page</a></div>--><div class="post-date">December 06, 2016</div><h1 class="post-title">Simple XML serialization and deserialization helper class in C#</h1></div><p>I wrote this helper class because sometimes I have some projects that need to use XML file format to save some states or configurations and to retrieve the configurations back. I like to work with XML file as the content is easy to be edited and human readable by using any code editor application. So, this is my own version of simple XML helper class to ease my work with XML data serialization and deserialization.<h3 id="helper-class-source-code">Helper class source code</h3><p><em>XmlHelper.cs</em> // Also available on my <a href="https://gist.github.com/heiswayi/cb66748bc11efe360ad6c233fa8e603f">Gist</a> too.<div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System.IO</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System.Text</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System.Xml</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System.Xml.Serialization</span><span class="p">;</span>
+
+<span class="k">namespace</span> <span class="nn">HeiswayiNrird.Utility.Common</span>
+<span class="p">{</span>
+    <span class="k">public</span> <span class="k">static</span> <span class="k">class</span> <span class="nc">XmlHelper</span>
+    <span class="p">{</span>
+        <span class="c1">/// &lt;summary&gt;</span>
+        <span class="c1">/// Serialize a serializable object to XML string.</span>
+        <span class="c1">/// &lt;/summary&gt;</span>
+        <span class="c1">/// &lt;typeparam name="T"&gt;Type of object&lt;/typeparam&gt;</span>
+        <span class="c1">/// &lt;param name="xmlObject"&gt;Type of object&lt;/param&gt;</span>
+        <span class="c1">/// &lt;param name="useNamespaces"&gt;Use of XML namespaces&lt;/param&gt;</span>
+        <span class="c1">/// &lt;returns&gt;XML string&lt;/returns&gt;</span>
+        <span class="k">public</span> <span class="k">static</span> <span class="kt">string</span> <span class="n">SerializeToXmlString</span><span class="p">&lt;</span><span class="n">T</span><span class="p">&gt;(</span><span class="n">T</span> <span class="n">xmlObject</span><span class="p">,</span> <span class="kt">bool</span> <span class="n">useNamespaces</span> <span class="p">=</span> <span class="k">true</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">XmlSerializer</span> <span class="n">xmlSerializer</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">XmlSerializer</span><span class="p">(</span><span class="k">typeof</span><span class="p">(</span><span class="n">T</span><span class="p">));</span>
+            <span class="n">MemoryStream</span> <span class="n">memoryStream</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">MemoryStream</span><span class="p">();</span>
+            <span class="n">XmlTextWriter</span> <span class="n">xmlTextWriter</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">XmlTextWriter</span><span class="p">(</span><span class="n">memoryStream</span><span class="p">,</span> <span class="n">Encoding</span><span class="p">.</span><span class="n">UTF8</span><span class="p">);</span>
+            <span class="n">xmlTextWriter</span><span class="p">.</span><span class="n">Formatting</span> <span class="p">=</span> <span class="n">Formatting</span><span class="p">.</span><span class="n">Indented</span><span class="p">;</span>
+
+            <span class="k">if</span> <span class="p">(</span><span class="n">useNamespaces</span><span class="p">)</span>
+            <span class="p">{</span>
+                <span class="n">XmlSerializerNamespaces</span> <span class="n">xmlSerializerNamespaces</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">XmlSerializerNamespaces</span><span class="p">();</span>
+                <span class="n">xmlSerializerNamespaces</span><span class="p">.</span><span class="nf">Add</span><span class="p">(</span><span class="s">""</span><span class="p">,</span> <span class="s">""</span><span class="p">);</span>
+                <span class="n">xmlSerializer</span><span class="p">.</span><span class="nf">Serialize</span><span class="p">(</span><span class="n">xmlTextWriter</span><span class="p">,</span> <span class="n">xmlObject</span><span class="p">,</span> <span class="n">xmlSerializerNamespaces</span><span class="p">);</span>
+            <span class="p">}</span>
+            <span class="k">else</span>
+                <span class="n">xmlSerializer</span><span class="p">.</span><span class="nf">Serialize</span><span class="p">(</span><span class="n">xmlTextWriter</span><span class="p">,</span> <span class="n">xmlObject</span><span class="p">);</span>
+
+            <span class="kt">string</span> <span class="n">output</span> <span class="p">=</span> <span class="n">Encoding</span><span class="p">.</span><span class="n">UTF8</span><span class="p">.</span><span class="nf">GetString</span><span class="p">(</span><span class="n">memoryStream</span><span class="p">.</span><span class="nf">ToArray</span><span class="p">());</span>
+            <span class="kt">string</span> <span class="n">_byteOrderMarkUtf8</span> <span class="p">=</span> <span class="n">Encoding</span><span class="p">.</span><span class="n">UTF8</span><span class="p">.</span><span class="nf">GetString</span><span class="p">(</span><span class="n">Encoding</span><span class="p">.</span><span class="n">UTF8</span><span class="p">.</span><span class="nf">GetPreamble</span><span class="p">());</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">output</span><span class="p">.</span><span class="nf">StartsWith</span><span class="p">(</span><span class="n">_byteOrderMarkUtf8</span><span class="p">))</span>
+            <span class="p">{</span>
+                <span class="n">output</span> <span class="p">=</span> <span class="n">output</span><span class="p">.</span><span class="nf">Remove</span><span class="p">(</span><span class="m">0</span><span class="p">,</span> <span class="n">_byteOrderMarkUtf8</span><span class="p">.</span><span class="n">Length</span><span class="p">);</span>
+            <span class="p">}</span>
+
+            <span class="k">return</span> <span class="n">output</span><span class="p">;</span>
+        <span class="p">}</span>
+
+        <span class="c1">/// &lt;summary&gt;</span>
+        <span class="c1">/// Serialize a serializable object to XML string and create a XML file.</span>
+        <span class="c1">/// &lt;/summary&gt;</span>
+        <span class="c1">/// &lt;typeparam name="T"&gt;Type of object&lt;/typeparam&gt;</span>
+        <span class="c1">/// &lt;param name="xmlObject"&gt;Type of object&lt;/param&gt;</span>
+        <span class="c1">/// &lt;param name="filename"&gt;XML filename with .XML extension&lt;/param&gt;</span>
+        <span class="c1">/// &lt;param name="useNamespaces"&gt;Use of XML namespaces&lt;/param&gt;</span>
+        <span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="n">SerializeToXmlFile</span><span class="p">&lt;</span><span class="n">T</span><span class="p">&gt;(</span><span class="n">T</span> <span class="n">xmlObject</span><span class="p">,</span> <span class="kt">string</span> <span class="n">filename</span><span class="p">,</span> <span class="kt">bool</span> <span class="n">useNamespaces</span> <span class="p">=</span> <span class="k">true</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="k">try</span>
+            <span class="p">{</span>
+                <span class="n">File</span><span class="p">.</span><span class="nf">WriteAllText</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">SerializeToXmlString</span><span class="p">&lt;</span><span class="n">T</span><span class="p">&gt;(</span><span class="n">xmlObject</span><span class="p">,</span> <span class="n">useNamespaces</span><span class="p">));</span>
+            <span class="p">}</span>
+            <span class="k">catch</span>
+            <span class="p">{</span>
+                <span class="k">throw</span> <span class="k">new</span> <span class="nf">Exception</span><span class="p">();</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+
+        <span class="c1">/// &lt;summary&gt;</span>
+        <span class="c1">/// Deserialize XML string to an object.</span>
+        <span class="c1">/// &lt;/summary&gt;</span>
+        <span class="c1">/// &lt;typeparam name="T"&gt;Type of object&lt;/typeparam&gt;</span>
+        <span class="c1">/// &lt;param name="xml"&gt;XML string&lt;/param&gt;</span>
+        <span class="c1">/// &lt;returns&gt;XML-deserialized object&lt;/returns&gt;</span>
+        <span class="k">public</span> <span class="k">static</span> <span class="n">T</span> <span class="n">DeserializeFromXmlString</span><span class="p">&lt;</span><span class="n">T</span><span class="p">&gt;(</span><span class="kt">string</span> <span class="n">xml</span><span class="p">)</span> <span class="k">where</span> <span class="n">T</span> <span class="p">:</span> <span class="k">new</span><span class="p">()</span>
+        <span class="p">{</span>
+            <span class="n">T</span> <span class="n">xmlObject</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">T</span><span class="p">();</span>
+            <span class="n">XmlSerializer</span> <span class="n">xmlSerializer</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">XmlSerializer</span><span class="p">(</span><span class="k">typeof</span><span class="p">(</span><span class="n">T</span><span class="p">));</span>
+            <span class="n">StringReader</span> <span class="n">stringReader</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">StringReader</span><span class="p">(</span><span class="n">xml</span><span class="p">);</span>
+            <span class="n">xmlObject</span> <span class="p">=</span> <span class="p">(</span><span class="n">T</span><span class="p">)</span><span class="n">xmlSerializer</span><span class="p">.</span><span class="nf">Deserialize</span><span class="p">(</span><span class="n">stringReader</span><span class="p">);</span>
+            <span class="k">return</span> <span class="n">xmlObject</span><span class="p">;</span>
+        <span class="p">}</span>
+
+        <span class="c1">/// &lt;summary&gt;</span>
+        <span class="c1">/// Deserialize XML string from XML file to an object.</span>
+        <span class="c1">/// &lt;/summary&gt;</span>
+        <span class="c1">/// &lt;typeparam name="T"&gt;Type of object&lt;/typeparam&gt;</span>
+        <span class="c1">/// &lt;param name="filename"&gt;XML filename with .XML extension&lt;/param&gt;</span>
+        <span class="c1">/// &lt;returns&gt;XML-deserialized object&lt;/returns&gt;</span>
+        <span class="k">public</span> <span class="k">static</span> <span class="n">T</span> <span class="n">DeserializeFromXmlFile</span><span class="p">&lt;</span><span class="n">T</span><span class="p">&gt;(</span><span class="kt">string</span> <span class="n">filename</span><span class="p">)</span> <span class="k">where</span> <span class="n">T</span> <span class="p">:</span> <span class="k">new</span><span class="p">()</span>
+        <span class="p">{</span>
+            <span class="k">if</span> <span class="p">(!</span><span class="n">File</span><span class="p">.</span><span class="nf">Exists</span><span class="p">(</span><span class="n">filename</span><span class="p">))</span>
+            <span class="p">{</span>
+                <span class="k">throw</span> <span class="k">new</span> <span class="nf">FileNotFoundException</span><span class="p">();</span>
+            <span class="p">}</span>
+
+            <span class="k">return</span> <span class="n">DeserializeFromXmlString</span><span class="p">&lt;</span><span class="n">T</span><span class="p">&gt;(</span><span class="n">File</span><span class="p">.</span><span class="nf">ReadAllText</span><span class="p">(</span><span class="n">filename</span><span class="p">));</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div><h3 id="usage-examples">Usage examples</h3><p>You need to create a serializable object class before you can use. This can be any of the model class if you want. For example, I have this object class to use and as you can see I applied XML attributes to the object properties in case I want to rename them to different names in my XML file:<div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">using</span> <span class="nn">System.Collections.Generic</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System.Xml.Serialization</span><span class="p">;</span>
+
+<span class="k">namespace</span> <span class="nn">XmlHelperConsoleApp</span>
+<span class="p">{</span>
+    <span class="p">[</span><span class="nf">XmlRoot</span><span class="p">(</span><span class="s">"MyCompanyEmployees2016"</span><span class="p">)]</span>
+    <span class="k">public</span> <span class="k">class</span> <span class="nc">CompanyEmployee</span>
+    <span class="p">{</span>
+        <span class="k">public</span> <span class="n">List</span><span class="p">&lt;</span><span class="n">Employee</span><span class="p">&gt;</span> <span class="n">EmployeeList</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="k">public</span> <span class="k">class</span> <span class="nc">Employee</span>
+    <span class="p">{</span>
+        <span class="p">[</span><span class="nf">XmlAttribute</span><span class="p">(</span><span class="s">"Name"</span><span class="p">)]</span>
+        <span class="k">public</span> <span class="kt">string</span> <span class="n">Name</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
+
+        <span class="p">[</span><span class="nf">XmlAttribute</span><span class="p">(</span><span class="s">"Age"</span><span class="p">)]</span>
+        <span class="k">public</span> <span class="kt">int</span> <span class="n">Age</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
+
+        <span class="p">[</span><span class="nf">XmlAttribute</span><span class="p">(</span><span class="s">"Position"</span><span class="p">)]</span>
+        <span class="k">public</span> <span class="kt">string</span> <span class="n">Position</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
+
+        <span class="p">[</span><span class="nf">XmlAttribute</span><span class="p">(</span><span class="s">"Department"</span><span class="p">)]</span>
+        <span class="k">public</span> <span class="n">Department</span> <span class="n">Department</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="k">public</span> <span class="k">enum</span> <span class="n">Department</span>
+    <span class="p">{</span>
+        <span class="n">Technical</span><span class="p">,</span>
+        <span class="n">Marketing</span><span class="p">,</span>
+        <span class="n">Support</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div><h4 id="serialize-object-to-xml-string">Serialize object to XML string</h4><p>Here’s the example code for serializing the object to XML string:<div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">using</span> <span class="nn">HeiswayiNrird.Utility.Common</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System.Collections.Generic</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System.Linq</span><span class="p">;</span>
+
+<span class="k">namespace</span> <span class="nn">XmlHelperConsoleApp</span>
+<span class="p">{</span>
+    <span class="k">internal</span> <span class="k">class</span> <span class="nc">Program</span>
+    <span class="p">{</span>
+        <span class="k">private</span> <span class="k">static</span> <span class="k">void</span> <span class="nf">Main</span><span class="p">(</span><span class="kt">string</span><span class="p">[]</span> <span class="n">args</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="kt">var</span> <span class="n">employee1</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">Employee</span><span class="p">()</span>
+            <span class="p">{</span>
+                <span class="n">Name</span> <span class="p">=</span> <span class="s">"John Cornor"</span><span class="p">,</span>
+                <span class="n">Age</span> <span class="p">=</span> <span class="m">40</span><span class="p">,</span>
+                <span class="n">Position</span> <span class="p">=</span> <span class="s">"Technical Engineer"</span><span class="p">,</span>
+                <span class="n">Department</span> <span class="p">=</span> <span class="n">Department</span><span class="p">.</span><span class="n">Technical</span>
+            <span class="p">};</span>
+            <span class="kt">var</span> <span class="n">employee2</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">Employee</span><span class="p">()</span>
+            <span class="p">{</span>
+                <span class="n">Name</span> <span class="p">=</span> <span class="s">"James Bond"</span><span class="p">,</span>
+                <span class="n">Age</span> <span class="p">=</span> <span class="m">44</span><span class="p">,</span>
+                <span class="n">Position</span> <span class="p">=</span> <span class="s">"Marketing Manager"</span><span class="p">,</span>
+                <span class="n">Department</span> <span class="p">=</span> <span class="n">Department</span><span class="p">.</span><span class="n">Marketing</span>
+            <span class="p">};</span>
+            <span class="kt">var</span> <span class="n">employee3</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">Employee</span><span class="p">()</span>
+            <span class="p">{</span>
+                <span class="n">Name</span> <span class="p">=</span> <span class="s">"Jason Bourne"</span><span class="p">,</span>
+                <span class="n">Age</span> <span class="p">=</span> <span class="m">40</span><span class="p">,</span>
+                <span class="n">Position</span> <span class="p">=</span> <span class="s">"Field Application Engineer"</span><span class="p">,</span>
+                <span class="n">Department</span> <span class="p">=</span> <span class="n">Department</span><span class="p">.</span><span class="n">Technical</span>
+            <span class="p">};</span>
+
+            <span class="kt">var</span> <span class="n">employeeList</span> <span class="p">=</span> <span class="k">new</span> <span class="n">List</span><span class="p">&lt;</span><span class="n">Employee</span><span class="p">&gt;()</span> <span class="p">{</span> <span class="n">employee1</span><span class="p">,</span> <span class="n">employee2</span><span class="p">,</span> <span class="n">employee3</span> <span class="p">};</span>
+
+            <span class="kt">var</span> <span class="n">companyEmployee</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">CompanyEmployee</span><span class="p">()</span>
+            <span class="p">{</span>
+                <span class="n">EmployeeList</span> <span class="p">=</span> <span class="n">employeeList</span>
+            <span class="p">};</span>
+
+            <span class="kt">string</span> <span class="n">xml</span> <span class="p">=</span> <span class="n">XmlHelper</span><span class="p">.</span><span class="nf">SerializeToXmlString</span><span class="p">(</span><span class="n">companyEmployee</span><span class="p">);</span>
+            <span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="n">xml</span><span class="p">);</span>
+
+            <span class="n">Console</span><span class="p">.</span><span class="nf">ReadKey</span><span class="p">();</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div><p><strong>Output</strong><p>The code above will output a XML-formatted string like this:<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?xml version="1.0" encoding="utf-8"?&gt;</span>
+<span class="nt">&lt;MyCompanyEmployees2016&gt;</span>
+  <span class="nt">&lt;EmployeeList&gt;</span>
+    <span class="nt">&lt;Employee</span> <span class="na">Name=</span><span class="s">"John Cornor"</span> <span class="na">Age=</span><span class="s">"40"</span> <span class="na">Position=</span><span class="s">"Technical Engineer"</span> <span class="na">Department=</span><span class="s">"Technical"</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;Employee</span> <span class="na">Name=</span><span class="s">"James Bond"</span> <span class="na">Age=</span><span class="s">"44"</span> <span class="na">Position=</span><span class="s">"Marketing Manager"</span> <span class="na">Department=</span><span class="s">"Marketing"</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;Employee</span> <span class="na">Name=</span><span class="s">"Jason Bourne"</span> <span class="na">Age=</span><span class="s">"40"</span> <span class="na">Position=</span><span class="s">"Field Application Engineer"</span> <span class="na">Department=</span><span class="s">"Technical"</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;/EmployeeList&gt;</span>
+<span class="nt">&lt;/MyCompanyEmployees2016&gt;</span>
+</code></pre></div></div><h4 id="deserialize-xml-string-to-object">Deserialize XML string to object</h4><p>Now, if you want to get specific value from the XML string, we need to deserialize it and retrieve our desired value. Here’s the example code how to do it:<div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">using</span> <span class="nn">HeiswayiNrird.Utility.Common</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System.Collections.Generic</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System.Linq</span><span class="p">;</span>
+
+<span class="k">namespace</span> <span class="nn">XmlHelperConsoleApp</span>
+<span class="p">{</span>
+    <span class="k">internal</span> <span class="k">class</span> <span class="nc">Program</span>
+    <span class="p">{</span>
+        <span class="k">private</span> <span class="k">static</span> <span class="k">void</span> <span class="nf">Main</span><span class="p">(</span><span class="kt">string</span><span class="p">[]</span> <span class="n">args</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="c1">// string xml = &lt;...XML-formatted string...&gt;</span>
+            <span class="kt">var</span> <span class="n">obj</span> <span class="p">=</span> <span class="n">XmlHelper</span><span class="p">.</span><span class="n">DeserializeFromXmlString</span><span class="p">&lt;</span><span class="n">CompanyEmployee</span><span class="p">&gt;(</span><span class="n">xml</span><span class="p">);</span>
+
+            <span class="c1">// Get list of employee names from Technical department</span>
+            <span class="kt">var</span> <span class="n">getTechnicalDept</span> <span class="p">=</span> <span class="n">obj</span><span class="p">.</span><span class="n">EmployeeList</span><span class="p">.</span><span class="nf">Where</span><span class="p">(</span><span class="n">x</span> <span class="p">=&gt;</span> <span class="n">x</span><span class="p">.</span><span class="n">Department</span> <span class="p">==</span> <span class="n">Department</span><span class="p">.</span><span class="n">Technical</span><span class="p">).</span><span class="nf">ToList</span><span class="p">();</span>
+
+            <span class="k">foreach</span> <span class="p">(</span><span class="kt">var</span> <span class="n">employee</span> <span class="k">in</span> <span class="n">getTechnicalDept</span><span class="p">)</span>
+                <span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="n">employee</span><span class="p">.</span><span class="n">Name</span><span class="p">);</span>
+
+            <span class="n">Console</span><span class="p">.</span><span class="nf">ReadKey</span><span class="p">();</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div><p><strong>Output</strong><p>The code above will output something like this:<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>John Cornor
+Jason Bourne
+</code></pre></div></div><h3 id="resolving-byte-order-mark-bom-bug">Resolving Byte Order Mark (BOM) bug</h3><blockquote><p>“Data at the root level is invalid. Line 1, position 1.”</blockquote><p>In the beginning of writing this helper class, I have encountered with this kind of exception message when I tried to deserialize the XML string. After I did some researches on Google, I found a <a href="http://www.ipreferjim.com/2014/09/data-at-the-root-level-is-invalid-line-1-position-1/">blog</a> that explained the root cause and detailed solution. That bug is known as <strong>BOM</strong>, a Unicode character used to signal the endianness (byte order) of a text file or stream.<p>Below is the code snippet fix that I have applied inside serializing method before outputting to XML string in order to resolve the issue:<div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">string</span> <span class="n">_byteOrderMarkUtf8</span> <span class="p">=</span> <span class="n">Encoding</span><span class="p">.</span><span class="n">UTF8</span><span class="p">.</span><span class="nf">GetString</span><span class="p">(</span><span class="n">Encoding</span><span class="p">.</span><span class="n">UTF8</span><span class="p">.</span><span class="nf">GetPreamble</span><span class="p">());</span>
+<span class="k">if</span> <span class="p">(</span><span class="n">xml</span><span class="p">.</span><span class="nf">StartsWith</span><span class="p">(</span><span class="n">_byteOrderMarkUtf8</span><span class="p">))</span>
+<span class="p">{</span>
+    <span class="n">xml</span> <span class="p">=</span> <span class="n">xml</span><span class="p">.</span><span class="nf">Remove</span><span class="p">(</span><span class="m">0</span><span class="p">,</span> <span class="n">_byteOrderMarkUtf8</span><span class="p">.</span><span class="n">Length</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></div><div class="tagged"> <a href="https://heiswayi.nrird.com/tagged#csharp"><i class="fa fa-hashtag muted" aria-hidden="true"></i>CSharp</a> <a href="https://heiswayi.nrird.com/tagged#xml"><i class="fa fa-hashtag muted" aria-hidden="true"></i>XML</a> <a href="https://heiswayi.nrird.com/tagged#utility"><i class="fa fa-hashtag muted" aria-hidden="true"></i>Utility</a></div><div id="disqus" style="margin-top:2em"><div id="disqus_thread"></div><script> var disqus_config = function() { this.page.url = "https://heiswayi.nrird.com/2016/simple-xml-serialization-and-deserialization-helper-class-in-csharp"; this.page.identifier = "/2016/simple-xml-serialization-and-deserialization-helper-class-in-csharp"; }; (function() { var d = document, s = d.createElement('script'); s.src = '//hnbloggithub.disqus.com/embed.js'; s.setAttribute('data-timestamp', +new Date()); (d.head || d.body).appendChild(s); })(); </script> <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript></div></div></div></div><div class="footer"><div class="copyright"><i class="fa fa-copyright"></i> 2015 - 2018 Heiswayi Nrird // <a href="https://heiswayi.nrird.com/cookie-policy">Cookie Policy</a> // <a href="https://heiswayi.github.io/feed.xml">RSS</a></div></div><script> // Line numbering for code block (function() { var pre = document.getElementsByTagName('pre'), pl = pre.length; for (var i = 0; i < pl; i++) { pre[i].innerHTML = '<span class="line-number"></span>' + pre[i].innerHTML + '<span class="cl"></span>'; var num = pre[i].innerHTML.split(/\n/).length; for (var j = 0; j < (num - 1); j++) { var line_num = pre[i].getElementsByTagName('span')[0]; line_num.innerHTML += '<span>' + (j + 1) + '</span>'; } } })(); </script> <script> (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m) })(window,document,'script','https://www.google-analytics.com/analytics.js','ga'); ga('create', 'UA-58296043-7', 'auto'); ga('send', 'pageview'); </script>

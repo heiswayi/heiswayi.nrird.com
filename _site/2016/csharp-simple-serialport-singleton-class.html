@@ -1,0 +1,320 @@
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en" class="no-js" itemscope itemtype="http://schema.org/WebPage"><link href="http://gmpg.org/xfn/11" rel="profile"><meta charset="UTF-8"><meta name="apple-mobile-web-app-capable" content="yes"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1"><title> C# - Simple SerialPort singleton class · heiswayi nrird •••</title><meta name="description" content=" My singleton class code snippet called SerialPortManager for handling serial data communication in some of my C# projects. "/><meta name="keywords" content="c# programming, singleton design pattern, serial port, serial communication"><meta name="author" content="Heiswayi Nrird"><meta name="HandheldFriendly" content="True"><meta name="MobileOptimized" content="320"><meta property="og:type" content="article"><meta property="article:author" content="Heiswayi Nrird"><meta property="article:section" content=""><meta property="article:tag" content="c# programming, singleton design pattern, serial port, serial communication"><meta property="article:published_time" content="2016-12-17 00:00:00 +0800"><meta property="og:url" content="https://heiswayi.nrird.com/2016/csharp-simple-serialport-singleton-class"><meta property="og:title" content=" C# - Simple SerialPort singleton class · heiswayi nrird ••• "><meta property="og:image" content="https://heiswayi.nrird.com/assets/logo.png"><meta property="og:description" content=" My singleton class code snippet called SerialPortManager for handling serial data communication in some of my C# projects. "><meta property="og:site_name" content="Heiswayi Nrird"><meta property="og:locale" content="en_US"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:site" content="@heiswayi"><meta name="twitter:title" content=" C# - Simple SerialPort singleton class · heiswayi nrird ••• "><meta name="twitter:description" content=" My singleton class code snippet called SerialPortManager for handling serial data communication in some of my C# projects. "><meta name="twitter:image:src" content="https://heiswayi.nrird.com/assets/logo.png"><meta itemprop="name" content=" C# - Simple SerialPort singleton class · heiswayi nrird ••• "><meta itemprop="description" content=" My singleton class code snippet called SerialPortManager for handling serial data communication in some of my C# projects. "><meta itemprop="image" content="https://heiswayi.nrird.com/assets/logo.png"><link rel="canonical" href="https://heiswayi.nrird.com/2016/csharp-simple-serialport-singleton-class"><link rel="alternate" type="application/rss+xml" title="RSS" href="https://heiswayi.nrird.com/feed.xml"><link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgo="><link rel="stylesheet" href="https://heiswayi.nrird.com/assets/css/main.css?20180603"> <script src="https://heiswayi.nrird.com/assets/js/modernizr.custom.js"></script> <!--[if lt IE 9]> <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script> <script src="http://cdnjs.cloudflare.com/ajax/libs/respond.js/1.1.0/respond.min.js"></script> <script src="https://heiswayi.nrird.com/assets/js/rem.min.js"></script> <![endif]--> <a href="#content" class="skip">Skip to content</a><div class="wrap"><div class="masthead"> <canvas id="canvas" style="width:100%;height:100%;max-height:230px;position:absolute;z-index:1;opacity:0.5"></canvas><div class="container"><h2 class="masthead-title"> <a href="https://heiswayi.nrird.com" title="heiswayi nrird •••" class="title">heiswayi nrird <span class="dot-red">•</span><span class="dot-yellow">•</span><span class="dot-green">•</span></a> <small>Between coding and random stuffs </small></h2><div class="footer-social-links"> <a href="http://heiswayi.github.io/feed.xml" title="RSS Feed" target="_blank"><i class="fa fa-rss"></i></a> <a href="https://my.linkedin.com/in/nrird" title="LinkedIn" target="_blank"><i class="fa fa-linkedin"></i></a> <!--<a href="https://www.facebook.com/heiswayi.nrird" title="Facebook" target="_blank"><i class="fa fa-facebook"></i></a>--> <!--<a href="https://twitter.com/HeiswayiNrird" title="Twitter" target="_blank"><i class="fa fa-twitter"></i></a>--> <a href="http://heiswayi.github.io/my-repos/" title="GitHub Repositories" target="_blank"><i class="fa fa-github-alt"></i></a> <a href="http://heiswayi.github.io/my-gists/" title="GitHub Gists" target="_blank"><i class="fa fa-code"></i></a> <a href="http://codepen.io/heiswayi/" title="CodePen" target="_blank"><i class="fa fa-codepen"></i></a> <a href="https://instagram.com/heiswayi.nrird/" title="Instagram" target="_blank"><i class="fa fa-instagram"></i></a> <a href="http://jsfiddle.net/user/heiswayi/" title="JSFiddle" target="_blank"><i class="fa fa-jsfiddle"></i></a></div><div class="nav"><ul class="top-menu"><li><a href="https://heiswayi.nrird.com/" title="Home"><i class="fa fa-home"></i></a><li><a href="https://heiswayi.nrird.com/about">About</a> <!--<li><a href="/resume">Resume <i class="fa fa-external-link-square"></i></a>--><li><a href="https://heiswayi.nrird.com/projects" class="bg-red"><i class="fa fa-space-shuttle" aria-hidden="true"></i> Projects</a><li><a href="https://heiswayi.nrird.com/tagged">Tags</a><li><a href="https://heiswayi.github.io/photography">Photography <i class="fa fa-external-link-square"></i></a><li><a href="https://heiswayi.nrird.com/reminder">Reminder</a></ul></div></div></div><div id="content" class="container content"><div class="post"><div class="post-top-meta"> <!--<div class="edit-this-page"><a href="https://github.com/heiswayi/heiswayi.github.io/blob/master/_posts/2016/2016-12-17-csharp-simple-serialport-singleton-class.md">Edit this page</a></div>--><div class="post-date">December 17, 2016</div><h1 class="post-title">C# - Simple SerialPort singleton class</h1></div><p>In my projects, some of them sometimes involves serial data communication. So, I think there is a need for me to create a reusable class that I could always reuse whenever I develop any application that uses serial data communication protocol. Most likely when I work with the projects that is interfacing with <a href="https://www.arduino.cc/">Arduino</a> board. Here is my singleton class called <code class="highlighter-rouge">SerialPortManager</code> which is basically based on <a href="https://msdn.microsoft.com/en-us/library/system.io.ports.serialport(v=vs.110).aspx">System.IO.Ports.SerialPort</a> class.<h3 id="serialportmanagercs">SerialPortManager.cs</h3><p>This class source code also available on my <a href="https://gist.github.com/heiswayi/80eda1a6905ba4edee8bd21a45f3a22d">Gist</a>.<div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System.IO</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System.IO.Ports</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System.Threading</span><span class="p">;</span>
+
+<span class="k">namespace</span> <span class="nn">HeiswayiNrird.Singleton</span>
+<span class="p">{</span>
+    <span class="k">public</span> <span class="k">sealed</span> <span class="k">class</span> <span class="nc">SerialPortManager</span>
+    <span class="p">{</span>
+        <span class="k">private</span> <span class="k">static</span> <span class="k">readonly</span> <span class="n">Lazy</span><span class="p">&lt;</span><span class="n">SerialPortManager</span><span class="p">&gt;</span> <span class="n">lazy</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Lazy</span><span class="p">&lt;</span><span class="n">SerialPortManager</span><span class="p">&gt;(()</span> <span class="p">=&gt;</span> <span class="k">new</span> <span class="nf">SerialPortManager</span><span class="p">());</span>
+        <span class="k">public</span> <span class="k">static</span> <span class="n">SerialPortManager</span> <span class="n">Instance</span> <span class="p">{</span> <span class="k">get</span> <span class="p">{</span> <span class="k">return</span> <span class="n">lazy</span><span class="p">.</span><span class="n">Value</span><span class="p">;</span> <span class="p">}</span> <span class="p">}</span>
+
+        <span class="k">private</span> <span class="n">SerialPort</span> <span class="n">_serialPort</span><span class="p">;</span>
+        <span class="k">private</span> <span class="n">Thread</span> <span class="n">_readThread</span><span class="p">;</span>
+        <span class="k">private</span> <span class="k">volatile</span> <span class="kt">bool</span> <span class="n">_keepReading</span><span class="p">;</span>
+
+        <span class="k">private</span> <span class="nf">SerialPortManager</span><span class="p">()</span>
+        <span class="p">{</span>
+            <span class="n">_serialPort</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">SerialPort</span><span class="p">();</span>
+            <span class="n">_readThread</span> <span class="p">=</span> <span class="k">null</span><span class="p">;</span>
+            <span class="n">_keepReading</span> <span class="p">=</span> <span class="k">false</span><span class="p">;</span>
+        <span class="p">}</span>
+
+        <span class="c1">/// &lt;summary&gt;</span>
+        <span class="c1">/// Update the serial port status to the event subscriber</span>
+        <span class="c1">/// &lt;/summary&gt;</span>
+        <span class="k">public</span> <span class="k">event</span> <span class="n">EventHandler</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">&gt;</span> <span class="n">OnStatusChanged</span><span class="p">;</span>
+
+        <span class="c1">/// &lt;summary&gt;</span>
+        <span class="c1">/// Update received data from the serial port to the event subscriber</span>
+        <span class="c1">/// &lt;/summary&gt;</span>
+        <span class="k">public</span> <span class="k">event</span> <span class="n">EventHandler</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">&gt;</span> <span class="n">OnDataReceived</span><span class="p">;</span>
+
+        <span class="c1">/// &lt;summary&gt;</span>
+        <span class="c1">/// Update TRUE/FALSE for the serial port connection to the event subscriber</span>
+        <span class="c1">/// &lt;/summary&gt;</span>
+        <span class="k">public</span> <span class="k">event</span> <span class="n">EventHandler</span><span class="p">&lt;</span><span class="kt">bool</span><span class="p">&gt;</span> <span class="n">OnSerialPortOpened</span><span class="p">;</span>
+
+        <span class="c1">/// &lt;summary&gt;</span>
+        <span class="c1">/// Return TRUE if the serial port is currently connected</span>
+        <span class="c1">/// &lt;/summary&gt;</span>
+        <span class="k">public</span> <span class="kt">bool</span> <span class="n">IsOpen</span> <span class="p">{</span> <span class="k">get</span> <span class="p">{</span> <span class="k">return</span> <span class="n">_serialPort</span><span class="p">.</span><span class="n">IsOpen</span><span class="p">;</span> <span class="p">}</span> <span class="p">}</span>
+
+        <span class="c1">/// &lt;summary&gt;</span>
+        <span class="c1">/// Open the serial port connection using basic serial port settings</span>
+        <span class="c1">/// &lt;/summary&gt;</span>
+        <span class="c1">/// &lt;param name="portname"&gt;COM1 / COM3 / COM4 / etc.&lt;/param&gt;</span>
+        <span class="c1">/// &lt;param name="baudrate"&gt;0 / 100 / 300 / 600 / 1200 / 2400 / 4800 / 9600 / 14400 / 19200 / 38400 / 56000 / 57600 / 115200 / 128000 / 256000&lt;/param&gt;</span>
+        <span class="c1">/// &lt;param name="parity"&gt;None / Odd / Even / Mark / Space&lt;/param&gt;</span>
+        <span class="c1">/// &lt;param name="databits"&gt;5 / 6 / 7 / 8&lt;/param&gt;</span>
+        <span class="c1">/// &lt;param name="stopbits"&gt;None / One / Two / OnePointFive&lt;/param&gt;</span>
+        <span class="c1">/// &lt;param name="handshake"&gt;None / XOnXOff / RequestToSend / RequestToSendXOnXOff&lt;/param&gt;</span>
+        <span class="k">public</span> <span class="k">void</span> <span class="nf">Open</span><span class="p">(</span>
+            <span class="kt">string</span> <span class="n">portname</span> <span class="p">=</span> <span class="s">"COM1"</span><span class="p">,</span>
+            <span class="kt">int</span> <span class="n">baudrate</span> <span class="p">=</span> <span class="m">9600</span><span class="p">,</span>
+            <span class="n">Parity</span> <span class="n">parity</span> <span class="p">=</span> <span class="n">Parity</span><span class="p">.</span><span class="n">None</span><span class="p">,</span>
+            <span class="kt">int</span> <span class="n">databits</span> <span class="p">=</span> <span class="m">8</span><span class="p">,</span>
+            <span class="n">StopBits</span> <span class="n">stopbits</span> <span class="p">=</span> <span class="n">StopBits</span><span class="p">.</span><span class="n">One</span><span class="p">,</span>
+            <span class="n">Handshake</span> <span class="n">handshake</span> <span class="p">=</span> <span class="n">Handshake</span><span class="p">.</span><span class="n">None</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="nf">Close</span><span class="p">();</span>
+
+            <span class="k">try</span>
+            <span class="p">{</span>
+                <span class="n">_serialPort</span><span class="p">.</span><span class="n">PortName</span> <span class="p">=</span> <span class="n">portname</span><span class="p">;</span>
+                <span class="n">_serialPort</span><span class="p">.</span><span class="n">BaudRate</span> <span class="p">=</span> <span class="n">baudrate</span><span class="p">;</span>
+                <span class="n">_serialPort</span><span class="p">.</span><span class="n">Parity</span> <span class="p">=</span> <span class="n">parity</span><span class="p">;</span>
+                <span class="n">_serialPort</span><span class="p">.</span><span class="n">DataBits</span> <span class="p">=</span> <span class="n">databits</span><span class="p">;</span>
+                <span class="n">_serialPort</span><span class="p">.</span><span class="n">StopBits</span> <span class="p">=</span> <span class="n">stopbits</span><span class="p">;</span>
+                <span class="n">_serialPort</span><span class="p">.</span><span class="n">Handshake</span> <span class="p">=</span> <span class="n">handshake</span><span class="p">;</span>
+
+                <span class="n">_serialPort</span><span class="p">.</span><span class="n">ReadTimeout</span> <span class="p">=</span> <span class="m">50</span><span class="p">;</span>
+                <span class="n">_serialPort</span><span class="p">.</span><span class="n">WriteTimeout</span> <span class="p">=</span> <span class="m">50</span><span class="p">;</span>
+
+                <span class="n">_serialPort</span><span class="p">.</span><span class="nf">Open</span><span class="p">();</span>
+                <span class="nf">StartReading</span><span class="p">();</span>
+            <span class="p">}</span>
+            <span class="k">catch</span> <span class="p">(</span><span class="n">IOException</span><span class="p">)</span>
+            <span class="p">{</span>
+                <span class="k">if</span> <span class="p">(</span><span class="n">OnStatusChanged</span> <span class="p">!=</span> <span class="k">null</span><span class="p">)</span>
+                    <span class="nf">OnStatusChanged</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="kt">string</span><span class="p">.</span><span class="nf">Format</span><span class="p">(</span><span class="s">"{0} does not exist."</span><span class="p">,</span> <span class="n">portname</span><span class="p">));</span>
+            <span class="p">}</span>
+            <span class="k">catch</span> <span class="p">(</span><span class="n">UnauthorizedAccessException</span><span class="p">)</span>
+            <span class="p">{</span>
+                <span class="k">if</span> <span class="p">(</span><span class="n">OnStatusChanged</span> <span class="p">!=</span> <span class="k">null</span><span class="p">)</span>
+                    <span class="nf">OnStatusChanged</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="kt">string</span><span class="p">.</span><span class="nf">Format</span><span class="p">(</span><span class="s">"{0} already in use."</span><span class="p">,</span> <span class="n">portname</span><span class="p">));</span>
+            <span class="p">}</span>
+            <span class="k">catch</span> <span class="p">(</span><span class="n">Exception</span> <span class="n">ex</span><span class="p">)</span>
+            <span class="p">{</span>
+                <span class="k">if</span> <span class="p">(</span><span class="n">OnStatusChanged</span> <span class="p">!=</span> <span class="k">null</span><span class="p">)</span>
+                    <span class="nf">OnStatusChanged</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="s">"Error: "</span> <span class="p">+</span> <span class="n">ex</span><span class="p">.</span><span class="n">Message</span><span class="p">);</span>
+            <span class="p">}</span>
+
+            <span class="k">if</span> <span class="p">(</span><span class="n">_serialPort</span><span class="p">.</span><span class="n">IsOpen</span><span class="p">)</span>
+            <span class="p">{</span>
+                <span class="kt">string</span> <span class="n">sb</span> <span class="p">=</span> <span class="n">StopBits</span><span class="p">.</span><span class="n">None</span><span class="p">.</span><span class="nf">ToString</span><span class="p">().</span><span class="nf">Substring</span><span class="p">(</span><span class="m">0</span><span class="p">,</span> <span class="m">1</span><span class="p">);</span>
+                <span class="k">switch</span> <span class="p">(</span><span class="n">_serialPort</span><span class="p">.</span><span class="n">StopBits</span><span class="p">)</span>
+                <span class="p">{</span>
+                    <span class="k">case</span> <span class="n">StopBits</span><span class="p">.</span><span class="n">One</span><span class="p">:</span>
+                        <span class="n">sb</span> <span class="p">=</span> <span class="s">"1"</span><span class="p">;</span> <span class="k">break</span><span class="p">;</span>
+                    <span class="k">case</span> <span class="n">StopBits</span><span class="p">.</span><span class="n">OnePointFive</span><span class="p">:</span>
+                        <span class="n">sb</span> <span class="p">=</span> <span class="s">"1.5"</span><span class="p">;</span> <span class="k">break</span><span class="p">;</span>
+                    <span class="k">case</span> <span class="n">StopBits</span><span class="p">.</span><span class="n">Two</span><span class="p">:</span>
+                        <span class="n">sb</span> <span class="p">=</span> <span class="s">"2"</span><span class="p">;</span> <span class="k">break</span><span class="p">;</span>
+                    <span class="k">default</span><span class="p">:</span>
+                        <span class="k">break</span><span class="p">;</span>
+                <span class="p">}</span>
+
+                <span class="kt">string</span> <span class="n">p</span> <span class="p">=</span> <span class="n">_serialPort</span><span class="p">.</span><span class="n">Parity</span><span class="p">.</span><span class="nf">ToString</span><span class="p">().</span><span class="nf">Substring</span><span class="p">(</span><span class="m">0</span><span class="p">,</span> <span class="m">1</span><span class="p">);</span>
+                <span class="kt">string</span> <span class="n">hs</span> <span class="p">=</span> <span class="n">_serialPort</span><span class="p">.</span><span class="n">Handshake</span> <span class="p">==</span> <span class="n">Handshake</span><span class="p">.</span><span class="n">None</span> <span class="p">?</span> <span class="s">"No Handshake"</span> <span class="p">:</span> <span class="n">_serialPort</span><span class="p">.</span><span class="n">Handshake</span><span class="p">.</span><span class="nf">ToString</span><span class="p">();</span>
+
+                <span class="k">if</span> <span class="p">(</span><span class="n">OnStatusChanged</span> <span class="p">!=</span> <span class="k">null</span><span class="p">)</span>
+                    <span class="nf">OnStatusChanged</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="kt">string</span><span class="p">.</span><span class="nf">Format</span><span class="p">(</span>
+                    <span class="s">"Connected to {0}: {1} bps, {2}{3}{4}, {5}."</span><span class="p">,</span>
+                    <span class="n">_serialPort</span><span class="p">.</span><span class="n">PortName</span><span class="p">,</span>
+                    <span class="n">_serialPort</span><span class="p">.</span><span class="n">BaudRate</span><span class="p">,</span>
+                    <span class="n">_serialPort</span><span class="p">.</span><span class="n">DataBits</span><span class="p">,</span>
+                    <span class="n">p</span><span class="p">,</span>
+                    <span class="n">sb</span><span class="p">,</span>
+                    <span class="n">hs</span><span class="p">));</span>
+
+                <span class="k">if</span> <span class="p">(</span><span class="n">OnSerialPortOpened</span> <span class="p">!=</span> <span class="k">null</span><span class="p">)</span>
+                    <span class="nf">OnSerialPortOpened</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="k">true</span><span class="p">);</span>
+            <span class="p">}</span>
+            <span class="k">else</span>
+            <span class="p">{</span>
+                <span class="k">if</span> <span class="p">(</span><span class="n">OnStatusChanged</span> <span class="p">!=</span> <span class="k">null</span><span class="p">)</span>
+                    <span class="nf">OnStatusChanged</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="kt">string</span><span class="p">.</span><span class="nf">Format</span><span class="p">(</span>
+                    <span class="s">"{0} already in use."</span><span class="p">,</span>
+                    <span class="n">portname</span><span class="p">));</span>
+
+                <span class="k">if</span> <span class="p">(</span><span class="n">OnSerialPortOpened</span> <span class="p">!=</span> <span class="k">null</span><span class="p">)</span>
+                    <span class="nf">OnSerialPortOpened</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="k">false</span><span class="p">);</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+
+        <span class="c1">/// &lt;summary&gt;</span>
+        <span class="c1">/// Close the serial port connection</span>
+        <span class="c1">/// &lt;/summary&gt;</span>
+        <span class="k">public</span> <span class="k">void</span> <span class="nf">Close</span><span class="p">()</span>
+        <span class="p">{</span>
+            <span class="nf">StopReading</span><span class="p">();</span>
+            <span class="n">_serialPort</span><span class="p">.</span><span class="nf">Close</span><span class="p">();</span>
+
+            <span class="k">if</span> <span class="p">(</span><span class="n">OnStatusChanged</span> <span class="p">!=</span> <span class="k">null</span><span class="p">)</span>
+                <span class="nf">OnStatusChanged</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="s">"Connection closed."</span><span class="p">);</span>
+
+            <span class="k">if</span> <span class="p">(</span><span class="n">OnSerialPortOpened</span> <span class="p">!=</span> <span class="k">null</span><span class="p">)</span>
+                <span class="nf">OnSerialPortOpened</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="k">false</span><span class="p">);</span>
+        <span class="p">}</span>
+
+        <span class="c1">/// &lt;summary&gt;</span>
+        <span class="c1">/// Send/write string to the serial port</span>
+        <span class="c1">/// &lt;/summary&gt;</span>
+        <span class="c1">/// &lt;param name="message"&gt;&lt;/param&gt;</span>
+        <span class="k">public</span> <span class="k">void</span> <span class="nf">SendString</span><span class="p">(</span><span class="kt">string</span> <span class="n">message</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">_serialPort</span><span class="p">.</span><span class="n">IsOpen</span><span class="p">)</span>
+            <span class="p">{</span>
+                <span class="k">try</span>
+                <span class="p">{</span>
+                    <span class="n">_serialPort</span><span class="p">.</span><span class="nf">Write</span><span class="p">(</span><span class="n">message</span><span class="p">);</span>
+
+                    <span class="k">if</span> <span class="p">(</span><span class="n">OnStatusChanged</span> <span class="p">!=</span> <span class="k">null</span><span class="p">)</span>
+                        <span class="nf">OnStatusChanged</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="kt">string</span><span class="p">.</span><span class="nf">Format</span><span class="p">(</span>
+                        <span class="s">"Message sent: {0}"</span><span class="p">,</span>
+                        <span class="n">message</span><span class="p">));</span>
+                <span class="p">}</span>
+                <span class="k">catch</span> <span class="p">(</span><span class="n">Exception</span> <span class="n">ex</span><span class="p">)</span>
+                <span class="p">{</span>
+                    <span class="k">if</span> <span class="p">(</span><span class="n">OnStatusChanged</span> <span class="p">!=</span> <span class="k">null</span><span class="p">)</span>
+                        <span class="nf">OnStatusChanged</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="kt">string</span><span class="p">.</span><span class="nf">Format</span><span class="p">(</span>
+                            <span class="s">"Failed to send string: {0}"</span><span class="p">,</span>
+                            <span class="n">ex</span><span class="p">.</span><span class="n">Message</span><span class="p">));</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+
+        <span class="k">private</span> <span class="k">void</span> <span class="nf">StartReading</span><span class="p">()</span>
+        <span class="p">{</span>
+            <span class="k">if</span> <span class="p">(!</span><span class="n">_keepReading</span><span class="p">)</span>
+            <span class="p">{</span>
+                <span class="n">_keepReading</span> <span class="p">=</span> <span class="k">true</span><span class="p">;</span>
+                <span class="n">_readThread</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">Thread</span><span class="p">(</span><span class="n">ReadPort</span><span class="p">);</span>
+                <span class="n">_readThread</span><span class="p">.</span><span class="nf">Start</span><span class="p">();</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+
+        <span class="k">private</span> <span class="k">void</span> <span class="nf">StopReading</span><span class="p">()</span>
+        <span class="p">{</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">_keepReading</span><span class="p">)</span>
+            <span class="p">{</span>
+                <span class="n">_keepReading</span> <span class="p">=</span> <span class="k">false</span><span class="p">;</span>
+                <span class="n">_readThread</span><span class="p">.</span><span class="nf">Join</span><span class="p">();</span>
+                <span class="n">_readThread</span> <span class="p">=</span> <span class="k">null</span><span class="p">;</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+
+        <span class="k">private</span> <span class="k">void</span> <span class="nf">ReadPort</span><span class="p">()</span>
+        <span class="p">{</span>
+            <span class="k">while</span> <span class="p">(</span><span class="n">_keepReading</span><span class="p">)</span>
+            <span class="p">{</span>
+                <span class="k">if</span> <span class="p">(</span><span class="n">_serialPort</span><span class="p">.</span><span class="n">IsOpen</span><span class="p">)</span>
+                <span class="p">{</span>
+                    <span class="c1">//byte[] readBuffer = new byte[_serialPort.ReadBufferSize + 1];</span>
+                    <span class="k">try</span>
+                    <span class="p">{</span>
+                        <span class="c1">//int count = _serialPort.Read(readBuffer, 0, _serialPort.ReadBufferSize);</span>
+                        <span class="c1">//string data = Encoding.ASCII.GetString(readBuffer, 0, count);</span>
+                        <span class="kt">string</span> <span class="n">data</span> <span class="p">=</span> <span class="n">_serialPort</span><span class="p">.</span><span class="nf">ReadLine</span><span class="p">();</span>
+
+                        <span class="k">if</span> <span class="p">(</span><span class="n">OnDataReceived</span> <span class="p">!=</span> <span class="k">null</span><span class="p">)</span>
+                            <span class="nf">OnDataReceived</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="n">data</span><span class="p">);</span>
+                    <span class="p">}</span>
+                    <span class="k">catch</span> <span class="p">(</span><span class="n">TimeoutException</span><span class="p">)</span> <span class="p">{</span> <span class="p">}</span>
+                <span class="p">}</span>
+                <span class="k">else</span>
+                <span class="p">{</span>
+                    <span class="n">TimeSpan</span> <span class="n">waitTime</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">TimeSpan</span><span class="p">(</span><span class="m">0</span><span class="p">,</span> <span class="m">0</span><span class="p">,</span> <span class="m">0</span><span class="p">,</span> <span class="m">0</span><span class="p">,</span> <span class="m">50</span><span class="p">);</span>
+                    <span class="n">Thread</span><span class="p">.</span><span class="nf">Sleep</span><span class="p">(</span><span class="n">waitTime</span><span class="p">);</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div><h3 id="usage-examples">Usage examples</h3><p>To retrieve the data, just subscribe to <code class="highlighter-rouge">OnDataReceived</code> event.<p><strong>Example:</strong><div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">using</span> <span class="nn">HeiswayiNrird.Singleton</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System.Windows</span><span class="p">;</span>
+
+<span class="k">namespace</span> <span class="nn">SerialPortSingleton</span>
+<span class="p">{</span>
+    <span class="c1">/// &lt;summary&gt;</span>
+    <span class="c1">/// Interaction logic for MainWindow.xaml</span>
+    <span class="c1">/// &lt;/summary&gt;</span>
+    <span class="k">public</span> <span class="k">partial</span> <span class="k">class</span> <span class="nc">MainWindow</span> <span class="p">:</span> <span class="n">Window</span>
+    <span class="p">{</span>
+        <span class="c1">// Constructor</span>
+        <span class="k">public</span> <span class="nf">MainWindow</span><span class="p">()</span>
+        <span class="p">{</span>
+            <span class="nf">InitializeComponent</span><span class="p">();</span>
+
+            <span class="c1">// Subscribe to the event</span>
+            <span class="n">SerialPortManager</span><span class="p">.</span><span class="n">Instance</span><span class="p">.</span><span class="n">OnDataReceived</span> <span class="p">+=</span> <span class="n">Handler_OnDataReceived</span><span class="p">;</span>
+        <span class="p">}</span>
+
+        <span class="c1">// Event handler</span>
+        <span class="k">private</span> <span class="k">void</span> <span class="nf">Handler_OnDataReceived</span><span class="p">(</span><span class="kt">object</span> <span class="n">sender</span><span class="p">,</span> <span class="kt">string</span> <span class="n">incomingData</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="c1">// TODO</span>
+            <span class="c1">// Process the data from 'incomingData' variable...</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div><p>For something simpler, you may use anonymous function and marshall it to the main UI thread.<p><strong>Example:</strong><div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">using</span> <span class="nn">HeiswayiNrird.Singleton</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System.Windows</span><span class="p">;</span>
+
+<span class="k">namespace</span> <span class="nn">SerialPortSingleton</span>
+<span class="p">{</span>
+    <span class="c1">/// &lt;summary&gt;</span>
+    <span class="c1">/// Interaction logic for MainWindow.xaml</span>
+    <span class="c1">/// &lt;/summary&gt;</span>
+    <span class="k">public</span> <span class="k">partial</span> <span class="k">class</span> <span class="nc">MainWindow</span> <span class="p">:</span> <span class="n">Window</span>
+    <span class="p">{</span>
+        <span class="c1">// Constructor</span>
+        <span class="k">public</span> <span class="nf">MainWindow</span><span class="p">()</span>
+        <span class="p">{</span>
+            <span class="nf">InitializeComponent</span><span class="p">();</span>
+
+            <span class="c1">// Subscribe to the event</span>
+            <span class="n">SerialPortManager</span><span class="p">.</span><span class="n">Instance</span><span class="p">.</span><span class="n">OnDataReceived</span> <span class="p">+=</span> <span class="p">(</span><span class="n">sender</span><span class="p">,</span> <span class="n">incomingData</span><span class="p">)</span> <span class="p">=&gt;</span>
+            <span class="p">{</span>
+                <span class="c1">// TODO</span>
+                <span class="c1">// Process the data from 'incomingData' variable...</span>
+                <span class="kt">double</span> <span class="k">value</span> <span class="p">=</span> <span class="n">Convert</span><span class="p">.</span><span class="nf">ToDouble</span><span class="p">(</span><span class="n">incomingData</span><span class="p">);</span> <span class="c1">// Assuming incomingData contains "123"</span>
+
+                <span class="c1">// Update to UI...</span>
+                <span class="n">Application</span><span class="p">.</span><span class="n">Current</span><span class="p">.</span><span class="n">Dispatcher</span><span class="p">.</span><span class="nf">BeginInvoke</span><span class="p">(</span><span class="k">new</span> <span class="nf">Action</span><span class="p">(()</span> <span class="p">=&gt;</span>
+                <span class="p">{</span>
+                    <span class="n">BindingTextBoxValue</span> <span class="p">=</span> <span class="k">value</span><span class="p">;</span>
+                <span class="p">}));</span>
+            <span class="p">};</span>
+        <span class="p">}</span>
+
+        <span class="c1">// Binding properties</span>
+        <span class="k">public</span> <span class="kt">double</span> <span class="n">BindingTextBoxValue</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div><p>To handle opening or closing the serial port connection, you may just call <code class="highlighter-rouge">Open()</code> or <code class="highlighter-rouge">Close()</code> method.<p><strong>Example:</strong><div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// To open/start serial port on COM4 with 9600 bps</span>
+<span class="n">SerialPortManager</span><span class="p">.</span><span class="n">Instance</span><span class="p">.</span><span class="nf">Open</span><span class="p">(</span><span class="s">"COM4"</span><span class="p">,</span> <span class="m">9600</span><span class="p">);</span>
+
+<span class="c1">// To close/stop serial port on COM4</span>
+<span class="n">SerialPortManager</span><span class="p">.</span><span class="n">Instance</span><span class="p">.</span><span class="nf">Close</span><span class="p">();</span>
+</code></pre></div></div><p><code class="highlighter-rouge">SerialPortManager</code> also provides a public event to be subscribe for receiving any status update/response. To get the status message, just subscribe to <code class="highlighter-rouge">OnStatusChanged</code> event or <code class="highlighter-rouge">OnSerialPortOpened</code> event for getting Boolean return either the serial port is opened or closed.<p><strong>Example:</strong><div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">using</span> <span class="nn">HeiswayiNrird.Singleton</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System.Windows</span><span class="p">;</span>
+
+<span class="k">namespace</span> <span class="nn">SerialPortSingleton</span>
+<span class="p">{</span>
+    <span class="c1">/// &lt;summary&gt;</span>
+    <span class="c1">/// Interaction logic for MainWindow.xaml</span>
+    <span class="c1">/// &lt;/summary&gt;</span>
+    <span class="k">public</span> <span class="k">partial</span> <span class="k">class</span> <span class="nc">MainWindow</span> <span class="p">:</span> <span class="n">Window</span>
+    <span class="p">{</span>
+        <span class="c1">// Constructor</span>
+        <span class="k">public</span> <span class="nf">MainWindow</span><span class="p">()</span>
+        <span class="p">{</span>
+            <span class="nf">InitializeComponent</span><span class="p">();</span>
+
+            <span class="c1">// Subscribe to the event</span>
+            <span class="n">SerialPortManager</span><span class="p">.</span><span class="n">Instance</span><span class="p">.</span><span class="n">OnStatusChanged</span> <span class="p">+=</span> <span class="p">(</span><span class="n">sender</span><span class="p">,</span> <span class="n">status</span><span class="p">)</span> <span class="p">=&gt;</span>
+            <span class="p">{</span>
+                <span class="c1">// Update connection status message to UI</span>
+                <span class="n">ConnectionStatus</span> <span class="p">=</span> <span class="n">status</span><span class="p">;</span>
+            <span class="p">};</span>
+        <span class="p">}</span>
+
+        <span class="c1">// Binding properties</span>
+        <span class="k">public</span> <span class="kt">string</span> <span class="n">ConnectionStatus</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div><h3 id="avoiding-application-hang-during-serial-port-closing">Avoiding application hang during serial port closing</h3><p>Don’t worry, this class doesn’t have the issue with that. Here is the design approach:<p>As you can see from the class source code, there is no <code class="highlighter-rouge">System.IO.Ports.SerialPort.Close()</code> is used as this will cause a deadlock issue or hang the application. This is because the serial port base stream is locked while serial port events are handled.<p>Instead, use <code class="highlighter-rouge">ReadPort()</code> method to be run on a new thread and use <code class="highlighter-rouge">while</code> loop statement for acquiring or reading data from the serial port. When <code class="highlighter-rouge">SerialPortManager.Instance.Close()</code> is called, <code class="highlighter-rouge">_keepReading</code> will be set to <code class="highlighter-rouge">false</code> which will stop UI from receiving and updating the data while waiting the thread to fully terminate.<div class="tagged"> <a href="https://heiswayi.nrird.com/tagged#csharp"><i class="fa fa-hashtag muted" aria-hidden="true"></i>CSharp</a> <a href="https://heiswayi.nrird.com/tagged#serialport"><i class="fa fa-hashtag muted" aria-hidden="true"></i>SerialPort</a> <a href="https://heiswayi.nrird.com/tagged#singleton"><i class="fa fa-hashtag muted" aria-hidden="true"></i>Singleton</a></div><div id="disqus" style="margin-top:2em"><div id="disqus_thread"></div><script> var disqus_config = function() { this.page.url = "https://heiswayi.nrird.com/2016/csharp-simple-serialport-singleton-class"; this.page.identifier = "/2016/csharp-simple-serialport-singleton-class"; }; (function() { var d = document, s = d.createElement('script'); s.src = '//hnbloggithub.disqus.com/embed.js'; s.setAttribute('data-timestamp', +new Date()); (d.head || d.body).appendChild(s); })(); </script> <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript></div></div></div></div><div class="footer"><div class="copyright"><i class="fa fa-copyright"></i> 2015 - 2018 Heiswayi Nrird // <a href="https://heiswayi.nrird.com/cookie-policy">Cookie Policy</a> // <a href="https://heiswayi.github.io/feed.xml">RSS</a></div></div><script> // Line numbering for code block (function() { var pre = document.getElementsByTagName('pre'), pl = pre.length; for (var i = 0; i < pl; i++) { pre[i].innerHTML = '<span class="line-number"></span>' + pre[i].innerHTML + '<span class="cl"></span>'; var num = pre[i].innerHTML.split(/\n/).length; for (var j = 0; j < (num - 1); j++) { var line_num = pre[i].getElementsByTagName('span')[0]; line_num.innerHTML += '<span>' + (j + 1) + '</span>'; } } })(); </script> <script> (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m) })(window,document,'script','https://www.google-analytics.com/analytics.js','ga'); ga('create', 'UA-58296043-7', 'auto'); ga('send', 'pageview'); </script>
