@@ -1,3 +1,5 @@
+> This repo is automatically built and deployed by [Netlify](https://www.netlify.com/).
+
 This repo contains source code for my personal Jekyll blog, viewable at https://heiswayi.nrird.com.
 
 ### Credits
