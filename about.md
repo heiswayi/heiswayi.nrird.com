@@ -13,7 +13,7 @@ I also own [nrird·xyz](http://nrird.xyz), a personal project called creative st
 
 #### Site Colophon
 
-This site is a place I share my thoughts, opinions, reviews, ideas, rantings, personal projects and findings. This site is built with the excellent [Jekyll](http://jekyllrb.com), a static site generator and freely hosted on [GitHub Pages](https://pages.github.com/). The layout of this site (Jekyll theme) is designed by me with a zen in mind. The source code for this site is available on [GitHub](http://github.com/heiswayi/heiswayi.github.io) and licensed under [MIT License](http://heiswayi.github.io/mit-license).
+This site is a place I share my thoughts, opinions, reviews, ideas, rantings, personal projects and findings. This site is built with the excellent [Jekyll](http://jekyllrb.com), a static site generator and deployed by [Netlify](https://www.netlify.com/) from [my BitBucket account](https://bitbucket.org/heiswayi/).
 
 #### Site Disclaimer
 
