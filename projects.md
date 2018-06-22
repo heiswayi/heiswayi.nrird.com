@@ -23,8 +23,8 @@ keywords: projects page, hyperlinks, my snippets
 
 ### Based on GitHub API
 
-- [heiswayi nrird github gists](https://heiswayi.nrird.com/gists/) — A personalized listing site I built to show all of my public GitHub gists including some code snippets.
-- [heiswayi nrird github repositories](http://heiswayi.github.io/my-repos/) — A personalized listing site I built to show all of my public GitHub repositories including some of my Open Source projects.
+- [Heiswayi Nrird's GitHub Gist Listing](https://heiswayi.github.io/gist/) — A personalized listing site I built to show all of my public GitHub gists including some code snippets.
+- [Heiswayi Nrird's GitHub Repository Listing](https://heiswayi.github.io/repo/) — A personalized listing site I built to show all of my public GitHub repositories including some of my Open Source projects.
 
 ### Hosted using GitHub Pages
 
