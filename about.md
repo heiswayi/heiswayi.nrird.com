@@ -5,15 +5,13 @@ description: Little information about the human behind this site.
 keywords: about page, about me, heiswayi nrird, the author
 ---
 
-Hi. I'm Heiswayi Nrird. Fixing bugs at [Keysight Technologies](https://www.keysight.com) (Penang, MY). Some of my spare time works are on [GitHub](http://github.com/heiswayi), [Gist](http://heiswayi.github.io/my-gists/), [CodePen](http://codepen.io/heiswayi/), and [JSFiddle](http://jsfiddle.net/user/heiswayi/). Sometimes, I'm off grid to capture some [beautiful landscapes](https://heiswayi.github.io/photography/). For my personal experience, check out [my résumé here](https://heiswayi.github.io/resume/) or [my LinkedIn](https://my.linkedin.com/in/nrird). Any question, shoot me an email at **hnrird (at) gmail.com**.
-
-I also own [nrird·xyz](http://nrird.xyz), a personal project called creative studio that focuses on UX design, front-end app development and data visualization.
+Hi. I've been known as **Heiswayi Nrird**. A _software engineer_ at [Keysight Technologies](https://www.keysight.com) (Penang, MY). For my personal experience, please check out [my résumé here](https://heiswayi.github.io/resume/) or connect with me on [my LinkedIn](https://my.linkedin.com/in/nrird). Some of my spare time works can be found on [GitHub](https://heiswayi.github.io/repo), [Gist](https://heiswayi.github.io/gist), [CodePen](http://codepen.io/heiswayi/), and [JSFiddle](http://jsfiddle.net/user/heiswayi/). Sometimes, I'm off grid to capture some [beautiful landscapes](https://heiswayi.github.io/photography/). If you have any question, just shoot me an email at **hnrird (at) gmail.com**.
 
 ---
 
 #### Site Colophon
 
-This site is a place I share my thoughts, opinions, reviews, ideas, rantings, personal projects and findings. This site is built with the excellent [Jekyll](http://jekyllrb.com), a static site generator and deployed by [Netlify](https://www.netlify.com/) from [my BitBucket account](https://bitbucket.org/heiswayi/).
+This site is a place I share my thoughts, experiences, opinions, reviews, ideas, rantings, personal projects and findings. This site is built with the excellent [Jekyll](http://jekyllrb.com), a popular static site generator and automatically being deployed by [Netlify](https://www.netlify.com/). The source code of this site is hosted on [BitBucket](https://bitbucket.org/heiswayi/) (private repo).
 
 #### Site Disclaimer
 
