@@ -21,9 +21,9 @@ keywords: projects page, hyperlinks, my snippets
 
 ## More Projects...
 
-### Using GitHub API and hosted using GitHub Pages
+### Based on GitHub API
 
-- [heiswayi.github.gists](http://heiswayi.github.io/my-gists/) — A personalized listing site I built to show all of my public GitHub Gists including some code snippets.
+- [heiswayi nrird github gists](https://heiswayi.nrird.com/gists/) — A personalized listing site I built to show all of my public GitHub gists including some code snippets.
 - [heiswayi nrird github repositories](http://heiswayi.github.io/my-repos/) — A personalized listing site I built to show all of my public GitHub repositories including some of my Open Source projects.
 
 ### Hosted using GitHub Pages
