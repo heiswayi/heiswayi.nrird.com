@@ -1,6 +1,8 @@
 ---
-layout: default
-title: Tagged
+layout: page
+title: Writing
+description: A list of blog posts
+keywords: blog posts, articles, writing, non-project
 ---
 
 {% assign rawtags = "" %}
@@ -22,48 +24,17 @@ title: Tagged
 	{% endif %}
 {% endfor %}
 
-{% if tags %}
-<div class="tag-cloud tag-cloud-small" id="Tags">
-  {% for tag in tags %}
-    <a class="tag-anchor" href="#{{ tag | slugify }}"><i class="fa fa-tag muted" aria-hidden="true"></i> {{ tag }}</a>
-  {% endfor %}
-</div>
-{% endif %}
-
 <div class="posts">
-  {% for tag in tags %}
+  {% for post in site.posts %}
 
-	<style>
-	#{{ tag | slugify }} {
-		transition: opacity 0.5s ease-out;
-    opacity: 0;
-    height: 0;
-    overflow: hidden;
-	}
-
-	#{{ tag | slugify }}:target {
-		opacity: 1;
-    height: auto;
-	}
-	</style>
-
-	<div id="{{ tag | slugify }}">
-    <h2 class="year" ><i class="fa fa-hashtag muted" aria-hidden="true"></i>{{ tag }}</h2>
-
-    {% for post in site.posts %}
-    {% if post.tags contains tag %}
+    {% unless post.tags contains "Project" %}
 
     <div class="post-list">
 	    <div class="text-truncate"><a href="{{ post.url }}">{{ post.title }}</a></div>
       <div class="post-list-desc">{{ post.description }}</div>
     </div>
 
-    {% endif %}
-    {% endfor %}
-
-	</div>
+    {% endunless %}
 
   {% endfor %}
 </div>
-
-<hr/>

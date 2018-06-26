@@ -1,8 +1,8 @@
 ---
 layout: page
 title: Projects
-description: Hyperlinks to some of my projects and snippets.
-keywords: projects page, hyperlinks, my snippets
+description: A list of projects
+keywords: projects, open source, github, snippets, webapps
 ---
 
 ## Published Posts tagged with "Project"...
@@ -57,3 +57,7 @@ keywords: projects page, hyperlinks, my snippets
 - [Website Checklist](http://nrird.xyz/website-checklist) — Checklist for starting a website.
 - [Encrypto Zero](https://nrird.xyz/encrypto-zero) — Just another minimalist, secure and encrypted pastebin app for personal use purpose.
 - [Document Writer](https://nrird.xyz/document-writer) — A minimalist web-based writing tool to write document using web browser.
+
+### Others
+
+- [Personal Reminder Note](/reminder) — A note to remind to myself.

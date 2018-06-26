@@ -1,5 +1,6 @@
 ---
-layout: default
+layout: compress
+published: true
 title: Home
 ---
 
@@ -22,29 +23,88 @@ title: Home
 	{% endif %}
 {% endfor %}
 
-<div class="posts">
-  {% for post in site.posts %}
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en" class="no-js" itemscope itemtype="http://schema.org/WebPage">
 
-    {% unless post.tags contains "Project" %}
+{% include head.html %}
+
+<body>
+<a href="#content" class="skip">Skip to content</a>
+<div class="wrap">
+
+<div class="masthead">
+  <div class="container">
+    <h2 class="masthead-title">
+      <a href="{{ site.url }}" title="{{ site.title }}" class="title">{{ site.logo_text | downcase }} <span class="dot-red">•</span><span class="dot-yellow">•</span><span class="dot-green">•</span></a>
+      {% if site.show_tagline %}
+      <small>{% include tagline.html %}</small>
+      {% endif %}
+    </h2>
+  </div>
+</div>
+
+<div id="content" class="container content">
+
+<div class="author-info">
+	<p class="intro-text">Hi. I'm <strong>Heiswayi Nrird</strong>. I work as a <em>Software Engineer</em> at <a href="https://www.keysight.com">Keysight Technologies</a> (Penang, MY). Interested in <strong>Frontend Application Development &amp; User Experience Design</strong>. Sometimes, I'm off-grid to capture <a href="https://heiswayi.github.io/photography">some beautiful landscapes</a>. Welcome to my personal blog! Got any question? Shoot me an email at <strong>hnrird(at)gmail.com</strong>.</p>
+
+	<p><a href="https://heiswayi.github.io/resume/">Résumé</a> // <a href="https://my.linkedin.com/in/nrird">LinkedIn</a> // <a href="https://heiswayi.github.io/repo">GitHub</a> // <a href="https://heiswayi.github.io/gist">Gist</a> // <a href="http://codepen.io/heiswayi/">CodePen</a> // <a href="http://jsfiddle.net/user/heiswayi/">JSFiddle</a></p>
+
+	<p><a href="{{ "/writing" | prepend: site.baseurl | prepend: site.url }}">Blog Archive</a> // <a href="{{ "/projects" | prepend: site.baseurl | prepend: site.url }}">Projects</a></p>
+</div>
+
+<hr/>
+
+{% if tags %}
+<div class="tag-cloud tag-cloud-small" id="Tags">
+  {% for tag in tags %}
+    <a class="tag-anchor" href="#{{ tag | slugify }}"><i class="fa fa-tag muted" aria-hidden="true"></i> {{ tag }}</a>
+	{% endfor %}
+</div>
+{% endif %}
+
+<div class="posts">
+  {% for tag in tags %}
+
+	<style>
+	#{{ tag | slugify }} {
+		transition: opacity 0.5s ease-out;
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+	}
+
+	#{{ tag | slugify }}:target {
+		opacity: 1;
+    height: auto;
+	}
+	</style>
+
+	<div id="{{ tag | slugify }}">
+    <h2 class="year" ><i class="fa fa-hashtag muted" aria-hidden="true"></i>{{ tag }}</h2>
+
+    {% for post in site.posts %}
+    {% if post.tags contains tag %}
 
     <div class="post-list">
 	    <div class="text-truncate"><a href="{{ post.url }}">{{ post.title }}</a></div>
       <div class="post-list-desc">{{ post.description }}</div>
     </div>
 
-    {% endunless %}
+    {% endif %}
+    {% endfor %}
+
+	</div>
 
   {% endfor %}
 </div>
 
 <hr/>
 
-{% if tags %}
-<!--
-<div class="tag-cloud tag-cloud-small" id="Tags">
-  {% for tag in tags %}
-    <a id="{{ tag | slugify }}" class="tag-anchor" href="{{ site.url }}{{ site.baseurl }}/tagged#{{ tag | slugify }}"><i class="fa fa-tag muted"></i> {{ tag }}</a>
-  {% endfor %}
 </div>
--->
-{% endif %}
+</div>
+
+{% include foot.html %}
+
+</body>
+</html>
