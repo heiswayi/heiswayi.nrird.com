@@ -20,11 +20,14 @@ body {
     background-color: #fff;
     -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
-    font-family: 'Inter UI', -apple-system, BlinkMacSystemFont, 'avenir next', avenir, helvetica, 'helvetica neue', ubuntu, roboto, noto, 'segoe ui', arial, sans-serif;
+    /*font-family: 'Inter UI', -apple-system, BlinkMacSystemFont, 'avenir next', avenir, helvetica, 'helvetica neue', ubuntu, roboto, noto, 'segoe ui', arial, sans-serif;*/
+    font-family: 'PT Serif', Georgia, 'Times New Roman', serif;
     font-size: 18px;
     line-height: 1.6;
-    -webkit-font-smoothing: antialiased;
-	  -moz-osx-font-smoothing: grayscale;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
+    text-rendering: optimizeLegibility !important;
+    -webkit-font-smoothing: antialiased !important;
+    -moz-osx-font-smoothing: grayscale !important;
 }
 
 a {
@@ -34,7 +37,6 @@ a {
     -moz-transition: all 500ms ease;
     -o-transition: all 500ms ease;
     transition: all 500ms ease;
-    
     /* These are technically the same, but use both */
     overflow-wrap: break-word;
     word-wrap: break-word;
@@ -48,7 +50,6 @@ a {
     -moz-hyphens: auto;
     -webkit-hyphens: auto;
     hyphens: auto;
-
     &:hover {
         background-color: #069;
         color: #fff;
@@ -64,27 +65,20 @@ h6 {
     margin-bottom: 1rem;
     line-height: 1.25;
     color: #313131;
-    font-family: 'Inter UI', sans-serif;
-    font-weight: 500;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
 }
 
 h1 {
     font-size: 2rem;
-    letter-spacing: -0.016em;
 }
 
 h2 {
     margin-top: 1rem;
     font-size: 1.5rem;
-    letter-spacing: -0.015em;
 }
 
 h3 {
     margin-top: 1.5rem;
     font-size: 1.25rem;
-    letter-spacing: -0.012em;
 }
 
 h4,
@@ -92,7 +86,6 @@ h5,
 h6 {
     margin-top: 1.1rem;
     font-size: 1.1rem;
-    letter-spacing: -0.010em;
 }
 
 dt {
@@ -115,7 +108,6 @@ abbr {
     font-weight: 700;
     color: #555;
     text-transform: uppercase;
-
     &[title] {
         cursor: help;
         border-bottom: 1px dotted #e5e5e5;
@@ -124,7 +116,7 @@ abbr {
 
 code,
 pre {
-    font-family: "SFMono-Regular", Menlo, Consolas, Inconsolata, monospace;
+    font-family: 'SFMono-Regular', Menlo, Consolas, 'Inconsolata', monospace;
 }
 
 code {
@@ -142,31 +134,27 @@ pre {
     border: 1px solid #ddd;
     padding: .5rem 2rem .5rem .5rem;
     max-height: 800px;
-
     code {
         color: inherit;
         background-color: transparent;
         display: block;
         padding: 0;
     }
-
     .line-number {
         display: block;
-        float:left;
-        margin:0 1em 0 -1em;
-        border-right:1px solid #ddd;
-        text-align:right;
-
+        float: left;
+        margin: 0 1em 0 -1em;
+        border-right: 1px solid #ddd;
+        text-align: right;
         span {
-          display:block;
-          padding:0 .5em 0 1em;
-          color: #ccc;
+            display: block;
+            padding: 0 .5em 0 1em;
+            color: #ccc;
         }
     }
-
     .cl {
-      display:block;
-      clear:both;
+        display: block;
+        clear: both;
     }
 }
 
@@ -184,7 +172,7 @@ img {
     margin: 1rem auto;
     max-width: 100%;
     height: auto;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
 }
 
 table {
@@ -241,7 +229,7 @@ h2.year i.fa {
     margin-bottom: 2rem;
     /*background-color: #f3f3f3;*/
     /*background: repeating-linear-gradient(135deg, #dfdfdf 0,#dfdfdf 1%, #f3f3f3 0,#f3f3f3 50%) 0 / 20px 20px;*/
-    background: repeating-linear-gradient(135deg, #dfdfdf 0,#dfdfdf 1%, #ffffff 0,#ffffff 50%) 0 / 20px 20px;
+    background: repeating-linear-gradient(135deg, #dfdfdf 0, #dfdfdf 1%, #ffffff 0, #ffffff 50%) 0 / 20px 20px;
     position: relative;
     border-bottom: 1px solid #eeeeee;
     /*box-shadow: 0 1px 1px rgba(0,0,0,0.05);*/
@@ -251,28 +239,30 @@ h2.year i.fa {
     margin-top: 2rem;
     margin-bottom: 0;
     color: #505050;
-
     a {
         color: #505050;
         font-weight: 900;
         font-size: 3rem;
-
         &:hover {
             background-color: transparent;
         }
-
-        .dot-red { color: #FF4136; }
-        .dot-yellow { color: #FFDC00; }
-        .dot-green { color: #2ECC40; }
+        .dot-red {
+            color: #FF4136;
+        }
+        .dot-yellow {
+            color: #FFDC00;
+        }
+        .dot-green {
+            color: #2ECC40;
+        }
     }
-
     small {
         font-size: 1.2rem;
         font-weight: 700;
         color: #aaa;
         display: block;
         clear: both;
-        font-family: "SFMono-Regular", Menlo, Consolas, Inconsolata, monospace;
+        font-family: 'SFMono-Regular', Menlo, Consolas, 'Inconsolata', monospace;
         margin-top: -10px;
     }
 }
@@ -280,18 +270,15 @@ h2.year i.fa {
 .page,
 .post {
     margin-bottom: 4em;
-    font-size: 0.9rem;
-    letter-spacing: -0.004em;
-
+    font-size: 1rem;
     ul {
-      padding-left: 20px;
-      list-style: none;
-
-      li:before {
-        font-family: 'FontAwesome';
-        content: '\f096';
-        margin:0 5px 0 -20px;
-      }
+        padding-left: 20px;
+        list-style: none;
+        li:before {
+            font-family: 'FontAwesome';
+            content: '\f096';
+            margin: 0 5px 0 -20px;
+        }
     }
 }
 
@@ -299,7 +286,6 @@ h2.year i.fa {
     .tagged {
         margin-top: 1rem;
     }
-
     .tagged a {
         border: 1px solid #ddd;
         padding: 2px 5px;
@@ -317,7 +303,6 @@ h2.year i.fa {
         -moz-border-radius: 3px;
         border-radius: 3px;
     }
-
     .tagged a:hover {
         cursor: pointer;
         border: 1px solid #555;
@@ -340,18 +325,15 @@ h2.year i.fa {
 .page a,
 .post a {
     border-bottom: 1px solid #069;
-
     &.reversefootnote {
         border-bottom: none;
     }
-
     &.footnote {
         border-bottom: none;
         background: transparent;
         color: #FF4136;
         padding-left: 3px;
         padding-right: 3px;
-
         &:hover {
             background: #069 !important;
             color: #fff;
@@ -388,21 +370,21 @@ blockquote p:last-child {
 }
 
 .edit-this-page {
-  padding-bottom: 10px;
-  text-align: right;
-  a {
-    text-transform: uppercase;
-    font-size: 0.8rem;
-    text-decoration: none;
-    border-bottom: none;
-    color: #aaa;
-    padding: 0;
-    letter-spacing: 1px;
-    &:hover {
-      background: #333;
-      color: #eee;
+    padding-bottom: 10px;
+    text-align: right;
+    a {
+        text-transform: uppercase;
+        font-size: 0.8rem;
+        text-decoration: none;
+        border-bottom: none;
+        color: #aaa;
+        padding: 0;
+        letter-spacing: 1px;
+        &:hover {
+            background: #333;
+            color: #eee;
+        }
     }
-  }
 }
 
 .post-date {
@@ -419,8 +401,7 @@ blockquote p:last-child {
 
 .post-list-desc {
     color: #777;
-    font-size: 0.9rem;
-    letter-spacing: -0.004em;
+    font-size: 1rem;
 }
 
 .page-top-meta,
@@ -471,7 +452,6 @@ blockquote p:last-child {
     *zoom: 1;
     font-weight: 400;
     max-width: 28rem;
-
     &:after {
         clear: both;
         content: "";
@@ -484,10 +464,8 @@ blockquote p:last-child {
     margin: 20px 0 0 -42px;
     overflow: hidden;
     line-height: 2;
-
     li {
         float: left;
-
         a {
             color: #666;
             border-bottom: 0;
@@ -501,19 +479,17 @@ blockquote p:last-child {
             -webkit-border-radius: 3px;
             -moz-border-radius: 3px;
             border-radius: 3px;
-            box-shadow: 0 1px 2px rgba(0,0,0,0.15);
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+            font-family: 'SFMono-Regular', Menlo, Consolas, 'Inconsolata', monospace;
             font-size: 0.75rem;
-
             &:hover {
                 border: 1px solid #777;
                 background: #666;
                 color: #fff;
-                box-shadow: 0 1px 2px rgba(0,0,0,0.35);
+                box-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
             }
-
             &.bg-red {
                 color: #FF4136;
-
                 &:hover {
                     color: #fff;
                 }
@@ -530,7 +506,6 @@ blockquote p:last-child {
 .footer-social-links {
     font-size: 1rem;
     margin-top: 5px;
-
     a {
         padding: 3px 10px;
         height: auto;
@@ -547,7 +522,6 @@ blockquote p:last-child {
         -webkit-border-radius: 3px;
         -moz-border-radius: 3px;
         border-radius: 3px;
-
         &:hover {
             color: #fff;
             background: #111;
@@ -582,7 +556,6 @@ a.skip:hover {
 
 .tag-cloud {
     margin-bottom: 20px;
-
     a.tag-anchor {
         margin-right: 4px;
         margin-bottom: 8px;
@@ -607,39 +580,35 @@ a.skip:hover {
 }
 
 .tag-cloud-small {
-  a.tag-anchor {
-    font-size: 0.8rem;
-    letter-spacing: -0.002em;
-  }
+    a.tag-anchor {
+        font-family: 'SFMono-Regular', Menlo, Consolas, 'Inconsolata', monospace;
+        font-size: 0.8rem;
+    }
 }
 
 .muted {
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
-  filter: alpha(opacity=50);
-  -moz-opacity: 0.5;
-  -khtml-opacity: 0.5;
-  opacity: 0.5;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+    filter: alpha(opacity=50);
+    -moz-opacity: 0.5;
+    -khtml-opacity: 0.5;
+    opacity: 0.5;
 }
 
 .empty-space {
-  display: block;
-  margin: 0 auto;
-  height: 3rem;
+    display: block;
+    margin: 0 auto;
+    height: 3rem;
 }
 
 .footnotes {
     margin-top: 1rem;
-    font-size: 0.75rem;
-    letter-spacing: 0.001em;
-
+    font-family: 'SFMono-Regular', Menlo, Consolas, 'Inconsolata', monospace;
+    font-size: 0.8rem;
     ol {
-
-
         li p {
             margin-bottom: 0;
         }
     }
-
     &:before {
         content: 'Footnote:';
         display: block;
