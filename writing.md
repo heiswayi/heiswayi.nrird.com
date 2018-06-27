@@ -30,7 +30,7 @@ keywords: blog posts, articles, writing, non-project
     {% unless post.tags contains "Project" %}
 
     <div class="post-list">
-	    <div class="text-truncate"><a href="{{ post.url }}">{{ post.title }}</a></div>
+	    <div class="post-list-title"><a href="{{ post.url }}">{{ post.title }}</a></div>
       <div class="post-list-desc">{{ post.description }}</div>
     </div>
 

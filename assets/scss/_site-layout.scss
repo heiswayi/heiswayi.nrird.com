@@ -20,7 +20,6 @@ body {
     background-color: #fff;
     -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
-    /*font-family: 'Inter UI', -apple-system, BlinkMacSystemFont, 'avenir next', avenir, helvetica, 'helvetica neue', ubuntu, roboto, noto, 'segoe ui', arial, sans-serif;*/
     font-family: 'PT Serif', Georgia, 'Times New Roman', serif;
     font-size: 18px;
     line-height: 1.6;
@@ -227,8 +226,6 @@ h2.year i.fa {
     padding-top: 1rem;
     padding-bottom: 2rem;
     margin-bottom: 2rem;
-    /*background-color: #f3f3f3;*/
-    /*background: repeating-linear-gradient(135deg, #dfdfdf 0,#dfdfdf 1%, #f3f3f3 0,#f3f3f3 50%) 0 / 20px 20px;*/
     background: repeating-linear-gradient(135deg, #dfdfdf 0, #dfdfdf 1%, #ffffff 0, #ffffff 50%) 0 / 20px 20px;
     position: relative;
     border-bottom: 1px solid #eeeeee;
@@ -242,6 +239,7 @@ h2.year i.fa {
     a {
         color: #505050;
         font-weight: 900;
+        font-family: 'Concert One', cursive;
         font-size: 3rem;
         &:hover {
             background-color: transparent;
@@ -262,8 +260,8 @@ h2.year i.fa {
         color: #aaa;
         display: block;
         clear: both;
-        font-family: 'SFMono-Regular', Menlo, Consolas, 'Inconsolata', monospace;
-        margin-top: -10px;
+        font-family: 'Inconsolata', monospace;
+        margin-top: -5px;
     }
 }
 
@@ -397,6 +395,10 @@ blockquote p:last-child {
     display: inline-block;
     letter-spacing: 1px;
     text-transform: uppercase;
+}
+
+.post-list-title {
+    font-size: 1.2rem;
 }
 
 .post-list-desc {
@@ -556,7 +558,7 @@ a.skip:hover {
 
 .tag-cloud {
     margin-bottom: 20px;
-    a.tag-anchor {
+    a {
         margin-right: 4px;
         margin-bottom: 8px;
         border: 1px solid transparent;
@@ -564,24 +566,41 @@ a.skip:hover {
         padding-left: 5px;
         padding-right: 5px;
         display: inline-block;
-        background: #f0f0f0;
-        color: #444;
         -webkit-border-radius: 3px;
         -moz-border-radius: 3px;
         border-radius: 3px;
         line-height: 2;
-    }
-    a.tag-anchor:active,
-    a.tag-anchor:focus,
-    a.tag-anchor:hover {
-        background: #069;
-        color: #fff;
+        font-family: 'SFMono-Regular', Menlo, Consolas, 'Inconsolata', monospace;
+
+        &.tag-anchor {
+            background: #f0f0f0;
+            color: #444;
+
+            &:active,
+            &:focus,
+            &:hover {
+                background: #069;
+                color: #fff;
+            }
+        }
+
+        &.tag-anchor-red {
+            background: #FF4136;
+            color: #fff;
+
+            &:active,
+            &:focus,
+            &:hover {
+                background: #069;
+                color: #fff;
+            }
+        }
     }
 }
 
 .tag-cloud-small {
-    a.tag-anchor {
-        font-family: 'SFMono-Regular', Menlo, Consolas, 'Inconsolata', monospace;
+    a.tag-anchor,
+    a.tag-anchor-red {
         font-size: 0.8rem;
     }
 }
