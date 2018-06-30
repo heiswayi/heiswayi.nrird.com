@@ -55,7 +55,7 @@ title: Home
 
 {% if tags %}
 <div class="tag-cloud tag-cloud-small" id="Tags">
-	<a class="tag-anchor-red" href="{{ "/writing" | prepend: site.baseurl | prepend: site.url }}"><i class="fa fa-pencil muted" aria-hidden="true"></i> <strong>View all blogs</strong></a>
+	<a class="tag-anchor-red" href="{{ "/blog" | prepend: site.baseurl | prepend: site.url }}"><i class="fa fa-pencil muted" aria-hidden="true"></i> <strong>View all blogs</strong></a>
 	<a class="tag-anchor-red" href="{{ "/projects" | prepend: site.baseurl | prepend: site.url }}"><i class="fa fa-space-shuttle muted" aria-hidden="true"></i> <strong>View all projects</strong></a>
   {% for tag in tags %}
     <a class="tag-anchor" href="#{{ tag | slugify }}"><i class="fa fa-tag muted" aria-hidden="true"></i> {{ tag }}</a>

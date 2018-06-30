@@ -20,7 +20,7 @@ body {
     background-color: #fff;
     -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
-    font-family: 'PT Serif', Georgia, 'Times New Roman', serif;
+    font-family: 'PT Sans', sans-serif;
     font-size: 18px;
     line-height: 1.6;
     text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
@@ -260,8 +260,9 @@ h2.year i.fa {
         color: #aaa;
         display: block;
         clear: both;
-        font-family: 'Inconsolata', monospace;
+        font-family: 'SFMono-Regular', Menlo, Consolas, 'Inconsolata', monospace;
         margin-top: -5px;
+        letter-spacing: 0.02rem;
     }
 }
 
@@ -322,7 +323,7 @@ h2.year i.fa {
 
 .page a,
 .post a {
-    border-bottom: 1px solid #069;
+    /*border-bottom: 1px solid #069;*/
     &.reversefootnote {
         border-bottom: none;
     }

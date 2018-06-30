@@ -6,6 +6,7 @@ _site/
 *.draft
 DRAFT-*.md
 _deleted/
+Gemfile.lock
 
 #################
 ## Eclipse
