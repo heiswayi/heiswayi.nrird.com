@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Create MSI bootstrapper (setup.exe) using WiX Burn
-description: Here's how I create a custom bootstrapper (setup.exe) for my MSI installer using Windows Installler (WiX) Burn. Full example source code provided.
-keywords: wix toolset, windows installer, msi, windows installer xml, wix burn, installer bootstrapper, setup.exe
-tags: [WiX Toolset, Windows Installer, MSI]
+title: Creating MSI bootstrapper (setup.exe) using WiX bootstrapper (Burn)
+description: Here's the example of WiX script used to create a custom bootstrapper i.e. setup.exe for my application MSI setup package.
+keywords: wix toolset, windows installer, windows installer xml, wix burn, installer bootstrapper, msi setup
+tags: [WiX Toolset, Windows Installer]
 comments: true
 ---
 
-In my previous blog post "[Create a basic MSI installer using WiX Toolset](https://heiswayi.nrird.com/2018/create-basic-msi-installer-using-wix-toolset)", I have shared about how I created a basic `.msi` installer using WiX toolset for my app deployment. And today, I'm going to share how I create a bootstrapper i.e. setup.exe using WiX to chain the installations that are packaged as `*.msi`. One of the reasons you need a bootstrapper is because there is only one instance of `.msi` can be run at a time. Using a bootstrapper, you can install the required prerequisites for your app deployment, e.g. .NET Framework.
+In this post, I would like to share how I created a bootstrapper i.e. **setup.exe** using WiX bootstrapper called [**Burn**](http://robmensching.com/blog/posts/2009/7/14/lets-talk-about-burn/) to chain the installations that are packaged as `*.msi`. One of the reasons you need a bootstrapper is because there is only one instance of `.msi` can be run at a time. Using a bootstrapper, you can install the required prerequisites for your application deployment such as a particular version of .NET Framework.
 
-Example of my bootstrapper UI
+Example screenshot of my bootstrapper UI
 ![Example of my bootstrapper UI](https://i.imgur.com/G6mL3rE.png)
 
 ### Example of project files structure for creating the bootstrapper
@@ -38,7 +38,7 @@ WiX project files:
 - `myAppSetup.msi` - Example of `.msi` installer file for my app installation
 - `banner.png`, `ClassicTheme.wxl` & `ClassicTheme.xml` - Modified theme for customizing the bootstrapper interface ([Check this GitHub repo for the source code](https://github.com/heiswayi/wix-msi/tree/master/exe-bootstrapper/bootstrapper_res))
 
-### Bootstrapper source code
+### WiX bootstrapper source code
 
 _Bootstrapper.wxs_
 
@@ -100,11 +100,11 @@ _Bootstrapper.wxs_
 </Wix>
 ```
 
-For more detailed on other available element properties, please take a look on [WiX Bundle Element documentation here](http://wixtoolset.org/documentation/manual/v3/xsd/wix/bundle.html).
+For more detailed on other available element properties, check out [WiX Bundle Element documentation here](http://wixtoolset.org/documentation/manual/v3/xsd/wix/bundle.html).
 
 ### Batch script for compiling the WiX project
 
-These are the WiX toolset that I use in the script below:-
+These are the WiX toolset that I used in the script below:-
 - **candle.exe** - To generate `*.wixobj` file
 - **light.exe** - To compile `*.wixobj` and generate the bootstrapper file (`*.exe`).
 
@@ -117,7 +117,7 @@ _MakeBootstrapper.bat_
 "%WIX%bin\light.exe" "_Bootstrapper.wixobj" -out "Bootstrapper.exe" -ext WixNetFxExtension -ext WixBalExtension -ext WixUtilExtension -nologo
 ```
 
-### More screenshots of my bootstrapper
+### More screenshots of my bootstrapper setup
 
 Installing the packages
 ![Installing the packages](https://i.imgur.com/0dMOkiD.png)
@@ -125,10 +125,10 @@ Installing the packages
 When user cancelled installation
 ![When user cancelled installtion](https://i.imgur.com/3Ou5t8d.png)
 
-### Extra good readings and references
-
+### Some recommended readings
 - [Windows Installer Basics: Bootstrapper EXE Programs](http://makemsi-manual.dennisbareis.com/bootstrapper_exe_programs.htm)
 - [Joy of Setup - Best Practices](https://www.joyofsetup.com/tag/best-practices/)
 - [Understanding the Difference Between .EXE and .MSI](https://www.symantec.com/connect/articles/understanding-difference-between-exe-and-msi)
 - [hould you run MSI or EXE Setup files?](https://www.ghacks.net/2009/03/23/msi-or-exe-setup/)
-- And a lot more... the rest are on Google in case you don't know :P
+
+Happy bootstrapping!
