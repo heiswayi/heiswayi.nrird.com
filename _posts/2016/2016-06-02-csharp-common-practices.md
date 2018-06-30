@@ -3,7 +3,7 @@ layout: post
 title: C# common practices
 description: Just sharing some of the good common coding practices that I have been practicing in my coding style at work for C# programming.
 keywords: csharp common practices, self-documented code, code optimization, good coding practices
-tags: [CSharp, Best Practices]
+tags: [C#, Best Practices]
 comments: true
 ---
 

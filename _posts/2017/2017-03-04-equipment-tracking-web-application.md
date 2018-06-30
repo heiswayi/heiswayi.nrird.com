@@ -3,7 +3,7 @@ layout: post
 title: Equipment Tracking web application
 description: A simple webapp CRUD application with basic user authentication system for internal equipment tracking use.
 keywords: cured application, php application, datatables, equipment tracking web app, crud ajax web application
-tags: [PHP, CRUD, AJAX, DataTables, Web Application]
+tags: [PHP, CRUD, AJAX, DataTables, jQuery, JavaScript]
 comments: true
 ---
 

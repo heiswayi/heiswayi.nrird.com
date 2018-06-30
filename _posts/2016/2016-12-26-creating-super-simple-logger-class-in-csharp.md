@@ -3,7 +3,7 @@ layout: post
 title: Creating super simple logger class in C#
 description: SimpleLogger.cs is a very simple logger class that I wrote for my own use in some of my mini C# project developments.
 keywords: c# programming, simple logger class
-tags: [CSharp, Utility]
+tags: [C#, Utility]
 comments: true
 ---
 

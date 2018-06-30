@@ -3,7 +3,7 @@ layout: post
 title: Directory Crawler
 description: A simple command-line program to crawl all accessible directories recursively within a target directory and outputs the results into a text file.
 keywords: c# programming, console application, directory crawler, get directories
-tags: [CSharp, Console Application, Utility, Project]
+tags: [C#, Utility, Project]
 comments: true
 ---
 

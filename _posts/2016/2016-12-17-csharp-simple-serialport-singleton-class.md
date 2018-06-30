@@ -3,7 +3,7 @@ layout: post
 title: C# - Simple SerialPort singleton class
 description: My singleton class code snippet called SerialPortManager for handling serial data communication in some of my C# projects.
 keywords: c# programming, singleton design pattern, serial port, serial communication
-tags: [CSharp, SerialPort, Singleton]
+tags: [C#, SerialPort, Singleton]
 comments: true
 ---
 

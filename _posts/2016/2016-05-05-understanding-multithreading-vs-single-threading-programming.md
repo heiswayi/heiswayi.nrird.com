@@ -3,7 +3,7 @@ layout: post
 title: Understanding multithreading vs single threading programming
 description: Full example code for Windows Console application to demonstrate the multithreading programming in .NET C#.
 keywords: multithreading, single threading, sample source code, demonstration, threadpool, task, backgroundworker, windows console application
-tags: [CSharp, Multithreading, Console Application]
+tags: [C#, Multithreading]
 comments: true
 ---
 

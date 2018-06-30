@@ -3,7 +3,7 @@ layout: post
 title: Mini App Killer
 description: A simple utility program to kill any running application or process.
 keywords: c# programming, mini app killer, end task process, system tray, notify icon
-tags: [CSharp, WPF, Project]
+tags: [C#, WPF, Project]
 comments: true
 ---
 

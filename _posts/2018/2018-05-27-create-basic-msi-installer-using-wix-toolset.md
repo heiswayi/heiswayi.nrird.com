@@ -3,7 +3,7 @@ layout: post
 title: Create a basic MSI installer using WiX Toolset
 description: Here's how I create a basic MSI installer for my application using Windows Installler XML (WiX) Toolset. Full example source code provided.
 keywords: wix toolset, windows installer, msi, windows installer xml
-tags: [WiX Toolset, Windows Installer, MSI]
+tags: [WiX Toolset, Windows Installer]
 comments: true
 ---
 
