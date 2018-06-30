@@ -1,7 +1,7 @@
 ---
 layout: post
 title: PHP - Encryption, Decryption and Password Hashing
-description: If you need custom PHP function to secure your confidential information or to hash user password in unbreakable manner, these PHP code snippets may help and ease up your work.
+description: If you need custom PHP function to secure your confidential information or to hash user password in unbreakable manner, this post provides PHP code snippets that may help and ease up your work.
 keywords: php encryption function, php decryption function, secure password hashing using php
 tags: [PHP, Encryption, Decryption, Password Hashing]
 comments: true
