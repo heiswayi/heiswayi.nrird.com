@@ -1,19 +1,19 @@
 ---
 layout: post
-title: Dynamically modify the content of a file using InstallShield deferred custom action
-description: Provided solution shows how to use deferred custom action to do a find-and-replace of particular string in a file during installation time using InstallShield Basic MSI.
+title: Dynamically modify the content of a file with InstallScript using deferred custom action
+description: Provided solution shows how to use deferred custom action to do a find-and-replace of particular string in a file during installation time in InstallShield Basic MSI.
 keywords: problem resolution, installshield 2016, basic msi project, deferred custom action, customactiondata, find-and-replace installscript
-tags: [InstallShield, Basic MSI, InstallScript]
+tags: [InstallShield, InstallScript, Windows Installer]
 comments: true
 ---
 
-### The problem
+### Problem statement
 
-I have a metadata file that contains the installation path of my application and this metadata file is installed by my application installer in different location than my application files. The purpose of this metadata file is it would be used by other application to display my application info and also to know the install location of my application. The problem is that the installation path is hard-coded (default path) in that metadata file, and when the user changed the install location to a different path during the installation time, the installation path is now mismatched with the one in the metadata file. Thus, this has caused the other application cannot recognize the present of my application. My application installer is created using InstallShield 2016 Basic MSI project.
+I have a metadata file that contains the installation path of my application and this metadata file is installed by my application installer in different location than my application files. The purpose of this metadata file is that it would be used by other application to display my application info and also to know the install location of my application. The problem is that the installation path is hard-coded (default path) in that metadata file, and when the user has changed the install location to a different path during the installation time, the installation path is now mismatched with the one in the metadata file. Thus, this has caused the other application cannot recognize the present of my application. My application installer is created using InstallShield 2016 Basic MSI project.
 
-### The solution
+### Solution
 
-To resolve this problem, I need to apply a deferred custom action. The reasons to use the deferred custom action because I need to make a change to the system and only deferred custom actions can be run in elevated context.
+To resolve this problem, I need to apply a deferred custom action using InstallScript. The reasons to use the deferred custom action because I need to make a change to the system and only deferred custom actions can be run in elevated context.
 
 **1. Create New Set Property custom action (type 51)**
 
@@ -33,7 +33,7 @@ The purpose of this type-51 custom action is to pass other property value to `Cu
 - Install Exec Sequence: `After CA_PopulateCustomActionData`
 - Install Exec Condition: `NOT REMOVE`
 
-Below are the InstallScript that I used to associate with my deferred custom action above in my `Setup.rul`.
+Below are the InstallScript that I used to associate with my deferred custom action above:
 
 ```cs
 #include "ifx.h"
@@ -103,4 +103,4 @@ begin
 end;
 ```
 
-Hopefully this would help others who lost.
+Hopefully this solution may help others who are in the same situation.
