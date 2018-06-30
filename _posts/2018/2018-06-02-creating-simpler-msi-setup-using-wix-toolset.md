@@ -1,13 +1,15 @@
 ---
 layout: post
-title: Creating a simpler MSI setup
-description: This is a how-to tutorial to create a simpler MSI setup using WiX toolset.
-keywords: wix toolset, windows installer, msi, windows installer xml, simpler msi setup
-tags: [WiX Toolset, Windows Installer, MSI]
+title: Creating a simpler MSI setup using WiX Toolset
+description: This is a step-by-step walkthrough to write XML script to create a simpler MSI setup using WiX Toolset.
+keywords: wix toolset, windows installer, windows installer xml, simpler msi setup
+tags: [WiX Toolset, Windows Installer]
 comments: true
 ---
 
 In my previous blog post "[Create a basic MSI installer using WiX Toolset](https://heiswayi.nrird.com/2018/create-basic-msi-installer-using-wix-toolset)", I shared how I create a _basic_ MSI installer for my app, however the WiX project that I shared, the example of the WiX code is **a little bit of exaggerating**. This is because I need to add some extra features and also some customizations to the setup dialogs. Well, if **file copy** is the only thing you need, perhaps this article can guide you through in creating a simpler MSI setup. This tutorial is based on [WiX Toolset Compiler 3.11.1.2318](http://wixtoolset.org/releases/v3.11.1/stable).
+
+If you need a more simpler MSI setup (read: **file copy**), this post will walkthrough how you can get started to create one, using [WiX Toolset](http://wixtoolset.org/). In this step-by-step walkthrough, I have been using [WiX Toolset Compiler 3.11.1.2318](http://wixtoolset.org/releases/v3.11.1/stable).
 
 ### Getting started
 
@@ -442,3 +444,5 @@ _Product.wxs_
     </Product>
 </Wix>
 ```
+
+That's it! Using WiX Toolset is the easiest way to create the most minimal MSI setup for Windows-based application installation.
