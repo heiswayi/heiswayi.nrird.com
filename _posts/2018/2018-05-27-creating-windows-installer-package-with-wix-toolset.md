@@ -1,27 +1,27 @@
 ---
 layout: post
-title: Create a basic MSI installer using WiX Toolset
-description: Here's how I create a basic MSI installer for my application using Windows Installler XML (WiX) Toolset. Full example source code provided.
-keywords: wix toolset, windows installer, msi, windows installer xml
+title: Creating Windows Installer package with WiX Toolset
+description: Here's how I created a basic MSI setup (Windows Installer) for my application using WiX Toolset.
+keywords: wix toolset, windows installer, msi setup
 tags: [WiX Toolset, Windows Installer]
 comments: true
 ---
 
 ![Welcome dialog](https://i.imgur.com/9RPzlsd.png)
 
-I have been working with Windows-based installation development for some time, and for some software projects that required simple (read: file copy), deployment and no prerequisites installation, I preferred to create a basic `.msi` installer. And to do that, my first go-to tool is [WiX Toolset](http://wixtoolset.org/).
+I have been working with Windows-based installation development for some time, and for some software projects that required simple deployment, I preferred to use a basic `.msi` installer package. And to do that, my first go-to tool is [WiX Toolset](http://wixtoolset.org/).
 
-Windows Installer XML (WiX) Toolset is a Microsoft open source project used to create the Office 2007 installer. WiX includes some advanced capabilities, but it has a steep learning curve even though the scripting language is XML-based. It took me some time to learn both technologies (WiX and Windows Installer itself), but it's worth spending the time.
+Windows Installer XML (WiX) Toolset is a Microsoft open source project used to create the Office 2007 installer. WiX includes some advanced capabilities, but it has a steep learning curve even though the scripting language is using XML format. It took me some time to learn both technologies (WiX and Windows Installer itself), but it's worth spending the time.
 
-There are some advantages working with WiX toolset for creating Windows app installer and here are some of them that I can highlight based on my personal experience, in case you are new to WiX toolset:
+There are some advantages working with WiX toolset for creating Windows app installer and here are some of them that I can summarize based on my personal experience:
 
 - Source code in XML format, better clarity, easy to modify and debug.
 - Fresh clean `.msi` installer, no extra stuffs embedded, smaller file size.
-- Everything can be done using command-line, easy to integrated into CI build.
+- Everything can be done using command-line, easy to integrate into CI build system.
 - Easy to source-control and edit using any code editor.
 - Good community support and a lot of examples. (You get one here too!)
 
-Here I would like to share example of my WiX project. Hopefully it could help for those who are looking to get started with WiX toolset, or for those may need to see more examples of WiX-based projects for personal reference.
+In this post, I would like to share one example of my WiX project. Hopefully it would help for those who are looking to get started with WiX toolset, or for those may need to see more real-world examples of WiX-based projects.
 
 ### Example of my WiX project files structure
 
@@ -448,7 +448,7 @@ _Product.Loc-en.wxl_
 
 ### Batch script for compiling the WiX project
 
-These are the WiX toolset that I use in the script below:-
+These are the WiX toolset that I used in the script below:-
 - **heat.exe** - To automatically harvest my application files and generate a collection of `<Component>` elements and `<ComponentGroup>` that will be used in _Product.wxs_ file under `<Feature>` element. Output from this tool is _Product.Files.wxs_ file.
 - **candle.exe** - To generate `*.wixobj` file with some preprocessor variables.
 - **light.exe** - To compile `*.wixobj` and localization file using WiX extensions and generate `*.msi` file.
@@ -477,7 +477,7 @@ rem Create setup-2.0.msi
 "%WIX%bin\light.exe" "_Product.Files.wixobj" "_Product.wixobj" -loc "Product.Loc-en.wxl" -cultures:en-US -ext WixUtilExtension -ext WixUIExtension -ext WixNetFxExtension -out "setup-2.0.msi" -nologo
 ```
 
-Here's the final project files structure after I run `MakeInstaller.bat`:
+Here's the final project files structure after I run `MakeInstaller.bat` script:
 
 ![Project files structure after compile](https://i.imgur.com/2tFxHpB.png)
 
@@ -486,4 +486,4 @@ Example of my MSI installer in action
 
 ### WiX references
 
-This project is done based on **WiX v3.11** ([GitHub](https://github.com/wixtoolset/wix3)) at the time I'm writing this blog post. If you need to customize your installer UI or to support multiple localizations, you can refer to [this repository](https://github.com/wixtoolset/wix3/tree/develop/src/ext/UIExtension/wixlib) on GitHub for the source code references.
+This project is done based on **WiX v3.11** ([GitHub](https://github.com/wixtoolset/wix3)) at the time I'm writing this post. If you need to customize your installer UI or to support multiple localizations, you can refer to [this repository](https://github.com/wixtoolset/wix3/tree/develop/src/ext/UIExtension/wixlib) on GitHub for the code references.
