@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Create a Windows app installer using Inno Setup
+title: Creating a Windows app installer using Inno Setup
 description: Inno Setup is the best FREE open source alternative, non-MSI and script-driven installation system software for creating Windows app installer that surpasses many commercial installers in feature set and stability.
 keywords: inno setup, windows installer, creating windows app installer
-tags: [Inno Setup, Pascal]
+tags: [Inno Setup, Pascal, Windows Installer]
 comments: true
 ---
 
