@@ -405,6 +405,12 @@ blockquote p:last-child {
 .post-list-desc {
     color: #777;
     font-size: 1rem;
+
+    small {
+        color: #aaa;
+        display: inline-block;
+        font-style: italic;
+    }
 }
 
 .page-top-meta,

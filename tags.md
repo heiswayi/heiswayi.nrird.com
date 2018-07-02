@@ -1,0 +1,71 @@
+---
+layout: page
+title: Posts by Tag
+description: Display published posts by particular tag
+keywords: posts by tag, tagged
+---
+
+{% assign rawtags = "" %}
+{% for post in site.posts %}
+	{% assign ttags = post.tags | join:'|' | append:'|' %}
+	{% assign rawtags = rawtags | append:ttags %}
+{% endfor %}
+{% assign rawtags = rawtags | split:'|' | sort %}
+
+{% assign tags = "" %}
+{% for tag in rawtags %}
+	{% if tag != "" %}
+		{% if tags == "" %}
+			{% assign tags = tag | split:'|' %}
+		{% endif %}
+		{% unless tags contains tag %}
+			{% assign tags = tags | join:'|' | append:'|' | append:tag | split:'|' %}
+		{% endunless %}
+	{% endif %}
+{% endfor %}
+
+{% if tags %}
+<div class="tag-cloud tag-cloud-small" id="Tags">
+  {% for tag in tags %}
+    <a class="tag-anchor" href="#{{ tag | slugify }}"><i class="fa fa-tag muted" aria-hidden="true"></i> {{ tag }}</a>
+  {% endfor %}
+</div>
+{% endif %}
+
+<div class="posts">
+  {% for tag in tags %}
+
+	<style>
+	#{{ tag | slugify }} {
+		transition: opacity 0.5s ease-out;
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+	}
+
+	#{{ tag | slugify }}:target {
+		opacity: 1;
+    height: auto;
+	}
+	</style>
+
+	<div id="{{ tag | slugify }}">
+    <h2 class="year" ><i class="fa fa-hashtag muted" aria-hidden="true"></i>{{ tag }}</h2>
+
+    {% for post in site.posts %}
+    {% if post.tags contains tag %}
+
+    <div class="post-list">
+	    <div class="post-list-title"><a href="{{ post.url }}">{{ post.title }}</a></div>
+        <div class="post-list-desc">{{ post.description }}</div>
+    </div>
+
+    {% endif %}
+    {% endfor %}
+
+	</div>
+
+  {% endfor %}
+</div>
+
+<hr/>

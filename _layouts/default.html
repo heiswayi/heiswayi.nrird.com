@@ -18,7 +18,7 @@ published: true
           <h2 class="masthead-title">
             <a href="{{ site.url }}" title="{{ site.title }}" class="title">{{ site.logo_text | downcase }} <span class="dot-red">•</span><span class="dot-yellow">•</span><span class="dot-green">•</span></a>
             {% if site.show_tagline %}
-            <small>{% include tagline.html %}</small>
+            <small title="And knowledge itself, is power.">{% include tagline.html %}</small>
             {% endif %}
           </h2>
 
@@ -29,9 +29,9 @@ published: true
           <div class="nav">
               <ul class="top-menu">
                 <li><a href="{{ "/" | prepend: site.baseurl | prepend: site.url }}" title="Home"><i class="fa fa-home"></i></a></li>
-                <li><a href="{{ "/blog" | prepend: site.baseurl | prepend: site.url }}"><i class="fa fa-pencil" aria-hidden="true"></i> Blog</a></li>
+                <li><a href="{{ "/about" | prepend: site.baseurl | prepend: site.url }}"><i class="fa fa-info-circle" aria-hidden="true"></i> About</a></li>
                 <li><a href="{{ "/projects" | prepend: site.baseurl | prepend: site.url }}"><i class="fa fa-space-shuttle" aria-hidden="true"></i> Projects</a></li>
-                <li><a href="https://heiswayi.github.io/photography"><i class="fa fa-camera"></i> Photography</a></li>
+                <li><a href="https://heiswayi.github.io/photography" class="bg-red"><i class="fa fa-camera"></i> Photography</a></li>
               </ul>
           </div>
 

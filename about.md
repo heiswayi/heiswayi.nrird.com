@@ -1,9 +1,17 @@
 ---
 layout: page
-title: About the site
-description: Information about the site and licensing
+title: About
+description: Information about the author, the site and licensing usage
 keywords: site colophon, imprint, about the site, licensing info
 ---
+
+<div class="author-info">
+	<p class="intro-text">Hi. I'm <strong>Heiswayi Nrird</strong>. Currently working as a <em>Software Engineer</em> at <a href="https://www.keysight.com">Keysight Technologies</a> (Penang, MY). Interested in <strong>Frontend Application Development &amp; User Experience Design</strong>. Sometimes, I'm off-grid to capture <a href="https://heiswayi.github.io/photography">some beautiful landscapes</a>. Welcome to my personal blog! Got any question? Shoot me an email at <strong>hello(at)nrird.xyz</strong>.</p>
+
+	<p><a href="https://heiswayi.github.io/resume/">Résumé</a> // <a href="https://my.linkedin.com/in/nrird">LinkedIn</a> // <a href="https://heiswayi.github.io/repo">GitHub</a> // <a href="https://heiswayi.github.io/gist">Gist</a> // <a href="http://codepen.io/heiswayi/">CodePen</a> // <a href="http://jsfiddle.net/user/heiswayi/">JSFiddle</a></p>
+</div>
+
+### Site Colophon
 
 This site is my personal blog, a place I share my written thoughts, experiences, opinions, reviews, ideas, rantings, personal projects and research works. This site is built on [Jekyll](http://jekyllrb.com), a popular static site generator and automatically being deployed by [Netlify](https://www.netlify.com/). The source code is hosted on [BitBucket](https://bitbucket.org/heiswayi/) (private repo).
 
