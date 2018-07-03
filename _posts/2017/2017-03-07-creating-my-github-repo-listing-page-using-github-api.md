@@ -7,23 +7,25 @@ tags: [JavaScript, AJAX, GitHub API]
 comments: true
 ---
 
+> June 2018: I have redesigned new layout for my gist listing page.
+
 Sometimes, I found that the best way to display all of my GitHub repos for a better clarity is to create its own dedicated site/page for that, especially when the number of my repos  started increasing. It will be quite helpful to look at all those repos in a glance. Similarly to what has been done by [Twitter](https://twitter.github.io/), [IBM](https://ibm.github.io/) and [Uber](https://uber.github.io/). All of these are made possible and easy by using [GitHub API](https://developer.github.com/v3/).
 
-Previously, my repo listing page was using the same layout as I did for [my gists](http://heiswayi.github.io/my-gists/) (gist is like a code snippet service from GitHub). Below is the screenshot for my gist listing page, and for now I don't have a plan to change the layout.
+Previously, my repo listing page was using the same layout as I did for [my gists](https://heiswayi.github.io/gist) (gist is like a code snippet service from GitHub). Below is the screenshot for my gist listing page, and for now I don't have a plan to change the layout.
 
 > GitHub Gist is a great service provided by GitHub to easily share your code snippets or save your notes online, either for private use or public. [More about gist here...](https://help.github.com/articles/about-gists/)
 
 ![my-gists](http://i.imgur.com/5OpkLPM.png)
 
-**Demo URL:** [heiswayi.github.io/my-gists](http://heiswayi.github.io/my-gists/)
+**Demo URL:** [heiswayi.github.io/gist](https://heiswayi.github.io/gist)
 
-### My new GitHub repo listing page
+### New layout design for GitHub repo listing page
 
 A new layout for my repo listing page:
 
 ![my-repos](http://i.imgur.com/KYNh11h.png)
 
-**Demo URL:** [heiswayi.github.io/my-repos](http://heiswayi.github.io/my-repos/)
+**Demo URL:** [heiswayi.github.io/repo](http://heiswayi.github.io/repo)
 
 This new page layout provides more clarity and also supports pagination if my repo count reaches 100+ repos as [GitHub Search API only provides items in sets of 100](https://developer.github.com/guides/traversing-with-pagination/). It's built from scratch and passion using [jQuery](https://jquery.com/) (for AJAX request), [Bulma - A modern CSS framework based on Flexbox](http://bulma.io/), [Font Awesome](http://fontawesome.io/), [Muuri plugin](https://haltu.github.io/muuri/) and [GitHub API v3](https://developer.github.com/v3/).
 
@@ -124,4 +126,4 @@ function generateElements(data) {
 
 ### Free and open source
 
-If you like my GitHub repo listing page, the source code is available on [GitHub](https://github.com/heiswayi/my-repos). Feel free to fork it. Similar to my gist listing page, the source code also is available on [GitHub](http://heiswayi.github.io/my-gists). All source code are licensed under [MIT License](http://heiswayi.github.io/mit-license).
+If you like my GitHub repo listing page, the source code is available on [GitHub](https://github.com/heiswayi/repo). Feel free to fork it. Similar to my gist listing page, the source code also is available on [GitHub](https://github.com/heiswayi/gist). All source code are licensed under [MIT License](https://heiswayi.github.io/mit-license).
