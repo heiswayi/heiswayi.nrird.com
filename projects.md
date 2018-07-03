@@ -17,43 +17,44 @@ keywords: projects, open source, github, snippets, webapps
   {% endfor %}
 </ul>
 
-### Based on GitHub API
+### Custom listing webpage based on GitHub API
 
-- [Heiswayi Nrird's GitHub Gist Listing](https://heiswayi.github.io/gist/) — A personalized listing site I built to show all of my public GitHub gists including some code snippets.
-- [Heiswayi Nrird's GitHub Repository Listing](https://heiswayi.github.io/repo/) — A personalized listing site I built to show all of my public GitHub repositories including some of my Open Source projects.
+- [https://heiswayi.github.io/gist](https://heiswayi.github.io/gist/) — Top 100 of my public gists / code snippets.
+- [https://heiswayi.github.io/repo](https://heiswayi.github.io/repo/) — My open source projects on GitHub.
 
-### Hosted using GitHub Pages
+### Simple web applications hosted using GitHub Pages
 
-- [PGP Key Generator](http://heiswayi.github.io/pgp/) — Safer and easy-to-use client-side PGP keys generator.
-- [Spelling: UK vs US](http://heiswayi.github.io/spelling-uk-vs-us) — A comprehensive* list of British vs. American spelling differences.
-- [Math Console](http://heiswayi.github.io/math-console/) — A basic Mathematical-powered console to evaluate basic arithmetic operations, common math functions and also to convert a math unit to another. Some constants are supported too.
-- [Color Contrast Checker](http://heiswayi.github.io/color-contrast-checker) — A simple color tool to evaluate and check your color contrast ratios between foreground and background colors.
-- [EncryptJS](http://heiswayi.github.io/encryptjs/) — A JavaScript library for encrypting message and embed it as HTML code into your web content.
-- [W4Y1](http://heiswayi.github.io/w4y1/) — My personal experimental AI chatbot for self reflection.
-- [Random Name Picker](http://heiswayi.github.io/random-name-picker/) — Simple HTML tool to randomly pick a name from a list I once made to use for indoor events.
-- [Markdown-HTML Live Preview Editor](http://heiswayi.github.io/markdown-editor) — A very simple markdown-to-HTML live preview editor made in JavaScript vanilla.
-- [HelloBot](http://heiswayi.github.io/hellobot/) — Just another AI Chatbot from Heiswayi Nrird
+- [PGP Key Generator](http://heiswayi.github.io/pgp/) — Client-side PGP keys generator.
+- [Spelling: UK vs US](http://heiswayi.github.io/spelling-uk-vs-us) — Comprehensive* list of British vs. American spelling differences.
+- [Math Console](http://heiswayi.github.io/math-console/) — Mathematical-powered console to evaluate basic arithmetic operations and common math functions.
+- [Color Contrast Checker](http://heiswayi.github.io/color-contrast-checker) — To check color constrast compliant ratios.
+- [EncryptJS](http://heiswayi.github.io/encryptjs/) — JavaScript library for encrypting message on your site.
+- [Random Name Picker](http://heiswayi.github.io/random-name-picker/) — Simple web tool for indoor events.
+- [Markdown-HTML Live Preview Editor](http://heiswayi.github.io/markdown-editor) — Simple markdown-to-HTML live preview editor created in vanilla JavaScript.
 
-### Scripts hosted by nrird.xyz
+### Experimental AI projects
 
-- [Web Proxy Script](http://nrird.xyz/proxy/) — My personal web proxy script.
-- [Whois Script](http://nrird.xyz/scripts/whois/) — Simple domain whois script that supports up to 1195 domain name extensions.
-- [Indenter Tool](http://nrird.xyz/scripts/indenter-tool/) — Simple script to prettify and fix indentation of the code.
-- [JS Packer](http://nrird.xyz/scripts/js-packer/) — Simple script to compress and obfuscate JavaScript code.
-- [_More scripts..._](https://nrird.xyz/scripts/)
+- [W4Y1](http://heiswayi.github.io/w4y1/) — Experimental AI chatbot for my memories.
+- [HelloBot](http://heiswayi.github.io/hellobot/) — Just another AI Chatbot.
 
-### Generators hosted by nrird.xyz
+### Scripts and utilities
+
+- [Web Proxy](http://nrird.xyz/proxy/) — My personal web proxy script.
+- [Whois](http://nrird.xyz/scripts/whois/) — Simple domain whois script.
+- [Indenter Tool](http://nrird.xyz/scripts/indenter-tool/) — Simple script to prettify and fix indentation of code.
+- [JavaScript Packer](http://nrird.xyz/scripts/js-packer/) — Compress and obfuscate JavaScript code.
+- [Personal URL Shortening Service](http://nrird.xyz/scripts/url-shortener/) — My personal URL shortener script.
+- [Static Sparkline Image Generator](http://nrird.xyz/scripts/sparkline/) — Generate static sparkline image with browser caching with ETag.
+
+There are some other scripts I've created, feel free to visit: [https://nrird.xyz/scripts](https://nrird.xyz/scripts/)
+
+### Maker tools
 
 - [FREE Ultimate Blocks - Website Maker](http://nrird.xyz/ultimate-blocks) — A FREE block-based HTML drag-and-drop bootstrap theme builder with 126+ predesigned unique blocks and unlimited variants.
-- [Personal URL Shortening Service](http://nrird.xyz/scripts/url-shortener/) — My personal URL shortener script.
-- [Static Sparkline Image Generator](http://nrird.xyz/scripts/sparkline/) — PHP script to generate static sparkline image with browser caching with ETag.
+- [Encrypto Zero](https://nrird.xyz/encrypto-zero) — Minimalist, secure and encrypted pastebin app for personal use purpose.
+- [Document Writer](https://nrird.xyz/document-writer) — Minimalist web-based writing tool to write document using web browser.
 
-### Miscellaneous stuffs hosted by nrird.xyz
+### Misc. stuffs
 
-- [Website Checklist](http://nrird.xyz/website-checklist) — Checklist for starting a website.
-- [Encrypto Zero](https://nrird.xyz/encrypto-zero) — Just another minimalist, secure and encrypted pastebin app for personal use purpose.
-- [Document Writer](https://nrird.xyz/document-writer) — A minimalist web-based writing tool to write document using web browser.
-
-### Others
-
-- [Personal Reminder Note](/reminder) — A note to remind to myself.
+- [Website Checklist](http://nrird.xyz/website-checklist) — Checklist for web developer.
+- [Personal Reminder Note](/reminder) — A note to remind myself.
