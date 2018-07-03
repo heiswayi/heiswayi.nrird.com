@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Simple XML serialization and deserialization helper class in C#
-description: XmlHelper.cs is a helper class for XML data serialization and deserialization that I wrote to be used in my C# projects.
+description: XmlHelper class is part of C# utilities for XML data serialization and deserialization that I wrote to be used in my C# projects.
 keywords: c# programming, xml serialization, xml deserialization, xml helper class, readable dataset format
 tags: [C#, Utility]
 comments: true
