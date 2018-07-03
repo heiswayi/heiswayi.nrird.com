@@ -46,15 +46,3 @@ TextLog is a minimalist Jekyll theme best for documentation.
 [**Live Demo**](http://heiswayi.github.io/textlog) // [Source Code](http://github.com/heiswayi/textlog) // MIT License
 
 <a class="github-button" href="https://github.com/heiswayi/textlog" data-icon="octicon-star" data-style="mega" data-count-href="/heiswayi/textlog/stargazers" data-count-api="/repos/heiswayi/textlog#stargazers_count" data-count-aria-label="# stargazers on GitHub" aria-label="Star heiswayi/textlog on GitHub">Star</a> <a class="github-button" href="https://github.com/heiswayi/textlog/fork" data-icon="octicon-repo-forked" data-style="mega" data-count-href="/heiswayi/textlog/network" data-count-api="/repos/heiswayi/textlog#forks_count" data-count-aria-label="# forks on GitHub" aria-label="Fork heiswayi/textlog on GitHub">Fork</a>
-
----
-
-### 4. heiswayi nrird •••
-
-![This site screenshot](http://i.imgur.com/pdd5iPN.png)
-
-This is my personal Jekyll theme for my blog (this site) and I have been using it since few years ago. Since then, I kept updating or making changes, from time to time until what it looked like today.
-<br>
-[**Live Demo**](https://heiswayi.github.io) // [Source Code](https://github.com/heiswayi/heiswayi.github.io) // MIT License
-
-<a class="github-button" href="https://github.com/heiswayi/heiswayi.github.io" data-icon="octicon-star" data-style="mega" data-count-href="/heiswayi/heiswayi.github.io/stargazers" data-count-api="/repos/heiswayi/heiswayi.github.io#stargazers_count" data-count-aria-label="# stargazers on GitHub" aria-label="Star heiswayi/heiswayi.github.io on GitHub">Star</a> <a class="github-button" href="https://github.com/heiswayi/heiswayi.github.io/fork" data-icon="octicon-repo-forked" data-style="mega" data-count-href="/heiswayi/heiswayi.github.io/network" data-count-api="/repos/heiswayi/heiswayi.github.io#forks_count" data-count-aria-label="# forks on GitHub" aria-label="Fork heiswayi/heiswayi.github.io on GitHub">Fork</a>
