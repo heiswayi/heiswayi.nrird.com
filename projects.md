@@ -5,8 +5,6 @@ description: A list of projects
 keywords: projects, open source, github, snippets, webapps
 ---
 
-## Published Posts tagged with "Project"...
-
 <ul>
   {% for post in site.posts %}
     {% if post.tags contains "Project" %}
@@ -18,8 +16,6 @@ keywords: projects, open source, github, snippets, webapps
     {% endif %}
   {% endfor %}
 </ul>
-
-## More Projects...
 
 ### Based on GitHub API
 
