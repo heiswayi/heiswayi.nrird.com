@@ -1,7 +1,7 @@
 ---
 layout: post
 title: C# - Simple SerialPort singleton class
-description: My singleton class code snippet called SerialPortManager for handling serial data communication in some of my C# projects.
+description: This is a rewritten SerialPort class that is implemented with singleton pattern for handling serial data communication in some of my C# projects.
 keywords: c# programming, singleton design pattern, serial port, serial communication
 tags: [C#, SerialPort, Singleton]
 comments: true
@@ -9,9 +9,11 @@ comments: true
 
 In my projects, some of them sometimes involves serial data communication. So, I think there is a need for me to create a reusable class that I could always reuse whenever I develop any application that uses serial data communication protocol. Most likely when I work with the projects that is interfacing with [Arduino](https://www.arduino.cc/) board. Here is my singleton class called `SerialPortManager` which is basically based on [System.IO.Ports.SerialPort](https://msdn.microsoft.com/en-us/library/system.io.ports.serialport(v=vs.110).aspx) class.
 
-### SerialPortManager.cs
+### Source code
 
 This class source code also available on my [Gist](https://gist.github.com/heiswayi/80eda1a6905ba4edee8bd21a45f3a22d).
+
+_SerialPortManager.cs_
 
 ```csharp
 using System;
