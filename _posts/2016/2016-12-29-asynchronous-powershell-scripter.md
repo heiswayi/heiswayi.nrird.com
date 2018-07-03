@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Asynchronous PowerShell Scripter
-description: Just another PowerShell scripter tool built in .NET C# and WPF to simply manages the PowerShell scripts, or to run the script asynchronously and also a basic tool to learn PowerShell programming.
+description: Just another PowerShell scripter tool built in .NET C# and WPF to simply manages the PowerShell scripts, or to run the script asynchronously and also as a tool to learn PowerShell programming.
 keywords: c# programming, asynchronous powershell scripter, learn powershell, manage powershell preset scripts, powershell scripts, execute powershell asynchronously
 tags: [C#, WPF, PowerShell, Project]
 comments: true
