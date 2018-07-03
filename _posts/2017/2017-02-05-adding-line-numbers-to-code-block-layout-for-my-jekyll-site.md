@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Adding line numbers to the code block layout for my Jekyll site
-description: Easier way to add the line numbers at the left side of my code block layout using few lines of JavaScript and CSS.
+description: Easier way to add the line numbers at the left side of my code block layout using few lines of vanilla JavaScript and CSS.
 keywords: line numbers, code block layout, jekyll site template, line numbers using javascript, line numbers css
 tags: [Jekyll, CSS, JavaScript]
 comments: true
