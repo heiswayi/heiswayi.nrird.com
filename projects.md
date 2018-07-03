@@ -17,12 +17,18 @@ keywords: projects, open source, github, snippets, webapps
   {% endfor %}
 </ul>
 
-### Custom listing webpage based on GitHub API
+### Jekyll themes
 
-- [https://heiswayi.github.io/gist](https://heiswayi.github.io/gist/) — Top 100 of my public gists / code snippets.
-- [https://heiswayi.github.io/repo](https://heiswayi.github.io/repo/) — My open source projects on GitHub.
+- [The Plain (2015)](https://github.com/heiswayi/the-plain) // [Demo](http://heiswayi.github.io/the-plain) - Minimalist theme for personal blog.
+- [Thinkspace (2016)](https://github.com/heiswayi/thinkspace) // [Demo](http://heiswayi.github.io/thinkspace) - Minimalist theme for technical writing site.
+- [TextLog (2017)](http://github.com/heiswayi/textlog) // [Demo](http://heiswayi.github.io/textlog) - Minimalist theme for documentation site.
 
-### Simple web applications hosted using GitHub Pages
+### Listing webpages
+
+- [https://heiswayi.github.io/gist](https://heiswayi.github.io/gist/) — List of my public gists / code snippets.
+- [https://heiswayi.github.io/repo](https://heiswayi.github.io/repo/) — List of my open source projects on GitHub.
+
+### HTML-based apps
 
 - [PGP Key Generator](http://heiswayi.github.io/pgp/) — Client-side PGP keys generator.
 - [Spelling: UK vs US](http://heiswayi.github.io/spelling-uk-vs-us) — Comprehensive* list of British vs. American spelling differences.
