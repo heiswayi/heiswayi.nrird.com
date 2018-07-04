@@ -87,21 +87,14 @@
 <!-- Favicon -->
 <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgo=">
 
-<!-- Google Fonts -->
-<link href="https://fonts.googleapis.com/css?family=Work+Sans|Concert+One" rel="stylesheet">
-
 <!-- Stylesheets -->
-<style type="text/css">
-@font-face{font-family:'FontAwesome';src:url('{{ "/assets/icons/FontAwesome/fontawesome-webfont.eot?v=4.6.3" | prepend: site.baseurl | prepend: site.url }}');src:url('{{ "/assets/icons/FontAwesome/fontawesome-webfont.eot?#iefix&v=4.6.3" | prepend: site.baseurl | prepend: site.url }}') format('embedded-opentype'),url('{{ "/assets/icons/FontAwesome/fontawesome-webfont.woff2?v=4.6.3" | prepend: site.baseurl | prepend: site.url }}') format('woff2'),url('{{ "/assets/icons/FontAwesome/fontawesome-webfont.woff?v=4.6.3" | prepend: site.baseurl | prepend: site.url }}') format('woff'),url('{{ "/assets/icons/FontAwesome/fontawesome-webfont.ttf?v=4.6.3" | prepend: site.baseurl | prepend: site.url }}') format('truetype'),url('{{ "/assets/icons/FontAwesome/fontawesome-webfont.svg?v=4.6.3#fontawesomeregular" | prepend: site.baseurl | prepend: site.url }}') format('svg');font-weight:normal;font-style:normal}
-{% capture include_to_scssify %}
-    {% include main.scss %}
-{% endcapture %}
-{{ include_to_scssify | scssify }}
-</style>
+<link rel="stylesheet" href="{{ "/assets/css/main.css" | prepend: site.baseurl | prepend: site.url }}?{{ site.version }}.{{ site.time | date: "%d%H%M"}}">
 
 <!-- Scripts -->
-<script type="text/javascript">{% include modernizr.custom.js %}</script>
+<script src="{{ "/assets/js/modernizr.custom.js" | prepend: site.baseurl | prepend: site.url }}"></script>
 
 <!--[if lt IE 9]>
-<script type="text/javascript">{% include ie9.js %}</script>
+<script src="{{ "/assets/js/html5shiv.min.js" | prepend: site.baseurl | prepend: site.url }}"></script>
+<script src="{{ "/assets/js/respond.min.js" | prepend: site.baseurl | prepend: site.url }}"></script>
+<script src="{{ "/assets/js/rem.min.js" | prepend: site.baseurl | prepend: site.url }}"></script>
 <![endif]-->

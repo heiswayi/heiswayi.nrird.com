@@ -8,7 +8,7 @@ show_tagline:       true # edit file in /_includes/tagline.html
 show_social_icons:  false # edit file in /_includes/social_links.html
 og_locale:          "en_US"
 cover:              "/assets/logo.png" # site image cover
-version:            "2018.7.4"
+version:            "2018.7.5"
 
 # Site URL settings
 url:                https://heiswayi.nrird.com # main url
