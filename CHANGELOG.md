@@ -1,6 +1,11 @@
-### ver. 2018.7.4
-- Latest layout design with normal render-blocking resources (.js and .scss/.css)
+### ver. 2018.7.6
+- Added Twitter emoji CSS
+- Removed internal CSS, changed to use external (file load) CSS instead to reduce Jekyll build time and page size
+- Optimized site layout when used without CSS
 
 ### ver. 2018.7.5
 - No change on design (similar to ver. 2018.7.4), but refactored to use inline resources for JS and CSS
 - Previous files are marked with .original extension
+
+### ver. 2018.7.4
+- Latest layout design with normal render-blocking resources (.js and .scss/.css)

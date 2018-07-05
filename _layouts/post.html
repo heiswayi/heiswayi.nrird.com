@@ -2,6 +2,9 @@
 layout: default
 ---
 
+<hr class="hidden">
+<span class="hidden">&nbsp;</span>
+
 <div class="post">
   <div class="post-top-meta">
     <!--<div class="edit-this-page"><a href="{{ page.path | prepend: site.github_post_dir }}">Edit this page</a></div>-->
@@ -17,7 +20,7 @@ layout: default
 		{% assign tags_content = "" %}
 		{% for post_tag in post.tags %}
 			{% capture tags_content_temp %}
-        {{ tags_content }}<a href="{{ site.url }}{{ site.baseurl }}/tags#{{ post_tag | slugify }}"><i class="fa fa-hashtag muted" aria-hidden="true"></i>{{ post_tag }}</a>
+        {{ tags_content }}<a href="{{ site.url }}{{ site.baseurl }}/tags#{{ post_tag | slugify }}"><i class="fa fa-hashtag muted" aria-hidden="true"></i><span class="hidden">#</span>{{ post_tag }}</a>
 			{% endcapture %}
 			{% assign tags_content = tags_content_temp %}
 		{% endfor %}
@@ -32,3 +35,5 @@ layout: default
   {% endif %}
 
 </div>
+
+<hr class="hidden">
