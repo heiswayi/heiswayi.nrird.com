@@ -1,14 +1,14 @@
 # Basic site info
-title:              "heiswayi nrird •••"
-description:        "Et ipsa scientia potestas est"
+title:              "heiswayi.nrird.com •••"
+description:        "A Personal Blog of Heiswayi Nrird"
 description2:       "And knowledge itself, is power."
 keywords:           "heiswayi nrird, personal blog, software engineer, life experience, technology and research"
-logo_text:          "Heiswayi Nrird"
+logo_text:          "heiswayi.nrird.com"
 show_tagline:       true # edit file in /_includes/tagline.html
 show_social_icons:  false # edit file in /_includes/social_links.html
 og_locale:          "en_US"
 cover:              "/assets/logo.gif" # site image cover
-version:            "2018.7.8"
+version:            "2018.7.9"
 
 # Site URL settings
 url:                https://heiswayi.nrird.com # main url

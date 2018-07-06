@@ -1,43 +1,94 @@
 ---
-layout: default
+layout: compress
+published: true
 ---
 
-<hr class="hidden">
-<span class="hidden">&nbsp;</span>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en" class="no-js" itemscope itemtype="http://schema.org/WebPage">
 
-<div class="post">
-  <div class="post-top-meta">
-    <!--<div class="edit-this-page"><a href="{{ page.path | prepend: site.github_post_dir }}">Edit this page</a></div>-->
-    <div class="post-date">{{ page.date | date: "%B %d, %Y" }}</div>
-    <h1 class="post-title">{{ page.title }}</h1>
+<head>
+  {% include head.html %}
+  <style>
+    .post-date {
+      color: #ddd;
+    }
+    .post-date:hover {
+      color: #888;
+    }
+    @media print {
+      pre .line-number,
+      .hidden-on-print {
+        display: none;
+      }
+      .nav {
+        display: block;
+      }
+      .masthead-post {
+        box-shadow: none;
+        background: none;
+      }
+      .post-date {
+        color: #aaa;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <a href="#content" class="skip">Skip to content</a>
+
+  <div class="wrap">
+
+    {% include topnav_post.html %}
+
+    <div id="content" class="container content">
+
+      <hr class="hidden">
+      <span class="hidden">&nbsp;</span>
+
+      <div class="post">
+        <div class="post-top-meta">
+          <!--<div class="edit-this-page"><a href="{{ page.path | prepend: site.github_post_dir }}">Edit this page</a></div>-->
+          <div class="post-date">{{ page.date | date: "%B %d, %Y" }} — By {{ site.author.name }}</div>
+          <h1 class="post-title">{{ page.title }}</h1>
+        </div>
+
+        {{ content }}
+
+        {% assign post = page %}
+          {% if post.tags.size > 0 %}
+
+          {% assign tags_content = "" %}
+          {% for post_tag in post.tags %}
+            {% capture tags_content_temp %}
+              {{ tags_content }}<a href="{{ site.url }}{{ site.baseurl }}/tags#{{ post_tag | slugify }}"><i class="fa fa-hashtag muted" aria-hidden="true"></i><span class="hidden">#</span>{{ post_tag }}</a>
+            {% endcapture %}
+            {% assign tags_content = tags_content_temp %}
+          {% endfor %}
+
+          <div class="tagged">
+            {{ tags_content }}
+          </div>
+        {% endif %}
+        
+        {% if site.related_post_enabled %}
+          {% include related_post.html %}
+        {% endif %}
+
+        {% if site.disqus_enabled %}
+          {% include disqus.html %}
+        {% endif %}
+
+      </div>
+
+      <hr class="hidden">
+
+    </div>
   </div>
 
-  {{ content }}
+  {% include foot_post.html %}
 
-  {% assign post = page %}
-		{% if post.tags.size > 0 %}
+</body>
 
-		{% assign tags_content = "" %}
-		{% for post_tag in post.tags %}
-			{% capture tags_content_temp %}
-        {{ tags_content }}<a href="{{ site.url }}{{ site.baseurl }}/tags#{{ post_tag | slugify }}"><i class="fa fa-hashtag muted" aria-hidden="true"></i><span class="hidden">#</span>{{ post_tag }}</a>
-			{% endcapture %}
-			{% assign tags_content = tags_content_temp %}
-		{% endfor %}
-
-    <div class="tagged">
-			{{ tags_content }}
-		</div>
-  {% endif %}
-  
-  {% if site.related_post_enabled %}
-    {% include related_post.html %}
-  {% endif %}
-
-  {% if site.disqus_enabled %}
-    {% include disqus.html %}
-  {% endif %}
-
-</div>
-
-<hr class="hidden">
+</html>

@@ -1,3 +1,9 @@
+### ver. 2018.7.9
+- Rebranded the blog title and tagline
+- Made some enhancements to the post layout
+- Added topnav_post.html and foot_post.html and made post layout unique
+- Improved @media print for the post layout
+
 ### ver. 2018.7.8
 - Added figure.html into _includes
 - Added related_post.html into _includes
