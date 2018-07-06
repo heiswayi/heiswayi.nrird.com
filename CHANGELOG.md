@@ -1,5 +1,7 @@
 ### ver. 2018.7.7
 - Optimized some code
+- Improved accessibility on menu buttons
+- Made loading Disqus on demand
 
 ### ver. 2018.7.6
 - Added Twitter emoji CSS
