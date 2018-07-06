@@ -1,3 +1,6 @@
+### ver. 2018.7.7
+- Optimized some code
+
 ### ver. 2018.7.6
 - Added Twitter emoji CSS
 - Removed internal CSS, changed to use external (file load) CSS instead to reduce Jekyll build time and page size

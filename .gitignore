@@ -5,6 +5,7 @@ _site/
 .sass-cache
 *.draft
 DRAFT-*.md
+DRAFT-*.html
 _deleted/
 
 #################
