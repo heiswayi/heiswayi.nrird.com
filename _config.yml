@@ -25,7 +25,7 @@ author:
   facebook_url:     
 
 # Disqus comment settings
-disqus_enabled:     true
+disqus_enabled:     false
 disqus_shortname:   hnbloggithub
 
 # Google Analytics ID
