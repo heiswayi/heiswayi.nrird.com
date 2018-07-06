@@ -28,7 +28,11 @@ layout: default
     <div class="tagged">
 			{{ tags_content }}
 		</div>
-	{% endif %}
+  {% endif %}
+  
+  {% if site.related_post_enabled %}
+    {% include related_post.html %}
+  {% endif %}
 
   {% if site.disqus_enabled %}
     {% include disqus.html %}

@@ -129,10 +129,11 @@ pre {
     line-height: 1.4;
     white-space: pre;
     overflow: auto;
-    background-color: #f9f9f9;
+    background-color: #fdfdfd;
     border: 1px solid #ddd;
     padding: .5rem 2rem .5rem .5rem;
     max-height: 800px;
+    font-size: .9rem;
     code {
         color: inherit;
         background-color: transparent;
@@ -172,6 +173,16 @@ img {
     max-width: 100%;
     height: auto;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+}
+
+figure {
+    margin: 0;
+    img {
+        margin: 1rem 0 .2rem 0;
+    }
+    figcaption {
+        margin-bottom: 1rem;
+    }
 }
 
 table {
@@ -287,7 +298,7 @@ h2.year i.fa {
 
 .post {
     .tagged {
-        margin-top: 1rem;
+        margin-top: 2rem;
     }
     .tagged a {
         border: 1px solid #ddd;
@@ -650,4 +661,21 @@ a.skip:hover {
 
 .intro-text {
     font-size: 1.2rem;
+}
+
+.breaker {
+    height: 1px;
+    margin: 6rem auto;
+    width: 100%;
+
+    &:before {
+        content: "• • •";
+        width: 100%;
+        text-align: center;
+        display: block;
+        color: #aaa;
+        letter-spacing: 4px;
+        position: relative;
+        top: -8px;
+    }
 }

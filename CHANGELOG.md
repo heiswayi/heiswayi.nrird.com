@@ -1,4 +1,8 @@
 ### ver. 2018.7.7
+- Added figure.html into _includes
+- Added related_post.html into _includes
+
+### ver. 2018.7.7
 - Optimized some code
 - Improved accessibility on menu buttons
 - Made loading Disqus on demand
