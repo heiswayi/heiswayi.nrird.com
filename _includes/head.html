@@ -85,7 +85,15 @@
 <link rel="alternate" type="application/rss+xml" title="RSS" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
 
 <!-- Favicon -->
-<link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgo=">
+<link rel="apple-touch-icon" sizes="180x180" href="{{ "/assets/icons/apple-touch-icon.png" | prepend: site.baseurl | prepend: site.url }}">
+<link rel="icon" type="image/png" sizes="32x32" href="{{ "/assets/icons/favicon-32x32.png" | prepend: site.baseurl | prepend: site.url }}">
+<link rel="icon" type="image/png" sizes="16x16" href="{{ "/assets/icons/favicon-16x16.png" | prepend: site.baseurl | prepend: site.url }}">
+<link rel="manifest" href="{{ "/assets/icons/site.webmanifest" | prepend: site.baseurl | prepend: site.url }}">
+<link rel="mask-icon" href="{{ "/assets/icons/safari-pinned-tab.svg" | prepend: site.baseurl | prepend: site.url }}" color="#ff4136">
+<link rel="shortcut icon" href="{{ "/assets/icons/favicon.ico" | prepend: site.baseurl | prepend: site.url }}">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-config" content="{{ "/assets/icons/browserconfig.xml" | prepend: site.baseurl | prepend: site.url }}">
+<meta name="theme-color" content="#ffffff">
 
 <!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css?family=Work+Sans|Concert+One" rel="stylesheet">

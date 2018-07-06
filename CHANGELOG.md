@@ -1,4 +1,4 @@
-### ver. 2018.7.7
+### ver. 2018.7.8
 - Added figure.html into _includes
 - Added related_post.html into _includes
 

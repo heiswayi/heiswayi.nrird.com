@@ -281,6 +281,7 @@ h2.year i.fa {
 .post {
     margin-bottom: 4em;
     font-size: 1rem;
+    /*
     ul {
         padding-left: 20px;
         list-style: none;
@@ -290,6 +291,7 @@ h2.year i.fa {
             margin: 0 5px 0 -20px;
         }
     }
+    */
 
     i.em {
         margin-top: -4px;
@@ -677,5 +679,17 @@ a.skip:hover {
         letter-spacing: 4px;
         position: relative;
         top: -8px;
+    }
+}
+
+.related-post {
+    ul {
+        padding-left: 20px;
+        list-style: none;
+        li:before {
+            font-family: 'FontAwesome';
+            content: '\f096';
+            margin: 0 5px 0 -20px;
+        }
     }
 }
