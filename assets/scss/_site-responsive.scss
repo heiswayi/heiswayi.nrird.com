@@ -15,6 +15,14 @@
     transform: none;
     border-radius: 0px;
   }
+  .post-list-archives {
+    .full-title {
+      display: block;
+    }
+    .separator {
+      display: none;
+    }
+  }
 }
 
 /* Landscape phone to portrait tablet */

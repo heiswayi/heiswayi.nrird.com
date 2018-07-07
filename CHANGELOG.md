@@ -3,6 +3,7 @@
 - Made some enhancements to the post layout
 - Added topnav_post.html and foot_post.html and made post layout unique
 - Improved @media print for the post layout
+- Added Archives page
 
 ### ver. 2018.7.8
 - Added figure.html into _includes
