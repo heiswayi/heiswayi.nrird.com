@@ -18,6 +18,9 @@
   .archives {
     .post-title {
       display: block;
+      .post-date {
+        display: inline-block;
+      }
       .full-title {
         display: block;
       }
