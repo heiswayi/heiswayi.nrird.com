@@ -250,7 +250,6 @@ h2.year i.fa {
     background: repeating-linear-gradient(135deg, #dfdfdf 0, #dfdfdf 1%, #ffffff 0, #ffffff 50%) 0 / 20px 20px;
     position: relative;
     border-bottom: 1px solid #eeeeee;
-    box-shadow: 0 1px 1px rgba(0,0,0,0.05);
 }
 
 .masthead-title {
@@ -710,4 +709,24 @@ a.skip:hover {
     .post-date {
         font-family: monospace;
     }
+    .post-title {
+        display: table;
+        .post-date {
+            display: table-cell;
+            width: 60px;
+        }
+        .separator {
+            display: table-cell;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+        .full-title {
+            display: table-cell;
+        }
+    }
+}
+
+.em-1em {
+    width: 1em;
+    height: 1em;
 }

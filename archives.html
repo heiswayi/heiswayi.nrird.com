@@ -42,11 +42,11 @@ keywords: post archives, all published posts
 
 	{% if post.tags contains "Project" %}
 		<div class="post-list-archives">
-			<p class="post-title"><span class="post-date">{{ post.date | date: "%b %d" }}</span> <span class="separator">—</span> <span class="full-title">[Project] <a href="{{ post.url }}">{{ post.title }}</a></span></p>
+			<p class="post-title"><span class="post-date">{{ post.date | date: "%b %d" }}</span> <span class="separator">—</span> <span class="full-title">[<i class="em em-rocket em-1em" aria-hidden="true"></i>Project] <a href="{{ post.url }}">{{ post.title }}</a></span></p>
 		</div>
 	{% else %}
 		<div class="post-list-archives">
-			<p class="post-title"><span class="post-date">{{ post.date | date: "%b %d" }}</span> <span class="separator">—</span> <span class="full-title"></span><a href="{{ post.url }}">{{ post.title }}</a></span></p>
+			<p class="post-title"><span class="post-date">{{ post.date | date: "%b %d" }}</span> <span class="separator">—</span> <span class="full-title"><a href="{{ post.url }}">{{ post.title }}</a></span></p>
 		</div>
 	{% endif %}
 	
