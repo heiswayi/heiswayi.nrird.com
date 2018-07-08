@@ -668,8 +668,28 @@ a.skip:hover {
     }
 }
 
-.intro-text {
-    font-size: 1.2rem;
+.author-info {
+    .with-avatar {
+        .photo {
+            float: left;
+            width: 200px;
+            height: 200px;
+            /*
+            position: relative;
+            overflow: hidden;
+            border-radius: 50%;
+            */
+            img {
+                margin: 0 auto;
+                height: 100%;
+                width: 100%;
+            }
+        }
+        .intro-text {
+            margin-left: 215px;
+            font-size: 1.2rem;
+        }
+    }
 }
 
 .breaker {

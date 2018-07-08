@@ -6,7 +6,12 @@ keywords: site colophon, imprint, about the site, licensing info
 ---
 
 <div class="author-info">
-	<p class="intro-text">Hi. I'm <strong>Heiswayi Nrird</strong>. Currently working as a <em>Software Engineer</em> at <a href="https://www.keysight.com">Keysight Technologies</a> (Penang, MY). Interested in <strong>Frontend Application Development &amp; User Experience Design</strong>. Sometimes, I'm off-grid to capture <a href="{{ "/photography" | prepend: site.baseurl | prepend: site.url }}"><i class="em em-camera_with_flash"></i> some beautiful landscapes</a>. Welcome to my personal blog! Got any question? Shoot me an email at <strong>heiswayi<span style="display:none">-antispam-</span>@nrird.xyz</strong>.</p>
+	<div class="with-avatar">
+		<div class="photo">
+			<img src="https://avatars0.githubusercontent.com/u/13794983?v=4" alt="Heiswayi Nrird Photo">
+		</div>
+		<p class="intro-text">Hi. I'm <strong>Heiswayi Nrird</strong>. Currently working as a <em>Software Engineer</em> at <a href="https://www.keysight.com">Keysight Technologies</a> (Penang, MY). Interested in <strong>Frontend Application Development &amp; User Experience Design</strong>. Sometimes, I'm off-grid to capture <a href="{{ "/photography" | prepend: site.baseurl | prepend: site.url }}"><i class="em em-camera_with_flash"></i> some beautiful landscapes</a>. Welcome to my personal blog! Got any question? Shoot me an email at <strong>heiswayi<span style="display:none">-antispam-</span>@nrird.xyz</strong>.</p>
+	</div>
 
 	<p><a href="https://heiswayi.github.io/resume/">Résumé/CV</a> // <a href="https://my.linkedin.com/in/nrird">LinkedIn</a> // <a href="https://heiswayi.github.io/repo">GitHub</a> // <a href="https://heiswayi.github.io/gist">Gist</a> // <a href="http://codepen.io/heiswayi/">CodePen</a> // <a href="http://jsfiddle.net/user/heiswayi/">JSFiddle</a></p>
 </div>

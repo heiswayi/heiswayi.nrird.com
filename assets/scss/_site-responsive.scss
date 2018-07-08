@@ -37,6 +37,27 @@
   pre {
     max-height: 500px;
   }
+  .author-info {
+    .with-avatar {
+        .photo {
+            float: none;
+            display: block;
+            width: 100%;
+            height: auto;
+            margin-bottom: 1rem;
+            background: #f3f3f3;
+            img {
+                display: block;
+                height: 100%;
+                width: 100%;
+            }
+        }
+        .intro-text {
+            margin-left: 0;
+            display: block;
+        }
+    }
+  }
 }
 
 /* Portrait tablet to landscape and desktop */

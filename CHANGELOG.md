@@ -3,6 +3,7 @@
 - Deleted topnav_post.html and foot_post.html from _includes
 - Added _variables.scss into assets/scss
 - Made some minor enhancements to the design
+- Added avatar photo on About page, sourced from GitHub account using GitHub user content
 
 ### ver. 2018.7.9
 - Rebranded the blog title and tagline
