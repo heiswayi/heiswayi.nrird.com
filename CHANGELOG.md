@@ -1,3 +1,9 @@
+### ver. 2018.7.10
+- Revised post.html from _layouts
+- Deleted topnav_post.html and foot_post.html from _includes
+- Added _variables.scss into assets/scss
+- Made some minor enhancements to the design
+
 ### ver. 2018.7.9
 - Rebranded the blog title and tagline
 - Made some enhancements to the post layout

@@ -40,7 +40,19 @@ published: true
 
   <div class="wrap">
 
-    {% include topnav_post.html %}
+    <div class="masthead-post">
+      <div class="container">
+  
+          <div class="nav">
+              <ul class="top-menu">
+                  <li>
+                      <a href="{{ "/" | prepend: site.baseurl | prepend: site.url }}" title="Link to Homepage"><i class="fa fa-long-arrow-left hidden-on-print"></i> {{ site.logo_text | downcase }} <i class="fa fa-circle dot-red"></i> <i class="fa fa-circle dot-yellow"></i> <i class="fa fa-circle dot-green"></i></a>
+                  </li>
+              </ul>
+          </div>
+  
+      </div>
+    </div>
 
     <div id="content" class="container content">
 
@@ -87,7 +99,29 @@ published: true
     </div>
   </div>
 
-  {% include foot_post.html %}
+  <!--
+  <div class="footer">
+    <div class="copyright"><i class="fa fa-copyright" title="Copyright symbol"></i> {{ site.author.name }} — <a href="{{ "/" | prepend: site.baseurl | prepend: site.url }}" title="Link to Homepage">Home</a> // <a href="{{ "/about" | prepend: site.baseurl | prepend: site.url }}" title="Link to About page">About</a> // <a href="{{ "/projects" | prepend: site.baseurl | prepend: site.url }}" title="Link to Projects page">Projects</a> // <a href="{{ "/photography" | prepend: site.baseurl | prepend: site.url }}" title="Link to Photography page">Photography</a> // <a href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" title="Link to RSS feeds">RSS</a></div>
+  </div>
+  -->
+  <div class="footer">
+    <div class="copyright"><a href="{{ "/" | prepend: site.baseurl | prepend: site.url }}"><i class="fa fa-long-arrow-left hidden-on-print"></i> Back to Index</a> // <a href="{{ page.url | prepend: site.baseurl | prepend: site.url }}">Permalink</a></div>
+  </div>
+
+  <script>
+  (function() {
+      var pre = document.getElementsByTagName('pre'),
+          pl = pre.length;
+      for (var i = 0; i < pl; i++) {
+          pre[i].innerHTML = '<span class="line-number"></span>' + pre[i].innerHTML + '<span class="cl"></span>';
+          var num = pre[i].innerHTML.split(/\n/).length;
+          for (var j = 0; j < (num - 1); j++) {
+              var line_num = pre[i].getElementsByTagName('span')[0];
+              line_num.innerHTML += '<span>' + (j + 1) + '</span>';
+          }
+      }
+  })();
+  </script>
 
 </body>
 

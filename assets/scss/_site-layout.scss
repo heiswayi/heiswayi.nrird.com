@@ -20,7 +20,7 @@ body {
     background-color: #fff;
     -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
-    font-family: 'Work Sans', sans-serif;
+    font-family: $sans-serif;
     font-size: 18px;
     line-height: 1.6;
     text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
@@ -115,7 +115,7 @@ abbr {
 
 code,
 pre {
-    font-family: 'SFMono-Regular', Menlo, Consolas, 'Inconsolata', monospace;
+    font-family: $monospace;
 }
 
 code {
@@ -205,11 +205,6 @@ tbody tr:nth-child(odd) {
     }
 }
 
-h2.year i.fa {
-    margin-top: -5px;
-    margin-right: 5px;
-}
-
 .lead {
     font-size: 1.25rem;
     font-weight: 300;
@@ -259,7 +254,7 @@ h2.year i.fa {
     a {
         color: #505050;
         font-weight: 900;
-        font-family: 'Concert One', cursive;
+        font-family: $cursive;
         font-size: 3rem;
         &:hover {
             background-color: transparent;
@@ -271,7 +266,7 @@ h2.year i.fa {
         color: #aaa;
         display: block;
         clear: both;
-        font-family: 'SFMono-Regular', Menlo, Consolas, 'Inconsolata', monospace;
+        font-family: $monospace;
         margin-top: -5px;
         letter-spacing: 0.02rem;
     }
@@ -324,6 +319,7 @@ h2.year i.fa {
         -moz-user-select: none;
         -ms-user-select: none;
         user-select: none;
+        font-family: $monospace;
         font-size: 0.8rem;
         -webkit-border-radius: 3px;
         -moz-border-radius: 3px;
@@ -416,6 +412,7 @@ blockquote p:last-child {
 .post-date {
     letter-spacing: 1px;
     text-transform: uppercase;
+    font-family: $monospace;
 }
 
 .post-list-date small {
@@ -426,7 +423,7 @@ blockquote p:last-child {
 }
 
 .post-list-title {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
 }
 
 .post-list-desc {
@@ -516,7 +513,7 @@ blockquote p:last-child {
             -moz-border-radius: 3px;
             border-radius: 3px;
             box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
-            font-family: 'SFMono-Regular', Menlo, Consolas, 'Inconsolata', monospace;
+            font-family: $monospace;
             font-size: 0.75rem;
             &:hover {
                 border: 1px solid #777;
@@ -604,7 +601,7 @@ a.skip:hover {
         -moz-border-radius: 3px;
         border-radius: 3px;
         line-height: 2;
-        font-family: 'SFMono-Regular', Menlo, Consolas, 'Inconsolata', monospace;
+        font-family: $monospace;
 
         &.tag-anchor {
             background: #f0f0f0;
@@ -655,7 +652,7 @@ a.skip:hover {
 
 .footnotes {
     margin-top: 1rem;
-    font-family: 'SFMono-Regular', Menlo, Consolas, 'Inconsolata', monospace;
+    font-family: $monospace;
     font-size: 0.8rem;
     ol {
         li p {
@@ -707,7 +704,7 @@ a.skip:hover {
 .archives {
     .year,
     .post-date {
-        font-family: monospace;
+        font-family: $monospace;
     }
     .post-title {
         display: table;
