@@ -18,7 +18,7 @@ keywords: about the site, author bio, site colophon, imprint, licensing info
 
 ### About this site
 
-This site is my personal blog, a place I may share some thoughts, experiences, opinions, reviews, ideas, rantings, and facts. But most of the time, I share about my personal projects, researches and programming stuffs. Technically, this site is built on [Jekyll](http://jekyllrb.com), a popular static site generator and deployed automatically by [Netlify](https://www.netlify.com/). The source code of this site is privately hosted on [BitBucket](https://bitbucket.org/heiswayi/).
+This site is my personal blog, a place I may share some thoughts, experiences, opinions, reviews, ideas, rantings, and facts. But most of the time, I share about my personal projects, researches and programming stuffs. Technically, this site is built on [Jekyll](http://jekyllrb.com), a popular static site generator and deployed automatically by [Netlify](https://www.netlify.com/). The source code of this site is privately hosted on [BitBucket](https://bitbucket.org/heiswayi/). For image hosting, I use [imgur](https://imgur.com/) service.
 
 ### Site Disclaimer
 

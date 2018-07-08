@@ -1,6 +1,6 @@
 ---
 layout: post
-title: My Free Minimalist Jekyll Themes
+title: Free minimalist Jekyll themes
 description: Collection of my minimalist Jekyll themes from 2015 - 2017, available for free and open source.
 keywords: free jekyll themes, minimalist jekyll themes, open source jekyll themes
 tags: [Jekyll, Project]
@@ -17,9 +17,10 @@ Jekyll theme is a template for the best static site generator called [Jekyll](ht
 
 ![The Plain Screenshot](http://i.imgur.com/8ZXhjfV.png)
 
-The Plain is a minimalist Jekyll theme best for personal blog.
-<br>
-[**Live Demo**](http://heiswayi.github.io/the-plain) // [Source Code](https://github.com/heiswayi/the-plain) // MIT License
+The Plain is a minimalist Jekyll theme best suited for personal blog.
+
+- [**Live Demo**](http://heiswayi.github.io/the-plain)
+- [Source Code](https://github.com/heiswayi/the-plain) // MIT License
 
 <a class="github-button" href="https://github.com/heiswayi/the-plain" data-icon="octicon-star" data-style="mega" data-count-href="/heiswayi/the-plain/stargazers" data-count-api="/repos/heiswayi/the-plain#stargazers_count" data-count-aria-label="# stargazers on GitHub" aria-label="Star heiswayi/the-plain on GitHub">Star</a> <a class="github-button" href="https://github.com/heiswayi/the-plain/fork" data-icon="octicon-repo-forked" data-style="mega" data-count-href="/heiswayi/the-plain/network" data-count-api="/repos/heiswayi/the-plain#forks_count" data-count-aria-label="# forks on GitHub" aria-label="Fork heiswayi/the-plain on GitHub">Fork</a>
 
@@ -29,9 +30,10 @@ The Plain is a minimalist Jekyll theme best for personal blog.
 
 ![Thinkspace Screenshot](http://i.imgur.com/IMQDB9e.png)
 
-Thinkspace is a minimalist Jekyll theme best for technical writing.
-<br>
-[**Live Demo**](http://heiswayi.github.io/thinkspace) // [Source Code](https://github.com/heiswayi/thinkspace) // MIT License
+Thinkspace is a minimalist Jekyll theme best suited for technical writing.
+
+- [**Live Demo**](http://heiswayi.github.io/thinkspace)
+- [Source Code](https://github.com/heiswayi/thinkspace) // MIT License
 
 <a class="github-button" href="https://github.com/heiswayi/thinkspace" data-icon="octicon-star" data-style="mega" data-count-href="/heiswayi/thinkspace/stargazers" data-count-api="/repos/heiswayi/thinkspace#stargazers_count" data-count-aria-label="# stargazers on GitHub" aria-label="Star heiswayi/thinkspace on GitHub">Star</a> <a class="github-button" href="https://github.com/heiswayi/thinkspace/fork" data-icon="octicon-repo-forked" data-style="mega" data-count-href="/heiswayi/thinkspace/network" data-count-api="/repos/heiswayi/thinkspace#forks_count" data-count-aria-label="# forks on GitHub" aria-label="Fork heiswayi/thinkspace on GitHub">Fork</a>
 
@@ -41,8 +43,9 @@ Thinkspace is a minimalist Jekyll theme best for technical writing.
 
 ![TextLog Screenshot](http://i.imgur.com/StRXiZt.png)
 
-TextLog is a minimalist Jekyll theme best for documentation.
-<br>
-[**Live Demo**](http://heiswayi.github.io/textlog) // [Source Code](http://github.com/heiswayi/textlog) // MIT License
+TextLog is a minimalist Jekyll theme best suited for documentation site.
+
+- [**Live Demo**](http://heiswayi.github.io/textlog)
+- [Source Code](http://github.com/heiswayi/textlog) // MIT License
 
 <a class="github-button" href="https://github.com/heiswayi/textlog" data-icon="octicon-star" data-style="mega" data-count-href="/heiswayi/textlog/stargazers" data-count-api="/repos/heiswayi/textlog#stargazers_count" data-count-aria-label="# stargazers on GitHub" aria-label="Star heiswayi/textlog on GitHub">Star</a> <a class="github-button" href="https://github.com/heiswayi/textlog/fork" data-icon="octicon-repo-forked" data-style="mega" data-count-href="/heiswayi/textlog/network" data-count-api="/repos/heiswayi/textlog#forks_count" data-count-aria-label="# forks on GitHub" aria-label="Fork heiswayi/textlog on GitHub">Fork</a>

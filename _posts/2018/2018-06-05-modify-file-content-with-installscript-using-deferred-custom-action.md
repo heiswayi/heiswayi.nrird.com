@@ -9,11 +9,15 @@ comments: true
 
 ### Problem statement
 
-I have a metadata file that contains the installation path of my application and this metadata file is installed by my application installer in different location than my application files. The purpose of this metadata file is that it would be used by other application to display my application info and also to know the install location of my application. The problem is that the installation path is hard-coded (default path) in that metadata file, and when the user has changed the install location to a different path during the installation time, the installation path is now mismatched with the one in the metadata file. Thus, this has caused the other application cannot recognize the present of my application. My application installer is created using InstallShield 2016 Basic MSI project.
+I have a metadata file that contains the installation path of my application (executable), and this metadata file is installed by my application installer (setup) in different location than my application files. The purpose of this metadata file is that it would be used by other application to display my application info and also to know the install location of my application.
+
+The problem is that the installation path is hard-coded (default path) in that metadata file, and when the user has changed the install location to a different path during the installation time, the installation path is now mismatched with the one in the metadata file. Thus, this has caused the other application cannot recognize the present of my application. My application installer is created using InstallShield 2016 Basic MSI project.
+
+The question is, how can I solve this in InstallShield?
 
 ### Solution
 
-To resolve this problem, I need to apply a deferred custom action using InstallScript. The reasons to use the deferred custom action because I need to make a change to the system and only deferred custom actions can be run in elevated context.
+To resolve this problem, I figure out that I need to apply a deferred custom action using InstallScript. The reason to use the deferred custom action is because I need to make a change to the system and only deferred custom action can be run in elevated context. Here's how I do it!
 
 **1. Create New Set Property custom action (type 51)**
 
@@ -23,7 +27,7 @@ To resolve this problem, I need to apply a deferred custom action using InstallS
 - Install Exec Sequence: `After ScheduleReboot`
 - Install Exec Condition: `NOT REMOVE`
 
-The purpose of this type-51 custom action is to pass other property value to `CustomActionData` property since the deferred custom actions can only access to these built-in Windows Installer properties; `CustomActionData`, `ProductCode` and `UserSID`. That is the limitations of the deferred custom actions.
+The purpose of this type-51 custom action is to pass other property value to `CustomActionData` property since the deferred custom action can only access to these built-in Windows Installer properties; `CustomActionData`, `ProductCode` and `UserSID`. That is the limitation of the deferred custom action.
 
 **2. Create New InstallScript custom action as a deferred custom action**
 
@@ -33,7 +37,7 @@ The purpose of this type-51 custom action is to pass other property value to `Cu
 - Install Exec Sequence: `After CA_PopulateCustomActionData`
 - Install Exec Condition: `NOT REMOVE`
 
-Below are the InstallScript that I used to associate with my deferred custom action above:
+Below is the InstallScript that I used to associate with my deferred custom action above:
 
 ```cs
 #include "ifx.h"
@@ -103,4 +107,4 @@ begin
 end;
 ```
 
-Hopefully this solution may help others who are in the same situation.
+The script above should be self-explanatory. You may need to change `<PATH_TO_METADATA_FILE>` and `<STRING_TO_FIND>` to your own strings. Be aware of possible deadlock, if any, you may need to apply certain conditional statement. Hopefully this solution may help others who are in the same situation.
