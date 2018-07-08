@@ -1,8 +1,8 @@
 ---
 layout: page
 title: Projects
-description: A list of projects
-keywords: projects, open source, github, snippets, webapps
+description: List of some projects
+keywords: part-time projects, hobby stuffs, open source, web apps, github
 ---
 
 <ul>
@@ -23,10 +23,10 @@ keywords: projects, open source, github, snippets, webapps
 - [Thinkspace (2016)](https://github.com/heiswayi/thinkspace) // [Demo](http://heiswayi.github.io/thinkspace) - Minimalist theme for technical writing site.
 - [TextLog (2017)](http://github.com/heiswayi/textlog) // [Demo](http://heiswayi.github.io/textlog) - Minimalist theme for documentation site.
 
-### Listing webpages
+### Listing sites for my stuffs on GitHub
 
-- [https://heiswayi.github.io/gist](https://heiswayi.github.io/gist/) — List of my public gists / code snippets.
-- [https://heiswayi.github.io/repo](https://heiswayi.github.io/repo/) — List of my open source projects on GitHub.
+- [heiswayi.github.io/gist](https://heiswayi.github.io/gist/) — List of my public gists / code snippets.
+- [heiswayi.github.io/repo](https://heiswayi.github.io/repo/) — List of my open source projects on GitHub.
 
 ### HTML-based apps
 
@@ -40,7 +40,7 @@ keywords: projects, open source, github, snippets, webapps
 
 ### Experimental AI projects
 
-- [W4Y1](http://heiswayi.github.io/w4y1/) — Experimental AI chatbot for my memories.
+- [W4Y1](http://heiswayi.github.io/w4y1/) — Experimental AI chatbot for digitalizing my memories.
 - [HelloBot](http://heiswayi.github.io/hellobot/) — Just another AI Chatbot.
 
 ### Scripts and utilities
@@ -52,9 +52,9 @@ keywords: projects, open source, github, snippets, webapps
 - [Personal URL Shortening Service](http://nrird.xyz/scripts/url-shortener/) — My personal URL shortener script.
 - [Static Sparkline Image Generator](http://nrird.xyz/scripts/sparkline/) — Generate static sparkline image with browser caching with ETag.
 
-There are some other scripts I've created, feel free to visit: [https://nrird.xyz/scripts](https://nrird.xyz/scripts/)
+Visit [https://nrird.xyz/scripts](https://nrird.xyz/scripts/) for more other scripts.
 
-### Maker tools
+### Web tools
 
 - [FREE Ultimate Blocks - Website Maker](http://nrird.xyz/ultimate-blocks) — A FREE block-based HTML drag-and-drop bootstrap theme builder with 126+ predesigned unique blocks and unlimited variants.
 - [Encrypto Zero](https://nrird.xyz/encrypto-zero) — Minimalist, secure and encrypted pastebin app for personal use purpose.
