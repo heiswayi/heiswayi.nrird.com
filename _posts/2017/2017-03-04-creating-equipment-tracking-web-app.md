@@ -21,9 +21,9 @@ Finally, the idea was realized. The web app was ready, successfully been deploye
 
 {% include figure.html src="https://i.imgur.com/3zRj0Gr.png" alt="Screenshot 3" caption="View the details of equipment record" %}
 
-### Here's how I create the app
+### Here's how I created the app
 
-The web app is named as **Equipment Tracking**, or in short is **Etrac**. I built Etrac from scratch using [DataTables](https://datatables.net/), [jQuery](https://jquery.com/), and [PHP](http://php.net/). [MySQL](https://www.mysql.com/) is used as the database. The layout is designed based on [Bootstrap](http://getbootstrap.com/) with [Google-style theme](https://todc.github.io/todc-bootstrap/).
+The web app is known as **Equipment Tracking**, or in short is **Etrac**. I created Etrac from scratch using [DataTables](https://datatables.net/), [jQuery](https://jquery.com/), and [PHP](http://php.net/). [MySQL](https://www.mysql.com/) is used as the database. The layout is designed based on [Bootstrap](http://getbootstrap.com/) with [Google-style theme](https://todc.github.io/todc-bootstrap/).
 
 I hosted Etrac on IIS7, in one of VM servers and only can be accessed within the company's intranet. Since the app is deployed within IIS, I can use the session to capture the user's Active Directory account. So, I don't need to implement user authentication module here. Other than that, Etrac supports exporting to PDF, Excel and CSV file format. Whenever I need the list, I can just export it to any format I want.
 
