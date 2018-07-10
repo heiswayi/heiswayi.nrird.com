@@ -7,20 +7,14 @@ tags: [PowerShell]
 comments: true
 ---
 
-**Are you working with PowerShell script in your day job?**
+At work, I have been implementing software build automation in Windows environment, and it's part of my day job as Build and Release Engineer. Some of the automation tools have been internally developed by myself. But, there is one common task that is being used a lot. It is to send email notification. This is because people want everything to be delivered to their email. Since most of the tasks are written in PowerShell script by myself. To accomplish that, I can just use a PowerShell script too.
 
-If yes, this might be interesting for you. Today, I just want to share a snippet of PowerShell script that can make your task for sending email becomes easier. However, it still depends on your requirements and the script I share may not necessarily be able to provide you a complete solution or solve the big problem. Some may need you to modify or derive the script to suit your case.
-
-At work, I have been implementing software build automation and it's part of my day job as Build and Release Engineer. I also have been creating some internal tools or writing some scripts to automate the tasks. One thing that is common in my automation work is sending email notification. If my build machine is using Windows OS, batch and PowerShell script will be my best friends for the automation process. Most likely I will use PowerShell script as it is lightweight and flexible to any further modification. No need for IDE, no need to compile. I can just simply use [Notepad2](https://xhmikosr.github.io/notepad2-mod/) to edit it.
-
-### Script
-
-Please note that the snippet below is very straightforward and simply send email notification using SMTP client. If you want to use it, you need to go through the code so you can get the idea how it works and where you can get started.
+Below is the simple snippet how I do it in PowerShell:
 
 _EmailNotification.ps1_
 
 ```powershell
-# SETTING UP NECESSARY PARAMETERS
+# 1. SETTING UP NECESSARY PARAMETERS
 $emailTo = "user1@email.com,user2@example.com" # Separate by comma for multiple email addresses
 $emailCC = "user3@email.com,user4@example.com" # Separate by comma for multiple email addresses
 $emailFrom = "sender@email.com"
@@ -28,28 +22,28 @@ $emailFromDisplayName = "Auto Email Notification"
 $smtpServer = "smtp.yourserver.com"
 $smtpPort = 0 # 0 = not in use
 $enableSSL = $false
-$useDefaultCredentials = $true
+$useDefaultCredentials = $true # Set to $false for Network Credentials
 $username = "" # Provide this when $useDefaultCredentials = $false
 $password = "" # Provide this when $useDefaultCredentials = $false
 $useHTML = $true
 $priority = [System.Net.Mail.MailPriority]::Normal # Low|Normal|High
 
-# ACQUIRING DATA OR INFO, INTERPRET IT AND PROCESS THE RESULT
+# 2. ACQUIRING DATA OR INFO, INTERPRET IT AND PROCESS THE RESULT HERE
 # Many things you can do here...
 
-# CREATING MESSAGE BODY
+# 3. CREATING MESSAGE BODY
 # Generally I use HTML for email message body.
 $html_var1 = "..."
 $html_var2 = "..."
 $html_var3 = "..."
 $emailBody = $html_var1 + $html_var2 + $html_var3
 
-# CREATING EMAIL SUBJECT
+# 4. CREATING EMAIL SUBJECT
 # Sometimes I decide the email subject at last, or auto-generate it.
 $emailSubject = "..."
 
-# SENDING EMAIL...
-# You might want to do checking/validation beforehand on necessary variables
+# 5. SENDING EMAIL...
+# You might want to do checking/validation beforehand for necessary variables
 $mailMessage = New-Object System.Net.Mail.MailMessage
 if ($emailFromDisplayName -eq "" -or $emailFromDisplayName -eq $null) {
     $mailMessage.From = New-Object System.Net.Mail.MailAddress($emailFrom)
@@ -82,18 +76,22 @@ if ($useDefaultCredentials -eq $true) {
 }
 
 try {
-    Write-Output ("Sending email notification...")
+    Write-Output "Sending email notification..."
     $smtp.Send($mailMessage)
-    Write-Output ("Sending email notification --> Complete")
+    Write-Output "Sending email notification --> Complete"
 } catch {
-    Write-Output ("Sending email notification --> Error")
+    Write-Output "Sending email notification --> Error"
     Write-Warning ('Failed to send email: "{0}"', $_.Exception.Message)
 }
 ```
 
-### Executing the script with passing arguments
+Done!
 
-To execute the script from other program with some arguments to pass, basically you just need to include `[CmdletBinding()]` and `Param()` on top of your main script code.
+### Make the script executable with parameters
+
+To execute the script from other program with some arguments to pass, you need to include `[CmdletBinding()]` and `Param()` on top of your main script code.
+
+Example:
 
 ```powershell
 [CmdletBinding()]
@@ -102,23 +100,24 @@ Param
     [string]$EmailTo = "",
     [string]$EmailCC = "",
     [string]$EmailFrom = "sender@example.com"
-
     # ...more parameters that suit your needs
     # continue here...
 )
+
+# YOUR SCRIPT GOES HERE...
 ```
 
-Then, you can execute your PowerShell script in something looked like this way, depending on what kind of program you use. Some program may need you to provide the path of script and the arguments explicitly.
+Then, you can execute your PowerShell script this way, depending on what kind of program you use to execute the commands. Some programs may need you to provide the full path to the script file and the script parameters explicitly.
+
+Example:
 
 ```
 ./EmailNotification.ps1 -EmailTo "qa-engineer@email.com" -EmailCC "manager@email.com" ...
 ```
 
-### Handling complex huge script
+### Handling the script in more proper way
 
-Sometimes, your PowerShell script may become complex and contains thousand lines of code. In this case, you might want to organize and separate them into multiple functions where each function might have its own parameters too. The example snippet below shows you how it should be done or looked like.
-
-**However, I do not recommend for you to write huge and complex script into a single file. It's best for you to keep your script as simple as possible. If you really need complex operations, it's best for you to create something more like command-line program which you can execute with a set of arguments or configuration file.**
+Sometimes, your PowerShell script may become complex and contains hundred lines of code. In this case, you might want to organize and separate them into multiple parameterized functions. The example snippet below shows you how it should be done:
 
 ```powershell
 [CmdletBinding(SupportsShouldProcess=$true, ConfirmImpact='Medium')]
@@ -200,12 +199,14 @@ function CreateLogFile
     # CODE TO GENERATE LOG FILE...
 }
 
+# This is how invocation of your script started...
 if (-not ($myinvocation.line.Contains("`$here\`$sut"))) {
     if ($EnableLog -eq $true) {
         CreateLogFile
     }
+    # Final call usually start at the main function
     EmailNotification -EmailTo $EmailTo -EmailFrom $EmailFrom # ...and more parameters here...
 }
 ```
 
-Happy scripting!
+Good luck and happy PowerShell-ing!
