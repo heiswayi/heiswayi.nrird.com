@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Commonly use PHP functions or code snippets in my PHP projects
-description: A compilation of some commonly use PHP functions or code snippets that I have been using for most of my PHP projects.
+title: Commonly used PHP functions or code snippets in my PHP projects
+description: A compilation of some commonly used PHP functions or code snippets that I have been using for most of my PHP projects.
 keywords: php, commonly use php functions, php code snippets, php projects, compilation of code snippets, helpful php functions
 tags: [PHP]
 comments: true
 ---
 
-Few years ago, I have been actively developing web applications in PHP and some of my old PHP project source code are backed up on my [GitHub](https://github.com/heiswayi). Within that period, I have been using these PHP custom functions for most of my PHP projects. Some of these code snippets are created by my own to suit my development requirements.
+Few years ago, I have been actively developing web applications in PHP. Within those years, I have been using these custom PHP functions for most of my PHP projects as long as they are still valid. Some of these code snippets are written by myself to fit some development requirements.
 
 ### Hash user password
 
