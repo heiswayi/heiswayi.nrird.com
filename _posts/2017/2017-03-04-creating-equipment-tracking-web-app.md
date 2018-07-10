@@ -1,47 +1,35 @@
 ---
 layout: post
-title: Equipment Tracking web application
-description: Simple CRUD-based web app with basic user authentication system for internal equipment tracking use.
-keywords: cured application, php application, datatables, equipment tracking web app, crud ajax web application
+title: Creating Equipment Tracking web app
+description: Creating of a simple CRUD-based web app for internal equipment tracking.
+keywords: crud application, php application, datatables, equipment tracking web app, crud ajax web application
 tags: [PHP, CRUD, AJAX, DataTables, jQuery, JavaScript]
 comments: true
 ---
 
-> I have made a recent update to this application where I had removed the user authentication module, instead I hosted the application using IIS and get the Windows logged in username. The intention is to make the application simpler to use where the user can directly add the record, no login or registration required.
+A couple of weeks ago I was asked to gather and compile a proper list of equipment that has been borrowed by other engineers/contractors who are working with my department. Unfortunately, the list that I had received is recorded in Excel file. Microsoft Excel to be exact. Well, whenever I need to check the status of the equipment, I have to wait those engineers to send me the updated list by email or through the shared drive. To me, this is quite tedious.
 
-A couple of weeks ago I was asked to gather and compile a proper list of equipment that have been borrowed by any engineer who is working with my department. However, the list that I received is recorded in a MS Excel file. So, I have thought that instead of waiting any of the engineers to send me the updated list file whenever I need to check the status of the equipment, I should create a simple web application hosted in my company network for them to easily update the equipment records instantly, and they can do that at anywhere and anytime. Finally, I decided to spend some hours during my weekend to develop that kind of application.
+I had an idea and I decided to create a web app for that. Instead of using Excel file, those engineers or any engineer can just go the web app and then update the equipment record or status. By doing this, anytime I need a latest list to audit, I can just simply export from the web app. So, I decided to spend some hours during my weekend to create the web app.
 
-The idea is finally realized! I called it "Equipment Tracking" or in short is "Etrac". Etrac is built from scratch using [DataTables](https://datatables.net/), [jQuery](https://jquery.com/), [PHP](http://php.net/), [MySQL](https://www.mysql.com/) and [Bootstrap](http://getbootstrap.com/) with [Google-style theme](https://todc.github.io/todc-bootstrap/). Etrac is featured with a very simple user authentication module that I created before to use in old PHP projects. Now, with this application set up on intranet webserver, whenever I need to get the latest and updated list of the borrowed equipment, I can just visit the application URL, export/print the list immediately. Etrac also supports exporting to PDF, Excel and CSV file format. Below are some screenshots showing how Etrac looked like.
+### Realizing the idea...
 
-### Equipment Tracking (Etrac) v1.0 Screenshots
+Finally, the idea was realized. The web app was ready, successfully been deployed! Here are some screenshot of the web app after I asked those engineers to update the equipment latest records.
 
-[![Screenshot1](http://i.imgur.com/dzJf6Wy.png)](http://i.imgur.com/dzJf6Wy.png)
-*Figure 1 (above): List of equipment displayed using DataTables jQuery plugin without user login.*
+{% include figure.html src="https://i.imgur.com/37sZLWO.png" alt="Screenshot 1" caption="Showing the latest list of equipment records" %}
 
-[![Screenshot2](http://i.imgur.com/U0KobRL.png)](http://i.imgur.com/U0KobRL.png)
-*Figure 2 (above): Login page.*
+{% include figure.html src="https://i.imgur.com/oxSMOga.png" alt="Screenshot 2" caption="To update particular equipment record" %}
 
-[![Screenshot3](http://i.imgur.com/Lsx4JkX.png)](http://i.imgur.com/Lsx4JkX.png)
-*Figure 3 (above): List of equipment with logged user. If the user has the right permission given, the user can click CRUD buttons such as "Add new record", "Batch delete..." or "Update" button.*
+{% include figure.html src="https://i.imgur.com/3zRj0Gr.png" alt="Screenshot 3" caption="View the details of equipment record" %}
 
-[![Screenshot4](http://i.imgur.com/xyXCltl.png)](http://i.imgur.com/xyXCltl.png)
-*Figure 4 (above): Adding new record via Modal dialog.*
+### Here's how I create the app
 
-[![Screenshot5](http://i.imgur.com/s2Sud2z.png)](http://i.imgur.com/s2Sud2z.png)
-*Figure 5 (above): When user clicks on delete button, a confirmation will pop up to double-confirm before the delete action can be performed.*
+The web app is named as **Equipment Tracking**, or in short is **Etrac**. I built Etrac from scratch using [DataTables](https://datatables.net/), [jQuery](https://jquery.com/), and [PHP](http://php.net/). [MySQL](https://www.mysql.com/) is used as the database. The layout is designed based on [Bootstrap](http://getbootstrap.com/) with [Google-style theme](https://todc.github.io/todc-bootstrap/).
 
-[![Screenshot6](http://i.imgur.com/ulkAEDG.png)](http://i.imgur.com/ulkAEDG.png)
-*Figure 6 (above): Search or filter can be performed easily when using this DataTables jQuery plugin.*
+I hosted Etrac on IIS7, in one of VM servers and only can be accessed within the company's intranet. Since the app is deployed within IIS, I can use the session to capture the user's Active Directory account. So, I don't need to implement user authentication module here. Other than that, Etrac supports exporting to PDF, Excel and CSV file format. Whenever I need the list, I can just export it to any format I want.
 
-[![Screenshot7](http://i.imgur.com/TTdjjVV.png)](http://i.imgur.com/TTdjjVV.png)
-*Figure 7 (above): Super simple user profile settings page.*
+### Code snippets
 
-[![Screenshot8](http://i.imgur.com/sluB9Lk.png)](http://i.imgur.com/sluB9Lk.png)
-*Figure 8 (above): List of registered users.*
-
-### Etrac v1.0 DataTables Code Snippets
-
-This is the customized version of DataTable JavaScript code that I wrote for Etrac:
+Etrac is built based on DataTables, which is an [open source project](https://datatables.net/license/) distributed under MIT license. Following code snippet is the customized version of DataTables JS code that I wrote for Etrac app:
 
 ```js
 var table = $('.datatables-table').DataTable({
@@ -172,7 +160,7 @@ var table = $('.datatables-table').DataTable({
 });
 ```
 
-Below is the PHP code to work with DataTable for server-side processing:
+And following below is the PHP code to work with DataTable for server-side processing:
 
 ```php
 <?php
@@ -226,4 +214,4 @@ echo json_encode(
 );
 ```
 
-NOTE: **ssp.class.php** is available on [DataTables' repo on GitHub here](https://github.com/DataTables/DataTables/blob/master/examples/server_side/scripts/ssp.class.php).
+The PHP code above uses a library class provided by DataTables called `ssp.class.php`. You can get this class source code from [DataTables's repo on GitHub here](https://github.com/DataTables/DataTables/blob/master/examples/server_side/scripts/ssp.class.php).
