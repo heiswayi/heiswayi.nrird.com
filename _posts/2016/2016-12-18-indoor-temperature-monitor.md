@@ -1,19 +1,19 @@
 ---
 layout: project
 title: Indoor Temperature Monitor
-description: Simple DIY project made using Arduino board and .NET application for indoor temperatures monitoring and logging.
+description: Simple DIY project built using Arduino board and .NET application for indoor temperature monitoring and logging.
 keywords: c# programming, serial port, serial communication, indoor temperature monitor, arduino uno, ds18b20 temperature sensor, oxyplot graph
 tags: [C#, SerialPort, Oxyplot, Arduino, Project]
 comments: true
 ---
 
-Indoor Temperature Monitor basically is a simple Arduino based project for monitoring and logging indoor temperatures of my house using the software that I created in .NET C#. Since I have old, unused Arduino Uno board, so I bought [1-wire digital temperature sensor (DS18B20)](https://www.maximintegrated.com/en/products/analog/sensors-and-sensor-interface/DS18B20.html) and make use of my Arduino board for this simple project. Recycle what's necessary rather than throwing away.
+Indoor Temperature Monitor is a simple Arduino based project for monitoring and logging indoor temperatures of my house using the software that I created in .NET C#. Since I have old, unused Arduino Uno board, so I bought [1-wire digital temperature sensor (DS18B20)](https://www.maximintegrated.com/en/products/analog/sensors-and-sensor-interface/DS18B20.html) and made use of the Arduino board for this simple project.
 
 ### Hardware - Arduino board setup with DS18B20
 
-![DS18B20 with Arduino Uno](http://i.imgur.com/9OlPFLG.png)
+{% include figure.html src="http://i.imgur.com/9OlPFLG.png" caption="Graphical representation for DS18B20 with Arduino Uno" %}
 
-Here's the Arduino sketch, compiled with [Arduino software](https://www.arduino.cc/en/Main/Software) v1.6.13
+Here's the Arduino sketch, compiled with [Arduino software](https://www.arduino.cc/en/Main/Software) v1.6.13:
 
 ```c
 #include <OneWire.h>
@@ -62,6 +62,6 @@ delay(1000);
 
 Indoor Temperature Monitor is a simple WPF application I created in .NET C#. This application uses [OxyPlot](http://www.oxyplot.org/) for the graph plotting and reads temperature values sent by Arduino board using [serial port](https://msdn.microsoft.com/en-us/library/system.io.ports.serialport(v=vs.110).aspx) connection. The background color of the current temperature will automatically change based on a certain temperature range. The temperature reading will be logged into a CSV file for a certain interval of time.
 
-![Indoor Temperature Monitor](http://i.imgur.com/8CPtSVg.png)
+{% include figure.html src="http://i.imgur.com/8CPtSVg.png" caption="Indoor Temperature Monitor GUI" %}
 
 [**View source code on GitHub**](http://github.com/heiswayi/IndoorTempMonitor)

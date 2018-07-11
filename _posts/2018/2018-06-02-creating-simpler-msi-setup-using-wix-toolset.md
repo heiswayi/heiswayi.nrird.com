@@ -278,7 +278,7 @@ Since we have **two features** defined, and we want to let the user to choose wh
 </Wix>
 ```
 
-{% include figure.html src="https://i.imgur.com/hut5Op0.png" alt="screenshot" caption="Example screenshot: Simpler MSI setup" %}
+{% include figure.html src="https://i.imgur.com/hut5Op0.png" caption="Example screenshot of the MSI setup" %}
 
 ### Installer graphics and icon
 

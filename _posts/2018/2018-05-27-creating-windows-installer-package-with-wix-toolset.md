@@ -7,7 +7,7 @@ tags: [WiX Toolset, Windows Installer]
 comments: true
 ---
 
-{% include figure.html src="https://i.imgur.com/9RPzlsd.png" alt="screenshot" caption="Welcome dialog" %}
+{% include figure.html src="https://i.imgur.com/9RPzlsd.png" caption="Welcome dialog" %}
 
 I have been working with Windows-based installation development for some time, and for some software projects that required simple deployment, I preferred to use a basic `.msi` installer package. And to do that, my first go-to tool is [WiX Toolset](http://wixtoolset.org/).
 
@@ -115,7 +115,7 @@ Below is the source code for my main WiX file to create a `.msi` installer. In t
 - Custom upgrade dialog
 - Custom install dir dialog (for Desktop shortcut option checkbox)
 
-{% include figure.html src="https://i.imgur.com/FPHfm08.png" alt="screenshot" caption="Create Desktop shortcut option" %}
+{% include figure.html src="https://i.imgur.com/FPHfm08.png" caption="Create Desktop shortcut option" %}
 
 Following are the **extra features other the defaults** that have been implemented into the source code:
 - Detect for minimum .NET Framework and OS version.
@@ -404,9 +404,9 @@ _Product.wxs_
 </Wix>
 ```
 
-{% include figure.html src="https://i.imgur.com/sXeMVyS.png" alt="screenshot" caption="Example of license agreement dialog" %}
+{% include figure.html src="https://i.imgur.com/sXeMVyS.png" caption="Example of license agreement dialog" %}
 
-{% include figure.html src="https://i.imgur.com/WaHqBhg.png" alt="screenshot" caption="Example of upgrade welcome dialog when found existing version already installed" %}
+{% include figure.html src="https://i.imgur.com/WaHqBhg.png" caption="Example of upgrade welcome dialog when found existing version already installed" %}
 
 ### Localization file
 
@@ -478,7 +478,7 @@ Here's the final project files structure after I run `MakeInstaller.bat` script:
 
 ![Project files structure after compile](https://i.imgur.com/2tFxHpB.png)
 
-{% include figure.html src="https://i.imgur.com/DZAhwKu.png" alt="screenshot" caption="Example of my MSI installer in action" %}
+{% include figure.html src="https://i.imgur.com/DZAhwKu.png" caption="Example of my MSI installer in action" %}
 
 ### WiX references
 

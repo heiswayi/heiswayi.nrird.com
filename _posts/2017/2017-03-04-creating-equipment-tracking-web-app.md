@@ -15,11 +15,11 @@ I had an idea and I decided to create a web app for that. Instead of using Excel
 
 Finally, the idea was realized. The web app was ready, successfully been deployed! Here are some screenshots of the web app after I asked those engineers to update the equipment latest records.
 
-{% include figure.html src="https://i.imgur.com/37sZLWO.png" alt="Screenshot 1" caption="Showing the latest list of equipment records" %}
+{% include figure.html src="https://i.imgur.com/37sZLWO.png" caption="Showing the latest list of equipment records" %}
 
-{% include figure.html src="https://i.imgur.com/oxSMOga.png" alt="Screenshot 2" caption="To update particular equipment record" %}
+{% include figure.html src="https://i.imgur.com/oxSMOga.png" caption="To update particular equipment record" %}
 
-{% include figure.html src="https://i.imgur.com/3zRj0Gr.png" alt="Screenshot 3" caption="View the details of equipment record" %}
+{% include figure.html src="https://i.imgur.com/3zRj0Gr.png" caption="View the details of equipment record" %}
 
 ### Here's how I created the app
 

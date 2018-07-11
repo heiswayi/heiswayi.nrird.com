@@ -50,4 +50,5 @@ If the Jekyll source contains **Gemfile** file, you may need to run these follow
 ```
 $ gem install bundler
 $ bundle install
+$ bundle exec jekyll serve
 ```

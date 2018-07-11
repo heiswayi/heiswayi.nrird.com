@@ -11,7 +11,7 @@ This weekend, I have been spending some of my times creating a minimalist web-ba
 
 The **reason** behind this web tool is because sometimes I need to write a document easier and faster with the help of [TinyMCE editor plugin](https://www.tinymce.com/), then I can save it into the format I wanted (HTML or markdown, mostly), without the need for me to manually write the HTML code.
 
-{% include figure.html src="https://i.imgur.com/3FRdl5R.png" alt="screenshot" caption="Screenshot" %}
+{% include figure.html src="https://i.imgur.com/3FRdl5R.png" caption="Screenshot" %}
 
 - **URL:** [https://nrird.xyz/document-writer](https://nrird.xyz/document-writer)
 
