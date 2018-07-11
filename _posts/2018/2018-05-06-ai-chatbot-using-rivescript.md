@@ -15,7 +15,7 @@ After a while using elizabot.js, I started to feel that the knowledgebase markup
 
 ### HelloBot - AI chatbot web app built using Jekyll
 
-![HelloBot - Screenshot](https://i.imgur.com/tn3C7Bw.png)
+{% include figure.html src="https://i.imgur.com/tn3C7Bw.png" caption="Having conversation with HelloBot via web browser" %}
 
 HelloBot is built using [Jekyll](https://jekyllrb.com/) and [rivescript-js](https://github.com/aichaos/rivescript-js) for the bot interpreter engine. HelloBot is live and currently being hosted using GitHub Pages for demo purpose. HelloBot contains terminal-like interface designed using [Bootstrap](https://getbootstrap.com/), [jQueryTerminal](https://terminal.jcubic.pl/) and [jquery-mousewheel](https://github.com/jquery/jquery-mousewheel).
 
@@ -24,7 +24,7 @@ HelloBot is built using [Jekyll](https://jekyllrb.com/) and [rivescript-js](http
 
 ### hnbot - AI chatbot web app built using Node.js and Socket.IO
 
-![hnbot - Screenshot](https://i.imgur.com/tYLZEhZ.png)
+{% include figure.html src="https://i.imgur.com/tYLZEhZ.png" caption="Having conversation with hnbot via web browser locally" %}
 
 hnbot is using a similar interface design with HelloBot, and the only difference is that hnbot is built based on [Node.js](https://nodejs.org/en/) and [Socket.IO](https://socket.io/). Also similarly to HelloBot, hnbot's interpreter engine is based on [RiveScript NPM package](https://www.npmjs.com/package/rivescript).
 

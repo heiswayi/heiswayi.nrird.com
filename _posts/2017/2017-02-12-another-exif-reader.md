@@ -11,17 +11,11 @@ Another EXIF Reader is a simple GUI tool built in .NET C# and WPF to simply extr
 
 ### Screenshots (v1.x)
 
-![Another EXIF Reader #1](http://i.imgur.com/lJAzRjk.png)
+{% include figure.html src="http://i.imgur.com/lJAzRjk.png" caption="Application opening single image file" %}
 
-_Figure 1: Opening single image file._
+{% include figure.html src="http://i.imgur.com/D3wS4p1.png" caption="Application opening images directory" %}
 
-![Another EXIF Reader #2](http://i.imgur.com/D3wS4p1.png)
-
-_Figure 2: Opening images directory._
-
-![Another EXIF Reader #3](http://i.imgur.com/LvohNmr.png)
-
-_Figure 3: Previewing the actual image._
+{% include figure.html src="http://i.imgur.com/LvohNmr.png" caption="Application previewing the actual image" %}
 
 ### Download and source code
 

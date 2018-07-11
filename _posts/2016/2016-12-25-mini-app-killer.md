@@ -35,11 +35,11 @@ using(var results = searcher.Get()) {
 }
 ```
 
-Screenshot:
+Screenshots:
 
-![Listing all running applications](http://i.imgur.com/z5hJFH8.png)
+{% include figure.html src="http://i.imgur.com/z5hJFH8.png" caption="Listing all running applications" %}
 
-![To kill the running application](http://i.imgur.com/TJG1sV1.png)
+{% include figure.html src="http://i.imgur.com/TJG1sV1.png" caption="To kill the selected running application/process" %}
 
 Here are the C# code I use to kill the application, open file location or show application **File Properties** dialog from the WMI query results:
 
@@ -99,11 +99,11 @@ public static bool ShowFileProperties(string Filename) {
 
 To filter for specific process name (application executable name without extension), there is a menu called **"Customize filter..."** in the program. When you click it, a window for adding process name will be shown as below:
 
-![Customize filter...](http://i.imgur.com/CxYg1gU.png)
+{% include figure.html src="http://i.imgur.com/CxYg1gU.png" caption="Customize filter..." %}
 
 The program will list all running applications that contain the process name as defined in the **"Customize filter..."** window when **"Enable filtered by process name..."** checkbox is **checked**.
 
-![Filtered by process name](http://i.imgur.com/jHb3HqI.png)
+{% include figure.html src="http://i.imgur.com/jHb3HqI.png" caption="List of processes once filtered by the process name" %}
 
 This is how WMI query code looked like for filtering the target process names:
 

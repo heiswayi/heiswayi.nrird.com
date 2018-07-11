@@ -24,7 +24,7 @@ For more info on what command-line options are available, just run `iscc /?` fro
 
 ### Example of Inno Setup script for my app installer
 
-![EXIF Reader installer](https://i.imgur.com/rodYZ00.png)
+{% include figure.html src="https://i.imgur.com/rodYZ00.png" caption="Installer welcome dialog" %}
 
 The script is written based on the example of the app files structure below. If you use the script below, you may need to modify it to suit your app files structure. Any feature you don't need, you can simply remove or comment it out. I always reuse this script as a starter and make some modifications that suit the app files structure and requirements to create a new app installer.
 
@@ -181,7 +181,7 @@ For other available flags, you can refer to [Inno Setup documentation here](http
 
 ### Implement components-based installation in your installer
 
-![Components-based installation](https://i.imgur.com/BeKgNvo.png)
+{% include figure.html src="https://i.imgur.com/BeKgNvo.png" caption="Components-based installation dialog" %}
 
 If you want to design your app installer using components-based installation, you may need to modify the script and add two extra sections called `[Types]` and `[Components]`. Check the provided example script below which taken from `Components.iss` file that located in `C:\Program Files (x86)\Inno Setup 5\Examples` folder.
 

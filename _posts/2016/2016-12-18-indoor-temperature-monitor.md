@@ -62,6 +62,6 @@ delay(1000);
 
 Indoor Temperature Monitor is a simple WPF application I created in .NET C#. This application uses [OxyPlot](http://www.oxyplot.org/) for the graph plotting and reads temperature values sent by Arduino board using [serial port](https://msdn.microsoft.com/en-us/library/system.io.ports.serialport(v=vs.110).aspx) connection. The background color of the current temperature will automatically change based on a certain temperature range. The temperature reading will be logged into a CSV file for a certain interval of time.
 
-{% include figure.html src="http://i.imgur.com/8CPtSVg.png" caption="Indoor Temperature Monitor GUI" %}
+{% include figure.html src="http://i.imgur.com/8CPtSVg.png" caption="Application UI" %}
 
 [**View source code on GitHub**](http://github.com/heiswayi/IndoorTempMonitor)

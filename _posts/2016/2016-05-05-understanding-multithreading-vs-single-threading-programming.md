@@ -257,13 +257,9 @@ namespace MultithreadingVsSingleThreading
 
 ### Screenshots
 
-![Multithreading vs Single Threading Example #1](http://i.imgur.com/q19Eigj.png)
+{% include figure.html src="http://i.imgur.com/q19Eigj.png" caption="Showing few options of multithreadings" %}
 
-_Figure 1 (above): Showing few options of multithreadings._
-
-![Multithreading vs Single Threading Example #2](http://i.imgur.com/3YQTqCA.png)
-
-_Figure 2 (above): Example of multithreading using `ThreadPool.QueueUserWorkItem()`._
+{% include figure.html src="http://i.imgur.com/3YQTqCA.png" caption="Example of multithreading using ThreadPool.QueueUserWorkItem()" %}
 
 ### Notes on multithreading classes
 

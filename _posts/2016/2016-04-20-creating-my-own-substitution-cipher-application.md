@@ -15,9 +15,7 @@ In cryptography, a cipher is an algorithm for performing encryption or decryptio
 
 But today I want to create my own cipher program and experiment with it. I decided to use a substitution method with my own designed keys and encoding algorithm. So, I have created my own cipher application in C# WPF which obviously I have named it as _Heiswayi Nrird Cipher Program_.
 
-### Screenshot of the application
-
-![Heiswayi Nrird Cipher Program](http://i.imgur.com/AbUYj16.png)
+{% include figure.html src="http://i.imgur.com/AbUYj16.png" caption="Application UI" %}
 
 ### Here's how I implemented my encoding method
 

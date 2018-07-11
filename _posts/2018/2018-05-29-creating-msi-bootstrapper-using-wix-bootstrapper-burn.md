@@ -9,7 +9,7 @@ comments: true
 
 In this post, I would like to share how I created a bootstrapper i.e. **setup.exe** using WiX bootstrapper called [**Burn**](http://robmensching.com/blog/posts/2009/7/14/lets-talk-about-burn/) to chain the installations that are packaged as `*.msi`. One of the reasons you need a bootstrapper is because there is only one instance of `.msi` can be run at a time. Using a bootstrapper, you can install the required prerequisites for your application deployment such as a particular version of .NET Framework.
 
-{% include figure.html src="https://i.imgur.com/G6mL3rE.png" caption="Example screenshot of my bootstrapper UI" %}
+{% include figure.html src="https://i.imgur.com/G6mL3rE.png" caption="Bootstrapper dialog UI" %}
 
 ### Example of project files structure for creating the bootstrapper
 
@@ -118,9 +118,9 @@ _MakeBootstrapper.bat_
 
 ### More screenshots of my bootstrapper setup
 
-{% include figure.html src="https://i.imgur.com/0dMOkiD.png" caption="Installing the packages" %}
+{% include figure.html src="https://i.imgur.com/0dMOkiD.png" caption="Bootstrapper installing the packages" %}
 
-{% include figure.html src="https://i.imgur.com/3Ou5t8d.png" caption="When user cancelled installation" %}
+{% include figure.html src="https://i.imgur.com/3Ou5t8d.png" caption="When user cancelled the installation" %}
 
 ### Some recommended readings
 - [Windows Installer Basics: Bootstrapper EXE Programs](http://makemsi-manual.dennisbareis.com/bootstrapper_exe_programs.htm)

@@ -16,36 +16,21 @@ Asynchronous PowerShell Scripter is just another PowerShell scripter tool made i
 
 ### Screenshots
 
-![Loading all preset scripts](http://i.imgur.com/jwH7z94.png)
+{% include figure.html src="http://i.imgur.com/jwH7z94.png" caption="Loading all preset scripts" %}
 
-Figure 1 (above): During application startup or adding/removing preset script will display this Loader overlay to show that the application is loading/reloading all preset script files from `presets` folder.
+During application startup or adding/removing preset script will display this Loader overlay to show that the application is loading/reloading all preset script files from `presets` folder.
 
+{% include figure.html src="http://i.imgur.com/QIiIiPb.png" caption="Application UI once finished loading preset scripts" %}
 
-![Application GUI](http://i.imgur.com/QIiIiPb.png)
+{% include figure.html src="http://i.imgur.com/aumSwRz.png" caption="Example of executing PowerShell script from selected preset script" %}
 
-Figure 2 (above): This is how the application is looked like, the GUI.
+{% include figure.html src="http://i.imgur.com/wkeT8Yo.png" caption="Example of selecting output lines for exporting to a text file" %}
 
+{% include figure.html src="http://i.imgur.com/cJBS41G.png" caption="Example of saving current script as new preset script" %}
 
-![Executing PowerShell script](http://i.imgur.com/aumSwRz.png)
+{% include figure.html src="http://i.imgur.com/DGwi2J7.png" caption="Create a new name for the script" %}
 
-Figure 3 (above): Example of executing PowerShell script from selected preset script. The application can be maximized for better Output view.
-
-
-![Selecting output lines](http://i.imgur.com/wkeT8Yo.png)
-
-Figure 4 (above): Example of selecting output lines for exporting to a text file.
-
-
-![Save current script as new preset script](http://i.imgur.com/cJBS41G.png)
-
-![Define new preset script title](http://i.imgur.com/DGwi2J7.png)
-
-Figure 5 & 6 (above): Example of saving current script as a new preset script.
-
-
-![Importing PowerShell script file](http://i.imgur.com/D6rnHDz.png)
-
-Figure 7 (above): Menu to import script from PowerShell script file (.ps1).
+{% include figure.html src="http://i.imgur.com/D6rnHDz.png" caption="Importing script from PowerShell script file (.ps1)" %}
 
 ### Preset Scripts
 

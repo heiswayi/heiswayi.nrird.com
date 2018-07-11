@@ -215,7 +215,7 @@ A cryptographic salt is a data which is applied during the hashing process in or
 
 When using `password_hash()` or `crypt()`, the return value includes the salt as part of the generated hash. This value should be stored verbatim in your database, as it includes information about the hash function that was used and can then be given directly to `password_verify()` or `crypt()` when verifying passwords.
 
-![Password Hash](http://i.imgur.com/9cmcBRo.png)
+{% include figure.html src="http://i.imgur.com/9cmcBRo.png" caption="Structure of hashed password string" %}
 
 The diagram above shows the format of a return value from `crypt()` or `password_hash()`. As you can see, they are self-contained, with all the information on the algorithm and salt required for future password verification.
 

@@ -119,11 +119,11 @@ If you're ever used mIRC before, in case you want to see some of my mIRC scripts
 
 After few years passed, this "AI chatbot" thing came back into my mind. And for this time, I wanted to develop it using .NET C# programming (WinForms). I used SQLite to save each possible inputs and output responses, so whenever the application received inputs that are matched, the application will immediately respond with possible outputs. Then, my AI chatbot called "NALIKA" was born. Pretty simple and basics. Not really "AI". Below are the screenshots how the application is looked like:
 
-[![NALIKA v1 - Screenshot #1](http://i.imgur.com/F1n1W0N.png)](http://i.imgur.com/F1n1W0N.png)
+{% include figure.html src="http://i.imgur.com/F1n1W0N.png" caption="NALIKA v1 - Screenshot #1" %}
 
-[![NALIKA v1 - Screenshot #2](http://i.imgur.com/IkAKC9p.png)](http://i.imgur.com/IkAKC9p.png)
+{% include figure.html src="http://i.imgur.com/IkAKC9p.png" caption="NALIKA v1 - Screenshot #2" %}
 
-[![NALIKA v1 - Screenshot #3](http://i.imgur.com/kMdAEpk.png)](http://i.imgur.com/kMdAEpk.png)
+{% include figure.html src="http://i.imgur.com/kMdAEpk.png" caption="NALIKA v1 - Screenshot #3" %}
 
 #### Looking for AI framework...
 
@@ -131,11 +131,9 @@ After I did some researches on Internet, I found one so-called the "first framew
 
 So, I used [AIMLbot.dll](http://aimlbot.sourceforge.net/) library for my chatbot application written in .NET C# while getting myself to learn more about the markup language structures used in AIML as published in [this paper](http://arxiv.org/ftp/arxiv/papers/1307/1307.3091.pdf). AIML provided much better way of defining the knowledge database of my chatbot and made it looked more natural to call as an "artificial intelligence" chatbot. Below are the screenshots of my chatbot that used the AIML library.
 
-[![WAYI v1 - Screenshot](http://i.imgur.com/UJjTodD.png)](http://i.imgur.com/UJjTodD.png)
-_WAYI v1_
+{% include figure.html src="http://i.imgur.com/UJjTodD.png" caption="WAYI v1 - Screenshot" %}
 
-[![WAYI v2 - Screenshot](http://i.imgur.com/3mkEzII.png)](http://i.imgur.com/3mkEzII.png)
-_WAYI v2_
+{% include figure.html src="http://i.imgur.com/3mkEzII.png" caption="WAYI v2 - Screenshot" %}
 
 #### Found a better AI library... called SIML
 
@@ -151,8 +149,7 @@ Known as "W4Y1", is one of my latest AI chatbot experiments that uses JavaScript
 
 I created "W4Y1" based on [elizabot.js](http://www.masswerk.at/elizabot/) by **Norbert Landsteiner** for the interpretation engine for AI markup language and processing, [jQuery Terminal Emulator plugin](http://terminal.jcubic.pl/) by **Jakub Jankiewicz** for the terminal-like interface, and [particles.js](http://vincentgarreau.com/particles.js/) by **Vincent Garreau** for the particles effect in the background.
 
-[![W4Y1](http://i.imgur.com/7emX4MU.png)](http://i.imgur.com/7emX4MU.png)
-_W4Y1 Screenshot_
+{% include figure.html src="http://i.imgur.com/7emX4MU.png" caption="W4Y1 -  Screenshot from web browser" %}
 
 [**Demo**](https://heiswayi.github.io/w4y1) // [**GitHub**](https://github.com/heiswayi/w4y1)
 

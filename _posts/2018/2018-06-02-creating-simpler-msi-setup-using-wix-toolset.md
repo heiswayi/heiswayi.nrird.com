@@ -278,7 +278,7 @@ Since we have **two features** defined, and we want to let the user to choose wh
 </Wix>
 ```
 
-{% include figure.html src="https://i.imgur.com/hut5Op0.png" caption="Example screenshot of the MSI setup" %}
+{% include figure.html src="https://i.imgur.com/hut5Op0.png" caption="Setup dialog UI" %}
 
 ### Installer graphics and icon
 
@@ -330,7 +330,7 @@ And then, include this **Condition** under your `<Product>` element:
 
 Please note that `#461308` represents a .NET Framework version for 4.7.1. You can check [here](https://docs.microsoft.com/en-us/dotnet/framework/migration-guide/how-to-determine-which-versions-are-installed) for more details about .NET Framework versions.
 
-{% include figure.html src="https://i.imgur.com/7TpjFrq.png" alt="screenshot" caption="Example screenshot: Required .NET Framework 4.7.1 to be installed" %}
+{% include figure.html src="https://i.imgur.com/7TpjFrq.png" caption="Spawn dialog when the setup requires .NET Framework 4.7.1 to be installed" %}
 
 ### Commands to build your MSI setup
 

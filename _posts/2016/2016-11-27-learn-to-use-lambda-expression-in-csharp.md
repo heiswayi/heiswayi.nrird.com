@@ -9,7 +9,7 @@ comments: true
 
 ### Lambda expression
 
-Basically, a lambda expression is an anonymous function that we construct with the lambda operator `=>`.
+A lambda expression is an anonymous function that we construct with the lambda operator `=>`.
 
 The following example will create a function that always return the integer 7:
 
