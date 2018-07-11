@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: project
 title: Dotfuscated Checker
 description: Simple GUI tool built in .NET C# and WPF to check for obfuscated assemblies by Dotfuscator software and digital signing at a glance.
 keywords: c# programming, dotfuscated checker, obfuscated assemblies, dotfuscator, dotfuschecker, .net obfuscation, dotfuscation checking, digital signing checking

@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: project
 title: Another EXIF Reader
 description: Simple GUI tool to extract the image metadata called EXIF data.
 keywords: another exif reader, extract metadata, image exif data, export exif data, image preview

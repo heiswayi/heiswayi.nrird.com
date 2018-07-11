@@ -7,7 +7,7 @@ tags: [WiX Toolset, Windows Installer]
 comments: true
 ---
 
-![Welcome dialog](https://i.imgur.com/9RPzlsd.png)
+{% include figure.html src="https://i.imgur.com/9RPzlsd.png" alt="screenshot" caption="Welcome dialog" %}
 
 I have been working with Windows-based installation development for some time, and for some software projects that required simple deployment, I preferred to use a basic `.msi` installer package. And to do that, my first go-to tool is [WiX Toolset](http://wixtoolset.org/).
 
@@ -115,7 +115,7 @@ Below is the source code for my main WiX file to create a `.msi` installer. In t
 - Custom upgrade dialog
 - Custom install dir dialog (for Desktop shortcut option checkbox)
 
-![Create Desktop shortcut option](https://i.imgur.com/FPHfm08.png)
+{% include figure.html src="https://i.imgur.com/FPHfm08.png" alt="screenshot" caption="Create Desktop shortcut option" %}
 
 Following are the **extra features other the defaults** that have been implemented into the source code:
 - Detect for minimum .NET Framework and OS version.
@@ -404,12 +404,9 @@ _Product.wxs_
 </Wix>
 ```
 
-Example of license agreement dialog
-![License agreement dialog](https://i.imgur.com/sXeMVyS.png)
+{% include figure.html src="https://i.imgur.com/sXeMVyS.png" alt="screenshot" caption="Example of license agreement dialog" %}
 
-Example of upgrade welcome dialog when found existing version already installed
-![Upgrade welcome dialog](https://i.imgur.com/WaHqBhg.png)
-
+{% include figure.html src="https://i.imgur.com/WaHqBhg.png" alt="screenshot" caption="Example of upgrade welcome dialog when found existing version already installed" %}
 
 ### Localization file
 
@@ -481,8 +478,7 @@ Here's the final project files structure after I run `MakeInstaller.bat` script:
 
 ![Project files structure after compile](https://i.imgur.com/2tFxHpB.png)
 
-Example of my MSI installer in action
-![Installing action](https://i.imgur.com/DZAhwKu.png)
+{% include figure.html src="https://i.imgur.com/DZAhwKu.png" alt="screenshot" caption="Example of my MSI installer in action" %}
 
 ### WiX references
 

@@ -1,5 +1,11 @@
 Versioning format: **yyyy.M.revision**
 
+### 2018.7.11
+- Made some revisions to blog posts, fixed some typos and applied figure element to images
+- Added project.html into _layout
+- Updated all "Project"-tagged posts to use "project" layout instead of "post"
+- Added "Archives" icon menu in the main/top navigation menus
+
 ### 2018.7.10
 
 - Revised post.html from _layouts

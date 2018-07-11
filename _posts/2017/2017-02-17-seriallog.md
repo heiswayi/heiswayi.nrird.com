@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: project
 title: SerialLog
 description: Lightweight console app built in .NET C# to log serial data received from a serial data communication protocol.
 keywords: c# programming, serial port, serial communication, console application, serial data logging, logger console, rs232 serial data
