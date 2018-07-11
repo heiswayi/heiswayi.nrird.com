@@ -6,7 +6,6 @@ This repo contains source code for my personal Jekyll blog, viewable at https://
 
 - [Jekyll](http://jekyllrb.com/)
 - [Font Awesome](https://fortawesome.github.io/Font-Awesome/)
-- [Inter UI](https://rsms.me/inter/)
 
 ### Licensing
 
