@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Creating Windows Installer package with WiX Toolset
+title: Creating a Windows Installer package with WiX Toolset
 description: Here's how I created a basic MSI setup (Windows Installer) for my application using WiX Toolset.
 keywords: wix toolset, windows installer, msi setup
 tags: [WiX Toolset, Windows Installer]

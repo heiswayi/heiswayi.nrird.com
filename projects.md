@@ -19,9 +19,9 @@ keywords: part-time projects, hobby stuffs, open source, web apps, github
 
 ### Jekyll themes
 
-- [The Plain (2015)](https://github.com/heiswayi/the-plain) // [Demo](http://heiswayi.github.io/the-plain) - Minimalist theme for personal blog.
-- [Thinkspace (2016)](https://github.com/heiswayi/thinkspace) // [Demo](http://heiswayi.github.io/thinkspace) - Minimalist theme for technical writing site.
-- [TextLog (2017)](http://github.com/heiswayi/textlog) // [Demo](http://heiswayi.github.io/textlog) - Minimalist theme for documentation site.
+- [The Plain (2015)](https://github.com/heiswayi/the-plain) // [Demo](http://heiswayi.github.io/the-plain) - Minimalist Jekyll theme for your personal blog use.
+- [Thinkspace (2016)](https://github.com/heiswayi/thinkspace) // [Demo](http://heiswayi.github.io/thinkspace) - Minimalist Jekyll theme which for technical writing blog.
+- [TextLog (2017)](http://github.com/heiswayi/textlog) // [Demo](http://heiswayi.github.io/textlog) - Minimalist, lefty-style Jekyll theme for documentation based blog.
 
 ### Listing sites for my stuffs on GitHub
 

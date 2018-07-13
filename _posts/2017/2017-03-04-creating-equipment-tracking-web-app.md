@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Creating Equipment Tracking web app
-description: Creating of a simple CRUD-based web app for internal equipment tracking.
+description: Creating of a simple CRUD-based web app for internal equipment tracking using PHP, AJAX and DataTables.
 keywords: crud application, php application, datatables, equipment tracking web app, crud ajax web application
 tags: [PHP, CRUD, AJAX, DataTables, jQuery, JavaScript]
 comments: true

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Creating MSI bootstrapper (setup.exe) using WiX bootstrapper (Burn)
-description: Here's the example of WiX script used to create a custom bootstrapper i.e. setup.exe for my application MSI setup package.
+title: Creating a MSI bootstrapper using WiX bootstrapper (Burn)
+description: This is how I created my custom bootstrapper and bootstrapping my MSI setup using WiX bootstrapper called Burn.
 keywords: wix toolset, windows installer, windows installer xml, wix burn, installer bootstrapper, msi setup
 tags: [WiX Toolset, Windows Installer]
 comments: true

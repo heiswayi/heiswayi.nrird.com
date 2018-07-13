@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Creating a simpler MSI setup using WiX Toolset
-description: This is a step-by-step walkthrough to write XML script to create a simpler MSI setup using WiX Toolset.
+description: This is a step-by-step walkthrough on how to write XML script to create a simpler MSI setup using WiX Toolset.
 keywords: wix toolset, windows installer, windows installer xml, simpler msi setup
 tags: [WiX Toolset, Windows Installer]
 comments: true

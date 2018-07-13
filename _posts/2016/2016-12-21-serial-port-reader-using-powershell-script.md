@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Serial port reader using PowerShell script
-description: Initial release of lightweight Serial Port reader written using PowerShell script to read data from a serial port and also export the data into a log file.
+description: Initial release of lightweight Serial Port reader written in PowerShell script to read data from a serial port and also export the data into a log file.
 keywords: powershell script, serial port, serial communication, ps1
 tags: [PowerShell, SerialPort, Open Source]
 comments: true

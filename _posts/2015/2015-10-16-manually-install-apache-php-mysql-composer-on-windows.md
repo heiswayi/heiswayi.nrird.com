@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Manually install Apache, PHP, MySQL and Composer on Windows
-description: Step-by-step to set up your own fully functional WAMP (Windows-Apache-MySQL-PHP) server on Windows without using any ready-made package like WampServer, XAMPP and so on.
+description: Step-by-step tutorial to set up your own fully functional WAMP server on Windows without using any ready-made package like WampServer, XAMPP, Ampps, etc.
 keywords: manual install, apache, php, mysql, composer, wamp server
 tags: [PHP, Composer, MySQL, Apache]
 comments: true
