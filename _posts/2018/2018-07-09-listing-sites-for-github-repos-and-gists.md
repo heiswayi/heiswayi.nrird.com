@@ -3,7 +3,7 @@ layout: post
 title: Listing sites for GitHub Repositories and GitHub Gists
 description: Creating of simple listing sites for my GitHub repositories and GitHub gists with GitHub API.
 keywords: listing sites, github repos, github gists, github api
-tags: [JavaScript, GitHub API]
+tags: [JavaScript, GitHub API, Open Source]
 comments: true
 ---
 
@@ -13,14 +13,14 @@ To accomplish this, I have created the listing sites for both of my GitHub repos
 
 ### Listing site for GitHub Gists
 
-![GitHub Gists](https://i.imgur.com/PhFnkj1.png)
+{% include figure.html src="https://i.imgur.com/PhFnkj1.png" %}
 
 - **URL:** [https://heiswayi.github.io/gist](https://heiswayi.github.io/gist/)
 - [View source code on GitHub](https://github.com/heiswayi/gist)
 
 ### Listing site for GitHub Repositories
 
-![GitHub Repositories](https://i.imgur.com/JYGyS2m.png)
+{% include figure.html src="https://i.imgur.com/JYGyS2m.png" %}
 
 - **URL:** [https://heiswayi.github.io/repo](https://heiswayi.github.io/repo/)
 - [View source code on GitHub](https://github.com/heiswayi/repo)

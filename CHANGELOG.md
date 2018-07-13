@@ -1,5 +1,11 @@
 Versioning format: **yyyy.M.revision**
 
+### 2018.7.12
+- Improved _includes/figure.html including SCSS
+- Made some enhancements to Figure element and code block layout
+- Made all images to use Figure element
+- Made some revisions to some blog posts
+
 ### 2018.7.11
 - Made some revisions to blog posts, fixed some typos and applied figure element to images
 - Added project.html into _layout
