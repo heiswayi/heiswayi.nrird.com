@@ -28,9 +28,34 @@ published: true
       -moz-border-radius: 3px;
       border-radius: 3px;
     }
+    .masthead-post {
+      width: 100%;
+      z-index: 200;
+    }
+    .sticky-shadow {
+      -webkit-animation: slide-down .3s ease-out;
+      -moz-animation: slide-down .3s ease-out;
+      animation: slide-down .3s ease-out;
+      -moz-box-shadow: rgba(30, 50, 50, 0.25) 0 0.05em 0.5em;
+      -webkit-box-shadow: rgba(30, 50, 50, 0.25) 0 0.05em 0.5em;
+      box-shadow: rgba(30, 50, 50, 0.25) 0 0.05em 0.5em;
+    }
+    @-webkit-keyframes slide-down {
+          0% { opacity: 0; -webkit-transform: translateY(-100%); }   
+        100% { opacity: 1; -webkit-transform: translateY(0); }
+    }
+    @-moz-keyframes slide-down {
+          0% { opacity: 0; -moz-transform: translateY(-100%); }   
+        100% { opacity: 1; -moz-transform: translateY(0); }
+    }
+    @keyframes slide-down {
+          0% { opacity: 0; transform: translateY(-100%); }   
+        100% { opacity: 1; transform: translateY(0); }
+    }
     @media print {
       pre .line-number,
-      .hidden-on-print {
+      .hidden-on-print,
+      #projectMenuLink {
         display: none;
       }
       .nav {
@@ -39,6 +64,14 @@ published: true
       .masthead-post {
         box-shadow: none;
         background: none;
+      }
+      #stickyHeader {
+        position: relative;
+        box-shadow: none;
+        animation: none;
+      }
+      #content {
+        padding-top: 0;
       }
       .post-date {
         color: #aaa;
@@ -53,13 +86,16 @@ published: true
 
   <div class="wrap">
 
-    <div class="masthead-post">
+    <div class="masthead-post" id="stickyHeader">
       <div class="container">
   
           <div class="nav">
               <ul class="top-menu">
                   <li>
                       <a href="{{ "/" | prepend: site.baseurl | prepend: site.url }}" title="Link to Homepage">{{ site.logo_text | downcase }} <i class="fa fa-circle dot-red"></i> <i class="fa fa-circle dot-yellow"></i> <i class="fa fa-circle dot-green"></i></a>
+                  </li>
+                  <li id="projectMenuLink" style="display:none">
+                      <a href="{{ "/projects" | prepend: site.baseurl | prepend: site.url }}" title="Link to Projects page"><i class="em em-rocket" aria-hidden="true"></i> Projects</a>
                   </li>
               </ul>
           </div>
@@ -129,6 +165,24 @@ published: true
           }
       }
   })();
+  window.onscroll = function() {makeSticky()};
+	var stickyHeader = document.getElementById("stickyHeader");
+	var content = document.getElementById("content");
+  var projectMenuLink = document.getElementById("projectMenuLink");
+	var sticky = stickyHeader.offsetTop;
+	function makeSticky() {
+		if (window.pageYOffset > sticky) {
+			content.style.paddingTop = "100px";
+			stickyHeader.style.position = "fixed";
+      stickyHeader.classList.add("sticky-shadow");
+      projectMenuLink.style.display = "inline-block";
+		} else {
+			content.style.paddingTop = "0";
+			stickyHeader.style.position = "relative";
+      stickyHeader.classList.remove("sticky-shadow");
+      projectMenuLink.style.display = "none";
+		}
+	}
   </script>
 
 </body>

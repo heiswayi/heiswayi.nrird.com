@@ -39,7 +39,8 @@ title: Home
 		background: repeating-linear-gradient(135deg, #dfdfdf 0, #dfdfdf 1%, #fff 0, #fff 50%) 0/20px 20px;
 		margin-bottom: 2rem;
 		-webkit-animation: slide-down .3s ease-out;
-    -moz-animation: slide-down .3s ease-out;
+		-moz-animation: slide-down .3s ease-out;
+		animation: slide-down .3s ease-out;
 		-moz-box-shadow: rgba(30, 50, 50, 0.25) 0 0.05em 0.5em;
 		-webkit-box-shadow: rgba(30, 50, 50, 0.25) 0 0.05em 0.5em;
 		box-shadow: rgba(30, 50, 50, 0.25) 0 0.05em 0.5em;
@@ -56,6 +57,24 @@ title: Home
 	@-moz-keyframes slide-down {
 				0% { opacity: 0; -moz-transform: translateY(-100%); }   
 			100% { opacity: 1; -moz-transform: translateY(0); }
+	}
+	@keyframes slide-down {
+				0% { opacity: 0; transform: translateY(-100%); }   
+			100% { opacity: 1; transform: translateY(0); }
+	}
+	@media print {
+		#mainHeader {
+			display: block;
+		}
+		#stickyHeader {
+			display: none;
+		}
+		#content {
+			padding-top: 0;
+		}
+		.masthead {
+			background: none;
+		}
 	}
 	</style>
 </head>
