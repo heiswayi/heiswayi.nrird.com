@@ -10,7 +10,7 @@ cover:              "/assets/logo.gif" # site image cover
 version:            "2018.7.12"
 
 # Improving site SEO
-seo_title:          "heiswayi.nrird.com ••• a personal blog of heiswayi nrird" # between 55 and 66 characters
+seo_title:          "heiswayi.nrird.com // a personal blog of heiswayi nrird" # between 55 and 66 characters
 seo_description:    "Hi. I'm Heiswayi Nrird. I do some stuffs with computer and sometimes write about it here. I'm a Software Engineer from Penang and I ship code at Keysight Technologies." # between 70 and 300 characters
 
 # Site URL settings
