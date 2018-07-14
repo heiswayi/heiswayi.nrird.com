@@ -41,7 +41,16 @@ permalink:          /:year/:title
 markdown:           kramdown
 highlighter:        rouge
 timezone:           Asia/Kuala_Lumpur
-exclude:            ["README.md", "LICENSE.md", "CHANGELOG.md", "TODO.md", "DRAFT-*.html"]
+exclude:            [
+                      "README.md",
+                      "LICENSE.md",
+                      "CHANGELOG.md",
+                      "TODO.md",
+                      "DRAFT-*.html",
+                      "gulpfile.js",
+                      "node_modules",
+                      "package.json"
+                    ]
 
 # Site configurations
 compress_html:
@@ -55,8 +64,13 @@ compress_html:
   startings:        [html, head, body]
 
 sass:
-  sass_dir:         assets/scss
+  sass_dir:         assets/_scss
   style:            compressed # expanded
 
 plugins:
   - jekyll-sitemap
+  - jekyll-autoprefixer
+
+autoprefixer:
+  browsers:
+  - last 3 version

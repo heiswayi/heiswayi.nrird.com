@@ -1,0 +1,29 @@
+{
+  "name": "heiswayi.nrird.com",
+  "version": "1.0.0",
+  "description": "> This repo is automatically built and deployed by [Netlify](https://www.netlify.com/).",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^3.9.4",
+    "gulp-autoprefixer": "^5.0.0",
+    "gulp-plumber": "^1.2.0",
+    "gulp-connect": "^5.5.0",
+    "gulp-rename": "^1.3.0",
+    "gulp-sass": "^4.0.1",
+    "gulp-util": "^3.0.8"
+  },
+  "devDependencies": {
+    "gulp-shell": "^0.6.5"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://heiswayi@bitbucket.org/heiswayi/heiswayi.nrird.com.git"
+  },
+  "author": "Heiswayi Nrird",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/heiswayi/heiswayi.nrird.com#readme"
+}
