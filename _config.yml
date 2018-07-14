@@ -1,7 +1,6 @@
 # Basic site info
 title:              "heiswayi.nrird.com •••"
 description:        "A Personal Blog of Heiswayi Nrird"
-description2:       "And knowledge itself, is power."
 keywords:           "heiswayi nrird, personal blog, software engineer, life experience, technology and research"
 logo_text:          "heiswayi.nrird.com"
 show_tagline:       true # edit file in /_includes/tagline.html
@@ -9,6 +8,10 @@ show_social_icons:  false # edit file in /_includes/social_links.html
 og_locale:          "en_US"
 cover:              "/assets/logo.gif" # site image cover
 version:            "2018.7.12"
+
+# Improving site SEO
+seo_title:          "heiswayi.nrird.com ••• a personal blog of heiswayi nrird" # between 55 and 66 characters
+seo_description:    "Hi. I'm Heiswayi Nrird. I do some stuffs with computer and sometimes write about it here. I'm a Software Engineer from Penang and I ship code at Keysight Technologies." # between 70 and 300 characters
 
 # Site URL settings
 url:                https://heiswayi.nrird.com # main url

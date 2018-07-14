@@ -1,2 +1,3 @@
+Sitemap: https://heiswayi.nrird.com/sitemap.xml
 User-agent: *
 Disallow:

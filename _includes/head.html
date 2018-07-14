@@ -8,7 +8,7 @@
 {% assign page_title = '' %}
 {% if page.title == "Home" %}
     {% capture page_title %}
-        {{ site.title }}
+        {{ site.seo_title }}
     {% endcapture %}
 {% else %}
     {% capture page_title %}
@@ -34,7 +34,11 @@
     {{ page_description | strip | rstrip | lstrip | escape | strip_newlines }}
 {% endcapture %}
 
+{% if page.title == "Home" %}
+<meta name="description" content="{{ site.seo_description }}"/>
+{% else %}
 <meta name="description" content="{{ page_description }}"/>
+{% endif %}
 <meta name="keywords" content="{% if page.keywords %}{{ page.keywords }}{% else %}{{ site.keywords }}{% endif %}">
 <meta name="author" content="{% if page.author.name %}{{ page.author.name }}{% else %}{{ site.author.name }}{% endif %}">
 
@@ -64,7 +68,11 @@
 <meta property="og:url" content="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
 <meta property="og:title" content="{{ page_title }}">
 <meta property="og:image" content="{{ page_image }}">
+{% if page.title == "Home" %}
+<meta property="og:description" content="{{ site.seo_description }}">
+{% else %}
 <meta property="og:description" content="{{ page_description }}">
+{% endif %}
 <meta property="og:site_name" content="{% if page.author.name %}{{ page.author.name }}{% else %}{{ site.author.name }}{% endif %}">
 <meta property="og:locale" content="{{ site.og_locale }}">
 
@@ -72,12 +80,20 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@{{ site.author.twitter_username }}">
 <meta name="twitter:title" content="{{ page_title }}">
+{% if page.title == "Home" %}
+<meta name="twitter:description" content="{{ site.seo_description }}">
+{% else %}
 <meta name="twitter:description" content="{{ page_description }}">
+{% endif %}
 <meta name="twitter:image:src" content="{{ page_image }}">
 
 <!-- Social: Google+ / Schema.org  -->
 <meta itemprop="name" content="{{ page_title }}">
+{% if page.title == "Home" %}
+<meta itemprop="description" content="{{ site.seo_description }}">
+{% else %}
 <meta itemprop="description" content="{{ page_description }}">
+{% endif %}
 <meta itemprop="image" content="{{ page_image }}">
 
 <!-- Canonical link tag -->
