@@ -1,5 +1,8 @@
 /* Landscape phones and down */
 @media (max-width: 480px) {
+  .hidden-on-mobile {
+    display: none;
+  }
   .masthead-title {
     a {
       font-size: 2rem;
