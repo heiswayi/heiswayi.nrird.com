@@ -9,7 +9,7 @@ comments: true
 
 Three years ago, I wrote [a blog post](https://heiswayi.nrird.com/2015/experiment-with-ai-chatbot-app-development) talking about how I started exploring and experimenting with AI chatbot application development. In the end I found myself likely interested more in building AI chatbots for the web. When designing a chatbot, in order to have a natural human-like conversation, the chatbot needs a knowledgebase system that works like a "brain" to respond to particular conversation inputs.
 
-I remembered, before I create my first AI chatbot web app known as [W4Y1](https://heiswayi.nrird.com/w4y1/), I had been struggling to find a better chatbot interpreter engine that can provides easier way to program the bot brain. Then, I found one that is a quite good fit for my requirements known as [elizabot.js](http://www.masswerk.at/elizabot/). So, I built my chatbot based on this JavaScript library. I liked this library because it uses JSON format for the knowledgebase markup language. Thus, it was easy for me to program my chatbot brain.
+I remembered, before I create my first AI chatbot web app known as [W4Y1](https://heiswayi.github.io/w4y1/), I had been struggling to find a better chatbot interpreter engine that can provides easier way to program the bot brain. Then, I found one that is a quite good fit for my requirements known as [elizabot.js](http://www.masswerk.at/elizabot/). So, I built my chatbot based on this JavaScript library. I liked this library because it uses JSON format for the knowledgebase markup language. Thus, it was easy for me to program my chatbot brain.
 
 After a while using elizabot.js, I started to feel that the knowledgebase markup language should be more simpler than JSON format. Without wasting my time digging into the source code and modify it, I opted to look for a better chatbot interpreter engine alternative. And then, I found two of them that can provide me a "more simpler solution" to program my bot brain, which they are [BotML](https://github.com/BotML/botml-js) and [RiveScript](https://www.rivescript.com/). After some researches, I decided to use **RiveScript** since it has more supports for different programming languages, good documentations and active contributions from its community. So, I have created two chatbot web app projects which are based on RiveScript interpreter engine; _HelloBot_ and _hnbot_.
 
@@ -19,7 +19,7 @@ After a while using elizabot.js, I started to feel that the knowledgebase markup
 
 HelloBot is built using [Jekyll](https://jekyllrb.com/) and [rivescript-js](https://github.com/aichaos/rivescript-js) for the bot interpreter engine. HelloBot is live and currently being hosted using GitHub Pages for demo purpose. HelloBot contains terminal-like interface designed using [Bootstrap](https://getbootstrap.com/), [jQueryTerminal](https://terminal.jcubic.pl/) and [jquery-mousewheel](https://github.com/jquery/jquery-mousewheel).
 
-- [**Demo**](https://heiswayi.nrird.com/hellobot)
+- [**Demo**](https://heiswayi.github.io/hellobot)
 - [**Source code on GitHub**](https://github.com/heiswayi/hellobot)
 
 ### hnbot - AI chatbot web app built using Node.js and Socket.IO
