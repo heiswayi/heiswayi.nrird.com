@@ -3,3 +3,24 @@ https://heiswayi-nrird-techblog.netlify.com/* https://heiswayi.nrird.com/:splat 
 
 # These extra rules are required because HTTPS is not forced
 http://heiswayi-nrird-techblog.netlify.com/* https://heiswayi.nrird.com/:splat 301!
+
+# Jekyll theme demo
+/thinkspace/*	https://heiswayi.github.io/thinkspace
+/the-plain/*	https://heiswayi.github.io/the-plain
+/textlog/*		https://heiswayi.github.io/textlog
+
+# GitHub.IO redirections
+/hellobot/*				https://heiswayi.github.io/hellobot
+/math-console/*			https://heiswayi.github.io/math-console
+/encryptjs/*			https://heiswayi.github.io/encryptjs
+/spelling-uk-vs-us/*	https://heiswayi.github.io/spelling-uk-vs-us
+/w4y1/*					https://heiswayi.github.io/w4y1
+/markdown-editor/*		https://heiswayi.github.io/markdown-editor
+/my-gists/*				https://heiswayi.github.io/gist
+/my-repo/*				https://heiswayi.github.io/repo
+
+# Misc.
+/ishare-in-memory/*		https://heiswayi-ishare.github.io/ishare-in-memory
+
+# Internal links
+/my-photography/		/photography
