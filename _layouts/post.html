@@ -150,6 +150,10 @@ published: true
             {{ tags_content }}
           </div>
         {% endif %}
+
+        {% if site.post_sharer %}
+          {% include post_sharer.html %}
+        {% endif %}
         
         {% if site.related_post_enabled %}
           {% include related_post.html %}
@@ -172,7 +176,7 @@ published: true
   </div>
   -->
   <div class="footer">
-    <div class="copyright"><a href="{{ "/" | prepend: site.baseurl | prepend: site.url }}"><i class="fa fa-long-arrow-left hidden-on-print"></i> Back to Index</a> // <a href="{{ page.url | prepend: site.baseurl | prepend: site.url }}">Permalink</a></div>
+    <div class="copyright"><a href="{{ "/" | prepend: site.baseurl | prepend: site.url }}"><i class="fa fa-long-arrow-left hidden-on-print"></i> Back to Index</a> // <a href="{{ page.url | prepend: site.baseurl | prepend: site.url }}">Permalink</a> // <a href="{{ "/archives" | prepend: site.baseurl | prepend: site.url }}" title="Link to Archives page">Archives</a> // <a href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" title="Link to RSS feeds">RSS</a></div>
   </div>
 
   <script>

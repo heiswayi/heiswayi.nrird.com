@@ -30,6 +30,9 @@ author:
 # Display related post?
 related_post_enabled: true
 
+# Enable post sharer?
+post_sharer: false
+
 # Disqus comment settings
 disqus_enabled:     false
 disqus_shortname:   hnbloggithub
