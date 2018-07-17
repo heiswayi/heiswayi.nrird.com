@@ -9,11 +9,18 @@
     background: none;
     color: black;
   }
-  .container, .footer {
+  .container,
+  .footer {
     width: 100%;
     max-width: none;
   }
-  .master-nav, .nav, .footer-social-links, .back, #disqus, .edit-this-page {
+  .master-nav,
+  .nav,
+  .footer-social-links,
+  .back,
+  #disqus,
+  .edit-this-page,
+  .related-post {
     display: none;
   }
   .hrline {
@@ -35,11 +42,13 @@
     a {
       border-bottom: 0;
       font-weight: bold;
+      /*
       &:after {
         content: " [" attr(href) "] ";
         font-weight: normal;
         font-style: italic;
       }
+      */
     }
   }
   .tagged {

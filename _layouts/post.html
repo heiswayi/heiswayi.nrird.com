@@ -39,6 +39,28 @@ published: true
           0% { opacity: 0; transform: translateY(-100%); }   
         100% { opacity: 1; transform: translateY(0); }
     }
+    a[name] {
+      padding-top: 100px;
+      margin-top: -100px;
+      display: inline-block;
+      color: #313131;
+    }
+    a[name]:hover {
+      background: transparent;
+      color: #313131;
+    }
+    #toc {
+      display: none;
+      background: #eee;
+      padding: 1rem;
+      margin-bottom: 1rem;
+    }
+    #toc:before {
+      content: 'On this page:';
+    }
+    #toc ol {
+      margin: 0;
+    }
     @media print {
       pre .line-number,
       .hidden-on-print {
@@ -61,6 +83,14 @@ published: true
       }
       .post-date {
         color: #aaa;
+      }
+      a[name] {
+        border-bottom: 0;
+        font-weight: normal;
+      }
+      a[name]:after {
+        content: "";
+        font-style: normal;
       }
     }
   </style>
@@ -98,7 +128,11 @@ published: true
           <h1 class="post-title">{{ page.title }}</h1>
         </div>
 
+        <aside id="toc"></aside>
+
+        <article id="article">
         {{ content }}
+        </article>
 
         {% assign post = page %}
           {% if post.tags.size > 0 %}
@@ -167,7 +201,63 @@ published: true
 			stickyHeader.style.position = "relative";
       stickyHeader.classList.remove("sticky-shadow");
 		}
-	}
+  }
+
+  function makeTOC(tocId, containerId, selectors, minThreshold) {
+      var toc = document.getElementById(tocId);
+      toc.innerHTML = "";
+      toc.className += " toc";
+      var container = containerId ? document.getElementById(containerId) : toc.parentElement;
+      var headings = [].slice.call(container.querySelectorAll(selectors));
+      if (headings.length <= minThreshold) {
+        return;
+      } else {
+        toc.style.display = "block";
+      }
+      var closeLevel = function(e, levels) {
+          for (var i = 0; i < levels && e.parentElement && e.parentElement.parentElement; i++) {
+              e = e.parentElement.parentElement;
+          }
+          return e;
+      };
+      var createLiWithAnchor = function(anchor, heading) {
+          var li = document.createElement("li");
+          var a = document.createElement("a");
+          a.href = "#" + anchor;
+          a.textContent = heading.textContent;
+          li.appendChild(a);
+          heading.innerHTML = "<a name='" + anchor + "'>" + heading.textContent + "</a>";
+          heading.className += " no-decoration";
+          return li;
+      };
+      var prevLevel = 0;
+      var root, curr;
+      headings.forEach(function (heading, index) {
+          var tag = heading.tagName.toLowerCase();
+          var curLevel = parseInt(tag.replace(/[^\d]/i, ""));
+          var anchor = heading.textContent.replace(/\r?\n|\r/g, "").replace(/\s/, "_");
+          var li = createLiWithAnchor(anchor, heading);
+          if (curLevel > prevLevel) {
+              if (!curr) {
+                  root = document.createElement("ol");
+                  root.appendChild(li);
+              } else {
+                  var ul = document.createElement("ul");
+                  ul.appendChild(li);
+                  curr.appendChild(ul);
+              }
+          } else if (curLevel === prevLevel) {
+              curr.parentElement.appendChild(li);
+          } else if (curLevel < prevLevel) {
+              var ancestor = closeLevel(curr, prevLevel - curLevel);
+              ancestor.parentElement.appendChild(li);
+          }
+          curr = li;
+          prevLevel = curLevel;
+      });
+      toc.appendChild(root);
+  }
+  makeTOC("toc", "article", "h3", 2);
   </script>
 
 </body>

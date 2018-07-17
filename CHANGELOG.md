@@ -1,5 +1,9 @@
 Versioning format: **yyyy.M.revision**
 
+### 2018.7.13
+- Made minor CSS enhancements for @media print
+- Added auto-generated Table of Content into post layout
+
 ### 2018.7.12
 - Improved _includes/figure.html including SCSS
 - Made some enhancements to Figure element and code block layout
