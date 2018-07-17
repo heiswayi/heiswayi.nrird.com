@@ -42,6 +42,20 @@ published: true
 				0% { opacity: 0; transform: translateY(-100%); }   
 			100% { opacity: 1; transform: translateY(0); }
 	}
+	@media print {
+		#mainHeader {
+			display: block;
+		}
+		#stickyHeader {
+			display: none;
+		}
+		#content {
+			padding-top: 0;
+		}
+		.masthead {
+			background: none;
+		}
+	}
 	</style>
 </head>
 

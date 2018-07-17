@@ -30,7 +30,13 @@ And then, it will generate the HTML code that's looked like this:
 </p>
 ```
 
-The **problem** with this method is that if my article contains multiple images and each image has its own caption, the article wouldn't look nice because **I can't do a better styling for it**. If the image doesn't need a caption, then it would be okay and easier to use the Markdown syntax.
+Demo:
+
+![Devil's Backbone](https://i.imgur.com/gYVYd9M.jpg)
+
+Figure (above): Devil's Backbone Open Space, Loveland, CO
+
+The **problem with this method** is that if my article contains multiple images and each image has its own caption, the article wouldn't look nice because **I can't do a better styling for it**. If the image doesn't need a caption, then it would be okay and easier to use the Markdown syntax.
 
 ### Using the HTML5 elements
 

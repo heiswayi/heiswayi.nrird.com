@@ -75,4 +75,10 @@
   .container, .footer, .nav {
     max-width: 48rem;
   }
+  #toc {
+    float: right;
+    width: 250px;
+    margin-left: 20px;
+    margin-right: -270px;
+  }
 }
