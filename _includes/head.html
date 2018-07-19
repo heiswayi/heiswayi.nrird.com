@@ -115,7 +115,7 @@
 <link rel="stylesheet" href="{{ "/assets/css/main.css" | prepend: site.baseurl | prepend: site.url }}?{{ site.version }}.{{ site.time | date: "%d%H%M"}}">
 
 <!-- Scripts -->
-<script type="text/javascript">{% include modernizr.custom.js %}</script>
+<script type="text/javascript">{% include modernizr.custom.js %}{% include lazysizes.min.js %}</script>
 
 <!--[if lt IE 9]>
 <script type="text/javascript">{% include ie9.js %}</script>

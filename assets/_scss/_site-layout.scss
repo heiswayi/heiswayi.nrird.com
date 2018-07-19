@@ -761,3 +761,7 @@ a.skip:hover {
     width: 1em;
     height: 1em;
 }
+
+.no-js img.lazyload {
+    display: none;
+}

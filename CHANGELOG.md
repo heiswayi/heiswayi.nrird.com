@@ -1,5 +1,9 @@
 Versioning format: **yyyy.M.revision**
 
+### 2018.7.14
+- Applied lazyload JS to the image src
+- Updated _includes/figure.html to reflect lazyload JS implementation
+
 ### 2018.7.13
 - Made minor CSS enhancements for @media print
 - Added auto-generated Table of Content into post layout
