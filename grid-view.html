@@ -85,7 +85,7 @@ title: Home
 		margin: 0 auto;
 	}
 	.js .post-list {
-		width: 20rem;
+		width: 16rem;
 		line-height: 1.4;
 	}
 	.js .post-list-desc {
@@ -145,15 +145,30 @@ title: Home
 			
 			<div class="posts index">
 				{% for post in site.posts %}
-			
-					{% unless post.tags contains "Project" %}
-			
+
 					<div class="post-list">
+			
+					{% if post.tags contains "Project" %}
+						<div class="post-list-title"><i class="em em-rocket em-1em muted" aria-hidden="true" style="margin-top:-4px"></i> <a href="{{ post.url }}">{{ post.title }}</a></div>
+						<div class="post-list-desc">{{ post.description }}<!--<small>—{{ post.date | date: "%B %d, %Y" }}</small>--></div>
+					{% else %}
 						<div class="post-list-title"><a href="{{ post.url }}">{{ post.title }}</a></div>
 						<div class="post-list-desc">{{ post.description }}<!--<small>—{{ post.date | date: "%B %d, %Y" }}</small>--></div>
+					{% endif %}
+
+					{% if post.tags.size > 0 %}
+						{% assign tags_content = "" %}
+						{% for post_tag in post.tags %}
+							{% capture tags_content_temp %}
+								{{ tags_content }}<span>{{ post_tag }}</span>
+							{% endcapture %}
+							{% assign tags_content = tags_content_temp %}
+						{% endfor %}
+
+						<div class="post-list-tags">{{ tags_content }}</div>
+					{% endif %}
+
 					</div>
-			
-					{% endunless %}
 					
 					<span class="hidden">&nbsp;</span>
 			

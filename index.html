@@ -50,6 +50,21 @@ title: Home
 		padding-top: 0;
 		margin: 0;
 	}
+	a.to-grid-view {
+		font-size: 0.8rem;
+		color: #888;
+		border: 1px solid #ddd;
+		padding-left: 0.5rem;
+		padding-right: 0.5rem;
+		padding-top: 0.3rem;
+		padding-bottom: 0.3rem;
+		border-radius: 3px;
+	}
+	a.to-grid-view:hover {
+		background: #333;
+		color: #aaa;
+		border-color: #222;
+	}
 	@-webkit-keyframes slide-down {
 				0% { opacity: 0; -webkit-transform: translateY(-100%); }   
 			100% { opacity: 1; -webkit-transform: translateY(0); }
@@ -98,6 +113,8 @@ title: Home
     <div id="content" class="container content">
 			<hr class="hidden">
 			<span class="hidden">&nbsp;</span>
+
+			<!--<p><a href="{{ "/grid-view" | prepend: site.baseurl | prepend: site.url }}" class="to-grid-view"><i class="fa fa-map-o" aria-hidden="true"></i> Grid View</a></p>-->
 			
 			<div class="posts index">
 				{% for post in site.posts %}

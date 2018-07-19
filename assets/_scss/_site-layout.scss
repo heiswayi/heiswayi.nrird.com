@@ -451,6 +451,21 @@ blockquote p:last-child {
     }
 }
 
+.post-list-tags {
+    line-height: 1.3;
+    color: #888;
+    span {
+        font-weight: normal;
+        font-size: 0.8rem;
+        border: 1px solid #ddd;
+        padding-left: 4px;
+        padding-right: 4px;
+        display: inline-block;
+        border-radius: 2px;
+        background: #f6f6f6;
+    }
+}
+
 .page-top-meta,
 .post-top-meta {
     margin-bottom: 2rem;

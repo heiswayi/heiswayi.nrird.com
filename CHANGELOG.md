@@ -1,5 +1,9 @@
 Versioning format: **yyyy.M.revision**
 
+### 2018.7.15
+- Made some enhancements
+- Added Grid View mode as the alternative to Index/Home page
+
 ### 2018.7.14
 - Applied lazyload JS to the image src
 - Updated _includes/figure.html to reflect lazyload JS implementation
