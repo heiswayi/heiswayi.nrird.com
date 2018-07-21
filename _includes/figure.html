@@ -3,16 +3,16 @@
     {% if include.href %}
     <a href="{{ include.href }}">
         <noscript>
-            <img src="{{ include.src }}" alt="Image: {{ include.caption }}">
+            <img src="https://res.cloudinary.com/heiswayi/image/fetch/w_730,c_limit/{{ include.src }}" alt="Image: {{ include.caption }}">
         </noscript>
-        <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="{{ include.src }}" alt="Image: {{ include.caption }}" class="lazyload">
+        <img data-src="https://res.cloudinary.com/heiswayi/image/fetch/w_730,c_limit/{{ include.src }}" alt="Image: {{ include.caption }}" class="lazyload">
     </a>
     {% else %}
     <a href="{{ include.src }}">
         <noscript>
-            <img src="{{ include.src }}" alt="Image: {{ include.caption }}">
+            <img src="https://res.cloudinary.com/heiswayi/image/fetch/w_730,c_limit/{{ include.src }}" alt="Image: {{ include.caption }}">
         </noscript>
-        <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="{{ include.src }}" alt="Image: {{ include.caption }}" class="lazyload">
+        <img data-src="https://res.cloudinary.com/heiswayi/image/fetch/w_730,c_limit/{{ include.src }}" alt="Image: {{ include.caption }}" class="lazyload">
     </a>
     {% endif %}
     <figcaption><span>{{ include.caption }}</span></figcaption>
@@ -22,16 +22,16 @@
     {% if include.href %}
     <a href="{{ include.href }}">
         <noscript>
-            <img src="{{ include.src }}" alt="Uncaptioned image">
+            <img src="https://res.cloudinary.com/heiswayi/image/fetch/w_730,c_limit/{{ include.src }}" alt="Uncaptioned image">
         </noscript>
-        <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="{{ include.src }}" alt="Uncaptioned image" class="lazyload">
+        <img data-src="https://res.cloudinary.com/heiswayi/image/fetch/w_730,c_limit/{{ include.src }}" alt="Uncaptioned image" class="lazyload">
     </a>
     {% else %}
     <a href="{{ include.src }}">
         <noscript>
-            <img src="{{ include.src }}" alt="Uncaptioned image">
+            <img src="https://res.cloudinary.com/heiswayi/image/fetch/w_730,c_limit/{{ include.src }}" alt="Uncaptioned image">
         </noscript>
-        <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="{{ include.src }}" alt="Uncaptioned image" class="lazyload">
+        <img data-src="https://res.cloudinary.com/heiswayi/image/fetch/w_730,c_limit/{{ include.src }}" alt="Uncaptioned image" class="lazyload">
     </a>
     {% endif %}
 </figure>
