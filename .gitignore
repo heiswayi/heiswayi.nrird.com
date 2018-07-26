@@ -8,6 +8,7 @@ DRAFT-*.md
 DRAFT-*.html
 _deleted/
 node_modules/
+Gemfile.lock
 
 #################
 ## Eclipse
