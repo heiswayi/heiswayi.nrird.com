@@ -59,7 +59,7 @@ Visit [https://nrird.xyz/scripts](https://nrird.xyz/scripts/) for more other scr
 - [FREE Ultimate Blocks - Website Maker](http://nrird.xyz/ultimate-blocks) — A FREE block-based HTML drag-and-drop bootstrap theme builder with 126+ predesigned unique blocks and unlimited variants.
 - [Encrypto Zero](https://nrird.xyz/encrypto-zero) — Minimalist, secure and encrypted pastebin app for personal use purpose.
 - [Document Writer](https://nrird.xyz/document-writer) — Minimalist web-based writing tool to write document using web browser.
-- [Speedtest](https://nrird.xyz/speedtest/) — Lightweight speedtest site. No ads!
+- [Speedtest](https://nrird.xyz/speedtest/) — Minimalist speedtest site. No ads & mobile friendly!
 
 ### Misc. stuffs
 
