@@ -15,83 +15,20 @@ published: true
     .post-date:hover {
       color: #888;
     }
-    .masthead-post {
-      width: 100%;
-      z-index: 200;
+    .img-logo {
+      display: block;
+      margin-top: 2rem;
     }
-    .sticky-shadow {
-      -webkit-animation: slide-down .3s ease-out;
-      -moz-animation: slide-down .3s ease-out;
-      animation: slide-down .3s ease-out;
-      -moz-box-shadow: rgba(30, 50, 50, 0.25) 0 0.05em 0.5em;
-      -webkit-box-shadow: rgba(30, 50, 50, 0.25) 0 0.05em 0.5em;
-      box-shadow: rgba(30, 50, 50, 0.25) 0 0.05em 0.5em;
-    }
-    @-webkit-keyframes slide-down {
-          0% { opacity: 0; -webkit-transform: translateY(-100%); }   
-        100% { opacity: 1; -webkit-transform: translateY(0); }
-    }
-    @-moz-keyframes slide-down {
-          0% { opacity: 0; -moz-transform: translateY(-100%); }   
-        100% { opacity: 1; -moz-transform: translateY(0); }
-    }
-    @keyframes slide-down {
-          0% { opacity: 0; transform: translateY(-100%); }   
-        100% { opacity: 1; transform: translateY(0); }
-    }
-    a[name] {
-      padding-top: 100px;
-      margin-top: -100px;
-      display: inline-block;
-      color: #313131;
-    }
-    a[name]:hover {
-      background: transparent;
-      color: #313131;
-    }
-    #toc {
+    .nav {
       display: none;
-      background: #eee;
-      padding: 1rem;
-      margin-bottom: 1rem;
-      font-size: 0.85rem;
-    }
-    #toc:before {
-      content: 'On this page:';
-    }
-    #toc ol {
-      margin: 0;
     }
     @media print {
       pre .line-number,
       .hidden-on-print {
         display: none;
       }
-      .nav {
-        display: block;
-      }
-      .masthead-post {
-        box-shadow: none;
-        background: none;
-      }
-      #stickyHeader {
-        position: relative;
-        box-shadow: none;
-        animation: none;
-      }
-      #content {
-        padding-top: 0;
-      }
       .post-date {
         color: #aaa;
-      }
-      a[name] {
-        border-bottom: 0;
-        font-weight: normal;
-      }
-      a[name]:after {
-        content: "";
-        font-style: normal;
       }
     }
   </style>
@@ -103,22 +40,7 @@ published: true
 
   <div class="wrap">
 
-    <div class="masthead-post" id="stickyHeader">
-      <div class="container">
-  
-          <div class="nav">
-              <ul class="top-menu">
-                <li>
-                    <a href="{{ "/" | prepend: site.baseurl | prepend: site.url }}" title="Back to Index">{{ site.logo_text | downcase }} <i class="fa fa-circle dot-red" aria-hidden="true"></i> <i class="fa fa-circle dot-yellow" aria-hidden="true"></i> <i class="fa fa-circle dot-green" aria-hidden="true"></i></a>
-                </li>
-                <li id="backToTop" class="hidden">
-                  <a href="#top" title="Back to Top"><i class="fa fa-arrow-up" aria-hidden="true"></i><span class="hidden"> Back to Top</span></a>
-                </li>
-              </ul>
-          </div>
-  
-      </div>
-    </div>
+    {% include topnav.html %}
 
     <div id="content" class="container content">
 
@@ -127,12 +49,9 @@ published: true
 
       <div class="post">
         <div class="post-top-meta">
-          <!--<div class="edit-this-page"><a href="{{ page.path | prepend: site.github_post_dir }}">Edit this page</a></div>-->
           <div class="post-date">{{ page.date | date: "%B %d, %Y" }} — By {{ site.author.name }}</div>
           <h1 class="post-title">{{ page.title }}</h1>
         </div>
-
-        <aside id="toc"></aside>
 
         <article id="article">
         {{ content }}
@@ -190,79 +109,6 @@ published: true
           }
       }
   })();
-  window.onscroll = function() {makeSticky()};
-	var stickyHeader = document.getElementById("stickyHeader");
-	var content = document.getElementById("content");
-  var backToTop = document.getElementById("backToTop");
-	var sticky = stickyHeader.offsetTop;
-	function makeSticky() {
-		if (window.pageYOffset > sticky) {
-			content.style.paddingTop = "100px";
-			stickyHeader.style.position = "fixed";
-      stickyHeader.classList.add("sticky-shadow");
-      backToTop.style.display = "inline-block";
-		} else {
-			content.style.paddingTop = "0";
-			stickyHeader.style.position = "relative";
-      stickyHeader.classList.remove("sticky-shadow");
-      backToTop.style.display = "none";
-		}
-  }
-  function makeTOC(tocId, containerId, selectors, minThreshold) {
-      var toc = document.getElementById(tocId);
-      toc.innerHTML = "";
-      toc.className += " toc";
-      var container = containerId ? document.getElementById(containerId) : toc.parentElement;
-      var headings = [].slice.call(container.querySelectorAll(selectors));
-      if (headings.length <= minThreshold) {
-        return;
-      } else {
-        toc.style.display = "block";
-      }
-      var closeLevel = function(e, levels) {
-          for (var i = 0; i < levels && e.parentElement && e.parentElement.parentElement; i++) {
-              e = e.parentElement.parentElement;
-          }
-          return e;
-      };
-      var createLiWithAnchor = function(anchor, heading) {
-          var li = document.createElement("li");
-          var a = document.createElement("a");
-          a.href = "#" + anchor;
-          a.textContent = heading.textContent;
-          li.appendChild(a);
-          heading.innerHTML = "<a name='" + anchor + "'>" + heading.textContent + "</a>";
-          heading.className += " no-decoration";
-          return li;
-      };
-      var prevLevel = 0;
-      var root, curr;
-      headings.forEach(function (heading, index) {
-          var tag = heading.tagName.toLowerCase();
-          var curLevel = parseInt(tag.replace(/[^\d]/i, ""));
-          var anchor = heading.textContent.replace(/\r?\n|\r/g, "").replace(/\s/, "_");
-          var li = createLiWithAnchor(anchor, heading);
-          if (curLevel > prevLevel) {
-              if (!curr) {
-                  root = document.createElement("ol");
-                  root.appendChild(li);
-              } else {
-                  var ul = document.createElement("ul");
-                  ul.appendChild(li);
-                  curr.appendChild(ul);
-              }
-          } else if (curLevel === prevLevel) {
-              curr.parentElement.appendChild(li);
-          } else if (curLevel < prevLevel) {
-              var ancestor = closeLevel(curr, prevLevel - curLevel);
-              ancestor.parentElement.appendChild(li);
-          }
-          curr = li;
-          prevLevel = curLevel;
-      });
-      toc.appendChild(root);
-  }
-  makeTOC("toc", "article", "h3", 2);
   </script>
 
 </body>

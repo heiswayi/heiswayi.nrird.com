@@ -28,28 +28,8 @@ title: Home
 
 <head>
 	{% include head.html %}
+	<!--
 	<style>
-	#stickyHeader {
-		position: fixed;
-		top: 0;
-		left: 0;
-		width: 100%;
-		z-index: 200;
-		display: none;
-		background: repeating-linear-gradient(135deg, #dfdfdf 0, #dfdfdf 1%, #fff 0, #fff 50%) 0/20px 20px;
-		margin-bottom: 2rem;
-		-webkit-animation: slide-down .3s ease-out;
-		-moz-animation: slide-down .3s ease-out;
-		animation: slide-down .3s ease-out;
-		-moz-box-shadow: rgba(30, 50, 50, 0.25) 0 0.05em 0.5em;
-		-webkit-box-shadow: rgba(30, 50, 50, 0.25) 0 0.05em 0.5em;
-		box-shadow: rgba(30, 50, 50, 0.25) 0 0.05em 0.5em;
-	}
-	.masthead-post {
-		background: none;
-		padding-top: 0;
-		margin: 0;
-	}
 	a.to-grid-view {
 		font-size: 0.8rem;
 		color: #888;
@@ -65,33 +45,8 @@ title: Home
 		color: #aaa;
 		border-color: #222;
 	}
-	@-webkit-keyframes slide-down {
-				0% { opacity: 0; -webkit-transform: translateY(-100%); }   
-			100% { opacity: 1; -webkit-transform: translateY(0); }
-	}
-	@-moz-keyframes slide-down {
-				0% { opacity: 0; -moz-transform: translateY(-100%); }   
-			100% { opacity: 1; -moz-transform: translateY(0); }
-	}
-	@keyframes slide-down {
-				0% { opacity: 0; transform: translateY(-100%); }   
-			100% { opacity: 1; transform: translateY(0); }
-	}
-	@media print {
-		#mainHeader {
-			display: block;
-		}
-		#stickyHeader {
-			display: none;
-		}
-		#content {
-			padding-top: 0;
-		}
-		.masthead {
-			background: none;
-		}
-	}
 	</style>
+	-->
 </head>
 
 <body>
@@ -103,12 +58,7 @@ title: Home
 
   <div class="wrap">
 
-		<div id="mainHeader">
-		{% include topnav.html %}
-		</div>
-		<div id="stickyHeader">
-		{% include topnav_sticky.html %}
-		</div>
+	{% include topnav.html %}
 
     <div id="content" class="container content">
 			<hr class="hidden">
@@ -138,25 +88,6 @@ title: Home
   </div>
 
 	{% include foot.html %}
-	
-	<script>
-	window.onscroll = function() {makeSticky()};
-	var mainHeader = document.getElementById("mainHeader");
-	var stickyHeader = document.getElementById("stickyHeader");
-	var content = document.getElementById("content");
-	var sticky = mainHeader.offsetTop;
-	function makeSticky() {
-		if (window.pageYOffset > sticky) {
-			content.style.paddingTop = "100px";
-			mainHeader.style.display = "none";
-			stickyHeader.style.display = "block";
-		} else {
-			content.style.paddingTop = "0";
-			stickyHeader.style.display = "none";
-			mainHeader.style.display = "block";
-		}
-	}
-	</script>
 		
 </body>
 

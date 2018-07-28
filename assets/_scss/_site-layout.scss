@@ -219,6 +219,13 @@ tbody tr:nth-child(odd) {
     }
 }
 
+.img-logo {
+    box-shadow: none;
+    margin-left: 0;
+    margin-right: 0;
+    max-width: 100%;
+}
+
 .lead {
     font-size: 1.25rem;
     font-weight: 300;
@@ -265,24 +272,41 @@ tbody tr:nth-child(odd) {
     margin-top: 2rem;
     margin-bottom: 0;
     color: #505050;
+    &:after { 
+        content: ""; 
+        visibility: hidden; 
+        display: block; 
+        height: 0; 
+        clear: both;
+    }
     a {
         color: #505050;
         font-weight: 900;
         font-family: $cursive;
         font-size: 3rem;
+        float: left;
         &:hover {
             background-color: transparent;
         }
+        img {
+            margin: 0;
+        }
+    }
+    .vdivider {
+        float: left;
+        border-left:1px solid #ddd;
+        margin-left: 20px;
+        margin-right: 20px;
+        height: 30px;
     }
     small {
-        font-size: 1.2rem;
-        font-weight: 700;
-        color: #aaa;
-        display: block;
-        clear: both;
-        font-family: $monospace;
-        margin-top: -5px;
+        font-size: 1rem;
+        font-weight: bold;
+        color: #222;
+        font-family: $sans-serif;
         letter-spacing: 0.02rem;
+        float: left;
+        padding-top: 5px;
     }
 }
 

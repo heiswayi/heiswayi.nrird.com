@@ -28,51 +28,10 @@ published: true
       -moz-border-radius: 3px;
       border-radius: 3px;
     }
-    .masthead-post {
-      width: 100%;
-      z-index: 200;
-    }
-    .sticky-shadow {
-      -webkit-animation: slide-down .3s ease-out;
-      -moz-animation: slide-down .3s ease-out;
-      animation: slide-down .3s ease-out;
-      -moz-box-shadow: rgba(30, 50, 50, 0.25) 0 0.05em 0.5em;
-      -webkit-box-shadow: rgba(30, 50, 50, 0.25) 0 0.05em 0.5em;
-      box-shadow: rgba(30, 50, 50, 0.25) 0 0.05em 0.5em;
-    }
-    @-webkit-keyframes slide-down {
-          0% { opacity: 0; -webkit-transform: translateY(-100%); }   
-        100% { opacity: 1; -webkit-transform: translateY(0); }
-    }
-    @-moz-keyframes slide-down {
-          0% { opacity: 0; -moz-transform: translateY(-100%); }   
-        100% { opacity: 1; -moz-transform: translateY(0); }
-    }
-    @keyframes slide-down {
-          0% { opacity: 0; transform: translateY(-100%); }   
-        100% { opacity: 1; transform: translateY(0); }
+    .nav {
+      display: none;
     }
     @media print {
-      pre .line-number,
-      .hidden-on-print,
-      #projectMenuLink {
-        display: none;
-      }
-      .nav {
-        display: block;
-      }
-      .masthead-post {
-        box-shadow: none;
-        background: none;
-      }
-      #stickyHeader {
-        position: relative;
-        box-shadow: none;
-        animation: none;
-      }
-      #content {
-        padding-top: 0;
-      }
       .post-date {
         color: #aaa;
       }
@@ -86,25 +45,7 @@ published: true
 
   <div class="wrap">
 
-    <div class="masthead-post" id="stickyHeader">
-      <div class="container">
-  
-          <div class="nav">
-              <ul class="top-menu">
-                  <li>
-                    <a href="{{ "/" | prepend: site.baseurl | prepend: site.url }}" title="Back to Index">{{ site.logo_text | downcase }} <i class="fa fa-circle dot-red" aria-hidden="true"></i> <i class="fa fa-circle dot-yellow" aria-hidden="true"></i> <i class="fa fa-circle dot-green" aria-hidden="true"></i></a>
-                  </li>
-                  <li id="projectMenuLink" class="hidden">
-                    <a href="{{ "/projects" | prepend: site.baseurl | prepend: site.url }}" title="Back to Projects"><i class="em em-rocket" aria-hidden="true"></i><span class="hidden-on-mobile"> Projects</span></a>
-                  </li>
-                  <li id="backToTop" class="hidden">
-                    <a href="#top" title="Back to Top"><i class="fa fa-arrow-up" aria-hidden="true"></i><span class="hidden"> Back to Top</span></a>
-                  </li>
-              </ul>
-          </div>
-  
-      </div>
-    </div>
+    {% include topnav.html %}
 
     <div id="content" class="container content">
 
@@ -116,7 +57,6 @@ published: true
           <div class="post-label">
             <a href="{{ '/projects' | prepend: site.baseurl | prepend: site.url }}"><i class="em em-rocket em-1em" aria-hidden="true"></i> Projects</a>
           </div>
-          <!--<div class="edit-this-page"><a href="{{ page.path | prepend: site.github_post_dir }}">Edit this page</a></div>-->
           <div class="post-date">{{ page.date | date: "%B %d, %Y" }} — By {{ site.author.name }}</div>
           <h1 class="post-title">{{ page.title }}</h1>
         </div>
@@ -163,27 +103,6 @@ published: true
           }
       }
   })();
-  window.onscroll = function() {makeSticky()};
-	var stickyHeader = document.getElementById("stickyHeader");
-	var content = document.getElementById("content");
-  var projectMenuLink = document.getElementById("projectMenuLink");
-  var backToTop = document.getElementById("backToTop");
-	var sticky = stickyHeader.offsetTop;
-	function makeSticky() {
-		if (window.pageYOffset > sticky) {
-			content.style.paddingTop = "100px";
-			stickyHeader.style.position = "fixed";
-      stickyHeader.classList.add("sticky-shadow");
-      projectMenuLink.style.display = "inline-block";
-      backToTop.style.display = "inline-block";
-		} else {
-			content.style.paddingTop = "0";
-			stickyHeader.style.position = "relative";
-      stickyHeader.classList.remove("sticky-shadow");
-      projectMenuLink.style.display = "none";
-      backToTop.style.display = "none";
-		}
-	}
   </script>
 
 </body>

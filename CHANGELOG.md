@@ -1,5 +1,10 @@
 Versioning format: **yyyy.M.revision**
 
+### 2018.8.1
+- Major redesigned - more simplicity + image logo instead of text
+- Removed sticky header and auto-generated table of content - no more JS things!
+- New site logo introduced
+
 ### 2018.7.15
 - Made some enhancements
 - Added Grid View mode as the alternative to Index/Home page
