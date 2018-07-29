@@ -1,5 +1,9 @@
 Versioning format: **yyyy.M.revision**
 
+### 2018.8.2
+- Added loading GIF before lazyload the image
+- Enlarged figure for better image view in post layout
+
 ### 2018.8.1
 - Major redesigned - more simplicity + image logo instead of text
 - Removed sticky header and auto-generated table of content - no more JS things!
