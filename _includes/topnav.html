@@ -6,8 +6,8 @@
             -->
             <a href="{{ site.url }}" title="{{ site.title }}" class="title"><img src="{{ "/assets/logo-web-h30.png" | prepend: site.baseurl | prepend: site.url }}" alt="Logo" class="img-logo"></a>
             <!--<span class="hidden">&nbsp;—&nbsp;</span>-->
-            <div class="vdivider hidden-on-mobile"></div>
             {% if site.show_tagline %}
+                <div class="vdivider hidden-on-mobile"></div>
                 {% include tagline.html %}
             {% endif %}
         </h2>
