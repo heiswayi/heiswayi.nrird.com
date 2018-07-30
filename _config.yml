@@ -47,6 +47,9 @@ permalink:          /:year/:title
 markdown:           kramdown
 highlighter:        rouge
 timezone:           Asia/Kuala_Lumpur
+include:            [
+                      "_redirects"
+                    ]
 exclude:            [
                       "README.md",
                       "LICENSE.md",
