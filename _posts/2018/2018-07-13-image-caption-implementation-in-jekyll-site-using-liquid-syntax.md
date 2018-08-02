@@ -32,7 +32,7 @@ And then, it will generate the HTML code that's looked like this:
 
 Demo:
 
-![Devil's Backbone](https://res.cloudinary.com/heiswayi/image/fetch/w_730,c_limit/https://i.imgur.com/gYVYd9M.jpg)
+![Devil's Backbone](https://i.imgur.com/gYVYd9M.jpg)
 
 Figure (above): Devil's Backbone Open Space, Loveland, CO
 

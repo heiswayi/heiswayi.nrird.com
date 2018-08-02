@@ -69,7 +69,7 @@
 /* Portrait tablet to landscape and desktop */
 @media (min-width: 768px) and (max-width: 1199px) {
   .container, .footer, .nav {
-    max-width: 40rem;
+    max-width: 36rem;
   }
   .post {
     figure {
@@ -82,7 +82,7 @@
 /* Large desktop */
 @media (min-width: 1200px) {
   .container, .footer, .nav {
-    max-width: 48rem;
+    max-width: 44rem;
   }
   #toc {
     float: right;

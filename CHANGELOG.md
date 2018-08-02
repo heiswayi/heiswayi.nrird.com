@@ -1,5 +1,9 @@
 Versioning format: **yyyy.M.revision**
 
+### 2018.8.3
+- Made bigger text and some correction to SCSS
+- Simplified the title - no tagline anymore
+
 ### 2018.8.2
 - Added loading GIF before lazyload the image
 - Enlarged figure for better image view in post layout

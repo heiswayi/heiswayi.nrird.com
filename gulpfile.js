@@ -52,9 +52,9 @@ gulp.task('server', () => {
 
 // Watch files
 gulp.task('watch', () => {
-  //gulp.watch(paths.scss, ['compile-sass']);
+  gulp.watch(paths.scss, ['compile-sass']);
   //gulp.watch(paths.jekyll, ['serve-jekyll']);
-  gulp.watch(paths.scss, ['serve-jekyll']);
+  //gulp.watch(paths.scss, ['serve-jekyll']);
 });
 
 // Start everything with the default task

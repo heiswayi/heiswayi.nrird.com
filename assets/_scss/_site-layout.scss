@@ -10,19 +10,19 @@ html {
     margin: 0;
     padding: 0;
     height: 100%;
+    font-size: 20px;
 }
 
 body {
     margin: 0;
     padding: 0;
     height: 100%;
-    color: #515151;
+    color: #333;
     background-color: #fff;
     -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
     font-family: $sans-serif;
-    font-size: 18px;
-    line-height: 1.6;
+    line-height: 1.5;
     text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
     text-rendering: optimizeLegibility !important;
     -webkit-font-smoothing: antialiased !important;
@@ -125,15 +125,19 @@ pre {
     line-height: 1.4;
     white-space: pre;
     overflow: scroll;
+    /*
     background-color: #fdfdfd;
     border: 1px solid #ddd;
     box-shadow: 3px 3px rgba(0,0,0,.1);
+    */
     padding: .5rem 2rem .5rem .5rem;
     max-height: 800px;
     font-size: .9rem;
     code {
+        /*
         color: inherit;
         background-color: transparent;
+        */
         display: block;
         padding: 0;
     }
@@ -141,12 +145,16 @@ pre {
         display: block;
         float: left;
         margin: 0 1em 0 -1em;
+        /*
         border-right: 1px solid #ddd;
+        */
         text-align: right;
         span {
             display: block;
             padding: 0 .5em 0 1em;
+            /*
             color: #ccc;
+            */
         }
     }
     .cl {
@@ -282,7 +290,6 @@ tbody tr:nth-child(odd) {
     a {
         color: #505050;
         font-weight: 900;
-        font-family: $cursive;
         font-size: 3rem;
         float: left;
         &:hover {
@@ -299,14 +306,12 @@ tbody tr:nth-child(odd) {
         margin-right: 20px;
         height: 30px;
     }
-    small {
+    .tagline {
         font-size: 1rem;
-        font-weight: bold;
-        color: #222;
-        font-family: $sans-serif;
-        letter-spacing: 0.02rem;
+        color: #333;
+        font-family: $tagline-font;
+        letter-spacing: 0.02px;
         float: left;
-        padding-top: 5px;
     }
 }
 
@@ -783,7 +788,7 @@ a.skip:hover {
         display: table;
         .post-date {
             display: table-cell;
-            width: 60px;
+            width: 4rem;
         }
         .separator {
             display: table-cell;
