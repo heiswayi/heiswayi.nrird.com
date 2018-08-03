@@ -6,13 +6,7 @@
     box-sizing: border-box;
 }
 
-html {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    font-size: 20px;
-}
-
+html,
 body {
     margin: 0;
     padding: 0;
@@ -21,8 +15,9 @@ body {
     background-color: #fff;
     -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
-    font-family: $sans-serif;
-    line-height: 1.5;
+    font-family: $body-font;
+    font-size: 20px;
+    line-height: 1.55;
     text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
     text-rendering: optimizeLegibility !important;
     -webkit-font-smoothing: antialiased !important;
@@ -45,7 +40,12 @@ a {
     -moz-hyphens: auto;
     -webkit-hyphens: auto;
     hyphens: auto;
+    background-image: linear-gradient(120deg, #ff4136 0%, #ffdc00 50%, #2ecc40 100%);
+    background-repeat: no-repeat;
+    background-size: 100% 2px;
+    background-position: 0 100%;
     &:hover {
+        background-image: none;
         background-color: #069;
         color: #fff;
     }
@@ -60,6 +60,7 @@ h6 {
     margin-bottom: 1rem;
     line-height: 1.25;
     color: #313131;
+    font-family: $heading-font;
 }
 
 h1 {
@@ -111,7 +112,7 @@ abbr {
 
 code,
 pre {
-    font-family: $monospace;
+    font-family: $precode-font;
 }
 
 code {
@@ -124,7 +125,7 @@ pre {
     margin-bottom: 1rem;
     line-height: 1.4;
     white-space: pre;
-    overflow: scroll;
+    overflow: auto;
     /*
     background-color: #fdfdfd;
     border: 1px solid #ddd;
@@ -292,6 +293,7 @@ tbody tr:nth-child(odd) {
         font-weight: 900;
         font-size: 3rem;
         float: left;
+        background: none;
         &:hover {
             background-color: transparent;
         }
@@ -362,7 +364,7 @@ tbody tr:nth-child(odd) {
         -moz-user-select: none;
         -ms-user-select: none;
         user-select: none;
-        font-family: $monospace;
+        font-family: $tag-font;
         font-size: 0.8rem;
         -webkit-border-radius: 3px;
         -moz-border-radius: 3px;
@@ -455,7 +457,7 @@ blockquote p:last-child {
 .post-date {
     letter-spacing: 1px;
     text-transform: uppercase;
-    font-family: $monospace;
+    font-family: $postmeta-font;
 }
 
 .post-list-date small {
@@ -470,7 +472,7 @@ blockquote p:last-child {
 }
 
 .post-list-desc {
-    color: #777;
+    color: #505050;
     font-size: 1rem;
 
     small {
@@ -517,6 +519,9 @@ blockquote p:last-child {
 .copyright {
     font-size: 0.8rem;
     color: #888;
+    a {
+        background-image: none;
+    }
 }
 
 .license {
@@ -571,7 +576,7 @@ blockquote p:last-child {
             -moz-border-radius: 3px;
             border-radius: 3px;
             box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
-            font-family: $monospace;
+            font-family: $topmenu-font;
             font-size: 0.75rem;
             &:hover {
                 border: 1px solid #777;
@@ -710,7 +715,7 @@ a.skip:hover {
 
 .footnotes {
     margin-top: 1rem;
-    font-family: $monospace;
+    font-family: $footnote-font;
     font-size: 0.8rem;
     ol {
         li p {
@@ -782,7 +787,7 @@ a.skip:hover {
 .archives {
     .year,
     .post-date {
-        font-family: $monospace;
+        font-family: $postmeta-font;
     }
     .post-title {
         display: table;
@@ -798,6 +803,9 @@ a.skip:hover {
         .full-title {
             display: table-cell;
         }
+    }
+    a {
+        background-image: none;
     }
 }
 

@@ -1,18 +1,7 @@
 ---
 layout: page
-title: About
+title: Colophon
 ---
-
-<div class="author-info">
-	<div class="with-avatar">
-		<div class="photo">
-			<img src="https://avatars0.githubusercontent.com/u/13794983?v=4" alt="Heiswayi Nrird Photo">
-		</div>
-		<p class="intro-text">Hi. I'm <strong>Heiswayi Nrird</strong>. I do some stuffs with computer and sometimes write about it here. I'm a <em>Software Engineer</em> from Penang and I ship code at <a href="https://www.keysight.com">Keysight Technologies</a>. Other times, I'll be off the grid to capture <a href="{{ "/photography" | prepend: site.baseurl | prepend: site.url }}"><i class="em em-camera_with_flash"></i> some beautiful landscapes</a>. Welcome to my personal blog! Got any question? Shoot me an email at <strong>heiswayi<span style="display:none">-antispam-</span>@<span style="display:none">-antispam-</span>nrird.xyz</strong>.</p>
-	</div>
-
-	<p><a href="https://heiswayi.github.io/resume/">Résumé/CV</a> // <a href="https://my.linkedin.com/in/nrird">LinkedIn</a> // <a href="https://heiswayi.github.io/repo">GitHub</a> // <a href="https://heiswayi.github.io/gist">Gist</a> // <a href="http://codepen.io/heiswayi/">CodePen</a> // <a href="http://jsfiddle.net/user/heiswayi/">JSFiddle</a></p>
-</div>
 
 This website is my personal blog, a place I may share some thoughts, experiences, opinions, reviews, ideas, rantings, and facts. But most of the time, I share about my personal projects, researches and programming stuffs.
 
