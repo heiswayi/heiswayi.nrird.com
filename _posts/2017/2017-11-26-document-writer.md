@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: project
 title: Document Writer
 description: Minimalist web-based writing tool to write document using web browser and ability to save as a plain text, HTML or markdown format file.
 keywords: minimalist, web-based app, writing tool, document writer

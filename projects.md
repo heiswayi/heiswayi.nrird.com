@@ -10,7 +10,8 @@ keywords: part-time projects, hobby stuffs, open source, web apps, github
     {% if post.tags contains "Project" %}
 
     <li>
-        <a href="{{ post.url }}">{{ post.title }}</a> — {{ post.description }}
+        <a href="{{ post.url }}">{{ post.title }}</a><br>
+        {{ post.description }}
     </li>
 
     {% endif %}
@@ -19,49 +20,138 @@ keywords: part-time projects, hobby stuffs, open source, web apps, github
 
 ### Jekyll themes
 
-- The Plain (2015) — [GitHub](https://github.com/heiswayi/the-plain) // [View Demo](http://heiswayi.github.io/the-plain)
-- Thinkspace (2016) — [GitHub](https://github.com/heiswayi/thinkspace) // [View Demo](http://heiswayi.github.io/thinkspace)
-- TextLog (2017) — [GitHub](http://github.com/heiswayi/textlog) // [View Demo](http://heiswayi.github.io/textlog)
+<ul>
+  <li>
+    <a href="https://github.com/heiswayi/the-plain">The Plain</a> (2015, MIT) &middot; <a href="http://heiswayi.github.io/the-plain">View Demo</a>
+  </li>
+  <li>
+    <a href="https://github.com/heiswayi/thinkspace">Thinkspace</a> (2016, MIT) &middot; <a href="http://heiswayi.github.io/thinkspace">View Demo</a>
+  </li>
+  <li>
+    <a href="http://github.com/heiswayi/textlog">TextLog</a> (2017, MIT) &middot; <a href="http://heiswayi.github.io/textlog">View Demo</a>
+  </li>
+</ul>
 
 ### Listing sites for my stuffs on GitHub
 
-- [heiswayi.github.io/gist](https://heiswayi.github.io/gist/) — List of my public gists / code snippets.
-- [heiswayi.github.io/repo](https://heiswayi.github.io/repo/) — List of my open source projects on GitHub.
+<ul>
+  <li>
+    <a href="https://heiswayi.github.io/gist/">heiswayi.github.io/gist</a><br>
+    Listing site of my public gists / code snippets. Made using GitHub API.
+  </li>
+  <li>
+    <a href="https://heiswayi.github.io/repo/">heiswayi.github.io/repo</a><br>
+    Listing site of my open source projects on GitHub. Made using GitHub API.
+  </li>
+</ul>
 
 ### HTML-based apps
 
-- [PGP Key Generator](http://heiswayi.github.io/pgp/) — Client-side PGP keys generator.
-- [Spelling: UK vs US](http://heiswayi.github.io/spelling-uk-vs-us) — Comprehensive* list of British vs. American spelling differences.
-- [Math Console](http://heiswayi.github.io/math-console/) — Mathematical-powered console to evaluate basic arithmetic operations and common math functions.
-- [Color Contrast Checker](http://heiswayi.github.io/color-contrast-checker) — To check color constrast compliant ratios.
-- [EncryptJS](http://heiswayi.github.io/encryptjs/) — JavaScript library for encrypting message on your site.
-- [Random Name Picker](http://heiswayi.github.io/random-name-picker/) — Simple web tool for indoor events.
-- [Markdown-HTML Live Preview Editor](http://heiswayi.github.io/markdown-editor) — Simple markdown-to-HTML live preview editor created in vanilla JavaScript.
+<ul>
+  <li>
+    <a href="http://heiswayi.github.io/pgp/">PGP Key Generator</a><br>
+    Client-side PGP keys generator using web browser.
+  </li>
+  <li>
+    <a href="http://heiswayi.github.io/spelling-uk-vs-us">Spelling: UK vs US</a><br>
+    Comprehensive* list of British vs. American spelling differences.
+  </li>
+  <li>
+    <a href="http://heiswayi.github.io/math-console/">Math Console</a><br>
+    Mathematical-powered console to evaluate basic arithmetic operations and common math functions.
+  </li>
+  <li>
+    <a href="http://heiswayi.github.io/color-contrast-checker">Color Contrast Checker</a><br>
+    To check color constrast compliant ratios.
+  </li>
+  <li>
+    <a href="http://heiswayi.github.io/encryptjs/">EncryptJS</a><br>
+    JavaScript library for encrypting message on your site.
+  </li>
+  <li>
+    <a href="http://heiswayi.github.io/random-name-picker/">Random Name Picker</a><br>
+    Simple web tool for indoor events - to pick a random name from a list.
+  </li>
+  <li>
+    <a href="http://heiswayi.github.io/markdown-editor">Markdown-HTML Live Preview Editor</a><br>
+    Simple markdown-to-HTML live preview editor created in vanilla JavaScript.
+  </li>
+</ul>
 
 ### Experimental AI projects
 
-- [W4Y1](http://heiswayi.github.io/w4y1/) — Experimental AI chatbot for digitalizing my memories.
-- [HelloBot](http://heiswayi.github.io/hellobot/) — Just another AI Chatbot.
+<ul>
+  <li>
+    <a href="http://heiswayi.github.io/w4y1/">W4Y1</a><br>
+    Experimental AI chatbot for digitalizing my memories.
+  </li>
+  <li>
+    <a href="http://heiswayi.github.io/hellobot/">HelloBot</a><br>
+    Just another AI Chatbot.
+  </li>
+</ul>
 
 ### Scripts and utilities
 
-- [Web Proxy](http://nrird.xyz/proxy/) — My personal web proxy script.
-- [Whois](http://nrird.xyz/scripts/whois/) — Simple domain whois script.
-- [Indenter Tool](http://nrird.xyz/scripts/indenter-tool/) — Simple script to prettify and fix indentation of code.
-- [JavaScript Packer](http://nrird.xyz/scripts/js-packer/) — Compress and obfuscate JavaScript code.
-- [Personal URL Shortening Service](http://nrird.xyz/scripts/url-shortener/) — My personal URL shortener script.
-- [Static Sparkline Image Generator](http://nrird.xyz/scripts/sparkline/) — Generate static sparkline image with browser caching with ETag.
+<ul>
+  <li>
+    <a href="http://nrird.xyz/proxy/">Web Proxy</a><br>
+    My personal web proxy script.
+  </li>
+  <li>
+    <a href="http://nrird.xyz/scripts/whois/">Whois</a><br>
+    Simple domain whois script.
+  </li>
+  <li>
+    <a href="http://nrird.xyz/scripts/indenter-tool/">Indenter Tool</a><br>
+    Simple script to prettify and fix indentation of code.
+  </li>
+  <li>
+    <a href="http://nrird.xyz/scripts/js-packer/">JavaScript Packer</a><br>
+    Compress and obfuscate JavaScript code.
+  </li>
+  <li>
+    <a href="http://nrird.xyz/scripts/url-shortener/">Personal URL Shortening Service</a><br>
+    My personal URL shortener script.
+  </li>
+  <li>
+    <a href="http://nrird.xyz/scripts/sparkline/">Static Sparkline Image Generator</a><br>
+    Generate static sparkline image with browser caching with ETag.
+  </li>
+</ul>
 
 Visit [https://nrird.xyz/scripts](https://nrird.xyz/scripts/) for more other scripts.
 
 ### Web tools
 
-- [FREE Ultimate Blocks - Website Maker](http://nrird.xyz/ultimate-blocks) — A FREE block-based HTML drag-and-drop bootstrap theme builder with 126+ predesigned unique blocks and unlimited variants.
-- [Encrypto Zero](https://nrird.xyz/encrypto-zero) — Minimalist, secure and encrypted pastebin app for personal use purpose.
-- [Document Writer](https://nrird.xyz/document-writer) — Minimalist web-based writing tool to write document using web browser.
-- [Speedtest](https://nrird.xyz/speedtest/) — Minimalist speedtest site. No ads & mobile friendly!
+<ul>
+  <li>
+    <a href="http://nrird.xyz/ultimate-blocks">FREE Ultimate Blocks - Website Maker</a><br>
+    A FREE block-based HTML drag-and-drop bootstrap theme builder with 126+ predesigned unique blocks and unlimited variants.
+  </li>
+  <li>
+    <a href="https://nrird.xyz/encrypto-zero">Encrypto Zero</a><br>
+    Minimalist, secure and encrypted pastebin app for personal use purpose.
+  </li>
+  <li>
+    <a href="https://nrird.xyz/document-writer">Document Writer</a><br>
+    Minimalist web-based writing tool to write document using web browser.
+  </li>
+  <li>
+    <a href="https://nrird.xyz/speedtest/">Speedtest</a><br>
+    Minimalist speedtest site. No ads &amp; mobile friendly!
+  </li>
+</ul>
 
 ### Misc. stuffs
 
-- [Website Checklist](http://nrird.xyz/website-checklist) — Checklist for web developer.
-- [Personal Reminder Note](/reminder) — A note to remind myself.
+<ul>
+  <li>
+    <a href="http://nrird.xyz/website-checklist">Website Checklist</a><br>
+    Checklist for web developer.
+  </li>
+  <li>
+    <a href="/reminder">Personal Reminder Note</a><br>
+    A note to remind myself.
+  </li>
+</ul>
