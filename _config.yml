@@ -7,7 +7,7 @@ show_tagline:       false # edit file in /_includes/tagline.html
 show_social_icons:  false # edit file in /_includes/social_links.html
 og_locale:          "en_US"
 cover:              "/assets/logo.gif" # site image cover
-version:            "2018.8.3"
+version:            "2018.8.4"
 
 # Improving site SEO
 seo_title:          "heiswayi.nrird.com // a personal blog of heiswayi nrird" # between 55 and 66 characters
@@ -47,23 +47,22 @@ permalink:          /:year/:title
 markdown:           kramdown
 highlighter:        rouge
 timezone:           Asia/Kuala_Lumpur
-include:            [
-                      "_redirects"
-                    ]
-exclude:            [
-                      "README.md",
-                      "LICENSE.md",
-                      "CHANGELOG.md",
-                      "TODO.md",
-                      "DRAFT-*.html",
-                      "gulpfile.js",
-                      "node_modules",
-                      "package.json",
-                      "package-lock.json",
-                      "Gemfile",
-                      "Gemfile.lock",
-                      "*.gemspec"
-                    ]
+include:
+  - _redirects
+
+exclude:
+  - README.md
+  - LICENSE.md
+  - CHANGELOG.md
+  - TODO.md
+  - "DRAFT-*.html"
+  - gulpfile.js
+  - node_modules
+  - package.json
+  - package-lock.json
+  - Gemfile
+  - Gemfile.lock
+  - "*.gemspec"
 
 # Site configurations
 compress_html:
