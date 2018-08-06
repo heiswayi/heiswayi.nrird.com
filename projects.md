@@ -1,8 +1,8 @@
 ---
 layout: page
 title: Projects
-description: List of some projects
-keywords: part-time projects, hobby stuffs, open source, web apps, github
+description: List of some projects. Some are still being maintained, some others are just made for fun and learning!
+keywords: part-time projects, hobby stuffs, open source, web apps, github repo
 ---
 
 <ul>

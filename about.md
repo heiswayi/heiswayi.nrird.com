@@ -1,6 +1,8 @@
 ---
 layout: page
 title: About
+description: The About page is the section of a website where people go to find out about the website they're on.
+keywords: about page, author info, heiswayi nrird
 ---
 
 <div class="author-info">

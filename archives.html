@@ -1,8 +1,8 @@
 ---
 layout: page
-title: Archives
-description: Display all published posts including tagged with 'Project'
-keywords: post archives, all published posts
+title: Simplified Archives
+description: Used to display category, date, author, tag, taxonomy, and custom post type archives.
+keywords: post archives, article listing, date-based simplified archives
 ---
 
 {% assign rawtags = "" %}
@@ -28,7 +28,7 @@ keywords: post archives, all published posts
 <span class="hidden">&nbsp;</span>
 
 <div class="posts archives">
-	{% for post in site.posts %}
+{% for post in site.posts %}
 	
 	{% unless post.next %}
 		<h2 class="year">{{ post.date | date: '%Y' }}</h2>
@@ -52,5 +52,16 @@ keywords: post archives, all published posts
 	
 	<span class="hidden">&nbsp;</span>
 
+{% endfor %}
+
+<hr class="hrline">
+<h2>View Posts By Tag</h2>
+{% if tags %}
+<div class="tag-cloud tag-cloud-small" id="Tags">
+  {% for tag in tags %}
+    <a class="tag-anchor" href="{{ site.url }}{{ site.baseurl }}/tags#{{ tag | slugify }}"><i class="fa fa-tag muted" aria-hidden="true"></i> <span class="hidden">#</span>{{ tag }}</a>
   {% endfor %}
+</div>
+{% endif %}
+
 </div>

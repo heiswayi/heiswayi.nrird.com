@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Colophon
+description: A colophonis a description of the tools, systems and resources used to create the Web site and keep it operational.
+keywords: site colophon, technical details, site imprint
 ---
 
 This website is my personal blog, a place I may share some thoughts, experiences, opinions, reviews, ideas, rantings, and facts. But most of the time, I share about my personal projects, researches and programming stuffs.

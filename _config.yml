@@ -1,36 +1,38 @@
 # Basic site info
-title:              "heiswayi.nrird.com •••"
-description:        "a personal blog of heiswayi nrird"
-keywords:           "heiswayi nrird, personal blog, software engineer, life experience, technology and research"
-logo_text:          "heiswayi.nrird.com"
-show_tagline:       false # edit file in /_includes/tagline.html
-show_social_icons:  false # edit file in /_includes/social_links.html
 og_locale:          "en_US"
-cover:              "/assets/logo.gif" # site image cover
-version:            "2018.8.4"
+title:              "heiswayi.nrird.com"
+description:        "a personal blog of heiswayi nrird"
+keywords:           "software engineer, web developer, personal website, code snippet, php, c#, powershell, build automation, .net framework, programmer, ui/ux"
+logo_text:          "hn•••" # if using text as site heading logo
+cover:              "/assets/logo.gif"
+version:            "2018.8.4" # CSS version tag, used with CHANGELOG.md
 
-# Improving site SEO
-seo_title:          "heiswayi.nrird.com // a personal blog of heiswayi nrird" # between 55 and 66 characters
-seo_description:    "Hi. I'm Heiswayi Nrird. I do some stuffs with computer and sometimes write about it here. I'm a Software Engineer from Penang and I ship code at Keysight Technologies." # between 70 and 300 characters
+# Site SEO
+seo_title:          "heiswayi nrird's personal blog" # between 55 and 66 characters
+seo_description:    "I'm Heiswayi Nrird. I do some stuffs with computer and sometimes write about it here. I'm a Software Engineer and I ship code at Keysight Technologies." # between 70 and 300 characters
 
-# Site URL settings
+# Site URL
 url:                https://heiswayi.nrird.com # main url
-baseurl:            null # for gh-pages
+baseurl:            null # for gh-pages only
+
+# GitHub Pages ONLY
 enforce_ssl:        heiswayi.nrird.com
-github_post_dir:    https://github.com/heiswayi/heiswayi.github.io/blob/master/
 
 # Site author info
 author:
   name:             "Heiswayi Nrird"
-  email:            hnrird@gmail.com
-  github_username:  heiswayi
   twitter_username: heiswayi
-  facebook_url:     
 
-# Display related post?
+# Display tagline on site header?
+show_tagline: false # edit file in /_includes/tagline.html
+
+# Display social icons on site header?
+show_social_icons: false # edit file in /_includes/social_links.html
+
+# Display related post at the bottom of a post?
 related_post_enabled: false
 
-# Enable post sharer?
+# Enable post sharer text at the bottom of article?
 post_sharer: false
 
 # Disqus comment settings
@@ -40,13 +42,14 @@ disqus_shortname:   hnbloggithub
 # Google Analytics ID
 google_analytics_code: UA-58296043-7
 
-# Build settings
+# Jekyll build settings
 source:             ./
 destination:        ./_site
 permalink:          /:year/:title
 markdown:           kramdown
 highlighter:        rouge
 timezone:           Asia/Kuala_Lumpur
+
 include:
   - _redirects
 
@@ -64,7 +67,6 @@ exclude:
   - Gemfile.lock
   - "*.gemspec"
 
-# Site configurations
 compress_html:
   clippings:        all
   comments:         ["<!-- ", " -->"]
