@@ -16,12 +16,24 @@ body {
     -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
     font-family: $body-font;
-    font-size: 20px;
-    line-height: 1.55;
+    font-size: 18px;
+    line-height: 1.6;
     text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
     text-rendering: optimizeLegibility !important;
     -webkit-font-smoothing: antialiased !important;
     -moz-osx-font-smoothing: grayscale !important;
+
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+
+    font-kerning: normal;
+    -moz-font-feature-settings:"kern" 1, "liga" 1;
+    -ms-font-feature-settings:"kern" 1, "liga" 1;
+    -o-font-feature-settings:"kern" 1, "liga" 1;
+    -webkit-font-feature-settings:"kern" 1, "liga" 1;
+    font-feature-settings:"kern" 1, "liga" 1;
 }
 
 a {
@@ -469,6 +481,7 @@ blockquote p:last-child {
 
 .post-list-title {
     font-size: 1.1rem;
+    font-family: $heading-font;
 }
 
 .post-list-desc {
