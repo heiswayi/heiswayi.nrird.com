@@ -1,7 +1,7 @@
 <div class="footer">
 	<div class="copyright">
-		<i class="fa fa-copyright" title="Copyright"></i> 2015&mdash;{{ site.time | date: "%Y" }} {{ site.author.name }}<br>
-		<i class="fa fa-code" aria-hidden="true"></i> Source v{{ site.version }} &mdash; built using <a href="http://jekyllrb.com/">Jekyll</a> and deployed by <a href="https://www.netlify.com/">Netlify</a>.<br>
-		<i class="fa fa-anchor" aria-hidden="true"></i> <a href="{{ "/about" | prepend: site.baseurl | prepend: site.url }}">About</a> // <a href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">RSS</a> // <a href="#top">Back to Top</a>
+		<i class="fa fa-copyright" title="Copyright"></i> {{ site.author.name }} 2015-{{ site.time | date: "%Y" }}<br>
+		<i class="fa fa-code" aria-hidden="true"></i> Source v{{ site.version }} &mdash; Built with <a href="http://jekyllrb.com/">Jekyll</a> &middot; Deployed by <a href="https://www.netlify.com/">Netlify</a><br>
+		<i class="fa fa-anchor" aria-hidden="true"></i> <a href="{{ "/" | prepend: site.baseurl | prepend: site.url }}">Home</a> &middot; <a href="{{ "/about" | prepend: site.baseurl | prepend: site.url }}">About</a> &middot; <a href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">RSS</a> &middot; <a href="#top">Back to Top</a>
 	</div>
 </div>
