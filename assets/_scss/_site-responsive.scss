@@ -23,20 +23,8 @@
   }
   .archives {
     .post-list-archives {
-      margin-bottom: 1rem;
-    }
-    .post-title {
-      display: block;
-      .post-date {
-        display: block;
-        width: 100%;
-      }
-      .full-title {
-        display: block;
-      }
-      .separator {
-        display: none;
-      }
+      margin-bottom: 1.5rem;
+      line-height: 1.2;
     }
   }
 }
@@ -86,12 +74,6 @@
 @media (min-width: 1200px) {
   .container, .footer, .nav {
     max-width: 44rem;
-  }
-  #toc {
-    float: right;
-    width: 250px;
-    margin-left: 20px;
-    margin-right: -270px;
   }
   .post {
     figure {

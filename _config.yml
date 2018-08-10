@@ -5,7 +5,7 @@ description:        "a personal blog of heiswayi nrird"
 keywords:           "software engineer, web developer, personal website, code snippet, php, c#, powershell, build automation, .net framework, programmer, ui/ux"
 logo_text:          "hn•••" # if using text as site heading logo
 cover:              "/assets/logo.gif"
-version:            "2018.8.4" # CSS version tag, used with CHANGELOG.md
+version:            "2018.8.5" # CSS version tag, used with CHANGELOG.md
 
 # Site SEO
 seo_title:          "heiswayi nrird's personal blog" # between 55 and 66 characters
@@ -66,6 +66,7 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - "*.gemspec"
+  - "*.with-description"
 
 compress_html:
   clippings:        all

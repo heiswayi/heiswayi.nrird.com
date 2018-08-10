@@ -1,5 +1,9 @@
 Versioning format: **yyyy.M.revision**
 
+### 2018.8.5
+- Major design overhauled - no fancy colors, more black and white clean
+- Made the layout more minimalist
+
 ### 2018.8.4
 - Made some enhancements to SCSS
 - Prettified anchor links
