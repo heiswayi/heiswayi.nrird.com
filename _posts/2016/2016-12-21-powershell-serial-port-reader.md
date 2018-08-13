@@ -1,15 +1,17 @@
 ---
 layout: post
-title: Serial port reader using PowerShell script
-description: Initial release of lightweight Serial Port reader written in PowerShell script to read data from a serial port and also export the data into a log file.
+title: Writing a Serial Port reader in PowerShell
+description: Initial release of lightweight Serial Port reader written in PowerShell script to read data from a serial port and export the data into a log file.
 keywords: powershell script, serial port, serial communication, ps1
 tags: [PowerShell, SerialPort, Open Source]
 comments: true
 ---
 
-I have made a complete PowerShell script to read data from a serial port and export the data into a log file. Sometimes, when I work with Arduino project, I just use this script to quickly connect to the Arduino board and check the data output.
+Here I have made a complete PowerShell script to read data from a serial port and export the data into a log file. This script is using [System.IO.Ports.SerialPort](https://msdn.microsoft.com/en-us/library/system.io.ports.serialport) class. The intention is when I need to simply test or debug the Arduino board to check for data stream, I can simply run this script.
 
-Also available on my [Gist](https://git.io/vpfrC) in case you want to contribute or help to improve this script.
+### Source code
+
+File name: `SerialPortReader.ps1` // Mirror link: [Gist](https://git.io/vpfrC)
 
 ```powershell
 <#

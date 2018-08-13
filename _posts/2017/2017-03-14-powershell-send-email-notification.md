@@ -7,11 +7,9 @@ tags: [PowerShell]
 comments: true
 ---
 
-At work, I have been implementing software build automation in Windows environment, and it's part of my day job as Build and Release Engineer. Some of the automation tools have been internally developed by myself. But, there is one common task that is being used a lot. It is to send email notification. This is because people want everything to be delivered to their email. Since most of the tasks are written in PowerShell script by myself. To accomplish that, I can just use a PowerShell script too.
+At work, I have been implementing software build automation in Windows environment, and it's part of my day job as Build and Release Engineer. Some of the automation tools have been internally developed by myself. But, there is one common task that is being used a lot. It is to send email notification. This is because people want everything to be delivered to their email. Since most of the tasks are written in PowerShell script by myself. To accomplish that, I wrote a script in PowerShell to send the email notification.
 
-Below is the simple snippet how I do it in PowerShell:
-
-_EmailNotification.ps1_
+The PowerShell script below is how I accomplished the task for sending email notification. The script does not cover all the source code, but you will the idea how it works and to get started with yours.
 
 ```powershell
 # 1. SETTING UP NECESSARY PARAMETERS
@@ -85,9 +83,7 @@ try {
 }
 ```
 
-Done!
-
-### Make the script executable with parameters
+### Here's how you can make the script executable with parameters
 
 To execute the script from other program with some arguments to pass, you need to include `[CmdletBinding()]` and `Param()` on top of your main script code.
 
@@ -208,5 +204,3 @@ if (-not ($myinvocation.line.Contains("`$here\`$sut"))) {
     EmailNotification -EmailTo $EmailTo -EmailFrom $EmailFrom # ...and more parameters here...
 }
 ```
-
-Good luck and happy PowerShell-ing!

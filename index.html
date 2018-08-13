@@ -66,9 +66,6 @@ title: Home
 
 			<!--<p><a href="{{ "/grid-view" | prepend: site.baseurl | prepend: site.url }}" class="to-grid-view"><i class="fa fa-map-o" aria-hidden="true"></i> Grid View</a></p>-->
 
-			<hr class="hidden">
-			<span class="hidden">&nbsp;</span>
-
 			<div class="posts archives">
 			{% for post in site.posts %}
 				
@@ -84,7 +81,7 @@ title: Home
 
 				{% if post.tags contains "Project" %}
 					<div class="post-list-archives">
-						<div class="post-title"><span class="full-title"><a href="{{ post.url }}"><i class="fa fa-paper-plane-o muted" aria-hidden="true" title="This is a Project post"></i> {{ post.title }}</a></span> <span class="post-date">{{ post.date | date: "%b %d" }}</span></div>
+						<div class="post-title"><span class="full-title"><a href="{{ post.url }}"><span class="project-label">[Project]</span> {{ post.title }}</a></span> <span class="post-date">{{ post.date | date: "%b %d" }}</span></div>
 					</div>
 				{% else %}
 					<div class="post-list-archives">

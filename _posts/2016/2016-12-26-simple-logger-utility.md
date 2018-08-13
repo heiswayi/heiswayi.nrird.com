@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Creating a super simple logger class in C#
-description: Just another simple logger utility class that I wrote for my own use in some of my mini C# projects.
+title: Writing a simple logger utility class in .NET
+description: Just another simple logger utility class that I wrote for my own use in some of my .NET projects.
 keywords: c# programming, simple logger class
 tags: [C#, Utility, Open Source]
 comments: true
 ---
 
-When I work with mini C# projects, sometimes I need a logger to easily for me to debug the application during the run-time. So, I have wrote my own super simple logger class that I can simply use for my projects without using any other logger library.
+When I work with minor .NET projects, sometimes I need a logger utility to easily do the logging for me to debug the application during the run-time. So, I have wrote my own simple logger utility class that I can simply use for my projects without using any other logger library or utility.
 
 ### Source code
 
-_SimpleLogger.cs_
+File name: `SimpleLogger.cs` // Mirror link: [Gist](https://git.io/vpfKC)
 
 ```csharp
 public class SimpleLogger
@@ -152,9 +152,9 @@ public class SimpleLogger
 }
 ```
 
-### Usage example
+### How to use
 
-To get started, just initialize the `SimpleLogger` class. Initializing the constructor will create a fresh new log file if the log file doesn't yet exist. **The log file will be created in the same folder with the application assembly file and the log file name will follow the executing assembly name.** For example, let say the application filename is `SimpleLoggerDemo.exe`, so the log file name would be `SimpleLoggerDemo.log`.
+To get started, just initialize the `SimpleLogger` class. Initializing the constructor will create a fresh new log file if the log file doesn't yet exist. **The log file will be created in the same folder with the application assembly file and the log file name will follow the executing assembly name.** For example, let say the application file name is `SimpleLoggerDemo.exe`, so the log file name would be `SimpleLoggerDemo.log`.
 
 Here's the example code may look like:
 
@@ -189,11 +189,3 @@ namespace SimpleLoggerDemo
     }
 }
 ```
-
-### Contributing
-
-If you think you want to improve this logger class and make it more useful for other people, feel free to fork it or comment on my [Gist](https://git.io/vpfKC). Any contribution will be welcomed and appreciated.
-
-### Licensing
-
-[MIT](https://heiswayi.nrird.com/mit-license/)

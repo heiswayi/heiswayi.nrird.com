@@ -1,17 +1,21 @@
 ---
 layout: post
-title: Understanding multithreading vs single threading programming
+title: Understanding multithreading vs single threading programming in .NET System.Threading
 description: Examples of C# code to demonstrate the multithreading programming available in .NET System.Threading.
 keywords: multithreading, single threading, sample source code, demonstration, threadpool, task, backgroundworker, windows console application
 tags: [C#, Multithreading]
 comments: true
 ---
 
+### What is multithreading?
+
 Multithreading is a widespread programming and execution model that allows multiple threads to exist within the context of one process. They share the process's resources, but they are able to execute independently while the single threading is the processing of one command at a time.
 
 The purpose of threading is to allow computer to do more than one thing at a time. In a single core computer, multithreading won't give much advantages for overall speed. But for computer with multiple processor cores (which is so common these days), multithreading can take advantage of additional cores to perform separate instructions at the same time or by splitting the tasks between the cores.
 
 Below is the full example source code of Windows Console application written in C# that will demonstrate multithreading programming versus single threading programming. You may copy and paste the source code into your Visual Studio to have a try. The demonstration covers four multithreading options; `Thread()`, `ThreadPool.QueueUserWorkItem()`, `Task()` and `BackgroundWorker()`.
+
+### Demo source code
 
 ```csharp
 using System;
@@ -255,34 +259,28 @@ namespace MultithreadingVsSingleThreading
 }
 ```
 
-### Screenshots
+### Demo screenshots
 
-{% include figure.html src="http://i.imgur.com/q19Eigj.png" caption="Showing few options of multithreadings" %}
+{% include figure.html src="http://i.imgur.com/q19Eigj.png" caption="Four types of multithreading" %}
 
 {% include figure.html src="http://i.imgur.com/3YQTqCA.png" caption="Example of multithreading using ThreadPool.QueueUserWorkItem()" %}
 
-### Notes on multithreading classes
+### Some notes on multithreading classes used in the demo code
 
-- The `Thread` class is used for creating and manipulating a [thread](http://msdn.microsoft.com/en-us/library/windows/desktop/ms684841%28v=vs.85%29.aspx) in Windows.
-- A `Task` represents asynchronous operation and is part of the [Task Parallel Library](http://msdn.microsoft.com/en-us/library/dd460717%28v=vs.110%29.aspx), a set of APIs for running tasks asynchronously and in parallel.
-- The `ThreadPool` class manages a group of threads in which tasks are added to a queue and automatically started when threads are created.
-- The `BackgroundWorker` class executes an operation on a separate thread.
+1. The `Thread` class is used for creating and manipulating a [thread](http://msdn.microsoft.com/en-us/library/windows/desktop/ms684841%28v=vs.85%29.aspx) in Windows.
+2. A `Task` represents asynchronous operation and is part of the [Task Parallel Library](http://msdn.microsoft.com/en-us/library/dd460717%28v=vs.110%29.aspx), a set of APIs for running tasks asynchronously and in parallel.
+3. The `ThreadPool` class manages a group of threads in which tasks are added to a queue and automatically started when threads are created.
+4. The `BackgroundWorker` class executes an operation on a separate thread.
 
-### Demonstration results based on my PC
+### Demo results
 
-Please note that, while I'm running this demonstration, my PC has several stuffs that are running such as multiple Google Chrome browser tabs left opened, 2 instances of Visual Studio 2015 software, Atom editor, etc.
-
-**Computer info:**
+Please note that, while I'm running this demonstration, my PC has several stuffs that are running such as multiple Google Chrome browser tabs left opened, 2 instances of Visual Studio 2015 software, Atom editor, etc. Here are the results:
 
 ```
 Processor: Intel(R) Core(TM) i3-4130 CPU @ 3.40GHz (2 cores, 4 threads)
 RAM: 12 GB DDR3
 GPU: AMD Radeon R7 200 Series
-```
 
-**Demonstration results:**
-
-```
 // Multithreading
 Using Thread() | No. of threads = 1000
 Initialize work...
@@ -314,4 +312,6 @@ Work complete!
 Time elapsed: 00:00:01.6416939
 ```
 
-Based on the results above (using my PC), multithreading programming provides about **4x faster** compared to single threading.
+### Conclusion
+
+Based on the demo results using my PC, multithreading programming provides about **4x faster** compared to single threading.

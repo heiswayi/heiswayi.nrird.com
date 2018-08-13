@@ -7,9 +7,10 @@ tags: [C#, WPF, Project, Open Source]
 comments: true
 ---
 
-Whenever I am looking for subtitles file, sometimes I get the one that never synchronize well with the movie file I want to watch on my home TV. After I verify the subtitles with the movie, I have to go to a particular website to resync the subtitles by adjusting the time shift. Well, I can use a Python script or other script to locally resync the subtitles file, but I think I would prefer to use a simple GUI program to do that. So, I created this simple GUI program called **SRT SubShifter** in .NET C# using WPF code-behind to easily **resync** the subtitles file.
+Whenever I am looking for subtitles file, sometimes I get the one that never synchronize well with the movie file I want to watch on my home TV. Usually after I verified the subtitles timeline with the movie, I would go to [this site](http://subshifter.bitsnbites.eu/) and get the subtitles file resynced by adjusting the time shift.
 
-{% include figure.html src="https://i.imgur.com/5whUyC2.png" caption="Application screenshot" %}
+I thought I want to have a simple GUI tool locally in my movie folder. Whevener I need to resync the subtitles file, I can just simply use the tool. Finally I have spent some times to create this simple GUI app called **SRT SubShifter**. It's written in .NET C# and WPF.
 
-- [**View source code on GitHub**](https://github.com/heiswayi/srt-subshifter)
-- [Download latest binary package from releases](https://github.com/heiswayi/srt-subshifter/releases)
+{% include figure.html src="https://i.imgur.com/5whUyC2.png" caption="SRT SubShifter app" %}
+
+I have made this work available as [open source here](https://github.com/heiswayi/srt-subshifter). You can also simply download [the compiled version here](https://github.com/heiswayi/srt-subshifter/releases) if you want to give a try!

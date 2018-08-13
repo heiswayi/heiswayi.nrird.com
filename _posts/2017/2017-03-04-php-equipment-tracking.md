@@ -1,19 +1,21 @@
 ---
 layout: post
-title: Creating Equipment Tracking web app
+title: Creating a simple Equipment Tracking web app in PHP
 description: Creating of a simple CRUD-based web app for internal equipment tracking using PHP, AJAX and DataTables.
 keywords: crud application, php application, datatables, equipment tracking web app, crud ajax web application
 tags: [PHP, CRUD, AJAX, DataTables, jQuery, JavaScript]
 comments: true
 ---
 
+### Real world problem
+
 A couple of weeks ago I was asked to gather and compile a proper list of equipment that has been borrowed by other engineers/contractors who are working with my department. Unfortunately, the list that I had received is recorded in Excel file. Microsoft Excel to be exact. Well, whenever I need to check the status of the equipment, I have to wait those engineers to send me the updated list by email or through the shared drive. To me, this is quite tedious.
 
-I had an idea and I decided to create a web app for that. Instead of using Excel file, those engineers or any engineer can just go the web app and then update the equipment record or status. By doing this, anytime I need a latest list to audit, I can just simply export from the web app. So, I decided to spend some hours during my weekend to create the web app.
+I had an idea and I decided to create a web app for that. Instead of using Excel file, those engineers or any engineer can just go to the web app and then update the equipment record or status. By doing this, anytime I need the latest list to audit, I can just simply export from the web app. So, I decided to spend some hours during my weekend to create the web app.
 
-### Realizing the idea...
+### Implementing the solution
 
-Finally, the idea was realized. The web app was ready, successfully been deployed! Here are some screenshots of the web app after I asked those engineers to update the equipment latest records.
+Finally, the idea was realized. The web app was ready, successful deployed! Here are some screenshots of the complete web app after I asked those engineers to update the equipment latest records:
 
 {% include figure.html src="https://i.imgur.com/37sZLWO.png" caption="Application showing the latest list of equipment records" %}
 
@@ -27,7 +29,7 @@ The web app is known as **Equipment Tracking**, or in short is **Etrac**. I crea
 
 I hosted Etrac on IIS7, in one of VM servers and only can be accessed within the company's intranet. Since the app is deployed within IIS, I can use the session to capture the user's Active Directory account. So, I don't need to implement user authentication module here. Other than that, Etrac supports exporting to PDF, Excel and CSV file format. Whenever I need the list, I can just export it to any format I want.
 
-### Code snippets
+### Code snippets from the project
 
 Etrac is built based on DataTables, which is an [open source project](https://datatables.net/license/) distributed under MIT license. Following code snippet is the customized version of DataTables JS code that I wrote for Etrac app:
 
@@ -214,4 +216,4 @@ echo json_encode(
 );
 ```
 
-The PHP code above uses a library class provided by DataTables called `ssp.class.php`. You can get this class source code from [DataTables's repo on GitHub here](https://github.com/DataTables/DataTables/blob/master/examples/server_side/scripts/ssp.class.php).
+The PHP code above requires a library class provided by DataTables called `ssp.class.php`. You can get this class source code from [DataTables's repo on GitHub here](https://github.com/DataTables/DataTables/blob/master/examples/server_side/scripts/ssp.class.php).

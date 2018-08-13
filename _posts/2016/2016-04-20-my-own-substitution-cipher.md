@@ -1,23 +1,25 @@
 ---
 layout: post
-title: Creating my own substitution cipher application
-description: Demonstrating my own substitution cipher created in C# WPF using my own encoding method to encode the plaintext message into the encrypted strings.
+title: Creating my own substitution cipher app in .NET
+description: Demonstrating my own substitution cipher created in .NET using my own encoding method to encode the plaintext message into the encrypted strings.
 keywords: substitution cipher, custom encoding method, heiswayi nrird cipher program, c# wpf, encryption and decryption
 tags: [C#, WPF, Cryptography]
 comments: true
 ---
 
-> Please note that this project is JUST FOR FUN and it is totally unsecure for any practical use.
+> This project is JUST FOR FUN and it is totally unsecure for any practical use.
 
 ### What is cipher?
 
 In cryptography, a cipher is an algorithm for performing encryption or decryption of information into some kind of secret codes. For a **substitution cipher**, it's a method of encoding characters from the plaintext message into something called ciphertext. There are few popular cipher algorithms such as steganography, ROT13, Caesar shift cipher, Vigenere, etc. which I can simply use. There are also the modern unbreakable of encryption algorithms available such as Triple DES, RSA, Blowfish, Twofish, AES, etc.
 
-But today I want to create my own cipher program and experiment with it. I decided to use a substitution method with my own designed keys and encoding algorithm. So, I have created my own cipher application in C# WPF which obviously I have named it as _Heiswayi Nrird Cipher Program_.
+But today I want to create my own cipher program and experiment with it. I decided to use a substitution method with my own designed keys and encoding algorithm. So, I have created my own cipher application in .NET using C# WPF which obviously I have named it as _Heiswayi Nrird Cipher Program_.
 
 {% include figure.html src="http://i.imgur.com/AbUYj16.png" caption="Application UI" %}
 
 ### Here's how I implemented my encoding method
+
+#### Encryption and decryption dictionary
 
 First, since this is a substitution cipher, so I have to define two my own dictionaries; one for encryption, another one for decryption.
 
@@ -177,6 +179,8 @@ var decryptionDictionary = new Dictionary<string, string>(StringComparer.Current
 };
 ```
 
+#### Reversal of characters
+
 Next, I will convert the input string into character array, reverse it, then declare a new string variable.
 
 ```csharp
@@ -184,6 +188,8 @@ char[] charArrayReverse = data1.ToCharArray(); //data1 is input string
 Array.Reverse(charArrayReverse);
 string data2 = new string(charArrayReverse);
 ```
+
+#### Substitution of characters
 
 Next, I will loop through each input character, replace it with my substitution dictionary, and then create new string using `StringBuilder`.
 
@@ -202,6 +208,8 @@ for (int i = 0; i < data2.Length; i++)
 string data3 = sb.ToString();
 ```
 
+#### Append hashed password and generating signature
+
 Finally, I will prepend the hash code of the password, then append the output characters by separating it using `$` character, then append again with my signature characters which is `$HN`.
 
 ```csharp
@@ -216,7 +224,7 @@ D7640066$80I50W21R21R51E$HN
 
 `D7640066` is a password hash, `80I50W21R21R51E` is the encrypted string and `$HN` is my signature characters.
 
-#### Decrypting the message
+### Decrypting the message
 
 When decrypt the encrypted message, I will check for my signature characters `$HN` in the string, if it's not present, I will consider it as INVALID data. Then, I will validate the entered password for decryption with the hash code - e.g. `D7640066`. Once the password is correct, then I will proceed with the decoding method.
 
@@ -226,7 +234,7 @@ Another feature that I added to this application is a functionality to export in
 
 So simple huh?!
 
-### Here's why this cipher is not practically suitable for the real world use
+### Here's why this cipher is not practically suitable for the real world use case
 
 Substitution cipher is weak, easily broken and the cryptanalyst can deduce the probable meaning of the most common symbols by analyzing the frequency distribution of the ciphertext.
 

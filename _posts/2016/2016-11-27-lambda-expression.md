@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Learn to use Lambda Expression in C#
-description: Lambda expression helps me to write code faster and shorter. Let's learn how we can use lambda expressions, delegates, predicates and closures in C# code.
+title: Lambda Expression, Delegate, Predicate and Closure in .NET
+description: Lambda expression helps me to write code faster and shorter. Let's learn how we can use lambda expressions, delegates, predicates and closures in .NET C# code.
 keywords: lambda expressions, c# programming, anonymous functions, lambda operator, c# delegates, c# predicates, c# closures
 tags: [Lambda Expression, C#]
 comments: true

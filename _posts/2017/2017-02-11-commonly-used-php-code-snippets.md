@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Commonly used PHP functions or code snippets in my PHP projects
-description: A compilation of some commonly used PHP functions or code snippets that I have been using for most of my PHP projects.
+title: Commonly used PHP code snippets
+description: A compilation of some commonly used PHP code snippets that I have been using for years in my PHP projects.
 keywords: php, commonly use php functions, php code snippets, php projects, compilation of code snippets, helpful php functions
 tags: [PHP]
 comments: true
 ---
 
-Few years ago, I have been actively developing web applications in PHP. Within those years, I have been using these custom PHP functions for most of my PHP projects as long as they are still valid. Some of these code snippets are written by myself to fit some development requirements.
+Few years ago, I have been actively developing some web apps in PHP. Within those years, I have been using these custom-made PHP functions for most of my projects. Well, until today, some of them I still found it useful when I'm writing PHP apps.
 
 ### Hash user password
 
@@ -19,7 +19,7 @@ function hashUserPassword($salt, $password) {
 ?>
 ```
 
-### Working with string inputs in secure manner
+### Working with string input in secure manner
 
 ```php
 <?php
@@ -68,7 +68,7 @@ function sanitize($string) {
 ?>
 ```
 
-### Get Gravatar
+### Get user Gravatar photo
 
 ```php
 <?php
@@ -78,7 +78,7 @@ function getGravatar($email, $default = 'retro', $size = '50') {
 ?>
 ```
 
-### Get IP Address
+### Get visitor IP address
 
 ```php
 <?php
@@ -98,7 +98,7 @@ function getIp() {
 ?>
 ```
 
-### Get current page URL
+### Get current page URI
 
 ```php
 <?php
@@ -161,7 +161,7 @@ function timeAgo($timestamp) {
 ?>
 ```
 
-### Create HTML anchor to URL, @mention and #hashtag
+### Create clickable hyperlink (HTML anchor) for URL, @mention and #hashtag
 
 ```php
 <?php
@@ -181,7 +181,7 @@ function makeClickable($input) {
 ?>
 ```
 
-### BB code style, emoticons conversion
+### BB code style - emoticons conversion
 
 ```php
 <?php
@@ -207,7 +207,7 @@ function bbCode($var) {
 ?>
 ```
 
-### Generate or get random key
+### Generate or get random key (alphanumerics)
 
 ```php
 <?php
@@ -250,7 +250,7 @@ function truncateLongText($text, $length = 0) {
 ?>
 ```
 
-###  Generate or get random password
+### Generate or get random password
 
 ```php
 <?php

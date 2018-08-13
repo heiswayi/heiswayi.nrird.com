@@ -1,34 +1,43 @@
 ---
 layout: post
-title: Creating a Windows app installer using Inno Setup
-description: Inno Setup is the best FREE open source alternative, non-MSI and script-driven installation system software for creating Windows app installer that surpasses many commercial installers in feature set and stability.
+title: Get started with Inno Setup
+description: Inno Setup is a free script-driven installation system software for creating Windows app installer that surpasses many commercial installers in feature set and stability.
 keywords: inno setup, windows installer, creating windows app installer
 tags: [Inno Setup, Pascal, Windows Installer]
 comments: true
 ---
 
-I have tried few other FREE installation software, and I found that [Inno Setup](http://www.jrsoftware.org/isinfo.php) is the best FREE [open source](https://github.com/jrsoftware/issrc) alternative, non-MSI and script-driven installation system software for creating Windows app installer that surpasses many commercial installers in feature set and stability. In this post I would like to share the Inno Setup script that I have been using for creating one of my applications installer.
+### What is Inno Setup?
 
-To get started, you can download and install Inno Setup from [here](http://www.jrsoftware.org/isdl.php). Unicode version is recommended. If you need a better intuitive GUI software, you can download and install [**Inno Script Studio**](https://www.kymoto.org/products/inno-script-studio) software. If you use [VS Code](https://code.visualstudio.com/) or [Atom](https://atom.io/) editor to edit Inno Setup scripts, you can install Inno Setup extension for the script syntax highlighting; [Inno Setup for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=idleberg.innosetup) or [Inno Setup for Atom](https://atom.io/packages/language-innosetup).
+Inno Setup is a _free_ script-driven installation system software for creating Windows app installer. Inno Setup is [open source](https://github.com/jrsoftware/issrc), the best non-MSI alternative installer by Jordan Russel and Martijn Laan. It is first introduced in 1997, Inno Setup today rivals and even surpasses many commercial installers in feature set and stability. Visit [Inno Setup official website](http://www.jrsoftware.org/isinfo.php) to learn more about it.
 
-**Compile Inno Setup scripts using Inno Setup Compiler in your automated build system**
+### Get started with Inno Setup
 
-If you have automated build system set up that builds your app source code like CI/CD, you can simply integrate Inno Setup Compiler into your build system to compile Inno Setup script file (`*.iss`). You need to use `ISCC.exe` for the command-line compiler.
+In this post I would like to share the Inno Setup script that I have been using for creating one of my applications installer.
 
-Example: Just add `C:\Program Files (x86)\Inno Setup 5` into the PATH environment, then you can simply use:
+To get started, you can download and install Inno Setup from [the download page here](http://www.jrsoftware.org/isdl.php). **Unicode version is recommended.** If you need a better intuitive GUI software for Inno Setup, you can download and install [**Inno Script Studio**](https://www.kymoto.org/products/inno-script-studio).
+
+If you use [VS Code](https://code.visualstudio.com/) or [Atom](https://atom.io/) editor to edit **Inno Setup scripts**, you can install Inno Setup extension for the script syntax highlighting - [Inno Setup for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=idleberg.innosetup) or [Inno Setup for Atom](https://atom.io/packages/language-innosetup).
+
+### Using Inno Setup in your automated build system
+
+If you have automated build system (CI/CD) set up that builds your app source code, if you use Inno Setup script to create the installer, you can simply integrate **Inno Setup Compiler** into your build system to compile the Inno Setup script file (`*.iss`). There is a file called `ISCC.exe` for the command-line compiler.
+
+For example, you can add `C:\Program Files (x86)\Inno Setup 5` into the PATH environment, then you can simply use this command to compile your Inno Setup script:
+
 ```
 iscc path\to\myinstaller.iss
 ```
 
-For more info on what command-line options are available, just run `iscc /?` from a command prompt.
+To learn more on what command-line options are available, you can just type `iscc /?` from a command prompt.
 
-### Example of Inno Setup script for my app installer
+### Example of my Inno Setup script
 
 {% include figure.html src="https://i.imgur.com/rodYZ00.png" caption="Installer welcome dialog" %}
 
-The script is written based on the example of the app files structure below. If you use the script below, you may need to modify it to suit your app files structure. Any feature you don't need, you can simply remove or comment it out. I always reuse this script as a starter and make some modifications that suit the app files structure and requirements to create a new app installer.
+The script is written based on the example of the app files structure below. You may need to modify the script to suit your app files structure. Any feature you don't need, you can simply remove or comment it out. I always reuse this script as a starting point and make some modifications that suit the app files structure and requirements for my app installer.
 
-_Example of app files structure:_
+Example of the app files structure:
 
 ```
 .\
@@ -55,7 +64,7 @@ _Example of app files structure:_
         └── VerticalBanner.bmp
 ```
 
-_Example of script:_
+Example of the Inno Setup script:
 
 {% raw %}
 ```
@@ -169,7 +178,8 @@ end;
 ```
 {% endraw %}
 
-In the script above, there are some common **Flags** under `[Files]` section and here what they mean:
+There are some common **Flags** under `[Files]` section used in the script above and here what they mean:
+
 - `ignoreversion` - replace existing files regardless of their version number
 - `onlyifdoesntexist` - only install the file if it doesn't already exist on the user's system
 - `recursesubdirs` - use this when you use wildcard for the `Source` as shown in the script above
@@ -177,13 +187,13 @@ In the script above, there are some common **Flags** under `[Files]` section and
 - `uninsneveruninstall` - never remove the file during uninstallation
 - `deleteafterinstall` - delete file once the installation is completed/aborted
 
-For other available flags, you can refer to [Inno Setup documentation here](http://www.jrsoftware.org/ishelp/index.php?topic=filessection) for more details. It's too robust to explain everything here.
+For other available flags, you can refer to [Inno Setup documentation here](http://www.jrsoftware.org/ishelp/index.php?topic=filessection) for more details. It's too robust for me to explain everything here.
 
-### Implement components-based installation in your installer
+### Here's how you can implement components-based installation in your installer
 
 {% include figure.html src="https://i.imgur.com/BeKgNvo.png" caption="Components-based installation dialog" %}
 
-If you want to design your app installer using components-based installation, you may need to modify the script and add two extra sections called `[Types]` and `[Components]`. Check the provided example script below which taken from `Components.iss` file that located in `C:\Program Files (x86)\Inno Setup 5\Examples` folder.
+If you want to design your app installer using components-based installation, you may need to modify the Inno Setup script and add two extra sections called `[Types]` and `[Components]`. Check the provided example script below which taken from `Components.iss` file that is located in `C:\Program Files (x86)\Inno Setup 5\Examples` folder once you have installed the Inno Setup software.
 
 {% raw %}
 ```
@@ -218,15 +228,17 @@ Name: "{group}\My Program"; Filename: "{app}\MyProg.exe"
 ```
 {% endraw %}
 
-Meaning of the **Flags** used:
+The meanings of the **Flags** used in the script above:
+
 - `fixed` - usually used in the main program file where user cannot unselect that component
 - `exclusive` - user only can select one of the exclusive components, mostly used for localized files
 
-### Creating prerequisites for your installer
+### Here's how you can create prerequisites for your installer
 
-**.NET Framework**
+#### .NET Framework as the primary prerequisite
 
 If your app requires particular .NET Framework to be installed as part of the prerequisites, there are few ways you can do with Inno Setup script. You either can;-
+
 - include or package together the offline installer of .NET Framework into your app installer, or
 - just check and if not installed, inform the user to download and install particular .NET Framework manually, and then abort your app installer.
 
@@ -234,9 +246,10 @@ You can use the [Check](http://jrsoftware.org/ishelp/topic_scriptcheck.htm) para
 
 Inno Setup [scripting](http://www.jrsoftware.org/ishelp/index.php?topic=scriptintro) is based on [Pascal](https://en.wikipedia.org/wiki/Pascal_(programming_language)) programming language which adds lots of new possibilities to customize your Setup or Uninstall at run-time.
 
-**Here's how to include the offline installer of .NET Framework into your app installer**
+#### Include .NET Framework offline installer into your installer
 
 Add a new `Source` under the `[Files]` section:
+
 {% raw %}
 ```
 [Files]
@@ -305,7 +318,7 @@ end;
 ```
 {% endraw %}
 
-**Here's how you can just implement the checking and inform the user to download and install if particular .NET Framework is not installed**
+#### Implement checking and inform user to download and install if the required .NET Framework is not installed
 
 Another way is to check the required .NET Framework at the beginning of installation, if not installed, inform the user to download and install the required .NET Framework. Check the code below how to implement it. The code below is taken from [http://www.kynosarges.de/DotNetVersion.html](http://www.kynosarges.de/DotNetVersion.html).
 
@@ -405,11 +418,12 @@ end;
 ```
 {% endraw %}
 
-### How to prevent install if newer version already installed
+### Here's how you can prevent the installation if newer version already installed
 
-In case you want to prevent install if newer version already installed in user PC, you can apply this code within `InitializeSetup` function, so your installer wouldn't downgrade existing installation.
+In case you want to prevent the installation of your app if newer version already installed in user PC, you can apply this code within `InitializeSetup` function, so your installer wouldn't downgrade existing installation.
 
 Add a custom message under `[CustomMessages]` section:
+
 {% raw %}
 ```
 [CustomMessages]
@@ -418,6 +432,7 @@ english.NewerVersionExists=A newer version of {#AppName} is already installed.%n
 {% endraw %}
 
 Apply this code under `[Code]` section to check for existing installation version:
+
 {% raw %}
 ```pascal
 [Code]
@@ -446,9 +461,9 @@ end;
 ```
 {% endraw %}
 
-### How to automatically uninstall previous installed version
+### Here's how you can automatically uninstall previous installed version
 
-Based on the solution from [Craig McQueen at StackOverflow](https://stackoverflow.com/a/2099805), your installer can check if user already installed your app and if found, your installer will grab the `UninstallString` from the registry and run the uninstallation command in silent mode.
+Based on the solution from [Craig McQueen at StackOverflow](https://stackoverflow.com/a/2099805), your installer can check if the user already installed your app and if found, your installer will grab the `UninstallString` from the registry and run the uninstallation command in silent mode.
 
 {% raw %}
 ```pascal
@@ -508,7 +523,7 @@ end;
 ```
 {% endraw %}
 
-### How to kill existing running services before re-install (or upgrade)
+### Here's how you can kill existing running services before re-install (or upgrade)
 
 To kill existing running services, what you need to do is to apply [BeforeInstall](https://www.kymoto.org/documentation/scriptstudio/index.html?common_beforeinstall.html) parameter at the service file you're going to (re)install. Take a look on the example script below:
 
@@ -529,9 +544,10 @@ end;
 ```
 {% endraw %}
 
-### How to associate a program with an extension during installation
+### Here's how you can associate a program with an extension during installation
 
 Add a property as per below in `[Setup]` section:
+
 {% raw %}
 ```
 [Setup]
@@ -539,7 +555,7 @@ ChangesAssociations = yes
 ```
 {% endraw %}
 
-This will tell Explorer to refresh its file associations information at the end of the installation, and similarly for the uninstallation. Then, add these following registry keys:
+This will tell Windows Explorer to refresh its file associations information at the end of the installation, and similarly for the uninstallation. Then, add these following registry keys:
 
 {% raw %}
 ```
@@ -551,3 +567,7 @@ Root: HKCR; Subkey: "{#MyAppName}\DefaultIcon"; ValueData: "{app}\{#MyAppExeName
 Root: HKCR; Subkey: "{#MyAppName}\shell\open\command"; ValueData: """{app}\{#MyAppExeName}"" ""%1"""; ValueType: string; ValueName: ""
 ```
 {% endraw %}
+
+### The bottom line
+
+If you don't want to use MSI-based installer for your Windows app, but you want something that is good and free, then look for no other, Inno Setup is the best and easy to use. There are a lot of example scripts out there that can help you build a great installer for your app. This is my personal preference and I'm really recommended it!

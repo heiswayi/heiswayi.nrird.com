@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Modify file content with InstallScript using deferred custom action
-description: The resolution on how I dynamically modify the file content by using deferred custom action with InstallScript to do a find-and-replace of a string during installation time in InstallShield Basic MSI.
+description: This is how I dynamically modify the file content by using deferred custom action with InstallScript to do a find-and-replace of a string during installation time in InstallShield Basic MSI.
 keywords: problem resolution, installshield 2016, basic msi project, deferred custom action, customactiondata, find-and-replace installscript
 tags: [InstallShield, InstallScript, Windows Installer]
 comments: true
 ---
 
-### Problem statement
+### Here's the problem I'm facing
 
 I have a metadata file that contains the installation path of my application (executable), and this metadata file is installed by my application installer (setup) in different location than my application files. The purpose of this metadata file is that it would be used by other application to display my application info and also to know the install location of my application.
 
@@ -15,9 +15,11 @@ The problem is that the installation path is hard-coded (default path) in that m
 
 The question is, how can I solve this in InstallShield?
 
-### Solution
+### The solution that I implemented
 
-To resolve this problem, I figure out that I need to apply a deferred custom action using InstallScript. The reason to use the deferred custom action is because I need to make a change to the system and only deferred custom action can be run in elevated context. Here's how I do it!
+To solve this problem, I figured it out that I need to apply a deferred custom action using InstallScript. The reason for using the deferred custom action is because I need to make a change to the system and only the deferred custom action can be run in elevated context.
+
+Here's how I do it:
 
 **1. Create New Set Property custom action (type 51)**
 
@@ -37,7 +39,7 @@ The purpose of this type-51 custom action is to pass other property value to `Cu
 - Install Exec Sequence: `After CA_PopulateCustomActionData`
 - Install Exec Condition: `NOT REMOVE`
 
-Below is the InstallScript that I used to associate with my deferred custom action above:
+Below is the InstallScript that I used to associate with my deferred custom action defined above:
 
 ```cs
 #include "ifx.h"
@@ -107,4 +109,4 @@ begin
 end;
 ```
 
-The script above should be self-explanatory. You may need to change `<PATH_TO_METADATA_FILE>` and `<STRING_TO_FIND>` to your own strings. Be aware of possible deadlock, if any, you may need to apply certain conditional statement. Hopefully this solution may help others who are in the same situation.
+The script above should be self-explanatory. You may need to change `<PATH_TO_METADATA_FILE>` and `<STRING_TO_FIND>` to your own strings. Be aware of possible deadlock, if any, you may need to apply certain conditional statement (checking). Hopefully this solution may help others who are in similar situation.

@@ -1,7 +1,7 @@
 ---
 layout: project
 title: Document Writer
-description: Minimalist web-based writing tool to write document using web browser and ability to save as a plain text, HTML or markdown format file.
+description: Minimalist web-based writing tool to write document using web browser and save it as a plain text, HTML or markdown format file.
 keywords: minimalist, web-based app, writing tool, document writer
 tags: [PHP, JavaScript, AJAX, jQuery, Project]
 comments: true

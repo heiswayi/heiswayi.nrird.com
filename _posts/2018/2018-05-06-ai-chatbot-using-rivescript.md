@@ -1,17 +1,17 @@
 ---
 layout: post
-title: AI chatbot using RiveScript
-description: Creating of AI chatbot web app projects based on RiveScript interpreter engine; one is built using Jekyll, another is built using Node.js and Socket.IO.
+title: AI chatbot app development using RiveScript
+description: Development of AI chatbot app project based on RiveScript interpreter engine; one is built using Jekyll, another is built using Node.js and Socket.IO.
 keywords: ai chatbot, artificial intelligence, rivescript, node.js, socket.io, jquery terminal
 tags: [Artificial Intelligence, Chatbot, Jekyll, Node.js, Open Source]
 comments: true
 ---
 
-Three years ago, I wrote [a blog post](https://heiswayi.nrird.com/2015/experiment-with-ai-chatbot-app-development) talking about how I started exploring and experimenting with AI chatbot application development. In the end I found myself likely interested more in building AI chatbots for the web. When designing a chatbot, in order to have a natural human-like conversation, the chatbot needs a knowledgebase system that works like a "brain" to respond to particular conversation inputs.
+Three years ago, I wrote [a blog post](https://heiswayi.nrird.com/building-ai-chatbot-app) talking about how I tried to build AI chatbot apps. In the end I found myself likely interested more in building AI chatbots for the web. When designing a chatbot, in order to have a natural human-like conversation, the chatbot needs a knowledgebase system that works like a "brain" to respond to particular conversation inputs.
 
-I remembered, before I create my first AI chatbot web app known as [W4Y1](https://heiswayi.github.io/w4y1/), I had been struggling to find a better chatbot interpreter engine that can provides easier way to program the bot brain. Then, I found one that is a quite good fit for my requirements known as [elizabot.js](http://www.masswerk.at/elizabot/). So, I built my chatbot based on this JavaScript library. I liked this library because it uses JSON format for the knowledgebase markup language. Thus, it was easy for me to program my chatbot brain.
+I remembered, before I created my first AI chatbot web app known as [W4Y1](https://heiswayi.github.io/w4y1/), I had been struggling to find a better chatbot interpreter engine that can provides easier way to program the "bot brain". Then, I found one that was a quite good fit for my requirements known as [elizabot.js](http://www.masswerk.at/elizabot/). So, I built my chatbot based on that JavaScript library. I like this library because it used JSON format for the knowledgebase markup language. Thus, it was easy for me to program my chatbot brain.
 
-After a while using elizabot.js, I started to feel that the knowledgebase markup language should be more simpler than JSON format. Without wasting my time digging into the source code and modify it, I opted to look for a better chatbot interpreter engine alternative. And then, I found two of them that can provide me a "more simpler solution" to program my bot brain, which they are [BotML](https://github.com/BotML/botml-js) and [RiveScript](https://www.rivescript.com/). After some researches, I decided to use **RiveScript** since it has more supports for different programming languages, good documentations and active contributions from its community. So, I have created two chatbot web app projects which are based on RiveScript interpreter engine; _HelloBot_ and _hnbot_.
+After a while using elizabot.js, I started to feel that the knowledgebase markup language should have been more simpler than JSON format. Without wasting the time to dig into the source code and make modification, I opted to look for a better chatbot interpreter engine alternative. Then, I found two of them that can provide me a "more simpler solution than elizabot.js" to program my "bot brain" - they are [BotML](https://github.com/BotML/botml-js) and [RiveScript](https://www.rivescript.com/). After some researches, I decided to use **RiveScript** since it has more supports for different programming languages, good documentations and active contributions from its community. So, I have built two chatbot app projects which are based on RiveScript interpreter engine known as _HelloBot_ and _hnbot_.
 
 ### HelloBot - AI chatbot web app built using Jekyll
 
@@ -31,7 +31,7 @@ hnbot is using a similar interface design with HelloBot, and the only difference
 - _Sorry, I don't have the online demo for this._
 - [**Source code on GitHub**](https://github.com/heiswayi/hnbot)
 
-To run the demo locally, you need Git and Node.js installed, then run following commands:
+To run the hnbot demo locally, you need Git and Node.js installed, then run following commands:
 
 ```shell
 git clone https://github.com/heiswayi/hnbot.git
@@ -40,4 +40,4 @@ npm install
 npm start
 ```
 
-Please note that these apps are just proof-of-concept, and I don't have the time to design the bot brain for specific application purpose. If you're playing with the demo, the bot brain is based on predefined samples.
+**N.B.** These apps are just proof-of-concept, and I don't have the time to design the "bot brain" for specific application purpose. If you're playing with the demo, the current "bot brain" is based on predefined samples.

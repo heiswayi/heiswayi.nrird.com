@@ -1,24 +1,24 @@
 ---
 layout: post
-title: PHP - Using native password hashing API
-description: Starting PHP version 5.5 onwards, password hashing in PHP application made easy as new native password hashing functions have been introduced.
+title: Using PHP native password hashing API
+description: Starting PHP version 5.5 onwards, password hashing in PHP application made easy as the new native password hashing functions have been introduced.
 keywords: php 5.5, password hashing, native api, php functions
 tags: [PHP, Password Hashing]
 comments: true
 ---
 
-**Great news to PHP developers!** As of PHP 5.5, a [native and simple password hashing API](https://wiki.php.net/rfc/password_hash) was introduced to safely handle both hashing and verifying password in a secure manner. When talking about hashing the password, the two most important considerations are the computational expense and the salt. The more computationally expensive the hashing algorithm, the longer it will take to "bruteforce" its output. So, the suggested algorithm to use when hashing the password is Blowfish, which is also the default hashing algorithm used by this password hashing API. Please note that, these two weak hashing algorithms `md5()` and `sha1()` are no longer practical and acceptable to be used these days as they can be "bruteforced" in seconds.
+**Here's the great news to all PHP developers!** As of PHP 5.5, a [native and simple password hashing API](https://wiki.php.net/rfc/password_hash) was introduced to safely handle both hashing and verifying password in a secure manner. When talking about hashing the password, the two most important considerations are the computational expense and the salt. The more computationally expensive the hashing algorithm, the longer it will take to **bruteforce** its output. So, the suggested algorithm to use when hashing the password is Blowfish, which is also the default hashing algorithm used by this password hashing API. Please note that, these two weak hashing algorithms `md5()` and `sha1()` are no longer practical and acceptable to be used these days as they can be bruteforced in seconds.
 
 ### Implementation of native password hashing API
 
 The implementation consists of four functions:-
 
-* `password_hash()` : To create a new password hash
-* `password_verify()` : To confirm a given password matches with the hash
-* `password_needs_rehash()` : To check if a password meets the desired hash settings (algorithm, cost)
-* `password_get_info()` : To return information about the hash such as algorithm and cost
+- `password_hash()` - To create a new password hash
+- `password_verify()` - To confirm a given password matches with the hash
+- `password_needs_rehash()` - To check if a password meets the desired hash settings (algorithm, cost)
+- `password_get_info()` - To return information about the hash such as algorithm and cost
 
-**NOTE:** `password_hash()` creates a new password hash using a strong one-way hashing algorithm and compatible with [**crypt()**](http://php.net/manual/en/function.crypt.php).
+> **Note:** `password_hash()` creates a new password hash using a strong one-way hashing algorithm and compatible with [**crypt()**](http://php.net/manual/en/function.crypt.php).
 
 ### Usage Examples
 
@@ -68,7 +68,7 @@ Output:
 $2y$12$gsF2.s.PkKLusBMsgHrQnOmB5mzG0bHGE97.SA5250aQ0ZTt0Klty
 ```
 
-The role of the cost is to ensure that the passwords remain difficult to bruteforce even as hardware gets faster. You will need to continuously tweak your cost as your own hardware changes. However, if you are not careful and just crank it up to 11 (figuratively speaking) your passwords will take too long to generate, tying up web server threads and can easily lead to a denial-of-service (DoS) attack.
+> The role of the cost is **to ensure that the passwords remain difficult to bruteforce even as hardware gets faster**. You will need to continuously tweak your cost as your own hardware changes. However, if you are not careful and just crank it up to 11 (figuratively speaking) your passwords will take too long to generate, tying up web server threads and can easily lead to a denial-of-service (DoS) attack.
 
 Here's the code to benchmark your server in order **to determine how high of a cost you can afford**:
 
@@ -148,7 +148,7 @@ Output:
 Password is valid!
 ```
 
-If you get incorrect false responses from `password_verify()` when manually including the hash variable (eg. for testing) and you know it should be correct, make sure you are enclosing the hash variable in single quotes (') and not double quotes (").
+> If you get incorrect false responses from `password_verify()` when manually including the hash variable (e.g. for testing) and you know it should be correct, make sure you are enclosing the hash variable in single quotes (') and not double quotes (").
 
 #### Example 5
 
@@ -203,7 +203,7 @@ array (size=3)
 
 ### Compatibility issue
 
-If you are not using PHP 5.5 or below, there is a [pure PHP compatibility library](https://github.com/ircmaxell/password_compat) available for PHP 5.3.7 and later.
+If you are using PHP version before 5.5, there is a [pure PHP compatibility library](https://github.com/ircmaxell/password_compat) available for PHP 5.3.7 and later.
 
 ### Salt
 
@@ -221,4 +221,4 @@ The diagram above shows the format of a return value from `crypt()` or `password
 
 ### Conclusion
 
-With this new [password extension](http://php.net/password) that comes as built-in functions, the password hashing becomes more easier as we don't need to create our custom-made algorithm class or use any other external password hashing class library in our application anymore.
+With this new [password extension](http://php.net/password) that comes as built-in functions, the password hashing becomes more easier as we don't need to create our custom-made algorithm class or even bother to use any other external password hashing class library in our application anymore.

@@ -45,7 +45,7 @@ google_analytics_code: UA-58296043-7
 # Jekyll build settings
 source:             ./
 destination:        ./_site
-permalink:          /:year/:title
+permalink:          /:title
 markdown:           kramdown
 highlighter:        rouge
 timezone:           Asia/Kuala_Lumpur

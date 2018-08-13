@@ -7,9 +7,11 @@ tags: [C#, WPF, Project]
 comments: true
 ---
 
-Mini App Killer is a simple utility program I created in .NET C# that will sit in the system tray for easy access and can be used to kill or end task of any running application or process.
+Mini App Killer is a simple utility program I wrote in .NET C# that will sit in the system tray for easy access and can be used to kill or end task of any running application or process.
 
 [**Download Mini App Killer v1.0 (zipped)**](https://www.dropbox.com/s/4gibswk7iz7gg9d/MiniAppKillerV1.zip?dl=0) · 55.2 KB
+
+### List all running apps or processes
 
 By default, Mini App Killer program will list all running applications or processes that contain `MainWindowTitle` property from the WMI query. Below is the C# code I use to get all running applications:
 
@@ -35,11 +37,13 @@ using(var results = searcher.Get()) {
 }
 ```
 
-Screenshots:
+### Screenshots
 
 {% include figure.html src="http://i.imgur.com/z5hJFH8.png" caption="Listing all running applications" %}
 
 {% include figure.html src="http://i.imgur.com/TJG1sV1.png" caption="To kill the selected running application/process" %}
+
+### Kill the running app, open executable location folder and display File Properties dialog
 
 Here are the C# code I use to kill the application, open file location or show application **File Properties** dialog from the WMI query results:
 
@@ -95,7 +99,7 @@ public static bool ShowFileProperties(string Filename) {
 #endregion
 ```
 
-#### Customizing filtering
+### Customizing the filtering
 
 To filter for specific process name (application executable name without extension), there is a menu called **"Customize filter..."** in the program. When you click it, a window for adding process name will be shown as below:
 
@@ -120,7 +124,7 @@ var query = from p in Process.GetProcesses()
             };
 ```
 
-#### App settings
+### Saving filtered apps
 
 All filtered process names will be saved into a text file named as `filters.txt`, which is easy for user to read or modify directly from this file.
 

@@ -1,17 +1,17 @@
 ---
 layout: post
-title: MVVM common classes in a single file
+title: MVVM.cs
 description: MVVM.cs is a collection of Model-View-ViewModel (MVVM) design pattern common classes that can be implemented by any ViewModel (VM).
 keywords: mvvm common classes, viewmodelbase, onpropertychanged, raisepropertychanged, icommand, delegatecommand, relaycommand, lambda expression
 tags: [MVVM, C#]
 comments: true
 ---
 
-**Source code: [MVVM.cs](https://git.io/v1TAI)**
+**Download source code: [MVVM.cs](https://git.io/v1TAI)**
 
-_MVVM.cs_ is a collection of Model-View-ViewModel (MVVM) design pattern common classes that can be implemented by any ViewModel (VM). I created this collection into a single file, so whenever I want to develop MVVM-based application (without using MVVM frameworks) in .NET C#, I just need to reference it and inherit the `ViewModelBase` class into any of my VM classes.
+`MVVM.cs` is a collection of Model-View-ViewModel (MVVM) design pattern **common classes** that can be implemented by any ViewModel (VM). I created this collection into a single file, so whenever I want to develop MVVM-based application (without using MVVM frameworks) in .NET C#, I just need to reference it and inherit the `ViewModelBase` class into any of my ViewModel classes.
 
-### Usage examples
+### Property
 
 To raise any property change, you may use these following methods:
 
@@ -51,6 +51,8 @@ namespace MVVMExampleApp
     }
 }
 ```
+
+### Command
 
 For `ICommand` property, you may use any of these following classes:
 

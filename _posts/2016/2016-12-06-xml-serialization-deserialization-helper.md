@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Simple XML serialization and deserialization helper class in C#
-description: XmlHelper class is part of C# utilities for XML data serialization and deserialization that I wrote to be used in my C# projects.
+title: Simple XML serialization and deserialization helper class in .NET
+description: XmlHelper class is part of C# utilities for XML data serialization and deserialization that I wrote to be used in my .NET projects.
 keywords: c# programming, xml serialization, xml deserialization, xml helper class, readable dataset format
 tags: [C#, Utility]
 comments: true
 ---
 
-I wrote this helper class because sometimes I have some projects that need to use XML file format to save some states or configurations and to retrieve the configurations back. I like to work with XML file as the content is easy to be edited and human readable by using any code editor application. So, this is my own version of simple XML helper class to ease my work with XML data serialization and deserialization.
+I wrote this helper class because sometimes I have some projects in .NET C# that need to use XML file format to save some states or configurations and to retrieve the configurations back. I like to work with XML file as the content is transparent, easy to modify and human readable by using any code editor application. So, this is my own version of simple XML helper class to ease my work with XML data serialization and deserialization.
 
-### Helper class source code
+### Source code
 
-_XmlHelper.cs_ // Also available on my [Gist](https://gist.github.com/heiswayi/cb66748bc11efe360ad6c233fa8e603f) too.
+File name: `XmlHelper.cs` // Mirror link: [Gist](https://gist.github.com/heiswayi/cb66748bc11efe360ad6c233fa8e603f)
 
 ```csharp
 using System;
@@ -110,7 +110,7 @@ namespace HeiswayiNrird.Utility.Common
 }
 ```
 
-### Usage examples
+### How to use
 
 You need to create a serializable object class before you can use. This can be any of the model class if you want. For example, I have this object class to use and as you can see I applied XML attributes to the object properties in case I want to rename them to different names in my XML file:
 
@@ -150,7 +150,7 @@ namespace XmlHelperConsoleApp
 }
 ```
 
-#### Serialize object to XML string
+### Serialize object to XML string
 
 Here's the example code for serializing the object to XML string:
 
@@ -204,7 +204,7 @@ namespace XmlHelperConsoleApp
 }
 ```
 
-**Output**
+**Output example**
 
 The code above will output a XML-formatted string like this:
 
@@ -219,7 +219,7 @@ The code above will output a XML-formatted string like this:
 </MyCompanyEmployees2016>
 ```
 
-#### Deserialize XML string to object
+### Deserialize XML string to object
 
 Now, if you want to get specific value from the XML string, we need to deserialize it and retrieve our desired value. Here's the example code how to do it:
 
@@ -250,7 +250,7 @@ namespace XmlHelperConsoleApp
 }
 ```
 
-**Output**
+**Output example**
 
 The code above will output something like this:
 
@@ -263,9 +263,9 @@ Jason Bourne
 
 > "Data at the root level is invalid. Line 1, position 1."
 
-In the beginning of writing this helper class, I have encountered with this kind of exception message when I tried to deserialize the XML string. After I did some researches on Google, I found a [blog](http://www.ipreferjim.com/2014/09/data-at-the-root-level-is-invalid-line-1-position-1/) that explained the root cause and detailed solution. That bug is known as **BOM**, a Unicode character used to signal the endianness (byte order) of a text file or stream.
+In the beginning of writing this helper class, I have encountered with that kind of exception message when I tried to deserialize the XML string. After I did some researches on Google, I found a [blog](http://www.ipreferjim.com/2014/09/data-at-the-root-level-is-invalid-line-1-position-1/) that explained the root cause and detailed solution. That bug is known as **BOM**, a Unicode character used to signal the endianness (byte order) of a text file or stream.
 
-Below is the code snippet fix that I have applied inside serializing method before outputting to XML string in order to resolve the issue:
+Below is the fix code that I have applied inside serializing method before outputting to XML string in order to resolve the issue as stated above:
 
 ```csharp
 string _byteOrderMarkUtf8 = Encoding.UTF8.GetString(Encoding.UTF8.GetPreamble());

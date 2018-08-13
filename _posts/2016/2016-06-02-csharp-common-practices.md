@@ -1,7 +1,7 @@
 ---
 layout: post
-title: C# common practices
-description: Here are some of good common practices in coding that I have been practicing in my works for C# programming.
+title: C# programming common practices
+description: Here are some of good common practices in C# programming that I have been practicing in my works that use .NET C#.
 keywords: csharp common practices, self-documented code, code optimization, good coding practices
 tags: [C#, Best Practices]
 comments: true
@@ -11,11 +11,11 @@ comments: true
 
 Good coding practices will guide you to write better, maintainable and clean code. There are a lot of articles sharing about good common practices for C# programming, and some may be written in any programming book. Previously, I don't really care about the good common practices in my C# programming as long as my code works. Just a couple years ago when I started working in multiple teams of developers from a big software company, then the coding standards have been practiced widely among the software developers.
 
-What I'm going to share to you here are some of my common coding practices that I have been practicing when I do programming in C#. Now they all become a habit to me to always trying my best to write clean code in whatever programming I have been working on. If you're a beginner or new .NET developer, these coding practices would be useful for you to start practicing in your work.
+What I'm going to share to you here are some of my common coding practices that I have been practicing when I do C# programming. Now they all become a habit to me to always trying my best to write clean code in whatever programming I have been working on. If you're a beginner or new .NET developer, these coding practices would be useful for you to start practicing in your work.
 
 ### Use of proper naming conventions
 
-Use of proper naming conventions ensure you an easy way to maintain your code, especially when the software is big or has thousand lines of code. You can use Camel case or Pascal when declaring any variable or property. Camel case is a word with the first letter lowercase, while others are capitalized. Pascal case is a word the first letter capitalized and followed by others.
+Use of proper naming conventions ensure you an easy way to maintain your code, especially when the software is big or has thousand lines of code. You can use Camel case or Pascal when declaring any variable or property. **Camel case is a word with the first letter lowercase, while others are capitalized. Pascal case is a word the first letter capitalized and followed by others.**
 
 Example:
 
@@ -99,7 +99,7 @@ public class MyInterfaceImplementer : IMyInterface
 
 #### Class naming practices
 
-I always add `Exception` as suffix to my custom exception class name. This will give better visibility to my exception class.
+I always add `Exception` as suffix to my custom exception class name. This will give better visibility to my exception class. And this is really common!
 
 Example:
 
@@ -110,7 +110,7 @@ public class LoginException : System.Exception
 }
 ```
 
-I never prefix or suffix the class name to its property names.
+I never prefix or suffix the class name to its property names. Remember [DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself)? [KISS](https://en.wikipedia.org/wiki/KISS_principle)?
 
 Example:
 
@@ -224,7 +224,7 @@ public class User : IDisposable
 }
 ```
 
-**Note:** If you're using `using(...) { ... }` block, it will call the `Dispose()` method automatically to free up the class resources. You will not have to call the `Dispose()` explicitly for the class.
+> **Note:** If you're using `using(...) { ... }` block, it will call the `Dispose()` method automatically to free up the class resources. You will not have to call the `Dispose()` explicitly for the class.
 
 **I usually split my logic in several small and simple methods.** If methods are too long, sometimes it's difficult to handle them. This is why I need to break them in separate methods and in future I may need to call one part, it will be easier to call rather than replicating the code. This is also easier to do unit testing for the small chunks rather than a big code. Based upon that, I extract my code in small simple methods and call them from wherever I want. In general, a method should never be more than 10-15 lines long.
 
@@ -260,3 +260,5 @@ static void Main()
   Console.WriteLine(result.ToString());
 }
 ```
+
+That's all for moment!

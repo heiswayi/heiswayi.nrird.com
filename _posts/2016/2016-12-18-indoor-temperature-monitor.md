@@ -7,7 +7,7 @@ tags: [C#, SerialPort, Oxyplot, Arduino, Project, Open Source]
 comments: true
 ---
 
-Indoor Temperature Monitor is a simple Arduino based project for monitoring and logging indoor temperatures of my house using the software that I created in .NET C#. Since I have old, unused Arduino Uno board, so I bought [1-wire digital temperature sensor (DS18B20)](https://www.maximintegrated.com/en/products/analog/sensors-and-sensor-interface/DS18B20.html) and made use of the Arduino board for this simple project.
+Indoor Temperature Monitor is a simple Arduino based project for monitoring and logging indoor temperatures of my house using the software that I built in .NET. Since I have old, unused Arduino Uno board, so I bought [1-wire digital temperature sensor (DS18B20)](https://www.maximintegrated.com/en/products/analog/sensors-and-sensor-interface/DS18B20.html) and made use of the Arduino board for this simple project.
 
 ### Hardware - Arduino board setup with DS18B20
 
@@ -60,8 +60,8 @@ delay(1000);
 
 ### Software - Indoor Temperature Monitor app
 
-Indoor Temperature Monitor is a simple WPF application I created in .NET C#. This application uses [OxyPlot](http://www.oxyplot.org/) for the graph plotting and reads temperature values sent by Arduino board using [serial port](https://msdn.microsoft.com/en-us/library/system.io.ports.serialport(v=vs.110).aspx) connection. The background color of the current temperature will automatically change based on a certain temperature range. The temperature reading will be logged into a CSV file for a certain interval of time.
+Indoor Temperature Monitor is a simple GUI app written in .NET C# and WPF. This application uses [OxyPlot](http://www.oxyplot.org/) for the graph plotting and reads temperature values sent by Arduino board using [serial port](https://msdn.microsoft.com/en-us/library/system.io.ports.serialport) connection. The background color of the current temperature will automatically change based on a certain temperature range. The temperature reading will be logged into a CSV file for a certain interval of time.
 
-{% include figure.html src="http://i.imgur.com/8CPtSVg.png" caption="Application UI" %}
+{% include figure.html src="http://i.imgur.com/8CPtSVg.png" caption="IndoorTempMonitor - simple GUI app written .NET C# and WPF" %}
 
 [**View source code on GitHub**](http://github.com/heiswayi/IndoorTempMonitor)

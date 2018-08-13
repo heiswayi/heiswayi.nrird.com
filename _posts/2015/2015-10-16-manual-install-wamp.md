@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Manually install Apache, PHP, MySQL and Composer on Windows
+title: Manually install Apache, PHP and MySQL on Windows (WAMP)
 description: Step-by-step tutorial to set up your own fully functional WAMP server on Windows without using any ready-made package like WampServer, XAMPP, Ampps, etc.
 keywords: manual install, apache, php, mysql, composer, wamp server
 tags: [PHP, Composer, MySQL, Apache]
 comments: true
 ---
 
-Instead of using any ready-made package like WampServer, XAMPP and so on, you can make your own fully functional WAMP server. The term **WAMP** here stands for Windows, Apache, MySQL and PHP. So, this tutorial is about **how you can manually install Apache, PHP, MySQL server and Composer (optional) on your Windows PC**. As for your information, when writing this I'm currently using **Windows 10 Pro 64-bit**. So, this tutorial is based on it. Let's start!
+This post is about how to manually install WAMP without using any ready-made package such as WampServer, XAMPP, Ampps, etc. Also, how to configure them to work with each other. WAMP stands for Windows, Apache, MySQL and PHP. FYI, I'm using Windows 10 Pro 64-bit.
 
 ### Apache
 
@@ -30,11 +30,11 @@ httpd.exe
 
 Normally, it shouldn't print any errors.
 
-If you get an error dialog stating that `MSVCR110.dll` is missing, you'll need to install the [Visual C++ Redistributable for Visual Studio 2012](http://www.microsoft.com/en-us/download/details.aspx?id=30679). If it's saying that it can't bind to port 80, check if another application uses that port. Skype application is known to use port 80 and 443 by default. You may need to [uncheck "Use port 80 and 443 as alternatives for incoming connections" in its advanced connection settings](http://i.stack.imgur.com/WKpiY.png) and restart your Skype to apply the changes.
+If you get an error dialog stating that **MSVCR110.dll** is missing, you'll need to install the [Visual C++ Redistributable for Visual Studio 2012](http://www.microsoft.com/en-us/download/details.aspx?id=30679). If it's saying that it can't bind to port 80, check if another application uses that port. Skype application is known to use port 80 and 443 by default. You may need to [uncheck "Use port 80 and 443 as alternatives for incoming connections" in its advanced connection settings](http://i.stack.imgur.com/WKpiY.png) and restart your Skype to apply the changes.
 
-A warning like `Could not reliably determine the server's fully qualified domain name` can be ignored for now.
+A warning like **Could not reliably determine the server's fully qualified domain name** can be ignored for now.
 
-Then, open a web browser and browse to `http://localhost`. If you see a page saying `It works!`, then it means your Apache installation is working.
+Then, open a web browser and browse to `http://localhost`. If you see a page saying **It works!**, then it means your Apache installation is working.
 
 The warning above can be fixed by editing `C:\Apache24\conf\httpd.conf`, uncomment and change it into something like this:
 
@@ -77,6 +77,8 @@ extension=php_pdo_mysql.dll
 
 Don't forget to set your timezone. Search for `;date.timezone`, remove `;` and update it into something like this; `date.timezone = Asia/Kuala_Lumpur` as for me. Else, it will set to UTC by default.
 
+### Back to Apache
+
 Now configure Apache to use that PHP by editing `C:\Apache24\conf\httpd.conf`, after all the `LoadModule` lines, add the following:
 
 ```apache
@@ -91,7 +93,7 @@ LoadModule php5_module C:/PHP/php5apache2_4.dll
 
 Now try to start Apache manually or restart the service, if you see no errors, it means your configurations file is valid and PHP is _most likely working_.
 
-You can test your PHP installation by creating a file like `info.php` with `<?php phpinfo();` inside. Then browse to `http://localhost/info.php`, you should see quite a bit of info about your system and your PHP installation and all its modules.
+You can test your PHP installation by creating a file like `info.php` with `<?php phpinfo();` inside. Then browse to `http://localhost/info.php`, you should see a quite bit of info about your system and your PHP installation plus all of its modules.
 
 ### MySQL
 
@@ -103,6 +105,8 @@ If you're installing for development, then the `Developer default` will be your 
 
 However, as for me, I just installed **MySQL Server**, **MySQL Workbench** and **MySQL Documentation**. The others I removed them via MySQL Installer.
 
+### Bug in MySQL Workbench 6.3 CE
+
 But, there is a bug that I'm facing where I cannot start MySQL Workbench and got the error dialog stating something like this:
 
 ```
@@ -113,9 +117,9 @@ This issue occurs due to the HTML rendered DLL that is included in MySQL Workben
 
 To fix the bug, I just downloaded this DLL file ([HtmlRenderer.dll](https://bugs.mysql.com/file.php?id=22868&bug_id=75673)), go to `C:\Program Files\MySQL\MySQL Workbench 6.3 CE\` then paste it here (replace the existing file). Now I can open MySQL Workbench as usual.
 
-### Besides MySQL Workbench, I also installed phpMyAdmin
+### phpMyAdmin or Adminer for database management
 
-Previously, I rarely use MySQL Workbench. Most of the time, I use phpMyAdmin. Another alternative is you can use [Adminer](https://www.adminer.org/) - Database management in a single PHP file.
+#### phpMyAdmin
 
 Go to [phpMyAdmin download page](https://www.phpmyadmin.net/downloads/), as for me I chose [phpMyAdmin-4.5.0.2-english.zip](https://files.phpmyadmin.net/phpMyAdmin/4.5.0.2/phpMyAdmin-4.5.0.2-english.zip). Extract the archive into the Apache `htdocs` folder and rename `phpMyAdmin-4.5.0.2-english` into `phpmyadmin`. You should have a path like this; `C:\Apache24\htdocs\phpmyadmin`.
 
@@ -135,7 +139,11 @@ $cfg['blowfish_secret'] = 'W4Y1'; /* YOU MUST FILL IN THIS FOR COOKIE AUTH! */
 
 By default, nothing much need to configure since phpMyAdmin automatically detect the port used by MySQL Server. So, you can directly access `http://localhost/phpmyadmin` and login (username and password) as what you set during MySQL installation.
 
-### Composer (optional)
+#### Adminer
+
+Alternatively, you can use [Adminer](https://www.adminer.org/), a database management in a single PHP file. It's really lightweight and I mostly use this script to manage my MySQL database online.
+
+### Optional: Installing Composer
 
 Composer is a tool for dependency management in PHP, like a package manager. It allows to easily install PHP packages and even entire frameworks.
 
@@ -161,4 +169,4 @@ ______
 Composer version 1.0-dev (a54f84f05f915c6d42bed94de0cdcb4406a4707b) 2015-10-13 13:09:04
 ```
 
-That's it! You now have a fully functional WAMP server (with Composer as the extra) that runs as a service and doesn't depend on any user (accessible even if no one is logged in). If you set up for production instead development, you might need to read carefully their notes or instruction manual, configure your firewall properly and try to consult with expert in order to maximize the security and performance. Thanks for reading anyway!
+That's it! You now have a fully functional WAMP server that runs as a service. If you set up for production environment instead of development, you might need to read carefully their notes or instruction manual, configure your firewall properly and try to consult with expert in order to maximize the security and performance. Thanks for reading anyway!

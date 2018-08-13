@@ -7,9 +7,8 @@ tags: [C#, WPF, Project]
 comments: true
 ---
 
-Dotfuscated Checker is a simple GUI tool I created with .NET C# and WPF to easily check if the required assemblies from the software build are obfuscated and digitally signed before they can be deployed for a production release. This tool may help Software Quality Assurance Engineers who work with .NET based projects to check for obfuscation at a glance. Other than obfuscation, this tool can check for digital signing too.
+Dotfuscated Checker is a simple GUI tool that I built in .NET C# and WPF **to help QA engineer to check at a glance of eyes that the required assemblies extracted from our app installer that deployed by our automated build process are obfuscated and digitally signed**. This checking guarantees that the obfuscation and digital signing set up by our build engineer on the automated build definition are not missing anything.
 
-{% include figure.html src="https://i.imgur.com/2iYCNYO.png" caption="Application screenshot" %}
+{% include figure.html src="https://i.imgur.com/2iYCNYO.png" caption="Dotfuscated Checker" %}
 
-- Minimum prerequisite: [.NET Framework 4.6.1](https://www.microsoft.com/en-us/download/details.aspx?id=49981)
-- Download [**Dotfuscated Checker v1.0**](https://www.dropbox.com/s/8lss51zhhx0p4xq/DotfuscatedCheckerV1.zip?dl=0) (ZIP, 1.46 MB)
+If you want to give a try for this tool, you can download [the compiled version here](https://www.dropbox.com/s/8lss51zhhx0p4xq/DotfuscatedCheckerV1.zip?dl=0) (unofficial beta version). This tool requires [.NET Framework 4.6.1](https://www.microsoft.com/en-us/download/details.aspx?id=49981) (minimum).

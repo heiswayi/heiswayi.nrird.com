@@ -1,19 +1,17 @@
 ---
 layout: post
-title: C# - Simple SerialPort singleton class
-description: This is a rewritten SerialPort class that is implemented with singleton pattern for handling serial data communication in some of my C# projects.
+title: SerialPortManager class
+description: A singleton class for handling serial data communication in .NET C#.
 keywords: c# programming, singleton design pattern, serial port, serial communication
 tags: [C#, SerialPort, Singleton]
 comments: true
 ---
 
-In my projects, some of them sometimes involves serial data communication. So, I think there is a need for me to create a reusable class that I could always reuse whenever I develop any application that uses serial data communication protocol. Most likely when I work with the projects that is interfacing with [Arduino](https://www.arduino.cc/) board. Here is my singleton class called `SerialPortManager` which is basically based on [System.IO.Ports.SerialPort](https://msdn.microsoft.com/en-us/library/system.io.ports.serialport(v=vs.110).aspx) class.
+_SerialPortManager_ is a singleton class I wrote to be used in some .NET projects that need to communicate using serial data communication protocol. It's basically a simple wrapper to [System.IO.Ports.SerialPort](https://msdn.microsoft.com/en-us/library/system.io.ports.serialport) class. I would use this class when I develop a .NET app that needs to communicate mostly with [Arduino](https://www.arduino.cc/) board. So, I would like to share the code here, so hopefully it would benefit to others.
 
-### Source code
+### SerialPortManager class source code
 
-This class source code also available on my [Gist](https://gist.github.com/heiswayi/80eda1a6905ba4edee8bd21a45f3a22d).
-
-_SerialPortManager.cs_
+File name: `SerialPortManager.cs` // Mirror link: [Gist](https://gist.github.com/heiswayi/80eda1a6905ba4edee8bd21a45f3a22d)
 
 ```csharp
 using System;
@@ -243,7 +241,7 @@ namespace HeiswayiNrird.Singleton
 }
 ```
 
-### Usage examples
+### How to use
 
 To retrieve the data, just subscribe to `OnDataReceived` event.
 
@@ -367,10 +365,8 @@ namespace SerialPortSingleton
 }
 ```
 
-### Avoiding application hang during serial port closing
+### How this class avoids the deadlock issue
 
-Don't worry, this class doesn't have the issue with that. Here is the design approach:
+`SerialPortManager` class uses `ReadPort()` method to be run on a new different thread and implements `while` loop statement for acquiring or reading data from the serial port. When `SerialPortManager.Instance.Close()` method is called, `_keepReading` variable will be set to `false` which will stop the app UI from receiving and updating the data while waiting the thread is fully terminated.
 
-As you can see from the class source code, there is no `System.IO.Ports.SerialPort.Close()` is used as this will cause a deadlock issue or hang the application. This is because the serial port base stream is locked while serial port events are handled.
-
-Instead, use `ReadPort()` method to be run on a new thread and use `while` loop statement for acquiring or reading data from the serial port. When `SerialPortManager.Instance.Close()` is called, `_keepReading` will be set to `false` which will stop UI from receiving and updating the data while waiting the thread to fully terminate.
+Using `System.IO.Ports.SerialPort.Close()` method directly on the app UI thread to stop acquiring/reading data will cause a deadlock issue or hand the application. This is because the serial port base stream is locked while serial port events are handled.
