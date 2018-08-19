@@ -158,7 +158,7 @@ These two classes are the basic common classes needed for MVVM implementation to
 
 ### Creating the View
 
-> The view is responsible for defining the structure, layout, and appearance of what the user sees on the screen. No business logic applied here.
+> **DEFINITION:** The _View_ is the structure, layout and appearance of what a user sees on the screen.
 
 Once everything is prepared, next is I created the View, a XAML file called `ComboBox.xaml` and placed it within the _View_ directory. This file contains the XAML code for the ComboBoxes and Button.
 
@@ -228,7 +228,7 @@ These are the commonly used properties for the ComboBox element, here are the di
 
 ## Creating the Model
 
-> This is a data model along with business and validation logic. We use this as the managers for particular classes.
+> **DEFINITION:** The _Model_ is basically a business logic and data.
 
 Now, I need to design the data model. So, I created an example model class file called `ExampleModel.cs` within the _Model_ directory.
 
@@ -327,7 +327,7 @@ From the code above, there are three object classes; **EnumItem**, **Country**, 
 
 ## Creating the ViewModel
 
-> This is what we called the "glue" that binds _View_ and _Model_ together. It's responsible for handling the view logic (sometimes we called "UI logic"). Typically, the view model interacts with the model by invoking methods in the model classes. The view model then provides data from the model in a form that the view can easily use. The view model retrieves data from the model and then makes the data available to the view, and may reformat the data in some way that makes it simpler for the view to handle. The view model also provides implementations of commands that a user of the application initiates in the view.
+> **DEFINITION:** The _ViewModel_ is an abstraction of the _View_ exposing public properties and commands.
 
 Finally, comes to the "glue" part. In this part, I created a view model class file called `ExampleViewModel.cs` within the _ViewModel_ directory.
 
