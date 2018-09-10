@@ -82,9 +82,9 @@ title: Home
 				<span class="hidden">&nbsp;</span>
 			{% endfor %}
 
-			<h2 class="year">Engineering <small class="double-line">Notes</small></h2>
+			<h2 class="year">Engineering/Technical <small class="double-line">Notes</small></h2>
 			{% for post in site.posts %}
-				{% if post.tags contains "Engineering" %}
+				{% if post.tags contains "Engineering" or post.tags contains "Technical" %}
 					<div class="post-list-archives">
 						<div class="post-title"><span class="full-title"><a href="{{ post.url }}">{{ post.title }}</a></span> <span class="post-date date-full">{{ post.date | date: "%Y.%m.%d" }}</span></div>
 					</div>
@@ -102,7 +102,7 @@ title: Home
 				<span class="hidden">&nbsp;</span>
 			{% endfor %}
 
-			<h2 class="year">Projects, <small>or <a href="#">more..</a></small></h2>
+			<h2 class="year">Projects, <small>or <a href="{{ "/projects" | prepend: site.baseurl | prepend: site.url }}">see all</a></small></h2>
 			{% for post in site.posts %}
 				{% if post.tags contains "Project" %}
 					<div class="post-list-archives">
