@@ -3,7 +3,7 @@ layout: post
 title: Image caption implementation in Jekyll site using Liquid syntax
 description: Implementing a better way to insert captioned images in my static blog articles written in Markdown using the Liquid syntax.
 keywords: figure captions, image captions, jekyll based blog, liquid syntax, figure figcaption
-tags: [Jekyll, Liquid]
+tags: [Jekyll, Liquid, Programming]
 comments: true
 ---
 

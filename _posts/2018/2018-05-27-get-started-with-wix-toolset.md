@@ -3,7 +3,7 @@ layout: post
 title: Get started with WiX Toolset
 description: This is how I created a basic MSI setup for my app installer using WiX Toolset.
 keywords: wix toolset, windows installer, msi setup
-tags: [WiX Toolset, Windows Installer]
+tags: [WiX Toolset, Windows Installer, Engineering]
 comments: true
 ---
 

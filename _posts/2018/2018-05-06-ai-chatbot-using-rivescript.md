@@ -3,7 +3,7 @@ layout: post
 title: AI chatbot app development using RiveScript
 description: Development of AI chatbot app project based on RiveScript interpreter engine; one is built using Jekyll, another is built using Node.js and Socket.IO.
 keywords: ai chatbot, artificial intelligence, rivescript, node.js, socket.io, jquery terminal
-tags: [Artificial Intelligence, Chatbot, Jekyll, Node.js, Open Source]
+tags: [Artificial Intelligence, Chatbot, Jekyll, Node.js, Open Source, Programming]
 comments: true
 ---
 

@@ -3,7 +3,7 @@ layout: post
 title: Creating my own substitution cipher app in .NET
 description: Demonstrating my own substitution cipher created in .NET using my own encoding method to encode the plaintext message into the encrypted strings.
 keywords: substitution cipher, custom encoding method, heiswayi nrird cipher program, c# wpf, encryption and decryption
-tags: [C#, WPF, Cryptography]
+tags: [C#, WPF, Cryptography, Programming]
 comments: true
 ---
 

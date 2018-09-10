@@ -3,7 +3,7 @@ layout: post
 title: Writing a simple singleton pattern class using .NET 4's Lazy type
 description: Here's a simple singleton pattern to turn your class into a singleton class. It's really simple and perform well, best used with time-consuming operation class in .NET C# programming.
 keywords: singleton pattern, .net 4, laziness, lambda expression
-tags: [Singleton, C#, Lambda Expression]
+tags: [Singleton, C#, Lambda Expression, Programming]
 comments: true
 ---
 

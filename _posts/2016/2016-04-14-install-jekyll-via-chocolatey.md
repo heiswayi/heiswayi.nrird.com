@@ -3,7 +3,7 @@ layout: post
 title: Get started with Jekyll using Chocolatey
 description: Some tips to install Jekyll on Windows via Command Prompt using Chocolatey, a package manager for Windows.
 keywords: jekyll installation, windows os, chocolatey, command prompt, tips
-tags: [Jekyll, Chocolatey]
+tags: [Jekyll, Chocolatey, Engineering]
 comments: true
 ---
 

@@ -3,7 +3,7 @@ layout: post
 title: MVVM.cs
 description: MVVM.cs is a collection of Model-View-ViewModel (MVVM) design pattern common classes that can be implemented by any ViewModel (VM).
 keywords: mvvm common classes, viewmodelbase, onpropertychanged, raisepropertychanged, icommand, delegatecommand, relaycommand, lambda expression
-tags: [MVVM, C#]
+tags: [MVVM, C#, Programming]
 comments: true
 ---
 

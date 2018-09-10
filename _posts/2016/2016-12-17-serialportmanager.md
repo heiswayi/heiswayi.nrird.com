@@ -3,7 +3,7 @@ layout: post
 title: SerialPortManager class
 description: A singleton class for handling serial data communication in .NET C#.
 keywords: c# programming, singleton design pattern, serial port, serial communication
-tags: [C#, SerialPort, Singleton]
+tags: [C#, SerialPort, Singleton, Programming]
 comments: true
 ---
 

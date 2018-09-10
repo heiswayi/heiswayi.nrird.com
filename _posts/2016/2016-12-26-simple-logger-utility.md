@@ -3,7 +3,7 @@ layout: post
 title: Writing a simple logger utility class in .NET
 description: Just another simple logger utility class that I wrote for my own use in some of my .NET projects.
 keywords: c# programming, simple logger class
-tags: [C#, Utility, Open Source]
+tags: [C#, Utility, Open Source, Programming]
 comments: true
 ---
 

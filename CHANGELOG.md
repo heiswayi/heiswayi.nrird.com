@@ -1,5 +1,9 @@
 Versioning format: **yyyy.M.revision**
 
+### 2018.9.1
+- Moved common-blog-style-index to Archive page
+- Updated homepage design to group posts under particular categories
+
 ### 2018.8.5
 - Major design overhauled - no fancy colors, more black and white clean
 - Made the layout more minimalist

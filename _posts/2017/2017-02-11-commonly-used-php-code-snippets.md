@@ -3,7 +3,7 @@ layout: post
 title: Commonly used PHP code snippets
 description: A compilation of some commonly used PHP code snippets that I have been using for years in my PHP projects.
 keywords: php, commonly use php functions, php code snippets, php projects, compilation of code snippets, helpful php functions
-tags: [PHP]
+tags: [PHP, Programming]
 comments: true
 ---
 

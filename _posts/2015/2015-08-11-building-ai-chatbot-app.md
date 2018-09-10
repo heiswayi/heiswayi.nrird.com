@@ -3,7 +3,7 @@ layout: post
 title: When I tried to build AI chatbot app
 description: Curiousity to learn about AI has made me to build AI chatbot app from scripting it in mIRC program, and then .NET C#, and finally by using JavaScript library.
 keywords: artificial intelligence, chatbot app, AIML, SIML, elizabot.js
-tags: [Artificial Intelligence, Chatbot]
+tags: [Artificial Intelligence, Chatbot, Programming]
 comments: true
 ---
 

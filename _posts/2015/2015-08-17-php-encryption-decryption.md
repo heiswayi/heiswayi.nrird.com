@@ -3,7 +3,7 @@ layout: post
 title: PHP - Encryption and decryption function
 description: These code snippets may help to secure user's confidential information and speed up some works of yours.
 keywords: php encryption function, php decryption function, secure password hashing using php
-tags: [PHP, Encryption, Decryption, Password Hashing]
+tags: [PHP, Encryption, Decryption, Password Hashing, Programming]
 comments: true
 ---
 

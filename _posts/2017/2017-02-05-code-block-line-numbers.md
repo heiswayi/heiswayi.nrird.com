@@ -3,7 +3,7 @@ layout: post
 title: Generating code block line numbers with pure JavaScript
 description: This is how I added the line numbers at the left side of my code block layout using few lines of vanilla JavaScript and SCSS.
 keywords: line numbers, code block layout, jekyll site template, line numbers using javascript, line numbers css
-tags: [Jekyll, CSS, JavaScript]
+tags: [Jekyll, CSS, JavaScript, Programming]
 comments: true
 ---
 
