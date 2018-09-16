@@ -1,5 +1,9 @@
 Versioning format: **yyyy.M.revision**
 
+### 2018.9.2
+- Redesigned homepage layout to look proper on mobile view
+- Minor change in the main menu layout
+
 ### 2018.9.1
 - Moved common-blog-style-index to Archive page
 - Updated homepage design to group posts under particular categories
