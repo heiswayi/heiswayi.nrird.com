@@ -1,5 +1,8 @@
 Versioning format: **yyyy.M.revision**
 
+### 2018.10.1
+- Reverted to archive style homepage, posts sorted by year
+
 ### 2018.9.2
 - Redesigned homepage layout to look proper on mobile view
 - Minor change in the main menu layout
