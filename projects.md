@@ -93,54 +93,15 @@ keywords: part-time projects, hobby stuffs, open source, web apps, github repo
   </li>
 </ul>
 
-### Scripts and utilities
-
-<ul>
-  <li>
-    <a href="http://nrird.xyz/proxy/">Web Proxy</a><br>
-    My personal web proxy script.
-  </li>
-  <li>
-    <a href="http://nrird.xyz/scripts/whois/">Whois</a><br>
-    Simple domain whois script.
-  </li>
-  <li>
-    <a href="http://nrird.xyz/scripts/indenter-tool/">Indenter Tool</a><br>
-    Simple script to prettify and fix indentation of code.
-  </li>
-  <li>
-    <a href="http://nrird.xyz/scripts/js-packer/">JavaScript Packer</a><br>
-    Compress and obfuscate JavaScript code.
-  </li>
-  <li>
-    <a href="http://nrird.xyz/scripts/url-shortener/">Personal URL Shortening Service</a><br>
-    My personal URL shortener script.
-  </li>
-  <li>
-    <a href="http://nrird.xyz/scripts/sparkline/">Static Sparkline Image Generator</a><br>
-    Generate static sparkline image with browser caching with ETag.
-  </li>
-</ul>
-
-Visit [https://nrird.xyz/scripts](https://nrird.xyz/scripts/) for more other scripts.
-
 ### Web tools
 
 <ul>
   <li>
-    <a href="http://nrird.xyz/ultimate-blocks">FREE Ultimate Blocks - Website Maker</a><br>
-    A FREE block-based HTML drag-and-drop bootstrap theme builder with 126+ predesigned unique blocks and unlimited variants.
-  </li>
-  <li>
-    <a href="https://nrird.xyz/encrypto-zero">Encrypto Zero</a><br>
+    <a href="https://nullableobject.com/xnote">XNote</a><br>
     Minimalist, secure and encrypted pastebin app for personal use purpose.
   </li>
   <li>
-    <a href="https://nrird.xyz/document-writer">Document Writer</a><br>
-    Minimalist web-based writing tool to write document using web browser.
-  </li>
-  <li>
-    <a href="https://nrird.xyz/speedtest/">Speedtest</a><br>
+    <a href="https://nullableobject.com/speedtest/">Speedtest</a><br>
     Minimalist speedtest site. No ads &amp; mobile friendly!
   </li>
 </ul>
@@ -149,7 +110,7 @@ Visit [https://nrird.xyz/scripts](https://nrird.xyz/scripts/) for more other scr
 
 <ul>
   <li>
-    <a href="http://nrird.xyz/website-checklist">Website Checklist</a><br>
+    <a href="http://nullableobject.com/website-checklist">Website Checklist</a><br>
     Checklist for web developer.
   </li>
   <li>
