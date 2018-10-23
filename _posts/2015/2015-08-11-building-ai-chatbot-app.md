@@ -11,7 +11,7 @@ comments: true
 
 Back in 2004, I had used a chatting program called [mIRC](http://www.mirc.com/). It's a program to connect to [IRC](https://en.wikipedia.org/wiki/Internet_Relay_Chat) networks and started chatting with other people in the chatroom.
 
-### Chit-chat is boring, I explored more than that
+### Chit-chat is boring, let's do scripting
 
 There is an interesting feature in mIRC program called **Remote** under mIRC Editor. This is where the advanced things happened. It's a scripting tool. From this feature, people were expending the capailities of the mIRC program. See [this link](http://www.mircscripts.org/), [this link](http://hawkee.com/mirc/snippets/), or [this link](http://www.oldschoolirc.com/scripts) to see what other people did with mIRC scripting.
 
@@ -126,7 +126,7 @@ on *:input:@Puteri_Allyssa: {
 
 In 2007, I stopped using IRC and no longer connect or play **revenge**. This is where I started abandoned everything about mIRC.
 
-### Building AI chatbot in .NET Framework and using SQLite database
+### AI chatbot in .NET Framework and SQLite
 
 Few years later, I started working with C# programming and WinForms. So, the "AI" idea came back to me. At this time, I coded for a basic WinForms app and used SQLite to build my "AI" chatbot. And I called it **NALIKA**. It had a basic implementation where by matching keywords in input text and then stream out possible output response. I used SQLite to save the possible inputs and the output responses.
 
@@ -138,7 +138,7 @@ Check out the screenshots:
 
 {% include figure.html src="http://i.imgur.com/kMdAEpk.png" caption="To edit the database, add new or import/export" %}
 
-### NALIKA app still boring, so I looked for something called "framework"
+### NALIKA app still boring, so I need something called "framework"
 
 After I did some researches on Internet, I found one so-called the "first framework" that I can start with. It was called [Artificial Intelligence Markup Language (AIML)](http://www.alicebot.org/aiml.html), a standard XML format markup language for defining the responses from the chatbot. AIML was developed by **Richard S. Wallace** and a worldwide free software community between 1995 and 2002. AIML formed the basis for what was initially a highly extended [Eliza](https://en.wikipedia.org/wiki/ELIZA) called ["A.L.I.C.E." (Artificial Linguistic Internet Computer Entity)](https://en.wikipedia.org/wiki/Artificial_Linguistic_Internet_Computer_Entity) which won the annual [Loebner Prize Competition](https://en.wikipedia.org/wiki/Loebner_Prize) in Artificial Intelligence three times and was also the Chatterbox Challenge Champion in 2004.
 
@@ -150,13 +150,13 @@ Screenshots:
 
 {% include figure.html src="http://i.imgur.com/3mkEzII.png" caption="WAYI v2 - Bot response in different view" %}
 
-### Writing the bot "brain" (AIML) was hard and tedious! I found a better AI markup language library called SIML
+### Writing the bot "brain" (AIML) was hard and tedious!
 
 After some time, I found another chatbot markup language library known as [Synthetic Intelligence Markup Language (SIML)](http://simlbot.com/), which was more powerful than AIML. SIML provided much better features compared to AIML. So, I changed the current markup language of my chatbot from AIML to use SIML as SIML already provided their own chatbot studio program called **Syn Chatbot Studio**.
 
 Based on their website, Syn Chatbot Studio offers a comprehensive collection of tools to develop intelligent chatbots that targeted desktops, mobile and web platforms. It has Code Analysis, AIML to SIML converter, JavaScript Editor, Regex Tester and smooth Auto-Complete. And it's much more interesting when it has ability to execute JavaScript function from its routine of responses. That's cool as a lot of things I can do with JavaScript itself. Here's their [wiki site](http://wiki.syn.co.in/) or [GitHub](https://github.com/SynHub) if you want to learn more about it.
 
-### Building AI chatbot with JavaScript library and deploy online
+### AI chatbot with JavaScript library and online deployment
 
 Known as "W4Y1", is one of my latest AI chatbot experiments (read: code for fun) that uses JavaScript and I hosted it on GitHub Pages. It's not a really chatbot where people can chat for any topic of conversations because that is not my intention when I started building it but it is more to so-called a memory program to represent a digital side of myself by holding a fragment of knowledge/information from my mind. If you have ever watched [I, Robot (2004)](http://www.imdb.com/title/tt0343818/) movie, this is directly inspired from Dr. Alfred Lanning's hologram device that was used to leave his message for Spooner's investigation while mine is just in the form of terminal-like web interface, text format interaction and [open source](https://github.com/heiswayi/w4y1).
 
@@ -166,7 +166,7 @@ I created **W4Y1** based on [elizabot.js](http://www.masswerk.at/elizabot/) by *
 
 [**Demo**](https://heiswayi.github.io/w4y1) // [**GitHub**](https://github.com/heiswayi/w4y1)
 
-### The bottom line
+### Conclusion
 
 These developments, even incomplete has taught me some understanding on artificial intelligence concept, technical challenges, and the designing of the markup languages.
 

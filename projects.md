@@ -104,17 +104,41 @@ keywords: part-time projects, hobby stuffs, open source, web apps, github repo
     <a href="https://nullableobject.com/speedtest/">Speedtest</a><br>
     Minimalist speedtest site. No ads &amp; mobile friendly!
   </li>
+  <li>
+    <a href="https://nullableobject.com/write/">Write</a><br>
+    A browser-based document writer featuring WYSIWYG HTML Editor from TinyMCE.
+  </li>
+  <li>
+    <a href="https://nullableobject.com/whois/">Whois Script</a><br>
+    Simple domain whois script.
+  </li>
 </ul>
 
 ### Misc. stuffs
 
 <ul>
   <li>
+    <a href="/reminder">Personal Reminder Note</a><br>
+    A note to remind myself.
+  </li>
+  <li>
     <a href="http://nullableobject.com/website-checklist">Website Checklist</a><br>
     Checklist for web developer.
   </li>
   <li>
-    <a href="/reminder">Personal Reminder Note</a><br>
-    A note to remind myself.
+    <a href="https://nullableobject.com/s/shorten">Link Shortening Service</a><br>
+    My minimalist link shortening service.
+  </li>
+  <li>
+    <a href="https://nullableobject.com/simple-tools/">Index of /simple-tools</a><br>
+    Collection of my simple web tools/scripts.
+  </li>
+  <li>
+    <a href="https://nullableobject.com/pr0xy/">nullableObject.pr0xy()</a><br>
+    My private web proxy script.
+  </li>
+  <li>
+    <a href="https://nullableobject.com/imgh/">Personal Image Hosting Script</a><br>
+    My private image hosting script.
   </li>
 </ul>

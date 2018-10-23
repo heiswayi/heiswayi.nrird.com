@@ -205,7 +205,7 @@ array (size=3)
 
 If you are using PHP version before 5.5, there is a [pure PHP compatibility library](https://github.com/ircmaxell/password_compat) available for PHP 5.3.7 and later.
 
-### Salt
+### Cryptographic salt
 
 A cryptographic salt is a data which is applied during the hashing process in order to eliminate the possibility of the output being looked up in a list of pre-calculated pairs of hashes and their input, known as a rainbow table.
 
