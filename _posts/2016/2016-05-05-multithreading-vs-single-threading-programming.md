@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Understanding multithreading vs single threading programming in .NET System.Threading
+title: Understanding multithreading vs single threading programming in .NET C#
 description: Examples of C# code to demonstrate the multithreading programming available in .NET System.Threading.
 keywords: multithreading, single threading, sample source code, demonstration, threadpool, task, backgroundworker, windows console application
 tags: [C#, Multithreading, Programming]
@@ -13,135 +13,30 @@ Multithreading is a widespread programming and execution model that allows multi
 
 The purpose of threading is to allow computer to do more than one thing at a time. In a single core computer, multithreading won't give much advantages for overall speed. But for computer with multiple processor cores (which is so common these days), multithreading can take advantage of additional cores to perform separate instructions at the same time or by splitting the tasks between the cores.
 
-Below is the full example source code of Windows Console application written in C# that will demonstrate multithreading programming versus single threading programming. You may copy and paste the source code into your Visual Studio to have a try. The demonstration covers four multithreading options; `Thread()`, `ThreadPool.QueueUserWorkItem()`, `Task()` and `BackgroundWorker()`.
+### Demo code
 
-### Demo source code
+Let's write a simple demo code to demonstrate four kind of multithreading programming in .NET C# using `System.Threading`. Here's the basic structure of the code to start:
 
 ```csharp
 using System;
-using System.ComponentModel;
 using System.Diagnostics;
 using System.Threading;
-using System.Threading.Tasks;
 
 namespace MultithreadingVsSingleThreading
 {
     internal class Program
     {
-        #region Fields
-
-        private static int selectedMode;
-
-        // The number of threads to be spawned.
-        private const int threadCount = 1000;
-
-        // The total number of spins the actual work is carried out repeatedly.
-        private const int totalCount = 100000;
-
-        #endregion Fields
-
-        #region Methods
+        private const int threadCount = 1000; // no. of threads to be spawned
+        private const int totalCount = 100000; // no. of spins the actual work is carried out
 
         private static void Main(string[] args)
         {
-            Console.Title = "Multithreading vs Single Threading Example";
-            start:
-            Console.WriteLine("Select which mode to run:-");
-            Console.WriteLine("  (1) Multithreading");
-            Console.WriteLine("  (2) Single Threading");
-            Console.WriteLine("  (3) Threadpool");
-            Console.WriteLine("  (4) Task");
-            Console.WriteLine("  (5) BackgroundWorker");
-            var input = Console.ReadLine();
-            if (input.Length == 0)
-            {
-                Console.Clear();
-                goto start;
-            }
-            else if (Convert.ToInt32(input) == 0 || Convert.ToInt32(input) >= 6)
-            {
-                Console.Clear();
-                goto start;
-            }
-            else
-            {
-                selectedMode = Convert.ToInt32(input);
-            }
-
             Thread.CurrentThread.Priority = ThreadPriority.Highest;
-            Stopwatch watch = new Stopwatch();
-            Console.Clear();
-            watch.Start();
 
-            try
-            {
-                HandleMode(selectedMode);
-
-                watch.Stop();
-                Console.WriteLine("Work complete!");
-                Console.WriteLine("Time elapsed: {0}", watch.Elapsed);
-                Console.WriteLine(Environment.NewLine);
-                Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine("Press Enter key to test again or Esc to quit");
-                Console.ResetColor();
-                var key = Console.ReadKey();
-                if (key.Key == ConsoleKey.Enter)
-                {
-                    Console.Clear();
-                    goto start;
-                }
-                if (key.Key == ConsoleKey.Escape) Environment.Exit(0);
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e.Message);
-            }
-            Console.ReadLine();
+            // let's perform CPU intensive task here...
+            // single threading vs multithreading
         }
 
-        /// <summary>
-        /// Performs the task based on user defined option.
-        /// </summary>
-        /// <param name="mode"></param>
-        private static void HandleMode(int mode)
-        {
-            switch (mode)
-            {
-                case 1:
-                    Console.WriteLine("Using Thread() | No. of threads = {0}", threadCount);
-                    Console.WriteLine("Initialize work...");
-                    RunThreadMode();
-                    break;
-                case 2:
-                    Console.WriteLine("Using this Main() thread, directly call ComplexWork({0})", totalCount);
-                    Console.WriteLine("Initialize work...");
-                    ComplexWork(totalCount);
-                    break;
-                case 3:
-                    Console.WriteLine("Using ThreadPool.QueueUserWorkItem() | No. of threads = {0}", threadCount);
-                    Console.WriteLine("Initialize work...");
-                    RunInThreadPool();
-                    break;
-                case 4:
-                    Console.WriteLine("Using Task() | No. of threads = {0}", threadCount);
-                    Console.WriteLine("Initialize work...");
-                    RunTaskMode();
-                    break;
-                case 5:
-                    Console.WriteLine("Using BackgroundWorker() | No. of threads = {0}", threadCount);
-                    Console.WriteLine("Initialize work...");
-                    RunInBackgroundWorker();
-                    break;
-                default:
-                    break;
-            }
-        }
-
-        #region Work Task
-        /// <summary>
-        /// Performs CPU intensive task.
-        /// </summary>
-        /// <param name="n"></param>
         private static void ComplexWork(int n)
         {
             for (int j = 0; j < n; j++)
@@ -153,11 +48,6 @@ namespace MultithreadingVsSingleThreading
             }
         }
 
-        /// <summary>
-        /// Calculates the factorial of a number.
-        /// </summary>
-        /// <param name="n"></param>
-        /// <returns></returns>
         private static double Fac(double n)
         {
             if (n > 1)
@@ -169,149 +59,181 @@ namespace MultithreadingVsSingleThreading
                 return 1;
             }
         }
-
-        #endregion Work Task
-
-        /// <summary>
-        /// Spawns new threads based on the thread count and starts the activity.
-        /// </summary>
-        private static void RunThreadMode()
-        {
-            Thread[] t = new Thread[threadCount];
-
-            for (int i = 0; i < threadCount; i++)
-            {
-                t[i] = new Thread(() =>
-                {
-                    ComplexWork(totalCount / threadCount);
-                });
-                t[i].Priority = ThreadPriority.Highest;
-                t[i].Start();
-            }
-
-            // Waits for all the threads to finish.
-            foreach (var ct in t)
-            {
-                ct.Join();
-            }
-        }
-
-        /// <summary>
-        /// Executes the task in a thread pooling context.
-        /// </summary>
-        private static void RunInThreadPool()
-        {
-            using (CountdownEvent signaler = new CountdownEvent(threadCount))
-            {
-                for (int i = 0; i < threadCount; i++)
-                {
-                    ThreadPool.QueueUserWorkItem((x) =>
-                    {
-                        ComplexWork(totalCount / threadCount);
-                        signaler.Signal();
-                    });
-                }
-                signaler.Wait();
-            }
-        }
-
-        /// <summary>
-        /// Creates a new task based on the TPL library.
-        /// </summary>
-        private static void RunTaskMode()
-        {
-            Task[] taskList = new Task[threadCount];
-            for (int i = 0; i < threadCount; i++)
-            {
-                taskList[i] = new Task(new Action(() =>
-                {
-                    ComplexWork(totalCount / threadCount);
-                }));
-                taskList[i].Start();
-            }
-            Task.WaitAll(taskList);
-        }
-
-        /// <summary>
-        /// Starts BackgroundWorker to perform the same action.
-        /// </summary>
-        private static void RunInBackgroundWorker()
-        {
-            BackgroundWorker[] backgroundWorkerList = new BackgroundWorker[threadCount];
-            using (CountdownEvent signaler = new CountdownEvent(threadCount))
-            {
-                for (int i = 0; i < threadCount; i++)
-                {
-                    backgroundWorkerList[i] = new BackgroundWorker();
-                    backgroundWorkerList[i].DoWork += delegate (object sender, DoWorkEventArgs e)
-                    {
-                        ComplexWork(totalCount / threadCount);
-                        signaler.Signal();
-                    };
-                    backgroundWorkerList[i].RunWorkerAsync();
-                }
-                signaler.Wait();
-            }
-        }
-
-        #endregion Methods
     }
 }
 ```
 
-### Demo screenshots
+### Single threading programming
 
-{% include figure.html src="http://i.imgur.com/q19Eigj.png" caption="Four types of multithreading" %}
+For single threading programming, we can just simply call the `ComplexWork` method in our `Main` method as shown below:
 
-{% include figure.html src="http://i.imgur.com/3YQTqCA.png" caption="Example of multithreading using ThreadPool.QueueUserWorkItem()" %}
-
-### Some notes on multithreading classes used in the demo code
-
-1. The `Thread` class is used for creating and manipulating a [thread](http://msdn.microsoft.com/en-us/library/windows/desktop/ms684841%28v=vs.85%29.aspx) in Windows.
-2. A `Task` represents asynchronous operation and is part of the [Task Parallel Library](http://msdn.microsoft.com/en-us/library/dd460717%28v=vs.110%29.aspx), a set of APIs for running tasks asynchronously and in parallel.
-3. The `ThreadPool` class manages a group of threads in which tasks are added to a queue and automatically started when threads are created.
-4. The `BackgroundWorker` class executes an operation on a separate thread.
-
-### Demo results
-
-Please note that, while I'm running this demonstration, my PC has several stuffs that are running such as multiple Google Chrome browser tabs left opened, 2 instances of Visual Studio 2015 software, Atom editor, etc. Here are the results:
-
-```
-Processor: Intel(R) Core(TM) i3-4130 CPU @ 3.40GHz (2 cores, 4 threads)
-RAM: 12 GB DDR3
-GPU: AMD Radeon R7 200 Series
-
-// Multithreading
-Using Thread() | No. of threads = 1000
-Initialize work...
-Work complete!
-Time elapsed: 00:00:01.6529574
-
-// Single Threading
-Using this Main() thread, directly call ComplexWork(100000)
-Initialize work...
-Work complete!
-Time elapsed: 00:00:04.6129301
-
-// ThreadPool
-Using ThreadPool.QueueUserWorkItem() | No. of threads = 1000
-Initialize work...
-Work complete!
-Time elapsed: 00:00:01.6173233
-
-// Task
-Using Task() | No. of threads = 1000
-Initialize work...
-Work complete!
-Time elapsed: 00:00:01.6230018
-
-// BackgroundWorker
-Using BackgroundWorker() | No. of threads = 1000
-Initialize work...
-Work complete!
-Time elapsed: 00:00:01.6416939
+```csharp
+private static void Main(string[] args)
+{
+    Thread.CurrentThread.Priority = ThreadPriority.Highest;
+    Stopwatch sw = Stopwatch.StartNew();
+    ComplexWork(totalCount); // single threading
+    sw.Stop();
+    Console.WriteLine("Single threading - elapsed time: {0}ms", sw.ElapsedMilliseconds);
+}
 ```
 
-### Conclusion
+### Multithreading programming
 
-Based on the demo results using my PC, multithreading programming provides about **4x faster** compared to single threading.
+#### 1. Using Thread class
+
+The `Thread` class is used for creating and manipulating a [thread](http://msdn.microsoft.com/en-us/library/windows/desktop/ms684841%28v=vs.85%29.aspx) in Windows.
+
+```csharp
+private static void Main(string[] args)
+{
+    Thread.CurrentThread.Priority = ThreadPriority.Highest;
+    RunThreadMode(); // multithreading - using Thread
+}
+
+/// <summary>
+/// Spawns new threads based on the thread count and starts the activity.
+/// </summary>
+private static void RunThreadMode()
+{
+    Stopwatch sw = Stopwatch.StartNew();
+    Thread[] t = new Thread[threadCount];
+
+    for (int i = 0; i < threadCount; i++)
+    {
+        t[i] = new Thread(() =>
+        {
+            ComplexWork(totalCount / threadCount);
+        });
+        t[i].Priority = ThreadPriority.Highest;
+        t[i].Start();
+    }
+
+    // Waits for all the threads to finish.
+    foreach (var ct in t)
+    {
+        ct.Join();
+    }
+    sw.Stop();
+    Console.WriteLine("Using Thread - elapsed time: {0}ms", sw.ElapsedMilliseconds);
+}
+```
+
+#### 2. Using ThreadPool
+
+The `ThreadPool` class manages a group of threads in which tasks are added to a queue and automatically started when threads are created.
+
+```csharp
+private static void Main(string[] args)
+{
+    Thread.CurrentThread.Priority = ThreadPriority.Highest;
+    RunInThreadPool(); // multithreading - using ThreadPool.QueueUserWorkItem
+}
+
+/// <summary>
+/// Executes the task in a thread pooling context.
+/// </summary>
+private static void RunInThreadPool()
+{
+    Stopwatch sw = Stopwatch.StartNew();
+    using (CountdownEvent signaler = new CountdownEvent(threadCount))
+    {
+        for (int i = 0; i < threadCount; i++)
+        {
+            ThreadPool.QueueUserWorkItem((x) =>
+            {
+                ComplexWork(totalCount / threadCount);
+                signaler.Signal();
+            });
+        }
+        signaler.Wait();
+    }
+    sw.Stop();
+    Console.WriteLine("Using ThreadPool - elapsed time: {0}ms", sw.ElapsedMilliseconds);
+}
+```
+
+#### 3. Using Task
+
+A `Task` represents asynchronous operation and is part of the [Task Parallel Library](http://msdn.microsoft.com/en-us/library/dd460717%28v=vs.110%29.aspx), a set of APIs for running tasks asynchronously and in parallel.
+
+```csharp
+private static void Main(string[] args)
+{
+    Thread.CurrentThread.Priority = ThreadPriority.Highest;
+    RunTaskMode(); // multithreading - using Task
+}
+
+/// <summary>
+/// Creates a new task based on the TPL library.
+/// </summary>
+private static void RunTaskMode()
+{
+    Stopwatch sw = Stopwatch.StartNew();
+    Task[] taskList = new Task[threadCount];
+    for (int i = 0; i < threadCount; i++)
+    {
+        taskList[i] = new Task(new Action(() =>
+        {
+            ComplexWork(totalCount / threadCount);
+        }));
+        taskList[i].Start();
+    }
+    Task.WaitAll(taskList);
+    sw.Stop();
+    Console.WriteLine("Using Task - elapsed time: {0}ms", sw.ElapsedMilliseconds);
+}
+```
+
+#### 4. Using BackgroundWorker
+
+The `BackgroundWorker` class executes an operation on a separate thread.
+
+```csharp
+private static void Main(string[] args)
+{
+    Thread.CurrentThread.Priority = ThreadPriority.Highest;
+    RunInBackgroundWorker(); // multithreading - using BackgroundWorker
+}
+
+/// <summary>
+/// Starts BackgroundWorker to perform the same action.
+/// </summary>
+private static void RunInBackgroundWorker()
+{
+    Stopwatch sw = Stopwatch.StartNew();
+    BackgroundWorker[] backgroundWorkerList = new BackgroundWorker[threadCount];
+    using (CountdownEvent signaler = new CountdownEvent(threadCount))
+    {
+        for (int i = 0; i < threadCount; i++)
+        {
+            backgroundWorkerList[i] = new BackgroundWorker();
+            backgroundWorkerList[i].DoWork += delegate (object sender, DoWorkEventArgs e)
+            {
+                ComplexWork(totalCount / threadCount);
+                signaler.Signal();
+            };
+            backgroundWorkerList[i].RunWorkerAsync();
+        }
+        signaler.Wait();
+    }
+    sw.Stop();
+    Console.WriteLine("Using BackgroundWorker - elapsed time: {0}ms", sw.ElapsedMilliseconds);
+}
+```
+
+### Output results
+
+```
+Single threading - elapsed time: 8419ms
+Using Thread - elapsed time: 7532ms
+Using ThreadPool - elapsed time: 2901ms
+Using Task - elapsed time: 3061ms
+Using BackgroundWorker - elapsed time: 3100ms
+```
+
+As you can see, for direct method call (single threading) with `Thread` class, there is not much different. But when you use `ThreadPool`, `Task` or `BackgroundWorker`, it takes 2x faster compared to the direct method call. I use Intel(R) Core(TM) i3-4130 CPU @ 3.40GHz (2 cores, 4 threads) when running these tests.
+
+### Bottom line
+
+If you're going to perform any CPU intensive task, you can always take advantage of multithreading programming in your code to have better performance in your application. I could say that `BackgroundWorker` class is easy to use and very popular among developers I have been working with.
