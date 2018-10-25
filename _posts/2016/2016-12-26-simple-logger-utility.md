@@ -16,6 +16,7 @@ File name: `SimpleLogger.cs` // Mirror link: [Gist](https://git.io/vpfKC)
 ```csharp
 public class SimpleLogger
 {
+    private const string FILE_EXT = ".log";
     private readonly string datetimeFormat;
     private readonly string logFilename;
 
@@ -26,7 +27,7 @@ public class SimpleLogger
     public SimpleLogger()
     {
         datetimeFormat = "yyyy-MM-dd HH:mm:ss.fff";
-        logFilename = System.Reflection.Assembly.GetExecutingAssembly().GetName().Name + ".log";
+        logFilename = System.Reflection.Assembly.GetExecutingAssembly().GetName().Name + FILE_EXT;
 
         // Log file header line
         string logHeader = logFilename + " is created.";
@@ -90,6 +91,24 @@ public class SimpleLogger
         WriteFormattedLog(LogLevel.WARNING, text);
     }
 
+    private void WriteLine(string text, bool append = true)
+    {
+        try
+        {
+            using (System.IO.StreamWriter writer = new System.IO.StreamWriter(logFilename, append, System.Text.Encoding.UTF8))
+            {
+                if (!string.IsNullOrEmpty(text))
+                {
+                    writer.WriteLine(text);
+                }
+            }
+        }
+        catch
+        {
+            throw;
+        }
+    }
+
     private void WriteFormattedLog(LogLevel level, string text)
     {
         string pretext;
@@ -119,24 +138,6 @@ public class SimpleLogger
         }
 
         WriteLine(pretext + text);
-    }
-
-    private void WriteLine(string text, bool append = true)
-    {
-        try
-        {
-            using (System.IO.StreamWriter writer = new System.IO.StreamWriter(logFilename, append, System.Text.Encoding.UTF8))
-            {
-                if (text != "")
-                {
-                    writer.WriteLine(text);
-                }
-            }
-        }
-        catch
-        {
-            throw;
-        }
     }
 
     [System.Flags]
