@@ -1,3 +1,7 @@
+### heiswayi.nrird.com
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/72b75a51-a71b-4941-90c1-804ad0674f9f/deploy-status)](https://app.netlify.com/sites/heiswayi-nrird-techblog/deploys)
+
 > This repo is automatically built and deployed by [Netlify](https://www.netlify.com/).
 
 This repo contains source code for my personal Jekyll blog, viewable at https://heiswayi.nrird.com.
@@ -14,4 +18,4 @@ This repo contains source code for my personal Jekyll blog, viewable at https://
 
 Any question, shoot me an email at _hnrird (at) gmail.com_.
 
-© 2015 - 2018 [Heiswayi Nrird](https://heiswayi.nrird.com/about)
+© 2015 - 2019 [Heiswayi Nrird](https://heiswayi.nrird.com/about)
