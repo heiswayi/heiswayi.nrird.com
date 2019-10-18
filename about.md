@@ -28,4 +28,4 @@ This website is built on [Jekyll](http://jekyllrb.com), a popular static site ge
 
 ### Content license
 
-Unless otherwise stated, all contents on this website (blog) are licensed under [CC BY-NC 4.0 License](https://creativecommons.org/licenses/by-nc/4.0/). If you have any intention of using the content on this website for commercial purpose, please write me an email explicitly at <strong>heiswayi<span style="display:none">-antispam-</span>@<span style="display:none">-antispam-</span>nullableobject.com</strong>.
+Unless otherwise stated, all contents on this website (blog) are licensed under [CC BY-NC 4.0 License](https://creativecommons.org/licenses/by-nc/4.0/). If you have any intention of using the content on this website for commercial purpose, please write me an email explicitly at <strong>heiswayi<span style="display:none">-antispam-</span>@<span style="display:none">-antispam-</span>nrird.com</strong>.
