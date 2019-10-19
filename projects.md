@@ -5,7 +5,7 @@ description: List of some projects. Some are still being maintained, some others
 keywords: part-time projects, hobby stuffs, open source, web apps, github repo
 ---
 
-> N.B. All of these projects have been done in my spare time and mostly I did it for fun and learning. Some of the projects below have been published as the Open Source project, and some others may be used for my personal purpose.
+> All of these projects have been done in my spare time and mostly I did it for fun and learning. Some of the projects below have been published as the Open Source project, and some others may be used for my personal purpose.
 
 <ul>
   {% for post in site.posts %}
@@ -24,17 +24,17 @@ keywords: part-time projects, hobby stuffs, open source, web apps, github repo
 
 <ul>
   <li>
-    <a href="https://github.com/heiswayi/the-plain">The Plain</a> (2015, MIT) &middot; <a href="http://heiswayi.github.io/the-plain">View Demo</a>
+    <a href="https://github.com/heiswayi/the-plain">The Plain</a> (Source Code, 2015, MIT) &middot; <a href="http://heiswayi.github.io/the-plain">View Demo</a>
   </li>
   <li>
-    <a href="https://github.com/heiswayi/thinkspace">Thinkspace</a> (2016, MIT) &middot; <a href="http://heiswayi.github.io/thinkspace">View Demo</a>
+    <a href="https://github.com/heiswayi/thinkspace">Thinkspace</a> (Source Code, 2016, MIT) &middot; <a href="http://heiswayi.github.io/thinkspace">View Demo</a>
   </li>
   <li>
-    <a href="http://github.com/heiswayi/textlog">TextLog</a> (2017, MIT) &middot; <a href="http://heiswayi.github.io/textlog">View Demo</a>
+    <a href="http://github.com/heiswayi/textlog">TextLog</a> (Source Code, 2017, MIT) &middot; <a href="http://heiswayi.github.io/textlog">View Demo</a>
   </li>
 </ul>
 
-### Listing sites for my stuffs on GitHub
+### _Onepage_-styled listing sites for my stuffs on GitHub
 
 <ul>
   <li>
@@ -47,7 +47,7 @@ keywords: part-time projects, hobby stuffs, open source, web apps, github repo
   </li>
 </ul>
 
-### HTML-based apps
+### Web-based apps
 
 <ul>
   <li>
@@ -80,7 +80,7 @@ keywords: part-time projects, hobby stuffs, open source, web apps, github repo
   </li>
 </ul>
 
-### Experimental AI projects
+### Experimental AI projects demo
 
 <ul>
   <li>
@@ -93,7 +93,7 @@ keywords: part-time projects, hobby stuffs, open source, web apps, github repo
   </li>
 </ul>
 
-### Web tools
+### Web tools (PHP)
 
 <ul>
   <li>
@@ -122,23 +122,23 @@ keywords: part-time projects, hobby stuffs, open source, web apps, github repo
     A note to remind myself.
   </li>
   <li>
-    <a href="http://nullableobject.com/website-checklist">Website Checklist</a><br>
+    <a href="http://heiswayi.github.io/website-checklist">Website Checklist</a><br>
     Checklist for web developer.
   </li>
   <li>
     <a href="https://nullableobject.com/s/shorten">Link Shortening Service</a><br>
-    My minimalist link shortening service.
+    My minimalist link shortening service. (PHP)
   </li>
   <li>
-    <a href="https://nullableobject.com/simple-tools/">Index of /simple-tools</a><br>
+    <a href="https://heiswayi.github.io/simple-tools">Index of /simple-tools</a><br>
     Collection of my simple web tools/scripts.
   </li>
   <li>
     <a href="https://nullableobject.com/pr0xy/">nullableObject.pr0xy()</a><br>
-    My private web proxy script.
+    My private web proxy script. (PHP)
   </li>
   <li>
     <a href="https://nullableobject.com/imgh/">Personal Image Hosting Script</a><br>
-    My private image hosting script.
+    My private image hosting script. (PHP)
   </li>
 </ul>
