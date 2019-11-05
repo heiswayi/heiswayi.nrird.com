@@ -1,21 +1,21 @@
 ---
 layout: post
-title: When I tried to build AI chatbot app
-description: Curiousity to learn about AI has made me to build AI chatbot app from scripting it in mIRC program, and then .NET C#, and finally by using JavaScript library.
+title: Building AI chatbot app
+description: To make a computer program to talk like a human is something very interesting to explore. A curiosity to learn about it get me started it back in 2014.
 keywords: artificial intelligence, chatbot app, AIML, SIML, elizabot.js
 tags: [Artificial Intelligence, Chatbot, Programming]
 comments: true
 ---
 
-### It started with mIRC
+### It began with a IRC client program called mIRC
 
-Back in 2004, I had used a chatting program called [mIRC](http://www.mirc.com/). It's a program to connect to [IRC](https://en.wikipedia.org/wiki/Internet_Relay_Chat) networks and started chatting with other people in the chatroom.
+Back in 2004, I had been using a chit-chat client program called [mIRC](http://www.mirc.com/). It's a program to connect to [IRC](https://en.wikipedia.org/wiki/Internet_Relay_Chat) networks and started chatting with other people in the chatrooms called channels.
 
-### Chit-chat is boring, let's do scripting
+### Chit-chat was boring, but not "scripting"
 
-There is an interesting feature in mIRC program called **Remote** under mIRC Editor. This is where the advanced things happened. It's a scripting tool. From this feature, people were expending the capailities of the mIRC program. See [this link](http://www.mircscripts.org/), [this link](http://hawkee.com/mirc/snippets/), or [this link](http://www.oldschoolirc.com/scripts) to see what other people did with mIRC scripting.
+mIRC program had an insteresting feature called **Remote** under its Editor menu. It was a scripting tool. This is where people were expanding the program capabilities. Check [this link](http://www.mircscripts.org/), [this link](http://hawkee.com/mirc/snippets/), or [this link](http://www.oldschoolirc.com/scripts) to see what other people did with that mIRC scripting.
 
-Also, I had made few mIRC scripts if you're curious to see how the scripting was written and worked:
+Yep, I had made few mIRC scripts too, in case you're curious to see how the scripting was written and worked:
 
 - [Dino IRC Sc. (Final Dev.).zip](https://www.dropbox.com/s/5m6fcpwfe998vg1/Dino%20IRC%20Sc.%20%28Final%20Dev.%29.zip?dl=0) - Official casual script, channel protections, private protections, a bunch of utilities and more...
 - [Nikotin3.zip](https://www.dropbox.com/s/2cjjvfsw9m2wpwa/Nikotin3.zip?dl=0) - War script (Revenge)
@@ -23,13 +23,13 @@ Also, I had made few mIRC scripts if you're curious to see how the scripting was
 
 ### War script? Revenge?
 
-Basically it's a battle script. A script used to play **_kicking out_** each other within a particular IRC chatroom. The objective was to measure the strength of programming in your script - how powerful your **revenge** script is.
+It means that was a "battle" script. A script used to "kick out" people, each other, within a particular IRC chatroom (channel). The objective was to measure the strength of your scripting code, something we called "revenge" script.
 
-### Here's how the "AI" idea sparked
+### 'nuff said, here the "AI" thing came
 
-From my other previous mIRC scripts, I had built a quiz bot. This to entertain people in particular IRC chatrooms. Then, I was thinking to make my IRC bot becomes more "intelligent". So, **I reprogrammed my mIRC script to have the ability to parse some inputs, match them with preprogrammed keywords from the keyword list, and then respond to the user with particular preprogrammed outputs (answers)**.
+Other than "warring", I did build a quiz bot in my previous mIRC scripts. The purpose of the scipt is to entertain people in some particular IRC channels. Then, I was thinking to build something more "intelligent" (which was not really intelligent of course). Something called a "chit-chat" bot to be exact. So, **I reprogrammed my mIRC script to have the ability to parse some inputs, match them with preprogrammed keywords from the keyword list, and then respond to the user with particular preprogrammed outputs (answers)**. Genius? No. Interesting? Definitely. Fun? Absolutely.
 
-Portion of mIRC script code I wrote for my chatbot called "Puteri Allyssa":
+To be honest, I'm not really remembered how many script that I wrote to build this so-called chat bot. Some was experimental, incomplete program while some others were completely gone when my external hard drive corrupted. As far as I can recover, one of my script code is looked something like this. The chatbot as called "Puteri Allyssa". Just ignore the unprintable characters. Those characters were usually used for coloring code.
 
 ```
 alias psys return echo @Puteri_Allyssa 12•4•8•9• 9SYSTEM15:14
@@ -124,13 +124,13 @@ on *:input:@Puteri_Allyssa: {
 }
 ```
 
-In 2007, I stopped using IRC and no longer connect or play **revenge**. This is where I started abandoned everything about mIRC.
+In 2007, I stopped using IRC, and was no longer connect to the servers. This is where I started to abandon everything about mIRC, including my scripts.
 
 ### AI chatbot in .NET Framework and SQLite
 
-Few years later, I started working with C# programming and WinForms. So, the "AI" idea came back to me. At this time, I coded for a basic WinForms app and used SQLite to build my "AI" chatbot. And I called it **NALIKA**. It had a basic implementation where by matching keywords in input text and then stream out possible output response. I used SQLite to save the possible inputs and the output responses.
+Few years later, I started working with C# programming and WinForms. So, the "AI" idea came back to me. At this time, I coded for a basic WinForms app and used SQLite to build my "AI" chatbot knowledgebase. And I called it **NALIKA**. It had a basic implementation where by matching keywords in the input text and then stream out the possible output response. I used SQLite to save the inputs and the predictive outputs.
 
-Check out the screenshots:
+Screenshots:
 
 {% include figure.html src="http://i.imgur.com/F1n1W0N.png" caption="When clicked Configure DB" %}
 
@@ -142,7 +142,7 @@ Check out the screenshots:
 
 After I did some researches on Internet, I found one so-called the "first framework" that I can start with. It was called [Artificial Intelligence Markup Language (AIML)](http://www.alicebot.org/aiml.html), a standard XML format markup language for defining the responses from the chatbot. AIML was developed by **Richard S. Wallace** and a worldwide free software community between 1995 and 2002. AIML formed the basis for what was initially a highly extended [Eliza](https://en.wikipedia.org/wiki/ELIZA) called ["A.L.I.C.E." (Artificial Linguistic Internet Computer Entity)](https://en.wikipedia.org/wiki/Artificial_Linguistic_Internet_Computer_Entity) which won the annual [Loebner Prize Competition](https://en.wikipedia.org/wiki/Loebner_Prize) in Artificial Intelligence three times and was also the Chatterbox Challenge Champion in 2004.
 
-So, I used [AIMLbot.dll](http://aimlbot.sourceforge.net/) library for my chatbot app while getting myself to learn more about the markup language structures used in AIML as published in [this paper](http://arxiv.org/ftp/arxiv/papers/1307/1307.3091.pdf). AIML provided much better way of defining the knowledge database of my chatbot and made it looked more natural to call as "artificial intelligence" chatbot. For the bot name, I called "WAYI".
+So, I used [AIMLbot.dll](http://aimlbot.sourceforge.net/) library for my chatbot app while getting myself to learn more about the markup language structures used in the AIML as published in [this paper](http://arxiv.org/ftp/arxiv/papers/1307/1307.3091.pdf). AIML provided much better way of defining the knowledgebase of my chatbot and made it looked more natural to call it as "artificial intelligence" chatbot. For the bot name, I called "WAYI".
 
 Screenshots:
 
@@ -154,11 +154,13 @@ Screenshots:
 
 After some time, I found another chatbot markup language library known as [Synthetic Intelligence Markup Language (SIML)](http://simlbot.com/), which was more powerful than AIML. SIML provided much better features compared to AIML. So, I changed the current markup language of my chatbot from AIML to use SIML as SIML already provided their own chatbot studio program called **Syn Chatbot Studio**.
 
-Based on their website, Syn Chatbot Studio offers a comprehensive collection of tools to develop intelligent chatbots that targeted desktops, mobile and web platforms. It has Code Analysis, AIML to SIML converter, JavaScript Editor, Regex Tester and smooth Auto-Complete. And it's much more interesting when it has ability to execute JavaScript function from its routine of responses. That's cool as a lot of things I can do with JavaScript itself. Here's their [wiki site](http://wiki.syn.co.in/) or [GitHub](https://github.com/SynHub) if you want to learn more about it.
+Based on their website, Syn Chatbot Studio offers a comprehensive collection of tools to develop intelligent chatbots that targeted desktops, mobile and web platforms. It has Code Analysis, AIML to SIML converter, JavaScript Editor, Regex Tester and smooth Auto-Complete. And it's much more interesting when it has ability to execute JavaScript function from its routine of responses. That's cool! A lot of things I can do with JavaScript itself. Simply heads to their [wiki site](http://wiki.syn.co.in/) or [GitHub](https://github.com/SynHub) for more details and source code.
 
 ### AI chatbot with JavaScript library and online deployment
 
-Known as "W4Y1", is one of my latest AI chatbot experiments (read: code for fun) that uses JavaScript and I hosted it on GitHub Pages. It's not a really chatbot where people can chat for any topic of conversations because that is not my intention when I started building it but it is more to so-called a memory program to represent a digital side of myself by holding a fragment of knowledge/information from my mind. If you have ever watched [I, Robot (2004)](http://www.imdb.com/title/tt0343818/) movie, this is directly inspired from Dr. Alfred Lanning's hologram device that was used to leave his message for Spooner's investigation while mine is just in the form of terminal-like web interface, text format interaction and [open source](https://github.com/heiswayi/w4y1).
+Known as "W4Y1", was one of my latest AI chatbot experiments (read: code for fun) that used JavaScript and I hosted it on GitHub Pages. It was not a really chatbot where people can chat for any topic of conversations because that was not my primary intention when I started building it. But it was more to so-called a memory program to represent a digital side of myself by holding a fragment of knowledgebase from my mind.
+
+This idea was inspired from one of the Sci-Fi movies called [I, Robot (2004)](http://www.imdb.com/title/tt0343818/). In the movie, Dr. Alfred Lanning used a hologram device to leave his message for Spooner's investigation. Just that mine was in the form of terminal-like web interface, text-formatted interaction and clumsy JavaScript app.
 
 I created **W4Y1** based on [elizabot.js](http://www.masswerk.at/elizabot/) by **Norbert Landsteiner**, its interpretation engine for AI markup language and processing, and [jQuery Terminal Emulator plugin](http://terminal.jcubic.pl/) by **Jakub Jankiewicz** for the terminal-like interface, and [particles.js](http://vincentgarreau.com/particles.js/) by **Vincent Garreau** for the particles effect in the background.
 
@@ -166,10 +168,6 @@ I created **W4Y1** based on [elizabot.js](http://www.masswerk.at/elizabot/) by *
 
 [**Demo**](https://heiswayi.github.io/w4y1) // [**GitHub**](https://github.com/heiswayi/w4y1)
 
-### Conclusion
+### The bottom line
 
-These developments, even incomplete has taught me some understanding on artificial intelligence concept, technical challenges, and the designing of the markup languages.
-
-Artificial intelligence and the technology are one side of the life that always interest and surprise us with the new ideas, topics, innovations, products …etc. AI is still not implemented as the films representing it (i.e. intelligent robots), however there are many important tries to reach the level and to compete in market, like sometimes the robots that they show in TV. Nevertheless, the hidden projects and the development in industrial companies.
-
-At the end, we’ve been in this research through the AI definitions, brief history, applications of AI in public, applications of AI in military, ethics of AI, and the three rules of robotics. This is not the end of AI, there is more to come from it, who knows what the AI can do for us in the future, maybe it will be a whole society of robots.
+These experimental, exploratory, incomplete developments have taught me some understanding on artificial intelligence concept, technical challenges, and the designing of the markup languages. Artificial intelligence and the technology are one side of the life that always interest and surprise us with the new ideas, topics, innovations, products …etc. AI is still not implemented as the films representing it (i.e. intelligent robots), however there are many important tries to reach the level and to compete in market, like sometimes the robots that they show in TV. Nevertheless, the hidden projects and the development in industrial companies. At the end, we’ve been in this research through the AI definitions, brief history, applications of AI in public, applications of AI in military, ethics of AI, and the three rules of robotics. This is not the end of AI, there is more to come from it, who knows what the AI can do for us in the future, maybe it will be a whole society of robots.

@@ -1,13 +1,13 @@
 ---
 layout: post
 title: PHP - Encryption and decryption function
-description: These code snippets may help to secure user's confidential information and speed up some works of yours.
+description: These PHP functions will help to secure information and speed up your development if you're creating a PHP app from scratch.
 keywords: php encryption function, php decryption function, secure password hashing using php
 tags: [PHP, Encryption, Decryption, Password Hashing, Programming]
 comments: true
 ---
 
-Data encryption doesn't make your software secure or your user's confidential information safe from hacker, as the data encryption is designed to be reversible (ability to decrypt) in order to get back the original data when a correct decryption key (password) is provided. But what the data encryption can do for you is to harden the process, increase the security level, hide the sensitive content or confidential information in unreadable text from the normal eyes.
+If you're creating a PHP application from scratch, or working with confidential/sensitive data, you need data encryption. This is to ensure when you transport or save those data, it would be kept safely. Data encryption is like a security box where you put something important in there and then deliver/save it to somewhere where only you or person that has the key can open that box. **Data encryption is NOT for password because it's reversible.** But what you can do with data encryption is the harden the process, increase the security level, hide the sensitive content or confidential information. These PHP function can fit in your utilities.
 
 ### Data encryption function
 
@@ -89,7 +89,7 @@ Please note that, for each encryption and decryption, they requires the **same p
 
 ### Data encryption is NOT for password!
 
-Data encryption would be useful for something like social security number, phone number, bank account number, credit card information, and so on. But it's practically insecure for a USER PASSWORD!
+Data encryption would be useful for something like social security number, phone number, bank account number, credit card information, and so on. But it's practically insecure for a USER PASSWORD! This is because the algorithm is designed to be reversible (ability to be decrypted).
 
 ### Hashing algorithm for securing user password
 
@@ -115,4 +115,4 @@ echo hashPassword('myPa55w0rd', 'Flipp@ncy25');
 ?>
 ```
 
-Another thing you can do to add extra layer of security is to enforce the strong password for the user or you can provide two-factor authentication service. If you are keen to learn more about password hashing, I recommend you to read [this article](https://crackstation.net/hashing-security.htm). It is a very good article talking about **salted password hashing**.
+Another thing you can do to add extra layer of security is to enforce the strong password for the user or you can provide two-factor authentication service. If you are keen to learn more about password hashing, I recommend you to read [this article](https://crackstation.net/hashing-security.htm). It's a very good article talking about **salted password hashing**.

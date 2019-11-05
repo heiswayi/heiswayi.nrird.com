@@ -1,7 +1,7 @@
 {
   "name": "heiswayi.nrird.com",
-  "version": "1.0.0",
-  "description": "> This repo is automatically built and deployed by [Netlify](https://www.netlify.com/).",
+  "version": "1.0.1",
+  "description": "Heiswayi Nrird's Personal Blog. It is a static site, built with Jekyll and deployed by [Netlify](https://www.netlify.com/).",
   "main": "gulpfile.js",
   "dependencies": {
     "gulp": "^3.9.1",
@@ -17,13 +17,21 @@
     "gulp-shell": "^0.6.5"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "setup-start": "npm install && gulp",
+    "start": "gulp"
   },
   "repository": {
     "type": "git",
     "url": "git+https://heiswayi@bitbucket.org/heiswayi/heiswayi.nrird.com.git"
   },
   "author": "Heiswayi Nrird",
-  "license": "ISC",
-  "homepage": "https://bitbucket.org/heiswayi/heiswayi.nrird.com#readme"
+  "license": "MIT",
+  "homepage": "https://bitbucket.org/heiswayi/heiswayi.nrird.com#readme",
+  "keywords": [
+    "heiswayi-nrird",
+    "personal-blog",
+    "jekyll",
+    "static-site"
+  ]
 }
