@@ -7,7 +7,7 @@ tags: [MVVM, C#, Programming]
 comments: true
 ---
 
-**Download source code: [MVVM.cs](https://git.io/v1TAI)**
+<a href="https://gist.github.com/heiswayi/215e5588fbbd712930ed3e0689d155d0" class="button big">Get source code (MVVM.cs)</a>
 
 `MVVM.cs` is a collection of Model-View-ViewModel (MVVM) design pattern **common classes** that can be implemented by any ViewModel (VM). I created this collection into a single file, so whenever I want to develop MVVM-based application (without using MVVM frameworks) in .NET C#, I just need to reference it and inherit the `ViewModelBase` class into any of my ViewModel classes.
 

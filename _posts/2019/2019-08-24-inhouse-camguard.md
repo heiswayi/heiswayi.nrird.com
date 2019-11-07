@@ -11,7 +11,7 @@ Few months ago, I built Inhouse Camguard in my spare time to experiment with som
 
 {% include figure.html src="https://i.imgur.com/1vAwAmW.png" caption="Inhouse Camguard 1.0" %}
 
-### Application Features
+### Application features
 
 - 2 type of motion detection algorithms
 - 4 type of motion processing algorithms
@@ -22,8 +22,6 @@ Few months ago, I built Inhouse Camguard in my spare time to experiment with som
 - data logging with some options
 - trigger settings with option to capture the image
 
-### Source Code & Download
+### Source code & download
 
-I have made the [source code available on GitHub](https://github.com/heiswayi/inhousecamguard), you can download the source code and compile it by your own using Visual Studio software.
-
-If you want to try the compiled version, you can simply check and [download it here](https://github.com/heiswayi/inhousecamguard/releases).
+<a href="https://github.com/heiswayi/inhousecamguard/releases" class="button big">Download precompiled binary</a> <a href="https://github.com/heiswayi/inhousecamguard" class="button big">Get source code</a>

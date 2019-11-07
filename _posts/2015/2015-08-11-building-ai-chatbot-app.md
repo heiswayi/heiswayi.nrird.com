@@ -166,7 +166,7 @@ I created **W4Y1** based on [elizabot.js](http://www.masswerk.at/elizabot/) by *
 
 {% include figure.html src="http://i.imgur.com/7emX4MU.png" caption="W4Y1" %}
 
-[**Demo**](https://heiswayi.github.io/w4y1) // [**GitHub**](https://github.com/heiswayi/w4y1)
+<a href="https://heiswayi.github.io/w4y1" class="button big">View demo</a> <a href="https://github.com/heiswayi/w4y1" class="button big">Get source code</a>
 
 ### The bottom line
 

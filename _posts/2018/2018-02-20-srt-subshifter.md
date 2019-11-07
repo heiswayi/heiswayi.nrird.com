@@ -13,4 +13,4 @@ I thought I want to have a simple GUI tool locally in my movie folder. Whevener 
 
 {% include figure.html src="https://i.imgur.com/5whUyC2.png" caption="SRT SubShifter app" %}
 
-I have made this work available as [open source here](https://github.com/heiswayi/srt-subshifter). You can also simply download [the compiled version here](https://github.com/heiswayi/srt-subshifter/releases) if you want to give a try!
+<a href="https://github.com/heiswayi/srt-subshifter/releases" class="button big">Download precompiled binary</a> <a href="https://github.com/heiswayi/srt-subshifter" class="button big">Get source code</a>

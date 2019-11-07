@@ -238,6 +238,8 @@ So simple huh?!
 
 Substitution cipher is weak, easily broken and the cryptanalyst can deduce the probable meaning of the most common symbols by analyzing the frequency distribution of the ciphertext.
 
-### Source code and download
+### Source code
 
-If you like to see the full source code of this application, you can download it from my [GitHub](https://github.com/heiswayi/HeiswayiNrirdCipherProgram) repository. If you want to try to play with the compiled version, you can download the binary [here](https://www.dropbox.com/s/p9lc58cgw059mka/HeiswayiNrirdCipherProgramV1.zip?dl=0) or you can compile it by yourself from the source code that is provided.
+I have provided the full source code of the program and also a precompiled version for you to try. If it doesn't work, feel free to compile it by your own.
+
+<a href="https://www.dropbox.com/s/p9lc58cgw059mka/HeiswayiNrirdCipherProgramV1.zip?dl=0" class="button big">Download precompiled binary</a> <a href="https://github.com/heiswayi/HeiswayiNrirdCipherProgram" class="button big">Get source code</a>

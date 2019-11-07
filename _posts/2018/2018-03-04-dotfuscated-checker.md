@@ -11,4 +11,4 @@ Dotfuscated Checker is a simple GUI tool that I built in .NET C# and WPF **to he
 
 {% include figure.html src="https://i.imgur.com/2iYCNYO.png" caption="Dotfuscated Checker" %}
 
-If you want to give a try for this tool, you can download [the compiled version here](https://www.dropbox.com/s/8lss51zhhx0p4xq/DotfuscatedCheckerV1.zip?dl=0) (unofficial beta version). This tool requires [.NET Framework 4.6.1](https://www.microsoft.com/en-us/download/details.aspx?id=49981) (minimum).
+If you want to give a try for this tool, you can download [the precompiled version here](https://www.dropbox.com/s/8lss51zhhx0p4xq/DotfuscatedCheckerV1.zip?dl=0) (unofficial beta version). This tool requires [.NET Framework 4.6.1](https://www.microsoft.com/en-us/download/details.aspx?id=49981) (minimum).

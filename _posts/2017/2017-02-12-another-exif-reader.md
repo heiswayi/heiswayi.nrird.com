@@ -19,5 +19,4 @@ Another EXIF Reader is a simple GUI tool built in .NET C# and WPF to simply extr
 
 ### Source code and download
 
-- [**View source code on GitHub**](https://github.com/heiswayi/another-exif-reader)
-- [Download latest binary package from releases](https://github.com/heiswayi/another-exif-reader/releases)
+<a href="https://github.com/heiswayi/another-exif-reader/releases" class="button big">Download precompiled binary</a> <a href="https://github.com/heiswayi/another-exif-reader" class="button big">Get source code</a>

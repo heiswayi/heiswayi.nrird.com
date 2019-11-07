@@ -25,6 +25,4 @@ Example of output text file:
 
 {% include figure.html src="http://i.imgur.com/qaUZ9n3.png" %}
 
-### Source Code
-
-The source code of this program is available on [GitHub](https://github.com/heiswayi/DirectoryCrawler), and you may need to compile it by yourself using Visual Studio software.
+<a href="https://github.com/heiswayi/DirectoryCrawler" class="button big">Get source code</a>

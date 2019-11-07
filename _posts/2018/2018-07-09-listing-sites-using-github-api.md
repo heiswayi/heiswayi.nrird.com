@@ -15,12 +15,10 @@ To accomplish this, I have created the listing sites for both of my GitHub repos
 
 {% include figure.html src="https://i.imgur.com/PhFnkj1.png" %}
 
-- **URL:** [https://heiswayi.github.io/gist](https://heiswayi.github.io/gist/)
-- [View source code on GitHub](https://github.com/heiswayi/gist)
+<a href="https://heiswayi.github.io/gist/" class="button big">Visit heiswayi.github.io/gist</a> <a href="https://github.com/heiswayi/gist" class="button big">Get source code</a>
 
 ### Listing site for GitHub Repositories
 
 {% include figure.html src="https://i.imgur.com/JYGyS2m.png" %}
 
-- **URL:** [https://heiswayi.github.io/repo](https://heiswayi.github.io/repo/)
-- [View source code on GitHub](https://github.com/heiswayi/repo)
+<a href="https://heiswayi.github.io/repo/" class="button big">Visit heiswayi.github.io/repo</a> <a href="https://github.com/heiswayi/repo" class="button big">Get source code</a>

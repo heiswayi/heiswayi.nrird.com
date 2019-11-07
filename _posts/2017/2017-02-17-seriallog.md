@@ -19,5 +19,4 @@ SerialLog is a simple console application built in .NET C# to simply log serial 
 
 ### Source code and download
 
-- [**View source code on GitHub**](https://github.com/heiswayi/SerialLog)
-- [Download latest binary package from releases](https://github.com/heiswayi/SerialLog/releases)
+<a href="https://github.com/heiswayi/SerialLog/releases" class="button big">Download precompiled binary</a> <a href="https://github.com/heiswayi/SerialLog" class="button big">Get source code</a>

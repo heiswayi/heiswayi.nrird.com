@@ -17,8 +17,7 @@ Jekyll theme is a template for the best static site generator called [Jekyll](ht
 
 The Plain is a minimalist Jekyll theme, ideally designed for your personal blog use.
 
-- [**Live Demo**](https://heiswayi.github.io/the-plain)
-- [Source Code](https://github.com/heiswayi/the-plain) // MIT License
+<a href="https://heiswayi.github.io/the-plain" class="button big">View demo</a> <a href="https://github.com/heiswayi/the-plain" class="button big">Get source code</a>
 
 ---
 
@@ -28,8 +27,7 @@ The Plain is a minimalist Jekyll theme, ideally designed for your personal blog 
 
 Thinkspace is just another minimalist Jekyll theme which designed for technical writing blog.
 
-- [**Live Demo**](https://heiswayi.github.io/thinkspace)
-- [Source Code](https://github.com/heiswayi/thinkspace) // MIT License
+<a href="https://heiswayi.github.io/thinkspace" class="button big">View demo</a> <a href="https://github.com/heiswayi/thinkspace" class="button big">Get source code</a>
 
 ---
 
@@ -39,5 +37,4 @@ Thinkspace is just another minimalist Jekyll theme which designed for technical 
 
 Textlog is a minimalist, lefty-style Jekyll theme designed for documentation based blog.
 
-- [**Live Demo**](https://heiswayi.github.io/textlog)
-- [Source Code](http://github.com/heiswayi/textlog) // MIT License
+<a href="https://heiswayi.github.io/textlog" class="button big">View demo</a> <a href="http://github.com/heiswayi/textlog" class="button big">Get source code</a>

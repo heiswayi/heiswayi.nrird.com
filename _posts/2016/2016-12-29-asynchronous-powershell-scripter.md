@@ -38,9 +38,7 @@ Preset scripts are stored in the plain text file format in "presets" folder wher
 
 ### Source code and download
 
-Asynchronous PowerShell Scripter source code is available on [GitHub](https://github.com/heiswayi/AsyncPowerShellScripter) and licensed under [MIT License](https://github.com/heiswayi/AsyncPowerShellScripter/blob/master/LICENSE.md). The source code is personally maintained by me, however if anyone interested to contribute, feel free to fork, make changes and pull request.
-
-To download the binary package (executable file), you may visit the [release page here](https://github.com/heiswayi/AsyncPowerShellScripter/releases).
+<a href="https://github.com/heiswayi/AsyncPowerShellScripter/releases" class="button big">Download precompiled binary</a> <a href="https://github.com/heiswayi/AsyncPowerShellScripter" class="button big">Get source code</a>
 
 ### Inspiration
 

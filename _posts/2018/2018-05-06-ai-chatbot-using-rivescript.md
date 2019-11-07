@@ -19,17 +19,15 @@ After a while using elizabot.js, I started to feel that the knowledgebase markup
 
 HelloBot is built using [Jekyll](https://jekyllrb.com/) and [rivescript-js](https://github.com/aichaos/rivescript-js) for the bot interpreter engine. HelloBot is live and currently being hosted using GitHub Pages for demo purpose. HelloBot contains terminal-like interface designed using [Bootstrap](https://getbootstrap.com/), [jQueryTerminal](https://terminal.jcubic.pl/) and [jquery-mousewheel](https://github.com/jquery/jquery-mousewheel).
 
-- [**Demo**](https://heiswayi.github.io/hellobot)
-- [**Source code on GitHub**](https://github.com/heiswayi/hellobot)
+<a href="https://heiswayi.github.io/hellobot" class="button big">View demo</a> <a href="https://github.com/heiswayi/hellobot" class="button big">Get source code</a>
 
 ### hnbot - AI chatbot web app built using Node.js and Socket.IO
 
 {% include figure.html src="https://i.imgur.com/tYLZEhZ.png" caption="Having conversation with hnbot via web browser locally" %}
 
-hnbot is using a similar interface design with HelloBot, and the only difference is that hnbot is built based on [Node.js](https://nodejs.org/en/) and [Socket.IO](https://socket.io/). Also similarly to HelloBot, hnbot's interpreter engine is based on [RiveScript NPM package](https://www.npmjs.com/package/rivescript).
+hnbot is using a similar interface design with HelloBot, and the only difference is that hnbot is built based on [Node.js](https://nodejs.org/en/) and [Socket.IO](https://socket.io/). Also similarly to HelloBot, hnbot's interpreter engine is based on [RiveScript NPM package](https://www.npmjs.com/package/rivescript). _PS: No online demo available for this one._
 
-- _Sorry, I don't have the online demo for this._
-- [**Source code on GitHub**](https://github.com/heiswayi/hnbot)
+<a href="https://github.com/heiswayi/hnbot" class="button big">Get source code</a>
 
 To run the hnbot demo locally, you need Git and Node.js installed, then run following commands:
 
@@ -40,4 +38,4 @@ npm install
 npm start
 ```
 
-**N.B.** These apps are just proof-of-concept, and I don't have the time to design the "bot brain" for specific application purpose. If you're playing with the demo, the current "bot brain" is based on predefined samples.
+**NOTE** These apps are just proof-of-concept, and I don't have the time to design the "bot brain" for specific application purpose. If you're playing with the demo, the current "bot brain" is based on predefined samples.
