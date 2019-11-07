@@ -5,7 +5,7 @@ description: List of some projects. Some are still being maintained, some others
 keywords: part-time projects, hobby stuffs, open source, web apps, github repo
 ---
 
-> All of these projects have been done in my spare time and mostly I did it for fun and learning. Some of the projects below have been published as the Open Source project, and some others may be used for my personal purpose.
+> **NOTE** The following projects have been done in my spare time, _and mostly I did it for fun and learning_. Some projects may be published as the Open Source projects, some others may be used for my personal purpose.
 
 <ul>
   {% for post in site.posts %}

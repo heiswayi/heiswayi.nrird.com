@@ -1,5 +1,8 @@
 Versioning format: **yyyy.M.revision**
 
+### 2019.11.1
+- Added github-buttons SCSS.
+
 ### 2018.10.1
 - Reverted to archive style homepage, posts sorted by year
 
