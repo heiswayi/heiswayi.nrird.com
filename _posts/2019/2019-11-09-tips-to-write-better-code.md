@@ -25,7 +25,7 @@ If your code is expected to do X, it should do only X, and it is doing X correct
 
 ### Simplicity
 
-Albert Einstein ever said _"Everything should be made as simple as possible, but not simpler."_ Do not overthink. Else you'll be delivering something that's "overkill". Embrace the KISS principle](https://thevaluable.dev/kiss-principle-explained/). Sometimes, your solution to the problem doesn't even need to write a single line of code. Think before you code. Avoid the complex implementation. Simplify it whenever it's necessary.
+Albert Einstein ever said _"Everything should be made as simple as possible, but not simpler."_ Do not overthink. Else you'll be delivering something that's "overkill". Embrace the [KISS principle](https://thevaluable.dev/kiss-principle-explained/). Sometimes, your solution to the problem doesn't even need to write a single line of code. Think before you code. Avoid the complex implementation. Simplify it whenever it's necessary.
 
 ### Optimization
 
