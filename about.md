@@ -26,6 +26,14 @@ This website is my personal blog, a place I may share some thoughts, experiences
 
 This website is built on top of the [Jekyll](http://jekyllrb.com), a static site generator, and being deployed automatically using [Netlify](https://www.netlify.com/) service. The source code of this website is being hosted privately on [BitBucket](https://bitbucket.org/heiswayi/). The image content on this website is hosted using [imgur](https://imgur.com/) service. The primary domain for this website (`nrird.com`) is registered using [hover](https://www.hover.com/) and it's being managed via [Cloudflare](https://www.cloudflare.com/) DNS.
 
+Also, this website is coded using [Visual Studio Code](https://code.visualstudio.com/) on [Linux Lite 4.6](https://www.linuxliteos.com/) system.
+
+{%
+    include figure.html 
+    src="https://i.imgur.com/O23ZBLz.png" 
+    caption="My Desktop"
+%}
+
 ### Disclaimer
 
 The information on this website is provided "AS IS" with no warranties, and confers no rights. This blog does not represent the thoughts, intentions, plans or strategies of my employer. It is solely my opinion. My thoughts and opinions change from time to time as I come to learn more and develop my understanding about the things and issues that I am blogging about. This website just provides a snapshot of the knowledge, views, and opinions that I hold at a particular point of time and these might most probably change over a period of time. I reserve the right to evolve my knowledge, thoughts, and viewpoints over time and to change them without assigning any reason.
