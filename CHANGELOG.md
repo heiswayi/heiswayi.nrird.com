@@ -1,6 +1,9 @@
 Internal Use Only
 Versioning format: **yyyy.M.revision**
 
+### 2019.11.3
+- Minimized typeface, changed the code syntax-highlighting to solarized light theme
+
 ### 2019.11.2
 - Standardized typo font to Work Sans and code font to Inconsolata
 
