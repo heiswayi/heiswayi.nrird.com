@@ -1,7 +1,11 @@
+Internal Use Only
 Versioning format: **yyyy.M.revision**
 
+### 2019.11.2
+- Standardized typo font to Work Sans and code font to Inconsolata
+
 ### 2019.11.1
-- Added github-buttons SCSS.
+- Added github-buttons SCSS
 
 ### 2018.10.1
 - Reverted to archive style homepage, posts sorted by year

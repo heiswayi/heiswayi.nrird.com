@@ -1,11 +1,11 @@
-$sans-serif: 'Work Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
-$monospace: 'SFMono-Regular', Menlo, Consolas, 'Inconsolata', monospace;
+$sans-serif: 'Work Sans', 'Roboto', 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+$monospace: 'Inconsolata', 'SFMono-Regular', Menlo, Consolas, monospace;
 
-$tagline-font: 'Inconsolata', monospace;
-$body-font: 'Roboto', sans-serif;
-$heading-font: 'Work Sans', sans-serif;
-$precode-font: 'Inconsolata', monospace;
-$tag-font: 'Inconsolata', monospace;
-$postmeta-font: 'Inconsolata', monospace;
-$topmenu-font: 'Work Sans', sans-serif;
-$footnote-font: 'Inconsolata', monospace;
+$tagline-font: $monospace;
+$body-font: /*'Roboto', sans-serif*/ $sans-serif;
+$heading-font: /*'Work Sans', sans-serif*/ $sans-serif;
+$precode-font: $monospace;
+$tag-font: $monospace;
+$postmeta-font: $monospace;
+$topmenu-font: /*'Work Sans', sans-serif*/ $sans-serif;
+$footnote-font: $monospace;
