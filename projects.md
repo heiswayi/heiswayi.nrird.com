@@ -118,10 +118,6 @@ keywords: part-time projects, hobby stuffs, open source, web apps, github repo
 
 <ul>
   <li>
-    <a href="/reminder">Personal Reminder Note</a><br>
-    A note to remind myself.
-  </li>
-  <li>
     <a href="http://heiswayi.github.io/website-checklist">Website Checklist</a><br>
     Checklist for web developer.
   </li>
