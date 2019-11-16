@@ -5,7 +5,7 @@ description: List of some projects. Some are still being maintained, some others
 keywords: part-time projects, hobby stuffs, open source, web apps, github repo
 ---
 
-> **NOTE** The following projects have been done in my spare time, _and mostly I did it for fun and learning_. Some projects may be published as the Open Source projects, some others may be used for my personal purpose.
+This page contains a collection of links to my projects, page shortcuts, source code repos and working demos. These projects are part of my spare time projects that made available online. Most of the projects have been done for fun and learning. Some projects may be published as Open Source, while some others may be used for personal purposes.
 
 <ul>
   {% for post in site.posts %}
@@ -20,17 +20,20 @@ keywords: part-time projects, hobby stuffs, open source, web apps, github repo
   {% endfor %}
 </ul>
 
-### Jekyll themes
+### Minimalist static site templates for Jekyll
 
 <ul>
   <li>
-    <a href="https://github.com/heiswayi/the-plain">The Plain</a> (Source Code, 2015, MIT) &middot; <a href="http://heiswayi.github.io/the-plain">View Demo</a>
+    <a href="https://github.com/heiswayi/the-plain">The Plain</a> (2015)<br>
+    Centered one-column display, ideal for a personal blog.
   </li>
   <li>
-    <a href="https://github.com/heiswayi/thinkspace">Thinkspace</a> (Source Code, 2016, MIT) &middot; <a href="http://heiswayi.github.io/thinkspace">View Demo</a>
+    <a href="https://github.com/heiswayi/thinkspace">Thinkspace</a> (2016)<br>
+    Centered one-column display, nerdy typeface, ideal for something like technical blog or documentation.
   </li>
   <li>
-    <a href="http://github.com/heiswayi/textlog">TextLog</a> (Source Code, 2017, MIT) &middot; <a href="http://heiswayi.github.io/textlog">View Demo</a>
+    <a href="http://github.com/heiswayi/textlog">TextLog</a> (2017)<br>
+    Left-aligned one-column display, ideal for documentation-styled blog.
   </li>
 </ul>
 
@@ -47,7 +50,7 @@ keywords: part-time projects, hobby stuffs, open source, web apps, github repo
   </li>
 </ul>
 
-### Web-based apps
+### Client-side web-based apps
 
 <ul>
   <li>

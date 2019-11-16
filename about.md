@@ -12,7 +12,7 @@ keywords: about page, author info, heiswayi nrird
 		<div class="photo">
 			<img src="https://avatars0.githubusercontent.com/u/13794983?v=4" alt="Heiswayi Nrird Photo">
 		</div>
-		<p class="intro-text">Hi. I'm <strong>Heiswayi Nrird</strong>. I do some stuffs with computer and sometimes write about it here. I'm a <em>Software Engineer</em> from Penang and I ship code at <a href="https://www.keysight.com">Keysight Technologies</a>. Other times, I'll be off the grid to capture <a href="{{ "/photography" | prepend: site.baseurl | prepend: site.url }}"><i class="em em-camera_with_flash"></i> some beautiful landscapes</a>. Welcome to my personal blog! Got any question? Shoot me an email at <strong>heiswayi<span style="display:none">-antispam-</span>@<span style="display:none">-antispam-</span>nrird.com</strong>.</p>
+		<p class="intro-text">Hi. I'm <strong>Heiswayi Nrird</strong>. I do some stuffs with computer and sometimes write about it here. I'm a <em>Software Engineer</em> from Penang and I ship code at <a href="https://www.keysight.com">Keysight Technologies</a>. Other times, I'll be off the grid to capture <a href="{{ "/photography" | prepend: site.baseurl | prepend: site.url }}"><i class="em em-camera_with_flash"></i> some beautiful landscapes</a>. Welcome to my personal blog!</p>
 	</div>
 
 	<p><a href="https://heiswayi.github.io/resume/">Résumé/CV</a> // <a href="https://my.linkedin.com/in/nrird">LinkedIn</a> // <a href="https://heiswayi.github.io/repo">GitHub</a> // <a href="https://heiswayi.github.io/gist">Gist</a> // <a href="http://codepen.io/heiswayi/">CodePen</a> // <a href="http://jsfiddle.net/user/heiswayi/">JSFiddle</a></p>
@@ -40,4 +40,8 @@ The information on this website is provided "AS IS" with no warranties, and conf
 
 ### Copyright notice
 
-Unless otherwise stated, all contents on this website (/blog) are licensed under [CC BY-NC 4.0 License](https://creativecommons.org/licenses/by-nc/4.0/). For any question, feel free to ask/contact me via email at <strong>heiswayi<span style="display:none">-antispam-</span>@<span style="display:none">-antispam-</span>nrird.com</strong>.
+Unless otherwise stated, all contents on this website are licensed under [CC BY-NC 4.0 License](https://creativecommons.org/licenses/by-nc/4.0/).
+
+### Contact info
+
+If you have any question to ask me, I can be reached at <strong>heiswayi<span style="display:none">-antispam-</span>@<span style="display:none">-antispam-</span>nrird.com</strong>. Feel free to shoot me an email, I'll try my best to respond ASAP.
