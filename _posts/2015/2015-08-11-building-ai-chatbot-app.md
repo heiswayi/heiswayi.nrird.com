@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Building AI chatbot app
-description: To make a computer program to talk like a human is something very interesting to explore. A curiosity to learn about it get me started it back in 2014.
+description: Experimental works on making computer programs to talk like a human.
 keywords: artificial intelligence, chatbot app, AIML, SIML, elizabot.js
 tags: [Artificial Intelligence, Chatbot, Programming]
 comments: true

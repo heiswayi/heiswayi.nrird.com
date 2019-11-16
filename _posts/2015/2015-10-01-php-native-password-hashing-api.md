@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Using PHP native password hashing API
-description: Starting PHP version 5.5 onwards, password hashing in PHP application made easy as the new native password hashing functions have been introduced.
+description: Starting PHP version 5.5 onwards, password hashing in PHP applications made easy as the new native password hashing functions have been introduced.
 keywords: php 5.5, password hashing, native api, php functions
 tags: [PHP, Password Hashing, Programming]
 comments: true

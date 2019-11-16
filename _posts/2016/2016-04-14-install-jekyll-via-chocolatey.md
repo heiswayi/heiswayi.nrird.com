@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Get started with Jekyll using Chocolatey
-description: Some tips to install Jekyll on Windows via Command Prompt using Chocolatey, a package manager for Windows.
+title: Install Jekyll via Chocolatey
+description: Build your own static website on Windows using Jekyll and a package manager called Chocolatey.
 keywords: jekyll installation, windows os, chocolatey, command prompt, tips
 tags: [Jekyll, Chocolatey, Engineering]
 comments: true
 ---
 
-### What is Jekyll? What is Chocolatey?
+### About Jekyll and Chocolatey
 
 [Jekyll](https://jekyllrb.com/) is a parsing engine bundled as a Ruby gem used **to build static websites** from dynamic components such as templates, partials, liquid code, markdown, etc. which basically is known as "a simple, blog aware, static site generator".
 

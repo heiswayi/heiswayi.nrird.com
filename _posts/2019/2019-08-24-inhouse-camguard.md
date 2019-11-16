@@ -1,7 +1,7 @@
 ---
 layout: project
-title: Inhouse Camguard - Live Video Motion Detection Analysis & Data Logging
-description: A simple .NET application based on AForge libraries to analyze motion, capture image and data logging from a live webcam feed.
+title: Inhouse Camguard
+description: A simple .NET GUI application based on AForge libraries to analyze motion, capture image and perform data logging from a live webcam feed.
 keywords: c# programming, aforge, motion analysis, live video feed, webcam streaming, motion detection, data logging
 tags: [C#, WPF, Project]
 comments: true

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Reminder to myself
-description: Self reminder
+description: A note written like a poem to remind myself.
 keywords: self reminder, manifesto, tick-tock
 tags: [Motivation]
 comments: true

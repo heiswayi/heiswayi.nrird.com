@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Understanding multithreading vs single threading programming in .NET C#
+title: Multithreading programming in .NET
 description: Examples of C# code to demonstrate the multithreading programming available in .NET System.Threading.
 keywords: multithreading, single threading, sample source code, demonstration, threadpool, task, backgroundworker, windows console application
 tags: [C#, Multithreading, Programming]

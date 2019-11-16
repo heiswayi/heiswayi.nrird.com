@@ -1,7 +1,7 @@
 ---
 layout: post
 title: PHP - Encryption and decryption function
-description: These PHP functions will help to secure information and speed up your development if you're creating a PHP app from scratch.
+description: Building a strong PHP function to encrypt/secure senstive data that may help to speed up the development of your PHP applications.
 keywords: php encryption function, php decryption function, secure password hashing using php
 tags: [PHP, Encryption, Decryption, Password Hashing, Programming]
 comments: true

@@ -1,7 +1,7 @@
 ---
 layout: project
 title: SRT SubShifter
-description: Simple .NET tool to resync subtitles file (.SRT).
+description: Simple .NET GUI tool to resync subtitles file (.SRT).
 keywords: c# programming, srt, subtitles, resync, time shifting
 tags: [C#, WPF, Project, Open Source]
 comments: true

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Experiment with Google Charts - Timeline
+title: Experimenting with Google Charts - Timeline
 description: Creating my responsive daily routine timeline using Google Charts with just few lines of HTML and JavaScript code.
 keywords: my daily routine, google timeline chart, responsive timeline chart
 tags: [Google Charts, JavaScript, Programming]
