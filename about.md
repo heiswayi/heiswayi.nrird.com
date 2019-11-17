@@ -15,8 +15,9 @@ keywords: about page, author info, heiswayi nrird
 		<p class="intro-text">Hi. I'm <strong>Heiswayi Nrird</strong>. I do some stuffs with computer and sometimes write about it here. I'm a <em>Software Engineer</em> from Penang and I ship code at <a href="https://www.keysight.com">Keysight Technologies</a>. Other times, I'll be off the grid to capture <a href="{{ "/photography" | prepend: site.baseurl | prepend: site.url }}"><i class="em em-camera_with_flash"></i> some beautiful landscapes</a>. Welcome to my personal blog!</p>
 	</div>
 
-	<p><a href="https://heiswayi.github.io/resume/">Résumé/CV</a> // <a href="https://my.linkedin.com/in/nrird">LinkedIn</a> // <a href="https://heiswayi.github.io/repo">GitHub</a> // <a href="https://heiswayi.github.io/gist">Gist</a> // <a href="http://codepen.io/heiswayi/">CodePen</a> // <a href="http://jsfiddle.net/user/heiswayi/">JSFiddle</a></p>
 </div>
+
+<p><a href="https://heiswayi.github.io/resume/">Résumé/CV</a> // <a href="https://my.linkedin.com/in/nrird">LinkedIn</a> // <a href="https://heiswayi.github.io/repo">GitHub</a> // <a href="https://heiswayi.github.io/gist">Gist</a> // <a href="http://codepen.io/heiswayi/">CodePen</a> // <a href="http://jsfiddle.net/user/heiswayi/">JSFiddle</a></p>
 
 ### This website
 
