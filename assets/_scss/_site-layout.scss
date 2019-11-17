@@ -365,6 +365,9 @@ tbody tr:nth-child(odd) {
 
 .post {
     .tagged {
+        margin-top: /*2rem*/ 0; /* handled by .post-bottom-meta now */
+    }
+    .post-bottom-meta {
         margin-top: 2rem;
     }
     .tagged a {
@@ -728,6 +731,7 @@ a.skip:hover {
 }
 
 .footnotes {
+    background-color: #f3f3f3;
     margin-top: 1rem;
     font-family: $footnote-font;
     font-size: 0.8rem;
@@ -739,9 +743,10 @@ a.skip:hover {
     &:before {
         content: 'Footnote:';
         display: block;
-        border-top: 1px solid #ddd;
-        padding-top: 1rem;
+        border-top: 1px solid #069;
+        padding-top: 0;
         margin-top: 2rem;
+        color: #069;
     }
 }
 
@@ -843,4 +848,19 @@ a.skip:hover {
 
 .no-js img.lazyload {
     display: none;
+}
+
+ul.task-list {
+    list-style-type: none;
+    li.task-list-item {
+        margin-left: -1rem;
+        input.task-list-item-checkbox {
+            height: 1em;
+            width: 1em;
+            margin-right: 1rem;
+            vertical-align: middle !important;
+            position: relative !important;
+            bottom: 1px !important;
+        }
+    }
 }

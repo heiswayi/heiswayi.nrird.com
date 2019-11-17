@@ -1,5 +1,11 @@
 Internal Use Only
-Versioning format: **yyyy.M.revision**
+Versioning format: `<CURRENT_YEAR>.<CURRENT_MONTH>.<REVISION_NUMBER>`
+
+### 2019.11.4
+- Moved post date meta to the bottom of the content, grouped together before the tag(s)
+- Updated footer layout
+- Added markdown cheatsheet for blog development reference purpose
+- Updated tags page
 
 ### 2019.11.3
 - Minimized typeface, changed the code syntax-highlighting to solarized light theme

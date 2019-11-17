@@ -27,7 +27,7 @@ This website is my personal blog, a place I may share some thoughts, experiences
 
 This website is built on top of the [Jekyll](http://jekyllrb.com), a static site generator, and being deployed automatically using [Netlify](https://www.netlify.com/) service. The source code of this website is being hosted privately on [BitBucket](https://bitbucket.org/heiswayi/). The image content on this website is hosted using [imgur](https://imgur.com/) service. The primary domain for this website (`nrird.com`) is registered using [hover](https://www.hover.com/) and it's being managed via [Cloudflare](https://www.cloudflare.com/) DNS.
 
-Also, this website is coded using [Visual Studio Code](https://code.visualstudio.com/) on [Linux Lite 4.6](https://www.linuxliteos.com/) system.
+Also, this website is coded using [Visual Studio Code](https://code.visualstudio.com/) on [Linux Lite 4.6](https://www.linuxliteos.com/) system. Most of the contents are written in [markdown format](/markdown-cheatsheet). Some contents may contain a mixture of markdown, customized HTML, CSS and JS code.
 
 {%
     include figure.html 

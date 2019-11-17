@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Posts by Tag
+title: Posts by Tags
 description: Display published posts based on particular tags.
 keywords: posts by tag, tagged article
 ---
@@ -27,7 +27,7 @@ keywords: posts by tag, tagged article
 {% if tags %}
 <div class="tag-cloud tag-cloud-small" id="Tags">
   {% for tag in tags %}
-    <a class="tag-anchor" href="#{{ tag | slugify }}"><i class="fa fa-tag muted" aria-hidden="true"></i> <span class="hidden">#</span>{{ tag }}</a>
+    <a class="tag-anchor" href="#{{ tag | slugify }}"><span class="hidden">#</span>{{ tag | replace: "#", "sharp" | slugify | downcase }}</a>
   {% endfor %}
 </div>
 {% endif %}
@@ -38,19 +38,19 @@ keywords: posts by tag, tagged article
 	<style>
 	#{{ tag | slugify }} {
 		transition: opacity 0.5s ease-out;
-    opacity: 0;
-    height: 0;
-    overflow: hidden;
+    	opacity: 0;
+    	height: 0;
+    	overflow: hidden;
 	}
 
 	#{{ tag | slugify }}:target {
 		opacity: 1;
-    height: auto;
+    	height: auto;
 	}
 	</style>
 
 	<div id="{{ tag | slugify }}">
-    <h2 class="year" ><i class="fa fa-hashtag muted" aria-hidden="true"></i>{{ tag }}</h2>
+    <h2 class="year" ><i class="fa fa-hashtag muted" aria-hidden="true"></i>{{ tag | replace: "#", "sharp" | slugify | downcase }}</h2>
 
     {% for post in site.posts %}
     {% if post.tags contains tag %}
