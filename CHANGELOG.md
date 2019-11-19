@@ -1,6 +1,11 @@
 Internal Use Only
 Versioning format: `<CURRENT_YEAR>.<CURRENT_MONTH>.<REVISION_NUMBER>`
 
+### 2019.11.5
+- Made tags section switchable from config.yml
+- Minor adjustment on font-size for .post-date
+- Layout optimization
+
 ### 2019.11.4
 - Moved post date meta to the bottom of the content, grouped together before the tag(s)
 - Updated footer layout

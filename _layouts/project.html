@@ -65,6 +65,7 @@ published: true
 
         <div class="post-date post-bottom-meta">{{ page.date | date: "%B %d, %Y" }} — By {{ site.author.name }}</div>
 
+        {% if site.show_tags %}
         {% assign post = page %}
           {% if post.tags.size > 0 %}
 
@@ -79,6 +80,19 @@ published: true
           <div class="tagged">
             {{ tags_content }}
           </div>
+        {% endif %}
+        {% endif %}
+
+        {% if site.show_post_sharer %}
+          {% include post_sharer.html %}
+        {% endif %}
+        
+        {% if site.show_related_posts %}
+          {% include related_post.html %}
+        {% endif %}
+
+        {% if site.show_disqus_comment %}
+          {% include disqus.html %}
         {% endif %}
 
       </div>
