@@ -1,6 +1,9 @@
 Internal Use Only
 Versioning format: `<CURRENT_YEAR>.<CURRENT_MONTH>.<REVISION_NUMBER>`
 
+### 2019.11.6
+- Updated new icons and site logo
+
 ### 2019.11.5
 - Made tags section switchable from config.yml
 - Minor adjustment on font-size for .post-date
