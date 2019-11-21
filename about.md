@@ -1,7 +1,7 @@
 ---
 layout: page
 title: About
-description: The About page is the section of a website where people go to find out about the website they're on.
+description: Telling something you may want to know about this website and the author info.
 keywords: about page, author info, heiswayi nrird
 ---
 
@@ -12,7 +12,7 @@ keywords: about page, author info, heiswayi nrird
 		<div class="photo">
 			<img src="https://avatars0.githubusercontent.com/u/13794983?v=4" alt="Heiswayi Nrird Photo">
 		</div>
-		<p class="intro-text">Hi. I'm <strong>Heiswayi Nrird</strong>. I do some stuffs with computer and sometimes write about it here. I'm a <em>Software Engineer</em> from Penang and I ship code at <a href="https://www.keysight.com">Keysight Technologies</a>. Other times, I'll be off the grid to capture <a href="{{ "/photography" | prepend: site.baseurl | prepend: site.url }}"><i class="em em-camera_with_flash"></i> some beautiful landscapes</a>. Welcome to my personal blog!</p>
+		<p class="intro-text">Hi. I'm <strong>Heiswayi Nrird</strong>. I do some stuff with computers and sometimes I write about them here. I'm a software engineer from Penang and I ship code at <a href="https://www.keysight.com">Keysight Technologies</a>. Other times, I'll be off the grid to capture <a href="{{ "/photography" | prepend: site.baseurl | prepend: site.url }}"><i class="em em-camera_with_flash"></i> some beautiful landscapes</a>. Welcome to my personal blog!</p>
 
 	</div>
 </div>
@@ -21,19 +21,21 @@ keywords: about page, author info, heiswayi nrird
 
 ### This website
 
-This website is my personal blog, a place I may share some thoughts, experiences, opinions, reviews, ideas, rantings, and facts. But most of the time, I share about my personal projects, researches and programming stuffs.
+This website is my personal blog, a place I may share some thoughts, experiences, opinions, reviews, ideas, rantings, and facts. But most of the time, I share about my personal projects, researches and programming stuff.
 
 #### Technologies behind this website
 
-This website is built on top of the [Jekyll](http://jekyllrb.com), a static site generator, and being deployed automatically using [Netlify](https://www.netlify.com/) service. The source code of this website is being hosted privately on [BitBucket](https://bitbucket.org/heiswayi/). The image content on this website is hosted using [imgur](https://imgur.com/) service. The primary domain for this website (`nrird.com`) is registered using [hover](https://www.hover.com/) and it's being managed via [Cloudflare](https://www.cloudflare.com/) DNS.
+This website is built based on [Jekyll](http://jekyllrb.com) (a static site generator), and being deployed automatically by [Netlify](https://www.netlify.com/) deployment service from its source code that's being hosted privately on [BitBucket](https://bitbucket.org/heiswayi/) server. Most of the image contents on this website are being hosted using [imgur](https://imgur.com/) service.
 
-Also, this website is coded using [Visual Studio Code](https://code.visualstudio.com/) on [Linux Lite 4.6](https://www.linuxliteos.com/) system. Most of the contents are written in [markdown format](/markdown-cheatsheet). Some contents may contain a mixture of markdown, customized HTML, CSS and JS code.
+This website is coded using [Visual Studio Code](https://code.visualstudio.com/) on [Linux Lite 4.6](https://www.linuxliteos.com/) system. Most of the blog contents are written in [markdown format](/markdown-cheatsheet). Only few pages that may contain a mixture of markdown, customized HTML, CSS and JS code.
 
 {%
     include figure.html 
     src="https://i.imgur.com/O23ZBLz.png" 
-    caption="My Desktop"
+    caption="My Desktop screen using Linux Lite 4.6"
 %}
+
+The primary domain for this website (`nrird.com`) is registered using [hover](https://www.hover.com/) and it is being managed via [Cloudflare](https://www.cloudflare.com/) DNS. This website does not implement any user tracking code and it's ads-free.
 
 ### Disclaimer
 
