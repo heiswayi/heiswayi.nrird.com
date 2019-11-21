@@ -1,13 +1,30 @@
 ---
 layout: post
-title: Commonly used git commands
-description: This is a simple collection of my commonly used git commands in my everyday's work.
+title: Commonly used git commands cheatsheet
+description: This is a simple collection of git commands that I have been using most of the time.
 keywords: git commands, git cheatsheet, commonly used
 tags: [Git, Cheatsheet, Software Engineering]
 comments: true
 ---
 
-Git is the most popular distributed version-control system for tracking changes in source code during software development. I have been using git for almost everyday in my work life. I am not a fan of using GUI tools for git, so it's very rare I do git with the GUI tools. Most of the times, I have been typing git commands on my terminal window. I have few git cheatsheets somewhere since not all the git commands I can remember. This is the one that I think the most commonly used git commands I have been using all the times.
+Git is the most popular distributed version-control system for tracking changes in source code during software development. I have been using git for almost everyday in my work life. I am not a fan of using GUI tools for git, so it's very unlikely I do git with the GUI tools. Most of the time, I have been typing git commands on my terminal window. I have few git cheatsheets somewhere since not all the git commands I can remember. This is the one of the git cheatsheets that I think I have been using all the time.
+
+### Basic configurations
+
+I have to ensure my configurations are correct since I have been working on multiple git servers.
+
+```bash
+# Check user.name & user.email
+git config --global --list #global
+git config --list #local
+
+# Update user.name & user.email
+git config --global user.name "Heiswayi Nrird"
+git config --global user.email "heiswayi@nrird.com"
+#or on the current repository settings
+git config user.name "Heiswayi Nrird"
+git config user.email "heiswayi@nrird.com"
+```
 
 ### Creating and getting projects
 
@@ -161,19 +178,4 @@ git log --oneline #briefly
 git diff <SOURCE_BRANCH_NAME> <TARGET_BRANCH_NAME>
 ```
 
-For [more specific comparisons](https://gitguys.com/topics/git-diff-command-explained/) happened to be so occasionally used, similarly to [releases and versions tagging](https://gitguys.com/topics/git-object-tag-git-tag/).
-
-### Review basic configurations
-
-```bash
-# Check user.name & user.email
-git config --global --list #global
-git config --list #local
-
-# Update user.name & user.email
-git config --global user.name "Heiswayi Nrird"
-git config --global user.email "heiswayi@nrird.com"
-#or on the current repository settings
-git config user.name "Heiswayi Nrird"
-git config user.email "heiswayi@nrird.com"
-```
+For [more specific comparisons](https://gitguys.com/topics/git-diff-command-explained/) on `git diff` happened to be so occasionally used, similarly to [releases and versions tagging](https://gitguys.com/topics/git-object-tag-git-tag/).
