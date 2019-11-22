@@ -11,7 +11,7 @@ Git is the most popular distributed version-control system for tracking changes 
 
 ### Checking the basic configurations
 
-I have been working on multiple git servers, so I have to ensure my `user.name` and `user.email` I used are correct.
+I have been working on multiple git servers, so I have to ensure my `user.name` and `user.email` that I used are correct.
 
 ```bash
 # Check user.name & user.email
@@ -176,7 +176,7 @@ git rm -rf --cached <FILENAME|DIRECTORY> #or only apply to git
 
 ### Getting the latest changes
 
-Case 1: Don't care about local changes
+#### Case 1: Don't care about local changes
 
 ```bash
 # Get latest code and reset the code
@@ -188,7 +188,7 @@ git rm -rf <PROJECT_FOLDER>
 git clone <GIT_REPO_URL>
 ```
 
-Case 2: Care about local changes
+#### Case 2: Care about local changes
 
 Recommended to use the command with a clean working copy. If you have any uncommitted local changes you want to retain, before using the command, you should stash (`git stash`) your works first.
 
@@ -218,6 +218,7 @@ git diff <BRANCH_NAME_1>..<BRANCH_NAME_2>
 ### Git references and other cheatsheets
 
 - [Atlassian Git Tutorials](https://www.atlassian.com/git/tutorials/setting-up-a-repository)
-- [GitHub Git Learning Resources](http://try.github.io/) | [PDF](https://github.github.com/training-kit/downloads/github-git-cheat-sheet.pdf)
+- [GitHub Git Learning Resources](http://try.github.io/) // [PDF](https://github.github.com/training-kit/downloads/github-git-cheat-sheet.pdf)
 - [Git Branching](https://gist.github.com/digitaljhelms/4287848)
 - [git_examples.sh](https://gist.github.com/heiswayi/ee92a4d1d12cd88dd1cf28dd4c7499c0)
+- [Interactive Git Cheatsheet by NDP Software](https://ndpsoftware.com/git-cheatsheet.html)
