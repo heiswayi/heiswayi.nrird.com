@@ -48,3 +48,5 @@ Unless otherwise stated, all contents on this website are licensed under [CC BY-
 ### Contact info
 
 If you have any question to ask me, I can be reached at <strong>heiswayi<span style="display:none">-antispam-</span>@<span style="display:none">-antispam-</span>nrird.com</strong>. Feel free to shoot me an email, I'll try my best to respond ASAP.
+
+[![Keybase](https://badgen.net/keybase/pgp/heiswayi)](https://keybase.io/heiswayi)
