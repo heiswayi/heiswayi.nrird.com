@@ -17,7 +17,7 @@ keywords: about page, author info, heiswayi nrird
 	</div>
 </div>
 
-<div style="clear:both;padding-top:1rem"><p><a href="https://heiswayi.github.io/resume/">Résumé/CV</a> // <a href="https://my.linkedin.com/in/nrird">LinkedIn</a> // <a href="https://heiswayi.github.io/repo">GitHub</a> // <a href="https://heiswayi.github.io/gist">Gist</a> // <a href="http://codepen.io/heiswayi/">CodePen</a> // <a href="http://jsfiddle.net/user/heiswayi/">JSFiddle</a></p></div>
+<div style="clear:both;padding-top:1rem"><p>Somewhere else: <a href="https://my.linkedin.com/in/nrird">LinkedIn</a> &middot; <a href="https://heiswayi.github.io/repo">GitHub</a> &middot; <a href="https://heiswayi.github.io/gist">Gist</a> &middot; <a href="http://codepen.io/heiswayi/">CodePen</a> &middot; <a href="http://jsfiddle.net/user/heiswayi/">JSFiddle</a></p></div>
 
 ### This website
 
@@ -49,4 +49,8 @@ Unless otherwise stated, all contents on this website are licensed under [CC BY-
 
 If you have any question to ask me, I can be reached at <strong>heiswayi<span style="display:none">-antispam-</span>@<span style="display:none">-antispam-</span>nrird.com</strong>. Feel free to shoot me an email, I'll try my best to respond ASAP.
 
-[![Keybase](https://badgen.net/keybase/pgp/heiswayi)](https://keybase.io/heiswayi)
+{%
+    include figure.html 
+    src="https://badgen.net/keybase/pgp/heiswayi" 
+    href="https://keybase.io/heiswayi"
+%}
