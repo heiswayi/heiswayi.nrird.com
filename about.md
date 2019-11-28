@@ -17,7 +17,7 @@ keywords: about page, author info, heiswayi nrird
 	</div>
 </div>
 
-<div style="clear:both;padding-top:1rem"><p>Somewhere else: <a href="https://my.linkedin.com/in/nrird">LinkedIn</a> &middot; <a href="https://heiswayi.github.io/repo">GitHub</a> &middot; <a href="https://heiswayi.github.io/gist">Gist</a> &middot; <a href="http://codepen.io/heiswayi/">CodePen</a> &middot; <a href="http://jsfiddle.net/user/heiswayi/">JSFiddle</a></p></div>
+<div style="clear:both;padding-top:1rem"><p>Elsewhere: <a href="https://my.linkedin.com/in/nrird">LinkedIn</a> &middot; <a href="https://github.com/heiswayi">GitHub</a> &middot; <a href="https://gist.github.com/heiswayi">Gist</a> &middot; <a href="http://codepen.io/heiswayi/">CodePen</a> &middot; <a href="http://jsfiddle.net/user/heiswayi/">JSFiddle</a></p></div>
 
 ### This website
 
