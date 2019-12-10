@@ -1,6 +1,11 @@
 Internal Use Only
 Versioning format: `<CURRENT_YEAR>.<CURRENT_MONTH>.<REVISION_NUMBER>`
 
+### 2019.12.1
+- Revisited few articles for grammar and content maturity
+- Removed date in mobile view
+- Switch page navigation to classic menu in mobile view
+
 ### 2019.11.6
 - Updated new icons and site logo
 

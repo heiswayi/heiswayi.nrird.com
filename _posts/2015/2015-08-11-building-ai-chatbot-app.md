@@ -7,29 +7,29 @@ tags: [Artificial Intelligence, Chatbot, Programming]
 comments: true
 ---
 
-### It began with a IRC client program called mIRC
+### A look back into the past
 
-Back in 2004, I had been using a chit-chat client program called [mIRC](http://www.mirc.com/). It's a program to connect to [IRC](https://en.wikipedia.org/wiki/Internet_Relay_Chat) networks and started chatting with other people in the chatrooms called channels.
+Back in 2004, I had been using a chit-chat client program known as [mIRC](http://www.mirc.com/). It was a computer program that connected to [IRC](https://en.wikipedia.org/wiki/Internet_Relay_Chat) networks called _servers_. Then I started chatting with other people in the chatrooms called _channels_. Interestingly, this mIRC program had a feature called _Remote_ under _its Editor menu_. It was a scripting tool. From this _remote_, the capabilities of this IRC program were getting extended. Check [this link](http://www.mircscripts.org/), [this link](http://hawkee.com/mirc/snippets/), or [this link](http://www.oldschoolirc.com/scripts) to see what other people have been doing with that mIRC scripting. I once was an IRC scripter too. Yep, I had made few mIRC scripts myself.
 
-### Chit-chat was boring, but not "scripting"
-
-mIRC program had an insteresting feature called **Remote** under its Editor menu. It was a scripting tool. This is where people were expanding the program capabilities. Check [this link](http://www.mircscripts.org/), [this link](http://hawkee.com/mirc/snippets/), or [this link](http://www.oldschoolirc.com/scripts) to see what other people did with that mIRC scripting.
-
-Yep, I had made few mIRC scripts too, in case you're curious to see how the scripting was written and worked:
+In case you are curious to see how the scripting was written and worked, there are the final mIRC scripts I developed:
 
 - [Dino IRC Sc. (Final Dev.).zip](https://www.dropbox.com/s/5m6fcpwfe998vg1/Dino%20IRC%20Sc.%20%28Final%20Dev.%29.zip?dl=0) - Official casual script, channel protections, private protections, a bunch of utilities and more...
 - [Nikotin3.zip](https://www.dropbox.com/s/2cjjvfsw9m2wpwa/Nikotin3.zip?dl=0) - War script (Revenge)
 - [WarLord.zip](https://www.dropbox.com/s/fala3ispr3b1ntc/WarLord.zip?dl=0) - War script (Revenge)
 
-### War script? Revenge?
+### What the hell _war script_? _Revenge?_
 
-It means that was a "battle" script. A script used to "kick out" people, each other, within a particular IRC chatroom (channel). The objective was to measure the strength of your scripting code, something we called "revenge" script.
+Well this is the most interesting part and one of the major reason I used mIRC in the past days. Making fancy mIRC scripts are not enough. This is what we used to play "battle" where we wrote the _war script_ to test how good our scripting code versus each other, and this kind of battle happened in a particular IRC _channel_ and _server_. At the same time, Internet speed is part of winning factors.
+
+This battle worked where everyone who wanted to play "revenge" will join a particular channel, and there was a bot (Super Operator) will give that user Operator access (denoted as @) automatically. Then, choose your match and start kicking! For those who stayed longer in the channel would be the winner of the battle whenever the loser raised a white flag.
+
+> **[UPDATE 2019.12.10]** After knowing that [all Yahoo Groups contents are going to be deleted on 14th December 2019](https://www.theverge.com/2019/10/16/20917710/yahoo-groups-deleting-all-content-upload-message-boards-email-communities), I made some efforts to check and [scrap](https://github.com/IgnoredAmbience/yahoo-group-archiver) some of my old stuff in IRC scripting. Here are the last of collection that I was able to archive: [mIRC-YahooGroup-Archives-2005](https://drive.google.com/drive/u/0/folders/1YG3HsmF-m0x5s3nVP7lFT9tAZaJVDKsd). What a beautiful memory...
 
 ### 'nuff said, here the "AI" thing came
 
-Other than "warring", I did build a quiz bot in my previous mIRC scripts. The purpose of the scipt is to entertain people in some particular IRC channels. Then, I was thinking to build something more "intelligent" (which was not really intelligent of course). Something called a "chit-chat" bot to be exact. So, **I reprogrammed my mIRC script to have the ability to parse some inputs, match them with preprogrammed keywords from the keyword list, and then respond to the user with particular preprogrammed outputs (answers)**. Genius? No. Interesting? Definitely. Fun? Absolutely.
+Other than "war scripting", I did build a quiz bot in my previous mIRC scripts. The purpose of the script is to entertain people in some particular IRC channels. Then, I was thinking to build something more "intelligent" (which was not really much intelligent of course). Something called a "chit-chat" bot to be exact. So, **I reprogrammed my mIRC script to have the ability to parse some inputs, match them with preprogrammed keywords from the keyword list, and then respond to the user with particular preprogrammed outputs (answers)**. Genius? No. Interesting? Definitely. Fun? Absolutely.
 
-To be honest, I'm not really remembered how many script that I wrote to build this so-called chat bot. Some was experimental, incomplete program while some others were completely gone when my external hard drive corrupted. As far as I can recover, one of my script code is looked something like this. The chatbot as called "Puteri Allyssa". Just ignore the unprintable characters. Those characters were usually used for coloring code.
+I am not remember how many scripts that I wrote to build this so-called _chatbot_. Some of the sripts were just experimental, incomplete program while some others were completely gone when my external hard drive when it was corrupted. As far as I can recover, one of my script code had something like this. The chatbot was called "Puteri Allyssa":
 
 ```
 alias psys return echo @Puteri_Allyssa 12•4•8•9• 9SYSTEM15:14
@@ -124,11 +124,13 @@ on *:input:@Puteri_Allyssa: {
 }
 ```
 
-In 2007, I stopped using IRC, and was no longer connect to the servers. This is where I started to abandon everything about mIRC, including my scripts.
+NOTE: The script code above may look hard to read due to unprintable characters. Those characters actually were used for coloring the text when it gets displayed in the mIRC console.
+
+In 2007, I stopped using IRC, and was no longer connect to _the servers_. This is where I started to abandon everything about mIRC, including my scripts and "revenge" snippets.
 
 ### AI chatbot in .NET Framework and SQLite
 
-Few years later, I started working with C# programming and WinForms. So, the "AI" idea came back to me. At this time, I coded for a basic WinForms app and used SQLite to build my "AI" chatbot knowledgebase. And I called it **NALIKA**. It had a basic implementation where by matching keywords in the input text and then stream out the possible output response. I used SQLite to save the inputs and the predictive outputs.
+A few years later, I started working with C# programming and WinForms. So, the "AI" idea came back to me. At this time, I coded for a basic WinForms app and used SQLite to build my "AI" chatbot knowledgebase. And I called it **NALIKA**. It had a basic implementation where by matching the keywords in the input text and then stream out the possible output response. I used SQLite to save the inputs and predictive outputs.
 
 Screenshots:
 
@@ -140,7 +142,7 @@ Screenshots:
 
 ### NALIKA app still boring, so I need something called "framework"
 
-After I did some researches on Internet, I found one so-called the "first framework" that I can start with. It was called [Artificial Intelligence Markup Language (AIML)](http://www.alicebot.org/aiml.html), a standard XML format markup language for defining the responses from the chatbot. AIML was developed by **Richard S. Wallace** and a worldwide free software community between 1995 and 2002. AIML formed the basis for what was initially a highly extended [Eliza](https://en.wikipedia.org/wiki/ELIZA) called ["A.L.I.C.E." (Artificial Linguistic Internet Computer Entity)](https://en.wikipedia.org/wiki/Artificial_Linguistic_Internet_Computer_Entity) which won the annual [Loebner Prize Competition](https://en.wikipedia.org/wiki/Loebner_Prize) in Artificial Intelligence three times and was also the Chatterbox Challenge Champion in 2004.
+After I did some research on Internet, I found one so-called the "first framework" that I can start with. It was called [Artificial Intelligence Markup Language (AIML)](http://www.alicebot.org/aiml.html), a standard XML format markup language for defining the responses from the chatbot. AIML was developed by **Richard S. Wallace** and a worldwide free software community between 1995 and 2002. AIML formed the basis for what was initially a highly extended [Eliza](https://en.wikipedia.org/wiki/ELIZA) called ["A.L.I.C.E." (Artificial Linguistic Internet Computer Entity)](https://en.wikipedia.org/wiki/Artificial_Linguistic_Internet_Computer_Entity) which won the annual [Loebner Prize Competition](https://en.wikipedia.org/wiki/Loebner_Prize) in Artificial Intelligence three times and was also the Chatterbox Challenge Champion in 2004.
 
 So, I used [AIMLbot.dll](http://aimlbot.sourceforge.net/) library for my chatbot app while getting myself to learn more about the markup language structures used in the AIML as published in [this paper](http://arxiv.org/ftp/arxiv/papers/1307/1307.3091.pdf). AIML provided much better way of defining the knowledgebase of my chatbot and made it looked more natural to call it as "artificial intelligence" chatbot. For the bot name, I called "WAYI".
 
@@ -170,4 +172,4 @@ I created **W4Y1** based on [elizabot.js](http://www.masswerk.at/elizabot/) by *
 
 ### The bottom line
 
-These experimental, exploratory, incomplete developments have taught me some understanding on artificial intelligence concept, technical challenges, and the designing of the markup languages. Artificial intelligence and the technology are one side of the life that always interest and surprise us with the new ideas, topics, innovations, products …etc. AI is still not implemented as the films representing it (i.e. intelligent robots), however there are many important tries to reach the level and to compete in market, like sometimes the robots that they show in TV. Nevertheless, the hidden projects and the development in industrial companies. At the end, we’ve been in this research through the AI definitions, brief history, applications of AI in public, applications of AI in military, ethics of AI, and the three rules of robotics. This is not the end of AI, there is more to come from it, who knows what the AI can do for us in the future, maybe it will be a whole society of robots.
+These experimental, exploratory, incomplete developments have taught me some understanding on artificial intelligence concept, technical challenges, and the designing of the markup languages. Artificial intelligence and the technology are one side of the life that always interest and surprise us with the new ideas, topics, innovations, products, etc.. AI is still not implemented as the films representing it (i.e. intelligent robots), however there are many important tries to reach the level and to compete in market, like sometimes the robots that they show in TV. Nevertheless, the hidden projects and the development in industrial companies. At the end, we’ve been in this research through the AI definitions, brief history, applications of AI in public, applications of AI in military, ethics of AI, and the three rules of robotics. This is not the end of AI, there is more to come from it, who knows what the AI can do for us in the future, maybe it will be a whole society of robots.

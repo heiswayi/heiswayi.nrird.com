@@ -36,6 +36,17 @@
                     <a href="{{ "/photography" | prepend: site.baseurl | prepend: site.url }}">Photos</a>
                 </li>
             </ul>
+
+            <select name="nav" onchange="location = this.value;" class="classic-menu">
+                <option>Navigate to...</option>
+                <option value="{{ "/" | prepend: site.baseurl | prepend: site.url }}">Home</option>
+                <option value="{{ "/grid-view" | prepend: site.baseurl | prepend: site.url }}">Home (Grid View)</option>
+                <option value="{{ "/inspiration-n-love" | prepend: site.baseurl | prepend: site.url }}">Inspiration &amp; Love</option>
+                <option value="{{ "/books-i-read" | prepend: site.baseurl | prepend: site.url }}">Books I Read</option>
+                <option value="{{ "/about" | prepend: site.baseurl | prepend: site.url }}">About</option>
+                <option value="{{ "/projects" | prepend: site.baseurl | prepend: site.url }}">Projects</option>
+                <option value="{{ "/photography" | prepend: site.baseurl | prepend: site.url }}">Photograpy</option>
+            </select>
         </div>
 
     </div>

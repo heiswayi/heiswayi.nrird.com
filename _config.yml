@@ -5,7 +5,7 @@ description             : "heiswayi nrird's personal blog" # tagline
 keywords                : "software engineer, web developer, personal website, code snippet, php, c#, powershell, build automation, .net framework, programmer, ui/ux"
 text_logo               : "hn•••" # if using text as site heading logo
 image_cover             : "/assets/logo.gif"
-version                 : "2019.11.6" # CSS version tag, used with CHANGELOG.md
+version                 : "2019.12.1" # CSS version tag, used with CHANGELOG.md
 google_analytics_code   : UA-58296043-7
 
 # SITE SEO

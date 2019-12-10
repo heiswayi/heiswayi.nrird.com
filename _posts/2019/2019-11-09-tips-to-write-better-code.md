@@ -9,7 +9,13 @@ comments: true
 
 Coding is part of my life. That's what I do the most, for living. While I was reading something on [Hacker News](https://news.ycombinator.com/), I came across that someone had mentioned somewhere in the comments about something to consider on writing a better code. I don't really remember which post, to be exact. But I did some quick notes on those. Since then, I have been practicing the following mental model in my coding, and it helped a lot in improving my code. I think this is something good to share here.
 
+To simplify, in your code, just ensure you have all of these:
+
 > Working, simple, correct, optimized
+
+---
+
+To elaborate further...
 
 ### Working
 
@@ -21,8 +27,8 @@ _A good code should be read like a story, not like a puzzle._ The best documenta
 
 ### Correct
 
-Edge cases are covered, tests are written, internal users have validated that the feature is working as expected. Correctness is the destination of any piece of software (ultimately the goal of any piece of software is to work). There are some hot debates going on over which comes first between simplicity and correctness, and it has no winner, so I may want to leave this one for you to discover.
+Edge cases are covered, tests are written, internal users have validated that the feature is working as expected. Correctness is the destination of any piece of software (ultimately the goal of any piece of software is to work). There are some hot debates going on over which comes first between simplicity and correctness, and it has no winner. Some may depend on how the project structure would look like.
 
 ### Optimized
 
-This is where mostly you polish your code. To avoid premature optimization, you should be measuring/benchmarking your code performance as earlier as possible. Your algorithm may need to be changed/updated if it's slow. If something doesn't look right on the design, you may want to optimize your design earlier before the lines of code starts to increase.
+This is where mostly you polish your code. To avoid premature optimization, you should be measuring/benchmarking your code performance as earlier as possible. Your algorithm may need to be changed/updated if it's slow. If something doesn't look right on the design, you may want to optimize your design as earlier as possible, especially before the lines of code starts to grow too much.

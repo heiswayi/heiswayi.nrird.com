@@ -69,6 +69,40 @@
         }
     }
   }
+  .archives {
+    .post-list-archives {
+      margin-bottom: .5rem;
+      line-height: 1.2;
+      .date-full {
+        display: none !important;
+      }
+      .full-title {
+        font-family: $body-font;
+        font-size: 1rem;
+        display: list-item;
+        list-style-type: disc;
+        list-style-position: outside;
+        margin-left: 1.1rem;
+      }
+      .post-date {
+        display: none;
+      }
+    }
+    .year {
+      margin-top: 2rem;
+    }
+  }
+  .nav {
+    .top-menu {
+      display: none;
+    }
+    .classic-menu {
+      display: block;
+      width: max-content;
+      margin-top: 1rem;
+      padding: 3px;
+    }
+  }
 }
 
 /* Portrait tablet to landscape and desktop */
@@ -82,6 +116,14 @@
       margin-right: -100px;
     }
   }
+  .nav {
+    .top-menu {
+      display: block;
+    }
+    .classic-menu {
+      display: none;
+    }
+  }
 }
 
 /* Large desktop */
@@ -93,6 +135,14 @@
     figure {
       margin-left: -100px;
       margin-right: -100px;
+    }
+  }
+  .nav {
+    .top-menu {
+      display: block;
+    }
+    .classic-menu {
+      display: none;
     }
   }
 }
