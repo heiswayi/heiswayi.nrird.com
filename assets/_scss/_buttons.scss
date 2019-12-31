@@ -1,0 +1,46 @@
+.button {
+  position: relative;
+  overflow: visible;
+  display: inline-block;
+  padding: 0.5em 1em;
+  border: 1px solid #333;
+  margin: 0 10px 0 0;
+  text-decoration: none;
+  text-align: center;
+  font: 14px / normal sans-serif;
+  color: #333;
+  white-space: nowrap;
+  cursor: pointer;
+  outline: none;
+  background-color: #fff;
+  box-shadow: 3px 3px rgba(0, 0, 0, 0.2);
+  -moz-background-clip: padding; /* for Firefox 3.6 */
+  background-clip: padding-box;
+  border-radius: 0.2em;
+  /* IE hacks */
+  zoom: 1;
+  *display: inline;
+}
+
+.button:hover,
+.button:focus,
+.button:active,
+.button.active {
+  border: 1px solid #069 !important;
+}
+
+.button.primary {
+  font-weight: bold;
+}
+
+.button.pill {
+  border-radius: 50em;
+}
+
+.button.disable {
+  opacity: 0.5;
+}
+
+.button.big {
+  font-size: 18px;
+}
