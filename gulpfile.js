@@ -14,10 +14,17 @@ const base_path = './',
   paths = {
     js: src + '/js/*.js',
     scss: [src + '/_scss/*.scss',
-      src + '/_scss/**/* .scss',
-      src + '/_scss/**/**/*.scss'
+    src + '/_scss/**/* .scss',
+    src + '/_scss/**/**/*.scss'
     ],
-    jekyll: ['index.html', '_posts/*', '_layouts/*', '_includes/*', 'assets/*', 'assets/**/*', '404.html', 'about.md', 'projects.md', 'photography.html', 'reminder.md', 'tags.html']
+    jekyll: [
+      '*.html',
+      '_posts/*',
+      '_layouts/*',
+      '_includes/*',
+      'assets/*',
+      'assets/**/*',
+    ]
   };
 
 // Compile SASS to CSS
@@ -36,11 +43,14 @@ gulp.task('compile-sass', () => {
     .pipe(gulp.dest('./'));
 });
 
-// Build Jekyll
-gulp.task('build-jekyll', shell.task(['bundle exec jekyll build']))
+// Build Jekyll DEV
+gulp.task('build-jekyll-dev', shell.task(['bundle exec jekyll build --config=_config.yml,_config-dev.yml']))
 
-// Build Jekyll
-gulp.task('serve-jekyll', shell.task(['bundle exec jekyll serve']))
+// Serve Jekyll DEV
+gulp.task('serve-jekyll-dev', shell.task(['bundle exec jekyll serve --config=_config.yml,_config-dev.yml']))
+
+// Build Jekyll PROD
+gulp.task('build-jekyll-prod', shell.task(['JEKYLL_ENV=production bundle exec jekyll build']))
 
 // Setup Server
 gulp.task('server', () => {
@@ -53,9 +63,8 @@ gulp.task('server', () => {
 // Watch files
 gulp.task('watch', () => {
   gulp.watch(paths.scss, ['compile-sass']);
-  //gulp.watch(paths.jekyll, ['serve-jekyll']);
-  //gulp.watch(paths.scss, ['serve-jekyll']);
+  gulp.watch(paths.jekyll, ['serve-jekyll-dev']);
 });
 
 // Start everything with the default task
-gulp.task('default', ['serve-jekyll', 'watch']);
+gulp.task('default', ['serve-jekyll-dev', 'watch']);
