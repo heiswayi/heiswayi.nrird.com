@@ -5,7 +5,7 @@ description: Mission 2020 - to read more books, and record them here.
 keywords: books, ebooks, reading, mission 2020
 ---
 
-This page is to keep track my book reading. I have a mission on my own called Mission 2020. It is about to read more books and record them all here. The book I read could be either physical book or digital book that has been downloaded into my tablet. I wish one day I could publish my own book too.
+The intention of this page is to keep track of my book reading. I should be doing this earlier. From year 2020 onwards, I will try my best to read more books either in the form of physical copy or digital copy and record them here.
 
 ### Book reading in progress
 
@@ -18,6 +18,8 @@ This page is to keep track my book reading. I have a mission on my own called Mi
 - [Front-End Developer Handbook 2018](https://frontendmasters.com/books/front-end-handbook/2018/) _by Cody Lindley_ (Frontend Masters, 2018)
 - [Essential Algorithms: A Practical Approach to Computer Algorithms](https://www.goodreads.com/book/show/17351722-essential-algorithms) _by Rod Stephens_ (Wiley, 2013)
 
-### Book I plan to read next
+### Book I plan to read next[^1]
 
 - [Front-End Developer Handbook 2019](https://frontendmasters.com/books/front-end-handbook/2019/) _by Cody Lindley_ (Frontend Masters, 2019)
+
+[^1]: The item in this list will be updated from time to time.

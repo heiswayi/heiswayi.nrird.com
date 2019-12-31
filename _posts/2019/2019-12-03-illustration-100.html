@@ -1,0 +1,200 @@
+---
+layout: compress
+published: true
+title: "[Inspiration] Illustration-100"
+description: An inspiring collection of open source illustrations kit by Vijay Verma.
+keywords: custom html page, minigrid, illustrations
+tags: [Inspiration, Illustration Arts]
+---
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en" class="no-js" itemscope itemtype="http://schema.org/WebPage">
+
+<head>
+{% include head.html %}
+<style>
+#photos {
+    margin: 0 auto;
+}
+#photos img {
+    width: 200px;
+    height: 200px;
+}
+</style>
+</head>
+
+<body>
+
+    <a href="#content" class="skip">Skip to content</a>
+
+    <div class="wrap">
+
+        {% include topnav.html %}
+
+        <div id="content">
+
+            <div class="container">
+
+                <noscript>
+                    <p class="notice" style="font-size: 0.8rem;color: #DD3D36;"><strong>NOTE:</strong> This page is using JavaScript to function properly. Please enable JavaScript in your browser.</p>
+                </noscript>
+
+                <h1 class="post-title">{{ page.title }}</h1>
+
+                <p>Illustration-100 is an inspiring collection of open source illustrations kit by <a href="https://illlustrations.co/">Vijay Verma</a>, which is <a href="https://illlustrations.co/license/">free for both commercial and personal use</a>. These awesome illustrations are part of design challenge where the author designed one illustration per day for 100 days of duration. I use <a href="https://minigrid.js.org/">Minigrid</a> to display all the illustration pictures below in randomly order each time this page is reloaded.</p>
+                
+            </div>
+
+            <div id="photos"></div>
+
+        </div>
+    </div>
+
+    {% include foot.html %}
+
+    <script>
+    var arr = [
+    "day34-ticket.png",
+    "day17-walkie-talkie.png",
+    "day39-pc.png",
+    "day55-living-room-interior.png",
+    "day53-farm.png",
+    "day66-travel.png",
+    "day51-whale.png",
+    "day84-reindeer.png",
+    "day31-sweet-home.png",
+    "day62-office-bag.png",
+    "day18-floppy.png",
+    "day89-christmas-gift.png",
+    "day54-building.png",
+    "day74-stationary-set.png",
+    "day64-followers.png",
+    "day30-cafe.png",
+    "day68-happy-cat.png",
+    "day8-printer.png",
+    "day79-coffee.png",
+    "day47-chemistry-lab.png",
+    "day42-imac.png",
+    "day3-gaming-mouse.png",
+    "day75-stationary-set-2.png",
+    "day59-kitchen.png",
+    "day52-auntum.png",
+    "day56-tv-room.png",
+    "day93-programing.png",
+    "day71-designer-tool-essential.png",
+    "day19-apple-watch.png",
+    "day90-santa.png",
+    "day78-wallet.png",
+    "day88-jingle-bell.png",
+    "day33-pumpkin.png",
+    "day95-app-development.png",
+    "day20-rocket.png",
+    "day72-designer-tool-war.png",
+    "day38-macintosh.png",
+    "day25-sport-bicycle.png",
+    "day49-angler-fish.png",
+    "day40-powerbook-100.png",
+    "day63-school-bag.png",
+    "day29-selfie-boy.png",
+    "day27-my-robot.png",
+    "day7-vintage-camera.png",
+    "day76-watch-spectacle.png",
+    "day77-pocket-knief.png",
+    "day4-polariod.png",
+    "day69-dotted-notebook.png",
+    "day97-champagne.png",
+    "day1-ipod.png",
+    "day23-radio.png",
+    "day87-chritmas-ball.png",
+    "day60-bathroom.png",
+    "day35-firework.png",
+    "day28-selfi-girl.png",
+    "day10-canvas-stand.png",
+    "day100-the-snail.png",
+    "day9-toolbox.png",
+    "day36-abacus.png",
+    "day99-pirate-boat.png",
+    "day32-frankenstein.png",
+    "day21-Lantern.png",
+    "day2-gaming-console.png",
+    "day81-ice-cream.png",
+    "day6-open-vault.png",
+    "day48-medical-lab.png",
+    "day80-tea.png",
+    "day22-owl.png",
+    "day94-ui-ux.png",
+    "day82-burger.png",
+    "day98-junk-boat.png",
+    "day46-experiment-lab.png",
+    "day70-designer-fav-tool-wacom.png",
+    "day92-freelancing.png",
+    "day43-ram.png",
+    "day61-travel-bag.png",
+    "day26-rainbow.png",
+    "day44-hdd.png",
+    "day85-socks.png",
+    "day65-city-road.png",
+    "day86-candle.png",
+    "day67-dog.png",
+    "day12-bed.png",
+    "day5-vault.png",
+    "day15-color-tool.png",
+    "day13-it-girl.png",
+    "day73-writing-tool.png",
+    "day50-pirahna.png",
+    "day37-calculator.png",
+    "day91-merry-christmas.png",
+    "day24-e-scooter.png",
+    "day57-reading-room.png",
+    "day14-forklift.png",
+    "day41-desktop.png",
+    "day11-blackboard.png",
+    "day16-retro-cassette.png",
+    "day83-snowman.png",
+    "day96-camping.png",
+    "day58-bedroom.png",
+    "day45-gpu-ati.png"
+    ];
+
+    function shuffle(a) {
+        var j, x, i;
+        for (i = a.length - 1; i > 0; i--) {
+            j = Math.floor(Math.random() * (i + 1));
+            x = a[i];
+            a[i] = a[j];
+            a[j] = x;
+        }
+        return a;
+    }
+    arr = shuffle(arr);
+
+    var allImages = "";
+    for (var i = 0; i < arr.length; i++) {
+        allImages += '<a href="assets/illustration100/'+arr[i]+'"><img src="assets/illustration100/'+arr[i]+'" alt="'+arr[i].replace(".png", "")+'"></a>';
+    }
+    document.getElementById('photos').innerHTML = allImages;
+
+    !function(t,e){"function"==typeof define&&define.amd?define(e):"object"==typeof exports?module.exports=e():t.Minigrid=e()}(this,function(t){"use strict";function e(t,e){for(var i in e)e.hasOwnProperty(i)&&(t[i]=e[i]);return t}var i=function(t){var i=t.container instanceof Node?t.container:document.querySelector(t.container),r=t.item instanceof NodeList?t.item:i.querySelectorAll(t.item);this.props=e(t,{container:i,nodeList:r})};return i.prototype.mount=function(){if(!this.props.container)return!1;if(!this.props.nodeList||0===this.props.nodeList.length)return!1;var t="number"==typeof this.props.gutter&&isFinite(this.props.gutter)&&Math.floor(this.props.gutter)===this.props.gutter?this.props.gutter:0,e=this.props.done,i=this.props.container,r=this.props.nodeList;i.style.width="";var n=Array.prototype.forEach,o=i.getBoundingClientRect().width,s=r[0].getBoundingClientRect().width+t,p=Math.max(Math.floor((o-t)/s),1),a=0;o=s*p+t+"px",i.style.width=o,i.style.position="relative";for(var c=[],u=[],l=0;l<p;++l)u.push(l*s+t),c.push(t);this.props.rtl&&u.reverse(),n.call(r,function(e){var i=c.slice(0).sort(function(t,e){return t-e}).shift();i=c.indexOf(i);var r=parseInt(u[i]),n=parseInt(c[i]);e.style.position="absolute",e.style.webkitBackfaceVisibility=e.style.backfaceVisibility="hidden",e.style.transformStyle="preserve-3d",e.style.transform="translate3D("+r+"px,"+n+"px, 0)",c[i]+=e.getBoundingClientRect().height+t,a+=1}),i.style.display="";var f=c.slice(0).sort(function(t,e){return t-e}).pop();i.style.height=f+"px","function"==typeof e&&e(r)},i});
+	(function(){
+		var grid;
+		function init() {
+			grid = new Minigrid({
+				container: '#photos',
+				item: 'img',
+				gutter: 16
+			});
+			grid.mount();
+		}
+		
+		function update() {
+			grid.mount();
+		}
+
+		document.addEventListener('DOMContentLoaded', init);
+		window.addEventListener('resize', update);
+	})();
+    </script>            
+
+</body>
+</html>
+
