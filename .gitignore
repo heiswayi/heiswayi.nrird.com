@@ -1,7 +1,7 @@
 #################
 ## Jekyll
 #################
-#_site/
+_site/
 .sass-cache
 *.draft
 DRAFT-*.md
