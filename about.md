@@ -35,7 +35,7 @@ This website is coded using [Visual Studio Code](https://code.visualstudio.com/)
     caption="My Desktop screen using Linux Lite 4.6"
 %}
 
-The primary domain for this website (`nrird.com`) is registered using [hover](https://www.hover.com/) and it is being managed via [Cloudflare](https://www.cloudflare.com/) DNS. This website does not implement any user tracking code and it's ads-free.
+The primary domain for this website (`nrird.com`) is registered using [hover](https://www.hover.com/) and it is being managed via [Cloudflare](https://www.cloudflare.com/) DNS. This website does not implement any user tracking code and it's ad-free.
 
 ### Disclaimer
 
@@ -47,10 +47,4 @@ Unless otherwise stated, all contents on this website are licensed under [CC BY-
 
 ### Contact info
 
-If you have any question to ask me, I can be reached at <strong>heiswayi<span style="display:none">-antispam-</span>@<span style="display:none">-antispam-</span>nrird.com</strong>. Feel free to shoot me an email, I'll try my best to respond ASAP.
-
-{%
-    include figure.html 
-    src="https://badgen.net/keybase/pgp/heiswayi" 
-    href="https://keybase.io/heiswayi"
-%}
+I am reachable via email at <strong>heiswayi <span style="display:none">-antispam-</span> (at) <span style="display:none">-antispam-</span>nrird dot com</strong>. For secure communication (encrypted), check [my keybase.txt here](keybase.txt).

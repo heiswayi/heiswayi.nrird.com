@@ -14,12 +14,14 @@
     "gulp-util": "^3.0.8"
   },
   "devDependencies": {
+    "gulp-check-unused-css": "^2.1.4",
     "gulp-shell": "^0.6.5"
   },
   "scripts": {
     "build": "gulp build-jekyll-dev",
     "start": "gulp",
-    "prod": "gulp build-jekyll-prod"
+    "prod": "gulp build-jekyll-prod",
+    "checkcss": "npm run prod && gulp check-css"
   },
   "repository": {
     "type": "git",

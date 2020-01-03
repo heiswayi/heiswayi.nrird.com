@@ -92,17 +92,6 @@
       margin-top: 2rem;
     }
   }
-  .nav {
-    .top-menu {
-      display: none;
-    }
-    .classic-menu {
-      display: block;
-      width: max-content;
-      margin-top: 1rem;
-      padding: 3px;
-    }
-  }
 }
 
 /* Portrait tablet to landscape and desktop */
@@ -110,18 +99,11 @@
   .container, .footer, .nav {
     max-width: 36rem;
   }
-  .post {
+  .post,
+  .page {
     figure {
       margin-left: -100px;
       margin-right: -100px;
-    }
-  }
-  .nav {
-    .top-menu {
-      display: block;
-    }
-    .classic-menu {
-      display: none;
     }
   }
 }
@@ -131,18 +113,11 @@
   .container, .footer, .nav {
     max-width: 44rem;
   }
-  .post {
+  .post,
+  .page {
     figure {
       margin-left: -100px;
       margin-right: -100px;
-    }
-  }
-  .nav {
-    .top-menu {
-      display: block;
-    }
-    .classic-menu {
-      display: none;
     }
   }
 }

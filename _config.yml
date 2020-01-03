@@ -1,15 +1,14 @@
 # SITE INFO
 og_locale               : "en_US"
-title                   : "heiswayi.nrird.com"
-description             : "heiswayi nrird's personal blog" # tagline
+title                   : "Heiswayi Nrird"
+description             : "Welcome to Heiswayi Nrird's Website" # tagline
 keywords                : "software engineer, web developer, personal website, code snippet, php, c#, powershell, build automation, .net framework, programmer, ui/ux"
-text_logo               : "hn•••" # if using text as site heading logo
 image_cover             : "/assets/logo.gif"
-version                 : "2019.12.1" # CSS version tag, used with CHANGELOG.md
+version                 : "2020" # CSS version tag, used with CHANGELOG.md
 google_analytics_code   : UA-58296043-7
 
 # SITE SEO
-seo_title               : "heiswayi nrird's personal blog" # between 55 and 66 characters
+seo_title               : "Heiswayi Nrird's Website" # between 55 and 66 characters
 seo_description         : "I'm Heiswayi Nrird. I do some stuffs with computer and sometimes write about it here. I'm a Software Engineer and I ship code at Keysight Technologies." # between 70 and 300 characters
 
 # SITE URL
@@ -23,10 +22,6 @@ enforce_ssl             : heiswayi.nrird.com
 author:
   name                  : "Heiswayi Nrird"
   twitter_username      : heiswayi
-
-# HEADER MODULES
-show_tagline            : false # edit file in /_includes/tagline.html
-#show_social_icons       : false # edit file in /_includes/social_links.html
 
 # ARTICLE BOTTOM MODULES
 show_related_posts      : false

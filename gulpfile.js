@@ -6,7 +6,8 @@ const gulp = require('gulp'),
   minifyCSS = require('gulp-clean-css'),
   prefixer = require('gulp-autoprefixer'),
   connect = require('gulp-connect'),
-  shell = require('gulp-shell');
+  shell = require('gulp-shell'),
+  checkCSS = require('gulp-check-unused-css');
 
 const base_path = './',
   src = base_path + 'assets/',
@@ -58,6 +59,12 @@ gulp.task('server', () => {
     root: ['_site'],
     port: 4000
   });
+})
+
+// Check unused CSS
+gulp.task('check-css', () => {
+  return gulp.src(['_site/assets/css/*.css', '_site/*.html'])
+    .pipe(checkCSS());
 })
 
 // Watch files
