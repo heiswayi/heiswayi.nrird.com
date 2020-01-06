@@ -5,7 +5,7 @@ description: Mission 2020 - to read more books, and record them here.
 keywords: books, ebooks, reading, mission 2020
 ---
 
-The intention of this page is to keep track of my book reading. I should be doing this earlier. From year 2020 onwards, I will try my best to read more books either in the form of physical copy or digital copy and record them here.
+The intention of this page is to keep track of my book reading. I should be doing this earlier. From year 2020 onwards, I will try my best to read more books either in the form of physical copy or digital copy and record them here. I have the same thought as [this guy when he asked the HN community about reading books](https://news.ycombinator.com/item?id=21955258).
 
 ### Book reading in progress
 
