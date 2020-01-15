@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    heiswayi.nrird.com (6.0.0)
+    heiswayi.nrird.com (2020.0.0)
       jekyll (~> 3.5)
 
 GEM

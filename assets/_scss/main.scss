@@ -1,10 +1,8 @@
-/*@import "google-fonts";*/
-@import "variables";
-/*@import "twemoji";*/
+@import "configs";
 @import "normalize";
-@import "site-layout";
-@import "site-extra";
-@import "site-responsive";
-@import "site-print";
-@import "syntax-highlighting";
-@import "buttons"
+@import "main-site-style";
+@import "main-site-style-extra-custom";
+@import "main-site-responsiveness";
+@import "main-site-printable";
+@import "main-site-syntax-highlighting";
+@import "main-site-button";
