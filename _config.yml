@@ -1,15 +1,15 @@
 # SITE INFO
 og_locale               : "en_US"
 title                   : "Heiswayi Nrird"
-description             : "Welcome to Heiswayi Nrird's Website" # tagline
-keywords                : "software engineer, web developer, personal website, code snippet, php, c#, powershell, build automation, .net framework, programmer, ui/ux"
+description             : "Welcome to Heiswayi Nrird's Personal Blog" # tagline
+keywords                : "software engineering, user experience, open source, photography, random experimental stuff"
 image_cover             : "/assets/logo.gif"
-version                 : "2020" # CSS version tag, used with CHANGELOG.md
+version                 : "2020"
 google_analytics_code   : UA-58296043-7
 
-# SITE SEO
-seo_title               : "Heiswayi Nrird's Website" # between 55 and 66 characters
-seo_description         : "I'm Heiswayi Nrird. I do some stuffs with computer and sometimes write about it here. I'm a Software Engineer and I ship code at Keysight Technologies." # between 70 and 300 characters
+# SITE SEO FOR GOOGLE SEARCH
+seo_title               : "Heiswayi Nrird" # between 55 and 66 characters
+seo_description         : "Just another Software Engineer who is shipping software products at Keysight Technologies, Penang, MY." # between 70 and 300 characters
 
 # SITE URL
 url                     : https://heiswayi.nrird.com # main url
