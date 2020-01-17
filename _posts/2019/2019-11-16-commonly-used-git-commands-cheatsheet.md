@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Commonly used git commands cheatsheet
-description: This is a simple collection of git commands that I have been using most of the time.
+description: This is a simple collection of git commands that I have been using for most of the time.
 keywords: git commands, git cheatsheet, commonly used
 tags: [Git, Cheatsheet, Software Engineering]
 comments: true
 ---
 
-Git is the most popular distributed version-control system for tracking changes in source code during software development. I have been using git for almost everyday in my work life. I am not a fan of using GUI tools for git, so it's very unlikely I do git with the GUI tools. Most of the time, I have been typing git commands on my terminal window. I have few git cheatsheets somewhere since not all the git commands I can remember. This is the one of the git cheatsheets that I think I have been using all the time.
+Git is the most popular distributed version-control system for tracking changes in source code during software development, and this is a simple collection of git commands that I have been using for most of the time.
 
 ### Checking the basic configurations
 
