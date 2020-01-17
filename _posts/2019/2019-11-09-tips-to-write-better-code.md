@@ -7,28 +7,46 @@ tags: [Best Practices, Software Engineering, Coding Tips]
 comments: true
 ---
 
-Coding is part of my life. That's what I do the most, for living. While I was reading something on [Hacker News](https://news.ycombinator.com/), I came across that someone had mentioned somewhere in the comments about something to consider on writing a better code. I don't really remember which post, to be exact. But I did some quick notes on those. Since then, I have been practicing the following mental model in my coding, and it helped a lot in improving my code. I think this is something good to share here.
+Coding is part of my life. That's what I do the most now, for living. Everyday I learn to improve my coding skill. I love the errors in code. Every error is giving me a challenge, and at the same time an opportunity for me to learn my mistake. One day, while I was reading some posts and comments on [Hacker News](https://news.ycombinator.com/), I came across that someone had mentioned somewhere in the comments about something to consider on how to write a better code. Since then, I have been asking myself each time I started to code and it becomes some sort of a mental model now to me. Yep, it worked and helped in improving my code.
 
-To simplify, in your code, just ensure you have all of these:
+Just ask yourself these four questions whenever you code:
 
-> Working, simple, correct, optimized
+1. Is your code working regardless of how ugly or buggy it was?
+2. Is your code now working correctly, meeting all the acceptance criteria?
+3. Is your code simple?
+4. Is your code getting optimized properly?
 
----
+### Working code
 
-To elaborate further...
+First thing you need is a working code. Don't bother if your code is just experimental, proof-of-concept or prototype. Don't bother if your code looks ugly or buggy. The only thing that matter is that it works in the way you are expecting at first. Without the working code, it doesn't prove you anything on the thing you have done. Making the code works first is crucial. There are many things you can do with the working code, starting with writing the unit test for it.
 
-### Working
+### Working correctly. Correctness of the code.
 
-The first thing you want to ask yourself whenever you are writing your code, _is it working?_ It doesn't matter _how_ you do it, the code just needs to work the way it is expected to be. The code represents a proof of concept. It does at least 90% of the things, some part may look ugly and messy but it validates a hypothesis. This is maybe your Alpha version!
+Working code is not complete. It needs to meet all the acceptance criteria. These acceptance criteria usually are written based on the use cases from your users (or customers). The same feature that may be used in different ways. Meeting all of these acceptance criteria must be validated. Correctness is the destination of any piece of software (ultimately the goal of any piece of software is to work).
 
-### Simple
+### Simplicity in code
 
-_A good code should be read like a story, not like a puzzle._ The best documentation is self-explainable code. You have to review, simplify and refactor your code so it's readable and embracing [DRY principle](https://thevaluable.dev/dry-principle-cost-benefit-example/). If reviewers don't understand the "why" of some code, a comment is left. Learn about [KISS principle](https://thevaluable.dev/kiss-principle-explained/) may help you to understand better on the code simplicity.
+> _A good code should be read like a story, not like a puzzle._
 
-### Correct
+Complex code is error-prone. If your code complexity is high, you should do your best to reduce or minimize that complexity. If the problem can be solved with less code, it would be better. The importance of simplicity in code is to ensure the code is easier to be maintained, debugged and extended (e.g. API compatibility). There are few coding principles that are designed to help you code with simplicity mind:
 
-Edge cases are covered, tests are written, internal users have validated that the feature is working as expected. Correctness is the destination of any piece of software (ultimately the goal of any piece of software is to work). There are some hot debates going on over which comes first between simplicity and correctness, and it has no winner. Some may depend on how the project structure would look like.
+- [Don't Repeat Yourself (DRY) principle](https://thevaluable.dev/dry-principle-cost-benefit-example/)
+- [Keep It Simple Stupid (KISS) principle](https://thevaluable.dev/kiss-principle-explained/)
 
-### Optimized
+Other examples:
 
-This is where mostly you polish your code. To avoid premature optimization, you should be measuring/benchmarking your code performance as earlier as possible. Your algorithm may need to be changed/updated if it's slow. If something doesn't look right on the design, you may want to optimize your design as earlier as possible, especially before the lines of code starts to grow too much.
+- Writing self-explainable code would be the best documentation.
+- Handling code duplication with _Rule of 3: Write once, copy twice and refactor after 3_.
+
+### Getting optimized
+
+If you plan properly before you code, there is nothing much you can do here. In term of code performance, you should be measuring or benchmarking your code performance as earlier as possible, probably during the design time. When come to here, if you're not satisfied with the current code performance, then this is where you shall start the optimization works, e.g. changing existing algorithm or method.
+
+Another way that you may do the optimization works here is that when there is a bug that required you to change some designs or methods in order to resolve that bug. This is where you may change your code, refactor or restructure the flow.
+
+Here are some examples on what people mostly do at this stage:
+
+- Change code algorithm/method for better performance.
+- Refactor some code due to little change in design requirements or bug fixing.
+- Clean up code or fix code linting errors.
+- Writing code documentation wherever it's necessary.

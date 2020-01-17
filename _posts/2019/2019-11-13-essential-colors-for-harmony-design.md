@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Essential colors for harmony design
-description: Most web common colors redefined to work in both light and dark theme of a harmony design.
+description: A good color set to get started with new design project that can work better for both in light and dark theme.
 keywords: color palette, harmony colors, color theme, minimalist design, essential web colors
 tags: [Colors]
 comments: true
@@ -94,7 +94,7 @@ comments: true
 }
 </style>
 
-Colors are part of the design. Each design will have its own theme of colors. For most website and web application design, these colors are the essential color components. These colors are being used to communicate the design with the user. These colors are common, harmony and standard. These colors have been **redefined** to work in both light and dark theme of the design. These colors are always my favorite colors guide. Let's the colors speak for itself!
+Creating harmony design application or website is not that easy. Choosing the wrong color palette may result in design inconsistency and visually undersatisfying user experience. Before this, I could say that I have been struggle a lot to get started with some base colors. After doing some study, I found this color palette is a good color set to get started and these colors are _redefined_ to work better in both light and dark theme of the design.
 
 <section class="blue hue">
     <div class="light-blue color">
