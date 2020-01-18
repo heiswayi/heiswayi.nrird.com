@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Image caption implementation in Jekyll site using Liquid syntax
-description: Implementing a better way to insert captioned images in my static blog articles written in Markdown using the Liquid syntax.
+description: Implementing a better way to insert captioned images in my blog site using the Liquid syntax.
 keywords: figure captions, image captions, jekyll based blog, liquid syntax, figure figcaption
 tags: [Jekyll, Liquid, Programming]
 comments: true
@@ -14,27 +14,27 @@ One of the things I really love with [Jekyll](https://jekyllrb.com/) static site
 All of my blog posts are written in Markdown syntax. If I'm going to insert an image with a caption in my article, by using the standard Markdown syntax, I will simply do something like this:
 
 ```markdown
-![Devil's Backbone](https://i.imgur.com/gYVYd9M.jpg)
+![Fossil Creek Reservoir, Fort Collins, CO](https://i.imgur.com/7yOUCeG.jpg)
 
-Figure (above): Devil's Backbone Open Space, Loveland, CO
+Figure (above): Fossil Creek Reservoir, Fort Collins, CO
 ```
 
 And then, it will generate the HTML code that's looked like this:
 
 ```html
 <p>
-    <img src="https://i.imgur.com/gYVYd9M.jpg" alt="Devil's Backbone">
+    <img src="https://i.imgur.com/7yOUCeG.jpg" alt="Fossil Creek Reservoir, Fort Collins, CO">
 </p>
 <p>
-    Figure (above): Devil's Backbone Open Space, Loveland, CO
+    Figure (above): Fossil Creek Reservoir, Fort Collins, CO
 </p>
 ```
 
 Demo:
 
-![Devil's Backbone](https://i.imgur.com/gYVYd9M.jpg)
+![Fossil Creek Reservoir, Fort Collins, CO](https://i.imgur.com/7yOUCeG.jpg)
 
-Figure (above): Devil's Backbone Open Space, Loveland, CO
+Figure (above): Fossil Creek Reservoir, Fort Collins, CO
 
 The **problem with this method** is that if my article contains multiple images and each image has its own caption, the article wouldn't look nice because **I can't do a better styling for it**. If the image doesn't need a caption, then it would be okay and easier to use the Markdown syntax.
 
@@ -46,8 +46,8 @@ Example of HTML5 code:
 
 ```html
 <figure>
-    <img src="https://i.imgur.com/gYVYd9M.jpg" alt="Devil's Backbone">
-    <figcaption>Devil's Backbone Open Space, Loveland, CO</figcaption>
+    <img src="https://i.imgur.com/7yOUCeG.jpg" alt="Fossil Creek Reservoir, Fort Collins, CO">
+    <figcaption>Fossil Creek Reservoir, Fort Collins, CO</figcaption>
 </figure>
 ```
 
@@ -94,8 +94,8 @@ And this is how I use the Liquid **include** tag in my blog post when I need to 
 ```liquid
 {%
     include figure.html 
-    src="https://i.imgur.com/gYVYd9M.jpg" 
-    caption="Devil's Backbone Open Space, Loveland, CO"
+    src="https://i.imgur.com/7yOUCeG.jpg" 
+    caption="Fossil Creek Reservoir, Fort Collins, CO"
 %}
 ```
 {% endraw %}
@@ -104,8 +104,8 @@ Demo:
 
 {%
     include figure.html 
-    src="https://i.imgur.com/gYVYd9M.jpg" 
-    caption="Devil's Backbone Open Space, Loveland, CO"
+    src="https://i.imgur.com/7yOUCeG.jpg" 
+    caption="Fossil Creek Reservoir, Fort Collins, CO"
 %}
 
 #### Hyperlinked image and hyperlink in the caption
@@ -116,8 +116,8 @@ Sometimes it could be as complex as below:
 ```liquid
 {%
     include figure.html 
-    src="https://i.imgur.com/gYVYd9M.jpg" 
-    caption="Devil's Backbone Open Space, Loveland, CO (<a href='https://heiswayi.nrird.com/photography'>source</a>)"
+    src="https://i.imgur.com/7yOUCeG.jpg" 
+    caption="Fossil Creek Reservoir, Fort Collins, CO (<a href='https://heiswayi.nrird.com/photography'>source</a>)"
     href="https://heiswayi.nrird.com/photography"
 %}
 ```
@@ -127,9 +127,9 @@ Demo:
 
 {%
     include figure.html 
-    src="https://i.imgur.com/gYVYd9M.jpg" 
-    caption="Devil's Backbone Open Space, Loveland, CO (<a href='https://heiswayi.nrird.com/photography'>source</a>)"
+    src="https://i.imgur.com/7yOUCeG.jpg" 
+    caption="Fossil Creek Reservoir, Fort Collins, CO (<a href='https://heiswayi.nrird.com/photography'>source</a>)"
     href="https://heiswayi.nrird.com/photography"
 %}
 
-Once you have this Liquid template implemented, all you need to do next is the styling. The styling can be done either using standard CSS or SASS. **Please be aware that this method is specific to a Jekyll template, and the source of your post may not properly work when used in other Jekyll templates.**
+Once you have this Liquid template implemented, all you need to do next is the styling. The styling can be done either using standard CSS or SASS. **Please note that this method is specific to a Jekyll template, and the source of your post may not properly work when used in other Jekyll templates.**

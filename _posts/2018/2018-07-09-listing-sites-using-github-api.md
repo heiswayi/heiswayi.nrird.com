@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Listing sites for GitHub Repositories and GitHub Gists
-description: Creating of simple listing sites for my GitHub repositories and GitHub gists using JavaScript and GitHub API.
+title: Listing sites using GitHub API
+description: Creating of simple listing sites for my GitHub Repositories and GitHub Gists using GitHub API in JavaScript.
 keywords: listing sites, github repos, github gists, github api
 tags: [JavaScript, GitHub API, Open Source, Programming]
 comments: true
