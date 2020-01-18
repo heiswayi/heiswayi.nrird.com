@@ -446,6 +446,7 @@ blockquote p:last-child {
     text-transform: uppercase;
     font-family: $postmeta-font;
     font-size: 0.9rem;
+    color: #888;
 }
 
 .post-list-date small {
@@ -767,7 +768,7 @@ a.skip:hover {
             width: 4rem;
             text-align: right;
             font-family: $postmeta-font;
-            color: #bbb;
+            color: #888;
         }
         .full-title {
             display: table-cell;

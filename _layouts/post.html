@@ -9,12 +9,6 @@ published: true
 <head>
   {% include head.html %}
   <style>
-    .post-date {
-      color: #ddd;
-    }
-    .post-date:hover {
-      color: #888;
-    }
     .img-logo {
       display: block;
       margin-top: 2rem;
@@ -49,7 +43,7 @@ published: true
 
       <div class="post">
         <div class="post-top-meta">
-          <!--<div class="post-date">{{ page.date | date: "%B %d, %Y" }} — By {{ site.author.name }}</div>-->
+          <div class="post-date">{{ page.date | date: "%B %d, %Y" }} — By {{ site.author.name }}</div>
           <h1 class="post-title">{{ page.title }}</h1>
         </div>
 
@@ -57,7 +51,7 @@ published: true
         {{ content }}
         </article>
 
-        <div class="post-date post-bottom-meta">{{ page.date | date: "%B %d, %Y" }} — By {{ site.author.name }}</div>
+        <!-- <div class="post-date post-bottom-meta">{{ page.date | date: "%B %d, %Y" }} — By {{ site.author.name }}</div> -->
 
         {% if site.show_tags %}
         {% assign post = page %}
