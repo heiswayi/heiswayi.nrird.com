@@ -7,20 +7,20 @@ tags: [C#, WPF, Project]
 comments: true
 ---
 
-Few months ago, I built Inhouse Camguard in my spare time to experiment with some AForge libraries using C# and WPF. AForge.NET Framework is easy to use and we can do many great applications with it. Other than just detecting motion in the live video feed, Inhouse Camguard also can plot a continuous graph showing the sensivity of the motion from the camera source, do data logging with some options and capture the image based on trigger threshold.
+I built Inhouse Camguard few months ago in my spare time to experiment with some AForge libraries using C# and WPF. [AForge.NET Framework](http://www.aforgenet.com/framework/) is easy to use, and we can do many great applications with it. The purpose of this app is to automatically detect a motion from a video feed like a webcam video while plotting a continuous graph showing the sensitivity of that motion. This app can do some data logging and is able to capture a static image of the video when the motion sensitivity triggers the threshold.
 
 {% include figure.html src="https://i.imgur.com/1vAwAmW.png" caption="Inhouse Camguard 1.0" %}
 
-### Application features
+### Application feature details
 
-- 2 type of motion detection algorithms
-- 4 type of motion processing algorithms
-- display motion history overlay chart at the bottom of live video feed
-- access to Local Video Capture Settings and Crossbar Video Settings tool
-- display histogram (luminosity, red, green, blue) of the current video feed
-- display motion sensitivity graph plotting
-- data logging with some options
-- trigger settings with option to capture the image
+- Contains 2 types of motion detection algorithms.
+- Contains 4 types of motion processing algorithms.
+- Able to display motion history overlay chart at the bottom of live video feed.
+- Able to access to Local Video Capture Settings and Crossbar Video Settings tool.
+- Can display histogram (luminosity, red, green, blue) of the current video feed.
+- Can display motion sensitivity graph plotting.
+- Can do data logging with few options available.
+- Has trigger settings with certain options to capture the image.
 
 ### Source code & download
 
