@@ -70,21 +70,23 @@ h6 {
     margin-bottom: 1rem;
     line-height: 1.25;
     color: #313131;
-    font-family: $heading-font;
 }
 
 h1 {
     font-size: 2rem;
+    font-family: $headingh1-font;
 }
 
 h2 {
     margin-top: 1rem;
     font-size: 1.5rem;
+    font-family: $headingh2-font;
 }
 
 h3 {
     margin-top: 2rem;
     font-size: 1.25rem;
+    font-family: $headingh3-font;
 }
 
 h4,
@@ -92,6 +94,7 @@ h5,
 h6 {
     margin-top: 1.5rem;
     font-size: 1.1rem;
+    font-family: $headingh456-font;
 }
 
 dt {
@@ -198,6 +201,8 @@ img {
 figure {
     padding-top: 2rem;
     padding-bottom: 2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
     margin: 1.5rem 0;
     background: repeating-linear-gradient(135deg, #dfdfdf 0, #dfdfdf 1%, #ffffff 0, #ffffff 50%) 0 / 20px 20px;
     text-align: center;
@@ -458,7 +463,7 @@ blockquote p:last-child {
 
 .post-list-title {
     font-size: 1.1rem;
-    font-family: $heading-font;
+    // font-family: $heading-font;
     line-height: 1.2;
     a {
         border-bottom: 0;
@@ -762,7 +767,7 @@ a.skip:hover {
     .post-title {
         display: table;
         width: 100%;
-        font-family: $heading-font;
+        // font-family: $heading-font;
         .post-date {
             display: table-cell;
             width: 4rem;
@@ -793,6 +798,7 @@ a.skip:hover {
     }
     .year {
         color: #bbb;
+        font-family: $year-label-font;
     }
 }
 

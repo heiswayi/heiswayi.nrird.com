@@ -67,3 +67,13 @@
   top: 20%;
   left: calc(50% + 19px);
 }
+
+.switch-index {
+  text-align: right;
+  a {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    border-bottom: none;
+    letter-spacing: 1px;
+  }
+}
