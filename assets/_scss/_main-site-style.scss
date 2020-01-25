@@ -284,8 +284,9 @@ tbody tr:nth-child(odd) {
     position: relative;
     border-bottom: 1px solid #ddd;
     box-shadow: 0 2px 2px rgba(0,0,0,0.05);
-    width: 100vw;
+    width: 100%;
     z-index: 1000;
+    overflow-x: hidden;
 }
 
 .masthead-post {
