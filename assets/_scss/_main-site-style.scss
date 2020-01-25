@@ -201,9 +201,8 @@ img {
 figure {
     padding-top: 2rem;
     padding-bottom: 2rem;
-    padding-left: 2rem;
-    padding-right: 2rem;
-    margin: 1.5rem 0;
+    margin-left: 0;
+    margin-right: 0;
     background: repeating-linear-gradient(135deg, #dfdfdf 0, #dfdfdf 1%, #ffffff 0, #ffffff 50%) 0 / 20px 20px;
     text-align: center;
     img {
@@ -268,10 +267,8 @@ tbody tr:nth-child(odd) {
 }
 
 .container {
-    padding-left: 1rem;
-    padding-right: 1rem;
-    margin-left: auto;
-    margin-right: auto;
+    padding-left: 2rem;
+    padding-right: 2rem;
     max-width: 28rem;
     z-index: 99;
     position: relative;
@@ -337,6 +334,7 @@ tbody tr:nth-child(odd) {
     i.em {
         margin-top: -4px;
     }
+    text-align: justify;
 }
 
 .post {
@@ -518,7 +516,6 @@ blockquote p:last-child {
 }
 
 .copyright {
-    text-align: center;
     font-size: 0.8rem;
     color: #888;
     a {
@@ -534,8 +531,7 @@ blockquote p:last-child {
 }
 
 .footer {
-    margin: 0 auto 1rem;
-    padding: 0 1rem 1rem;
+    margin: 1rem 2rem 2rem 2rem;
     max-width: 28rem;
     z-index: 99;
     position: relative;
@@ -776,17 +772,16 @@ a.skip:hover {
     .post-title {
         display: table;
         width: 100%;
-        // font-family: $heading-font;
         .post-date {
             display: table-cell;
             width: 4rem;
-            text-align: right;
+            text-align: left;
             font-family: $postmeta-font;
             color: #888;
         }
         .full-title {
             display: table-cell;
-            padding-right: 10px;
+            // padding-right: 10px;
             a {
                 border: none;
                 color: #333;

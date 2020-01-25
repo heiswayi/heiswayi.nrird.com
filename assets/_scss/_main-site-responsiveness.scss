@@ -99,25 +99,11 @@
   .container, .footer {
     max-width: 36rem;
   }
-  .post,
-  .page {
-    figure {
-      margin-left: -100px;
-      margin-right: -100px;
-    }
-  }
 }
 
 /* Large desktop */
 @media (min-width: 1200px) {
   .container, .footer {
     max-width: 44rem;
-  }
-  .post,
-  .page {
-    figure {
-      margin-left: -100px;
-      margin-right: -100px;
-    }
   }
 }
