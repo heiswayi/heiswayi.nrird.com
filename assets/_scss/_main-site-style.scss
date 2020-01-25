@@ -280,7 +280,7 @@ tbody tr:nth-child(odd) {
 .masthead {
     padding-top: 1rem;
     margin-bottom: 2rem;
-    background: repeating-linear-gradient(135deg, #dfdfdf 0, #dfdfdf 1%, #ffffff 0, #ffffff 50%) 0 / 20px 20px;
+    background: #fff;
     position: relative;
     border-bottom: 1px solid #ddd;
     box-shadow: 0 2px 2px rgba(0,0,0,0.05);
@@ -571,7 +571,6 @@ blockquote p:last-child {
         white-space: nowrap;
         font-family: $topmenu-font;
         font-size: 0.8rem;
-        text-transform: uppercase;
         &:hover {
             background: #06b;
             color: #fff;
