@@ -96,7 +96,7 @@
 
 /* Portrait tablet to landscape and desktop */
 @media (min-width: 768px) and (max-width: 1199px) {
-  .container, .footer, .nav {
+  .container, .footer {
     max-width: 36rem;
   }
   .post,
@@ -110,7 +110,7 @@
 
 /* Large desktop */
 @media (min-width: 1200px) {
-  .container, .footer, .nav {
+  .container, .footer {
     max-width: 44rem;
   }
   .post,
