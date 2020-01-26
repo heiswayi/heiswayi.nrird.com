@@ -41,6 +41,15 @@
       margin-top: 2rem;
     }
   }
+  .page,
+  .post {
+    text-align: left;
+    figure,
+    pre {
+      margin-left: -2rem;
+      margin-right: -2rem;
+    }
+  }
 }
 
 /* Landscape phone to portrait tablet */
