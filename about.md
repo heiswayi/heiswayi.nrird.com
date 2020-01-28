@@ -42,7 +42,7 @@ The information on this site is provided "AS IS" with no warranties, and confers
 
 ### Copyright notice
 
-Unless otherwise stated, all contents on this site are licensed under [CC BY-NC 4.0 License](https://creativecommons.org/licenses/by-nc/4.0/).
+Unless otherwise stated, all contents on this site are licensed under [CC BY-SA 4.0 License](https://creativecommons.org/licenses/by-sa/4.0/).
 
 ### Contact info
 

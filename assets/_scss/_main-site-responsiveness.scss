@@ -49,6 +49,19 @@
       margin-left: -2rem;
       margin-right: -2rem;
     }
+    .post-date {
+      .hypen {
+        display: none;
+      }
+      .date {
+        display: block;
+      }
+      .author {
+        display: block;
+        font-size: 0.6rem;
+        margin-bottom: 1rem;
+      }
+    }
   }
 }
 
