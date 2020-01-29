@@ -140,4 +140,8 @@ This page contains a collection of links to my projects, page shortcuts, source 
     <a href="https://nullableobject.com/imgh/">Personal Image Hosting Script</a><br>
     My private image hosting script. (PHP)
   </li>
+  <li>
+    <a href="hhttps://heiswayi.github.io/code-playground">Code Playground</a><br>
+    Web-based code playground for formatting any code snippet using Monaco Editor.
+  </li>
 </ul>
