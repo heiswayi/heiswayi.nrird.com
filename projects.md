@@ -141,7 +141,7 @@ This page contains a collection of links to my projects, page shortcuts, source 
     My private image hosting script. (PHP)
   </li>
   <li>
-    <a href="hhttps://heiswayi.github.io/code-playground">Code Playground</a><br>
+    <a href="https://heiswayi.github.io/code-playground">Code Playground</a><br>
     Web-based code playground for formatting any code snippet using Monaco Editor.
   </li>
 </ul>
