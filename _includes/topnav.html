@@ -1,9 +1,30 @@
+{% assign index = '' %}
+{% assign about = '' %}
+{% assign projects = '' %}
+{% assign photos = '' %}
+
+{% case page.url %}
+    {% when "/" %}
+        {% assign index = 'active' %}
+    {% when "/about" %}
+        {% assign about = 'active' %}
+    {% when "/projects" %}
+        {% assign projects = 'active' %}
+    {% when "/photography" %}
+        {% assign photos = 'active' %}
+    {% else %}
+        {% assign index = '' %}
+        {% assign about = '' %}
+        {% assign projects = '' %}
+        {% assign photos = '' %}
+{% endcase %}
+
 <div class="masthead">
     <div class="nav">
         <span class="logo" title="Heiswayi Nrird's Personal Blog"><span class="dot-red" aria-hidden="true">/</span><span class="dot-yellow" aria-hidden="true">\</span><span class="dot-green" aria-hidden="true">/</span> Heiswayi Nrird</span>
-        <a href="{{ "/" | prepend: site.baseurl | prepend: site.url }}">/index</a>
-        <a href="{{ "/about" | prepend: site.baseurl | prepend: site.url }}">/about</a>
-        <a href="{{ "/projects" | prepend: site.baseurl | prepend: site.url }}">/projects</a>
-        <a href="{{ "/photography" | prepend: site.baseurl | prepend: site.url }}">/photos</a>
+        <a href="{{ "/" | prepend: site.baseurl | prepend: site.url }}" class="{{index}}">/index</a>
+        <a href="{{ "/about" | prepend: site.baseurl | prepend: site.url }}" class="{{about}}">/about</a>
+        <a href="{{ "/projects" | prepend: site.baseurl | prepend: site.url }}" class="{{projects}}">/projects</a>
+        <a href="{{ "/photography" | prepend: site.baseurl | prepend: site.url }}" class="{{photos}}">/photos</a>
     </div>
 </div>

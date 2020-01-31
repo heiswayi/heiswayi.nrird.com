@@ -1,8 +1,6 @@
 /*! Main Layout Styles */
 
 * {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
 
@@ -13,45 +11,24 @@ body {
     height: 100%;
     color: #414141;
     background-color: #fff;
-    -webkit-text-size-adjust: 100%;
-    -ms-text-size-adjust: 100%;
     font-family: $body-font;
-    /*font-weight: 300;*/
     font-size: 18px;
     line-height: 1.6;
     text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
     text-rendering: optimizeLegibility !important;
-    -webkit-font-smoothing: antialiased !important;
-    -moz-osx-font-smoothing: grayscale !important;
-
-    -webkit-text-size-adjust: 100%;
-    -ms-text-size-adjust: 100%;
-    -webkit-overflow-scrolling: touch;
     scroll-behavior: smooth;
-
     font-kerning: normal;
-    -moz-font-feature-settings:"kern" 1, "liga" 1;
-    -ms-font-feature-settings:"kern" 1, "liga" 1;
-    -o-font-feature-settings:"kern" 1, "liga" 1;
-    -webkit-font-feature-settings:"kern" 1, "liga" 1;
     font-feature-settings:"kern" 1, "liga" 1;
 }
 
 a {
     color: #06b;
     text-decoration: none;
-    -webkit-transition: all 500ms ease;
-    -moz-transition: all 500ms ease;
-    -o-transition: all 500ms ease;
     transition: all 500ms ease;
     overflow-wrap: break-word;
     word-wrap: break-word;
-    -ms-word-break: break-all;
     word-break: break-all;
     word-break: break-word;
-    -ms-hyphens: auto;
-    -moz-hyphens: auto;
-    -webkit-hyphens: auto;
     hyphens: auto;
     border-bottom: 1px solid #06b;
     &:hover {
@@ -109,8 +86,7 @@ dd {
 hr {
     position: relative;
     border: 0;
-    border-top: 1px solid #eee;
-    border-bottom: 1px solid #fff;
+    border-top: 1px solid #ccc;
     margin: 1.5rem 0;
 }
 
@@ -140,11 +116,6 @@ pre {
     line-height: 1.4;
     white-space: pre;
     overflow: auto;
-    /*
-    background-color: #fdfdfd;
-    border: 1px solid #ddd;
-    box-shadow: 3px 3px rgba(0,0,0,.1);
-    */
     padding: .5rem 2rem .5rem .5rem;
     max-height: 800px;
     font-size: .9rem;
@@ -160,13 +131,7 @@ pre {
         display: block;
         float: left;
         margin: 0 1em 0 -1em;
-        -webkit-user-select: none; /* Safari */        
-        -moz-user-select: none; /* Firefox */
-        -ms-user-select: none; /* IE10+/Edge */
         user-select: none; /* Standard */
-        /*
-        border-right: 1px solid #ddd;
-        */
         text-align: right;
         span {
             display: block;
@@ -202,8 +167,10 @@ img {
 figure {
     padding-top: 2rem;
     padding-bottom: 2rem;
-    margin-left: 0;
-    margin-right: 0;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    margin-left: -2rem;
+    margin-right: -2rem;
     background: repeating-linear-gradient(135deg, #dfdfdf 0, #dfdfdf 1%, #ffffff 0, #ffffff 50%) 0 / 20px 20px;
     text-align: center;
     img {
@@ -273,6 +240,8 @@ tbody tr:nth-child(odd) {
     max-width: 28rem;
     z-index: 99;
     position: relative;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .masthead {
@@ -332,10 +301,10 @@ tbody tr:nth-child(odd) {
 .post {
     margin-bottom: 4em;
     font-size: 1rem;
+    text-align: left;
     i.em {
         margin-top: -4px;
     }
-    text-align: justify;
 }
 
 .post {
@@ -353,14 +322,9 @@ tbody tr:nth-child(odd) {
         color: #999;
         outline: 0;
         text-decoration: none;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
         user-select: none;
         font-family: $tag-font;
         font-size: 0.8rem;
-        -webkit-border-radius: 3px;
-        -moz-border-radius: 3px;
         border-radius: 3px;
     }
     .tagged a:hover {
@@ -504,8 +468,6 @@ blockquote p:last-child {
 
 .hrline {
     background: #ddd;
-    background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0)), color-stop(#ccc), to(rgba(255, 255, 255, 0)));
-    background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0), #ccc, rgba(255, 255, 255, 0));
     background: linear-gradient(to right, rgba(255, 255, 255, 0), #ccc, rgba(255, 255, 255, 0));
     height: 1px;
     margin: 2.5em 0;
@@ -532,10 +494,13 @@ blockquote p:last-child {
 }
 
 .footer {
-    margin: 1rem 2rem 2rem 2rem;
+    margin: 1rem auto 2rem auto;
     max-width: 28rem;
     z-index: 99;
     position: relative;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    text-align: center;
 }
 
 .master-nav {
@@ -571,7 +536,13 @@ blockquote p:last-child {
         &:hover {
             background: #06b;
             color: #fff;
-            /* border: 1px solid #069; */
+        }
+        &.active {
+            // background: #06b;
+            // color: #fff;
+            // text-decoration: underline;
+            background: #FFDC00;
+            color: #000;
         }
     }
 }
@@ -591,14 +562,8 @@ blockquote p:last-child {
         text-align: center;
         display: inline-block;
         color: #777;
-        -webkit-transition: all 0.27s cubic-bezier(0.3, 0.1, 0.58, 1);
-        -moz-transition: all 0.27s cubic-bezier(0.3, 0.1, 0.58, 1);
-        -o-transition: all 0.27s cubic-bezier(0.3, 0.1, 0.58, 1);
-        -ms-transition: all 0.27s cubic-bezier(0.3, 0.1, 0.58, 1);
         transition: all 0.27s cubic-bezier(0.3, 0.1, 0.58, 1);
         background: rgba(0, 0, 0, 0.03);
-        -webkit-border-radius: 3px;
-        -moz-border-radius: 3px;
         border-radius: 3px;
         &:hover {
             color: #fff;
@@ -642,8 +607,6 @@ a.skip:hover {
         padding-left: 5px;
         padding-right: 5px;
         display: inline-block;
-        -webkit-border-radius: 3px;
-        -moz-border-radius: 3px;
         border-radius: 3px;
         line-height: 2;
         font-family: $monospace;
@@ -682,10 +645,7 @@ a.skip:hover {
 }
 
 .muted {
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
     filter: alpha(opacity=50);
-    -moz-opacity: 0.5;
-    -khtml-opacity: 0.5;
     opacity: 0.5;
 }
 
