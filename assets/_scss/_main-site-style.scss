@@ -183,9 +183,10 @@ figure {
         font-size: 0.9rem;
         padding-left: 2rem;
         padding-right: 2rem;
-        line-height: 1.4;
+        line-height: 1.6;
+        font-family: $figcaption-font;
         span {
-            background-color: rgba(0,0,0,.1);
+            background-color: #fff;
             padding: 0.2rem 0.5rem;
         }
         a:hover {
@@ -734,15 +735,26 @@ a.skip:hover {
         display: table;
         width: 100%;
         .post-date {
-            display: table-cell;
-            width: 4rem;
+            // display: table-cell;
+            display: inline-block;
             text-align: left;
             font-family: $postmeta-font;
-            color: #888;
+            color: #ccc;
+            width: fit-content;
+            word-wrap: none;
+            white-space: nowrap;
         }
         .full-title {
             display: table-cell;
             // padding-right: 10px;
+            &:hover {
+                &::before {
+                    content: '→';
+                    margin-left: -1.5rem;
+                    padding-right: 0.5rem;
+                    font-weight: normal;
+                }
+            }
             a {
                 border: none;
                 color: #333;

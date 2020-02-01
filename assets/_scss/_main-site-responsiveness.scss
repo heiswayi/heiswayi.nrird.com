@@ -6,48 +6,23 @@
   .hidden-on-mobile {
     display: none;
   }
-  .masthead-title {
-    a {
-      font-size: 2rem;
-      letter-spacing: -0.016em;
-    }
-    small {
-      font-size: 1rem;
-      letter-spacing: -0.008em;
-      margin-top: 0px;
-    }
-  }
   .container img {
     transform: none;
     border-radius: 0px;
   }
-  .archives {
-    .post-list-archives {
-      margin-bottom: .5rem;
-      line-height: 1.2;
-      .date-full {
-        display: none !important;
-      }
-      .full-title {
-        font-family: $body-font;
-        font-size: 1rem;
-        display: list-item;
-        list-style-type: disc;
-        list-style-position: outside;
-        margin-left: 1.1rem;
-      }
-    }
-    .year {
-      margin-top: 2rem;
-    }
-  }
   .page,
   .post {
     text-align: left;
-    figure,
     pre {
       margin-left: -2rem;
       margin-right: -2rem;
+      border-left: none;
+      border-right: none;
+    }
+    figure {
+      img {
+        box-shadow: 1px 1px rgba(0,0,0,.1);
+      }
     }
     .post-date {
       .hypen {
@@ -104,7 +79,9 @@
         display: list-item;
         list-style-type: disc;
         list-style-position: outside;
-        margin-left: 1.1rem;
+        &:hover {
+          list-style-type: none;
+        }
       }
       .post-date {
         display: none;
