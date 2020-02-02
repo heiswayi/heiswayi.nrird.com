@@ -1,15 +1,17 @@
-@import url("https://fonts.googleapis.com/css?family=Rubik&display=swap");
+// @import url("https://fonts.googleapis.com/css?family=Rubik&display=swap");
+@import url('https://fonts.googleapis.com/css?family=Solway&display=swap');
 
 $sans-serif: "Rubik", Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad,
   "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial,
   sans-serif;
+$serif: 'Solway', serif;
 $monospace: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono",
   "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
 
-$body-font: $sans-serif;
-$heading-font: $sans-serif;
-$button-font: $sans-serif;
-$topmenu-font: $sans-serif;
+$body-font: $serif;
+$heading-font: $serif;
+$button-font: $serif;
+$topmenu-font: $serif;
 
 $logo-font: $monospace;
 $figcaption-font: $monospace;
@@ -18,9 +20,9 @@ $tag-font: $monospace;
 $postmeta-font: $monospace;
 $footnote-font: $monospace;
 
-$headingh1-font: $sans-serif;
-$headingh2-font: $sans-serif;
-$headingh3-font: $sans-serif;
-$headingh456-font: $sans-serif;
+$headingh1-font: $serif;
+$headingh2-font: $serif;
+$headingh3-font: $serif;
+$headingh456-font: $serif;
 
 $year-label-font: $monospace;
