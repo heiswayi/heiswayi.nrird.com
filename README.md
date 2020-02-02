@@ -2,7 +2,7 @@
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/72b75a51-a71b-4941-90c1-804ad0674f9f/deploy-status)](https://app.netlify.com/sites/heiswayi-nrird-techblog/deploys)
 
-This is a source code repository for https://heiswayi.nrird.com, Heiswayi Nrird's Website. It is a static site and deployed by [Netlify](https://www.netlify.com/).
+This is a source code repository for https://heiswayi.nrird.com, Heiswayi Nrird's Personal Website. It is a static site and deployed using [Netlify](https://www.netlify.com/).
 
 ### Setup
 
@@ -34,6 +34,6 @@ Files or folders with `_` at the beginning of the name will be ignored from bein
 ### Licensing
 
 - Site source code and all of original code snippets are licensed under [MIT license](LICENSE.md).
-- Site contents and images are licensed under [CC BY-NC 4.0 license](https://creativecommons.org/licenses/by-nc/4.0/).
+- Site contents and images are licensed under [CC BY-SA 4.0 License](https://creativecommons.org/licenses/by-sa/4.0/).
 
 © 2015 - 2020 [Heiswayi Nrird](https://heiswayi.nrird.com/about) ([Email](mailto:heiswayi@nrird.com))
