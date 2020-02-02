@@ -4,7 +4,7 @@
 {% assign photos = '' %}
 
 {% case page.url %}
-    {% when "/" %}
+    {% when "/index-blog" %}
         {% assign index = 'active' %}
     {% when "/about" %}
         {% assign about = 'active' %}
@@ -22,8 +22,8 @@
 <div class="masthead">
     <div class="container">
         <div class="nav">
-            <span class="logo" title="Heiswayi Nrird's Personal Blog"><span class="dot-red" aria-hidden="true">/</span><span class="dot-yellow" aria-hidden="true">\</span><span class="dot-green" aria-hidden="true">/</span> Heiswayi Nrird</span>
-            <a href="{{ "/" | prepend: site.baseurl | prepend: site.url }}" class="{{index}}">/index</a>
+            <a href="{{ "/" | prepend: site.baseurl | prepend: site.url }}" class="logo" title="Heiswayi Nrird's Personal Blog"><span class="dot-red" aria-hidden="true">/</span><span class="dot-yellow" aria-hidden="true">\</span><span class="dot-green" aria-hidden="true">/</span> Heiswayi Nrird</a href="#">
+            <a href="{{ "/index-blog" | prepend: site.baseurl | prepend: site.url }}" class="{{index}}">/index</a>
             <a href="{{ "/about" | prepend: site.baseurl | prepend: site.url }}" class="{{about}}">/about</a>
             <a href="{{ "/projects" | prepend: site.baseurl | prepend: site.url }}" class="{{projects}}">/projects</a>
             <a href="{{ "/photography" | prepend: site.baseurl | prepend: site.url }}" class="{{photos}}">/photos</a>

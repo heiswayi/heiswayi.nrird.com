@@ -268,7 +268,7 @@ tbody tr:nth-child(odd) {
     align-items: center;
     margin-top: 1rem;
     margin-bottom: 1rem;
-    .logo {
+    a.logo {
         color: #ccc;
         border-bottom: 0;
         padding: 7px 15px;
@@ -276,7 +276,11 @@ tbody tr:nth-child(odd) {
         font-family: $logo-font;
         font-size: 0.8rem;
         user-select: none;
-        background-color: #324155;
+        background: #324155;
+        &:hover {
+            background: #005082;
+            color: #ccc;
+        }
     }
     a {
         color: #414141;

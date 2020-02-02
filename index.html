@@ -4,80 +4,92 @@ published: true
 title: Home
 ---
 
-{% assign rawtags = "" %}
-{% for post in site.posts %}
-	{% assign ttags = post.tags | join:'|' | append:'|' %}
-	{% assign rawtags = rawtags | append:ttags %}
-{% endfor %}
-{% assign rawtags = rawtags | split:'|' | sort %}
-
-{% assign tags = "" %}
-{% for tag in rawtags %}
-	{% if tag != "" %}
-		{% if tags == "" %}
-			{% assign tags = tag | split:'|' %}
-		{% endif %}
-		{% unless tags contains tag %}
-			{% assign tags = tags | join:'|' | append:'|' | append:tag | split:'|' %}
-		{% endunless %}
-	{% endif %}
-{% endfor %}
-
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en" class="no-js" itemscope itemtype="http://schema.org/WebPage">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en" class="no-js" itemscope
+	itemtype="http://schema.org/WebPage">
 
 <head>
 	{% include head.html %}
+	<link href="https://fonts.googleapis.com/css?family=Solway&display=swap" rel="stylesheet">
 	<style>
-	.container {
-		margin-bottom: 2rem;
+	body,
+	h1,
+	.button {
+		font-family: 'Solway', serif;
 	}
-	.ender {
-		margin-top: 1rem;
+
+	.lh-copy {
+		line-height: 1.5;
+	}
+
+	.pa3 {
+		padding: 1rem;
+	}
+
+	.f3 {
+		font-size: 1.5rem;
+	}
+
+	.measure {
+		max-width: 30em;
+		text-align: justify;
+	}
+
+	a {
+		border-bottom: none;
+	}
+
+	.button {
+		margin-right: 5px;
+		margin-bottom: 8px;
+	}
+
+	@media screen and (min-width: 30em) {
+		.pa5-ns {
+			padding: 4rem;
+		}
+	}
+
+	@media screen and (min-width: 30em) and (max-width: 60em) {
+		.f2-m {
+			font-size: 2.25rem;
+		}
+	}
+
+	@media screen and (min-width: 60em) {
+		.f1-l {
+			font-size: 3rem;
+		}
 	}
 	</style>
 </head>
 
 <body>
 
-  <h1 style="display:none">{{ site.seo_title }}</h1>
-  <h2 style="display:none">{{ site.seo_description }}</h2>
+	<h1 style="display:none">{{ site.seo_title }}</h1>
+	<h2 style="display:none">{{ site.seo_description }}</h2>
 
-  <a href="#content" class="skip">Skip to content</a>
+	<a href="#content" class="skip">Skip to content</a>
 
-  <div class="wrap">
+	<article id="content" class="pa3 pa5-ns">
+		<h1 class="f3 f2-m f1-l">{{ site.title }}</h1>
+		<p class="measure lh-copy">
+			Hi, I'm Heiswayi Nrird. Currently, I work and ship software at <a href="https://www.keysight.com">Keysight Technologies</a>, Penang, MY. Sometimes, I <a href="{{ "/index-blog" | prepend: site.baseurl | prepend: site.url }}">code+blog</a> occassionally. I love to contribute to Open Source and have published some works on <a href="https://github.com/heiswayi">GitHub</a>. Other times, I will be off-the-grid to capture <a href="{{ "/photography" | prepend: site.baseurl | prepend: site.url }}">some beautiful landscapes</a> or may just reading <a href="{{ "/books-i-read" | prepend: site.baseurl | prepend: site.url }}">some books</a>.
+		</p>
+		<p class="measure lh-copy nav-copy">
+			<a href="{{ "/index-blog" | prepend: site.baseurl | prepend: site.url }}" class="button">Blog</a> <a href="{{ "/about" | prepend: site.baseurl | prepend: site.url }}" class="button">About</a> <a href="{{ "/projects" | prepend: site.baseurl | prepend: site.url }}" class="button">Projects</a> <a href="{{ "/photography" | prepend: site.baseurl | prepend: site.url }}" class="button">Photos</a>
+		</p>
+		<p class="measure lh-copy elsewhere">
+			<strong>Elsewhere:</strong><br>
+			<a href="https://my.linkedin.com/in/nrird">LinkedIn</a> &middot; <a href="https://github.com/heiswayi">GitHub</a> &middot; <a href="https://gist.github.com/heiswayi">Gist</a> &middot; <a href="https://codepen.io/heiswayi/">CodePen</a> &middot; <a href="https://jsfiddle.net/user/heiswayi/">JSFiddle</a> &middot; <a href="https://unsplash.com/@heiswayi_nrird">Unsplash</a>
+		</p>
+		<p class="measure lh-copy contact">
+			<strong>Contact:</strong><br>
+			heiswayi <span style="display:none">-antispam-</span> (at) <span style="display:none">-antispam-</span>nrird dot com
+		</p>
+		<div class="ender"><span class="dot-red" aria-hidden="true">/</span><span class="dot-yellow" aria-hidden="true">\</span><span class="dot-green" aria-hidden="true">/</span></div>
+	</article>
 
-	{% include topnav.html %}
-
-    <div id="content" class="container content">
-			<hr class="hidden">
-			<span class="hidden">&nbsp;</span>
-
-			<p class="switch-index"><a href="{{ "/grid-view" | prepend: site.baseurl | prepend: site.url }}">View as Grid</a></p>
-
-			<div class="posts archives">
-			{% for post in site.posts %}
-
-				{% if post.tags contains "Project" %}
-					<div class="post-list-archives">
-						<div class="post-title"><span class="full-title"><a href="{{ post.url }}"><span class="project-label">Project/</span> {{ post.title }}</a> <span class="post-date">{{ post.date | date: "%Y-%m" }}</span></span></div>
-					</div>
-				{% else %}
-					<div class="post-list-archives">
-						<div class="post-title"><span class="full-title"><a href="{{ post.url }}">{{ post.title }}</a> <span class="post-date">{{ post.date | date: "%Y-%m" }}</span></span></div>
-					</div>
-				{% endif %}
-				
-				<span class="hidden">&nbsp;</span>
-
-			{% endfor %}
-
-			</div>
-
-			<div class="ender"><span class="dot-red" aria-hidden="true">/</span><span class="dot-yellow" aria-hidden="true">\</span><span class="dot-green" aria-hidden="true">/</span></div>
-	</div>
-  </div>
-		
 </body>
 
 </html>

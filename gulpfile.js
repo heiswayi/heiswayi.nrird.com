@@ -44,6 +44,10 @@ gulp.task('compile-sass', () => {
     .pipe(gulp.dest('./'));
 });
 
+gulp.task('copy-css', function () {
+  return gulp.src('./assets/css/main.css').pipe(gulp.dest('./'));
+});
+
 // Build Jekyll DEV
 gulp.task('build-jekyll-dev', shell.task(['bundle exec jekyll build --config=_config.yml,_config-dev.yml']))
 
