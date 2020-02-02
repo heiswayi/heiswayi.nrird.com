@@ -7,6 +7,7 @@ tags: [Motivation]
 comments: true
 ---
 
+<script>
 <div class="clock-container">
 <div class="clock">
   <div class="block" data-num="0"></div>
@@ -72,6 +73,7 @@ comments: true
   <div class="divider"></div>
 </div>
 </div>
+</script>
 <script>
 const numbers = [
 	[1, 1, 1, 1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 1, 1],
