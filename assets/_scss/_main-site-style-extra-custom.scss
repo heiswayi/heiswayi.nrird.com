@@ -71,11 +71,12 @@
 .switch-index {
   margin-top: -1rem;
   margin-bottom: 1rem;
-  text-align: left;
+  text-align: right;
+  font-family: $use-gridview-font;
+  font-size: 0.65rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
   a {
-    font-size: 0.7rem;
-    text-transform: uppercase;
     border-bottom: none;
-    letter-spacing: 1px;
   }
 }

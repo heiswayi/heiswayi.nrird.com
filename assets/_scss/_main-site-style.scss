@@ -397,6 +397,9 @@ tbody tr:nth-child(odd) {
     /*border-bottom: 1px solid #069;*/
     &.reversefootnote {
         border-bottom: none;
+        &::before {
+            content: '[return]';
+        }
     }
     &.footnote {
         border-bottom: none;
@@ -596,7 +599,7 @@ a.skip:hover {
     width: auto;
     height: auto;
     overflow: visible;
-    z-index: 1000;
+    z-index: 2000;
 }
 
 .tag-cloud {
@@ -662,17 +665,17 @@ a.skip:hover {
     margin-top: 2rem;
     font-family: $footnote-font;
     font-size: 0.8rem;
-    border-top: 1px dashed #069;
+    // border-top: 1px dashed #069;
     ol {
         li p {
             margin-bottom: 0;
         }
     }
     &:before {
-        content: 'Footnote:';
+        content: ' /\\/';
         display: block;
         padding-top: 0;
-        color: #069;
+        color: #aaa;
     }
 }
 
@@ -695,7 +698,7 @@ a.skip:hover {
         }
         .intro-text {
             margin-left: 215px;
-            font-size: 1.2rem;
+            // font-size: 1.2rem;
         }
     }
 }
