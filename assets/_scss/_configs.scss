@@ -1,29 +1,29 @@
 // @import url("https://fonts.googleapis.com/css?family=Rubik&display=swap");
-@import url('https://fonts.googleapis.com/css?family=Solway&display=swap');
+// @import url('https://fonts.googleapis.com/css?family=Solway&display=swap');
 
-$sans-serif: "Rubik", Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad,
-  "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial,
-  sans-serif;
-$serif: 'Solway', serif;
-$monospace: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono",
+// $sans-serif: "Rubik", Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
+// $serif: 'Solway', serif;
+
+$__serif__: Cambria, "Hoefler Text", Utopia, "Liberation Serif", "Nimbus Roman No9 L Regular", Times, "Times New Roman", serif;
+$__monospace__: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono",
   "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
 
-$body-font: $serif;
-$heading-font: $serif;
-$button-font: $serif;
-$topmenu-font: $serif;
+$body-font: $__serif__;
+$heading-font: $__serif__;
+$button-font: $__serif__;
+$topmenu-font: $__serif__;
 
-$logo-font: $monospace;
-$figcaption-font: $monospace;
-$precode-font: $monospace;
-$tag-font: $monospace;
-$postmeta-font: $monospace;
-$footnote-font: $monospace;
+$logo-font: $__monospace__;
+$figcaption-font: $__monospace__;
+$precode-font: $__monospace__;
+$tag-font: $__monospace__;
+$postmeta-font: $__monospace__;
+$footnote-font: $__monospace__;
 
-$headingh1-font: $serif;
-$headingh2-font: $serif;
-$headingh3-font: $serif;
-$headingh456-font: $serif;
+$headingh1-font: $__serif__;
+$headingh2-font: $__serif__;
+$headingh3-font: $__serif__;
+$headingh456-font: $__serif__;
 
-$year-label-font: $monospace;
-$use-gridview-font: $monospace;
+$year-label-font: $__monospace__;
+$use-gridview-font: $__monospace__;

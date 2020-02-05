@@ -7,7 +7,7 @@ tags: [Google Charts, JavaScript, Programming]
 comments: true
 ---
 
-<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script src="https://www.gstatic.com/charts/loader.js"></script>
 <div id="timeline" style="height: 150px;"></div>
 <script>
 google.charts.load('current', {
