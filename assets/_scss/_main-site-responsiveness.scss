@@ -1,8 +1,5 @@
 /* Landscape phones and down */
 @media (max-width: 480px) {
-  html {
-    font-size: 16px;
-  }
   .hidden-on-mobile {
     display: none;
   }
@@ -89,6 +86,16 @@
     }
     .year {
       margin-top: 2rem;
+    }
+  }
+  .nav {
+    flex-direction: column;
+    align-items: flex-end;
+    a.logo {
+      border: 1px solid #fff;
+      &:hover {
+        border: 1px solid #fff;
+      }
     }
   }
 }

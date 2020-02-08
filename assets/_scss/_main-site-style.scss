@@ -248,9 +248,9 @@ tbody tr:nth-child(odd) {
 .masthead {
     padding-top: 1rem;
     margin-bottom: 2rem;
-    background: #f8f8f8;
+    background: #fff;
     position: relative;
-    border-bottom: 1px solid #f8f8f8;
+    border-bottom: 1px solid #ccc;
     width: 100%;
     z-index: 1000;
     overflow-x: hidden;
@@ -269,34 +269,36 @@ tbody tr:nth-child(odd) {
     margin-top: 1rem;
     margin-bottom: 1rem;
     a.logo {
-        color: #ccc;
+        color: #333;
         border-bottom: 0;
         padding: 7px 15px;
         white-space: nowrap;
         font-family: $logo-font;
         font-size: 0.8rem;
         user-select: none;
-        background: #324155;
+        background: #fff;
+        border: 1px solid #ccc;
         &:hover {
-            background: #005082;
-            color: #ccc;
+            background: #fff;
+            color: #06b;
+            border: 1px solid #06b;
         }
     }
     a {
         color: #414141;
-        border-bottom: 0;
+        border: 1px solid #fff;
         padding: 7px 15px;
         white-space: nowrap;
         font-family: $topmenu-font;
         font-size: 0.8rem;
-        background: #eee;
+        background: #fff;
         &:hover {
-            background: #06b;
-            color: #fff;
+            background: #fff;
+            color: #06b;
         }
         &.active {
-            background: #06b;
-            color: #fff;
+            background: #fff;
+            color: #06b;
             text-decoration: underline;
         }
     }
