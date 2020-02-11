@@ -32,7 +32,7 @@ This page contains a collection of links to my projects, page shortcuts, source 
     Centered one-column display, nerdy typeface, ideal for something like technical blog or documentation.
   </li>
   <li>
-    <a href="http://github.com/heiswayi/textlog">TextLog</a> (2017)<br>
+    <a href="https://github.com/heiswayi/textlog">TextLog</a> (2017)<br>
     Left-aligned one-column display, ideal for documentation-styled blog.
   </li>
   <li>
