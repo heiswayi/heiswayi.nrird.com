@@ -35,6 +35,10 @@ This page contains a collection of links to my projects, page shortcuts, source 
     <a href="http://github.com/heiswayi/textlog">TextLog</a> (2017)<br>
     Left-aligned one-column display, ideal for documentation-styled blog.
   </li>
+  <li>
+    <a href="https://github.com/heiswayi/hn-barebone">HN Barebone</a> (2020)<br>
+    Heiswayi Nrird's Barebone Jekyll Theme.
+  </li>
 </ul>
 
 ### _Onepage_-styled listing sites for my stuffs on GitHub
