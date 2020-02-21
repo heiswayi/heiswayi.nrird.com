@@ -14,53 +14,65 @@ layout: null
     <meta name="author" content="{{ site.author.name }}">
 
     <style>
-    @import url("https://fonts.googleapis.com/css?family=Gaegu");
+        @import url("https://fonts.googleapis.com/css?family=Gaegu");
 
-    html,
-    body {
-        height: 100%;
-        margin: 0;
-    }
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+        }
 
-    body {
-        -webkit-align-items: center;
-        -ms-flex-align: center;
-        align-items: center;
-        background: #fff;
-        display: -webkit-flex;
-        display: flex;
-        font-family: Gaegu, sans-serif;
-        color: #333;
-        font-size: 16px;
-    }
+        body {
+            -webkit-align-items: center;
+            -ms-flex-align: center;
+            align-items: center;
+            background: #fff;
+            display: -webkit-flex;
+            display: flex;
+            font-family: Gaegu, sans-serif;
+            color: #333;
+            font-size: 16px;
+        }
 
-    .container {
-        margin: 0 auto;
-        padding: 2em;
-        max-width: 32em;
-    }
+        .container {
+            margin: 0 auto;
+            padding: 2em;
+            max-width: 32em;
+        }
 
-    h1 {
-        font-size: 2.5em;
-    }
+        h1 {
+            font-size: 2.5em;
+        }
 
-    p {
-        font-size: 1.4em;
-    }
+        p {
+            font-size: 1.4em;
+        }
 
-    a {
-        text-decoration: none;
-        color: #369;
-    }
+        a {
+            text-decoration: none;
+            color: #369;
+        }
 
-    a:hover {
-        background: #369;
-        color: #fff;
-    }
+        a:hover {
+            background: #369;
+            color: #fff;
+        }
 
-    .logo {
-        display: block;
-    }
+        .logo {
+            display: block;
+        }
+
+        .dot-red {
+            color: #FF4136;
+        }
+
+        .dot-yellow {
+            color: #FFDC00;
+        }
+
+        .dot-green {
+            color: #2ECC40;
+        }
     </style>
 
     <!--[if lt IE 9]>
@@ -70,9 +82,11 @@ layout: null
 
 <body>
     <div class="container">
-        <img src="{{ "/assets/icons/android-icon-36x36.png" | prepend: site.baseurl | prepend: site.url }}" alt="Logo" class="logo">
+        <div class="ender"><span class="dot-red" aria-hidden="true">/</span><span class="dot-yellow"
+                aria-hidden="true">\</span><span class="dot-green" aria-hidden="true">/</span></div>
         <h1>Error 404 - Page not found</h1>
-        <p>Sorry, I've misplaced that URL, or it's pointing to something that doesn't exist. 😞 Head back home to try finding it again.</p>
+        <p>Sorry, I've misplaced that URL, or it's pointing to something that doesn't exist. 😞 Head back home to try
+            finding it again.</p>
         <p>☜ <a href="{{ "/" | prepend: site.baseurl | prepend: site.url }}">Head back home?</a></p>
     </div>
 </body>
