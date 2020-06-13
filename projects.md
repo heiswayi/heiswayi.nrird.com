@@ -104,19 +104,19 @@ This page contains a collection of links to my projects, page shortcuts, source 
 
 <ul>
   <li>
-    <a href="https://nullableobject.com/xnote">XNote</a><br>
+    <a href="https://php.nrird.com/xnote">XNote</a><br>
     Minimalist, secure and encrypted pastebin app for personal use purpose.
   </li>
   <li>
-    <a href="https://nullableobject.com/speedtest/">Speedtest</a><br>
-    Minimalist speedtest site. No ads &amp; mobile friendly!
+    <a href="https://php.nrird.com/speedtest/">Speedtest</a><br>
+    Minimalist speedtest site and mobile friendly!
   </li>
   <li>
-    <a href="https://nullableobject.com/write/">Write</a><br>
+    <a href="https://php.nrird.com/write/">Write</a><br>
     A browser-based document writer featuring WYSIWYG HTML Editor from TinyMCE.
   </li>
   <li>
-    <a href="https://nullableobject.com/whois/">Whois Script</a><br>
+    <a href="https://php.nrird.com/whois/">Whois Script</a><br>
     Simple domain whois script.
   </li>
 </ul>
@@ -129,19 +129,15 @@ This page contains a collection of links to my projects, page shortcuts, source 
     Checklist for web developer.
   </li>
   <li>
-    <a href="https://nullableobject.com/s/shorten">Link Shortening Service</a><br>
-    My minimalist link shortening service. (PHP)
+    <a href="https://ph.nrird.com/s/create">S-CREATE</a><br>
+    My minimalist URL shortening service. (PHP)
   </li>
   <li>
     <a href="https://heiswayi.github.io/simple-tools">Index of /simple-tools</a><br>
     Collection of my simple web tools/scripts.
   </li>
   <li>
-    <a href="https://nullableobject.com/pr0xy/">nullableObject.pr0xy()</a><br>
-    My private web proxy script. (PHP)
-  </li>
-  <li>
-    <a href="https://nullableobject.com/imgh/">Personal Image Hosting Script</a><br>
+    <a href="https://php.nrird.com/imgh/">Personal Image Hosting Script</a><br>
     My private image hosting script. (PHP)
   </li>
   <li>
