@@ -7,6 +7,8 @@ keywords: part-time projects, hobby stuffs, open source, web apps, github repo
 
 This page contains a collection of links to my projects, page shortcuts, source code repos and working demos. These projects are part of my spare time projects that made available online. Most of the projects have been done for fun and learning. Some projects may be published as Open Source, while some others may be used for personal purposes.
 
+_Note: List of the items below are generated automatically from the blog posts._
+
 <ul>
   {% for post in site.posts %}
     {% if post.tags contains "Project" %}

@@ -12,7 +12,7 @@ keywords: aboutme, blog author, personal bio
 		<div class="photo">
 			<img src="https://avatars0.githubusercontent.com/u/13794983?v=4" alt="Heiswayi Nrird Photo">
 		</div>
-		<p class="intro-text">Hi. I'm Heiswayi Nrird. In short, you can call me "Wayi". I'm a Software Engineer based in Penang, MY. I build and ship software at <a href="https://www.keysight.com">Keysight Technologies</a>. Check out <a href="https://my.linkedin.com/in/nrird">my LinkedIn profile</a> for more details on my professional career. Sometimes, I do <em>some random stuff</em> and write about it here. Other times, I'll be off-the-grid to capture <a href="{{ "/photography" | prepend: site.baseurl | prepend: site.url }}">some beautiful landscapes</a> or may just reading <a href="{{ "/books-i-read" | prepend: site.baseurl | prepend: site.url }}">some books</a>.</p>
+		<p class="intro-text">Hi. I'm <span title="An official Internet handler name">Heiswayi Nrird</span>. In short <em>or in real life</em>, people call me "Wayi". I'm a Software Engineer based in Penang, MY. I build and ship software at <a href="https://www.keysight.com">Keysight Technologies</a>. Check me out <a href="https://my.linkedin.com/in/nrird">LinkedIn</a> for more details on my professional career. Sometimes, I do <em title="Exploring. Coding. Building. Documenting.">some random stuff</em> and write about <em>it</em> here. Other times, I'll be <em>off-the-grid</em> to capture <a href="{{ "/photography" | prepend: site.baseurl | prepend: site.url }}">some beautiful landscapes</a> or may just reading <a href="{{ "/books-i-read" | prepend: site.baseurl | prepend: site.url }}">some books</a>.</p>
 	</div>
 </div>
 
