@@ -106,19 +106,19 @@ _Note: List of the items below are generated automatically from the blog posts._
 
 <ul>
   <li>
-    <a href="https://php.nrird.com/xnote">XNote</a><br>
+    <a href="https://php.nrird.com/xnote">XNote</a> <span style="color:red">*</span><br>
     Minimalist, secure and encrypted pastebin app for personal use purpose.
   </li>
   <li>
-    <a href="https://php.nrird.com/speedtest/">Speedtest</a><br>
+    <a href="https://php.nrird.com/speedtest/">Speedtest</a> <span style="color:red">*</span><br>
     Minimalist speedtest site and mobile friendly!
-  </li>
+  </li> 
   <li>
-    <a href="https://php.nrird.com/write/">Write</a><br>
+    <a href="https://php.nrird.com/write/">Write</a> <span style="color:red">*</span><br>
     A browser-based document writer featuring WYSIWYG HTML Editor from TinyMCE.
   </li>
   <li>
-    <a href="https://php.nrird.com/whois/">Whois Script</a><br>
+    <a href="https://php.nrird.com/whois/">Whois Script</a> <span style="color:red">*</span><br>
     Simple domain whois script.
   </li>
 </ul>
@@ -131,7 +131,7 @@ _Note: List of the items below are generated automatically from the blog posts._
     Checklist for web developer.
   </li>
   <li>
-    <a href="https://ph.nrird.com/s/create">S-CREATE</a><br>
+    <a href="https://php.nrird.com/s/create">S-CREATE</a> <span style="color:red">*</span><br>
     My minimalist URL shortening service. (PHP)
   </li>
   <li>
@@ -139,7 +139,7 @@ _Note: List of the items below are generated automatically from the blog posts._
     Collection of my simple web tools/scripts.
   </li>
   <li>
-    <a href="https://php.nrird.com/imgh/">Personal Image Hosting Script</a><br>
+    <a href="https://php.nrird.com/imgh/">Personal Image Hosting Script</a> <span style="color:red">*</span><br>
     My private image hosting script. (PHP)
   </li>
   <li>
@@ -147,3 +147,5 @@ _Note: List of the items below are generated automatically from the blog posts._
     Web-based code playground for formatting any code snippet using Monaco Editor.
   </li>
 </ul>
+
+<p><span style="color:red">*</span> Hosted on AWS EC2 instance.</p>
