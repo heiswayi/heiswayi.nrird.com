@@ -1,9 +1,9 @@
 ---
 layout: post
 title: Learning Computer Security
-description: A note to learn about Computer Security
+description: A note to learn about Computer Security.
 keywords: computer security
-tags: [Computer Security]
+tags: [Computer Security, Notes]
 comments: true
 ---
 
