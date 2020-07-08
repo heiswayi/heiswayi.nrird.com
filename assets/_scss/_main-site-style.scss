@@ -259,6 +259,26 @@ tbody tr:nth-child(odd) {
     }
 }
 
+.site-logo {
+    display: none;
+    a {
+        color: #333;
+        border-bottom: 0;
+        padding: 7px 15px;
+        white-space: nowrap;
+        font-family: $logo-font;
+        font-size: 0.8rem;
+        user-select: none;
+        background: #fff;
+        border: 1px solid #ccc;
+        &:hover {
+            background: #fff;
+            color: #06b;
+            border: 1px solid #06b;
+        }
+    }
+}
+
 .nav {
     *zoom: 1;
     font-weight: 400;
@@ -283,6 +303,9 @@ tbody tr:nth-child(odd) {
             color: #06b;
             border: 1px solid #06b;
         }
+    }
+    a.menu::before {
+        content: "/";
     }
     a {
         color: #414141;
