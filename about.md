@@ -16,7 +16,7 @@ keywords: aboutme, blog author, personal bio
 	</div>
 </div>
 
-<div style="clear:both;"><p><h4>Elsewhere:</h4>Other than here, you may reach me professionally on <a href="https://my.linkedin.com/in/nrird">LinkedIn</a> (let's get connected). Also, I have been published some open source projects on <a href="https://github.com/heiswayi">GitHub</a> and put some of snippets/notes on <a href="https://gist.github.com/heiswayi">Gist</a>. Sometimes, I do some experimental stuff on web using <a href="http://codepen.io/heiswayi/">CodePen</a> and <a href="http://jsfiddle.net/user/heiswayi/">JSFiddle</a>. Also, there are some photos of mine I put on <a href="https://unsplash.com/@heiswayi_nrird">Unsplash</a>, occasionally.</p></div>
+<div style="clear:both;margin-top:2rem;"><p><h4>Elsewhere:</h4>Other than here, you may reach me professionally on <a href="https://my.linkedin.com/in/nrird">LinkedIn</a> (let's get connected). Also, I have been published some open source projects on <a href="https://github.com/heiswayi">GitHub</a> and put some of snippets/notes on <a href="https://gist.github.com/heiswayi">Gist</a>. Sometimes, I do some experimental stuff on web using <a href="http://codepen.io/heiswayi/">CodePen</a> and <a href="http://jsfiddle.net/user/heiswayi/">JSFiddle</a>. Also, there are some photos of mine I put on <a href="https://unsplash.com/@heiswayi_nrird">Unsplash</a>, occasionally.</p></div>
 
 ### Blog
 

@@ -653,16 +653,15 @@ a.skip:hover {
 }
 
 .author-info {
+    &::after {
+        clear: both;
+    }
     .with-avatar {
         .photo {
             float: left;
             width: 200px;
             height: 200px;
-            /*
-            position: relative;
-            overflow: hidden;
-            border-radius: 50%;
-            */
+            margin-bottom: 2rem;
             img {
                 margin: 0 auto;
                 height: 100%;
