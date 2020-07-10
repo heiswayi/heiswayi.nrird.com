@@ -88,32 +88,6 @@
       margin-top: 2rem;
     }
   }
-  .nav {
-    margin-top: 0;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    a.logo {
-      display: none;
-    }
-    a.menu {
-      &::before {
-        content: "";
-      }
-      border: 1px solid #ccc;
-    }
-  }
-  .site-logo {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    a {
-      border: 1px solid #fff;
-      &:hover {
-        border: 1px solid #fff;
-      }
-    }
-  }
 }
 
 /* Portrait tablet to landscape and desktop */

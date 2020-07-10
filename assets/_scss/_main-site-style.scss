@@ -1,7 +1,11 @@
 /*! Main Layout Styles */
 
-* {
+*,
+*::before,
+*::after {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 html,
@@ -12,7 +16,7 @@ body {
     color: #414141;
     background-color: #fff;
     font-family: $body-font;
-    font-size: 18px;
+    font-size: 16px;
     line-height: 1.6;
     text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
     text-rendering: optimizeLegibility !important;
@@ -120,10 +124,6 @@ pre {
     max-height: 800px;
     font-size: .9rem;
     code {
-        /*
-        color: inherit;
-        background-color: transparent;
-        */
         display: block;
         padding: 0;
     }
@@ -136,9 +136,6 @@ pre {
         span {
             display: block;
             padding: 0 .5em 0 1em;
-            /*
-            color: #ccc;
-            */
         }
     }
     .cl {
@@ -222,19 +219,6 @@ tbody tr:nth-child(odd) {
     max-width: 100%;
 }
 
-.lead {
-    font-size: 1.25rem;
-    font-weight: 300;
-}
-
-.message {
-    margin-bottom: 1rem;
-    color: #717171;
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
-    padding: 1rem;
-}
-
 .container {
     padding-left: 2rem;
     padding-right: 2rem;
@@ -256,11 +240,15 @@ tbody tr:nth-child(odd) {
     overflow-x: hidden;
     .container {
         margin-bottom: 0;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
     }
 }
 
 .site-logo {
-    display: none;
     a {
         color: #333;
         border-bottom: 0;
@@ -270,7 +258,7 @@ tbody tr:nth-child(odd) {
         font-size: 0.8rem;
         user-select: none;
         background: #fff;
-        border: 1px solid #ccc;
+        border: 1px dashed #ccc;
         &:hover {
             background: #fff;
             color: #06b;
@@ -280,34 +268,8 @@ tbody tr:nth-child(odd) {
 }
 
 .nav {
-    *zoom: 1;
-    font-weight: 400;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    a.logo {
-        color: #333;
-        border-bottom: 0;
-        padding: 7px 15px;
-        white-space: nowrap;
-        font-family: $logo-font;
-        font-size: 0.8rem;
-        user-select: none;
-        background: #fff;
-        border: 1px solid #ccc;
-        &:hover {
-            background: #fff;
-            color: #06b;
-            border: 1px solid #06b;
-        }
-    }
-    a.menu::before {
-        content: "/";
-    }
-    a {
+    margin-left: 1rem;
+    a.menu {
         color: #414141;
         border: 1px solid #fff;
         padding: 7px 15px;
@@ -315,6 +277,7 @@ tbody tr:nth-child(odd) {
         font-family: $topmenu-font;
         font-size: 0.8rem;
         background: #fff;
+        margin-bottom: 0;
         &:hover {
             background: #fff;
             color: #06b;
@@ -419,7 +382,6 @@ tbody tr:nth-child(odd) {
 
 .page a,
 .post a {
-    /*border-bottom: 1px solid #069;*/
     &.reversefootnote {
         border-bottom: none;
         &::before {
@@ -453,6 +415,12 @@ ul {
     margin-bottom: 1rem;
 }
 
+dl,
+ol,
+ul {
+    margin-left: 1rem;
+}
+
 blockquote p:last-child {
     margin-bottom: 0;
 }
@@ -465,24 +433,6 @@ blockquote p:last-child {
 .post-list-date {
     float: right;
     margin: 0 0 0 20px;
-}
-
-.edit-this-page {
-    padding-bottom: 10px;
-    text-align: right;
-    a {
-        text-transform: uppercase;
-        font-size: 0.8rem;
-        text-decoration: none;
-        border-bottom: none;
-        color: #aaa;
-        padding: 0;
-        letter-spacing: 1px;
-        &:hover {
-            background: #333;
-            color: #eee;
-        }
-    }
 }
 
 .post-date {
@@ -502,7 +452,6 @@ blockquote p:last-child {
 
 .post-list-title {
     font-size: 1.1rem;
-    // font-family: $heading-font;
     line-height: 1.2;
     a {
         border-bottom: 0;
@@ -690,7 +639,6 @@ a.skip:hover {
     margin-top: 2rem;
     font-family: $footnote-font;
     font-size: 0.8rem;
-    // border-top: 1px dashed #069;
     ol {
         li p {
             margin-bottom: 0;
@@ -772,18 +720,10 @@ a.skip:hover {
             width: fit-content;
             word-wrap: none;
             white-space: nowrap;
+            font-style: italic;
         }
         .full-title {
             display: table-cell;
-            // padding-right: 10px;
-            &:hover {
-                &::before {
-                    content: '→';
-                    margin-left: -1.4rem;
-                    padding-right: 0.5rem;
-                    font-weight: normal;
-                }
-            }
             a {
                 border: none;
                 color: #333;

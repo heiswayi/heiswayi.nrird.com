@@ -53,28 +53,28 @@ title: Home
 			<hr class="hidden">
 			<span class="hidden">&nbsp;</span>
 
-			<p class="switch-index"><a href="{{ "/blog-gridview" | prepend: site.baseurl | prepend: site.url }}">Use Grid View &rarr;</a></p>
+			<p class="switch-index"><a href="{{ "/blog-gridview" | prepend: site.baseurl | prepend: site.url }}">Use Grid View</a></p>
 
 			<div class="posts archives">
 			{% for post in site.posts %}
 
 				{% unless post.next %}
-					<h2 class="year" title="{{ post.date | date: '%Y' }}">'{{ post.date | date: '%y' }}</h2>
+					<h2 class="year" title="{{ post.date | date: '%Y' }}">{{ post.date | date: '%Y' }}</h2>
 				{% else %}
 					{% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
 					{% capture nyear %}{{ post.next.date | date: '%Y' }}{% endcapture %}
 					{% if year != nyear %}
-						<h2 class="year" title="{{ post.date | date: '%Y' }}">'{{ post.date | date: '%y' }}</h2>
+						<h2 class="year" title="{{ post.date | date: '%Y' }}">{{ post.date | date: '%Y' }}</h2>
 					{% endif %}
 				{% endunless %}
 
 				{% if post.tags contains "Project" %}
 					<div class="post-list-archives">
-						<div class="post-title"><span class="full-title"><a href="{{ post.url }}"><span class="project-label">Project/</span> {{ post.title }}</a> <span class="post-date" title="Published on {{ post.date | date: '%B %d, %Y' }}">{{ post.date | date: ".%m.%d" }}</span></span></div>
+						<div class="post-title"><span class="full-title"><a href="{{ post.url }}"><span class="project-label">Project/</span> {{ post.title }}</a> <span class="post-date" title="Published on {{ post.date | date: '%B %d, %Y' }}">{{ post.date | date: "—%m.%d" }}</span></span></div>
 					</div>
 				{% else %}
 					<div class="post-list-archives">
-						<div class="post-title"><span class="full-title"><a href="{{ post.url }}">{{ post.title }}</a> <span class="post-date" title="Published on {{ post.date | date: '%B %d, %Y' }}">{{ post.date | date: ".%m.%d" }}</span></span></div>
+						<div class="post-title"><span class="full-title"><a href="{{ post.url }}">{{ post.title }}</a> <span class="post-date" title="Published on {{ post.date | date: '%B %d, %Y' }}">{{ post.date | date: "—%m.%d" }}</span></span></div>
 					</div>
 				{% endif %}
 				
