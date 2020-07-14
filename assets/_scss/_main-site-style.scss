@@ -639,7 +639,11 @@ a.skip:hover {
     margin-top: 2rem;
     font-family: $footnote-font;
     font-size: 0.8rem;
+    padding: 1rem;
     ol {
+        li {
+            margin-left: 5px;
+        }
         li p {
             margin-bottom: 0;
         }
