@@ -1,8 +1,8 @@
 {% if page.comments %}
 <div id="disqus" style="margin-top:2em">
 
-    <div class="comments-block">
-        <button id="show-comments-button" onclick="disqus();return false;">Load Comments</button>
+    <div class="comments-block" style="margin-bottom:1rem">
+        <button id="show-comments-button" class="button" onclick="disqus();return false;">Load Comments</button>
     </div>
 
     <div id="disqus_thread"></div>
@@ -32,7 +32,12 @@
             disqus();
         }
     </script>
-    <noscript>JavaScript is disabled. "Load Comments" button will not work. The comments are powered by <a href="https://disqus.com/?ref_noscript">Disqus</a>.</noscript>
+    <noscript>
+        {% 
+            include no-js-notice.html
+            message="The comment system is powered by Disqus which requires JavaScript to be enabled."
+        %}
+    </noscript>
 
 </div>
 {% endif %}

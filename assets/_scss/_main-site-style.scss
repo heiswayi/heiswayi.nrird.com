@@ -279,7 +279,7 @@ tbody tr:nth-child(odd) {
         background: #fff;
         margin-bottom: 0;
         &:hover {
-            background: #fff;
+            background: #f3f3f3;
             color: #06b;
         }
         &.active {
@@ -343,7 +343,7 @@ tbody tr:nth-child(odd) {
 
 .post {
     .tagged {
-        margin-top: /*2rem*/ 0; /* handled by .post-bottom-meta now */
+        margin-top: 1rem;
     }
     .post-bottom-meta {
         margin-top: 2rem;
@@ -593,24 +593,28 @@ a.skip:hover {
         &.tag-anchor {
             background: #f0f0f0;
             color: #444;
+            border: none;
 
             &:active,
             &:focus,
             &:hover {
                 background: #069;
                 color: #fff;
+                border: none;
             }
         }
 
         &.tag-anchor-red {
             background: #FF4136;
             color: #fff;
+            border: none;
 
             &:active,
             &:focus,
             &:hover {
                 background: #069;
                 color: #fff;
+                border: none;
             }
         }
     }

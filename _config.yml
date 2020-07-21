@@ -1,7 +1,7 @@
 # SITE INFO
 og_locale               : "en_US"
 title                   : "Heiswayi Nrird"
-description             : "Welcome to Heiswayi Nrird's Personal Blog" # tagline
+description             : "Welcome to Heiswayi Nrird's Personal Webpage" # tagline
 keywords                : "software engineering, user experience, open source, photography, random experimental stuff"
 image_cover             : "/assets/logo.gif"
 version                 : "2020"
@@ -9,11 +9,11 @@ google_analytics_code   : UA-58296043-7
 
 # SITE SEO FOR GOOGLE SEARCH
 seo_title               : "Heiswayi Nrird" # between 55 and 66 characters
-seo_description         : "I am a software engineer based in Penang, MY. I build and ship software at Keysight Technologies. I am a fan of minimalism and I believe _less is more_. Sometimes, I do _some random stuff_ and write about it here. /\\/" # between 70 and 300 characters
+seo_description         : "Hi, I'm Heiswayi Nrird. I'm a software engineer and I ship software at Keysight Technologies, Penang, MY. I do blog occasionally. I'm a minimalist and I believe in 'less is more'. Sometimes, I do some random stuff and write about it here. /\\/" # between 70 and 300 characters
 
 # SITE URL
 url                     : https://heiswayi.nrird.com # main url
-baseurl                 : null # for gh-pages only
+baseurl                 : null # for github-pages only
 
 # GitHub Pages ONLY
 enforce_ssl             : heiswayi.nrird.com
@@ -24,11 +24,11 @@ author:
   twitter_username      : heiswayi
 
 # ARTICLE BOTTOM MODULES
-show_related_posts      : false
-show_post_sharer        : false
-show_tags               : false
+show_related_posts      : true
+show_post_sharer        : true
+show_tags               : true
 
-show_disqus_comment     : false
+show_disqus_comment     : true
 disqus_shortname        : hnbloggithub
 
 # JEKYLL BUILD SETTINGS
