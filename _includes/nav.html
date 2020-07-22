@@ -1,0 +1,12 @@
+<nav>
+    <input type="checkbox" id="nav" class="hidden" />
+    <label for="nav" class="nav-open"><i></i><i></i><i></i></label>
+    <div class="nav-container">
+        <ul>
+            <li><a href="{{ "/site" | prepend: site.baseurl | prepend: site.url }}" class="menu {{index}}">posts</a></li>
+            <li><a href="{{ "/about" | prepend: site.baseurl | prepend: site.url }}" class="menu {{about}}">about</a></li>
+            <li><a href="{{ "/projects" | prepend: site.baseurl | prepend: site.url }}" class="menu {{projects}}">projects</a></li>
+            <li><a href="{{ "/photography" | prepend: site.baseurl | prepend: site.url }}" class="menu {{photos}}">photos</a></li>
+        </ul>
+    </div>
+</nav>

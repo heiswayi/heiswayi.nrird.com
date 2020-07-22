@@ -24,11 +24,11 @@ author:
   twitter_username      : heiswayi
 
 # ARTICLE BOTTOM MODULES
-show_related_posts      : true
-show_post_sharer        : true
+show_related_posts      : false
+show_post_sharer        : false
 show_tags               : true
 
-show_disqus_comment     : true
+show_disqus_comment     : false
 disqus_shortname        : hnbloggithub
 
 # JEKYLL BUILD SETTINGS
