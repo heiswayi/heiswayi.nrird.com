@@ -249,6 +249,8 @@ tbody tr:nth-child(odd) {
 }
 
 .site-logo {
+    display: flex;
+    align-items: center;
     a {
         color: #333;
         border-bottom: 0;
@@ -267,6 +269,7 @@ tbody tr:nth-child(odd) {
     }
 }
 
+/*
 .nav {
     margin-left: 1rem;
     a.menu {
@@ -289,6 +292,7 @@ tbody tr:nth-child(odd) {
         }
     }
 }
+*/
 
 .masthead-post {
     padding-top: 1.2rem;
