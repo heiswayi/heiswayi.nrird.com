@@ -1,7 +1,7 @@
 <hr/>
 <div class="footer">
 	<div class="copyright">
-		<a href="{{ '/site' | prepend: site.baseurl | prepend: site.url }}">/posts</a> &middot; <a href="{{ '/about' | prepend: site.baseurl | prepend: site.url }}">/about</a> &middot; <a href="{{ '/tags' | prepend: site.baseurl | prepend: site.url }}">/tags</a> &middot; <a href="{{ '/feed.xml' | prepend: site.baseurl | prepend: site.url }}">/rss</a> &middot; <a href="#top" class="back-to-top-anchor">/back-to-top</a><br>
+		<a href="{{ '/site' | prepend: site.baseurl | prepend: site.url }}">/posts</a> &middot; <a href="{{ '/about' | prepend: site.baseurl | prepend: site.url }}">/about</a>{% if site.show_tags %} &middot; <a href="{{ '/tags' | prepend: site.baseurl | prepend: site.url }}">/tags</a>{% endif %} &middot; <a href="{{ '/feed.xml' | prepend: site.baseurl | prepend: site.url }}">/rss</a> &middot; <a href="#top" class="back-to-top-anchor">/back-to-top</a><br>
 		&copy; {{ site.time | date: "%Y" }} <span class="dot-red" aria-hidden="true">/</span><span class="dot-yellow" aria-hidden="true">\</span><span class="dot-green" aria-hidden="true">/</span> Heiswayi Nrird<br>
 		<span class="page-load"></span>
 	</div>
@@ -20,4 +20,16 @@ window.addEventListener('load', () => {
     }
   }, 0);
 });
+(function() {
+    var pre = document.getElementsByTagName('pre'),
+        pl = pre.length;
+    for (var i = 0; i < pl; i++) {
+        pre[i].innerHTML = '<span class="line-number"></span>' + pre[i].innerHTML + '<span class="cl"></span>';
+        var num = pre[i].innerHTML.split(/\n/).length;
+        for (var j = 0; j < (num - 1); j++) {
+            var line_num = pre[i].getElementsByTagName('span')[0];
+            line_num.innerHTML += '<span>' + (j + 1) + '</span>';
+        }
+    }
+})();
 </script>

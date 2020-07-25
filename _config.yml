@@ -26,10 +26,12 @@ author:
 # ARTICLE BOTTOM MODULES
 show_related_posts      : false
 show_post_sharer        : false
-show_tags               : true
+show_tags               : false
 
 show_disqus_comment     : false
 disqus_shortname        : hnbloggithub
+
+show_postlist_alt_view  : false
 
 # JEKYLL BUILD SETTINGS
 source                  : ./
