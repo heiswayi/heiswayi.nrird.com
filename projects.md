@@ -5,7 +5,7 @@ description: A list of my selective works or projects.
 keywords: part-time projects, open source, web apps, freeware, fun and learning, hobby, experimental code, templates
 ---
 
-A collection of my selective works or Open Source projects.
+A collection of my selective works and Open Source projects.
 
 ### My Minimalist Jekyll Themes
 
