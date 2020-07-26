@@ -1,151 +1,52 @@
 ---
 layout: page
 title: Projects
-description: List of some projects. Some are still being maintained, some others are just made for fun and learning!
-keywords: part-time projects, hobby stuffs, open source, web apps, github repo
+description: A list of my selective works or projects.
+keywords: part-time projects, open source, web apps, freeware, fun and learning, hobby, experimental code, templates
 ---
 
-This page contains a collection of links to my projects, page shortcuts, source code repos and working demos. These projects are part of my spare time projects that made available online. Most of the projects have been done for fun and learning. Some projects may be published as Open Source, while some others may be used for personal purposes.
+A collection of my selective works or Open Source projects.
 
-_Note: List of the items below are generated automatically from the blog posts._
+### My Minimalist Jekyll Themes
 
-<ul>
-  {% for post in site.posts %}
-    {% if post.tags contains "Project" %}
+| The Plain | Made in 2015. One-column style. Ideal for personal blogging.<br>[GitHub](https://github.com/heiswayi/the-plain) &middot; [Demo](https://heiswayi.github.io/the-plain) |
+| Thinkspace | Made in 2016. One-column style. Ideal for technical writing or documentations.<br>[GitHub](https://github.com/heiswayi/thinkspace) &middot; [Demo](https://heiswayi.github.io/thinkspace) |
+| TextLog | Made in 2017. Left-aligned one-column style. Ideal for documentation-style blog.<br>[GitHub](https://github.com/heiswayi/textlog) &middot; [Demo](https://heiswayi.github.io/textlog) |
+| HN Barebone | Made in 2020. The most barebone Jekyll theme.<br>[GitHub](https://github.com/heiswayi/hn-barebone) &middot; [Demo](https://heiswayi.github.io/hn-barebone/) |
 
-    <li>
-        <a href="{{ post.url }}">{{ post.title }}</a><br>
-        {{ post.description }}
-    </li>
+<hr class="break">
 
-    {% endif %}
-  {% endfor %}
-</ul>
+### JavaScript Apps
 
-### Minimalist static site templates for Jekyll
+| [PGP Suite](https://heiswayi.github.io/pgp/) | A simple and easy-to-use client-side PGP tool. |
+| [Color Contrast Checker](https://heiswayi.github.io/color-contrast-checker/) | A simple tool to check color contrast compliance ratios. |
+| [EncryptJS](https://heiswayi.github.io/encryptjs/) | A JS library for text encryption on your site. |
+| [Markdown-HTML Live Preview Editor](https://heiswayi.github.io/markdown-editor/) | Markdown to HTML preview editor based on GitHub-flavored Markdown. |
 
-<ul>
-  <li>
-    <a href="https://github.com/heiswayi/the-plain">The Plain</a> (2015)<br>
-    Centered one-column display, ideal for a personal blog.
-  </li>
-  <li>
-    <a href="https://github.com/heiswayi/thinkspace">Thinkspace</a> (2016)<br>
-    Centered one-column display, nerdy typeface, ideal for something like technical blog or documentation.
-  </li>
-  <li>
-    <a href="https://github.com/heiswayi/textlog">TextLog</a> (2017)<br>
-    Left-aligned one-column display, ideal for documentation-styled blog.
-  </li>
-  <li>
-    <a href="https://github.com/heiswayi/hn-barebone">HN Barebone</a> (2020)<br>
-    Heiswayi Nrird's Barebone Jekyll Theme.
-  </li>
-</ul>
+<hr class="break">
 
-### _Onepage_-styled listing sites for my stuffs on GitHub
+### AI Chatbot Experimental
 
-<ul>
-  <li>
-    <a href="https://heiswayi.github.io/gist/">heiswayi.github.io/gist</a><br>
-    Listing site of my public gists / code snippets. Made using GitHub API.
-  </li>
-  <li>
-    <a href="https://heiswayi.github.io/repo/">heiswayi.github.io/repo</a><br>
-    Listing site of my open source projects on GitHub. Made using GitHub API.
-  </li>
-</ul>
+| [W4Y1](https://heiswayi.github.io/w4y1/) | AI chatbot experimental based on [elizabot.js](https://www.masswerk.at/elizabot/). |
+| [HelloBot](https://heiswayi.github.io/hellobot/) | AI chatbot experimental based on [RiveScript](https://www.rivescript.com/). |
 
-### Client-side web-based apps
+<hr class="break">
 
-<ul>
-  <li>
-    <a href="http://heiswayi.github.io/pgp/">PGP Key Generator</a><br>
-    Client-side PGP keys generator using web browser.
-  </li>
-  <li>
-    <a href="http://heiswayi.github.io/spelling-uk-vs-us">Spelling: UK vs US</a><br>
-    Comprehensive* list of British vs. American spelling differences.
-  </li>
-  <li>
-    <a href="http://heiswayi.github.io/math-console/">Math Console</a><br>
-    Mathematical-powered console to evaluate basic arithmetic operations and common math functions.
-  </li>
-  <li>
-    <a href="http://heiswayi.github.io/color-contrast-checker">Color Contrast Checker</a><br>
-    To check color constrast compliant ratios.
-  </li>
-  <li>
-    <a href="http://heiswayi.github.io/encryptjs/">EncryptJS</a><br>
-    JavaScript library for encrypting message on your site.
-  </li>
-  <li>
-    <a href="http://heiswayi.github.io/random-name-picker/">Random Name Picker</a><br>
-    Simple web tool for indoor events - to pick a random name from a list.
-  </li>
-  <li>
-    <a href="http://heiswayi.github.io/markdown-editor">Markdown-HTML Live Preview Editor</a><br>
-    Simple markdown-to-HTML live preview editor created in vanilla JavaScript.
-  </li>
-</ul>
+### Server-Side Apps
 
-### Experimental AI projects demo
+| [XNote](https://x.nrird.com/xnote/) | A minimalist, secure and encrypted pastebin app. |
+| [Speedtest](https://x.nrird.com/speedtest/) | A minimalist, mobile-friendly speedtest site. |
+| [Write](https://x.nrird.com/write/) | A browser-based WYSIWYG editor for online documentation writing. |
+| [Whois](https://x.nrird.com/whois/) | A minimalist domain whois script. |
+| [S-CREATE](https://x.nrird.com/s/create) | A minimalist URL shortening script. |
+| [/imgh](https://x.nrird.com/imgh/) | My Personal Image Hosting script. |
 
-<ul>
-  <li>
-    <a href="http://heiswayi.github.io/w4y1/">W4Y1</a><br>
-    Experimental AI chatbot for digitalizing my memories.
-  </li>
-  <li>
-    <a href="http://heiswayi.github.io/hellobot/">HelloBot</a><br>
-    Just another AI Chatbot.
-  </li>
-</ul>
+<hr class="break">
 
-### Web tools (PHP)
+### Misc.
 
-<ul>
-  <li>
-    <a href="https://x.nrird.com/xnote">XNote</a> <span style="color:red">*</span><br>
-    Minimalist, secure and encrypted pastebin app for personal use purpose.
-  </li>
-  <li>
-    <a href="https://x.nrird.com/speedtest/">Speedtest</a> <span style="color:red">*</span><br>
-    Minimalist speedtest site and mobile friendly!
-  </li> 
-  <li>
-    <a href="https://x.nrird.com/write/">Write</a> <span style="color:red">*</span><br>
-    A browser-based document writer featuring WYSIWYG HTML Editor from TinyMCE.
-  </li>
-  <li>
-    <a href="https://x.nrird.com/whois/">Whois Script</a> <span style="color:red">*</span><br>
-    Simple domain whois script.
-  </li>
-</ul>
-
-### Misc. stuffs
-
-<ul>
-  <li>
-    <a href="http://heiswayi.github.io/website-checklist">Website Checklist</a><br>
-    Checklist for web developer.
-  </li>
-  <li>
-    <a href="https://x.nrird.com/s/create">S-CREATE</a> <span style="color:red">*</span><br>
-    My minimalist URL shortening service. (PHP)
-  </li>
-  <li>
-    <a href="https://heiswayi.github.io/simple-tools">Index of /simple-tools</a><br>
-    Collection of my simple web tools/scripts.
-  </li>
-  <li>
-    <a href="https://x.nrird.com/imgh/">Personal Image Hosting Script</a> <span style="color:red">*</span><br>
-    My private image hosting script. (PHP)
-  </li>
-  <li>
-    <a href="https://heiswayi.github.io/code-playground">Code Playground</a><br>
-    Web-based code playground for formatting any code snippet using Monaco Editor.
-  </li>
-</ul>
-
-<p><span style="color:red">*</span> Hosted on AWS EC2 instance.</p>
+| [Website Checklist](https://heiswayi.github.io/website-checklist/) | Interactive checklist for web developer. |
+| [Code Playground](https://heiswayi.github.io/code-playground/) | Formating any code snippet using Monaco Editor. |
+| [/simple-tools](https://heiswayi.github.io/simple-tools/) | A collection of simple web tools created for personal use. |
+| [Mawar Allyssa's Keyboard Smashing](https://heiswayi.nrird.com/mawar-allyssa) | A simple app for my toddler to smash the computer keyboard. |
+| [Bullet Journal](https://x.nrird.com/bulletjournal/) | A TODO-like app that utilizes your browser [localStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage) to save the data. |
