@@ -5,7 +5,9 @@ description: A list of my selective works or projects.
 keywords: part-time projects, open source, web apps, freeware, fun and learning, hobby, experimental code, templates
 ---
 
-A collection of my selective works and Open Source projects.
+A collection of my selective works and Open Source projects. Check me out on [GitHub](https://github.com/heiswayi) for more other projects or [Gist](https://gist.github.com/heiswayi) for my public snippets.
+
+<hr class="break">
 
 ### My Minimalist Jekyll Themes
 
