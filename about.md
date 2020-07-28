@@ -33,6 +33,8 @@ The information on this site is provided "AS IS" with no warranties, and confers
 
 Unless otherwise stated, all contents on this site are licensed under [CC BY-SA 4.0 License](https://creativecommons.org/licenses/by-sa/4.0/).
 
+<hr class="break">
+
 ### Contact info
 
 **Email:** heiswayi <span style="display:none">-antispam-</span> <span style="opacity:0.5">(at)</span> <span style="display:none">-antispam-</span>nrird <span style="opacity:0.5">dot</span> com<br>
