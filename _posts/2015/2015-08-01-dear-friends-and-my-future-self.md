@@ -1,0 +1,52 @@
+---
+layout: post
+title: Dear Friends, and my future self.
+description: A little piece of advice to remind... you and my future self.
+tags: [Poetry, Inspiration]
+comments: true
+---
+
+Dear Friends, and my future self.
+
+Time is the most important asset.<br>
+Time does not equal money.<br>
+Time equals life.<br>
+And you only have one chance to make it right.
+
+Every human being is fighting a battle inside themselves.<br>
+It's your obligation to help and inspire them.<br>
+Regardless of what you do,<br>
+you can always inspire others to do good.
+
+Nobody is better than you.<br>
+And you're not better than anybody else.<br>
+Be humble.
+
+Being in the comfort zone is wonderful,<br>
+but nothing ever grows there.<br>
+Keep studying.<br>
+Keep creating.
+
+Haters will come if you have the audacity to build something new.<br>
+Don't let them define you.<br>
+Don't let them stop you.<br>
+Just block them and keep going.
+
+Don't expect others to make you happy.<br>
+You are the only one responsible for your happiness.<br>
+Don't wait until Friday to enjoy life.<br>
+Joy should be present in everything you do.
+
+Be kind to your parents.<br>
+They gave up many things for you.<br>
+Having millions of people admiring you is worthless,<br>
+if you're not admired by your own family.
+
+Don't fear the unknown.<br>
+Fear knowing everything.<br>
+Life is too damn short and every day counts.<br>
+Do what you wanna do and do it now.
+
+Dear Friends, and my future self.<br>
+Time doesn't stop.<br>
+Time doesn't wait.
