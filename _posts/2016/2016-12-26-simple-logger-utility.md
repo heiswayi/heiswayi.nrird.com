@@ -1,163 +1,30 @@
 ---
 layout: post
-title: Writing a simple logger utility class in .NET
+title: Simple logger utility class in .NET
 description: Just another simple logger utility class that I wrote for my own use in some of my .NET projects.
-keywords: c# programming, simple logger class
-tags: [C#, Utility, Open Source, Programming]
+tags: [C#, Utility, Programming]
 comments: true
 ---
 
-When I work with minor .NET projects, sometimes I need a logger utility to easily do the logging for me to debug the application during the run-time. So, I have wrote my own simple logger utility class that I can simply use for my projects without using any other logger library or utility.
+<a href="https://gist.github.com/heiswayi/69ef5413c0f28b3a58d964447c275058" class="button big">SimpleLogger.cs<br><span style="font-size:0.8rem;opacity:0.7">Source Code on Gist</span></a>
 
-### Source code
+This is a simple C# utility class I wrote to do the app logging for small .NET projects.
 
-File name: `SimpleLogger.cs` // Mirror link: [Gist](https://git.io/vpfKC)
+<hr class="break">
+
+### Usage examples
+
+Simply instantiate the `SimpleLogger` class to a local variable:
 
 ```csharp
-public class SimpleLogger
-{
-    private const string FILE_EXT = ".log";
-    private readonly string datetimeFormat;
-    private readonly string logFilename;
-
-    /// <summary>
-    /// Initiate an instance of SimpleLogger class constructor.
-    /// If log file does not exist, it will be created automatically.
-    /// </summary>
-    public SimpleLogger()
-    {
-        datetimeFormat = "yyyy-MM-dd HH:mm:ss.fff";
-        logFilename = System.Reflection.Assembly.GetExecutingAssembly().GetName().Name + FILE_EXT;
-
-        // Log file header line
-        string logHeader = logFilename + " is created.";
-        if (!System.IO.File.Exists(logFilename))
-        {
-            WriteLine(System.DateTime.Now.ToString(datetimeFormat) + " " + logHeader, false);
-        }
-    }
-
-    /// <summary>
-    /// Log a DEBUG message
-    /// </summary>
-    /// <param name="text">Message</param>
-    public void Debug(string text)
-    {
-        WriteFormattedLog(LogLevel.DEBUG, text);
-    }
-
-    /// <summary>
-    /// Log an ERROR message
-    /// </summary>
-    /// <param name="text">Message</param>
-    public void Error(string text)
-    {
-        WriteFormattedLog(LogLevel.ERROR, text);
-    }
-
-    /// <summary>
-    /// Log a FATAL ERROR message
-    /// </summary>
-    /// <param name="text">Message</param>
-    public void Fatal(string text)
-    {
-        WriteFormattedLog(LogLevel.FATAL, text);
-    }
-
-    /// <summary>
-    /// Log an INFO message
-    /// </summary>
-    /// <param name="text">Message</param>
-    public void Info(string text)
-    {
-        WriteFormattedLog(LogLevel.INFO, text);
-    }
-
-    /// <summary>
-    /// Log a TRACE message
-    /// </summary>
-    /// <param name="text">Message</param>
-    public void Trace(string text)
-    {
-        WriteFormattedLog(LogLevel.TRACE, text);
-    }
-
-    /// <summary>
-    /// Log a WARNING message
-    /// </summary>
-    /// <param name="text">Message</param>
-    public void Warning(string text)
-    {
-        WriteFormattedLog(LogLevel.WARNING, text);
-    }
-
-    private void WriteLine(string text, bool append = true)
-    {
-        try
-        {
-            using (System.IO.StreamWriter writer = new System.IO.StreamWriter(logFilename, append, System.Text.Encoding.UTF8))
-            {
-                if (!string.IsNullOrEmpty(text))
-                {
-                    writer.WriteLine(text);
-                }
-            }
-        }
-        catch
-        {
-            throw;
-        }
-    }
-
-    private void WriteFormattedLog(LogLevel level, string text)
-    {
-        string pretext;
-        switch (level)
-        {
-            case LogLevel.TRACE:
-                pretext = System.DateTime.Now.ToString(datetimeFormat) + " [TRACE]   ";
-                break;
-            case LogLevel.INFO:
-                pretext = System.DateTime.Now.ToString(datetimeFormat) + " [INFO]    ";
-                break;
-            case LogLevel.DEBUG:
-                pretext = System.DateTime.Now.ToString(datetimeFormat) + " [DEBUG]   ";
-                break;
-            case LogLevel.WARNING:
-                pretext = System.DateTime.Now.ToString(datetimeFormat) + " [WARNING] ";
-                break;
-            case LogLevel.ERROR:
-                pretext = System.DateTime.Now.ToString(datetimeFormat) + " [ERROR]   ";
-                break;
-            case LogLevel.FATAL:
-                pretext = System.DateTime.Now.ToString(datetimeFormat) + " [FATAL]   ";
-                break;
-            default:
-                pretext = "";
-                break;
-        }
-
-        WriteLine(pretext + text);
-    }
-
-    [System.Flags]
-    private enum LogLevel
-    {
-        TRACE,
-        INFO,
-        DEBUG,
-        WARNING,
-        ERROR,
-        FATAL
-    }
-}
+var logger = new SimpleLogger();
 ```
 
-### How to use
+- Create a fresh new log file if the log file does not exist yet.
+- The log file will be created in the same folder as the executing assembly.
+- The log file name will follow the name of the executing assembly.
 
-To get started, just initialize the `SimpleLogger` class. Initializing the constructor will create a fresh new log file if the log file doesn't yet exist. **The log file will be created in the same folder with the application assembly file and the log file name will follow the executing assembly name.** For example, let say the application file name is `SimpleLoggerDemo.exe`, so the log file name would be `SimpleLoggerDemo.log`.
-
-Here's the example code may look like:
+Full example:
 
 ```csharp
 namespace SimpleLoggerDemo
@@ -166,8 +33,7 @@ namespace SimpleLoggerDemo
     {
         private static void Main(string[] args)
         {
-            // Instantiate the class
-            var logger = new SimpleLogger(); // Will create a fresh new log file if it doesn't exist.
+            var logger = new SimpleLogger();
 
             // To log Trace message
             logger.Trace("--> Trace in message here...");

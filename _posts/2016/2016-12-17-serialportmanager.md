@@ -1,20 +1,14 @@
 ---
 layout: post
-title: SerialPortManager.cs
+title: Singleton serial port manager class in .NET
 description: A snippet of singleton class written in .NET C# for handling serial data communication.
-tags: [C#, SerialPort]
+tags: [Programming, C#, SerialPort]
 comments: true
 ---
 
+<a href="https://gist.github.com/heiswayi/80eda1a6905ba4edee8bd21a45f3a22d" class="button big">SerialPortManager.cs<br><span style="font-size:0.8rem;opacity:0.7">Source Code on Gist</span></a>
+
 _SerialPortManager.cs_ is a snippet of singleton class written in .NET C# that I wrote and used in some of my .NET projects to handle serial data communication. Especially for the projects that required interfacing with [Arduino](https://www.arduino.cc/) board. This class basically is a wrapper written on top of [System.IO.Ports.SerialPort class](https://msdn.microsoft.com/en-us/library/system.io.ports.serialport).
-
-<hr class="break">
-
-### Source code
-
-Check out the Gist link below for the full snippet source code:
-
-<a href="https://gist.github.com/heiswayi/80eda1a6905ba4edee8bd21a45f3a22d" class="button big">Get SerialPortManager.cs Source Code</a>
 
 <hr class="break">
 
