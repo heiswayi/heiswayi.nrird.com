@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Encryption and decryption in PHP
+title: Encryption & decryption in PHP
 description: Building a secure function to encrypt and decrypt sensitive data in PHP.
-tags: [PHP, Encryption, Decryption]
+tags: [Programming, PHP, Encryption, Decryption]
 comments: true
 ---
 
