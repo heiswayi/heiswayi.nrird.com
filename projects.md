@@ -52,3 +52,12 @@ A collection of my selective works and Open Source projects. Check me out on [Gi
 | [/simple-tools](https://heiswayi.github.io/simple-tools/) | A collection of simple web tools created for personal use. |
 | [Mawar Allyssa's Keyboard Smashing](https://heiswayi.nrird.com/mawar-allyssa) | A simple app for my toddler to smash the computer keyboard. |
 | [Bullet Journal](https://x.nrird.com/bulletjournal/) | A TODO-like app that utilizes your browser [localStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage) to save the data. |
+
+<hr class="break">
+
+### Nostalgic Archives
+
+| [Dino IRC Sc. (Final Dev.).zip](https://www.dropbox.com/s/5m6fcpwfe998vg1/Dino%20IRC%20Sc.%20%28Final%20Dev.%29.zip?dl=0) | mIRC Script - Made in circa 2004-2007<br>**Feature:** Casual, Channel & self protections, a set of utilities, etc. |
+| [Nikotin3.zip](https://www.dropbox.com/s/2cjjvfsw9m2wpwa/Nikotin3.zip?dl=0) | mIRC Script - Made in circa 2004-2007<br>**Feature:** War/Revenge |
+| [WarLord.zip](https://www.dropbox.com/s/fala3ispr3b1ntc/WarLord.zip?dl=0) | mIRC Script - Made in circa 2004-2007<br>**Feature:** War/Revenge |
+| [Yahoo! Group Archives 2005](https://drive.google.com/drive/u/0/folders/1YG3HsmF-m0x5s3nVP7lFT9tAZaJVDKsd) | A backup of my mIRC-related stuff (e.g. war scripts, code snippets) |
