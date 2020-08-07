@@ -1,13 +1,12 @@
 ---
 layout: post
-title: Lambda expression, Delegate, Predicate and Closure in .NET
-description: Lambda expression helps me to write code faster and shorter. Let's learn how we can use lambda expressions, delegates, predicates and closures in .NET C# code.
-keywords: lambda expressions, c# programming, anonymous functions, lambda operator, c# delegates, c# predicates, c# closures
-tags: [Lambda Expression, C#, Programming]
+title: Learn about Lambda Expression, Delegate, Predicate and Closure in .NET
+description: Let's learn how to use lambda expression, delegate, predicate and closure in .NET C# code.
+tags: [C#, Programming]
 comments: true
 ---
 
-### Lambda expression
+### Lambda Expression
 
 A lambda expression is an anonymous function that we construct with the lambda operator `=>`.
 
@@ -62,6 +61,8 @@ AppManager.Instance.OnDataPointsUpdated += (obj, e) =>
 }
 ```
 
+<hr class="break">
+
 ### Delegate
 
 A delegate is a type that represents a method signature (including parameter list and return value).
@@ -109,6 +110,8 @@ MathOperation adder = (double a, double b) =>
 }
 ```
 
+<hr class="break">
+
 ### Predicate
 
 A predicate is a premade delegate that takes a type as well as an instance of said type and returns a Boolean value:
@@ -133,6 +136,8 @@ var evenNumbers = integers.Where(p => p % 2 == 0);
 evenNumbers.ToList().ForEach(p => Console.Write(p + " "));
 // Will print "2 4 6 "
 ```
+
+<hr class="break">
 
 ### Closure
 

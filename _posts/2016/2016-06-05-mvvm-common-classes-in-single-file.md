@@ -1,27 +1,25 @@
 ---
 layout: post
-title: MVVM.cs
-description: MVVM.cs is a collection of Model-View-ViewModel (MVVM) design pattern common classes that can be implemented by any ViewModel (VM).
-keywords: mvvm common classes, viewmodelbase, onpropertychanged, raisepropertychanged, icommand, delegatecommand, relaycommand, lambda expression
+title: MVVM common classes in a single file
+description: A collection of MVVM common classes in a single file.
 tags: [MVVM, C#, Programming]
 comments: true
 ---
 
-<a href="https://gist.github.com/heiswayi/215e5588fbbd712930ed3e0689d155d0" class="button big">Get source code (MVVM.cs)</a>
+<a href="https://gist.github.com/heiswayi/215e5588fbbd712930ed3e0689d155d0" class="button big">MVVM.cs<br><span style="font-size:0.8rem;opacity:0.7">Source Code on Gist</span></a>
 
-`MVVM.cs` is a collection of Model-View-ViewModel (MVVM) design pattern **common classes** that can be implemented by any ViewModel (VM). I created this collection into a single file, so whenever I want to develop MVVM-based application (without using MVVM frameworks) in .NET C#, I just need to reference it and inherit the `ViewModelBase` class into any of my ViewModel classes.
+`MVVM.cs` is a collection of Model-View-ViewModel (MVVM) design pattern **common classes** that can be implemented by any ViewModel. I created this collection into a single file, so whenever I want to develop MVVM-based application (without using MVVM frameworks) in .NET C#, I just need to reference it and inherit the `ViewModelBase` class into any of my ViewModel classes.
 
-### Property
+<hr class="break">
 
-To raise any property change, you may use these following methods:
+### Property binding
 
-- `OnPropertyChanged("YourPropertyName");`
-- Lambda function: `RaisePropertyChanged(() => YourPropertyName);`
+There are two ways you can bind your UI property to detect the property change.
 
-**Example:**
+#### Example 1 - Using `OnPropertyChanged("YourPropertyName");`
 
 ```csharp
-using HeiswayiNrird.MVVM.Common; // MVVM.cs
+using HeiswayiNrird.MVVM;
 using System;
 
 namespace MVVMExampleApp
@@ -38,6 +36,20 @@ namespace MVVMExampleApp
                 OnPropertyChanged("PropertyName1");
             }
         }
+    }
+}
+```
+
+#### Example 2 - Using lambda function
+
+```csharp
+using HeiswayiNrird.MVVM;
+using System;
+
+namespace MVVMExampleApp
+{
+    public class ViewModelExample : ViewModelBase
+    {
         private object _propertyName2;
         public object PropertyName2
         {
@@ -52,17 +64,16 @@ namespace MVVMExampleApp
 }
 ```
 
-### Command
+<hr class="break">
 
-For `ICommand` property, you may use any of these following classes:
+### Command binding
 
-- `DelegateCommand()`
-- `RelayCommand()`
+There are two ways you can use to bind any command.
 
-**Example:**
+#### Example 1 - Using `DelegateCommand()`
 
 ```csharp
-using HeiswayiNrird.MVVM.Common; // MVVM.cs
+using HeiswayiNrird.MVVM;
 using System.Windows.Input;
 using System;
 
@@ -99,7 +110,35 @@ namespace MVVMExampleApp
             }
         }
 
-        // Example 3 : RelayCommand
+        private void methodToExecute2(int param)
+        {
+            throw new NotImplementedException();
+        }
+        private void methodToExecute()
+        {
+            // Logic to execute...
+        }
+        private bool canExecuteMethodToExecute()
+        {
+            // Put your expression/condition here, return true/false...
+            return true;
+        }
+    }
+}
+```
+
+#### Example 2 - Using `RelayCommand()`
+
+```csharp
+using HeiswayiNrird.MVVM;
+using System.Windows.Input;
+using System;
+
+namespace MVVMExampleApp
+{
+    public class ViewModelExample : ViewModelBase
+    {
+        // Example 1 : RelayCommand
         private ICommand _commandProperty3;
         public ICommand CommandProperty3
         {

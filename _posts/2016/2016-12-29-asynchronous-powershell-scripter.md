@@ -1,18 +1,23 @@
 ---
 layout: project
-title: Asynchronous PowerShell Scripter
-description: Just another PowerShell scripter tool written in .NET C# and WPF to simply manages the PowerShell scripts, or to run the script asynchronously and also as a tool to learn PowerShell programming.
-keywords: c# programming, asynchronous powershell scripter, learn powershell, manage powershell preset scripts, powershell scripts, execute powershell asynchronously
+title: Asynchronous PowerShell Scripter (WPF Version)
+description: Just another PowerShell scripter tool written in .NET C# and WPF to manage, run and learn PowerShell scripting.
 tags: [C#, WPF, PowerShell, Project, Open Source]
 comments: true
 ---
 
-Asynchronous PowerShell Scripter is just another PowerShell scripter tool made in .NET C# and WPF for executing PowerShell script **asynchronously** and has the abilities to:-
+Originally inspired from [jpmik's Asynchronously Execute PowerShell Scripts](https://www.codeproject.com/Articles/18409/Asynchronously-Execute-PowerShell-Scripts-from-C), Asynchronous PowerShell Scripter is just another PowerShell scripter tool that has been undergone a remake in .NET C# and _WPF_.
 
-- save new or remove PowerShell preset scripts.
-- import PowerShell script file directly.
-- drag-n-drop PowerShell script file onto the Script Editor.
-- export selected lines or all lines output into a text file.
+**Other Features:**
+
+- Save new or remove PowerShell preset scripts.
+- Import PowerShell script file directly.
+- Drag-n-drop PowerShell script file onto the Script Editor.
+- Export selected lines or all lines output into a text file.
+
+<a href="https://github.com/heiswayi/AsyncPowerShellScripter" class="button big">Source Code on GitHub</a>
+
+<hr class="break">
 
 ### Screenshots
 
@@ -32,14 +37,8 @@ During application startup or adding/removing preset script will display this Lo
 
 {% include figure.html src="http://i.imgur.com/D6rnHDz.png" caption="Importing script from PowerShell script file (.ps1)" %}
 
+<hr class="break">
+
 ### Preset scripts
 
 Preset scripts are stored in the plain text file format in "presets" folder where the title of the script is the filename of the text file itself. This makes thing easier to manually modify the script or to add a batch of scripts WITHOUT needing to run the application. It's more manageable, easy to backup or synchronize with the cloud storage service.
-
-### Source code and download
-
-<a href="https://github.com/heiswayi/AsyncPowerShellScripter/releases" class="button big">Download precompiled binary</a> <a href="https://github.com/heiswayi/AsyncPowerShellScripter" class="button big">Get source code</a>
-
-### Inspiration
-
-This project is originally inspired from or a derivative works of [Asynchronously Execute PowerShell Scripts from C# WinForms by jpmik](https://www.codeproject.com/Articles/18409/Asynchronously-Execute-PowerShell-Scripts-from-C).

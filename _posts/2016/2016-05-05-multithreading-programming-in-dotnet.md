@@ -1,8 +1,7 @@
 ---
 layout: post
 title: Multithreading programming in .NET
-description: Examples of C# code to demonstrate the multithreading programming available in .NET System.Threading.
-keywords: multithreading, single threading, sample source code, demonstration, threadpool, task, backgroundworker, windows console application
+description: Demonstrating multithreading programming available in .NET System.Threading.
 tags: [C#, Multithreading, Programming]
 comments: true
 ---
@@ -13,28 +12,26 @@ Multithreading is a widespread programming and execution model that allows multi
 
 The purpose of threading is to allow computer to do more than one thing at a time. In a single core computer, multithreading won't give much advantages for overall speed. But for computer with multiple processor cores (which is so common these days), multithreading can take advantage of additional cores to perform separate instructions at the same time or by splitting the tasks between the cores.
 
-### Demo code
+<hr class="break">
 
-Let's write a simple demo code to demonstrate four kind of multithreading programming in .NET C# using `System.Threading`. Here's the basic structure of the code to start:
+### Let's create a simple base program for testing
 
 ```csharp
 using System;
 using System.Diagnostics;
 using System.Threading;
 
-namespace MultithreadingVsSingleThreading
+namespace MultithreadingProgramming
 {
     internal class Program
     {
-        private const int threadCount = 1000; // no. of threads to be spawned
-        private const int totalCount = 100000; // no. of spins the actual work is carried out
+        private const int threadCount = 1000; // No. of threads to be spawned
+        private const int totalCount = 100000; // No. of spins the actual work is carried out
 
+        // PROGRAM ENTRY FUNCTION
         private static void Main(string[] args)
         {
-            Thread.CurrentThread.Priority = ThreadPriority.Highest;
-
-            // let's perform CPU intensive task here...
-            // single threading vs multithreading
+            // Code to perform CPU intensive task will be here
         }
 
         private static void ComplexWork(int n)
@@ -63,9 +60,11 @@ namespace MultithreadingVsSingleThreading
 }
 ```
 
+<hr class="break">
+
 ### Single threading programming
 
-For single threading programming, we can just simply call the `ComplexWork` method in our `Main` method as shown below:
+First, let's see the benchmark for single threading.
 
 ```csharp
 private static void Main(string[] args)
@@ -78,9 +77,15 @@ private static void Main(string[] args)
 }
 ```
 
-### Multithreading programming
+Result:
 
-#### 1. Using Thread class
+```
+Single threading - elapsed time: 8419ms
+```
+
+<hr class="break">
+
+### Multithreading programming using Thread class
 
 The `Thread` class is used for creating and manipulating a [thread](http://msdn.microsoft.com/en-us/library/windows/desktop/ms684841%28v=vs.85%29.aspx) in Windows.
 
@@ -119,7 +124,15 @@ private static void RunThreadMode()
 }
 ```
 
-#### 2. Using ThreadPool
+Result:
+
+```
+Using Thread - elapsed time: 7532ms
+```
+
+<hr class="break">
+
+### Multithreading programming using ThreadPool
 
 The `ThreadPool` class manages a group of threads in which tasks are added to a queue and automatically started when threads are created.
 
@@ -153,7 +166,15 @@ private static void RunInThreadPool()
 }
 ```
 
-#### 3. Using Task
+Result:
+
+```
+Using ThreadPool - elapsed time: 2901ms
+```
+
+<hr class="break">
+
+### Multithreading programming using Task
 
 A `Task` represents asynchronous operation and is part of the [Task Parallel Library](http://msdn.microsoft.com/en-us/library/dd460717%28v=vs.110%29.aspx), a set of APIs for running tasks asynchronously and in parallel.
 
@@ -185,7 +206,15 @@ private static void RunTaskMode()
 }
 ```
 
-#### 4. Using BackgroundWorker
+Result:
+
+```
+Using Task - elapsed time: 3061ms
+```
+
+<hr class="break">
+
+### Multithreading programming using BackgroundWorker
 
 The `BackgroundWorker` class executes an operation on a separate thread.
 
@@ -222,18 +251,26 @@ private static void RunInBackgroundWorker()
 }
 ```
 
-### Output results
+Result:
 
 ```
-Single threading - elapsed time: 8419ms
-Using Thread - elapsed time: 7532ms
-Using ThreadPool - elapsed time: 2901ms
-Using Task - elapsed time: 3061ms
 Using BackgroundWorker - elapsed time: 3100ms
 ```
 
-As you can see, for direct method call (single threading) with `Thread` class, there is not much different. But when you use `ThreadPool`, `Task` or `BackgroundWorker`, it takes 2x faster compared to the direct method call. I use Intel(R) Core(TM) i3-4130 CPU @ 3.40GHz (2 cores, 4 threads) when running these tests.
+<hr class="break">
 
-### Bottom line
+### Overall results
+
+| Single threading | 8419ms |
+| Multithreading using Thread | 7532ms |
+| Multithreading using ThreadPool | 2901ms |
+| Multithreading using Task | 3061ms |
+| Multithreading using BackgroundWorker | 3100ms |
+
+**PC Specs:** Intel(R) Core(TM) i3-4130 CPU @ 3.40GHz (2 cores, 4 threads)
+
+From the results above, I can say that `ThreadPool`, `Task` and `BackgroundWorker` can perform 2x faster compared to `Thread` and single threading method. Of course, the single threading method is the slowest.
+
+<hr class="break">
 
 If you're going to perform any CPU intensive task, you can always take advantage of multithreading programming in your code to have better performance in your application. I could say that `BackgroundWorker` class is easy to use and very popular among developers I have been working with.
