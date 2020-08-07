@@ -1,13 +1,14 @@
 ---
 layout: post
 title: Commonly used PHP code snippets
-description: A compilation of some commonly used PHP code snippets that I have been using for years in my PHP projects.
-keywords: php, commonly use php functions, php code snippets, php projects, compilation of code snippets, helpful php functions
+description: A compilation of (some) commonly used PHP code snippets that I have been using for years in my PHP projects.
 tags: [PHP, Programming]
 comments: true
 ---
 
-Few years ago, I have been actively developing some web apps in PHP. Within those years, I have been using these custom-made PHP functions for most of my projects. Well, until today, some of them I still found it useful when I'm writing PHP apps.
+A few years ago I have been actively developing PHP apps, and most of them are built from scratch. Within those years, I have been using some of these PHP functions in most of my projects. Well, until today, I still found some of them are useful when I have been writing PHP apps.
+
+<hr class="break">
 
 ### Hash user password
 
@@ -18,6 +19,10 @@ function hashUserPassword($salt, $password) {
 }
 ?>
 ```
+
+Alternatively, you can check my previous post on [What you need to know about PHP native password hashing API](https://heiswayi.nrird.com/php-native-password-hashing-api).
+
+<hr class="break">
 
 ### Working with string input in secure manner
 
@@ -68,6 +73,8 @@ function sanitize($string) {
 ?>
 ```
 
+<hr class="break">
+
 ### Get user Gravatar photo
 
 ```php
@@ -77,6 +84,8 @@ function getGravatar($email, $default = 'retro', $size = '50') {
 }
 ?>
 ```
+
+<hr class="break">
 
 ### Get visitor IP address
 
@@ -98,6 +107,8 @@ function getIp() {
 ?>
 ```
 
+<hr class="break">
+
 ### Get current page URI
 
 ```php
@@ -110,6 +121,8 @@ function getCurrentPageUrl() {
 }
 ?>
 ```
+
+<hr class="break">
 
 ### Convert timestamp to time-ago style
 
@@ -161,6 +174,8 @@ function timeAgo($timestamp) {
 ?>
 ```
 
+<hr class="break">
+
 ### Create clickable hyperlink (HTML anchor) for URL, @mention and #hashtag
 
 ```php
@@ -180,6 +195,8 @@ function makeClickable($input) {
 }
 ?>
 ```
+
+<hr class="break">
 
 ### BB code style - emoticons conversion
 
@@ -207,6 +224,8 @@ function bbCode($var) {
 ?>
 ```
 
+<hr class="break">
+
 ### Generate or get random key (alphanumerics)
 
 ```php
@@ -231,6 +250,8 @@ function getRandomKey($len, $readable = false, $hash = false) {
 ?>
 ```
 
+<hr class="break">
+
 ### Truncate a long text
 
 ```php
@@ -249,6 +270,8 @@ function truncateLongText($text, $length = 0) {
 }
 ?>
 ```
+
+<hr class="break">
 
 ### Generate or get random password
 
@@ -286,6 +309,8 @@ function generateRandomPassword($length = 9, $strength = 0) {
 ?>
 ```
 
+<hr class="break">
+
 ### Auto-link
 
 ```php
@@ -311,6 +336,8 @@ function autolink($message, $strip_tags = false) {
 ?>
 ```
 
+<hr class="break">
+
 ### Check if the URL is a valid URL
 
 ```php
@@ -327,6 +354,8 @@ function isValidUrl($url) {
 }
 ?>
 ```
+
+<hr class="break">
 
 ### Simple string encryption and decryption
 
