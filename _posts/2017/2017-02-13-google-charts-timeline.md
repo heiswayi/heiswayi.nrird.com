@@ -1,11 +1,12 @@
 ---
 layout: post
-title: Experimenting with Google Charts - Timeline
+title: Experimenting with Google Charts Timeline
 description: Creating my responsive daily routine timeline using Google Charts with just few lines of HTML and JavaScript code.
-keywords: my daily routine, google timeline chart, responsive timeline chart
 tags: [Google Charts, JavaScript, Programming]
 comments: true
 ---
+
+### Demo
 
 <script src="https://www.gstatic.com/charts/loader.js"></script>
 <div id="timeline" style="height: 150px;"></div>
@@ -78,11 +79,11 @@ function drawChart() {
 }
 </script>
 
-The timeline above is one of my experiments with [Google Charts](https://developers.google.com/chart/interactive/docs/). **It is my responsive daily routine timeline.** Truly speaking, my weekend life is not really looked like a normal person as I love to build stuffs (_Creative_ label) during those hours in which has caused my sleep time shifted. However, this routine timeline is not always true all the time.
+The timeline above is one of my experiments with [Google Charts](https://developers.google.com/chart/interactive/docs/). **It is my responsive daily routine timeline.** Truly speaking, my weekend life is not really looked like a normal person as I love to build stuff (_Creative_ label) during those hours in which have caused my sleep time shifted. However, this routine timeline is not always true all the time.
+
+<hr class="break">
 
 ### Source code
-
-Here's the source code if you want to learn to create yours.
 
 HTML:
 
@@ -161,5 +162,3 @@ function drawChart() {
 
 }
 ```
-
-Have fun charting!

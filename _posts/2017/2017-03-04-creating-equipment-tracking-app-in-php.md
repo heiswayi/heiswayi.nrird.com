@@ -1,21 +1,20 @@
 ---
 layout: post
 title: Creating a simple Equipment Tracking app in PHP
-description: Creating of a simple CRUD-based web app for internal equipment tracking using PHP, AJAX and DataTables.
-keywords: crud application, php application, datatables, equipment tracking web app, crud ajax web application
+description: This is how I created a simple CRUD-based web app for internal equipment tracking using PHP, AJAX and DataTables.
 tags: [PHP, CRUD, AJAX, DataTables, jQuery, JavaScript, Programming]
 comments: true
 ---
 
-### Real world problem
+A couple of weeks ago I was asked to gather and compile a proper list of equipment that has been borrowed by other engineers/contractors who are working with my department. Unfortunately, the list that I had received is recorded in Excel file. Well, whenever I need to check the status of the equipment, I have to wait those engineers to send me the updated list by email or through the shared drive. To me, this is quite tedious work.
 
-A couple of weeks ago I was asked to gather and compile a proper list of equipment that has been borrowed by other engineers/contractors who are working with my department. Unfortunately, the list that I had received is recorded in Excel file. Microsoft Excel to be exact. Well, whenever I need to check the status of the equipment, I have to wait those engineers to send me the updated list by email or through the shared drive. To me, this is quite tedious.
+So, I decided to create a web app for that. Instead of using Excel file, those engineers or any engineer/contractor can just go to the web app and then update the equipment record or status. By doing this, anytime I need the latest list to do the audit, I can just simply export the data from the app. Thus, this is the result of how I spent my weekend.
 
-I had an idea and I decided to create a web app for that. Instead of using Excel file, those engineers or any engineer can just go to the web app and then update the equipment record or status. By doing this, anytime I need the latest list to audit, I can just simply export from the web app. So, I decided to spend some hours during my weekend to create the web app.
+<hr class="break">
 
-### Implementing the solution
+### Screenshots
 
-Finally, the idea was realized. The web app was ready, successful deployed! Here are some screenshots of the complete web app after I asked those engineers to update the equipment latest records:
+The app name is **Equipment Tracking** or **Etrac** for short, and successfully deployed on my company internal server.
 
 {% include figure.html src="https://i.imgur.com/37sZLWO.png" caption="Application showing the latest list of equipment records" %}
 
@@ -23,15 +22,21 @@ Finally, the idea was realized. The web app was ready, successful deployed! Here
 
 {% include figure.html src="https://i.imgur.com/3zRj0Gr.png" caption="Viewing the details of equipment record" %}
 
-### Here's how I created the app
+<hr class="break">
 
-The web app is known as **Equipment Tracking**, or in short is **Etrac**. I created Etrac from scratch using [DataTables](https://datatables.net/), [jQuery](https://jquery.com/), and [PHP](http://php.net/). [MySQL](https://www.mysql.com/) is used as the database. The layout is designed based on [Bootstrap](http://getbootstrap.com/) with [Google-style theme](https://todc.github.io/todc-bootstrap/).
+### About Etrac
 
-I hosted Etrac on IIS7, in one of VM servers and only can be accessed within the company's intranet. Since the app is deployed within IIS, I can use the session to capture the user's Active Directory account. So, I don't need to implement user authentication module here. Other than that, Etrac supports exporting to PDF, Excel and CSV file format. Whenever I need the list, I can just export it to any format I want.
+Etrac is built from scratch in PHP using [DataTables](https://datatables.net/), jQuery and MySQL as its database. The UI is designed using [Bootstrap](http://getbootstrap.com/) and [Google-style theme](https://todc.github.io/todc-bootstrap/).
 
-### Code snippets from the project
+I hosted Etrac on IIS7, in one of virtual machines and only can be accessed within the company's intranet. Since the app is running using IIS, I can use the session to capture user's Active Directory (AD) account that used the company network. So, I don't need to implement user authentication module here.
 
-Etrac is built based on DataTables, which is an [open source project](https://datatables.net/license/) distributed under MIT license. Following code snippet is the customized version of DataTables JS code that I wrote for Etrac app:
+Etrac also supports data exporting into PDF, Excel and CSV file.
+
+<hr class="break">
+
+### Code snippets
+
+DataTables JS code that I wrote for Etrac:
 
 ```js
 var table = $('.datatables-table').DataTable({
@@ -162,28 +167,15 @@ var table = $('.datatables-table').DataTable({
 });
 ```
 
-And following below is the PHP code to work with DataTable for server-side processing:
+This is how the PHP code looked like:
 
 ```php
 <?php
+// Comments are removed for the sake of brevity
 
-// Global config
 require_once 'config.php';
-
-/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
- * Easy set variables
- */
-
-// DB table to use
 $table = TABLE_EQUIPMENTS;
-
-// Table's primary key
 $primaryKey = 'id';
-
-// Array of database columns which should be read and sent back to DataTables.
-// The `db` parameter represents the column name in the database, while the `dt`
-// parameter represents the DataTables column identifier. In this case object
-// parameter names
 $columns = array(
   array( 'db' => 'id',           'dt' => 'id'),
   array( 'db' => 'model',        'dt' => 'model' ),
@@ -194,26 +186,16 @@ $columns = array(
   array( 'db' => 'current_owner','dt' => 'current_owner' ),
   array( 'db' => 'remark',       'dt' => 'remark' )
 );
-
-// SQL server connection information
 $sql_details = array(
   'user' => DB_USER,
   'pass' => DB_PASS,
   'db'   => DB_NAME,
   'host' => DB_HOST
 );
-
-
-/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
- * If you just want to use the basic configuration for DataTables with PHP
- * server-side, there is no need to edit below this line.
- */
-
 require( 'ssp.class.php' );
-
 echo json_encode(
 	SSP::complex( $_POST, $sql_details, $table, $primaryKey, $columns, null, 'deleted=0' )
 );
 ```
 
-The PHP code above requires a library class provided by DataTables called `ssp.class.php`. You can get this class source code from [DataTables's repo on GitHub here](https://github.com/DataTables/DataTables/blob/master/examples/server_side/scripts/ssp.class.php).
+**NOTE:** The PHP code above requires a library class provided by DataTables called `ssp.class.php`. You can get this class source code from [DataTables's repository on GitHub](https://github.com/DataTables/DataTables/blob/master/examples/server_side/scripts/ssp.class.php).

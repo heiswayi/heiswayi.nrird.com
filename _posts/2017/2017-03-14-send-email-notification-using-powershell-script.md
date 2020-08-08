@@ -1,15 +1,18 @@
 ---
 layout: post
 title: Send email notification using PowerShell script
-description: Automate your task for sending email notification with PowerShell script and Windows SMTP Client.
-keywords: software build automation, send email notification, using smtp client in powershell, software build notification
+description: Automate your task on sending email notification in Windows system using PowerShell script and Windows SMTP Client.
 tags: [PowerShell, Programming]
 comments: true
 ---
 
-At work, I have been implementing software build automation in Windows environment, and it's part of my day job as Build and Release Engineer. Some of the automation tools have been internally developed by myself. But, there is one common task that is being used a lot. It is to send email notification. This is because people want everything to be delivered to their email. Since most of the tasks are written in PowerShell script by myself. To accomplish that, I wrote a script in PowerShell to send the email notification.
+While working as a _Build and Release Engineer_, one of my job routines is to set up a software build automation in Windows system. There are a bunch of automation tools that have been developed internally by myself, and one that is commonly used a lot is to send email notification. So, the easiest way and lightweight to perform this task is to use PowerShell script. This is because I can simply modify or update the script to cater any kind of system environments or workflows. Some people don't like to install any notifier app in their PC, so they want almost anything to be sent into their email.
 
-The PowerShell script below is how I accomplished the task for sending email notification. The script does not cover all the source code, but you will the idea how it works and to get started with yours.
+<hr class="break">
+
+### PowerShell script
+
+Here's how I wrote the script to be used as a tool for sending the email notification. It's not a full complete script used in my actual works, but from the snippet, you will get the idea on how it works.
 
 ```powershell
 # 1. SETTING UP NECESSARY PARAMETERS
@@ -83,9 +86,11 @@ try {
 }
 ```
 
+<hr class="break">
+
 ### Here's how you can make the script executable with parameters
 
-To execute the script from other program with some arguments to pass, you need to include `[CmdletBinding()]` and `Param()` on top of your main script code.
+To execute the script from other program with some arguments/parameters to pass, you need to include `[CmdletBinding()]` and `Param()` on top of your main script code.
 
 Example:
 
@@ -103,17 +108,19 @@ Param
 # YOUR SCRIPT GOES HERE...
 ```
 
-Then, you can execute your PowerShell script this way, depending on what kind of program you use to execute the commands. Some programs may need you to provide the full path to the script file and the script parameters explicitly.
+Then, you can execute your PowerShell script using this way, depending on what kind of program you use to execute the command. Some programs may need you to provide the full path to the script file and the script parameters explicitly.
 
 Example:
 
-```
+```sh
 ./EmailNotification.ps1 -EmailTo "qa-engineer@email.com" -EmailCC "manager@email.com" ...
 ```
 
-### Handling the script in more proper way
+<hr class="break">
 
-Sometimes, your PowerShell script may become complex and contains hundred lines of code. In this case, you might want to organize and separate them into multiple parameterized functions. The example snippet below shows you how it should be done:
+### Handling the PowerShell script in more proper way
+
+Sometimes, your PowerShell script may become complex and contains hundred lines of code. In this case, you might want to organize and separate them into multiple parameterized functions. The example snippet below will show you how it should be done:
 
 ```powershell
 [CmdletBinding(SupportsShouldProcess=$true, ConfirmImpact='Medium')]
