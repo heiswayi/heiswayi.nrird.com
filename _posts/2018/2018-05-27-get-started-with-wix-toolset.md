@@ -1,31 +1,38 @@
 ---
 layout: post
-title: Get started with WiX Toolset
+title: What is WiX Toolset & how to use it
 description: This is how I created a basic MSI setup for my app installer using WiX Toolset.
-keywords: wix toolset, windows installer, msi setup
 tags: [WiX Toolset, Windows Installer, Programming]
 comments: true
 ---
 
+### What is WiX Toolset?
+
+[Windows Installer XML (WiX) Toolset](http://wixtoolset.org/) is a Microsoft open source project used to create the Office 2007 installer. WiX includes some advanced capabilities, but it has a steep learning curve even though the scripting language is using XML format. It took me some time to learn both technologies (WiX and Windows Installer itself), but it's worth spending the time.
+
+I have been working with Windows-based installation development for some time and for some software projects that required a simple deployment, I preferred to create a basic MSI installer package whenever it's possible. So, WiX Toolset will be the first choice.
+
+<hr class="break">
+
+### Example screenshot
+
 {% include figure.html src="https://i.imgur.com/9RPzlsd.png" caption="Installer UI - welcome dialog" %}
 
-I have been working with Windows-based installation development for some time, and for some software projects that required simple deployment, I preferred to create a basic `.msi` installer package if necessary. And to do that, my first go-to tool is [WiX Toolset](http://wixtoolset.org/). Why? First, it is free and second, it is a script-based (XML), easy for versioning control.
+<hr class="break">
 
-Windows Installer XML (WiX) Toolset is a Microsoft open source project used to create the Office 2007 installer. WiX includes some advanced capabilities, but it has a steep learning curve even though the scripting language is using XML format. It took me some time to learn both technologies (WiX and Windows Installer itself), but it's worth spending the time.
+### Advantages of using WiX Toolset
 
-### Advantages of WiX
+There are some advantages that I can think of when working with WiX Toolset for creating Windows app installer.
 
-There are some advantages working with WiX toolset for creating Windows app installer and here are some of them that I can summarize based on my personal experience:
+- It's a script-based setup using XML format. Better clarity, easy to edit and debug.
+- You will get a fresh clean MSI installer package. No extra stuff embedded, smaller in file size.
+- Everything can be done using command-line. Easy integration into your CI build system.
+- Can easily be source-controlled and versioning.
+- Good community support and a lot of examples.
 
-- Source code in XML format, better clarity, easy to modify and debug.
-- Fresh clean `.msi` installer package, no extra stuffs embedded, smaller file size.
-- Everything can be done using command-line, easy to integrate into CI build system.
-- Easy to source versioning control and edit using any code editor.
-- Good community support and a lot of examples. (One is here!)
+<hr class="break">
 
-In this post, I would like to share one example of my WiX project. Hopefully it would help for those who are looking to get started with WiX toolset, or for those may need to see more real-world examples of WiX-based projects.
-
-### Example of my WiX project files structure
+### Example of my WiX project structure
 
 ```
 <root>
@@ -56,9 +63,11 @@ WiX project files:
 - `Product.Loc-en.wxl` - Localization file for custom strings used in the main file
 - `MakeInstaller.bat` - The batch script to compile WiX project files
 
-### Let's start with WiX preprocessor variables file
+<hr class="break">
 
-Below is the definitions for some variables that I need for creating my `.msi` package.
+### Example of my WiX preprocessor variables file
+
+Below is the definitions for some variables that I need for creating my MSI package.
 
 File name: `Product.Var.wxi`
 
@@ -114,9 +123,11 @@ File name: `Product.Var.wxi`
 
 > **Note:** `BUILD_VERSION`, `BUILD_GUID` and `BUILD_PROJECTDIR` are preprocessor variables that later will be used in `MakeInstaller.bat` file to compile the WiX files.
 
-### Here's my primary WiX file
+<hr class="break">
 
-Below is the script for my primary WiX file to create the `.msi` installer package. In this file, I have combined the code for customzing the installer UI which includes following **few custom dialogs**:
+### Example of my primary WiX file 
+
+Below is the script for my primary WiX file to create the MSI installer package. In this file, I have combined the code for customzing the installer UI which includes the following **few custom dialogs**:
 
 - Custom license agreement dialog
 - Custom upgrade dialog
@@ -124,7 +135,7 @@ Below is the script for my primary WiX file to create the `.msi` installer packa
 
 {% include figure.html src="https://i.imgur.com/FPHfm08.png" caption="With Create Desktop shortcut option" %}
 
-There are some **extra features other the defaults** that have been implemented into the script which are to:
+These are some **extra features other than the defaults** that have been implemented into the script:
 
 - Detect for minimum .NET Framework and OS version.
 - Detect if newer version is installed, and abort the installation.
@@ -133,7 +144,7 @@ There are some **extra features other the defaults** that have been implemented 
 - Create registry to memorize the installation directory path.
 - Create Start Menu and Desktop shortcut. Desktop shortcut is optional, user can choose to not create it.
 
-The script below is well documented. It's a complete script for my project. You will understand and get the picture how it works once you go all the way through the source code line by line.
+The script below is well-documented. It's a complete script for my project. You will understand and get the picture how it works once you go all the way through the source code, line by line. (っ◕‿◕)っ
 
 File name: `Product.wxs`
 
@@ -414,13 +425,17 @@ File name: `Product.wxs`
 </Wix>
 ```
 
+<hr class="break">
+
 ### More example screenshots
 
 {% include figure.html src="https://i.imgur.com/sXeMVyS.png" caption="License agreement dialog" %}
 
 {% include figure.html src="https://i.imgur.com/WaHqBhg.png" caption="When existing version already installed - upgrade dialog" %}
 
-### Here comes for the localization file of the WiX project
+<hr class="break">
+
+### Example of the localization file used for the WiX project
 
 File name: `Product.Loc-en.wxl`
 
@@ -455,9 +470,11 @@ File name: `Product.Loc-en.wxl`
 </WixLocalization>
 ```
 
-### Creating a batch script to compile the WiX project
+<hr class="break">
 
-These are the WiX toolset that I used in the batch script below:
+### How to create a batch script to compile the WiX project
+
+These are the WiX tools that I used in the batch script below:
 
 - **heat.exe** - To automatically harvest my application files and generate a collection of `<Component>` elements and `<ComponentGroup>` that will be used in _Product.wxs_ file under `<Feature>` element. Output from this tool is _Product.Files.wxs_ file.
 - **candle.exe** - To generate `*.wixobj` file with some preprocessor variables.
@@ -465,7 +482,7 @@ These are the WiX toolset that I used in the batch script below:
 
 File name: `MakeInstaller.bat`
 
-> This batch script will generate/compile three different versions of `.msi` installer package for my testing purpose.
+> This batch script will generate/compile three different versions of MSI installer package for my testing purpose.
 
 ```shell
 @echo off
@@ -489,18 +506,20 @@ rem Create setup-2.0.msi
 "%WIX%bin\light.exe" "_Product.Files.wixobj" "_Product.wixobj" -loc "Product.Loc-en.wxl" -cultures:en-US -ext WixUtilExtension -ext WixUIExtension -ext WixNetFxExtension -out "setup-2.0.msi" -nologo
 ```
 
-### Final project files structure
+<hr class="break">
 
-Here's the final project files structure after I run `MakeInstaller.bat` script:
+### Final project structure
 
-![Project files structure after compile](https://i.imgur.com/2tFxHpB.png)
+Here's the final project structure after I run `MakeInstaller.bat` script:
+
+![Project structure after compile](https://i.imgur.com/2tFxHpB.png)
 
 Here's the example screenshot showing the installation progress dialog after I run the `.msi` file and proceed with the installation:
 
 {% include figure.html src="https://i.imgur.com/DZAhwKu.png" caption="Installation progress dialog" %}
 
-### The bottom line
+<hr class="break">
 
-This is not step-by-step tutorial of creating MSI setup, instead I shared the example of WiX project that I did for one of my applications. From the script I shared above, you can copy and get started with yours. All you have to do is to modify it to suit your use case. If you are new to WiX, from this example project, you may learn one or few things that may help you how to start using the WiX toolset.
+That's how I created a WiX project for one of my Windows-based desktop apps. If you're new to WiX Toolset, you can follow and use the given examples and snippets above and modify the code/script to suit your requirement.
 
-**N.B.** This project is based on **WiX v3.11** ([GitHub](https://github.com/wixtoolset/wix3)) at the time I'm writing this post. If you need to customize your installer UI dialogs or to support multiple localizations, you can refer to [this repository](https://github.com/wixtoolset/wix3/tree/develop/src/ext/UIExtension/wixlib) on GitHub for the source code references.
+> **Note:** This project is based on **WiX v3.11** ([GitHub](https://github.com/wixtoolset/wix3)) at the time I'm writing this post. If you need to customize your installer UI dialogs or to support multiple localizations, you can refer to [this repository](https://github.com/wixtoolset/wix3/tree/develop/src/ext/UIExtension/wixlib) on GitHub for more references on the source code.
