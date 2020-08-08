@@ -198,4 +198,4 @@ echo json_encode(
 );
 ```
 
-**NOTE:** The PHP code above requires a library class provided by DataTables called `ssp.class.php`. You can get this class source code from [DataTables's repository on GitHub](https://github.com/DataTables/DataTables/blob/master/examples/server_side/scripts/ssp.class.php).
+Please note that the PHP code above requires a library class provided by DataTables called `ssp.class.php`. You can get this class source code from [DataTables's repository on GitHub](https://github.com/DataTables/DataTables/blob/master/examples/server_side/scripts/ssp.class.php).
