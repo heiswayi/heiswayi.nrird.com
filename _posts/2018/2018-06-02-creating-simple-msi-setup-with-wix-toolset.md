@@ -1,17 +1,18 @@
 ---
 layout: post
-title: Creating a simpler MSI setup with WiX Toolset (step-by-step)
-description: This is a step-by-step walkthrough on how to write XML script to create a simpler MSI setup with WiX Toolset.
-keywords: wix toolset, windows installer, windows installer xml, simpler msi setup
+title: Learn to create a simple MSI setup with WiX Toolset
+description: This is a step-by-step walkthrough on how to write XML script to create a simple MSI setup with WiX Toolset.
 tags: [WiX Toolset, Windows Installer, Programming]
 comments: true
 ---
 
-If you need a more simpler MSI setup (read as file copy), this post will walkthrough on how you can get started to create one using [WiX Toolset](http://wixtoolset.org/). MSI setup is referred to [Windows Installer](https://docs.microsoft.com/en-us/windows/desktop/msi/windows-installer-portal) (`.msi`). In this step-by-step walkthrough, I have been using [WiX Toolset Compiler v3.11.1.2318](http://wixtoolset.org/releases/v3.11.1/stable).
+Creating a simple MSI setup is easier with [WiX Toolset](http://wixtoolset.org/) if you just need a simple file copy style installation of your Windows-based application. MSI setup is referred to [Windows Installer](https://docs.microsoft.com/en-us/windows/desktop/msi/windows-installer-portal) (`.msi` file). In this guide, I have been using [WiX Toolset Compiler v3.11.1.2318](http://wixtoolset.org/releases/v3.11.1/stable).
+
+<hr class="break">
 
 ### Getting started
 
-To get started, you will need a [Product](http://wixtoolset.org/documentation/manual/v3/xsd/wix/product.html) element and this is the primary structure of your WiX code:
+To get started, you will need a [Product](http://wixtoolset.org/documentation/manual/v3/xsd/wix/product.html) element and this is the primary structure of your WiX project:
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -26,7 +27,7 @@ To get started, you will need a [Product](http://wixtoolset.org/documentation/ma
 </Wix>
 ```
 
-Let's add some preprocessor variables and our `<Product>` attributes:
+Let's add some preprocessor variables and `<Product>` attributes:
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -55,7 +56,7 @@ Let's add some preprocessor variables and our `<Product>` attributes:
 </Wix>
 ```
 
-Now let's define our MSI setup `<Package>` and `<MediaTemplate>` into our `<Product>`:
+Now let's define MSI setup `<Package>` and `<MediaTemplate>` into `<Product>`:
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -92,9 +93,11 @@ Now let's define our MSI setup `<Package>` and `<MediaTemplate>` into our `<Prod
 </Wix>
 ```
 
-### Here's how to implement a Major Upgrade in your setup
+<hr class="break">
 
-When creating a `.msi`-based installer, you are strongly encouraged to include logic that supports [Windows Installer major upgrades](http://msdn.microsoft.com/library/aa369786.aspx). Major upgrades are the most common form of updates for `.msi` file, and including this support in your initial `.msi` release gives you flexibility in the future. Without including the support for major upgrades, you will risk greatly complicating your distribution story if you ever need to release updates later on.
+### How to implement a Major Upgrade in your setup
+
+When creating a MSI installer, you are strongly encouraged to include logic that supports [Windows Installer major upgrades](http://msdn.microsoft.com/library/aa369786.aspx). Major upgrades are the most common form of updates for `.msi` file, and including this support in your initial `.msi` release gives you flexibility in the future. Without including the support for major upgrades, you will risk greatly complicating your distribution story if you ever need to release updates later on.
 
 The steps you need to do:
 
@@ -136,14 +139,16 @@ The steps you need to do:
 </Wix>
 ```
 
-### Here's how to install program files and create shortcuts
+<hr class="break">
 
-There are few things we need to do here for installing our files and shortcuts:
+### How to install program files and create shortcuts
 
-1. We need to create a target directory using [Directory](http://wixtoolset.org/documentation/manual/v3/xsd/wix/directory.html) element.
-2. We need to create a reference to a particular target directory using [DirectoryRef](http://wixtoolset.org/documentation/manual/v3/xsd/wix/directoryref.html) element.
-3. For each reference, we need to create one or more components using [Component](http://wixtoolset.org/documentation/manual/v3/xsd/wix/component.html) elements.
-4. We need to create one or more features using [Feature](http://wixtoolset.org/documentation/manual/v3/xsd/wix/feature.html) element and associates particular components into a particular feature.
+There are few things you need to do here for installing files and shortcuts:
+
+1. You need to create a target directory using [Directory](http://wixtoolset.org/documentation/manual/v3/xsd/wix/directory.html) element.
+2. You need to create a reference to a particular target directory using [DirectoryRef](http://wixtoolset.org/documentation/manual/v3/xsd/wix/directoryref.html) element.
+3. For each reference, you need to create one or more components using [Component](http://wixtoolset.org/documentation/manual/v3/xsd/wix/component.html) elements.
+4. You need to create one or more features using [Feature](http://wixtoolset.org/documentation/manual/v3/xsd/wix/feature.html) element and associates particular components into a particular feature.
 
 ```
 Source of file(s) to be installed:
@@ -157,7 +162,7 @@ Application shortcuts to be created:
 --> "Start Menu\ExampleApp\Uninstall ExampleApp" (to uninstall ExampleApp)
 ```
 
-**Target directories for our program files and our shortcuts**
+**Target directories for the program files and shortcuts**
 
 ```xml
 <Directory Id="TARGETDIR" Name="SourceDir">
@@ -172,7 +177,7 @@ Application shortcuts to be created:
 </Directory>
 ```
 
-**A directory reference for our shortcuts**
+**A directory reference for the shortcuts**
 
 ```xml
 <DirectoryRef Id="ApplicationShortcutFolder">
@@ -180,11 +185,11 @@ Application shortcuts to be created:
 </DirectoryRef>
 ```
 
-> NOTE: A directory reference for our program file(s) will be automatically generated using [Fragment](http://wixtoolset.org/documentation/manual/v3/xsd/wix/fragment.html) element. Will be explained later.
+> **Note:** A directory reference for the program file(s) will be automatically generated using [Fragment](http://wixtoolset.org/documentation/manual/v3/xsd/wix/fragment.html) element.
 
 **Components for shortcuts**
 
-We have two components for our shortcuts; one if Windows architecture is 32-bit, another one if 64-bit. The reason for this is the location of `msiexec.exe` might be located in different system folder since we have a shortcut to uninstall our program using `msiexec.exe`. Only one of these two components will be used and it's based on [Condition](http://wixtoolset.org/documentation/manual/v3/xsd/wix/condition.html) element defined value in each component.
+You may have two components for the shortcuts; one if Windows architecture is 32-bit, another one if 64-bit. The reason for this is that the location of `msiexec.exe` might be located in different system folder since you have a shortcut to uninstall the program using `msiexec.exe`. Only one of these two components will be used and it's based on [Condition](http://wixtoolset.org/documentation/manual/v3/xsd/wix/condition.html) element defined value in each component.
 
 ```xml
 <DirectoryRef Id="ApplicationProgramsFolder">
@@ -205,9 +210,9 @@ We have two components for our shortcuts; one if Windows architecture is 32-bit,
 </DirectoryRef>
 ```
 
-> NOTE: Components for our program file(s) will be automatically generated using [Fragment](http://wixtoolset.org/documentation/manual/v3/xsd/wix/fragment.html) element. Will be explained later.
+> **Note:** Components for the program file(s) will be automatically generated using [Fragment](http://wixtoolset.org/documentation/manual/v3/xsd/wix/fragment.html) element.
 
-**Features for our program files and our shortcuts**
+**Features for the program files and shortcuts**
 
 ```xml
 <Feature Id="ProgramFeature" Title="Program Files" Level="1">
@@ -220,9 +225,11 @@ We have two components for our shortcuts; one if Windows architecture is 32-bit,
 </Feature>
 ```
 
-### Here's how to generate component automatically for each file to be installed
+<hr class="break">
 
-Instead of manually creating one-by-one the component for each of our program files, we can use `heat.exe` tool along with `candle.exe` tool from WiX toolset to automatically harvest our program files and creates each component automatically.
+### How to generate component automatically for each file to be installed
+
+Instead of manually creating the component one-by-one for each of the program files, you can use `heat.exe` tool along with `candle.exe` tool from WiX toolset to automatically harvest the program files and creates each component automatically.
 
 Example commands:
 
@@ -251,9 +258,11 @@ Those commands above will generate two files; `Product.Files.wxs` and `_Product.
 </Wix>
 ```
 
+<hr class="break">
+
 ### Using built-in WixUI dialog sets
 
-Since we have **two features** defined, and we want to let the user to choose which feature they want to install, so the simplest and best suited dialog set is [WixUI_FeatureTree](http://wixtoolset.org/documentation/manual/v3/wixui/dialog_reference/WixUI_featuretree.html).
+Since you have **two features** defined, and you may want to let the user to choose which feature they want to install. So, the simplest and best suited dialog set is [WixUI_FeatureTree](http://wixtoolset.org/documentation/manual/v3/wixui/dialog_reference/WixUI_featuretree.html).
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -287,33 +296,39 @@ Since we have **two features** defined, and we want to let the user to choose wh
 
 {% include figure.html src="https://i.imgur.com/hut5Op0.png" caption="Setup dialog UI" %}
 
+<hr class="break">
+
 ### Add your own installer graphics and icon
 
-If you want to customize your MSI setup graphics instead of using the default reddish WiX graphics, you can add these two WiX variables under your `<Product>` element. Assuming all of your resource files are located under `<WIX_PROJECT_DIR>\res` folder. To get the dimension for `WixUIBannerBmp` and `WixUIDialogBmp`, you can check [here](http://wixtoolset.org/documentation/manual/v3/wixui/wixui_customizations.html).
+If you want to customize your MSI setup graphics instead of using the default reddish WiX graphics, you can add these two WiX variables under your `<Product>` element. Assuming all of your resource files are located under `<WIX_PROJECT_DIR>\res` folder. To get the dimension for `WixUIBannerBmp` and `WixUIDialogBmp`, you can check [WixUI customizations here](http://wixtoolset.org/documentation/manual/v3/wixui/wixui_customizations.html).
 
 ```xml
 <WixVariable Id="WixUIBannerBmp" Value="res\banner.bmp" />
 <WixVariable Id="WixUIDialogBmp" Value="res\dialog.bmp" />
 ```
 
-Here's for the MSI setup icon, similarly it goes under your `<Product>` element:
+Here's the XML for the MSI setup icon, similarly it goes under your `<Product>` element:
 
 ```xml
 <Icon Id="icon.ico" SourceFile="res\appIcon.ico"/>
 <Property Id="ARPPRODUCTICON" Value="icon.ico" />
 ```
 
+<hr class="break">
+
 ### Define your own license file
 
-When you use the built-in WixUI dialog set, you need to define your license file. Simply get your `License.rtf` ready and add this under your `<Product>` element. Assuming your license file is located under `<WIX_PROJECT_DIR>\doc` folder.
+When you use the built-in WixUI dialog set, you may need to define your license file. Just get your `License.rtf` ready and add this under your `<Product>` element. Assuming your license file is located under `<WIX_PROJECT_DIR>\doc` folder.
 
 ```xml
 <WixVariable Id="WixUILicenseRtf" Value="doc\License.rtf" />
 ```
 
-### Here's how to detect a required minimum version of .NET Framework (optional)
+<hr class="break">
 
-If your program requires a certain minimum version of .NET Framework needs to be installed in order to work, you can include a detection using `<Condition>` element to **check and then inform the user** that they need a particular version of .NET Framework to be installed before they can install and use your program files. Let's say your program requires .NET Framework 4.7.1, here what you need to do:
+### How to detect a required minimum version of .NET Framework (optional)
+
+If your program requires a certain minimum version of .NET Framework needs to be installed in order to work, you can include a detection using `<Condition>` element to **check and then inform the user** if they need a particular version of .NET Framework to be installed before they can install and use your program files. Let's say your program requires .NET Framework 4.7.1, here what you need to do:
 
 First, you need to include a reference `xmlns:netfx="...` into your WiX file:
 
@@ -342,6 +357,8 @@ And then, include this **Condition** under your `<Product>` element:
 
 {% include figure.html src="https://i.imgur.com/7TpjFrq.png" caption="Spawn dialog when the setup requires .NET Framework 4.7.1 to be installed" %}
 
+<hr class="break">
+
 ### Creating a batch script to build your MSI setup
 
 I'm using a batch scripting and these are the commands I use to build my MSI setup output:
@@ -359,9 +376,11 @@ rem Compile and create mySetup.msi
 "%WIX%bin\light.exe" "_Product.Files.wixobj" "_Product.wixobj" -cultures:en-US -ext WixUIExtension -ext WixNetFxExtension -out "mySetup.msi" -nologo
 ```
 
-> Please note that if you're **using built-in WixUI dialog set**, you need to include `-cultures:en-US -ext WixUIExtension` into your `light.exe` commands as shown above. For **.NET Framework detection**, you need to append `-ext WixNetFxExtension` into the commands.
+> Please note that if you're **using built-in WixUI dialog set**, you may need to include `-cultures:en-US -ext WixUIExtension` into your `light.exe` commands as shown above. For **.NET Framework detection**, you may need to append `-ext WixNetFxExtension` into the commands.
 
-### Here's the full complete script
+<hr class="break">
+
+### Example of full complete WiX script
 
 File name: `Product.wxs`
 
@@ -448,5 +467,3 @@ File name: `Product.wxs`
     </Product>
 </Wix>
 ```
-
-That's it! Using WiX Toolset is the easiest way to create the most minimal MSI setup for Windows-based application installation.

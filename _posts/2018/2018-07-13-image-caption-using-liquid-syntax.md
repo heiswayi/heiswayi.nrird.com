@@ -1,13 +1,14 @@
 ---
 layout: post
 title: Image caption implementation in Jekyll site using Liquid syntax
-description: Implementing a better way to insert captioned images in my blog site using the Liquid syntax.
-keywords: figure captions, image captions, jekyll based blog, liquid syntax, figure figcaption
+description: This is how I implemented a better way to insert captioned images in my blog site using the Liquid syntax.
 tags: [Jekyll, Liquid, Programming]
 comments: true
 ---
 
-One of the things I really love with [Jekyll](https://jekyllrb.com/) static site is that the webpage generation allows seamless mixing of [Markdown](https://en.wikipedia.org/wiki/Markdown), [HTML5](https://en.wikipedia.org/wiki/HTML5) and [Liquid](https://shopify.github.io/liquid/) syntax. Most of my blog posts sometimes contain some images. **And some of these images need captions.**
+One of the things I really like with [Jekyll](https://jekyllrb.com/) static site is that the webpage generation allows seamless mixing of [Markdown](https://en.wikipedia.org/wiki/Markdown), [HTML5](https://en.wikipedia.org/wiki/HTML5) and [Liquid](https://shopify.github.io/liquid/) syntax. Most of my blog posts sometimes contain some images. **And some of these images need captions.** So, this is how I implemented a better way to insert captioned images in my blog site using the Liquid syntax.
+
+<hr class="break">
 
 ### Using the standard Markdown syntax
 
@@ -38,6 +39,8 @@ Figure (above): Fossil Creek Reservoir, Fort Collins, CO
 
 The **problem with this method** is that if my article contains multiple images and each image has its own caption, the article wouldn't look nice because **I can't do a better styling for it**. If the image doesn't need a caption, then it would be okay and easier to use the Markdown syntax.
 
+<hr class="break">
+
 ### Using the HTML5 elements
 
 In order to do a better styling, alternatively I can use HTML5 by wrapping the `<img>` tag along with `<figcaption>` tag into a `<figure>` tag. This way I can do the styling as creative as I want using SASS/CSS.
@@ -53,7 +56,9 @@ Example of HTML5 code:
 
 This should be a way better than using the standard Markdown syntax. **However, inserting (or pasting) the code like above each time I need to include the captioned image can be a quite tedious.**
 
-### Using the Liquid syntax
+<hr class="break">
+
+### Using the Liquid syntax _- this!_
 
 The best way to insert the captioned image is to use the Liquid syntax. All I need to do is **to implement the [Liquid template](https://jekyllrb.com/docs/templates/) once**, and then I can just use the [**include**](https://jekyllrb.com/docs/includes/) tag each time I want to insert the captioned image in a blog post. Here's how I created the figure caption template in my Jekyll source;
 
