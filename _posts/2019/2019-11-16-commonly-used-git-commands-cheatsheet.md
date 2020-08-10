@@ -2,12 +2,13 @@
 layout: post
 title: Commonly used git commands cheatsheet
 description: This is a simple collection of git commands that I have been using for most of the time.
-keywords: git commands, git cheatsheet, commonly used
 tags: [Git, Cheatsheet, Software Engineering]
 comments: true
 ---
 
 Git is the most popular distributed version-control system for tracking changes in source code during software development, and this is a simple collection of git commands that I have been using for most of the time.
+
+<hr class="break">
 
 ### Checking the basic configurations
 
@@ -26,6 +27,8 @@ git config user.name "Heiswayi Nrird"
 git config user.email "heiswayi@nrird.com"
 ```
 
+<hr class="break">
+
 ### Creating and getting projects
 
 ```bash
@@ -35,6 +38,8 @@ git init
 # Create a local copy of a remote repository in the current directory
 git clone <GIT_REPO_URL>
 ```
+
+<hr class="break">
 
 ### The most common workflows - commit the changes
 
@@ -55,6 +60,8 @@ git commit -am "<COMMIT_MESSAGE>" #add all changed files and commit, except the 
 # Push the changes into the remote repository
 git push
 ```
+
+<hr class="break">
 
 ### Branching
 
@@ -90,6 +97,8 @@ git push -d origin <BRANCH_NAME>
 git diff <FIRST_BRANCH_NAME>..<SECOND_BRANCH_NAME>
 ```
 
+<hr class="break">
+
 ### Merging
 
 Before merging, switch to the target branch first: `git checkout <TARGET_BRANCH_NAME>`
@@ -104,6 +113,8 @@ git cherry-pick <COMMIT_ID>
 # Stop merging (in case of conflicts)
 git merge --abort
 ```
+
+<hr class="break">
 
 ### Stashing your work
 
@@ -131,6 +142,8 @@ git stash drop stash@{1} #specific stash
 git stash clear #delete all
 ```
 
+<hr class="break">
+
 ### Tagging
 
 ```bash
@@ -151,6 +164,8 @@ git checkout <VERSION_TAG>
 # Delete a specific tag
 git tag -d <VERSION_TAG>
 ```
+
+<hr class="break">
 
 ### Reset
 
@@ -173,6 +188,8 @@ git commit --amend -m "<NEW_MESSAGE>" #or with simple message
 git rm -rf <FILENAME|DIRECTORY> #apply to local and git
 git rm -rf --cached <FILENAME|DIRECTORY> #or only apply to git
 ```
+
+<hr class="break">
 
 ### Getting the latest changes
 
@@ -197,6 +214,8 @@ Recommended to use the command with a clean working copy. If you have any uncomm
 git pull
 ```
 
+<hr class="break">
+
 ### Inspection and comparison
 
 ```bash
@@ -215,7 +234,9 @@ git diff <BRANCH_NAME_1>..<BRANCH_NAME_2>
 
 [Click here](https://mirrors.edge.kernel.org/pub/software/scm/git/docs/git-log.html#_pretty_formats) for more details on `--pretty=format:"<STRING>"`.
 
-### Git references and other cheatsheets
+<hr class="break">
+
+Git references and other cheatsheets:
 
 - [Atlassian Git Tutorials](https://www.atlassian.com/git/tutorials/setting-up-a-repository)
 - [GitHub Git Learning Resources](http://try.github.io/) // [PDF](https://github.github.com/training-kit/downloads/github-git-cheat-sheet.pdf)
