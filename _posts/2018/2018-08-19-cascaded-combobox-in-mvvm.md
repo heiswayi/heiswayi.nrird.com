@@ -1,17 +1,14 @@
 ---
 layout: post
-title: WPF Cascaded ComboBox in MVVM
+title: How to create WPF Cascaded ComboBox in MVVM
 description: A simple .NET C# tutorial for creating WPF Cascaded ComboBox using MVVM design pattern.
-keywords: cascaded combobox, wpf mvvm
 tags: [C#, WPF, MVVM, Programming]
 comments: true
 ---
 
-This post is about creating a simple cascaded ComboBox in C# using WPF and Model-View-ViewModel (MVVM) design pattern.
+### What is MVVM?
 
-### Understanding MVVM design pattern
-
-Let's take a look on this diagram showing the MVVM architecture:
+MVVM is stand for Model-View-ViewModel. It's one of popular design patterns when working with .NET C# and WPF.
 
 {%
     include figure.html 
@@ -19,15 +16,22 @@ Let's take a look on this diagram showing the MVVM architecture:
     caption="MVVM architecture"
 %}
 
-_View_ is your UI code. Your XAML code. You don't need to do anything with its code-behind (.cs file) here (assuming you created .xaml file using Visual Studio IDE). The code-behind should be free from any business logic code. Unless for the code that used to customize the UI component or to handle a component-specific input masking.
+#### Descriptions
 
-_Model_ is where you put your business logic and data structure, which includes your classes, functions and data objects.
+| Model | Application data model and business logic. |
+| View | A collection of visible elements which includes user interface (UI), animations and text. |
+| ViewModel | A binder that connects the UI elements to the controls in ViewModel. |
 
-_ViewModel_ is a binder that binds your _View_ and your _Model_. Some people called it a "glue". Sometimes I called it a "UI logic".
+<hr class="break">
 
-### Project tree
+### Getting started
 
-Let's take a look on the example of the project tree. I included 2 common classes there inside _ViewModel_ folder; `ViewModelBase.cs` and `RelayCommand.cs`.
+The easiest way to start as a MVVM-based project without using any MVVM library is to implement two interfaces;
+
+- `INotifyPropertyChanged` - for any property binding
+- `ICommand` - for any command binding
+
+Here is how the project structure looked like:
 
 ```
 Solution 'ComboBoxMVVMExample' (1 project)
@@ -37,20 +41,16 @@ Solution 'ComboBoxMVVMExample' (1 project)
 	├── Model
 	├── View
 	├── ViewModel
-	|	├── RelayCommand.cs
-	|	└── ViewModelBase.cs
+	|	├── RelayCommand.cs     <-- INotifyPropertyChanged
+	|	└── ViewModelBase.cs    <-- ICommand
 	├── App.config
 	├── App.xaml
 	└── MainWindow.xaml
 ```
 
-**ViewModelBase.cs** contains an implementation of `INotifyPropertyChanged` interface that basically used to _detect changes_ in your binding properties.
+#### Code snippets
 
-**RelayCommand.cs** contains an implementation of `ICommand` interface that used to enable your command binding inputs such as button, keyboard shortcut, etc..
-
-Two interface implementations above are one of the ways to make MVVM based app to work.
-
-### Code snippets
+These code snippets are reusable which you can copy and paste into your MVVM-based project.
 
 ViewModelBase.cs:
 
@@ -141,9 +141,11 @@ namespace ComboBoxMVVMExample.ViewModel
 }
 ```
 
+<hr class="break">
+
 ### Creating a View
 
-Project tree:
+Project structure:
 
 ```
 Solution 'ComboBoxMVVMExample' (1 project)
@@ -152,7 +154,7 @@ Solution 'ComboBoxMVVMExample' (1 project)
 	├── References
 	├── Model
 	├── View
-	|	└── ComboBox.xaml
+	|	└── ComboBox.xaml    <--
 	├── ViewModel
 	|	├── RelayCommand.cs
 	|	└── ViewModelBase.cs
@@ -190,9 +192,16 @@ ComboBox.xaml:
 </UserControl>
 ```
 
-The code above contains 3 ComboBox elements. The first ComboBox is for `enum`-type list. This is just an example of binding the `ICommand` interface from RelayCommand.cs file. The other two ComboBox elements are an example of the cascaded ComboBox using `List<T>` class.
+The code above contains 3 ComboBox elements. The first ComboBox is for `enum`-type list. This is just an example of binding the `ICommand` interface from _RelayCommand.cs_ file. The other two ComboBox elements are an example of the cascaded ComboBox using `List<T>` class.
 
-UI snapshot:
+#### Common properties of WPF ComboBox
+
+| SelectedItem | Return a selected object from a list of objects. |
+| SelectedValue | Used with `SelectedValuePath` to hold a selected object. |
+| SelectedValuePath | Used with `SelectedValue` to return a selected property value from an object from `SelectedValue`. |
+| DisplayMemberPath | Return a selected property value to display on the UI. |
+
+#### Example of UI snapshot
 
 {%
     include figure.html 
@@ -200,18 +209,11 @@ UI snapshot:
     caption="UI snapshot"
 %}
 
-### Understanding the differences of SelectedItem, SelectedValue, SelectedValuePath and DisplayMemberPath
-
-These are the common properties for WPF ComboBox:
-
-- **SelectedItem** : Return a selected object from a list of objects.
-- **SelectedValue** : Used with `SelectedValuePath` to hold a selected object.
-- **SelectedValuePath** : Used with `SelectedValue` to return a selected property value from an object from `SelectedValue`.
-- **DisplayMemberPath** : Return a selected property value to display on the UI.
+<hr class="break">
 
 ## Creating a Model
 
-Project tree:
+Project structure:
 
 ```
 Solution 'ComboBoxMVVMExample' (1 project)
@@ -219,7 +221,7 @@ Solution 'ComboBoxMVVMExample' (1 project)
 	├── Properties
 	├── References
 	├── Model
-	|	└── ExampleModel.cs
+	|	└── ExampleModel.cs    <--
 	├── View
 	|	└── ComboBox.xaml
 	├── ViewModel
@@ -306,9 +308,11 @@ From the code above, there are 3 object classes; **EnumItem**, **Country**, and 
 - `getStateByCountryCode(...)` is a method to get a list of states based on a particular country's two-letter code.
 - `EnumItem` class is just an example of a list using the enum type.
 
+<hr class="break">
+
 ## Creating a ViewModel
 
-Project tree:
+Project structure:
 
 ```
 Solution 'ComboBoxMVVMExample' (1 project)
@@ -320,7 +324,7 @@ Solution 'ComboBoxMVVMExample' (1 project)
 	├── View
 	|	└── ComboBox.xaml
 	├── ViewModel
-	|	├── ExampleViewModel.cs
+	|	├── ExampleViewModel.cs    <--
 	|	├── RelayCommand.cs
 	|	└── ViewModelBase.cs
 	├── App.config
@@ -470,11 +474,13 @@ The public properties in the code above are usually used to bind with the _View_
 
 _ViewModel_ satisfies this requirement by implementing the [INotifyPropertyChanged](https://msdn.microsoft.com/en-us/library/system.componentmodel.inotifypropertychanged.aspx) interface and raising the **PropertyChanged** event when a property is changed. Listeners can respond appropriately to the property changes when they occur. You may refer to ViewModelBase.cs file on how it was implemented.
 
+<hr class="break">
+
 ### Connecting the ViewModel to the View
 
-There are many approaches to connect a _ViewModel_ to a _View_, including direct relations and container-based approaches. However, all share the same goal, which is for the _View_ to have a _ViewModel_ assigned to its **DataContext** property. _View_ can be connected to _ViewModel_ in a code-behind file (C#), or in the _View_ itself (XAML).
+There are many approaches to connect a _ViewModel_ to a _View_, including direct relations or container-based approach. However, all share the same goal, which is for the _View_ to have a _ViewModel_ assigned to its **DataContext** property. _View_ can be connected to _ViewModel_ in a code-behind file (C#), or in the _View_ itself (XAML).
 
-In this example, I connected the _ViewModel_ from the _View_ itself. So, I don't need to touch the UI code-behind file. I used MainWindow.xaml file as the main window UI for this example:
+In this example, I connected the _ViewModel_ from the _View_ itself without touching its code-behind file. I used MainWindow.xaml file as the main window UI for this example:
 
 ```xml
 <Window x:Class="ComboBoxMVVMExample.MainWindow"
@@ -492,7 +498,7 @@ In this example, I connected the _ViewModel_ from the _View_ itself. So, I don't
 </Window>
 ```
 
-From the XAML code above, I added two new namespaces called `view` and `viewModel`. From there, I am able to use `Window.DataContext` to point to the `ExampleViewModel` class (the _ViewModel_).
+From the XAML code above, I added two new namespaces called `view` and `viewModel`. From there, I was able to use `Window.DataContext` to point to the `ExampleViewModel` class (the _ViewModel_).
 
 Here's the final code for MainWindow.xaml file after I included the _View_ from ComboBox.xaml file:
 
@@ -516,7 +522,9 @@ Here's the final code for MainWindow.xaml file after I included the _View_ from 
 </Window>
 ```
 
-After it was successfully compiled, at first nothing was selected, so the ComboBox for **State** will be disabled by default. But, whenever I started to select a **Country** e.g. "Malaysia", the ComboBox for **State** will be automatically enabled, instantiated and a list of example states within "Malaysia" will be populated. This is how the cascaded ComboBox works with the MVVM implementation.
+<hr class="break">
+
+### Final result
 
 {%
     include figure.html 
@@ -524,15 +532,17 @@ After it was successfully compiled, at first nothing was selected, so the ComboB
     caption="Cascaded ComboBox demo"
 %}
 
-### Advantages of MVVM design pattern
+After it was successfully compiled, at first nothing was selected, so the ComboBox for **State** will be disabled by default. But, whenever I started to select a **Country** e.g. "Malaysia", the ComboBox for **State** will be automatically enabled, instantiated and a list of example states within "Malaysia" will be populated. This is how the cascaded ComboBox works with the MVVM implementation.
 
-The bottom line is that MVVM enables a great developer-designer workflow, providing these benefits:
+#### Complete source code
 
-- During the development process, **developers and designers can work more independently and concurrently** on their components. The designers can concentrate on the _View_, and if they are using Expression Blend, they can easily generate sample data to work with, while the developers can work on the _ViewModel_ and _Model_ components.
-- The developers can **create unit tests for the _ViewModel_ and the _Model_ without using the _View_**. The unit tests for the _ViewModel_ can exercise exactly the same functionality as used by the _View_.
-- It is **easy to redesign the UI of the application without touching the business logic code** because the _View_ is implemented entirely in XAML. A new version of the _View_ should work with the existing _ViewModel_.
-- If there is an existing implementation of the _Model_ that encapsulates existing business logic, it may be difficult or risky to change. In this scenario, **the _ViewModel_ acts as an adapter** for the _Model_ classes and enables you to avoid making any major changes to the _Model_ code.
+The complete source code for this example project can be downloaded from [GitHub](https://github.com/heiswayi/ComboBoxMVVMExample).
 
-### Source code
+<hr class="break">
 
-The complete source code for this example can be downloaded from [GitHub](https://github.com/heiswayi/ComboBoxMVVMExample).
+MVVM enables a great developer-designer workflow which is providing following benefits:
+
+- During the development process, developers and designers can work more independently and concurrently on their components. The designers can concentrate on the _View_, and if they are using Expression Blend, they can easily generate sample data to work with, while the developers can work on the _ViewModel_ and _Model_ components.
+- The developers can create unit tests for the _ViewModel_ and the _Model_ without using the _View_. The unit tests for the _ViewModel_ can exercise exactly the same functionality as used by the _View_.
+- It is easy to redesign the UI of the application without touching the business logic code because the _View_ is implemented entirely in XAML. A new version of the _View_ should work with the existing _ViewModel_.
+- If there is an existing implementation of the _Model_ that encapsulates existing business logic, it may be difficult or risky to change. In this scenario, the _ViewModel_ acts as an adapter for the _Model_ classes and enables you to avoid making any major change to the _Model_ code.
