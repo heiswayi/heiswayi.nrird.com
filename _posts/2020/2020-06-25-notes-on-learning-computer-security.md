@@ -1,8 +1,7 @@
 ---
 layout: post
-title: Learning Computer Security
-description: A note to learn about Computer Security.
-keywords: computer security
+title: Notes on learning Computer Security
+description: This is an opinionated guide to learning about computer security (independently of a university or training program), starting with the absolute basics (suitable for someone without any exposure to or knowledge of computer security) and moving into progressively more difficult subject matter.
 tags: [Computer Security, Notes]
 comments: true
 ---
@@ -16,6 +15,8 @@ Many of the free resources are the best resources and this guide focuses on them
 The introductory & intermediate sections contain materials & recommendations that I considered to be fundamental knowledge for any computer security discipline. They are oritiented towards more 'practical' knowledge and hands-on learning than the latter sections, which delve more deeply into the necessary theory (but are also accompanied by recommendations how to get practical experience).
 
 One of the things I realized while writing this was that by the time someone got to the advanced & expert sections, this guide will be of little use as they'll know enough about computer security to know what they need to study on their own. Those sections are intended more of us a 'look-ahead' for a novices, to give them some exposure of what they're getting themselves into.
+
+<hr class="break">
 
 ### Getting Started
 
@@ -53,6 +54,7 @@ Hands-on experience is the cornerstone of learning computer security. This can c
 - The intermediate section provides several suggestions for various tasks that build on this knowledge.
 - The advanced and expert sections focus on gaining this experience through ctf challenges.
 
+<hr class="break">
 
 ### Introductory Level Learning
 
@@ -133,6 +135,8 @@ Security
 
 - [The NIST Handbook - An Introduction to Computer Security](https://csrc.nist.gov/publications/detail/sp/800-12/rev-1/final)
 
+<hr class="break">
+
 ### Intermediate Level Learning
 
 The intermediate section delves deeper into more funadamentals, heavily focused on the Linux operating system, additional tools, and basic scripting (programming in high-level languages), which is an essential skillset for any any discipline in computer security.
@@ -195,6 +199,7 @@ Python Programming
 - [TheNewBoston - Python Programming Tutorials](https://www.youtube.com/playlist?list=PLEA1FEF17E1E5C0DA&feature=plcp)
 - [ShowMeDo Python Tutorials](http://showmedo.com/videotutorials/python)
 
+<hr class="break">
 
 ### Advanced Level Subjects
 
@@ -262,6 +267,7 @@ The following two 'challenges' are security related and require 'thinking outsid
 
 - [WikiBooks - Web Application Security Guide](https://en.wikibooks.org/wiki/Web_Application_Security_Guide)
 
+<hr class="break">
 
 ### Expert Level Subjects
 
@@ -325,6 +331,7 @@ These materials dive deeply into the most advanced topics in computer security.
 - [Practical Malware Analysis: The Hands-On Guide to Dissecting Malicious Software](http://goo.gl/T3ixdC)
 - [Reverse Engineering Malware](http://opensecuritytraining.info/ReverseEngineeringMalware.html)
 
+<hr class="break">
 
 ### External References
 

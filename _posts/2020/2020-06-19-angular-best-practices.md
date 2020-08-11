@@ -2,18 +2,19 @@
 layout: post
 title: Angular Best Practices
 description: A collection of some Angular best practices that I have been using while working with Angular-based projects.
-keywords: angular, typescript, best practices
 tags: [Angular, TypeScript, Best Practices]
 comments: true
 ---
 
 Lately, I have been doing frontend development using Angular Framework. Sometimes I do backend development, but it is not as much as I did on the frontend development. So, here I want to note some Angular Best Practices that I have been practicing and I think they are worth to follow.
 
+<hr class="break">
+
 ### 1. Angular scalable project structure
 
 Angular project files should be organized into a proper folder structure that is easy to scale.
 
-Example of folder structure:
+Example of organized folder structure:
 
 ```
 angular-project
@@ -145,6 +146,8 @@ angular-project
             variables.scss
 ```
 
+<hr class="break">
+
 ### 2. Shorten the long relative paths
 
 When the project has grown, we might have the nested modules and we might end-up with code like this:
@@ -175,6 +178,8 @@ This can be done by updating our `tsconfig.json` file into something like this:
   }
 }
 ```
+
+<hr class="break">
 
 ### 3. Make use of `index.ts` file to simplify the imports
 
@@ -211,6 +216,8 @@ import * as fromComponents from './components';
 export class SharedModule {}
 ```
 
+<hr class="break">
+
 ### 4. Provide clarity through the code first
 
 - Use proper naming conventions and best practices.
@@ -220,11 +227,15 @@ export class SharedModule {}
 - Comments must be readable and maintained. Outdated and incorrect should be removed.
 - Comments should be used to explain "why" instead of "what".
 
+<hr class="break">
+
 ### 5. Follow the best practices provided by Angular Coding Style Guide
 
 Page URL: [https://angular.io/guide/styleguide](ttps://angular.io/guide/styleguide)
 
 Angular Coding Style Guide provides very good explanation if you are curious on "why".
+
+<hr class="break">
 
 ### 6. Use `trackBy` in *ngFor
 
@@ -242,6 +253,8 @@ Example use of `trackBy` in HTML:
 trackByFn(index, item) { return index; }
 ```
 
+<hr class="break">
+
 ### 7. Prevent memory leak in Angular Observable
 
 While Angular takes care of unsubscribing when using the async pipe, it quickly becomes a mess when we have to do this on our own. Failing to unsubscribe will lead to memory leaks, as the Observable stream is left opened. Before `.subscribe(...)`, we could use `take(1)` or `takeUntil(...)` so that we could prevent the memory leak when we are subscribing to the event.
@@ -258,9 +271,13 @@ this.http.get('/userlist')
   });
 ```
 
+<hr class="break">
+
 ### 8. Minimize use of logic in HTML templates
 
 Using logic in HTML templates may introduce more complexity and makes the code less maintainability as the code becomes hard to adapt the change that comes it quickly.
+
+<hr class="break">
 
 ### 9. Take care of code linting
 
