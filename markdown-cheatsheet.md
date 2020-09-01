@@ -1,13 +1,14 @@
 ---
 layout: page
 title: Markdown Cheatsheet
-description: This markdown cheatsheet provides a quick overview of all the Markdown syntax elements.
-keywords: markdown cheatsheet
+description: This markdown cheatsheet provides an overview of all the Markdown syntax elements supported by this site.
 ---
 
-# Typography
+This markdown cheatsheet was prepared by Heiswayi Nrird to be used as markdown syntax testing for typography assessment.
 
-## Headings
+<hr class="break">
+
+### Headings
 
 Headings from `H1` to `H6` are constructed with a `#` for each level.
 
@@ -29,7 +30,9 @@ Output:
 ##### H5 Heading
 ###### H6 Heading
 
-## Body Copy 
+<hr class="break">
+
+### Paragraph
 
 Body copy written as normal, plain text will be wrapped with `<p></p>` tags in the rendered HTML.
 
@@ -41,7 +44,7 @@ Output:
 
 Lorem ipsum dolor sit amet, graecis denique ei vel, at duo primis mandamus. Et legere ocurreret pri, animal tacimates complectitur ad cum. Cu eum inermis inimicus efficiendi. Labore officiis his ex, soluta officiis concludaturque ei qui, vide sensibus vim ad.
 
-## Emphasis
+<hr class="break">
 
 ### Bold
 
@@ -57,6 +60,8 @@ Output:
 
 **rendered as bold text**
 
+<hr class="break">
+
 ### Italics
 
 For emphasizing a snippet of text with italics.
@@ -71,9 +76,11 @@ Output:
 
 _rendered as italicized text_
 
+<hr class="break">
+
 ### Strikethrough
 
-In GFM you can do strikethroughs. 
+In GitHub-flavored markdown, you can do strikethroughs. 
 
 ```markdown
 ~~Strike through this text.~~
@@ -83,7 +90,9 @@ Output:
 
 ~~Strike through this text.~~
 
-## Blockquotes
+<hr class="break">
+
+### Blockquote
 
 For quoting blocks of content from another source within your document.
 
@@ -97,9 +106,9 @@ Output:
 
 > Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
 
-## Lists
+<hr class="break">
 
-### Unordered
+### Unordered list
 
 A list of items in which the order of the items does not explicitly matter.
 
@@ -143,7 +152,9 @@ Output:
 + Aenean sit amet erat nunc
 + Eget porttitor lorem
 
-### Ordered
+<hr class="break">
+
+### Ordered list
 
 A list of items in which the order of items does explicitly matter.
 
@@ -169,7 +180,7 @@ Output:
 7. Aenean sit amet erat nunc
 8. Eget porttitor lorem
 
-**TIP**: If you just use `1.` for each number, GitHub will automatically number each item. For example:
+**Tip**: If you just use `1.` for each number, GitHub will automatically number each item. For example:
 
 ```markdown
 1. Lorem ipsum dolor sit amet
@@ -193,18 +204,21 @@ Output:
 1. Aenean sit amet erat nunc
 1. Eget porttitor lorem
 
-
-## Code
+<hr class="break">
 
 ### Inline code
 
 Wrap inline snippets of code with `` ` ``.
 
-For example, `<section></section>` should be wrapped as "inline".
-
 ```html
 For example, `<section></section>` should be wrapped as "inline".
 ```
+
+Output:
+
+For example, `<section></section>` should be wrapped as "inline".
+
+<hr class="break">
 
 ### Indented code
 
@@ -217,13 +231,16 @@ Or indent several lines of code by at least four spaces, as in:
     line 3 of code
 ```
 
+Output:
+
     // Some comments
     line 1 of code
     line 2 of code
     line 3 of code
 
+<hr class="break">
 
-### Block code "fences"
+### Code block using "fences"
 
 Use "fences"  ```` ``` ```` to block in multiple lines of code. 
 
@@ -233,13 +250,17 @@ Sample text here...
 ```
 </pre>
 
+Output:
+
 ```
 Sample text here...
 ```
 
+<hr class="break">
+
 ### Syntax highlighting
 
-GFM, or "GitHub Flavored Markdown" also supports syntax highlighting. To activate it, simply add the file extension of the language you want to use directly after the first code "fence", ` ```js `, and syntax highlighting will automatically be applied in the rendered HTML. For example, to apply syntax highlighting to JavaScript code:
+GitHub-flavored markdown also supports syntax highlighting. To activate it, simply add the file extension of the language you want to use directly after the first code "fence", ` ```js `, and syntax highlighting will automatically be applied in the rendered HTML. For example, to apply syntax highlighting to JavaScript code:
 
 <pre>
 ```javascript
@@ -287,7 +308,7 @@ gruntinitConfig({
 };
 ```
 
-Output (in HTML):
+Output (in HTML code):
 
 ```xml
 <div class="highlight"><pre><span class="nx">grunt</span><span class="p">.</span><span class="nx">initConfig</span><span class="p">({</span>
@@ -311,9 +332,9 @@ Output (in HTML):
 </pre></div>
 ```
 
-## Links
+<hr class="break">
 
-### Basic link
+### Anchor link
 
 ```markdown
 [Assemble](http://assemble.io)
@@ -323,13 +344,15 @@ Output (hover over the link, there is no tooltip):
 
 [Assemble](http://assemble.io)
 
-Output (in HTML):
+Output (in HTML code):
 
 ```html
 <a href="http://assemble.io">Assemble</a>
 ```
 
-### Add a title
+<hr class="break">
+
+### Anchor link with a title
 
 ```markdown
 [Upstage](https://github.com/upstage/ "Visit Upstage!")
@@ -339,13 +362,15 @@ Output (hover over the link, there should be a tooltip):
 
 [Upstage](https://github.com/upstage/ "Visit Upstage!")
 
-Output (in HTML):
+Output (in HTML code):
 
 ```html
 <a href="https://github.com/upstage/" title="Visit Upstage!">Upstage</a>
 ```
 
-### Named Anchors
+<hr class="break">
+
+### Named anchors
 
 Named anchors enable you to jump to the specified anchor point on the same page. For example, each of these chapters:
 
@@ -368,9 +393,12 @@ Content for chapter one.
 ## Chapter 3 <a id="chapter-3"></a>
 Content for chapter one.
 ```
-**NOTE** that specific placement of the anchor tag seems to be arbitrary. They are placed inline here since it seems to be unobtrusive, and it works.
 
-# Horizontal Rules
+**PS:** Note that specific placement of the anchor tag seems to be arbitrary. They are placed inline here since it seems to be unobtrusive, and it works.
+
+<hr class="break">
+
+### Horizontal line
 
 The HTML `<hr>` element is for creating a "thematic break" between paragraph-level elements. In markdown, you can create a `<hr>` with any of the following:
 
@@ -386,7 +414,9 @@ ___
 
 ***
 
-# Tables
+<hr class="break">
+
+### Tables
 
 Tables are created by adding pipes as dividers between each cell, and by adding a line of dashes (also separated by bars) beneath the header. Note that the pipes do not need to be vertically aligned.
 
@@ -406,7 +436,9 @@ Output:
 | engine | engine to be used for processing templates. Handlebars is the default. |
 | ext    | extension to be used for dest files. |
 
-### Right aligned text
+<hr class="break">
+
+### Table with right aligned text
 
 Adding a colon on the right side of the dashes below any heading will right align text for that column.
 
@@ -426,7 +458,9 @@ Output:
 | engine | engine to be used for processing templates. Handlebars is the default. |
 | ext    | extension to be used for dest files. |
 
-# Images
+<hr class="break">
+
+### Images
 
 Images have a similar syntax to links but include a preceding exclamation point.
 
@@ -452,9 +486,9 @@ With a reference later in the document defining the URL location:
 
 [id]: http://octodex.github.com/images/dojocat.jpg  "The Dojocat"
 
-# Misc.
+<hr class="break">
 
-## Task List (GFM)
+### Task lists
 
 Task lists are lists with items marked as either `[ ]` or `[x]` (incomplete or complete). For example:
 
@@ -474,7 +508,9 @@ Output:
 - [ ] incomplete
 - [x] completed
 
-## Footnote
+<hr class="break">
+
+### Footnotes
 
 Inlining footnote references in the writing, for example:
 
@@ -495,9 +531,9 @@ Adding matching footnote definitions at the end of writing, for example:
 belong to the previous footnote.
 ```
 
-# Colophon
+...
 
-This markdow cheatsheet was prepared by Heiswayi Nrird for [https://heiswayi.nrird.com](https://heiswayi.nrird.com) (this website) development purpose.
+This footnotes will always be the bottom of the page/post content:
 
 [^1]: Here is the footnote.
 
