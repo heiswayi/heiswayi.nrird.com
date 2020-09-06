@@ -21,7 +21,11 @@
     "build": "gulp build-jekyll-dev",
     "start": "gulp",
     "prod": "gulp build-jekyll-prod",
-    "checkcss": "npm run prod && gulp check-css"
+    "checkcss": "npm run prod && gulp check-css",
+    "preinstall": "npx npm-force-resolutions"
+  },
+  "resolutions": {
+    "graceful-fs": "^4.2.4"
   },
   "repository": {
     "type": "git",

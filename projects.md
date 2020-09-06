@@ -42,6 +42,7 @@ A collection of my selective works and Open Source projects. Check me out on [Gi
 | [Whois](https://x.nrird.com/whois/) | A minimalist domain whois script. |
 | [S-CREATE](https://x.nrird.com/s/create) | A minimalist URL shortening script. |
 | [/imgh](https://x.nrird.com/imgh/) | My Personal Image Hosting script. |
+| [QR Code](https://heiswayi.nrird.com/qrcode) | A simple QR code generator API script. |
 
 <hr class="break">
 
