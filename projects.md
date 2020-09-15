@@ -36,12 +36,12 @@ A collection of my selective works and Open Source projects. Check me out on [Gi
 
 ### Server-Side Apps
 
-| [XNote](https://x.nrird.com/xnote/) | A minimalist, secure and encrypted pastebin app. |
+| [xGist](https://x.nrird.com/xgist/) | A minimalist, secure and encrypted pastebin app. |
 | [Speedtest](https://x.nrird.com/speedtest/) | A minimalist, mobile-friendly speedtest site. |
 | [Write](https://x.nrird.com/write/) | A browser-based WYSIWYG editor for online documentation writing. |
 | [Whois](https://x.nrird.com/whois/) | A minimalist domain whois script. |
 | [S-CREATE](https://x.nrird.com/s/create) | A minimalist URL shortening script. |
-| [/imgh](https://x.nrird.com/imgh/) | My Personal Image Hosting script. |
+| [ImageHosting](https://x.nrird.com/imagehosting/) | My Personal Image Hosting script. |
 | [QR Code](https://heiswayi.nrird.com/qrcode) | A simple QR code generator API script. |
 
 <hr class="break">

@@ -30,9 +30,9 @@ This is a simple QR Code generator API that you can simply use.
 #### Usage Example 2 - With Logo
 
 ```html
-<img src="https://x.nrird.com/qrcode/?data=https://heiswayi.nrird.com/qrcode&size=200x200&logo=https://x.nrird.com/cube.png">
+<img src="https://x.nrird.com/qrcode/?data=https://heiswayi.nrird.com/qrcode&size=200x200&logo=https://x.nrird.com/sale.png">
 ```
 
-![Example 2](https://x.nrird.com/qrcode/?data=https://heiswayi.nrird.com/qrcode&size=200x200&logo=https://x.nrird.com/cube.png)
+![Example 2](https://x.nrird.com/qrcode/?data=https://heiswayi.nrird.com/qrcode&size=200x200&logo=https://x.nrird.com/sale.png)
 
 <hr class="break">
