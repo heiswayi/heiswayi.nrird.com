@@ -34,7 +34,7 @@ A collection of my selective works and Open Source projects. Check me out on [Gi
 
 <hr class="break">
 
-### Server-Side Apps
+### Built with PHP
 
 | [hn-pastebin](https://x.nrird.com/pastebin/) | A minimalist, secure and encrypted pastebin app. |
 | [hn-speedtest](https://x.nrird.com/speedtest/) | A minimalist, mobile-friendly speedtest site. |
