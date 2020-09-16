@@ -36,12 +36,12 @@ A collection of my selective works and Open Source projects. Check me out on [Gi
 
 ### Server-Side Apps
 
-| [xGist](https://x.nrird.com/xgist/) | A minimalist, secure and encrypted pastebin app. |
-| [Speedtest](https://x.nrird.com/speedtest/) | A minimalist, mobile-friendly speedtest site. |
-| [Write](https://x.nrird.com/write/) | A browser-based WYSIWYG editor for online documentation writing. |
-| [Whois](https://x.nrird.com/whois/) | A minimalist domain whois script. |
-| [S-CREATE](https://x.nrird.com/s/create) | A minimalist URL shortening script. |
-| [ImageHosting](https://x.nrird.com/imagehosting/) | My Personal Image Hosting script. |
+| [hn-pastebin](https://x.nrird.com/pastebin/) | A minimalist, secure and encrypted pastebin app. |
+| [hn-speedtest](https://x.nrird.com/speedtest/) | A minimalist, mobile-friendly speedtest site. |
+| [hn-writer](https://x.nrird.com/writer/) | A browser-based WYSIWYG editor for online documentation writing. |
+| [hn-whois](https://x.nrird.com/whois/) | A minimalist domain whois script. |
+| [hn-link](https://x.nrird.com/link/create) | A minimalist URL shortening script. |
+| [hn-imagehosting](https://x.nrird.com/imagehosting/) | A minimalist and personal image hosting script. |
 | [QR Code](https://heiswayi.nrird.com/qrcode) | A simple QR code generator API script. |
 
 <hr class="break">

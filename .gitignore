@@ -10,6 +10,7 @@ _deleted/
 node_modules/
 Gemfile.lock
 *-draft.md
+_draft/
 
 #################
 ## Eclipse
