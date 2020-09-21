@@ -259,32 +259,32 @@ trackByFn(index, item) { return index; }
 
 While Angular takes care of unsubscribing when using the async pipe, it quickly becomes a mess when we have to do this on our own. Failing to unsubscribe will lead to memory leaks, as the Observable stream is left opened. Before `.subscribe(...)`, we could use `take(1)` or `takeUntil(...)` so that we could prevent the memory leak when we are subscribing to the event.
 
+#### Example of `take(1)` pipe
+
 ```js
+// add import
 import { take } from 'rxjs/operators';
 
-// ...
-
-// example of take(1)
+// example code usage:
 // this will take the first emitted value then complete.
 this.dataService.pipe(take(1)).subscribe(result => { console.log(result); });
 ```
 
+#### Example of `takeUntil(...)` pipe
+
 ```js
-import { take, takeUntil } from 'rxjs/operators';
+// add import
+import { takeUntil } from 'rxjs/operators';
 
-// ...
-
+// declare a subject to be used in ngOnDestroy()
 private onDestroy$: Subject<void> = new Subject<void>();
 
-// ...
-
+// call the subject
 ngOnDestroy() {
   this.onDestroy$.next();
 }
 
-// ...
-
-// example of takeUntil(...)
+// example code usage:
 // this will take until the component destroyed then complete.
 this.http.get('/userlist')
   .pipe(takeUntil(this.onDestroy$))
