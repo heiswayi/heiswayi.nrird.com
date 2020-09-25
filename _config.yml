@@ -3,7 +3,7 @@ og_locale               : "en_US"
 title                   : "Heiswayi Nrird"
 description             : "Welcome to Heiswayi Nrird's Personal Webpage" # tagline
 keywords                : "software engineering, user experience, open source, photography, random experimental stuff"
-image_cover             : "/assets/logo.gif"
+image_cover             : "/assets/cover.gif"
 version                 : "2020"
 google_analytics_code   : UA-58296043-7
 

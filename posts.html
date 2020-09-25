@@ -53,7 +53,7 @@ title: Home
 			<hr class="hidden">
 			<span class="hidden">&nbsp;</span>
 
-			{% if site.show_postlist_alt_view %}<p class="switch-index"><a href="{{ "/site-alt" | prepend: site.baseurl | prepend: site.url }}">Use Grid View</a></p>{% endif %}
+			{% if site.show_postlist_alt_view %}<p class="switch-index"><a href="{{ "/posts-alt" | prepend: site.baseurl | prepend: site.url }}">Use Grid View</a></p>{% endif %}
 
 			<div class="posts archives">
 			{% for post in site.posts %}

@@ -50,7 +50,7 @@ A collection of my selective works and Open Source projects. Check me out on [Gi
 
 | [Website Checklist](https://heiswayi.github.io/website-checklist/) | Interactive checklist for web developer. |
 | [Code Playground](https://heiswayi.github.io/code-playground/) | Formatting any code snippet using Monaco Editor. |
-| [/simple-tools](https://heiswayi.github.io/simple-tools/) | A collection of simple web tools created for personal use. |
+| [Simple Tools](https://heiswayi.github.io/simple-tools/) | A collection of simple web tools created for personal use. |
 | [Mawar Allyssa's Keyboard Smashing](https://heiswayi.nrird.com/mawar-allyssa) | A simple app for my toddler to smash the computer keyboard. |
 | [Bullet Journal](https://x.nrird.com/bulletjournal/) | A TODO-like app that utilizes your browser [localStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage) to save the data. |
 
