@@ -22,20 +22,44 @@
 		body {
 			width: 100%;
 			height: 100%;
+			background: #fefefe;
 		}
 
 		canvas {
 			display: block;
+		}
+		.copyright {
+			z-index: 100;
+			bottom: 0;
+			right: 0;
+			position: absolute;
+			background: #eee;
+			font-family: sans-serif;
+			font-size: 12px;
+			margin-right: 5px;
+			margin-bottom: 5px;
+			padding: 5px 10px;
+		}
+		.copyright a {
+			color: #069;
+			text-decoration: none;
+		}
+		.copyright a:hover {
+			background: #069;
+			color: #fff;
 		}
 	</style>
 </head>
 
 <body>
 	<canvas id="canvas"></canvas>
+	<span class="copyright">Made with <span style="color:#FF4136">&hearts;</span> by <a href="https://heiswayi.nrird.com/about">Mawar Allyssa's Father</a></span>
 	<script>
 		(function () {
 			var canvas = document.getElementById('canvas'),
 				context = canvas.getContext('2d');
+			var startx = 0,
+				starty = 0;
 
 			window.addEventListener('resize', resizeCanvas, false);
 
@@ -59,8 +83,8 @@
 					context.arc(coord.x, coord.y, radius, 0, 2 * Math.PI, false);
 					context.fillStyle = randomColor();
 					context.fill();
-					context.lineWidth = 5;
-					context.strokeStyle = '#222';
+					context.lineWidth = 2;
+					context.strokeStyle = 'rgba(0,0,0,1)';
 					context.stroke();
 				}
 
@@ -76,7 +100,7 @@
 				}
 
 				function randomColor() {
-					const colors = "#D50000 #FF1744 #4A148C #AB47BC #311B92 #1A237E #0D47A1 #01579B #004D40 #1B5E20 #33691E #827717 #F57F17 #FFD600 #E65100 #BF360C #3E2723 #212121 #263238".split(" ");
+					const colors = "#0000FF #FF0000 #FFFF00 #FF6600 #00FF00 #7F00FF #FF00FF".split(" "); // blue red yellow orange green purple pink
 					return colors[rand(colors.length)];
 				}
 
@@ -86,8 +110,8 @@
 					context.rect(p.x, p.y, 150, 150);
 					context.fillStyle = randomColor();
 					context.fill();
-					context.lineWidth = 7;
-					context.strokeStyle = 'black';
+					context.lineWidth = 2;
+					context.strokeStyle = 'rgba(0,0,0,1)';
 					context.stroke();
 				}
 
@@ -101,8 +125,8 @@
 					context.rect(p.x, p.y, 200, 100);
 					context.fillStyle = randomColor();
 					context.fill();
-					context.lineWidth = 7;
-					context.strokeStyle = 'black';
+					context.lineWidth = 2;
+					context.strokeStyle = 'rgba(0,0,0,1)';
 					context.stroke();
 				}
 
@@ -114,14 +138,33 @@
 
 				function drawLetter(coord) {
 					const p = coord || randomCoord();
-					context.font = "120px Georgia";
+					const letter = randomLetter();
+					context.font = "900 200px sans-serif";
+					context.lineWidth = 3;
+					context.strokeStyle = 'rgba(0,0,0,1)';
+					context.strokeText(letter, p.x, p.y);
 					context.fillStyle = randomColor();
-					context.fillText(randomLetter(), p.x, p.y);
+					context.fillText(letter, p.x, p.y);
+					context.stroke();
+				}
+
+				function drawTriangle(coord) {
+					const p = coord || randomCoord();
+					context.beginPath();
+					context.moveTo(p.x, p.y);
+					context.lineTo((p.x - 150), (p.y + 150));
+					context.lineTo((p.x + 150), (p.y + 150));
+					context.closePath();
+					context.fillStyle = randomColor();
+					context.fill();
+					context.lineWidth = 2;
+					context.strokeStyle = 'rgba(0,0,0,1)';
+					context.stroke();
 				}
 
 				function drawShape(coord) {
 					coord = coord || randomCoord();
-					var funs = [drawRectangle, drawCircle, drawSquare, drawLetter];
+					var funs = [drawRectangle, drawCircle, drawSquare, drawLetter, drawTriangle];
 					funs[rand(funs.length)](coord);
 				}
 
