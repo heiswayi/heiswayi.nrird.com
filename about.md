@@ -12,7 +12,7 @@ keywords: about the author, website technology stack, about page
 		<div class="photo">
 			<img src="https://avatars0.githubusercontent.com/u/13794983?v=4" alt="Heiswayi Nrird Photo">
 		</div>
-		<p class="intro-text">Heiswayi Nrird is my official Internet handler name. In my real life, people have been calling me <em>Wayi</em>. I'm a 30-yo software engineer based in Penang, Malaysia. I build and ship software at Keysight Technologies. I can be reached on <a href="https://my.linkedin.com/in/nrird">LinkedIn</a> for any professional networking.</p>
+		<p class="intro-text">Heiswayi Nrird is my official Internet pseudonym. In my real life, people have been calling me <em>Wayi</em>. I'm a 30-yo software engineer based in Penang, Malaysia. I build and ship software at <a href="https://www.keysight.com" target="_blank">Keysight Technologies</a>. I can be reached on <a href="https://my.linkedin.com/in/nrird" target="_blank">LinkedIn</a> for any professional networking.</p>
 		<p class="intro-text">Sometimes, I do <em title="Exploring. Coding. Building. Documenting.">some random stuff</em> and write about <em>it</em> here. Other times, I might be <em>away from the city</em> to capture <a href="{{ "/photography" | prepend: site.baseurl | prepend: site.url }}">some photographs</a> on landscape or may just reading <a href="{{ "/books-i-read" | prepend: site.baseurl | prepend: site.url }}">some books</a>.</p>
 	</div>
 </div>
@@ -38,4 +38,4 @@ Unless otherwise stated, all contents on this site are licensed under [CC BY-SA 
 ### Contact info
 
 **Email:** heiswayi <span style="display:none">-antispam-</span> <span style="opacity:0.5">(at)</span> <span style="display:none">-antispam-</span>nrird <span style="opacity:0.5">dot</span> com<br>
-**PGP:** [keybase.txt](keybase.txt)
+**PGP:** <a href="{{ "/keybase.txt" | prepend: site.baseurl | prepend: site.url }}" target="_blank">B7B7 B2B1 9180 5E81</a>
