@@ -40,7 +40,11 @@ hr.break {
     margin: 0 0 0 5px;
   }
   a[href*="localhost"]::after,
-  a[href*="heiswayi.nrird.com"]::after {
+  a[href*="heiswayi.nrird.com"]::after,
+  a[href*=".png"]::after,
+  a[href*=".jpg"]::after,
+  a[href*=".jpeg"]::after,
+  a[href*=".gif"]::after {
     content: "";
     margin: 0;
   }

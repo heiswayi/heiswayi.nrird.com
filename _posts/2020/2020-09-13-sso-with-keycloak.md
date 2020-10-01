@@ -37,7 +37,7 @@ A Keycloak _realm_ is like a namespace that allows you to manage all of your met
 
 Following image illustrates the architecture of Keycloak software;
 
-{% include figure.html src="https://i.imgur.com/c7irtZ4.png" caption="Credit: How to secure your Spring Apps with Keycloak (2019) by Thomas Darimont" %}
+{% include figure.html src="https://i.imgur.com/c7irtZ4.png" caption="Credit: Courtesy of Thomas Darimont" %}
 
 <hr class="break">
 
@@ -47,7 +47,7 @@ Following image illustrates the architecture of Keycloak software;
 
 Following image illustrates how a user is authenticated when accessing the frontend application;
 
-{% include figure.html src="https://i.imgur.com/g5eZLph.png" caption="Credit: How to secure your Spring Apps with Keycloak (2019) by Thomas Darimont" %}
+{% include figure.html src="https://i.imgur.com/g5eZLph.png" caption="Credit: Courtesy of Thomas Darimont" %}
 
 #### SSO Integration
 
@@ -55,13 +55,13 @@ Web SSO is the most useful feature where you login once to access all applicatio
 
 Following image illustrates the authentication flow of a logged-in user accessing another frontend application;
 
-{% include figure.html src="https://i.imgur.com/0ug7eMI.png" caption="Credit: How to secure your Spring Apps with Keycloak (2019) by Thomas Darimont" %}
+{% include figure.html src="https://i.imgur.com/0ug7eMI.png" caption="Credit: Courtesy of Thomas Darimont" %}
 
 #### How backend services work with Keycloak
 
 Following image illustrates the flow on how the backend services work with Keycloak to validate the access token;
 
-{% include figure.html src="https://i.imgur.com/Fi77aj0.png" caption="Credit: How to secure your Spring Apps with Keycloak (2019) by Thomas Darimont" %}
+{% include figure.html src="https://i.imgur.com/Fi77aj0.png" caption="Credit: Courtesy of Thomas Darimont" %}
 
 <hr class="break">
 
@@ -246,7 +246,7 @@ services:
 You can use following docker-compose CLI to get started:
 
 ```bash
-$ docker-compose -f docker-compose.yml up -d
+$ docker-compose -f path/to/docker-compose.yml up -d
 ```
 
 <hr class="break">
