@@ -32,23 +32,23 @@ hr.break {
   margin-bottom: 5rem;
 }
 
-.post,
-.page {
-  a[href*="//"]::after
-  {
-    content: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAAV0lEQVR4Xq2QwQ2AAAwC3cmd2Kk7sRP64CEJ9qOX8OPatMc/QKppnEPhTmJh23CLiwAqIw21CybKQ28qQi37WGFYBJcwfJQpP8LlEHKyZMF0IdmF13zlAjZ/6H4wb+mUAAAAAElFTkSuQmCC);
-    margin: 0 0 0 5px;
-  }
-  a[href*="localhost"]::after,
-  a[href*="heiswayi.nrird.com"]::after,
-  a[href*=".png"]::after,
-  a[href*=".jpg"]::after,
-  a[href*=".jpeg"]::after,
-  a[href*=".gif"]::after {
-    content: "";
-    margin: 0;
-  }
-}
+// .post,
+// .page {
+//   a[href*="//"]::after
+//   {
+//     content: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAAV0lEQVR4Xq2QwQ2AAAwC3cmd2Kk7sRP64CEJ9qOX8OPatMc/QKppnEPhTmJh23CLiwAqIw21CybKQ28qQi37WGFYBJcwfJQpP8LlEHKyZMF0IdmF13zlAjZ/6H4wb+mUAAAAAElFTkSuQmCC);
+//     margin: 0 0 0 5px;
+//   }
+//   a[href*="localhost"]::after,
+//   a[href*="heiswayi.nrird.com"]::after,
+//   a[href*=".png"]::after,
+//   a[href*=".jpg"]::after,
+//   a[href*=".jpeg"]::after,
+//   a[href*=".gif"]::after {
+//     content: "";
+//     margin: 0;
+//   }
+// }
 
 // a.external:after {
 //   content: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAAV0lEQVR4Xq2QwQ2AAAwC3cmd2Kk7sRP64CEJ9qOX8OPatMc/QKppnEPhTmJh23CLiwAqIw21CybKQ28qQi37WGFYBJcwfJQpP8LlEHKyZMF0IdmF13zlAjZ/6H4wb+mUAAAAAElFTkSuQmCC);
