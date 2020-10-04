@@ -36,12 +36,12 @@ A collection of my selective works and Open Source projects. Check me out on [Gi
 
 ### Built with PHP
 
-| [hn-pastebin](https://x.nrird.com/pastebin/) | A minimalist, secure and encrypted pastebin app. |
-| [hn-speedtest](https://x.nrird.com/speedtest/) | A minimalist, mobile-friendly speedtest site. |
-| [hn-writer](https://x.nrird.com/writer/) | A browser-based WYSIWYG editor for online documentation writing. |
-| [hn-whois](https://x.nrird.com/whois/) | A minimalist domain whois script. |
-| [hn-link](https://x.nrird.com/link/create) | A minimalist URL shortening script. |
-| [hn-imagehosting](https://x.nrird.com/imagehosting/) | A minimalist and personal image hosting script. |
+| [hn-pastebin](https://dev.nrird.com/pastebin/) | A minimalist, secure and encrypted pastebin app. |
+| [hn-speedtest](https://dev.nrird.com/speedtest/) | A minimalist, mobile-friendly speedtest site. |
+| [hn-writer](https://dev.nrird.com/writer/) | A browser-based WYSIWYG editor for online documentation writing. |
+| [hn-whois](https://dev.nrird.com/whois/) | A minimalist domain whois script. |
+| [hn-link](https://dev.nrird.com/link/create) | A minimalist URL shortening script. |
+| [hn-imagehosting](https://dev.nrird.com/imagehosting/) | A minimalist and personal image hosting script. |
 | [QR Code](https://heiswayi.nrird.com/qrcode) | A simple QR code generator API script. |
 
 <hr class="break">
@@ -52,7 +52,7 @@ A collection of my selective works and Open Source projects. Check me out on [Gi
 | [Code Playground](https://heiswayi.github.io/code-playground/) | Formatting any code snippet using Monaco Editor. |
 | [Simple Tools](https://heiswayi.github.io/simple-tools/) | A collection of simple web tools created for personal use. |
 | [Mawar Allyssa's Keyboard Smashing](https://heiswayi.nrird.com/mawar-allyssa) | A simple app for my toddler to smash the computer keyboard. |
-| [Bullet Journal](https://x.nrird.com/bulletjournal/) | A TODO-like app that utilizes your browser [localStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage) to save the data. |
+| [Bullet Journal](https://dev.nrird.com/bulletjournal/) | A TODO-like app that utilizes your browser [localStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage) to save the data. |
 
 <hr class="break">
 
