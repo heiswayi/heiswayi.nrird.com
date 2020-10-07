@@ -136,7 +136,7 @@ http {
 
 ### LAMP stack
 
-I have a LAMP stack that is running on [x.nrird.com](https://x.nrird.com) which is deployed in isolated [Docker containers](https://www.docker.com/resources/what-container) and proxified by nginx as mentioned above. I use the LAMP stack to host some of apps or scripts that are written in PHP.
+I have a LAMP stack deployed into a EC2 instance using isolated [Docker containers](https://www.docker.com/resources/what-container) and then proxified by nginx as I mentioned above. This LAMP server is mostly used to host some of apps/scripts that are written in PHP.
 
 > LAMP is stand for [Linux](https://en.wikipedia.org/wiki/Linux), [Apache](https://httpd.apache.org/), [MySQL](https://dev.mysql.com/downloads/mysql/5.7.html) and [PHP](https://www.php.net/). LAMP stack is quite common for a web server especially for PHP applications.
 
