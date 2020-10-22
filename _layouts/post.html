@@ -44,6 +44,10 @@ published: true
         {{ content }}
         </article>
 
+        {% if site.show_tags or site.show_post_sharer or site.show_related_posts or site.show_disqus_comment %}
+          <hr class="break">
+        {% endif %}
+
         <!-- <div class="post-date post-bottom-meta">{{ page.date | date: "%B %d, %Y" }} — By {{ site.author.name }}</div> -->
 
         {% if site.show_tags %}

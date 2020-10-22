@@ -53,8 +53,6 @@ title: Home
 			<hr class="hidden">
 			<span class="hidden">&nbsp;</span>
 
-			{% if site.show_postlist_alt_view %}<p class="switch-index"><a href="{{ "/posts-alt" | prepend: site.baseurl | prepend: site.url }}">Use Grid View</a></p>{% endif %}
-
 			<div class="posts archives">
 			{% for post in site.posts %}
 
@@ -74,9 +72,11 @@ title: Home
 
 			</div>
 
-			<div class="ender"><span class="dot-red" aria-hidden="true">/</span><span class="dot-yellow" aria-hidden="true">\</span><span class="dot-green" aria-hidden="true">/</span></div>
+			<!-- <div class="ender"><span class="dot-red" aria-hidden="true">/</span><span class="dot-yellow" aria-hidden="true">\</span><span class="dot-green" aria-hidden="true">/</span></div> -->
 	</div>
   </div>
+
+  {% include foot.html %}
 		
 </body>
 

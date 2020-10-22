@@ -49,10 +49,10 @@ gulp.task('copy-css', function () {
 });
 
 // Build Jekyll DEV
-gulp.task('build-jekyll-dev', shell.task(['bundle exec jekyll build --config=_config.yml,_config-dev.yml']))
+gulp.task('build-jekyll-dev', shell.task(['bundle exec jekyll build --config=_config.yml,_config.dev.yml']))
 
 // Serve Jekyll DEV
-gulp.task('serve-jekyll-dev', shell.task(['bundle exec jekyll serve --config=_config.yml,_config-dev.yml']))
+gulp.task('serve-jekyll-dev', shell.task(['bundle exec jekyll serve --config=_config.yml,_config.dev.yml']))
 
 // Build Jekyll PROD
 gulp.task('build-jekyll-prod', shell.task(['JEKYLL_ENV=production bundle exec jekyll build']))

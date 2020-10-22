@@ -27,6 +27,11 @@
   border: 1px solid #069 !important;
 }
 
+.button:hover {
+  background-color: #069;
+  color: #fff;
+}
+
 .button.primary {
   font-weight: bold;
 }
