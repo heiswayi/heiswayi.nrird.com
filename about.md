@@ -19,9 +19,7 @@ keywords: about the author, website technology stack, about page
 
 ### This site and its technology stack
 
-This is my official home on Internet. I write occasionally here. This is a static site, built based on [Jekyll](http://jekyllrb.com), a popular static site generator. The source code is hosted on my private [BitBucket](https://bitbucket.org/heiswayi/) account and built and deployed automatically using [Netlify](https://www.netlify.com/).
-
-I use [imgur](https://imgur.com/) service to host some of the image contents and _mostly lazyloaded_ using [lazysizes.min.js script](https://github.com/aFarkas/lazysizes). Most of the blog posts are written in [Markdown](https://www.markdownguide.org/) format.
+This is my official home on Internet. I write occasionally here. This is a static site, built based on [Jekyll](http://jekyllrb.com), a popular static site generator. The source code is hosted on my private [BitBucket](https://bitbucket.org/heiswayi/) account and built and deployed automatically using [Netlify](https://www.netlify.com/). Most of the blog posts are written in [Markdown](https://www.markdownguide.org/) format.
 
 <hr class="break">
 

@@ -14,7 +14,7 @@ I built Inhouse Camguard few months ago in my spare time to experiment with some
 
 ### Screenshot
 
-{% include figure.html src="https://i.imgur.com/1vAwAmW.png" caption="Inhouse Camguard 1.0" %}
+{% include figure.html src="assets/images/1vAwAmW.png" caption="Inhouse Camguard 1.0" %}
 
 <hr class="break">
 

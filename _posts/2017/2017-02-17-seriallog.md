@@ -14,9 +14,9 @@ SerialLog is a simple console application built in .NET C# to do a serial data l
 
 ### Screenshots
 
-{% include figure.html src="http://i.imgur.com/8PLBzkp.png" %}
+{% include figure.html src="assets/images/8PLBzkp.png" %}
 
-{% include figure.html src="http://i.imgur.com/FUsfzvK.png" %}
+{% include figure.html src="assets/images/FUsfzvK.png" %}
 
-{% include figure.html src="http://i.imgur.com/TeZVLF3.png" %}
+{% include figure.html src="assets/images/TeZVLF3.png" %}
 

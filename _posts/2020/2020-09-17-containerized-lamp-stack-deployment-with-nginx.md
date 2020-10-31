@@ -10,7 +10,7 @@ comments: true
 
 Following diagram is to illustrate on how I configure a **single virtual server** to work with **multiple subdomains** that are proxified to **their respective services** via [nginx](https://nginx.org/en/);
 
-{% include figure.html src="https://i.imgur.com/hOHgcpY.png" caption="Proxify with nginx" %}
+{% include figure.html src="assets/images/hOHgcpY.png" caption="Proxify with nginx" %}
 
 > A "service" here is referred to an application that is running from inside a Docker container.
 
@@ -22,7 +22,7 @@ The virtual server that I use here is an [Amazon EC2 instance](https://aws.amazo
 
 The firewall solution in Amazon EC2 is called a [**Security Group**](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html) which is used to filter incoming and outgoing traffic from an EC2 instance.
 
-{% include figure.html src="https://i.imgur.com/RLjzLnQ.png" caption="Example of incoming traffic configurations in a security group" %}
+{% include figure.html src="assets/images/RLjzLnQ.png" caption="Example of incoming traffic configurations in a security group" %}
 
 If you're looking for a cheaper, lightweight or more simplified version of a server instance, there is a service called [Lightsail](https://aws.amazon.com/lightsail/).
 
@@ -55,7 +55,7 @@ nginx is used as an entry point to the EC2 instance and also works as a load bal
 
 Following diagram is to illustrate on how the traffic is routed from Cloudflare DNS to a particular service;
 
-{% include figure.html src="https://i.imgur.com/93u5aeP.png" caption="Example of traffic routes" %}
+{% include figure.html src="assets/images/93u5aeP.png" caption="Example of traffic routes" %}
 
 #### nginx.conf
 

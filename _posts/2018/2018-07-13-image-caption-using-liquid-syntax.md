@@ -15,7 +15,7 @@ One of the things I really like with [Jekyll](https://jekyllrb.com/) static site
 All of my blog posts are written in Markdown syntax. If I'm going to insert an image with a caption in my article, by using the standard Markdown syntax, I will simply do something like this:
 
 ```markdown
-![Fossil Creek Reservoir, Fort Collins, CO](https://i.imgur.com/7yOUCeG.jpg)
+![Fossil Creek Reservoir, Fort Collins, CO](assets/images/7yOUCeG.jpg)
 
 Figure (above): Fossil Creek Reservoir, Fort Collins, CO
 ```
@@ -24,7 +24,7 @@ And then, it will generate the HTML code that's looked like this:
 
 ```html
 <p>
-    <img src="https://i.imgur.com/7yOUCeG.jpg" alt="Fossil Creek Reservoir, Fort Collins, CO">
+    <img src="assets/images/7yOUCeG.jpg" alt="Fossil Creek Reservoir, Fort Collins, CO">
 </p>
 <p>
     Figure (above): Fossil Creek Reservoir, Fort Collins, CO
@@ -33,7 +33,7 @@ And then, it will generate the HTML code that's looked like this:
 
 Demo:
 
-![Fossil Creek Reservoir, Fort Collins, CO](https://i.imgur.com/7yOUCeG.jpg)
+![Fossil Creek Reservoir, Fort Collins, CO](assets/images/7yOUCeG.jpg)
 
 Figure (above): Fossil Creek Reservoir, Fort Collins, CO
 
@@ -49,7 +49,7 @@ Example of HTML5 code:
 
 ```html
 <figure>
-    <img src="https://i.imgur.com/7yOUCeG.jpg" alt="Fossil Creek Reservoir, Fort Collins, CO">
+    <img src="assets/images/7yOUCeG.jpg" alt="Fossil Creek Reservoir, Fort Collins, CO">
     <figcaption>Fossil Creek Reservoir, Fort Collins, CO</figcaption>
 </figure>
 ```
@@ -99,7 +99,7 @@ And this is how I use the Liquid **include** tag in my blog post when I need to 
 ```liquid
 {%
     include figure.html 
-    src="https://i.imgur.com/7yOUCeG.jpg" 
+    src="assets/images/7yOUCeG.jpg" 
     caption="Fossil Creek Reservoir, Fort Collins, CO"
 %}
 ```
@@ -109,7 +109,7 @@ Demo:
 
 {%
     include figure.html 
-    src="https://i.imgur.com/7yOUCeG.jpg" 
+    src="assets/images/7yOUCeG.jpg" 
     caption="Fossil Creek Reservoir, Fort Collins, CO"
 %}
 
@@ -121,7 +121,7 @@ Sometimes it could be as complex as below:
 ```liquid
 {%
     include figure.html 
-    src="https://i.imgur.com/7yOUCeG.jpg" 
+    src="assets/images/7yOUCeG.jpg" 
     caption="Fossil Creek Reservoir, Fort Collins, CO (<a href='https://heiswayi.nrird.com/photography'>source</a>)"
     href="https://heiswayi.nrird.com/photography"
 %}
@@ -132,7 +132,7 @@ Demo:
 
 {%
     include figure.html 
-    src="https://i.imgur.com/7yOUCeG.jpg" 
+    src="assets/images/7yOUCeG.jpg" 
     caption="Fossil Creek Reservoir, Fort Collins, CO (<a href='https://heiswayi.nrird.com/photography'>source</a>)"
     href="https://heiswayi.nrird.com/photography"
 %}

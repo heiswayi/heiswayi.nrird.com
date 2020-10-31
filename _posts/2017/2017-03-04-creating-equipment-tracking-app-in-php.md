@@ -16,11 +16,11 @@ So, I decided to create a web app for that. Instead of using Excel file, those e
 
 The app name is **Equipment Tracking** or **Etrac** for short, and successfully deployed on my company internal server.
 
-{% include figure.html src="https://i.imgur.com/37sZLWO.png" caption="Application showing the latest list of equipment records" %}
+{% include figure.html src="assets/images/37sZLWO.png" caption="Application showing the latest list of equipment records" %}
 
-{% include figure.html src="https://i.imgur.com/oxSMOga.png" caption="Updating particular equipment record" %}
+{% include figure.html src="assets/images/oxSMOga.png" caption="Updating particular equipment record" %}
 
-{% include figure.html src="https://i.imgur.com/3zRj0Gr.png" caption="Viewing the details of equipment record" %}
+{% include figure.html src="assets/images/3zRj0Gr.png" caption="Viewing the details of equipment record" %}
 
 <hr class="break">
 

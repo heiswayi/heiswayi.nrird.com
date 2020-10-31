@@ -12,7 +12,7 @@ MVVM is stand for Model-View-ViewModel. It's one of popular design patterns when
 
 {%
     include figure.html 
-    src="http://i.imgur.com/kLUzCAs.gif" 
+    src="assets/images/kLUzCAs.gif" 
     caption="MVVM architecture"
 %}
 
@@ -205,7 +205,7 @@ The code above contains 3 ComboBox elements. The first ComboBox is for `enum`-ty
 
 {%
     include figure.html 
-    src="http://i.imgur.com/OjRjTdJ.png" 
+    src="assets/images/OjRjTdJ.png" 
     caption="UI snapshot"
 %}
 
@@ -528,7 +528,7 @@ Here's the final code for MainWindow.xaml file after I included the _View_ from 
 
 {%
     include figure.html 
-    src="http://i.imgur.com/LlC4BmP.png" 
+    src="assets/images/LlC4BmP.png" 
     caption="Cascaded ComboBox demo"
 %}
 

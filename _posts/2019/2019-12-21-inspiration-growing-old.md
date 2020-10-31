@@ -20,6 +20,6 @@ I love you so.
 
 {%
     include figure.html 
-    src="assets/dear-mawar-allyssa-growing-old-comic.jpg" 
+    src="assets/images/dear-mawar-allyssa-growing-old-comic.jpg" 
     caption="Growing Old by Beardo Comics - Dan Dougherty"
 %}

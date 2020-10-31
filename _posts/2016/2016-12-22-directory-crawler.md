@@ -14,7 +14,7 @@ Directory Crawler is a simple command-line utility program written in .NET C# to
 
 ### Screenshot
 
-{% include figure.html src="https://i.imgur.com/Re1267D.gif" caption="Showing how the program looked like in action" %}
+{% include figure.html src="assets/images/Re1267D.gif" caption="Showing how the program looked like in action" %}
 
 <hr class="break">
 
@@ -28,4 +28,4 @@ DirectoryCrawler.exe /targetdir=<PATH_TO_TARGET_FOLDER>
 
 Example result (screenshot):
 
-{% include figure.html src="http://i.imgur.com/qaUZ9n3.png" %}
+{% include figure.html src="assets/images/qaUZ9n3.png" %}
