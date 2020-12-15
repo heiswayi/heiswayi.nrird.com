@@ -11,48 +11,60 @@ title: Home
 <head>
 	{% include head.html %}
 	<style>
-	.lh-copy {
-		line-height: 1.5;
-	}
+		.intro,
+		.nav,
+		.elsewhere,
+		.contact {
+			max-width: 30em;
+			line-height: 1.5;
+		}
 
-	.pa3 {
-		padding: 1rem;
-	}
+		a {
+			border-bottom: none;
+		}
 
-	.f3 {
-		font-size: 1.5rem;
-	}
+		.button {
+			margin-right: 5px;
+			margin-bottom: 8px;
+		}
 
-	.measure {
-		max-width: 30em;
-	}
+		.title {
+			font-size: 4rem;
+		}
 
-	a {
-		border-bottom: none;
-	}
-
-	.button {
-		margin-right: 5px;
-		margin-bottom: 8px;
-	}
-
-	@media screen and (min-width: 30em) {
-		.pa5-ns {
+		.content {
 			padding: 4rem;
 		}
-	}
 
-	@media screen and (min-width: 30em) and (max-width: 60em) {
-		.f2-m {
-			font-size: 2.25rem;
+		/*Mobile*/
+		@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+			.title {
+				font-size: 2.5rem;
+			}
+			.content {
+				padding: 1.5rem;
+			}
 		}
-	}
 
-	@media screen and (min-width: 60em) {
-		.f1-l {
-			font-size: 3rem;
+		/*Table*/
+		@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+			.title {
+				font-size: 3rem;
+			}
+			.content {
+				padding: 3rem;
+			}
 		}
-	}
+
+		/*Desktop*/
+		@media only screen and (min-width : 1224px) {
+			.title {
+				font-size: 4rem;
+			}
+			.content {
+				padding: 4rem;
+			}
+		}
 	</style>
 </head>
 
@@ -63,23 +75,35 @@ title: Home
 
 	<a href="#content" class="skip">Skip to content</a>
 
-	<article id="content" class="pa3 pa5-ns">
-		<h1 class="f3 f2-m f1-l">{{ site.title }}</h1>
-		<p class="measure lh-copy">
-			Hi, there! I am a software engineer based in Penang, Malaysia and currently working at Keysight Technologies. I blog occasionally here. I love being a minimalist and I personally believe in "less is more". Sometimes, I contribute to Open Source and published some of my works on GitHub. Other times, I will be off the grid to capture <a href="{{ "/photography" | prepend: site.baseurl | prepend: site.url }}">some beautiful landscapes</a> or may just reading some books.
+	<article id="content" class="content">
+		<h1 class="title">{{ site.title }}</h1>
+		<p class="intro">
+			Hi, there! I am a software engineer based in Penang, Malaysia and currently working at Keysight
+			Technologies. I blog occasionally here. I love being a minimalist and I personally believe in "less is
+			more". Sometimes, I contribute to Open Source and published some of my works on GitHub. Other times, I will
+			be off the grid to capture <a href="{{ " /photography" | prepend: site.baseurl | prepend: site.url }}">some
+				beautiful landscapes</a> or may just reading some books.
 		</p>
-		<p class="measure lh-copy nav-copy">
-			<a href="{{ "/posts" | prepend: site.baseurl | prepend: site.url }}" class="button">Explore more on my blog site &rarr;</a>
+		<p class="nav">
+			<a href="{{ " /posts" | prepend: site.baseurl | prepend: site.url }}" class="button">Explore more on my blog
+				site &rarr;</a>
 		</p>
-		<p class="measure lh-copy elsewhere">
+		<p class="elsewhere">
 			<strong>Elsewhere:</strong><br>
-			<a href="https://my.linkedin.com/in/nrird">LinkedIn</a> &middot; <a href="https://github.com/heiswayi">GitHub</a> &middot; <a href="https://gist.github.com/heiswayi">Gist</a> &middot; <a href="https://codepen.io/heiswayi/">CodePen</a> &middot; <a href="https://jsfiddle.net/user/heiswayi/">JSFiddle</a> &middot; <a href="https://unsplash.com/@heiswayi_nrird">Unsplash</a>
+			<a href="https://my.linkedin.com/in/nrird">LinkedIn</a> &middot; <a
+				href="https://github.com/heiswayi">GitHub</a> &middot; <a
+				href="https://gist.github.com/heiswayi">Gist</a> &middot; <a
+				href="https://codepen.io/heiswayi/">CodePen</a> &middot; <a
+				href="https://jsfiddle.net/user/heiswayi/">JSFiddle</a> &middot; <a
+				href="https://unsplash.com/@heiswayi_nrird">Unsplash</a>
 		</p>
-		<p class="measure lh-copy contact">
+		<p class="contact">
 			<strong>Contact:</strong><br>
-			heiswayi <span style="display:none">-antispam-</span> <span style="opacity: 0.5">(at)</span> <span style="display:none">-antispam-</span>nrird <span style="opacity: 0.5">dot</span> com
+			heiswayi <span style="display:none">-antispam-</span> <span style="opacity: 0.5">(at)</span> <span
+				style="display:none">-antispam-</span>nrird <span style="opacity: 0.5">dot</span> com
 		</p>
-		<div class="ender"><span class="dot-red" aria-hidden="true">/</span><span class="dot-yellow" aria-hidden="true">\</span><span class="dot-green" aria-hidden="true">/</span></div>
+		<div class="ender"><span class="dot-red" aria-hidden="true">/</span><span class="dot-yellow"
+				aria-hidden="true">\</span><span class="dot-green" aria-hidden="true">/</span></div>
 	</article>
 
 </body>
