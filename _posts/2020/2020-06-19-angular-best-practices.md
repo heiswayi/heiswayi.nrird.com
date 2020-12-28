@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Angular Best Practices
+title: Angular B̶e̶s̶t̶ Good Practices
 description: A collection of some Angular best practices that I have been using while working with Angular-based projects.
 tags: [Angular, TypeScript, Best Practices]
 comments: true
