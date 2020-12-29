@@ -1,12 +1,12 @@
 ---
 layout: post
 title: Creating a minimalist Messaging Service in Angular
-description: Another method of communication to minimize the number of susbcriptions and make the service subscriptions are more cleaner.
+description: Another method of intercomponent communication to minimize the number of event subscriptions in Angular components.
 tags: [Angular, TypeScript, Best Practices, Programming]
 comments: true
 ---
 
-Messaging service is just another method of communications that we can use to minimize the number of subscriptions in our components. This method also can make our service subscriptions are more cleaner.
+Messaging Service is just another method of communications that is based on RxJS that we could use in our Angular project for intercomponent communication. Using the Message Bus data model as a payload, we can minimize the number of event subscriptions in our Angular components. Making the code looks more cleaner and easy to maintain.
 
 <hr class="break">
 
