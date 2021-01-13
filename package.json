@@ -4,7 +4,6 @@
   "description": "Heiswayi Nrird's Personal Blog. It is a static site, built with Jekyll and deployed by [Netlify](https://www.netlify.com/).",
   "main": "gulpfile.js",
   "dependencies": {
-    "gulp": "^3.9.1",
     "gulp-clean-css": "^3.9.4",
     "gulp-autoprefixer": "^5.0.0",
     "gulp-plumber": "^1.2.0",
@@ -14,8 +13,11 @@
     "gulp-util": "^3.0.8"
   },
   "devDependencies": {
+    "gulp": "^3.9.1",
     "gulp-check-unused-css": "^2.1.4",
-    "gulp-shell": "^0.6.5"
+    "gulp-cli": "^2.3.0",
+    "gulp-shell": "^0.6.5",
+    "gulp-uglify": "^3.0.2"
   },
   "scripts": {
     "build": "gulp build-jekyll-dev",
