@@ -69,18 +69,13 @@ title: Quotes for Inspiration and Love
 
 <body>
 
-  <h1 style="display:none">{{ site.seo_title }}</h1>
-  <h2 style="display:none">{{ site.seo_description }}</h2>
-
-  <a href="#content" class="skip">Skip to content</a>
+  <a href="#content" class="skip">Skip to Main Content</a>
 
   <div class="wrap">
 
 	{% include topnav.html %}
 
     <div id="content" class="content">
-			<hr class="hidden">
-			<span class="hidden">&nbsp;</span>
 
 			<div class="container"><h1 class="post-title">{{ page.title }}</h1></div>
 
@@ -99,8 +94,6 @@ title: Quotes for Inspiration and Love
 					<div class="post-list">
 						<div class="post-list-desc" style="margin-bottom:0;">{{ data.quote }}<small>—{{ data.author }}</small></div>
 					</div>
-					
-					<span class="hidden">&nbsp;</span>
 			
 				{% endfor %}
 			</div>
@@ -109,7 +102,7 @@ title: Quotes for Inspiration and Love
 	
   </div>
 
-	{% include foot.html %}
+	{% include footer.html %}
 		
 </body>
 

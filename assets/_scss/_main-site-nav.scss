@@ -1,6 +1,3 @@
-nav {
-    margin-left: 1rem;
-}
 nav ul {
     margin: 0;
     padding: 0;
@@ -10,39 +7,24 @@ nav ul li {
 }
 nav ul li a {
     display: inline-block;
-    color: #414141;
-    border: 1px solid #fff;
+    // color: #414141;
+    // border: 1px solid #fff;
     padding: 7px 15px;
     white-space: nowrap;
     font-family: $topmenu-font;
-    font-size: 0.8rem;
-    background: #fff;
+    // font-size: 0.8rem;
+    // background: #fff;
+    color: #ddd;
     margin-bottom: 0;
     &:hover {
-        background: #f3f3f3;
-        color: #06b;
+        // background: #f3f3f3;
+        // color: #06b;
+        background: #0087BE;
     }
     &.active {
-        background: #fff;
-        color: #06b;
-        text-decoration: line-through;
-    }
-}
-
-@media (max-width: 767px) {
-    nav {
-        margin-left: 0;
-        margin-top: 1rem;
-    }
-    .masthead .container {
-        flex-direction: column;
-    }
-    .site-logo {
-        display: block;
-        text-align: center;
-    }
-    .nav-container {
-        display: block;
-        text-align: center;
+        // background: #fff;
+        // color: #06b;
+        // text-decoration: line-through;
+        background: #06b;
     }
 }

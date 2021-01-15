@@ -1,7 +1,7 @@
 ---
 layout: compress
 published: true
-title: Home
+title: Writing
 ---
 
 {% assign rawtags = "" %}
@@ -40,18 +40,13 @@ title: Home
 
 <body>
 
-  <h1 style="display:none">{{ site.seo_title }}</h1>
-  <h2 style="display:none">{{ site.seo_description }}</h2>
-
-  <a href="#content" class="skip">Skip to content</a>
+  <a href="#content" class="skip">Skip to Main Content</a>
 
   <div class="wrap">
 
 	{% include topnav.html %}
 
     <div id="content" class="container content">
-			<hr class="hidden">
-			<span class="hidden">&nbsp;</span>
 
 			<div class="posts archives">
 			{% for post in site.posts %}
@@ -65,8 +60,6 @@ title: Home
 						<div class="post-title"><span class="full-title"><a href="{{ post.url }}">{{ post.title }}</a> <span class="post-date" title="Published on {{ post.date | date: '%B %d, %Y' }}">{{ post.date | date: "—%Y.%m.%d" }}</span></span></div>
 					</div>
 				{% endif %}
-				
-				<span class="hidden">&nbsp;</span>
 
 			{% endfor %}
 
@@ -76,7 +69,7 @@ title: Home
 	</div>
   </div>
 
-  {% include foot.html %}
+  {% include footer.html %}
 		
 </body>
 

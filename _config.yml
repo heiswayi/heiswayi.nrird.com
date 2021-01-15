@@ -1,27 +1,51 @@
-# SITE INFO
+# LOCALE
 og_locale               : "en_US"
+locale                  : "en_US"
+
+# SITE METADATA
 title                   : "Heiswayi Nrird"
-description             : "Welcome to Heiswayi Nrird's Personal Webpage" # tagline
+tagline                 : "Moderation in Simplicity." # short description
+description             : "A software engineer who just makes a simple and happy living in Penang, MY." # long description
 keywords                : "software engineering, user experience, open source, photography, random experimental stuff"
 image_cover             : "/assets/cover.gif"
-version                 : "2020"
-google_analytics_code   : UA-58296043-7
+logo                    : "/assets/cover.gif"
+version                 : "20210116"
 
-# SITE SEO FOR GOOGLE SEARCH
-seo_title               : "Heiswayi Nrird" # between 55 and 66 characters
-seo_description         : "Hi, I'm Heiswayi Nrird. I'm a software engineer and I ship software at Keysight Technologies, Penang, MY. I do blog occasionally. I'm a minimalist and I believe in 'less is more'. Sometimes, I do some random stuff and write about it here. /\\/" # between 70 and 300 characters
+# SITE OWNERSHIP VERIFICATIONS
+webmaster_verifications:
+  google                : "aSavCGGU0uSN5HEHnI7ZiMqVKxn7mfUPCGMVJvmDQ1w"
+  bing                  : null
+  alexa                 : null
+  yandex                : "13f3a6696f133a01"
+  baidu                 : null
 
 # SITE URL
 url                     : https://heiswayi.nrird.com # main url
 baseurl                 : null # for github-pages only
 
-# GitHub Pages ONLY
-enforce_ssl             : heiswayi.nrird.com
-
 # AUTHOR INFO
 author:
   name                  : "Heiswayi Nrird"
-  twitter_username      : heiswayi
+
+# SOCIAL MEDIA
+twitter:
+  username              : heiswayi
+  card                  : summary
+facebook:
+  app_id                : null
+  publisher             : null
+  admins                : null
+social:
+  name                  : "Heiswayi Nrird"
+  links:
+    - https://twitter.com/heiswayi
+    - https://github.com/heiswayi
+    - https://my.linkedin.com/in/nrird
+    - https://codepen.io/heiswayi/
+    - https://keybase.io/heiswayi
+    - https://unsplash.com/@heiswayi_nrird
+    - https://gist.github.com/heiswayi
+    - https://jsfiddle.net/user/heiswayi/
 
 # ARTICLE BOTTOM MODULES
 show_related_posts      : false
@@ -74,7 +98,11 @@ sass:
 plugins:
   - jekyll-sitemap
   - jekyll-autoprefixer
+  - jekyll-purgecss
+  - jekyll-seo-tag
 
 autoprefixer:
   browsers:
   - last 3 version
+
+css_dir: assets/css

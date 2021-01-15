@@ -18,7 +18,7 @@
     }
     figure {
       img {
-        box-shadow: 1px 1px rgba(0,0,0,.1);
+        box-shadow: 1px 1px rgba(0, 0, 0, 0.1);
       }
     }
     .post-date {
@@ -35,8 +35,14 @@
       }
     }
   }
-  .site-logo {
-    padding-top: 1rem;
+  .header {
+    .container {
+      nav {
+        .site-nav {
+          text-align: center;
+        }
+      }
+    }
   }
 }
 
@@ -47,28 +53,28 @@
   }
   .author-info {
     .with-avatar {
-        .photo {
-            float: none;
-            display: block;
-            width: 100%;
-            height: auto;
-            margin-bottom: 1rem;
-            background: #f3f3f3;
-            img {
-                display: block;
-                height: 100%;
-                width: 100%;
-            }
+      .photo {
+        float: none;
+        display: block;
+        width: 100%;
+        height: auto;
+        margin-bottom: 1rem;
+        background: #f3f3f3;
+        img {
+          display: block;
+          height: 100%;
+          width: 100%;
         }
-        .intro-text {
-            margin-left: 0;
-            display: block;
-        }
+      }
+      .intro-text {
+        margin-left: 0;
+        display: block;
+      }
     }
   }
   .archives {
     .post-list-archives {
-      margin-bottom: .5rem;
+      margin-bottom: 0.5rem;
       line-height: 1.2;
       .date-full {
         display: none !important;
@@ -91,18 +97,54 @@
       margin-top: 2rem;
     }
   }
+  .header {
+    .container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-left: 5px;
+      padding-right: 5px;
+      nav {
+        margin-left: 0;
+        margin-top: 1rem;
+      }
+    }
+  }
+  .container {
+    padding-top: 13rem;
+  }
 }
 
 /* Portrait tablet to landscape and desktop */
 @media (min-width: 768px) and (max-width: 1199px) {
-  .container, .footer {
+  .container,
+  .footer {
     max-width: 36rem;
+  }
+  .header {
+    .container {
+      display: flex;
+      flex-direction: row;
+      nav {
+        margin-left: 1rem;
+      }
+    }
   }
 }
 
 /* Large desktop */
 @media (min-width: 1200px) {
-  .container, .footer {
+  .container,
+  .footer {
     max-width: 44rem;
+  }
+  .header {
+    .container {
+      display: flex;
+      flex-direction: row;
+      nav {
+        margin-left: 1rem;
+      }
+    }
   }
 }

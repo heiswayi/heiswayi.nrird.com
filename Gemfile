@@ -7,3 +7,5 @@ end
 gem 'tzinfo'
 gem 'tzinfo-data'
 gem 'kramdown-parser-gfm'
+gem 'jekyll-purgecss'
+gem 'jekyll-seo-tag'

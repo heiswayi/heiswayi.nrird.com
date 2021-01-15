@@ -19,15 +19,15 @@
         {% assign photos = '' %}
 {% endcase %}
 
-<div class="masthead">
+<div class="header">
     <div class="container">
         <div class="site-logo">
-            <a href="{{ "/" | prepend: site.baseurl | prepend: site.url }}" class="logo" title="Heiswayi Nrird's Personal Webpage"><span class="dot-red" aria-hidden="true">/</span><span class="dot-yellow" aria-hidden="true">\</span><span class="dot-green" aria-hidden="true">/</span> Heiswayi Nrird</a>
+            <a href="{{ "/" | prepend: site.baseurl | prepend: site.url }}" class="logo" title="{{ site.description }}"><span class="dot-red" aria-hidden="true">/</span><span class="dot-yellow" aria-hidden="true">\</span><span class="dot-green" aria-hidden="true">/</span></a>
         </div>
         <nav>
-            <div class="nav-container">
+            <div class="site-nav">
                 <ul>
-                    <li><a href="{{ "/posts" | prepend: site.baseurl | prepend: site.url }}" class="menu {{index}}">posts</a></li>
+                    <li><a href="{{ "/posts" | prepend: site.baseurl | prepend: site.url }}" class="menu {{index}}">writing</a></li>
                     <li><a href="{{ "/about" | prepend: site.baseurl | prepend: site.url }}" class="menu {{about}}">about</a></li>
                     <li><a href="{{ "/projects" | prepend: site.baseurl | prepend: site.url }}" class="menu {{projects}}">projects</a></li>
                     <li><a href="{{ "/photography" | prepend: site.baseurl | prepend: site.url }}" class="menu {{photos}}">photos</a></li>
