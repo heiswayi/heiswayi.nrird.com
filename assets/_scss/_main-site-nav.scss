@@ -7,24 +7,16 @@ nav ul li {
 }
 nav ul li a {
     display: inline-block;
-    // color: #414141;
-    // border: 1px solid #fff;
     padding: 7px 15px;
     white-space: nowrap;
     font-family: $topmenu-font;
-    // font-size: 0.8rem;
-    // background: #fff;
     color: #ddd;
     margin-bottom: 0;
+    border-radius: 3px;
     &:hover {
-        // background: #f3f3f3;
-        // color: #06b;
         background: #0087BE;
     }
     &.active {
-        // background: #fff;
-        // color: #06b;
-        // text-decoration: line-through;
-        background: #06b;
+        background: #005082;
     }
 }

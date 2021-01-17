@@ -241,7 +241,7 @@ tbody tr:nth-child(odd) {
     top: 0;
     // padding-top: 1rem;
     margin-bottom: 2rem;
-    background: #005082;
+    background: #06b;
     // position: relative;
     // border-bottom: 1px solid #ccc;
     width: 100%;
@@ -263,22 +263,15 @@ tbody tr:nth-child(odd) {
     display: flex;
     align-items: center;
     a {
-        // color: #333;
         border-bottom: 0;
         padding: 7px 15px;
         white-space: nowrap;
         font-family: $logo-font;
-        // font-size: 0.8rem;
         user-select: none;
-        // background: #fff;
-        // border: 1px dashed #ccc;
-        background: #000;
         border: 1px solid transparent;
+        text-shadow: 0 0 15px rgba(255,255,255,.5), 0 0 10px rgba(255,255,255,.5);
         &:hover {
-            // background: #fff;
-            // color: #06b;
-            // border: 1px solid #06b;
-            transform: scale(-1, 1);
+            transform: rotate(180deg);
         }
     }
 }
