@@ -1,6 +1,7 @@
 nav ul {
     margin: 0;
     padding: 0;
+    background-color: none;
 }
 nav ul li {
     display: inline-block;
@@ -10,13 +11,17 @@ nav ul li a {
     padding: 7px 15px;
     white-space: nowrap;
     font-family: $topmenu-font;
-    color: #ddd;
+    color: #06b;
     margin-bottom: 0;
-    border-radius: 3px;
+    border-bottom: none;
     &:hover {
-        background: #0087BE;
+        background: none;
+        text-decoration: underline;
+        color: #06b;
     }
     &.active {
-        background: #005082;
+        background: none;
+        text-decoration: underline;
+        color: $purple;
     }
 }
