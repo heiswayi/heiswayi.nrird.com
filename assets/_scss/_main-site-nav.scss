@@ -1,27 +1,57 @@
-nav ul {
-    margin: 0;
-    padding: 0;
-    background-color: none;
-}
-nav ul li {
-    display: inline-block;
-}
-nav ul li a {
-    display: inline-block;
-    padding: 7px 15px;
-    white-space: nowrap;
-    font-family: $topmenu-font;
-    color: #06b;
-    margin-bottom: 0;
-    border-bottom: none;
-    &:hover {
-        background: none;
-        text-decoration: underline;
-        color: #06b;
-    }
-    &.active {
-        background: none;
-        text-decoration: underline;
-        color: $purple;
+.header {
+    margin-bottom: 2rem;
+    border-bottom: 1px solid $silver;
+    width: 100%;
+    z-index: 1000;
+    overflow-x: hidden;
+    .container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        min-height: 48px;
+        .site-logo {
+            display: flex;
+            align-items: center;
+            margin-right: 1rem;
+            a {
+                background: none;
+                border: none;
+                img {
+                    box-shadow: none;
+                    border-radius: none;
+                    margin: none;
+                }
+            }
+        }
+        nav ul {
+            margin: 0;
+            padding: 0;
+            background-color: none;
+        }
+        nav ul li {
+            display: inline-block;
+        }
+        nav ul li a {
+            display: inline-block;
+            padding: 5px 12px;
+            white-space: nowrap;
+            font-family: $topmenu-font;
+            font-size: 14px;
+            color: #06b;
+            margin-bottom: 0;
+            border-bottom: none;
+            &:hover {
+                background: none;
+                text-decoration: underline;
+                color: #06b;
+            }
+            &.active {
+                background: none;
+                text-decoration: underline;
+                color: $purple;
+            }
+        }
     }
 }

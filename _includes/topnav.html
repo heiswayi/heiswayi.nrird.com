@@ -22,7 +22,9 @@
 <div class="header">
     <div class="container">
         <div class="site-logo">
-            <a href="{{ "/" | prepend: site.baseurl | prepend: site.url }}" class="logo" title="{{ site.description }}"><span class="dot-red" aria-hidden="true">/</span><span class="dot-yellow" aria-hidden="true">\</span><span class="dot-green" aria-hidden="true">/</span></a>
+            <a href="{{ "/" | prepend: site.baseurl | prepend: site.url }}" class="logo">
+                <img src="{{ "/assets/logo/favicon-16x16.png" | prepend: site.baseurl | prepend: site.url }}" alt=""/>
+            </a>
         </div>
         <nav>
             <div class="site-nav">

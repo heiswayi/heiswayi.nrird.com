@@ -18,11 +18,11 @@ body {
     font-family: $body-font;
     font-size: 16px;
     line-height: 1.6;
-    text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
     text-rendering: optimizeLegibility !important;
     scroll-behavior: smooth;
     font-kerning: normal;
-    font-feature-settings:"kern" 1, "liga" 1;
+    font-feature-settings: "kern" 1, "liga" 1;
 }
 
 a {
@@ -120,9 +120,9 @@ pre {
     line-height: 1.4;
     white-space: pre;
     overflow: auto;
-    padding: .5rem 2rem .5rem .5rem;
+    padding: 0.5rem 2rem 0.5rem 0.5rem;
     max-height: 800px;
-    font-size: .9rem;
+    font-size: 0.9rem;
     code {
         display: block;
         padding: 0;
@@ -135,7 +135,7 @@ pre {
         text-align: right;
         span {
             display: block;
-            padding: 0 .5em 0 1em;
+            padding: 0 0.5em 0 1em;
         }
     }
     .cl {
@@ -171,10 +171,12 @@ figure {
     background: repeating-linear-gradient(135deg, #dfdfdf 0, #dfdfdf 1%, #ffffff 0, #ffffff 50%) 0 / 20px 20px;
     text-align: center;
     img {
-        margin: 0 auto .2rem auto;
-        box-shadow: 3px 3px rgba(0,0,0,.1);
+        margin: 0 auto 0.2rem auto;
+        // box-shadow: 3px 3px rgba(0, 0, 0, 0.1);
         border: 1px solid #ddd;
-        background-color: #fdfdfd;
+        // background-color: #fdfdfd;
+        box-shadow: none;
+        background-color: #fff;
     }
     figcaption {
         font-size: 0.9rem;
@@ -225,85 +227,21 @@ tbody tr:nth-child(odd) {
 .container {
     padding-left: 2rem;
     padding-right: 2rem;
-    max-width: 28rem;
+    max-width: 44rem;
     z-index: 99;
     position: relative;
     margin-left: auto;
     margin-right: auto;
 }
 
-.header {
-    margin-bottom: 2rem;
-    background: #eee;
-    border-bottom: 1px solid $gray;
-    width: 100%;
-    z-index: 1000;
-    overflow-x: hidden;
-    .container {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        margin-top: 2rem;
-        margin-bottom: 1rem;
-    }
-}
-
-.site-logo {
-    display: flex;
-    align-items: center;
-    a {
-        border-bottom: 0;
-        padding: 7px 15px;
-        white-space: nowrap;
-        font-family: $logo-font;
-        user-select: none;
-        border: 1px solid transparent;
-        // text-shadow: 0 0 15px rgba(255,255,255,.5), 0 0 10px rgba(255,255,255,.5);
-        // &:hover {
-        //     transform: rotate(180deg);
-        // }
-    }
-}
-
-.header-post {
-    padding-top: 1.2rem;
-    padding-bottom: 1rem;
-    margin-bottom: 2rem;
-    background: repeating-linear-gradient(135deg, #dfdfdf 0, #dfdfdf 1%, #ffffff 0, #ffffff 50%) 0 / 20px 20px;
-    position: relative;
-    border-bottom: 1px solid #eeeeee;
-}
-
-.header-title {
-    margin-top: 2rem;
-    margin-bottom: 0;
-    color: #505050;
-    display: flex;
-    justify-content: center;
-    a {
-        color: #505050;
-        font-weight: 900;
-        font-size: 3rem;
-        float: left;
-        background: none;
-        border: none;
-        &:hover {
-            background-color: transparent;
-        }
-        img {
-            margin: 0;
-        }
-    }
-}
-
 .dot-red {
-    color: #FF4136;
+    color: #ff4136;
 }
 .dot-yellow {
-    color: #FFDC00;
+    color: #ffdc00;
 }
 .dot-green {
-    color: #2ECC40;
+    color: #2ecc40;
 }
 
 .page,
@@ -347,8 +285,6 @@ tbody tr:nth-child(odd) {
 .wrap {
     position: relative;
     width: 100%;
-    margin-top: -20px;
-    padding: 0;
 }
 
 .post-list {
@@ -360,13 +296,13 @@ tbody tr:nth-child(odd) {
     &.reversefootnote {
         border-bottom: none;
         &::before {
-            content: '[return]';
+            content: "[return]";
         }
     }
     &.footnote {
         border-bottom: none;
         background: transparent;
-        color: #FF4136;
+        color: #ff4136;
         padding-left: 3px;
         padding-right: 3px;
         &:hover {
@@ -581,7 +517,7 @@ a.skip:hover {
         }
 
         &.tag-anchor-red {
-            background: #FF4136;
+            background: #ff4136;
             color: #fff;
             border: none;
 
@@ -629,7 +565,7 @@ a.skip:hover {
         }
     }
     &:before {
-        content: ' /\\/';
+        content: " /\\/";
         display: block;
         padding-top: 0;
         color: #aaa;
@@ -665,7 +601,7 @@ a.skip:hover {
     width: 100%;
 
     &:before {
-        content: '. . .';
+        content: ". . .";
         width: 100%;
         text-align: center;
         display: block;
@@ -729,15 +665,6 @@ a.skip:hover {
         color: #bbb;
         font-family: $year-label-font;
     }
-}
-
-.em-1em {
-    width: 1em;
-    height: 1em;
-}
-
-.no-js img.lazyload {
-    display: none;
 }
 
 ul.task-list {
