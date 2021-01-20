@@ -34,34 +34,6 @@
       }
     }
   }
-}
-
-/* Landscape phone to portrait tablet */
-@media (max-width: 767px) {
-  pre {
-    max-height: 500px;
-  }
-  .author-info {
-    .with-avatar {
-      .photo {
-        float: none;
-        display: block;
-        width: 100%;
-        height: auto;
-        margin-bottom: 1rem;
-        background: #f3f3f3;
-        img {
-          display: block;
-          height: 100%;
-          width: 100%;
-        }
-      }
-      .intro-text {
-        margin-left: 0;
-        display: block;
-      }
-    }
-  }
   .archives {
     .post-list-archives {
       margin-bottom: 0.5rem;
@@ -83,8 +55,34 @@
         display: none;
       }
     }
-    .year {
-      margin-top: 2rem;
+  }
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {
+  pre {
+    max-height: 500px;
+  }
+  .author-info {
+    .with-avatar {
+      .photo {
+        float: none;
+        display: block;
+        width: 100%;
+        height: auto;
+        margin-bottom: 1rem;
+        background: #f3f3f3;
+        margin-left: 0px;
+        img {
+          display: block;
+          height: 100%;
+          width: 100%;
+        }
+      }
+      .intro-text {
+        margin-left: 0;
+        display: block;
+      }
     }
   }
 }

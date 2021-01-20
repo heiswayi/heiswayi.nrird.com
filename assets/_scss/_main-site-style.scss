@@ -26,7 +26,7 @@ body {
 }
 
 a {
-    color: #06b;
+    color: $linkblue;
     text-decoration: none;
     transition: all 500ms ease;
     overflow-wrap: break-word;
@@ -34,10 +34,10 @@ a {
     word-break: break-all;
     word-break: break-word;
     hyphens: auto;
-    border-bottom: 1px solid #06b;
+    border-bottom: 1px solid $linkblue;
     &:hover {
         background-image: none;
-        background-color: #06b;
+        background-color: $linkblue;
         color: #fff;
     }
 }
@@ -309,12 +309,12 @@ tbody tr:nth-child(odd) {
     &.footnote {
         border-bottom: none;
         background: transparent;
-        color: #06b;
+        color: $linkblue;
         background: $silver;
         padding-left: 3px;
         padding-right: 3px;
         &:hover {
-            background: #069 !important;
+            background: $linkbluedarker !important;
             color: #fff;
         }
     }
@@ -415,11 +415,6 @@ blockquote p:last-child {
     margin: 2.5em 0;
 }
 
-.license,
-.twitter-follow {
-    margin-bottom: 1rem;
-}
-
 .copyright {
     padding-bottom: 1rem;
     font-size: 0.8rem;
@@ -428,12 +423,6 @@ blockquote p:last-child {
         background-image: none;
         border: none;
     }
-}
-
-.license {
-    font-size: 0.6rem;
-    color: #888;
-    text-align: justify;
 }
 
 .footer {
@@ -518,7 +507,7 @@ a.skip:hover {
             &:active,
             &:focus,
             &:hover {
-                background: #069;
+                background: $linkbluedarker;
                 color: #fff;
                 border: none;
             }
@@ -532,7 +521,7 @@ a.skip:hover {
             &:active,
             &:focus,
             &:hover {
-                background: #069;
+                background: $linkbluedarker;
                 color: #fff;
                 border: none;
             }
@@ -585,21 +574,30 @@ a.skip:hover {
         clear: both;
     }
     .with-avatar {
+        &::after {
+            clear: both;
+        }
         .photo {
-            float: left;
-            width: 200px;
-            height: 200px;
+            float: right;
+            width: 144px;
+            height: 144px;
             margin-bottom: 2rem;
+            margin-left: 1rem;
             img {
                 margin: 0 auto;
                 height: 100%;
                 width: 100%;
             }
         }
-        .intro-text {
-            margin-left: 215px;
-            // font-size: 1.2rem;
-        }
+        // p {
+        //     a {
+        //         color: $black;
+        //         border: none;
+        //         &:hover {
+        //             color: $white;
+        //         }
+        //     }
+        // }
     }
 }
 
@@ -636,24 +634,22 @@ a.skip:hover {
 
 .archives {
     .post-title {
-        display: table;
+        display: flex;
+        flex-direction: row;
         width: 100%;
         .post-date {
-            // display: table-cell;
-            display: inline-block;
-            text-align: left;
             font-family: $postmeta-font;
-            color: #ccc;
             width: fit-content;
             word-wrap: none;
             white-space: nowrap;
-            font-style: italic;
+            padding-top: 0.1rem;
+            padding-right: 1rem;
         }
         .full-title {
-            display: table-cell;
+            flex: 1;
             a {
                 border: none;
-                color: #333;
+                color: $linkbluedarker;
                 &:hover {
                     color: #fff;
                 }
@@ -672,6 +668,7 @@ a.skip:hover {
     .year {
         color: #bbb;
         font-family: $year-label-font;
+        margin-bottom: 1rem;
     }
 }
 

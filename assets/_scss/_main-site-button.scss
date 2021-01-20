@@ -24,11 +24,11 @@
 .button:focus,
 .button:active,
 .button.active {
-  border: 1px solid #069 !important;
+  border: 1px solid $linkbluedarker !important;
 }
 
 .button:hover {
-  background-color: #069;
+  background-color: $linkbluedarker;
   color: #fff;
 }
 

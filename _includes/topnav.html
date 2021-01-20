@@ -1,22 +1,26 @@
-{% assign index = '' %}
+{% assign posts = '' %}
 {% assign about = '' %}
 {% assign projects = '' %}
 {% assign photos = '' %}
+{% assign home = '' %}
 
 {% case page.url %}
     {% when "/posts" %}
-        {% assign index = 'active' %}
+        {% assign posts = 'active' %}
     {% when "/about" %}
         {% assign about = 'active' %}
     {% when "/projects" %}
         {% assign projects = 'active' %}
     {% when "/photography" %}
         {% assign photos = 'active' %}
+    {% when "/" %}
+        {% assign home = 'active' %}
     {% else %}
-        {% assign index = '' %}
+        {% assign posts = '' %}
         {% assign about = '' %}
         {% assign projects = '' %}
         {% assign photos = '' %}
+        {% assign home = '' %}
 {% endcase %}
 
 <div class="header">
@@ -35,8 +39,9 @@
         <nav>
             <div class="site-nav">
                 <ul>
-                    <li><a href="{{ "/posts" | prepend: site.baseurl | prepend: site.url }}" class="menu {{index}}">/posts</a></li>
-                    <li><a href="{{ "/about" | prepend: site.baseurl | prepend: site.url }}" class="menu {{about}}">/about</a></li>
+                    <li><a href="{{ "/" | prepend: site.baseurl | prepend: site.url }}" class="menu {{home}}">/home</a></li>
+                    <li><a href="{{ "/posts" | prepend: site.baseurl | prepend: site.url }}" class="menu {{posts}}">/posts</a></li>
+                    <!-- <li><a href="{{ "/about" | prepend: site.baseurl | prepend: site.url }}" class="menu {{about}}">/about</a></li> -->
                     <li><a href="{{ "/projects" | prepend: site.baseurl | prepend: site.url }}" class="menu {{projects}}">/projects</a></li>
                     <li><a href="{{ "/photography" | prepend: site.baseurl | prepend: site.url }}" class="menu {{photos}}">/photos</a></li>
                 </ul>

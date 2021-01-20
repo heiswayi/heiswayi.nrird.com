@@ -41,13 +41,13 @@
             white-space: nowrap;
             font-family: $topmenu-font;
             font-size: 14px;
-            color: #06b;
+            color: $linkblue;
             margin-bottom: 0;
             border-bottom: none;
             &:hover {
                 background: none;
                 text-decoration: underline;
-                color: #06b;
+                color: $linkblue;
             }
             &.active {
                 background: none;

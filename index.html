@@ -1,0 +1,78 @@
+---
+layout: compress
+published: true
+title: Home
+---
+
+{% assign rawtags = "" %}
+{% for post in site.posts %}
+	{% assign ttags = post.tags | join:'|' | append:'|' %}
+	{% assign rawtags = rawtags | append:ttags %}
+{% endfor %}
+{% assign rawtags = rawtags | split:'|' | sort %}
+
+{% assign tags = "" %}
+{% for tag in rawtags %}
+	{% if tag != "" %}
+		{% if tags == "" %}
+			{% assign tags = tag | split:'|' %}
+		{% endif %}
+		{% unless tags contains tag %}
+			{% assign tags = tags | join:'|' | append:'|' | append:tag | split:'|' %}
+		{% endunless %}
+	{% endif %}
+{% endfor %}
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en" class="no-js" itemscope itemtype="http://schema.org/WebPage">
+
+<head>
+	{% include head.html %}
+	<style>
+	.container {
+		margin-bottom: 2rem;
+	}
+	</style>
+</head>
+
+<body>
+
+  <a href="#content" class="skip">Skip to Main Content</a>
+
+  <div class="wrap">
+
+	{% include topnav.html position='center' %}
+
+    <div id="content" class="container content">
+
+		<div class="intro">
+			<h1>{{ site.title }}</h1>
+			<div class="lead">{{ site.description }}</div>
+			<div class="author-info" style="margin-top: 2rem;">
+				<div class="with-avatar">
+					<div class="photo">
+						<img src="https://avatars0.githubusercontent.com/u/13794983?v=4" alt="Heiswayi Nrird">
+					</div>
+					<p>👋 I am a software engineer based in Penang, <abbr title="Malaysia">MY</abbr>. Currently, I build and ship software at <a href="https://www.keysight.com" target="_blank">Keysight Technologies</a>. I got my degree in Electrical and Electronics Engineering from <abbr title="Universiti Sains Malaysia">USM</abbr>. Sometimes, I contribute to <abbr title="Open Source Software">OSS</abbr> and publish some of my works on <a href="https://github.com/heiswayi" target="_blank">GitHub</a>. Other times, I might be <em>away from the city</em> to capture <a href="{{ "/photography" | prepend: site.baseurl | prepend: site.url }}">some photographs</a> on landscape or may just reading <a href="{{ "/books-i-read" | prepend: site.baseurl | prepend: site.url }}">some books</a>.</p> 
+					<p><code>Heiswayi Nrird</code> is my official Internet pseudonym. In my real life, people have been calling me <code>Wayi</code>. Oh, I love Visual Arts and minimalism.</p>
+				</div>
+			</div>
+			<p class="elsewhere">
+				<strong>Elsewhere:</strong><br>
+				<a href="https://my.linkedin.com/in/nrird">LinkedIn</a> &middot; <a
+					href="https://github.com/heiswayi">GitHub</a> &middot; <a
+					href="https://gist.github.com/heiswayi">Gist</a> &middot; <a
+					href="https://codepen.io/heiswayi/">CodePen</a> &middot; <a
+					href="https://jsfiddle.net/user/heiswayi/">JSFiddle</a> &middot; <a
+					href="https://unsplash.com/@heiswayi_nrird">Unsplash</a>
+			</p>
+		</div>
+
+	</div>
+  </div>
+
+  {% include footer.html %}
+		
+</body>
+
+</html>

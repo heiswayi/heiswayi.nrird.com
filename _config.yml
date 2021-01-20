@@ -4,12 +4,12 @@ locale                  : "en_US"
 
 # SITE METADATA
 title                   : "Heiswayi Nrird"
-tagline                 : "Moderation in Simplicity." # short description
-description             : "A software engineer who just makes a simple and happy living in Penang, MY." # long description
+tagline                 : "Your limitation — it's only your imagination." # short description
+description             : "Software Engineering · UI/UX · DevOps · OSS · Artificial Intelligence" # long description
 keywords                : "software engineering, user experience, open source, photography, random experimental stuff"
 image_cover             : "/assets/cover.gif"
 logo                    : "/assets/cover.gif"
-version                 : "20210116"
+version                 : "20210120"
 
 # SITE OWNERSHIP VERIFICATIONS
 webmaster_verifications:

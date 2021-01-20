@@ -53,6 +53,7 @@ A collection of my selective works and Open Source projects. Check me out on [Gi
 | [Simple Tools](https://heiswayi.github.io/simple-tools/) | A collection of simple web tools created for personal use. |
 | [Mawar Allyssa's Keyboard Smashing](https://heiswayi.nrird.com/mawar-allyssa) | A simple app for my toddler to smash the computer keyboard. |
 | [Bullet Journal](https://dev.nrird.com/bulletjournal/) | A TODO-like app that utilizes your browser [localStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage) to save the data. |
+| [Quotes for Inspiration and Love](quotes) | A collection of quotes. |
 
 
 
