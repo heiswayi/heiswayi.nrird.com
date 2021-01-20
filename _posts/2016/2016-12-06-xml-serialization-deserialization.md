@@ -10,7 +10,7 @@ comments: true
 
 I wrote this helper class because sometimes I would have some projects in .NET C# that need to save or retrieve data in the form of XML format. So, this helper class could help to ease my works with XML data serialization and deserialization.
 
-<hr class="break">
+
 
 ### Usage examples
 
@@ -159,7 +159,7 @@ John Cornor
 Jason Bourne
 ```
 
-<hr class="break">
+
 
 ### Fixing Byte Order Mark (BOM) bug
 

@@ -10,7 +10,7 @@ comments: true
 
 Inno Setup is a _free_ script-driven installation system software for creating Windows app installer. Inno Setup is [open source](https://github.com/jrsoftware/issrc), the best **non-MSI alternative** installer by Jordan Russel and Martijn Laan. It is first introduced in 1997, Inno Setup today rivals and even surpasses many commercial installers in feature set and stability. Visit [Inno Setup official website](http://www.jrsoftware.org/isinfo.php) to learn more about it.
 
-<hr class="break">
+
 
 ### Get started with Inno Setup
 
@@ -21,7 +21,7 @@ For syntax highlighting when editing **Inno Setup scripts**, you can install fol
 - [Inno Setup for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=idleberg.innosetup)
 - [Inno Setup for Atom](https://atom.io/packages/language-innosetup)
 
-<hr class="break">
+
 
 ### Integrate Inno Setup in your automated build system
 
@@ -36,13 +36,13 @@ iscc "path\to\myinstaller.iss"
 
 > **Note:** Type `iscc /?` to learn more on what command-line options that are available.
 
-<hr class="break">
+
 
 ### Example screenshot
 
 {% include figure.html src="assets/images/rodYZ00.png" caption="Installer welcome dialog" %}
 
-<hr class="break">
+
 
 ### Example of Inno Setup project structure
 
@@ -73,7 +73,7 @@ I used Inno Setup for one of my apps called _Exif Reader_ and this is how the pr
         └── VerticalBanner.bmp
 ```
 
-<hr class="break">
+
 
 ### Inno Setup script for _Exif Reader_ project
 
@@ -191,7 +191,7 @@ end;
 ```
 {% endraw %}
 
-<hr class="break">
+
 
 ### Meaning of some common _Flags_ under `[Files]` section
 
@@ -204,7 +204,7 @@ end;
 
 For other available flags, you can refer to [Inno Setup documentation here](http://www.jrsoftware.org/ishelp/index.php?topic=filessection) for more details.
 
-<hr class="break">
+
 
 ### How to implement a components-based installation in your installer
 
@@ -254,7 +254,7 @@ The meanings of the **Flags** used in the script above:
 - `fixed` - usually used in the main program file where user cannot unselect that component
 - `exclusive` - user only can select one of the exclusive components, mostly used for localized files
 
-<hr class="break">
+
 
 ### How to create prerequisites for your installer
 
@@ -442,7 +442,7 @@ end;
 ```
 {% endraw %}
 
-<hr class="break">
+
 
 ### How to prevent the installation if newer version already installed
 
@@ -487,7 +487,7 @@ end;
 ```
 {% endraw %}
 
-<hr class="break">
+
 
 ### How to automatically uninstall previous installed version
 
@@ -551,7 +551,7 @@ end;
 ```
 {% endraw %}
 
-<hr class="break">
+
 
 ### How to kill existing running services before re-install (or upgrade)
 
@@ -574,7 +574,7 @@ end;
 ```
 {% endraw %}
 
-<hr class="break">
+
 
 ### How to associate a program with an extension during installation
 
@@ -600,6 +600,6 @@ Root: HKCR; Subkey: "{#MyAppName}\shell\open\command"; ValueData: """{app}\{#MyA
 ```
 {% endraw %}
 
-<hr class="break">
+
 
 If you don't want to use MSI-based installer for your Windows app, but you want something that is good and free, then look for no other, Inno Setup is the best and easy to use. There are a lot of example scripts out there that can help you build a great installer for your app. This is my personal preference and I'm really recommended it!

@@ -16,7 +16,7 @@ The introductory & intermediate sections contain materials & recommendations tha
 
 One of the things I realized while writing this was that by the time someone got to the advanced & expert sections, this guide will be of little use as they'll know enough about computer security to know what they need to study on their own. Those sections are intended more of us a 'look-ahead' for a novices, to give them some exposure of what they're getting themselves into.
 
-<hr class="break">
+
 
 ### Getting Started
 
@@ -54,7 +54,7 @@ Hands-on experience is the cornerstone of learning computer security. This can c
 - The intermediate section provides several suggestions for various tasks that build on this knowledge.
 - The advanced and expert sections focus on gaining this experience through ctf challenges.
 
-<hr class="break">
+
 
 ### Introductory Level Learning
 
@@ -135,7 +135,7 @@ Security
 
 - [The NIST Handbook - An Introduction to Computer Security](https://csrc.nist.gov/publications/detail/sp/800-12/rev-1/final)
 
-<hr class="break">
+
 
 ### Intermediate Level Learning
 
@@ -199,7 +199,7 @@ Python Programming
 - [TheNewBoston - Python Programming Tutorials](https://www.youtube.com/playlist?list=PLEA1FEF17E1E5C0DA&feature=plcp)
 - [ShowMeDo Python Tutorials](http://showmedo.com/videotutorials/python)
 
-<hr class="break">
+
 
 ### Advanced Level Subjects
 
@@ -267,7 +267,7 @@ The following two 'challenges' are security related and require 'thinking outsid
 
 - [WikiBooks - Web Application Security Guide](https://en.wikibooks.org/wiki/Web_Application_Security_Guide)
 
-<hr class="break">
+
 
 ### Expert Level Subjects
 
@@ -331,7 +331,7 @@ These materials dive deeply into the most advanced topics in computer security.
 - [Practical Malware Analysis: The Hands-On Guide to Dissecting Malicious Software](http://goo.gl/T3ixdC)
 - [Reverse Engineering Malware](http://opensecuritytraining.info/ReverseEngineeringMalware.html)
 
-<hr class="break">
+
 
 ### External References
 

@@ -8,7 +8,7 @@ comments: true
 
 Creating a simple MSI setup is easier with [WiX Toolset](http://wixtoolset.org/) if you just need a simple file copy style installation of your Windows-based application. MSI setup is referred to [Windows Installer](https://docs.microsoft.com/en-us/windows/desktop/msi/windows-installer-portal) (`.msi` file). In this guide, I have been using [WiX Toolset Compiler v3.11.1.2318](http://wixtoolset.org/releases/v3.11.1/stable).
 
-<hr class="break">
+
 
 ### Getting started
 
@@ -93,7 +93,7 @@ Now let's define MSI setup `<Package>` and `<MediaTemplate>` into `<Product>`:
 </Wix>
 ```
 
-<hr class="break">
+
 
 ### How to implement a Major Upgrade in your setup
 
@@ -139,7 +139,7 @@ The steps you need to do:
 </Wix>
 ```
 
-<hr class="break">
+
 
 ### How to install program files and create shortcuts
 
@@ -225,7 +225,7 @@ You may have two components for the shortcuts; one if Windows architecture is 32
 </Feature>
 ```
 
-<hr class="break">
+
 
 ### How to generate component automatically for each file to be installed
 
@@ -258,7 +258,7 @@ Those commands above will generate two files; `Product.Files.wxs` and `_Product.
 </Wix>
 ```
 
-<hr class="break">
+
 
 ### Using built-in WixUI dialog sets
 
@@ -296,7 +296,7 @@ Since you have **two features** defined, and you may want to let the user to cho
 
 {% include figure.html src="assets/images/hut5Op0.png" caption="Setup dialog UI" %}
 
-<hr class="break">
+
 
 ### Add your own installer graphics and icon
 
@@ -314,7 +314,7 @@ Here's the XML for the MSI setup icon, similarly it goes under your `<Product>` 
 <Property Id="ARPPRODUCTICON" Value="icon.ico" />
 ```
 
-<hr class="break">
+
 
 ### Define your own license file
 
@@ -324,7 +324,7 @@ When you use the built-in WixUI dialog set, you may need to define your license 
 <WixVariable Id="WixUILicenseRtf" Value="doc\License.rtf" />
 ```
 
-<hr class="break">
+
 
 ### How to detect a required minimum version of .NET Framework (optional)
 
@@ -357,7 +357,7 @@ And then, include this **Condition** under your `<Product>` element:
 
 {% include figure.html src="assets/images/7TpjFrq.png" caption="Spawn dialog when the setup requires .NET Framework 4.7.1 to be installed" %}
 
-<hr class="break">
+
 
 ### Creating a batch script to build your MSI setup
 
@@ -378,7 +378,7 @@ rem Compile and create mySetup.msi
 
 > Please note that if you're **using built-in WixUI dialog set**, you may need to include `-cultures:en-US -ext WixUIExtension` into your `light.exe` commands as shown above. For **.NET Framework detection**, you may need to append `-ext WixNetFxExtension` into the commands.
 
-<hr class="break">
+
 
 ### Example of full complete WiX script
 

@@ -14,7 +14,7 @@ The problem is that the installation path is hard-coded (default path) in that m
 
 **The question is, how can I solve this in InstallShield?**
 
-<hr class="break">
+
 
 ### This is how I solved the problem
 
@@ -110,6 +110,6 @@ begin
 end;
 ```
 
-<hr class="break">
+
 
 The script above should be self-explanatory. If you encountered the similar problem as mine, you may need to change `<PATH_TO_METADATA_FILE>` and `<STRING_TO_FIND>` to your own strings. Be aware of possible deadlock, if any, you may need to apply certain conditional statement (checking). Hopefully this method may help others who are in the similar situation.

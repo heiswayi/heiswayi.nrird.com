@@ -10,8 +10,6 @@ comments: true
 
 From my past experience on building PHP apps, I have been dealing with some data that need to be protected. Following functions are the ones that I used to encrypt and decrypt those data. Encryption and decryption are based on [mcrypt_encrypt](https://www.php.net/manual/en/function.mcrypt-encrypt.php) and [mcrypt_decrypt](https://www.php.net/manual/en/function.mcrypt-decrypt.php) respectively.
 
-<hr class="break">
-
 ### Encryption
 
 ```php
@@ -48,8 +46,6 @@ Example:
 
 However, all of these encrypted strings still can be decrypted successfully and produces the same result when you provide a correct password.
 
-<hr class="break">
-
 ### Decryption
 
 ```php
@@ -77,8 +73,6 @@ echo Decrypt('myPass123', 'U2FsdGVkX18OQ8puUN8BBi+d6vAjEzDTZqM2WaKQD1atOykkYl9MY
 // All of the above operations output the same decrypted data: "Welcome to Flippancy 25"
 ?>
 ```
-
-<hr class="break">
 
 ### Can I use this encryption method to protect password?
 

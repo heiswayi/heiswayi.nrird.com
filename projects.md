@@ -7,7 +7,7 @@ keywords: part-time projects, open source, web apps, freeware, fun and learning,
 
 A collection of my selective works and Open Source projects. Check me out on [GitHub](https://github.com/heiswayi) for more other projects or [Gist](https://gist.github.com/heiswayi) for my public snippets.
 
-<hr class="break">
+
 
 ### My Minimalist Jekyll Themes
 
@@ -16,7 +16,7 @@ A collection of my selective works and Open Source projects. Check me out on [Gi
 | TextLog | Made in 2017. Left-aligned one-column style. Ideal for documentation-style blog.<br>[GitHub](https://github.com/heiswayi/textlog) &middot; [Demo](https://heiswayi.github.io/textlog) |
 | HN Barebone | Made in 2020. The most barebone Jekyll theme.<br>[GitHub](https://github.com/heiswayi/hn-barebone) &middot; [Demo](https://heiswayi.github.io/hn-barebone/) |
 
-<hr class="break">
+
 
 ### JavaScript Apps
 
@@ -25,14 +25,14 @@ A collection of my selective works and Open Source projects. Check me out on [Gi
 | [EncryptJS](https://heiswayi.github.io/encryptjs/) | A JS library for text encryption on your site. |
 | [Markdown-HTML Live Preview Editor](https://heiswayi.github.io/markdown-editor/) | Markdown to HTML preview editor based on GitHub-flavored Markdown. |
 
-<hr class="break">
+
 
 ### AI Chatbot Experimental
 
 | [W4Y1](https://heiswayi.github.io/w4y1/) | AI chatbot experimental based on [elizabot.js](https://www.masswerk.at/elizabot/). |
 | [HelloBot](https://heiswayi.github.io/hellobot/) | AI chatbot experimental based on [RiveScript](https://www.rivescript.com/). |
 
-<hr class="break">
+
 
 ### Built with PHP
 
@@ -44,7 +44,7 @@ A collection of my selective works and Open Source projects. Check me out on [Gi
 | [hn-imagehosting](https://dev.nrird.com/imagehosting/) | A minimalist and personal image hosting script. |
 | [QR Code](https://heiswayi.nrird.com/qrcode) | A simple QR code generator API script. |
 
-<hr class="break">
+
 
 ### Misc.
 
@@ -54,7 +54,7 @@ A collection of my selective works and Open Source projects. Check me out on [Gi
 | [Mawar Allyssa's Keyboard Smashing](https://heiswayi.nrird.com/mawar-allyssa) | A simple app for my toddler to smash the computer keyboard. |
 | [Bullet Journal](https://dev.nrird.com/bulletjournal/) | A TODO-like app that utilizes your browser [localStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage) to save the data. |
 
-<hr class="break">
+
 
 ### Nostalgic Archives
 

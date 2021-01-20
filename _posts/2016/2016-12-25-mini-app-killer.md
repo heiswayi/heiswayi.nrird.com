@@ -10,7 +10,7 @@ Mini App Killer is a simple utility program I wrote in .NET C# that will sit in 
 
 <a href="https://www.dropbox.com/s/4gibswk7iz7gg9d/MiniAppKillerV1.zip?dl=0" class="button big">Download Mini App Killer v1.0 · 55.2 KB</a>
 
-<hr class="break">
+
 
 ### Screenshots
 
@@ -22,7 +22,7 @@ Mini App Killer is a simple utility program I wrote in .NET C# that will sit in 
 
 {% include figure.html src="assets/images/jHb3HqI.png" caption="List of processes once filtered by the process name" %}
 
-<hr class="break">
+
 
 ### Code snippets
 

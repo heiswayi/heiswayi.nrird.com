@@ -15,19 +15,19 @@ Here are what you need to ask yourself whenever you started to code:
 3. Is your code simple enough?
 4. Is your code getting optimized properly?
 
-<hr class="break">
+
 
 ### Working code
 
 First thing you need is a working code. Don't bother if your code is just experimental, proof-of-concept or prototype. Don't bother if your code looks ugly or buggy. The only thing that matter is that it works in the way you are expecting at first. Without the working code, it doesn't prove you anything on the thing you have done. Making the code works first is crucial. There are many things you can do with the working code, starting with writing the unit test for it.
 
-<hr class="break">
+
 
 ### Working correctly. Correctness of the code.
 
 Working code is not complete. It needs to meet all the acceptance criteria. These acceptance criteria usually are written based on the use cases from your users (or customers). The same feature that may be used in different ways. Meeting all of these acceptance criteria must be validated. Correctness is the destination of any piece of software (ultimately the goal of any piece of software is to work).
 
-<hr class="break">
+
 
 ### Simplicity in code
 
@@ -43,7 +43,7 @@ Other examples:
 - Writing self-explainable code would be the best documentation.
 - Handling code duplication with _Rule of 3: Write once, copy twice and refactor after 3_.
 
-<hr class="break">
+
 
 ### Getting optimized
 

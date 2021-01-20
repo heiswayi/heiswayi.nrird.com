@@ -15,7 +15,7 @@ This is a simple QR Code generator API that you can simply use.
 | size | Image dimension; width × height in pixels. (Optional)<br>Default is 200x200.<br>_Example: `300x300`_ |
 | logo | Logo image URL. (Optional)<br>Default is empty.<br>_Example: `https://static.nrird.com/mylogo.png`_ |
 
-<hr class="break">
+
 
 ### Demo
 

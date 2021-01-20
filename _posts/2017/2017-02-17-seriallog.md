@@ -10,7 +10,7 @@ SerialLog is a simple console application built in .NET C# to do a serial data l
 
 <a href="https://github.com/heiswayi/SerialLog" class="button big">Source Code on GitHub</a>
 
-<hr class="break">
+
 
 ### Screenshots
 

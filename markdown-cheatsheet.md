@@ -6,7 +6,7 @@ description: This markdown cheatsheet provides an overview of all the Markdown s
 
 This markdown cheatsheet was prepared by Heiswayi Nrird to be used as markdown syntax testing for typography assessment.
 
-<hr class="break">
+
 
 ### Headings
 
@@ -30,7 +30,7 @@ Output:
 ##### H5 Heading
 ###### H6 Heading
 
-<hr class="break">
+
 
 ### Paragraph
 
@@ -44,7 +44,7 @@ Output:
 
 Lorem ipsum dolor sit amet, graecis denique ei vel, at duo primis mandamus. Et legere ocurreret pri, animal tacimates complectitur ad cum. Cu eum inermis inimicus efficiendi. Labore officiis his ex, soluta officiis concludaturque ei qui, vide sensibus vim ad.
 
-<hr class="break">
+
 
 ### Bold
 
@@ -60,7 +60,7 @@ Output:
 
 **rendered as bold text**
 
-<hr class="break">
+
 
 ### Italics
 
@@ -76,7 +76,7 @@ Output:
 
 _rendered as italicized text_
 
-<hr class="break">
+
 
 ### Strikethrough
 
@@ -90,7 +90,7 @@ Output:
 
 ~~Strike through this text.~~
 
-<hr class="break">
+
 
 ### Blockquote
 
@@ -106,7 +106,7 @@ Output:
 
 > Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
 
-<hr class="break">
+
 
 ### Unordered list
 
@@ -152,7 +152,7 @@ Output:
 + Aenean sit amet erat nunc
 + Eget porttitor lorem
 
-<hr class="break">
+
 
 ### Ordered list
 
@@ -204,7 +204,7 @@ Output:
 1. Aenean sit amet erat nunc
 1. Eget porttitor lorem
 
-<hr class="break">
+
 
 ### Inline code
 
@@ -218,7 +218,7 @@ Output:
 
 For example, `<section></section>` should be wrapped as "inline".
 
-<hr class="break">
+
 
 ### Indented code
 
@@ -238,7 +238,7 @@ Output:
     line 2 of code
     line 3 of code
 
-<hr class="break">
+
 
 ### Code block using "fences"
 
@@ -256,7 +256,7 @@ Output:
 Sample text here...
 ```
 
-<hr class="break">
+
 
 ### Syntax highlighting
 
@@ -332,7 +332,7 @@ Output (in HTML code):
 </pre></div>
 ```
 
-<hr class="break">
+
 
 ### Anchor link
 
@@ -350,7 +350,7 @@ Output (in HTML code):
 <a href="http://assemble.io">Assemble</a>
 ```
 
-<hr class="break">
+
 
 ### Anchor link with a title
 
@@ -368,7 +368,7 @@ Output (in HTML code):
 <a href="https://github.com/upstage/" title="Visit Upstage!">Upstage</a>
 ```
 
-<hr class="break">
+
 
 ### Named anchors
 
@@ -396,7 +396,7 @@ Content for chapter one.
 
 **PS:** Note that specific placement of the anchor tag seems to be arbitrary. They are placed inline here since it seems to be unobtrusive, and it works.
 
-<hr class="break">
+
 
 ### Horizontal line
 
@@ -414,7 +414,7 @@ ___
 
 ***
 
-<hr class="break">
+
 
 ### Tables
 
@@ -436,7 +436,7 @@ Output:
 | engine | engine to be used for processing templates. Handlebars is the default. |
 | ext    | extension to be used for dest files. |
 
-<hr class="break">
+
 
 ### Table with right aligned text
 
@@ -458,7 +458,7 @@ Output:
 | engine | engine to be used for processing templates. Handlebars is the default. |
 | ext    | extension to be used for dest files. |
 
-<hr class="break">
+
 
 ### Images
 
@@ -486,7 +486,7 @@ With a reference later in the document defining the URL location:
 
 [id]: http://octodex.github.com/images/dojocat.jpg  "The Dojocat"
 
-<hr class="break">
+
 
 ### Task lists
 
@@ -508,7 +508,7 @@ Output:
 - [ ] incomplete
 - [x] completed
 
-<hr class="break">
+
 
 ### Footnotes
 

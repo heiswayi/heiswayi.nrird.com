@@ -8,7 +8,7 @@ comments: true
 
 Lately, I have been doing frontend development using Angular Framework. Sometimes I do backend development, but it is not as much as I did on the frontend development. So, here I want to note some Angular Best Practices that I have been practicing and I think they are worth to follow.
 
-<hr class="break">
+
 
 ### 1. Angular scalable project structure
 
@@ -146,7 +146,7 @@ angular-project
             variables.scss
 ```
 
-<hr class="break">
+
 
 ### 2. Shorten the long relative paths
 
@@ -179,7 +179,7 @@ This can be done by updating our `tsconfig.json` file into something like this:
 }
 ```
 
-<hr class="break">
+
 
 ### 3. Make use of `index.ts` file to simplify the imports
 
@@ -216,7 +216,7 @@ import * as fromComponents from './components';
 export class SharedModule {}
 ```
 
-<hr class="break">
+
 
 ### 4. Provide clarity through the code first
 
@@ -227,7 +227,7 @@ export class SharedModule {}
 - Comments must be readable and maintained. Outdated and incorrect should be removed.
 - Comments should be used to explain "why" instead of "what".
 
-<hr class="break">
+
 
 ### 5. Follow the best practices provided by Angular Coding Style Guide
 
@@ -235,7 +235,7 @@ Page URL: [https://angular.io/guide/styleguide](ttps://angular.io/guide/stylegui
 
 Angular Coding Style Guide provides very good explanation if you are curious on "why".
 
-<hr class="break">
+
 
 ### 6. Use `trackBy` in *ngFor
 
@@ -253,7 +253,7 @@ Example use of `trackBy` in HTML:
 trackByFn(index, item) { return index; }
 ```
 
-<hr class="break">
+
 
 ### 7. Prevent memory leak in Angular Observable
 
@@ -293,13 +293,13 @@ this.http.get('/userlist')
   });
 ```
 
-<hr class="break">
+
 
 ### 8. Minimize use of logic in HTML templates
 
 Using logic in HTML templates may introduce more complexity and makes the code less maintainability as the code becomes hard to adapt the change that comes it quickly.
 
-<hr class="break">
+
 
 ### 9. Take care of code linting
 

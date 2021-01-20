@@ -8,7 +8,7 @@ comments: true
 
 While working as a _Build and Release Engineer_, one of my job routines is to set up a software build automation in Windows system. There are a bunch of automation tools that have been developed internally by myself, and one that is commonly used a lot is to send email notification. So, the easiest way and lightweight to perform this task is to use PowerShell script. This is because I can simply modify or update the script to cater any kind of system environments or workflows. Some people don't like to install any notifier app in their PC, so they want almost anything to be sent into their email.
 
-<hr class="break">
+
 
 ### PowerShell script
 
@@ -86,7 +86,7 @@ try {
 }
 ```
 
-<hr class="break">
+
 
 ### Here's how you can make the script executable with parameters
 
@@ -116,7 +116,7 @@ Example:
 ./EmailNotification.ps1 -EmailTo "qa-engineer@email.com" -EmailCC "manager@email.com" ...
 ```
 
-<hr class="break">
+
 
 ### Handling the PowerShell script in more proper way
 

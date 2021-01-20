@@ -12,7 +12,7 @@ comments: true
 
 <a href="https://heiswayi.github.io/gist/" class="button big">Live Demo</a> <a href="https://github.com/heiswayi/gist" class="button big">Source Code on GitHub</a>
 
-<hr class="break">
+
 
 ### Listing webpage for my repositories on GitHub
 
@@ -20,7 +20,7 @@ comments: true
 
 <a href="https://heiswayi.github.io/repo/" class="button big">Live Demo</a> <a href="https://github.com/heiswayi/repo" class="button big">Source Code on GitHub</a>
 
-<hr class="break">
+
 
 References:
 

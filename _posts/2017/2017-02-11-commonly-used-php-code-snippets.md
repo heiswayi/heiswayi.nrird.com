@@ -8,7 +8,7 @@ comments: true
 
 A few years ago I have been actively developing PHP apps, and most of them are built from scratch. Within those years, I have been using some of these PHP functions in most of my projects. Well, until today, I still found some of them are useful when I have been writing PHP apps.
 
-<hr class="break">
+
 
 ### Hash user password
 
@@ -22,7 +22,7 @@ function hashUserPassword($salt, $password) {
 
 Alternatively, you can check my previous post on [What you need to know about PHP native password hashing API](https://heiswayi.nrird.com/php-native-password-hashing-api).
 
-<hr class="break">
+
 
 ### Working with string input in secure manner
 
@@ -73,7 +73,7 @@ function sanitize($string) {
 ?>
 ```
 
-<hr class="break">
+
 
 ### Get user Gravatar photo
 
@@ -85,7 +85,7 @@ function getGravatar($email, $default = 'retro', $size = '50') {
 ?>
 ```
 
-<hr class="break">
+
 
 ### Get visitor IP address
 
@@ -107,7 +107,7 @@ function getIp() {
 ?>
 ```
 
-<hr class="break">
+
 
 ### Get current page URI
 
@@ -122,7 +122,7 @@ function getCurrentPageUrl() {
 ?>
 ```
 
-<hr class="break">
+
 
 ### Convert timestamp to time-ago style
 
@@ -174,7 +174,7 @@ function timeAgo($timestamp) {
 ?>
 ```
 
-<hr class="break">
+
 
 ### Create clickable hyperlink (HTML anchor) for URL, @mention and #hashtag
 
@@ -196,7 +196,7 @@ function makeClickable($input) {
 ?>
 ```
 
-<hr class="break">
+
 
 ### BB code style - emoticons conversion
 
@@ -224,7 +224,7 @@ function bbCode($var) {
 ?>
 ```
 
-<hr class="break">
+
 
 ### Generate or get random key (alphanumerics)
 
@@ -250,7 +250,7 @@ function getRandomKey($len, $readable = false, $hash = false) {
 ?>
 ```
 
-<hr class="break">
+
 
 ### Truncate a long text
 
@@ -271,7 +271,7 @@ function truncateLongText($text, $length = 0) {
 ?>
 ```
 
-<hr class="break">
+
 
 ### Generate or get random password
 
@@ -309,7 +309,7 @@ function generateRandomPassword($length = 9, $strength = 0) {
 ?>
 ```
 
-<hr class="break">
+
 
 ### Auto-link
 
@@ -336,7 +336,7 @@ function autolink($message, $strip_tags = false) {
 ?>
 ```
 
-<hr class="break">
+
 
 ### Check if the URL is a valid URL
 
@@ -355,7 +355,7 @@ function isValidUrl($url) {
 ?>
 ```
 
-<hr class="break">
+
 
 ### Simple string encryption and decryption
 

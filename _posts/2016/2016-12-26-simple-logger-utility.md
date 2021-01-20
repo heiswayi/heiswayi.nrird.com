@@ -10,7 +10,7 @@ comments: true
 
 This is a simple C# utility class I wrote to do the app logging for small .NET projects.
 
-<hr class="break">
+
 
 ### Usage examples
 

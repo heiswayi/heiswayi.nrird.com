@@ -12,7 +12,7 @@ Multithreading is a widespread programming and execution model that allows multi
 
 The purpose of threading is to allow computer to do more than one thing at a time. In a single core computer, multithreading won't give much advantages for overall speed. But for computer with multiple processor cores (which is so common these days), multithreading can take advantage of additional cores to perform separate instructions at the same time or by splitting the tasks between the cores.
 
-<hr class="break">
+
 
 ### Let's create a simple base program for testing
 
@@ -60,7 +60,7 @@ namespace MultithreadingProgramming
 }
 ```
 
-<hr class="break">
+
 
 ### Single threading programming
 
@@ -83,7 +83,7 @@ Result:
 Single threading - elapsed time: 8419ms
 ```
 
-<hr class="break">
+
 
 ### Multithreading programming using Thread class
 
@@ -130,7 +130,7 @@ Result:
 Using Thread - elapsed time: 7532ms
 ```
 
-<hr class="break">
+
 
 ### Multithreading programming using ThreadPool
 
@@ -172,7 +172,7 @@ Result:
 Using ThreadPool - elapsed time: 2901ms
 ```
 
-<hr class="break">
+
 
 ### Multithreading programming using Task
 
@@ -212,7 +212,7 @@ Result:
 Using Task - elapsed time: 3061ms
 ```
 
-<hr class="break">
+
 
 ### Multithreading programming using BackgroundWorker
 
@@ -257,7 +257,7 @@ Result:
 Using BackgroundWorker - elapsed time: 3100ms
 ```
 
-<hr class="break">
+
 
 ### Overall results
 
@@ -271,6 +271,6 @@ Using BackgroundWorker - elapsed time: 3100ms
 
 From the results above, I can say that `ThreadPool`, `Task` and `BackgroundWorker` can perform 2x faster compared to `Thread` and single threading method. Of course, the single threading method is the slowest.
 
-<hr class="break">
+
 
 If you're going to perform any CPU intensive task, you can always take advantage of multithreading programming in your code to have better performance in your application. I could say that `BackgroundWorker` class is easy to use and very popular among developers I have been working with.

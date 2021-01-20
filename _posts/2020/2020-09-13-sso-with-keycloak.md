@@ -20,7 +20,7 @@ Keycloak is a robust solution for user identity and access management. It's open
 - Customizable and extensible.
 - Easy setup and integration using provided client adapters.
 
-<hr class="break">
+
 
 ### Keycloak Core Concepts and Architecture
 
@@ -39,7 +39,7 @@ Following image illustrates the architecture of Keycloak software;
 
 {% include figure.html src="assets/images/c7irtZ4.png" caption="Credit: Courtesy of Thomas Darimont" %}
 
-<hr class="break">
+
 
 ### User Authentication using Keycloak
 
@@ -63,7 +63,7 @@ Following image illustrates the flow on how the backend services work with Keycl
 
 {% include figure.html src="assets/images/Fi77aj0.png" caption="Credit: Courtesy of Thomas Darimont" %}
 
-<hr class="break">
+
 
 ### Understanding Keycloak Tokens
 
@@ -82,7 +82,7 @@ Following are the available types of token when authenticating with Keycloak:
 | Offline token | A special refresh token that "never" expires. |
 | ID token | Contains information about user (used by OIDC). |
 
-<hr class="break">
+
 
 ### Example Screenshots of Keycloak UI
 
@@ -94,7 +94,7 @@ Following are the available types of token when authenticating with Keycloak:
 
 {% include figure.html src="assets/images/QN5i0dn.png" caption="Keycloak User Account Console (v11)" %}
 
-<hr class="break">
+
 
 ### Keycloak Admin REST API Examples
 
@@ -187,7 +187,7 @@ curl --location --request GET '<KEYCLOAK_SERVER>/auth/admin/realms/<REALM>/users
 --header 'Authorization: Bearer <ACCESS_TOKEN>'
 ```
 
-<hr class="break">
+
 
 ### Quick Deployment of Keycloak via Docker Compose
 
@@ -249,6 +249,6 @@ You can use following docker-compose CLI to get started:
 $ docker-compose -f path/to/docker-compose.yml up -d
 ```
 
-<hr class="break">
+
 
 There are a lot of great resources that you could find online (_simply google it_) to learn more about Keycloak, and the best way to start is to visit [its official website](https://www.keycloak.org/).

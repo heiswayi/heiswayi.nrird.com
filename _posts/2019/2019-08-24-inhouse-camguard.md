@@ -10,13 +10,13 @@ I built Inhouse Camguard few months ago in my spare time to experiment with some
 
 <a href="https://github.com/heiswayi/inhousecamguard" class="button big">Source Code on GitHub</a>
 
-<hr class="break">
+
 
 ### Screenshot
 
 {% include figure.html src="assets/images/1vAwAmW.png" caption="Inhouse Camguard 1.0" %}
 
-<hr class="break">
+
 
 ### Detailed features
 

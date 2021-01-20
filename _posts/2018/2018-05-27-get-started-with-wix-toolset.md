@@ -12,13 +12,13 @@ comments: true
 
 I have been working with Windows-based installation development for some time and for some software projects that required a simple deployment, I preferred to create a basic MSI installer package whenever it's possible. So, WiX Toolset will be the first choice.
 
-<hr class="break">
+
 
 ### Example screenshot
 
 {% include figure.html src="assets/images/9RPzlsd.png" caption="Installer UI - welcome dialog" %}
 
-<hr class="break">
+
 
 ### Advantages of using WiX Toolset
 
@@ -30,7 +30,7 @@ There are some advantages that I can think of when working with WiX Toolset for 
 - Can easily be source-controlled and versioning.
 - Good community support and a lot of examples.
 
-<hr class="break">
+
 
 ### Example of my WiX project structure
 
@@ -63,7 +63,7 @@ WiX project files:
 - `Product.Loc-en.wxl` - Localization file for custom strings used in the main file
 - `MakeInstaller.bat` - The batch script to compile WiX project files
 
-<hr class="break">
+
 
 ### Example of my WiX preprocessor variables file
 
@@ -123,7 +123,7 @@ File name: `Product.Var.wxi`
 
 > **Note:** `BUILD_VERSION`, `BUILD_GUID` and `BUILD_PROJECTDIR` are preprocessor variables that later will be used in `MakeInstaller.bat` file to compile the WiX files.
 
-<hr class="break">
+
 
 ### Example of my primary WiX file 
 
@@ -425,7 +425,7 @@ File name: `Product.wxs`
 </Wix>
 ```
 
-<hr class="break">
+
 
 ### More example screenshots
 
@@ -433,7 +433,7 @@ File name: `Product.wxs`
 
 {% include figure.html src="assets/images/WaHqBhg.png" caption="When existing version already installed - upgrade dialog" %}
 
-<hr class="break">
+
 
 ### Example of the localization file used for the WiX project
 
@@ -470,7 +470,7 @@ File name: `Product.Loc-en.wxl`
 </WixLocalization>
 ```
 
-<hr class="break">
+
 
 ### How to create a batch script to compile the WiX project
 
@@ -506,7 +506,7 @@ rem Create setup-2.0.msi
 "%WIX%bin\light.exe" "_Product.Files.wixobj" "_Product.wixobj" -loc "Product.Loc-en.wxl" -cultures:en-US -ext WixUtilExtension -ext WixUIExtension -ext WixNetFxExtension -out "setup-2.0.msi" -nologo
 ```
 
-<hr class="break">
+
 
 ### Final project structure
 
@@ -518,7 +518,7 @@ Here's the example screenshot showing the installation progress dialog after I r
 
 {% include figure.html src="assets/images/DZAhwKu.png" caption="Installation progress dialog" %}
 
-<hr class="break">
+
 
 That's how I created a WiX project for one of my Windows-based desktop apps. If you're new to WiX Toolset, you can follow and use the given examples and snippets above and modify the code/script to suit your requirement.
 

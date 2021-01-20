@@ -17,7 +17,7 @@ private _onSomethingChanged = new Subject<T>();
 public onSomethingChanged = this._onSomethingChanged.asObservable();
 ```
 
-<hr class="break">
+
 
 ### Here are what you need to do in your `ComponentA`
 
@@ -78,7 +78,7 @@ ngOnInit() {
 
 This assumes you want to listen to `onSomethingChanged` event from the beginning of your _ComponentA_ is loaded. So, whenever your _ComponentA_ is unloaded, the subscription to the event will be destroyed automatically.
 
-<hr class="break">
+
 
 ### The Differences: _Subject_ vs _BehaviorSubject_ vs _ReplaySubject_
 

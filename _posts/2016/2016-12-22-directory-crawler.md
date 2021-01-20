@@ -10,13 +10,13 @@ Directory Crawler is a simple command-line utility program written in .NET C# to
 
 <a href="https://github.com/heiswayi/DirectoryCrawler" class="button big">Source Code on GitHub</a>
 
-<hr class="break">
+
 
 ### Screenshot
 
 {% include figure.html src="assets/images/Re1267D.gif" caption="Showing how the program looked like in action" %}
 
-<hr class="break">
+
 
 ### Usage example
 

@@ -8,7 +8,7 @@ comments: true
 
 Git is the most popular distributed version-control system for tracking changes in source code during software development, and this is a simple collection of git commands that I have been using for most of the time.
 
-<hr class="break">
+
 
 ### Checking the basic configurations
 
@@ -27,7 +27,7 @@ git config user.name "Heiswayi Nrird"
 git config user.email "heiswayi@nrird.com"
 ```
 
-<hr class="break">
+
 
 ### Creating and getting projects
 
@@ -39,7 +39,7 @@ git init
 git clone <GIT_REPO_URL>
 ```
 
-<hr class="break">
+
 
 ### The most common workflows - commit the changes
 
@@ -61,7 +61,7 @@ git commit -am "<COMMIT_MESSAGE>" #add all changed files and commit, except the 
 git push
 ```
 
-<hr class="break">
+
 
 ### Branching
 
@@ -97,7 +97,7 @@ git push -d origin <BRANCH_NAME>
 git diff <FIRST_BRANCH_NAME>..<SECOND_BRANCH_NAME>
 ```
 
-<hr class="break">
+
 
 ### Merging
 
@@ -114,7 +114,7 @@ git cherry-pick <COMMIT_ID>
 git merge --abort
 ```
 
-<hr class="break">
+
 
 ### Stashing your work
 
@@ -142,7 +142,7 @@ git stash drop stash@{1} #specific stash
 git stash clear #delete all
 ```
 
-<hr class="break">
+
 
 ### Tagging
 
@@ -165,7 +165,7 @@ git checkout <VERSION_TAG>
 git tag -d <VERSION_TAG>
 ```
 
-<hr class="break">
+
 
 ### Reset
 
@@ -189,7 +189,7 @@ git rm -rf <FILENAME|DIRECTORY> #apply to local and git
 git rm -rf --cached <FILENAME|DIRECTORY> #or only apply to git
 ```
 
-<hr class="break">
+
 
 ### Getting the latest changes
 
@@ -214,7 +214,7 @@ Recommended to use the command with a clean working copy. If you have any uncomm
 git pull
 ```
 
-<hr class="break">
+
 
 ### Inspection and comparison
 
@@ -234,7 +234,7 @@ git diff <BRANCH_NAME_1>..<BRANCH_NAME_2>
 
 [Click here](https://mirrors.edge.kernel.org/pub/software/scm/git/docs/git-log.html#_pretty_formats) for more details on `--pretty=format:"<STRING>"`.
 
-<hr class="break">
+
 
 Git references and other cheatsheets:
 

@@ -12,7 +12,7 @@ As of PHP 5.5, a [native and simple password hashing API](https://wiki.php.net/r
 
 > Please note that, these two weak hashing algorithms `md5()` and `sha1()` are no longer practical and acceptable to be used these days as they can be bruteforced in seconds.
 
-<hr class="break">
+
 
 ### Implementation of native password hashing API
 
@@ -25,7 +25,7 @@ The implementation consists of four functions:-
 
 > NOTE: `password_hash()` creates a new password hash using a strong one-way hashing algorithm and compatible with [**crypt()**](http://php.net/manual/en/function.crypt.php).
 
-<hr class="break">
+
 
 ### Example 1 - password_hash using PASSWORD_DEFAULT
 
@@ -50,7 +50,7 @@ Output:
 $2y$10$kZ8eWlGS30qABEthikt.uOvdYETzS3azGCutmfOdtXMzEvFuNoMWe
 ```
 
-<hr class="break">
+
 
 ### Example 2 - password_hash using cost option
 
@@ -104,7 +104,7 @@ Appropriate Cost Found: 10
 
 This is good if you want to set the highest cost that you can without slowing down your server too much. **8 - 10 is a good baseline**, and is good if your servers are fast enough. The code above aims for less than 50ms stretching time, which is a good baseline for systems handling interactive logins.
 
-<hr class="break">
+
 
 ### Example 3 - password_hash using cost and salt option
 
@@ -134,7 +134,7 @@ $2y$11$dtSMAuO41g5QZcAG76FqTehpk35Dcf0lkEpBffEW7dRqQsrR2E8VO
 
 > NOTE: It is strongly recommended that you do not generate your own salt for this function. It will create a secure salt automatically for you if you do not specify one.
 
-<hr class="break">
+
 
 ### Example 4 - password_verify
 
@@ -161,7 +161,7 @@ Password is valid!
 
 > If you get incorrect false responses from `password_verify()` when manually including the hash variable (e.g. for testing) and you know it should be correct, make sure you are enclosing the hash variable in single quotes (') and not double quotes (").
 
-<hr class="break">
+
 
 ### Example 5 - password_needs_rehash
 
@@ -190,7 +190,7 @@ if (password_verify($password, $hash)) {
 ?>
 ```
 
-<hr class="break">
+
 
 ### Example 6 - password_get_info
 
@@ -216,13 +216,13 @@ array (size=3)
       'cost' => int 11
 ```
 
-<hr class="break">
+
 
 ### Compatibility issue
 
 If you are using PHP version before 5.5, there is a [pure PHP compatibility library](https://github.com/ircmaxell/password_compat) available for PHP 5.3.7 and later.
 
-<hr class="break">
+
 
 ### Cryptographic salt
 
@@ -238,7 +238,7 @@ When using `password_hash()` or `crypt()`, the return value includes the salt as
 
 The diagram above shows the format of a return value from `crypt()` or `password_hash()`. As you can see, they are self-contained, with all the information on the algorithm and salt required for future password verification.
 
-<hr class="break">
+
 
 ### Conclusion
 

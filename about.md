@@ -21,7 +21,7 @@ keywords: about the author, website technology stack, about page
 
 This is my official home on Internet. I write occasionally here. This is a static site, built based on [Jekyll](http://jekyllrb.com), a popular static site generator. The source code is hosted on my private [BitBucket](https://bitbucket.org/heiswayi/) account and built and deployed automatically using [Netlify](https://www.netlify.com/). Most of the blog posts are written in [Markdown](https://www.markdownguide.org/) format.
 
-<hr class="break">
+
 
 ### Disclaimer
 
@@ -31,7 +31,7 @@ The information on this site is provided "AS IS" with no warranties, and confers
 
 Unless otherwise stated, all contents on this site are licensed under [CC BY-SA 4.0 License](https://creativecommons.org/licenses/by-sa/4.0/).
 
-<hr class="break">
+
 
 ### Contact info
 

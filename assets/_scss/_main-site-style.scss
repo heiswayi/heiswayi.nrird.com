@@ -66,9 +66,13 @@ h2 {
 }
 
 h3 {
-    margin-top: 2rem;
+    // margin-top: 2rem;
+    margin-top: 4rem;
     font-size: 1.25rem;
     font-family: $headingh3-font;
+    &:first-of-type {
+        margin-top: 2rem;
+    }
 }
 
 h4,

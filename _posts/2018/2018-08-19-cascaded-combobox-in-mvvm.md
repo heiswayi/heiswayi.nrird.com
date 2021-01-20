@@ -22,7 +22,7 @@ MVVM is stand for Model-View-ViewModel. It's one of popular design patterns when
 | View | A collection of visible elements which includes user interface (UI), animations and text. |
 | ViewModel | A binder that connects the UI elements to the controls in ViewModel. |
 
-<hr class="break">
+
 
 ### Getting started
 
@@ -141,7 +141,7 @@ namespace ComboBoxMVVMExample.ViewModel
 }
 ```
 
-<hr class="break">
+
 
 ### Creating a View
 
@@ -209,7 +209,7 @@ The code above contains 3 ComboBox elements. The first ComboBox is for `enum`-ty
     caption="UI snapshot"
 %}
 
-<hr class="break">
+
 
 ## Creating a Model
 
@@ -308,7 +308,7 @@ From the code above, there are 3 object classes; **EnumItem**, **Country**, and 
 - `getStateByCountryCode(...)` is a method to get a list of states based on a particular country's two-letter code.
 - `EnumItem` class is just an example of a list using the enum type.
 
-<hr class="break">
+
 
 ## Creating a ViewModel
 
@@ -474,7 +474,7 @@ The public properties in the code above are usually used to bind with the _View_
 
 _ViewModel_ satisfies this requirement by implementing the [INotifyPropertyChanged](https://msdn.microsoft.com/en-us/library/system.componentmodel.inotifypropertychanged.aspx) interface and raising the **PropertyChanged** event when a property is changed. Listeners can respond appropriately to the property changes when they occur. You may refer to ViewModelBase.cs file on how it was implemented.
 
-<hr class="break">
+
 
 ### Connecting the ViewModel to the View
 
@@ -522,7 +522,7 @@ Here's the final code for MainWindow.xaml file after I included the _View_ from 
 </Window>
 ```
 
-<hr class="break">
+
 
 ### Final result
 
@@ -538,7 +538,7 @@ After it was successfully compiled, at first nothing was selected, so the ComboB
 
 The complete source code for this example project can be downloaded from [GitHub](https://github.com/heiswayi/ComboBoxMVVMExample).
 
-<hr class="break">
+
 
 MVVM enables a great developer-designer workflow which is providing following benefits:
 

@@ -10,7 +10,7 @@ A couple of weeks ago I was asked to gather and compile a proper list of equipme
 
 So, I decided to create a web app for that. Instead of using Excel file, those engineers or any engineer/contractor can just go to the web app and then update the equipment record or status. By doing this, anytime I need the latest list to do the audit, I can just simply export the data from the app. Thus, this is the result of how I spent my weekend.
 
-<hr class="break">
+
 
 ### Screenshots
 
@@ -22,7 +22,7 @@ The app name is **Equipment Tracking** or **Etrac** for short, and successfully 
 
 {% include figure.html src="assets/images/3zRj0Gr.png" caption="Viewing the details of equipment record" %}
 
-<hr class="break">
+
 
 ### About Etrac
 
@@ -32,7 +32,7 @@ I hosted Etrac on IIS7, in one of virtual machines and only can be accessed with
 
 Etrac also supports data exporting into PDF, Excel and CSV file.
 
-<hr class="break">
+
 
 ### Code snippets
 

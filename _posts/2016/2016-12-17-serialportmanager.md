@@ -10,7 +10,7 @@ comments: true
 
 _SerialPortManager.cs_ is a snippet of singleton class written in .NET C# that I wrote and used in some of my .NET projects to handle serial data communication. Especially for the projects that required interfacing with [Arduino](https://www.arduino.cc/) board. This class basically is a wrapper written on top of [System.IO.Ports.SerialPort class](https://msdn.microsoft.com/en-us/library/system.io.ports.serialport).
 
-<hr class="break">
+
 
 ### Usage examples
 
@@ -82,7 +82,7 @@ namespace SerialPortExample
 }
 ```
 
-<hr class="break">
+
 
 ### Other notes
 
@@ -129,7 +129,7 @@ namespace SerialPortExample
 }
 ```
 
-<hr class="break">
+
 
 ### How this class avoids the deadlock issue
 

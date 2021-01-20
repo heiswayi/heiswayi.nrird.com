@@ -8,7 +8,7 @@ comments: true
 
 Indoor Temperature Monitor is a simple DIY project based on Arduino, a .NET app that used to record and monitor indoor temperature. Since I have an old, unused Arduino Uno board, so I bought [1-wire digital temperature sensor (DS18B20)](https://www.maximintegrated.com/en/products/analog/sensors-and-sensor-interface/DS18B20.html) and made use of it for this project.
 
-<hr class="break">
+
 
 ### Software development
 
@@ -18,7 +18,7 @@ Indoor Temperature Monitor is a simple GUI app written in .NET C# and WPF. This 
 
 <a href="https://github.com/heiswayi/IndoorTempMonitor" class="button big">Source Code on GitHub</a>
 
-<hr class="break">
+
 
 ### Hardware development
 

@@ -8,7 +8,7 @@ comments: true
 
 Messaging Service is just another method of communications that is based on RxJS that we could use in our Angular project for intercomponent communication. Using the Message Bus data model as a payload, we can minimize the number of event subscriptions in our Angular components. Making the code looks more cleaner and easy to maintain.
 
-<hr class="break">
+
 
 ### MessagingService class
 
@@ -50,7 +50,7 @@ export class MessagingService {
 }
 ```
 
-<hr class="break">
+
 
 ### Usage example through MessageBus data model
 

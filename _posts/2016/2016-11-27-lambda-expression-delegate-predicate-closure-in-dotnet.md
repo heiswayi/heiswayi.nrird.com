@@ -61,7 +61,7 @@ AppManager.Instance.OnDataPointsUpdated += (obj, e) =>
 }
 ```
 
-<hr class="break">
+
 
 ### Delegate
 
@@ -110,7 +110,7 @@ MathOperation adder = (double a, double b) =>
 }
 ```
 
-<hr class="break">
+
 
 ### Predicate
 
@@ -137,7 +137,7 @@ evenNumbers.ToList().ForEach(p => Console.Write(p + " "));
 // Will print "2 4 6 "
 ```
 
-<hr class="break">
+
 
 ### Closure
 

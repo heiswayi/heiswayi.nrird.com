@@ -10,7 +10,7 @@ comments: true
 
 `MVVM.cs` is a collection of Model-View-ViewModel (MVVM) design pattern **common classes** that can be implemented by any ViewModel. I created this collection into a single file, so whenever I want to develop MVVM-based application (without using MVVM frameworks) in .NET C#, I just need to reference it and inherit the `ViewModelBase` class into any of my ViewModel classes.
 
-<hr class="break">
+
 
 ### Property binding
 
@@ -64,7 +64,7 @@ namespace MVVMExampleApp
 }
 ```
 
-<hr class="break">
+
 
 ### Command binding
 

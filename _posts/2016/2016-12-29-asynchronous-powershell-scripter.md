@@ -17,7 +17,7 @@ Originally inspired from [jpmik's Asynchronously Execute PowerShell Scripts](htt
 
 <a href="https://github.com/heiswayi/AsyncPowerShellScripter" class="button big">Source Code on GitHub</a>
 
-<hr class="break">
+
 
 ### Screenshots
 
@@ -37,7 +37,7 @@ During application startup or adding/removing preset script will display this Lo
 
 {% include figure.html src="assets/images/D6rnHDz.png" caption="Importing script from PowerShell script file (.ps1)" %}
 
-<hr class="break">
+
 
 ### Preset scripts
 

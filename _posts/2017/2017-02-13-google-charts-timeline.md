@@ -81,7 +81,7 @@ function drawChart() {
 
 The timeline above is one of my experiments with [Google Charts](https://developers.google.com/chart/interactive/docs/). **It is my responsive daily routine timeline.** Truly speaking, my weekend life is not really looked like a normal person as I love to build stuff (_Creative_ label) during those hours in which have caused my sleep time shifted. However, this routine timeline is not always true all the time.
 
-<hr class="break">
+
 
 ### Source code
 

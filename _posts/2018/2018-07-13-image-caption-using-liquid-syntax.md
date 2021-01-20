@@ -8,7 +8,7 @@ comments: true
 
 One of the things I really like with [Jekyll](https://jekyllrb.com/) static site is that the webpage generation allows seamless mixing of [Markdown](https://en.wikipedia.org/wiki/Markdown), [HTML5](https://en.wikipedia.org/wiki/HTML5) and [Liquid](https://shopify.github.io/liquid/) syntax. Most of my blog posts sometimes contain some images. **And some of these images need captions.** So, this is how I implemented a better way to insert captioned images in my blog site using the Liquid syntax.
 
-<hr class="break">
+
 
 ### Using the standard Markdown syntax
 
@@ -39,7 +39,7 @@ Figure (above): Fossil Creek Reservoir, Fort Collins, CO
 
 The **problem with this method** is that if my article contains multiple images and each image has its own caption, the article wouldn't look nice because **I can't do a better styling for it**. If the image doesn't need a caption, then it would be okay and easier to use the Markdown syntax.
 
-<hr class="break">
+
 
 ### Using the HTML5 elements
 
@@ -56,7 +56,7 @@ Example of HTML5 code:
 
 This should be a way better than using the standard Markdown syntax. **However, inserting (or pasting) the code like above each time I need to include the captioned image can be a quite tedious.**
 
-<hr class="break">
+
 
 ### Using the Liquid syntax _- this!_
 

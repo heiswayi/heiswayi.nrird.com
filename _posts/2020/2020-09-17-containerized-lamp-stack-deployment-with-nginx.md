@@ -14,7 +14,7 @@ Following diagram is to illustrate on how I configure a **single virtual server*
 
 > A "service" here is referred to an application that is running from inside a Docker container.
 
-<hr class="break">
+
 
 ### Virtual Server
 
@@ -26,7 +26,7 @@ The firewall solution in Amazon EC2 is called a [**Security Group**](https://doc
 
 If you're looking for a cheaper, lightweight or more simplified version of a server instance, there is a service called [Lightsail](https://aws.amazon.com/lightsail/).
 
-<hr class="break">
+
 
 ### DNS Management
 
@@ -47,7 +47,7 @@ Following are the example of DNS records;
 
 I enabled the DNS to be proxified by Cloudflare so I can get the benefit of Cloudflare Free Universal SSL certififcate that has automatic renewal.
 
-<hr class="break">
+
 
 ### nginx
 
@@ -132,7 +132,7 @@ http {
 }
 ```
 
-<hr class="break">
+
 
 ### LAMP stack
 
