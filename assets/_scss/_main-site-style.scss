@@ -52,6 +52,7 @@ h6 {
     line-height: 1.25;
     color: #313131;
     text-align: left;
+    font-weight: 700;
 }
 
 h1 {
@@ -114,7 +115,9 @@ pre {
 }
 
 code {
-    color: #f14e32;
+    // color: #f14e32;
+    background: #eee;
+    color: $black;
 }
 
 pre {
@@ -306,7 +309,8 @@ tbody tr:nth-child(odd) {
     &.footnote {
         border-bottom: none;
         background: transparent;
-        color: #ff4136;
+        color: #06b;
+        background: $silver;
         padding-left: 3px;
         padding-right: 3px;
         &:hover {
