@@ -20,7 +20,13 @@
 {% endcase %}
 
 <div class="header">
+    {% if include.position == 'center' %}
+    <div class="container" style="justify-content: center;">
+    {% elsif include.position == 'wide-left' %}
+    <div class="container" style="max-width: 100%; padding-left: 1rem; padding-right: 1rem;">
+    {% else %}
     <div class="container">
+    {% endif %}
         <div class="site-logo">
             <a href="{{ "/" | prepend: site.baseurl | prepend: site.url }}" class="logo">
                 <img src="{{ "/assets/logo/favicon-16x16.png" | prepend: site.baseurl | prepend: site.url }}" alt=""/>
