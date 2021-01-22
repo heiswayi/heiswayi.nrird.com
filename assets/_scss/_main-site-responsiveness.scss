@@ -56,6 +56,18 @@
       }
     }
   }
+  .prev-next-post {
+    flex-direction: column;
+    margin-left: -2rem;
+    margin-right: -2rem;
+    .prev-post {
+      width: 100%;
+    }
+    .next-post {
+      width: 100%;
+      margin-top: 1rem;
+    }
+  }
 }
 
 /* Landscape phone to portrait tablet */

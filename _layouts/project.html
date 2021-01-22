@@ -79,6 +79,10 @@ published: true
         {% endif %}
         {% endif %}
 
+        {% if site.show_prev_next_post %}
+          {% include prev_next_post.html %}
+        {% endif %}
+
         {% if site.show_post_sharer %}
           {% include post_sharer.html %}
         {% endif %}

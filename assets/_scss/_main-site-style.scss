@@ -537,7 +537,6 @@ a.skip:hover {
 }
 
 .muted {
-    filter: alpha(opacity=50);
     opacity: 0.5;
 }
 
@@ -683,6 +682,43 @@ ul.task-list {
             vertical-align: middle !important;
             position: relative !important;
             bottom: 1px !important;
+        }
+    }
+}
+
+.prev-next-post {
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border: 1px dashed #ccc;
+    padding: 1ch;
+    .prev-post {
+        width: 50%;
+        text-align: left;
+        padding-right: 1rem;
+        display: flex;
+        flex-direction: row;
+        a {
+            border: none;
+            flex: 1;
+        }
+        span {
+            padding-right: 1ch;
+        }
+    }
+    .next-post {
+        width: 50%;
+        text-align: right;
+        padding-left: 1rem;
+        display: flex;
+        flex-direction: row;
+        a {
+            border: none;
+            flex: 1;
+        }
+        span {
+            padding-left: 1ch;
         }
     }
 }

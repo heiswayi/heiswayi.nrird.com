@@ -48,6 +48,7 @@ social:
     - https://jsfiddle.net/user/heiswayi/
 
 # ARTICLE BOTTOM MODULES
+show_prev_next_post     : true
 show_related_posts      : false
 show_post_sharer        : false
 show_tags               : true

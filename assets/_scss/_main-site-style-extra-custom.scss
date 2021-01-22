@@ -65,3 +65,9 @@ p.elsewhere {
     word-break: keep-all;
   }
 }
+
+p.warning {
+  padding: 0.5rem 1rem;
+  background: #f8dc81;
+  border-radius: 2px;
+}
