@@ -6,9 +6,10 @@ tags: [Programming, PHP, Encryption, Decryption]
 comments: true
 ---
 
-> **UPDATE2020:** `mcrypt` library was DEPRECATED in PHP 7.1.0, and REMOVED in PHP 7.2.0. Alternative to this library is to use [Sodium](https://www.php.net/manual/en/book.sodium.php) (available as of PHP 7.2.0) or [OpenSSL](https://www.php.net/manual/en/book.openssl.php).
+{:.warning}
+**UPDATE:** `mcrypt` library was DEPRECATED in PHP 7.1.0, and REMOVED in PHP 7.2.0. Alternative to this library is to use [Sodium](https://www.php.net/manual/en/book.sodium.php) (available as of PHP 7.2.0) or [OpenSSL](https://www.php.net/manual/en/book.openssl.php).
 
-From my past experience on building PHP apps, I have been dealing with some data that need to be protected. Following functions are the ones that I used to encrypt and decrypt those data. Encryption and decryption are based on [mcrypt_encrypt](https://www.php.net/manual/en/function.mcrypt-encrypt.php) and [mcrypt_decrypt](https://www.php.net/manual/en/function.mcrypt-decrypt.php) respectively.
+Following PHP snippets are the encryption and decryption function that I used the most to encrypt and decrypt the data. These encryption and decryption function are written based on [mcrypt_encrypt](https://www.php.net/manual/en/function.mcrypt-encrypt.php) and [mcrypt_decrypt](https://www.php.net/manual/en/function.mcrypt-decrypt.php) respectively.
 
 ### Encryption
 
@@ -34,7 +35,7 @@ echo Encrypt('myPass123', 'Welcome to Flippancy 25');
 ?>
 ```
 
-When you execute for multiple times with the same parameters, you will notice the encrypted string keeps changing. This is because we have `mt_rand()` function that is used to generate the _salt_.
+When you execute the function for multiple times with the same parameters, you will notice the encrypted string will keep changing. This is because we have `mt_rand()` function that is used to generate the _salt_.
 
 Example:
 
@@ -43,8 +44,6 @@ Example:
 // Output 2: U2FsdGVkX1/3zxJCcE8p89t67nJNp8blNkezNxTVn4IDFQLM755K2+OSfFHewDLI
 // Output 3: U2FsdGVkX18OQ8puUN8BBi+d6vAjEzDTZqM2WaKQD1atOykkYl9MY7NQM1DqI4Kw
 ```
-
-However, all of these encrypted strings still can be decrypted successfully and produces the same result when you provide a correct password.
 
 ### Decryption
 
@@ -76,11 +75,11 @@ echo Decrypt('myPass123', 'U2FsdGVkX18OQ8puUN8BBi+d6vAjEzDTZqM2WaKQD1atOykkYl9MY
 
 ### Can I use this encryption method to protect password?
 
-Nope.
+Absolutely, no!
 
-To secure a user password, the best practice is to implement a **one-way hashing algorithm technique**. This implementation is irreversible. Unlike the encryptions, they are formulated to be able to be decrypted. In PHP, it's recommended to use the built-in functions to securely hash the user password such as [password_hash](http://php.net/manual/en/function.password-hash.php) or [crypt](http://php.net/manual/en/function.crypt.php).
+To secure a user password, the best practice is to implement a **one-way hashing algorithm technique**. This implementation is irreversible. Unlike the encryptions, they are formulated to be decryptable. In PHP, it's recommended to use the built-in functions to securely hash the user password such as [password_hash](http://php.net/manual/en/function.password-hash.php) or [crypt](http://php.net/manual/en/function.crypt.php).
 
-On my previous PHP app development, I used this custom function to **hash** a user password:
+On my previous PHP apps development, I used this custom function to **hash** a user password:
 
 ```php
 <?php
@@ -99,4 +98,4 @@ echo hashPassword('myPa55w0rd', 'Flipp@ncy25');
 ?>
 ```
 
-To learn more about password hashing, I recommend you to read [this article](https://crackstation.net/hashing-security.htm).
+To learn more about password hashing, one that I can recommend for you to read is [this article](https://crackstation.net/hashing-security.htm).
