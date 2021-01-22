@@ -237,9 +237,3 @@ When using `password_hash()` or `crypt()`, the return value includes the salt as
 {% include figure.html src="assets/images/9cmcBRo.png" caption="Structure of hashed password string" %}
 
 The diagram above shows the format of a return value from `crypt()` or `password_hash()`. As you can see, they are self-contained, with all the information on the algorithm and salt required for future password verification.
-
-
-
-### Conclusion
-
-With this new [password extension](http://php.net/password) that comes as built-in functions, the password hashing becomes more easier as we don't need to create our own custom-made algorithm class or even bother to use any other external password hashing class library in our PHP application anymore.
