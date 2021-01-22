@@ -22,7 +22,7 @@ comments: true
 
 
 
-References:
+### References
 
 - [GitHub API](https://developer.github.com/v3/)
 - [GitHub Pages examples](https://github.com/collections/github-pages-examples)

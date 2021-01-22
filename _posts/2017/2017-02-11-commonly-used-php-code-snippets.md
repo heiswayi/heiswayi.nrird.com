@@ -6,7 +6,7 @@ tags: [PHP, Programming]
 comments: true
 ---
 
-A few years ago I have been actively developing PHP apps, and most of them are built from scratch. Within those years, I have been using some of these PHP functions in most of my projects. Well, until today, I still found some of them are useful when I have been writing PHP apps.
+A few years ago I have been actively developing PHP apps, and most of them are built from scratch. Within those years, I have been using some of these PHP functions in most of my projects. Until today, some of them are still useful when I code some PHP apps.
 
 
 

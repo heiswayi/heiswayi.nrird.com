@@ -534,15 +534,15 @@ Here's the final code for MainWindow.xaml file after I included the _View_ from 
 
 After it was successfully compiled, at first nothing was selected, so the ComboBox for **State** will be disabled by default. But, whenever I started to select a **Country** e.g. "Malaysia", the ComboBox for **State** will be automatically enabled, instantiated and a list of example states within "Malaysia" will be populated. This is how the cascaded ComboBox works with the MVVM implementation.
 
-#### Complete source code
-
-The complete source code for this example project can be downloaded from [GitHub](https://github.com/heiswayi/ComboBoxMVVMExample).
-
-
+### MVVM benefits
 
 MVVM enables a great developer-designer workflow which is providing following benefits:
 
-- During the development process, developers and designers can work more independently and concurrently on their components. The designers can concentrate on the _View_, and if they are using Expression Blend, they can easily generate sample data to work with, while the developers can work on the _ViewModel_ and _Model_ components.
-- The developers can create unit tests for the _ViewModel_ and the _Model_ without using the _View_. The unit tests for the _ViewModel_ can exercise exactly the same functionality as used by the _View_.
-- It is easy to redesign the UI of the application without touching the business logic code because the _View_ is implemented entirely in XAML. A new version of the _View_ should work with the existing _ViewModel_.
-- If there is an existing implementation of the _Model_ that encapsulates existing business logic, it may be difficult or risky to change. In this scenario, the _ViewModel_ acts as an adapter for the _Model_ classes and enables you to avoid making any major change to the _Model_ code.
+| 1. | During the development process, developers and designers can work more independently and concurrently on their components. The designers can concentrate on the _View_, and if they are using Expression Blend, they can easily generate sample data to work with, while the developers can work on the _ViewModel_ and _Model_ components. |
+| 2. | The developers can create unit tests for the _ViewModel_ and the _Model_ without using the _View_. The unit tests for the _ViewModel_ can exercise exactly the same functionality as used by the _View_. |
+| 3. | It is easy to redesign the UI of the application without touching the business logic code because the _View_ is implemented entirely in XAML. A new version of the _View_ should work with the existing _ViewModel_. |
+| 4. | If there is an existing implementation of the _Model_ that encapsulates existing business logic, it may be difficult or risky to change. In this scenario, the _ViewModel_ acts as an adapter for the _Model_ classes and enables you to avoid making any major change to the _Model_ code. |
+
+### Complete source code
+
+The complete source code for this example project can be downloaded from [GitHub](https://github.com/heiswayi/ComboBoxMVVMExample).

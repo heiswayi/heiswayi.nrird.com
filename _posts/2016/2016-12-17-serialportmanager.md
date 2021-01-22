@@ -8,7 +8,7 @@ comments: true
 
 <a href="https://gist.github.com/heiswayi/80eda1a6905ba4edee8bd21a45f3a22d" class="button big">SerialPortManager.cs<br><span style="font-size:0.8rem;opacity:0.7">Source Code on Gist</span></a>
 
-_SerialPortManager.cs_ is a snippet of singleton class written in .NET C# that I wrote and used in some of my .NET projects to handle serial data communication. Especially for the projects that required interfacing with [Arduino](https://www.arduino.cc/) board. This class basically is a wrapper written on top of [System.IO.Ports.SerialPort class](https://msdn.microsoft.com/en-us/library/system.io.ports.serialport).
+_SerialPortManager.cs_ is a snippet of singleton class written in .NET C# that I wrote and used in some of my .NET projects to handle serial data communication, especially for the projects that required interfacing with [Arduino](https://www.arduino.cc/) board. This class basically is a wrapper written on top of [System.IO.Ports.SerialPort class](https://msdn.microsoft.com/en-us/library/system.io.ports.serialport).
 
 
 
@@ -84,9 +84,9 @@ namespace SerialPortExample
 
 
 
-### Other notes
+### Opening or closing the serial port connection
 
-Opening or closing the serial port connection:
+Example:
 
 ```csharp
 // To open/start serial port on COM4 with 9600 bps
@@ -96,7 +96,7 @@ SerialPortManager.Instance.Open("COM4", 9600);
 SerialPortManager.Instance.Close();
 ```
 
-Other public events that you can subscribe:
+Events to subscribe:
 
 - `OnStatusChanged` - to get the status message.
 - `OnSerialPortOpened` - to know if the serial port is opened or not.

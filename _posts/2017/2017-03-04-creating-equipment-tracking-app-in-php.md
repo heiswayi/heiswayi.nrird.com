@@ -6,9 +6,9 @@ tags: [PHP, CRUD, AJAX, DataTables, jQuery, JavaScript, Programming]
 comments: true
 ---
 
-A couple of weeks ago I was asked to gather and compile a proper list of equipment that has been borrowed by other engineers/contractors who are working with my department. Unfortunately, the list that I had received is recorded in Excel file. Well, whenever I need to check the status of the equipment, I have to wait those engineers to send me the updated list by email or through the shared drive. To me, this is quite tedious work.
+A couple of weeks ago I was asked to gather and compile a proper list of equipment that has been borrowed by other engineers/contractors who are working with my department. Unfortunately, the list that I had received is recorded in Excel file. So, whenever I need to check the status of the equipment, I have to wait those engineers/contractors to send me the updated list by email or through the shared drive. To me, this will be a quite tedious work.
 
-So, I decided to create a web app for that. Instead of using Excel file, those engineers or any engineer/contractor can just go to the web app and then update the equipment record or status. By doing this, anytime I need the latest list to do the audit, I can just simply export the data from the app. Thus, this is the result of how I spent my weekend.
+So, I decided to create a web app for that. Instead of using Excel file, those engineers/contractors can just go to the web app and then update the equipment record or status. By doing this, anytime I need the latest list to do the audit, I can just simply export the data from the app. At the end, this is the outcome of how I spent my weekend.
 
 
 

@@ -43,7 +43,7 @@ The **problem with this method** is that if my article contains multiple images 
 
 ### Using the HTML5 elements
 
-In order to do a better styling, alternatively I can use HTML5 by wrapping the `<img>` tag along with `<figcaption>` tag into a `<figure>` tag. This way I can do the styling as creative as I want using SASS/CSS.
+In order to do a better styling, alternatively I can use HTML5 by wrapping the `<img>` tag along with `<figcaption>` tag into a `<figure>` tag. This way I can do the styling as creative as I want using Sass/CSS.
 
 Example of HTML5 code:
 
@@ -70,21 +70,25 @@ I created a file called `figure.html` and placed it inside `_includes` folder. H
 <figure>
     {% if include.href %}
     <a href="{{ include.href }}">
-        <img src="{{ include.src }}" alt="Image: {{ include.caption }}">
+        <img src="{{ include.src }}" alt="{{ include.caption | strip }}">
     </a>
     {% else %}
-    <img src="{{ include.src }}" alt="Image: {{ include.caption }}">
+    <a href="{{ include.src }}">
+        <img src="{{ include.src }}" alt="{{ include.caption | strip }}">
+    </a>
     {% endif %}
-    <figcaption><span>{{ include.caption }}</span></figcaption>
+    <figcaption><span>{{ include.caption | strip }}</span></figcaption>
 </figure>
 {% else %}
 <figure>
     {% if include.href %}
     <a href="{{ include.href }}">
-        <img src="{{ include.src }}" alt="Image without caption">
+        <img src="{{ include.src }}" alt="">
     </a>
     {% else %}
-    <img src="{{ include.src }}" alt="Image without caption">
+    <a href="{{ include.src }}">
+        <img src="{{ include.src }}" alt="">
+    </a>
     {% endif %}
 </figure>
 {% endif %}
@@ -137,4 +141,39 @@ Demo:
     href="https://heiswayi.nrird.com/photography"
 %}
 
-Once you have this Liquid template implemented, all you need to do next is the styling. The styling can be done either using standard CSS or SASS. **Please note that this method is specific to a Jekyll template, and the source of your post may not properly work when used in other Jekyll templates.**
+Once you have this Liquid template implemented, all you need to do next is the styling. The styling can be done either using standard CSS or Sass. **Please note that this method is specific to a Jekyll template, and the source of your post may not properly work when used in other Jekyll templates.**
+
+Here's the Sass code that I used for the styling:
+
+```scss
+figure {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    margin-left: -2rem;
+    margin-right: -2rem;
+    background: repeating-linear-gradient(135deg, #dfdfdf 0, #dfdfdf 1%, #ffffff 0, #ffffff 50%) 0 / 20px 20px;
+    text-align: center;
+    img {
+        margin: 0 auto 0.2rem auto;
+        border: 1px solid #ddd;
+        box-shadow: none;
+        background-color: #fff;
+    }
+    figcaption {
+        font-size: 0.9rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        line-height: 1.6;
+        font-family: $figcaption-font;
+        span {
+            background-color: #fff;
+            padding: 0.2rem 0.5rem;
+        }
+        a:hover {
+            cursor: pointer;
+        }
+    }
+}
+```

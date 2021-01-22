@@ -236,7 +236,7 @@ git diff <BRANCH_NAME_1>..<BRANCH_NAME_2>
 
 
 
-Git references and other cheatsheets:
+### Git references and other cheatsheets
 
 - [Atlassian Git Tutorials](https://www.atlassian.com/git/tutorials/setting-up-a-repository)
 - [GitHub Git Learning Resources](http://try.github.io/) // [PDF](https://github.github.com/training-kit/downloads/github-git-cheat-sheet.pdf)

@@ -6,7 +6,7 @@ tags: [Jekyll, SCSS, JavaScript, Programming]
 comments: true
 ---
 
-When I use a code block written in Markdown format, it will be converted into HTML code and wrapped using `<pre><code>` markup. No line numbering by default. It's just a plain view code block. So, I used this vanilla JavaScript code to enable the line numbering in my code block and a little SCSS for the styling.
+When I use a code block written in Markdown format, it will be converted into HTML code and wrapped using `<pre><code>` markup. No line numbering by default. It's just a plain view code block. So, I used this vanilla JavaScript code to enable the line numbering in my code block and a little CSS styling using Sass.
 
 ```js
 (function() {
@@ -23,7 +23,7 @@ When I use a code block written in Markdown format, it will be converted into HT
 })();
 ```
 
-Here's my SCSS code:
+Here's my Sass code:
 
 ```scss
 pre {

@@ -12,7 +12,7 @@ I have a metadata file that contains the installation path of my application (ex
 
 The problem is that the installation path is hard-coded (default path) in that metadata file, and when the user has changed the install location to a different path during the installation time, the installation path now becomes mismatched with the one in the metadata file. Thus, this has caused the other application cannot recognize the present of my application. My application installer is created using InstallShield 2016 Basic MSI project.
 
-**The question is, how can I solve this in InstallShield?**
+**_The question is, how can I solve this in InstallShield?_**
 
 
 

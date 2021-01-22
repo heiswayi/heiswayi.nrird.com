@@ -8,7 +8,7 @@ comments: true
 
 ### What is Burn?
 
-[Burn](http://robmensching.com/blog/posts/2009/7/14/lets-talk-about-burn/) is a bootstrapper to chain the installations of MSI installers. It is part of WiX toolset. One of the reasons you might need a bootstrapper is to chain your software prerequisite or dependency installations such as a particular version of .NET Framework.
+[Burn](http://robmensching.com/blog/posts/2009/7/14/lets-talk-about-burn/) is a bootstrapper to chain the installations of MSI installers. It is part of WiX toolset. One of the reasons you might need a bootstrapper is to chain your software prerequisites or dependency installations such as a particular version of .NET Framework.
 
 
 
@@ -148,4 +148,4 @@ File name: `MakeBootstrapper.bat`
 - [Windows Installer Basics: Bootstrapper EXE Programs](http://makemsi-manual.dennisbareis.com/bootstrapper_exe_programs.htm)
 - [Joy of Setup - Best Practices](https://www.joyofsetup.com/tag/best-practices/)
 - [Understanding the Difference Between .EXE and .MSI](https://www.symantec.com/connect/articles/understanding-difference-between-exe-and-msi)
-- [hould you run MSI or EXE Setup files?](https://www.ghacks.net/2009/03/23/msi-or-exe-setup/)
+- [Should you run MSI or EXE Setup files?](https://www.ghacks.net/2009/03/23/msi-or-exe-setup/)

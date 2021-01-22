@@ -158,21 +158,3 @@ Example output:
 John Cornor
 Jason Bourne
 ```
-
-
-
-### Fixing Byte Order Mark (BOM) bug
-
-BOM here means a Unicode character used to signal the endianness (byte order) of a text file or stream. At the beginning of writing this helper class, I have encountered with this kind of exception message when I tried to deserialize the XML string:
-
-> "Data at the root level is invalid. Line 1, position 1."
-
-After I did some googling, I found a [blog](http://www.ipreferjim.com/2014/09/data-at-the-root-level-is-invalid-line-1-position-1/) that explained the root cause and detailed solution. So, I implemented the suggested solution into the code as shown below:
-
-```csharp
-string _byteOrderMarkUtf8 = Encoding.UTF8.GetString(Encoding.UTF8.GetPreamble());
-if (xml.StartsWith(_byteOrderMarkUtf8))
-{
-    xml = xml.Remove(0, _byteOrderMarkUtf8.Length);
-}
-```

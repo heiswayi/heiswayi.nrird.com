@@ -8,7 +8,7 @@ comments: true
 
 <a href="https://gist.github.com/heiswayi/69ef5413c0f28b3a58d964447c275058" class="button big">SimpleLogger.cs<br><span style="font-size:0.8rem;opacity:0.7">Source Code on Gist</span></a>
 
-This is a simple C# utility class I wrote to do the app logging for small .NET projects.
+This is a simple C# utility class that I wrote to do the app logging for small .NET projects.
 
 
 
