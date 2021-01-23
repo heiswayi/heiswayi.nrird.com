@@ -51,6 +51,48 @@ tags: [Inspiration, Illustration Arts]
 
             <div id="photos"></div>
 
+            <div class="container">
+                <div class="post">
+                    {% if site.show_tags or site.show_post_sharer or site.show_related_posts or site.show_disqus_comment %}
+                        <div class="spacer"></div>
+                    {% endif %}
+            
+                    {% if site.show_tags %}
+                    {% assign post = page %}
+                    {% if post.tags.size > 0 %}
+            
+                        {% assign tags_content = "" %}
+                        {% for post_tag in post.tags %}
+                        {% capture tags_content_temp %}
+                            {{ tags_content }}<a href="{{ site.url }}{{ site.baseurl }}/tags#{{ post_tag | slugify }}"><i class="fa fa-hashtag muted" aria-hidden="true"></i><span class="hidden">#</span>{{ post_tag | replace: "#", "sharp" | slugify | downcase }}</a>
+                        {% endcapture %}
+                        {% assign tags_content = tags_content_temp %}
+                        {% endfor %}
+            
+                        <div class="tagged">
+                        {{ tags_content }}
+                        </div>
+                    {% endif %}
+                    {% endif %}
+            
+                    {% if site.show_prev_next_post %}
+                        {% include prev_next_post.html %}
+                    {% endif %}
+            
+                    {% if site.show_post_sharer %}
+                        {% include post_sharer.html %}
+                    {% endif %}
+                    
+                    {% if site.show_related_posts %}
+                        {% include related_post.html %}
+                    {% endif %}
+            
+                    {% if site.show_disqus_comment %}
+                        {% include disqus.html %}
+                    {% endif %}
+                </div>
+            </div>
+
         </div>
     </div>
 
