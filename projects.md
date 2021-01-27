@@ -23,8 +23,6 @@ Jekyll is a popular static site generator written in Ruby. Over the past years, 
 ### Web Apps based on JS
 
 | [PGP Suite](https://heiswayi.github.io/pgp/) | A simple and easy-to-use client-side PGP tool to generate, sign and verify PGP keys. |
-| [Color Contrast Checker](https://heiswayi.github.io/color-contrast-checker/) | A simple tool to check color contrast compliance ratios using HEX codes. |
-| [EncryptJS](https://heiswayi.github.io/encryptjs/) | A pure JS library to encrypt text for your website. |
 | [Markdown-HTML Live Preview Editor](https://heiswayi.github.io/markdown-editor/) | Just another simple Markdown-HTML preview online editor based on GitHub-flavored Markdown. |
 
 
