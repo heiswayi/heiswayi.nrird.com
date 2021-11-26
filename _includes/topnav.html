@@ -35,20 +35,13 @@
     {% else %}
     <div class="container">
     {% endif %}
-        <div class="site-logo">
-            <a href="{{ "/" | prepend: site.baseurl | prepend: site.url }}" class="logo">
-                <img src="{{ "/assets/logo/favicon-16x16.png" | prepend: site.baseurl | prepend: site.url }}" alt=""/>
-            </a>
-        </div>
         <nav>
             <div class="site-nav">
                 <ul>
                     <li><a href="{{ "/" | prepend: site.baseurl | prepend: site.url }}" class="menu {{home}}">/home</a></li>
-                    <li><a href="{{ "/posts" | prepend: site.baseurl | prepend: site.url }}" class="menu {{posts}}">/posts</a></li>
-                    <!-- <li><a href="{{ "/about" | prepend: site.baseurl | prepend: site.url }}" class="menu {{about}}">/about</a></li> -->
+                    <li><a href="{{ "/writing" | prepend: site.baseurl | prepend: site.url }}" class="menu {{posts}}">/writing</a></li>
                     <li><a href="{{ "/projects" | prepend: site.baseurl | prepend: site.url }}" class="menu {{projects}}">/projects</a></li>
                     <li><a href="{{ "/photography" | prepend: site.baseurl | prepend: site.url }}" class="menu {{photos}}">/photos</a></li>
-                    <li><a href="{{ "/resume" | prepend: site.baseurl | prepend: site.url }}" class="menu {{resume}}">/resume</a></li>
                 </ul>
             </div>
         </nav>

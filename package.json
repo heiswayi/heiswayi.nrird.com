@@ -1,6 +1,6 @@
 {
   "name": "heiswayi.nrird.com",
-  "version": "2.0.0",
+  "version": "2021.11.25",
   "description": "Source code for https://heiswayi.nrird.com - Heiswayi Nrird Personal Blog",
   "main": "index.js",
   "dependencies": {

@@ -4,12 +4,11 @@ locale                  : "en_US"
 
 # SITE METADATA
 title                   : "Heiswayi Nrird"
-tagline                 : "Your limitation — it's only your imagination." # short description
-description             : "Programming · OSS · UI/UX · Cloud Computing · AI/ML" # long description
-keywords                : "software engineering, user experience, open source, photography, random experimental stuff"
+description             : "Learning · Programming · Simplifying"
+keywords                : "frontend developer, ux designer, human-factor engineering, open source, photography, programming"
 image_cover             : "/assets/cover.gif"
 logo                    : "/assets/cover.gif"
-version                 : "20210124"
+version                 : "20211126"
 
 # SITE OWNERSHIP VERIFICATIONS
 webmaster_verifications:

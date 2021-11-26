@@ -1,26 +1,21 @@
 ---
 layout: page
 title: Projects
-description: A list of my selective works or projects.
-keywords: part-time projects, open source, web apps, freeware, fun and learning, hobby, experimental code, templates
+description: A small collection of my selective works or projects.
 ---
 
-A collection of my selective works and Open Source projects. Check me out on [GitHub](https://github.com/heiswayi) for more other projects or [Gist](https://gist.github.com/heiswayi) for my public snippets.
+### Jekyll Themes
+
+[Jekyll](https://jekyllrb.com/) is a popular static site generator written in Ruby. Over the past years, I have created some of **minimalist** Jekyll themes and published them as open source software. Similar to this site which is built/compiled using Jekyll.
+
+| The Plain | Center aligned. Single column layout. Ideal for personal blogging purpose. [GitHub](https://github.com/heiswayi/the-plain)&nbsp;&middot;&nbsp;[Demo](https://heiswayi.github.io/the-plain) |
+| Thinkspace | Center aligned. Single column layout. Ideal for technical writing style blog. [GitHub](https://github.com/heiswayi/thinkspace)&nbsp;&middot;&nbsp;[Demo](https://heiswayi.github.io/thinkspace) |
+| TextLog | Left aligned. Single column layout. No site menu in post layout. Ideal for logging notes or technical documentations. [GitHub](https://github.com/heiswayi/textlog)&nbsp;&middot;&nbsp;[Demo](https://heiswayi.github.io/textlog) |
+| Barebone | The most barebone Jekyll theme. No Sass/SCSS file. Run with almost pure HTML. [GitHub](https://github.com/heiswayi/hn-barebone)&nbsp;&middot;&nbsp;[Demo](https://heiswayi.github.io/hn-barebone/) |
 
 
 
-### Minimalist Jekyll Themes
-
-Jekyll is a popular static site generator written in Ruby. Over the past years, I created some of minimalist Jekyll themes and published them as OSS. Similarly to this site which is built using Jekyll too.
-
-| The Plain | One-column, center-aligned style Jekyll theme, ideally designed for personal blogging.<br>[GitHub](https://github.com/heiswayi/the-plain) &middot; [Demo](https://heiswayi.github.io/the-plain) |
-| Thinkspace | One-column, center-aligned style Jekyll theme, ideally designed for technical writing style blog.<br>[GitHub](https://github.com/heiswayi/thinkspace) &middot; [Demo](https://heiswayi.github.io/thinkspace) |
-| TextLog | One-column, left-aligned style Jekyll theme. No site menu in post layout.<br>[GitHub](https://github.com/heiswayi/textlog) &middot; [Demo](https://heiswayi.github.io/textlog) |
-| Barebone | The most barebone Jekyll theme. No Sass/SCSS file. Almost pure HTML.<br>[GitHub](https://github.com/heiswayi/hn-barebone) &middot; [Demo](https://heiswayi.github.io/hn-barebone/) |
-
-
-
-### Web Apps based on JS
+### JS Apps
 
 | [PGP Suite](https://heiswayi.github.io/pgp/) | A simple and easy-to-use client-side PGP tool to generate, sign and verify PGP keys. |
 | [Markdown-HTML Live Preview Editor](https://heiswayi.github.io/markdown-editor/) | Just another simple Markdown-HTML preview online editor based on GitHub-flavored Markdown. |

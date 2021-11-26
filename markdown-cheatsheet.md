@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Markdown Cheatsheet
-description: This markdown cheatsheet provides an overview of all the Markdown syntax elements supported by this site.
+description: This markdown cheatsheet provides an overview of all the Markdown syntax elements that are supported by this site.
 ---
 
 This markdown cheatsheet was prepared by Heiswayi Nrird to be used as markdown syntax testing for typography assessment.
