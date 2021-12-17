@@ -6,16 +6,16 @@ description: A small collection of my selective works or projects.
 
 ### Jekyll Themes
 
-[Jekyll](https://jekyllrb.com/) is a popular static site generator written in Ruby. Over the past years, I have created some of **minimalist** Jekyll themes and published them as open source software. Similar to this site which is built/compiled using Jekyll.
+[Jekyll](https://jekyllrb.com/) is a popular static site generator written in Ruby. Over the past years, I have created some of **minimalist** Jekyll themes and published the source code on GitHub. Same as this site, which is built and compiled using Jekyll.
 
-| The Plain | Center aligned. Single column layout. Ideal for personal blogging purpose. [GitHub](https://github.com/heiswayi/the-plain)&nbsp;&middot;&nbsp;[Demo](https://heiswayi.github.io/the-plain) |
-| Thinkspace | Center aligned. Single column layout. Ideal for technical writing style blog. [GitHub](https://github.com/heiswayi/thinkspace)&nbsp;&middot;&nbsp;[Demo](https://heiswayi.github.io/thinkspace) |
-| TextLog | Left aligned. Single column layout. No site menu in post layout. Ideal for logging notes or technical documentations. [GitHub](https://github.com/heiswayi/textlog)&nbsp;&middot;&nbsp;[Demo](https://heiswayi.github.io/textlog) |
-| Barebone | The most barebone Jekyll theme. No Sass/SCSS file. Run with almost pure HTML. [GitHub](https://github.com/heiswayi/hn-barebone)&nbsp;&middot;&nbsp;[Demo](https://heiswayi.github.io/hn-barebone/) |
+| [The Plain](https://github.com/heiswayi/the-plain) | Center aligned. Single column layout. Ideal for personal blogging purpose. |
+| [Thinkspace](https://github.com/heiswayi/thinkspace) | Center aligned. Single column layout. Ideal for technical writing style blog. |
+| [TextLog](https://github.com/heiswayi/textlog) | Left aligned. Single column layout. No site menu in post layout. Ideal for logging notes or technical documentations. |
+| [Barebone](https://github.com/heiswayi/hn-barebone) | The most barebone Jekyll theme. No Sass/SCSS file. Run with almost pure HTML. |
 
 
 
-### JS Apps
+### JavaScript Apps
 
 | [PGP Suite](https://heiswayi.github.io/pgp/) | A simple and easy-to-use client-side PGP tool to generate, sign and verify PGP keys. |
 | [Markdown-HTML Live Preview Editor](https://heiswayi.github.io/markdown-editor/) | Just another simple Markdown-HTML preview online editor based on GitHub-flavored Markdown. |
