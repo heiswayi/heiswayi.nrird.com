@@ -6,13 +6,7 @@ tags: [PHP, Password, Programming]
 comments: true
 ---
 
-Here is the great news to all PHP developers!
-
 As of PHP 5.5, a [native and simple password hashing API](https://wiki.php.net/rfc/password_hash) was introduced to safely handle both hashing and verifying password in a secure manner. When talking about hashing the password, the two most important considerations are the computational expense and the salt. The more computationally expensive the hashing algorithm, the longer it will take to **bruteforce** its output. So, the suggested algorithm to use when hashing the password is Blowfish, which is also the default hashing algorithm used by this password hashing API.
-
-> Please note that, these two weak hashing algorithms `md5()` and `sha1()` are no longer practical and acceptable to be used these days as they can be bruteforced in seconds.
-
-
 
 ### Implementation of native password hashing API
 
@@ -234,6 +228,6 @@ A cryptographic salt is a data which is applied during the hashing process in or
 
 When using `password_hash()` or `crypt()`, the return value includes the salt as part of the generated hash. This value should be stored verbatim in your database, as it includes information about the hash function that was used and can then be given directly to `password_verify()` or `crypt()` when verifying passwords.
 
-{% include figure.html src="assets/images/9cmcBRo.png" caption="Structure of hashed password string" %}
+![A structure of the hashed password string](assets/images/9cmcBRo.png)
 
 The diagram above shows the format of a return value from `crypt()` or `password_hash()`. As you can see, they are self-contained, with all the information on the algorithm and salt required for future password verification.
