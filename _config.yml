@@ -1,14 +1,10 @@
-# LOCALE
-og_locale               : "en_US"
-locale                  : "en_US"
-
 # SITE METADATA
 title                   : "Heiswayi Nrird"
+tagline                 : "Heiswayi Nrird - Software Engineer" # jekyll-seo-tag
 description             : "Learning · Programming · Simplifying"
 keywords                : "frontend developer, ux designer, human-factor engineering, open source, photography, programming"
-image_cover             : "/assets/cover.gif"
-logo                    : "/assets/cover.gif"
-version                 : "20211126"
+logo                    : "/assets/cover.gif" # jekyll-seo-tag
+version                 : "20220205"
 
 # SITE OWNERSHIP VERIFICATIONS
 webmaster_verifications:
@@ -17,14 +13,16 @@ webmaster_verifications:
   alexa                 : null
   yandex                : "13f3a6696f133a01"
   baidu                 : null
+  wot                   : "5cf878109d0d39f281fd"
 
 # SITE URL
-url                     : https://heiswayi.nrird.com # main url
+url                     : https://heiswayi.nrird.com # main url, jekyll-seo-tag
 baseurl                 : null # for github-pages only
 
 # AUTHOR INFO
 author:
   name                  : "Heiswayi Nrird"
+  url                   : https://heiswayi.nrird.com
 
 # SOCIAL MEDIA
 twitter:
@@ -39,7 +37,7 @@ social:
   links:
     - https://twitter.com/heiswayi
     - https://github.com/heiswayi
-    - https://my.linkedin.com/in/nrird
+    - https://my.linkedin.com/in/heiswayi
     - https://codepen.io/heiswayi/
     - https://keybase.io/heiswayi
     - https://unsplash.com/@heiswayi_nrird
@@ -47,12 +45,7 @@ social:
     - https://jsfiddle.net/user/heiswayi/
 
 # ARTICLE BOTTOM MODULES
-show_prev_next_post     : true
-show_related_posts      : false
-show_post_sharer        : false
 show_tags               : true
-show_disqus_comment     : false
-disqus_shortname        : hnbloggithub
 
 # JEKYLL BUILD SETTINGS
 source                  : ./

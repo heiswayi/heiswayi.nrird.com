@@ -27,7 +27,7 @@ published: true
 
   <div class="wrap">
 
-    {% include topnav.html position='center' %}
+    {% include topnav-post.html position='center' %}
 
     <div id="content" class="container content">
 
@@ -41,7 +41,7 @@ published: true
         {{ content }}
         </article>
 
-        {% if site.show_tags or site.show_post_sharer or site.show_related_posts or site.show_disqus_comment %}
+        {% if site.show_tags %}
           <div class="spacer"></div>
         {% endif %}
 
@@ -63,22 +63,6 @@ published: true
             {{ tags_content }}
           </div>
         {% endif %}
-        {% endif %}
-
-        {% if site.show_prev_next_post %}
-          {% include prev_next_post.html %}
-        {% endif %}
-
-        {% if site.show_post_sharer %}
-          {% include post_sharer.html %}
-        {% endif %}
-        
-        {% if site.show_related_posts %}
-          {% include related_post.html %}
-        {% endif %}
-
-        {% if site.show_disqus_comment %}
-          {% include disqus.html %}
         {% endif %}
 
       </div>
