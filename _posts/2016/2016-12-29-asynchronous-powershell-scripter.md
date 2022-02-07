@@ -3,7 +3,6 @@ layout: project
 title: Asynchronous PowerShell Scripter (WPF Version)
 description: Just another PowerShell scripter tool written in .NET C# and WPF to manage, run and learn PowerShell scripting.
 tags: [C#, WPF, PowerShell, Project, Open Source]
-comments: true
 ---
 
 Originally inspired from [jpmik's Asynchronously Execute PowerShell Scripts](https://www.codeproject.com/Articles/18409/Asynchronously-Execute-PowerShell-Scripts-from-C), Asynchronous PowerShell Scripter is just another PowerShell scripter tool that has been undergone a remake in .NET C# and _WPF_.

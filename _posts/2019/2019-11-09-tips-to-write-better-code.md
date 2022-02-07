@@ -3,7 +3,6 @@ layout: post
 title: Tips to write a better code
 description: I have been using this mental model to improve how I do coding and writing better code.
 tags: [Best Practices, Software Engineering, Coding Tips]
-comments: true
 ---
 
 Coding is part of my life. That's what I do the most now, for living. Everyday I learn to improve my coding skill. I love the errors in code. Every error is giving me a challenge, and at the same time an opportunity for me to learn my mistake. One day, while I was reading some posts and comments on [Hacker News](https://news.ycombinator.com/), I came across that someone had mentioned somewhere in the comments about something to consider on how to write a better code. Since then, I have been asking myself each time I started to code and it becomes some sort of a mental model to me. Yep, it worked and helped in improving my code.

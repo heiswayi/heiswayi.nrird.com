@@ -22,15 +22,15 @@ This is a simple QR Code generator API that you can simply use.
 #### Usage Example 1
 
 ```html
-<img src="https://dev.nrird.com/qrcode/?data=https://heiswayi.nrird.com/qrcode&size=200x200">
+<img src="https://dev.nrird.com/qrcode/?data=https://heiswayi.nrird.com/qrcode&size=400x400">
 ```
 
-[![Example 1](https://dev.nrird.com/qrcode/?data=https://heiswayi.nrird.com/qrcode&size=200x200)](https://dev.nrird.com/qrcode/?data=https://heiswayi.nrird.com/qrcode&size=200x200)
+[![Example 1](https://dev.nrird.com/qrcode/?data=https://heiswayi.nrird.com/qrcode&size=400x400)](https://dev.nrird.com/qrcode/?data=https://heiswayi.nrird.com/qrcode&size=400x400)
 
 #### Usage Example 2 - With Logo
 
 ```html
-<img src="https://dev.nrird.com/qrcode/?data=https://heiswayi.nrird.com/qrcode&size=200x200&logo=https://dev.nrird.com/qrcode/example.png">
+<img src="https://dev.nrird.com/qrcode/?data=https://heiswayi.nrird.com/qrcode&size=400x400&logo=https://dev.nrird.com/qrcode/example.png">
 ```
 
-[![Example 2](https://dev.nrird.com/qrcode/?data=https://heiswayi.nrird.com/qrcode&size=200x200&logo=https://dev.nrird.com/qrcode/example.png)](https://dev.nrird.com/qrcode/?data=https://heiswayi.nrird.com/qrcode&size=200x200&logo=https://dev.nrird.com/qrcode/example.png)
+[![Example 2](https://dev.nrird.com/qrcode/?data=https://heiswayi.nrird.com/qrcode&size=400x400&logo=https://dev.nrird.com/qrcode/example.png)](https://dev.nrird.com/qrcode/?data=https://heiswayi.nrird.com/qrcode&size=400x400&logo=https://dev.nrird.com/qrcode/example.png)

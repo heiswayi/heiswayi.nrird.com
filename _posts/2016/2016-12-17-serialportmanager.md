@@ -3,16 +3,17 @@ layout: post
 title: Singleton serial port manager class in .NET
 description: A snippet of singleton class written in .NET C# for handling serial data communication.
 tags: [Programming, C#, SerialPort]
-comments: true
 ---
 
-<a href="https://gist.github.com/heiswayi/80eda1a6905ba4edee8bd21a45f3a22d" class="button big">SerialPortManager.cs<br><span style="font-size:0.8rem;opacity:0.7">Source Code on Gist</span></a>
+_SerialPortManager.cs_ file contains a snippet of singleton class written in .NET C# that I wrote and used in some of my .NET projects to handle serial data communication, especially for the projects that required interfacing with [Arduino](https://www.arduino.cc/) board. This class basically is a wrapper written on top of [System.IO.Ports.SerialPort class](https://msdn.microsoft.com/en-us/library/system.io.ports.serialport).
 
-_SerialPortManager.cs_ is a snippet of singleton class written in .NET C# that I wrote and used in some of my .NET projects to handle serial data communication, especially for the projects that required interfacing with [Arduino](https://www.arduino.cc/) board. This class basically is a wrapper written on top of [System.IO.Ports.SerialPort class](https://msdn.microsoft.com/en-us/library/system.io.ports.serialport).
+<script src="https://gist.github.com/heiswayi/80eda1a6905ba4edee8bd21a45f3a22d.js"></script>
+<noscript><p class="warning">
+Embedding the GitHub Gist does not work here because your browser does not support JavaScript or JavaScript has been disabled. Here is the link to <a href="https://gist.github.com/heiswayi/80eda1a6905ba4edee8bd21a45f3a22d">SerialPortManager.cs</a> source code on GitHub Gist.
+</p></noscript>
 
 
-
-### Usage examples
+### Example code on how to use it
 
 There is an event called `OnDataReceived` for you to subscribe to retrieve the data.
 

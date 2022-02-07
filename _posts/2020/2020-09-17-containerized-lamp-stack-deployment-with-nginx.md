@@ -3,7 +3,6 @@ layout: post
 title: Containerized LAMP stack deployment with nginx
 description: This is how I configure my EC2 instance to work with multiple DNS and proxify the traffic through nginx to respective services that are running in Docker containers.
 tags: [nginx, Cloud Computing, EC2, Docker, DNS]
-comments: true
 ---
 
 ### Overview

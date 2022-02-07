@@ -3,7 +3,6 @@ layout: post
 title: What you need to know about PHP native password hashing API
 description: Starting PHP version 5.5 onwards, password hashing in PHP applications would be easier as the new native password hashing functions have been introduced.
 tags: [PHP, Password, Programming]
-comments: true
 ---
 
 As of PHP 5.5, a [native and simple password hashing API](https://wiki.php.net/rfc/password_hash) was introduced to safely handle both hashing and verifying password in a secure manner. When talking about hashing the password, the two most important considerations are the computational expense and the salt. The more computationally expensive the hashing algorithm, the longer it will take to **bruteforce** its output. So, the suggested algorithm to use when hashing the password is Blowfish, which is also the default hashing algorithm used by this password hashing API.
@@ -21,7 +20,7 @@ The implementation consists of four functions:-
 
 
 
-### Example 1 - password_hash using PASSWORD_DEFAULT
+### password_hash using PASSWORD_DEFAULT
 
 `password_hash()` example with `PASSWORD_DEFAULT`
 
@@ -46,7 +45,7 @@ $2y$10$kZ8eWlGS30qABEthikt.uOvdYETzS3azGCutmfOdtXMzEvFuNoMWe
 
 
 
-### Example 2 - password_hash using cost option
+### password_hash using cost option
 
 `password_hash()` example with manual setting of `cost`
 
@@ -100,7 +99,7 @@ This is good if you want to set the highest cost that you can without slowing do
 
 
 
-### Example 3 - password_hash using cost and salt option
+### password_hash using cost and salt option
 
 `password_hash()` example with manual setting of `cost` and `salt`
 
@@ -130,7 +129,7 @@ $2y$11$dtSMAuO41g5QZcAG76FqTehpk35Dcf0lkEpBffEW7dRqQsrR2E8VO
 
 
 
-### Example 4 - password_verify
+### password_verify
 
 `password_verify()` example
 
@@ -157,7 +156,7 @@ Password is valid!
 
 
 
-### Example 5 - password_needs_rehash
+### password_needs_rehash
 
 `password_needs_rehash()` example
 
@@ -186,7 +185,7 @@ if (password_verify($password, $hash)) {
 
 
 
-### Example 6 - password_get_info
+### password_get_info
 
 `password_get_info()` example
 
@@ -228,6 +227,6 @@ A cryptographic salt is a data which is applied during the hashing process in or
 
 When using `password_hash()` or `crypt()`, the return value includes the salt as part of the generated hash. This value should be stored verbatim in your database, as it includes information about the hash function that was used and can then be given directly to `password_verify()` or `crypt()` when verifying passwords.
 
-![A structure of the hashed password string](assets/images/9cmcBRo.png)
+{% include figure.html src="assets/images/9cmcBRo.png" caption="A structure of the hashed password string" %}
 
 The diagram above shows the format of a return value from `crypt()` or `password_hash()`. As you can see, they are self-contained, with all the information on the algorithm and salt required for future password verification.

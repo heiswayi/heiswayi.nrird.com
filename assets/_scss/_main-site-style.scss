@@ -655,8 +655,12 @@ a.skip:hover {
                 .project-label {
                     opacity: 0.7;
                     font-family: $precode-font;
-                    font-size: 0.9em;
+                    font-size: 0.8em;
                     text-transform: uppercase;
+                    border: 1px solid $linkbluedarker;
+                    margin-right: 5px;
+                    padding-left: 2px;
+                    padding-right: 2px;
                 }
             }
         }

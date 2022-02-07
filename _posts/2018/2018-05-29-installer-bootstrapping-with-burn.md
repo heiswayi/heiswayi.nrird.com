@@ -3,7 +3,6 @@ layout: post
 title: Installer bootstrapping with Burn (WiX bootstrapper)
 description: This is how I created my custom bootstrapper and bootstrapping my MSI setup installer using a WiX bootstrapper known as Burn.
 tags: [WiX Toolset, Windows Installer, Programming]
-comments: true
 ---
 
 ### What is Burn?

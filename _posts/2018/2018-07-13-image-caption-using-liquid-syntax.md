@@ -3,7 +3,6 @@ layout: post
 title: Image caption implementation in Jekyll site using Liquid syntax
 description: This is how I implemented a better way to insert captioned images in my blog site using the Liquid syntax.
 tags: [Jekyll, Liquid, Programming]
-comments: true
 ---
 
 One of the things I really like with [Jekyll](https://jekyllrb.com/) static site is that the webpage generation allows seamless mixing of [Markdown](https://en.wikipedia.org/wiki/Markdown), [HTML5](https://en.wikipedia.org/wiki/HTML5) and [Liquid](https://shopify.github.io/liquid/) syntax. Most of my blog posts sometimes contain some images. **And some of these images need captions.** So, this is how I implemented a better way to insert captioned images in my blog site using the Liquid syntax.

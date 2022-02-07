@@ -1,12 +1,11 @@
 ---
 layout: post
-title: Learn about Lambda Expression, Delegate, Predicate and Closure in .NET
+title: Lambda expression, Delegate, Predicate and Closure in .NET
 description: Let's learn how to use lambda expression, delegate, predicate and closure in .NET C# code.
 tags: [C#, Programming]
-comments: true
 ---
 
-### Lambda Expression
+### Lambda expression
 
 A lambda expression is an anonymous function that we construct with the lambda operator `=>`.
 

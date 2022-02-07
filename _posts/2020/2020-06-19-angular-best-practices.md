@@ -1,9 +1,8 @@
 ---
 layout: post
-title: Angular Best Practices
+title: Angular best practices
 description: A collection of some Angular best practices that I have been using while working with Angular-based projects.
 tags: [Angular, TypeScript, Best Practices]
-comments: true
 ---
 
 Lately, I have been doing frontend development using Angular Framework. Sometimes I do backend development, but it is not as much as I did on the frontend development. So, here I want to note some Angular Best Practices that I have been practicing and I think they are worth to follow.

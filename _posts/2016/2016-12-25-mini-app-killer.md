@@ -3,12 +3,11 @@ layout: project
 title: Mini App Killer
 description: A simple utility program to kill any running application or process on Windows.
 tags: [C#, WPF, Project, Programming]
-comments: true
 ---
 
 Mini App Killer is a simple utility program I wrote in .NET C# that will sit in the system tray for easy access and can be used to kill or end task of any running application or process.
 
-<a href="https://www.dropbox.com/s/4gibswk7iz7gg9d/MiniAppKillerV1.zip?dl=0" class="button big">Download Mini App Killer v1.0 · 55.2 KB</a>
+<a href="https://drive.google.com/u/0/uc?id=1rDwsL3tOXWHtogUA-n0l9HUcPaWX-kro&export=download" class="button big">Download Mini App Killer v1.0 · 55.2 KB</a>
 
 
 

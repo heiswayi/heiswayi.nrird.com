@@ -3,7 +3,6 @@ layout: post
 title: Defining essential colors for harmony design
 description: A good color set to get started with new design project that can work better for both in light and dark theme.
 tags: [Colors]
-comments: true
 ---
 
 <style>

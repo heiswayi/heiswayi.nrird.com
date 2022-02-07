@@ -3,7 +3,6 @@ layout: post
 title: Inspiration — Growing Old
 description: A sweet and inspiring comic dedicated to my beloved daughter, Mawar Allyssa about the feeling that I had when I'm growing old.
 tags: [Inspiration, Poem]
-comments: true
 ---
 
 My sweet girl, you are a blessing;<br>

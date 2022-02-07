@@ -3,7 +3,6 @@ layout: post
 title: Creating a simple Equipment Tracking app in PHP
 description: This is how I created a simple CRUD-based web app for internal equipment tracking using PHP, AJAX and DataTables.
 tags: [PHP, CRUD, AJAX, DataTables, jQuery, JavaScript, Programming]
-comments: true
 ---
 
 A couple of weeks ago I was asked to gather and compile a proper list of equipment that has been borrowed by other engineers/contractors who are working with my department. Unfortunately, the list that I had received is recorded in Excel file. So, whenever I need to check the status of the equipment, I have to wait those engineers/contractors to send me the updated list by email or through the shared drive. To me, this will be a quite tedious work.

@@ -3,16 +3,16 @@ layout: post
 title: Simple logger utility class in .NET
 description: Just another simple logger utility class that I wrote for my own use in some of my .NET projects.
 tags: [C#, Utility, Programming]
-comments: true
 ---
-
-<a href="https://gist.github.com/heiswayi/69ef5413c0f28b3a58d964447c275058" class="button big">SimpleLogger.cs<br><span style="font-size:0.8rem;opacity:0.7">Source Code on Gist</span></a>
 
 This is a simple C# utility class that I wrote to do the app logging for small .NET projects.
 
+<script src="https://gist.github.com/heiswayi/69ef5413c0f28b3a58d964447c275058.js"></script>
+<noscript><p class="warning">
+Embedding the GitHub Gist does not work here because your browser does not support JavaScript or JavaScript has been disabled. Here is the link to <a href="https://gist.github.com/heiswayi/69ef5413c0f28b3a58d964447c275058">SimpleLogger.cs</a> source code on GitHub Gist.
+</p></noscript>
 
-
-### Usage examples
+### Example code on how to use it
 
 Simply instantiate the `SimpleLogger` class to a local variable:
 

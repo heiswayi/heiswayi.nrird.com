@@ -8,55 +8,64 @@ description: A small collection of my selective works or projects.
 
 [Jekyll](https://jekyllrb.com/) is a popular static site generator written in Ruby. Over the past years, I have created some of **minimalist** Jekyll themes and published the source code on GitHub. Same as this site, which is built and compiled using Jekyll.
 
-| [The Plain](https://github.com/heiswayi/the-plain) | Center aligned. Single column layout. Ideal for personal blogging purpose. |
-| [Thinkspace](https://github.com/heiswayi/thinkspace) | Center aligned. Single column layout. Ideal for technical writing style blog. |
-| [TextLog](https://github.com/heiswayi/textlog) | Left aligned. Single column layout. No site menu in post layout. Ideal for logging notes or technical documentations. |
-| [Barebone](https://github.com/heiswayi/hn-barebone) | The most barebone Jekyll theme. No Sass/SCSS file. Run with almost pure HTML. |
+<table>
+<tbody>
+<tr>
+<td style="width:200px"><img src="https://camo.githubusercontent.com/74765fa50b2b2e81f2fd43678a1c9df6aff868ec4c4d302b680a68d53100a100/68747470733a2f2f692e696d6775722e636f6d2f4649544b4e31482e706e67" alt="image" style="width: 200px; height: auto"></td>
+<td><strong>The Plain</strong><br>Center aligned. Single column layout. Ideal for personal blogging purpose.</td>
+<td><a href="https://github.com/heiswayi/the-plain">GitHub</a><br><a href="https://heiswayi.github.io/the-plain/">Demo</a></td>
+</tr>
+<tr>
+<td style="width:200px"><img src="https://camo.githubusercontent.com/c41d621d281f5d38b3a1e24b207daa24838f6f1de49e2260dabc1877eedc4ee3/68747470733a2f2f692e696d6775722e636f6d2f3159533037386b2e706e67" alt="image" style="width: 200px; height: auto"></td>
+<td><strong>Thinkspace</strong><br>Center aligned. Single column layout. Ideal for technical writing style blog.</td>
+<td><a href="https://github.com/heiswayi/thinkspace">GitHub</a><br><a href="https://heiswayi.github.io/thinkspace/">Demo</a></td>
+</tr>
+<tr>
+<td style="width:200px"><img src="https://camo.githubusercontent.com/d9112b05a8c010244d05210a9de10a4c539b5ee35df418a33a1dbd98832142cb/68747470733a2f2f692e696d6775722e636f6d2f795871624d34532e706e67" alt="image" style="width: 200px; height: auto"></td>
+<td><strong>TextLog</strong><br>Left aligned. Single column layout. No site menu in post layout. Ideal for logging notes or technical documentations.</td>
+<td><a href="https://github.com/heiswayi/textlog">GitHub</a><br><a href="https://heiswayi.github.io/textlog/">Demo</a></td>
+</tr>
+<tr>
+<td style="width:200px"><img src="https://i.imgur.com/JxnN0S6.png" alt="image" style="width: 200px; height: auto"></td>
+<td><strong>Barebone</strong><br>The most barebone Jekyll theme. No Sass/SCSS file. Run with almost pure HTML.</td>
+<td><a href="https://github.com/heiswayi/hn-barebone">GitHub</a><br><a href="https://heiswayi.github.io/hn-barebone/">Demo</a></td>
+</tr>
+</tbody>
+</table>
 
 
 
-### JavaScript Apps
+### Simple JS-based Apps
 
-| [PGP Suite](https://heiswayi.github.io/pgp/) | A simple and easy-to-use client-side PGP tool to generate, sign and verify PGP keys. |
-| [Markdown-HTML Live Preview Editor](https://heiswayi.github.io/markdown-editor/) | Just another simple Markdown-HTML preview online editor based on GitHub-flavored Markdown. |
-
-
-
-### AI Chatbot Experimental
-
-| [W4Y1](https://heiswayi.github.io/w4y1/) | AI chatbot experimental based on [elizabot.js](https://www.masswerk.at/elizabot/). |
-| [HelloBot](https://heiswayi.github.io/hellobot/) | AI chatbot experimental based on [RiveScript](https://www.rivescript.com/). |
+| [**PGP Suite**](https://heiswayi.github.io/pgp/)<br><small>A simple and easy-to-use client-side PGP tool to generate, sign and verify PGP keys via your web browser.</small> |
+| [**Markdown-HTML Live Preview Editor**](https://heiswayi.github.io/markdown-editor)<br><small>Just another simple Markdown-HTML preview online editor based on GitHub-flavored Markdown.</small> |
+| [**Website Checklist**](https://heiswayi.github.io/website-checklist/)<br><small>Interactive checklist for web developer that uses your browser [localStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage) to save the checklist data.</small> |
+| [**Simple Tools**](https://heiswayi.github.io/simple-tools/)<br><small>A collection of simple web tools created for personal use.</small> |
 
 
 
-### PHP Apps
+### Experimental AI Chatbot Apps
 
-| [hn-pastebin](https://dev.nrird.com/pastebin/) | A minimalist, secure and encrypted pastebin app. |
-| [hn-speedtest](https://dev.nrird.com/speedtest/) | A minimalist, mobile-friendly speedtest site using my server location. |
-| [hn-writer](https://dev.nrird.com/writer/) | A browser-based WYSIWYG editor for online documentation writing. |
-| [hn-whois](https://dev.nrird.com/whois/) | A minimalist domain whois script. |
-| [hn-link](https://dev.nrird.com/link/create) | A minimalist URL shortening script. |
-| [hn-imagehosting](https://dev.nrird.com/imagehosting/) | A minimalist and personal image hosting script. |
-| [QR Code Generator](https://heiswayi.nrird.com/qrcode) | A simple QR code generator API script. |
+| [**W4Y1**](https://heiswayi.github.io/w4y1/)<br><small>Experimental AI chatbot app based on [elizabot.js](https://www.masswerk.at/elizabot/).</small> |
+| [**HelloBot**](https://heiswayi.github.io/hellobot/)<br><small>Experimental AI chatbot app based on [RiveScript](https://www.rivescript.com/).</small> |
 
 
-
-### Misc.
-
-| [Website Checklist](https://heiswayi.github.io/website-checklist/) | Interactive checklist for web developer that uses your browser [localStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage) to save the checklist data. |
-| [Code Playground](https://heiswayi.github.io/code-playground/) | Formatting any code snippet using Monaco Editor. |
-| [Simple Tools](https://heiswayi.github.io/simple-tools/) | A collection of simple web tools created for personal use. |
-| [Mawar Allyssa's Keyboard Smashing](https://heiswayi.nrird.com/mawar-allyssa) | A simple app for my toddler that generates random shapes, alphabets and colors when pressing the keyboard. |
-| [Bullet Journal](https://dev.nrird.com/bulletjournal/) | A TODO-like app that uses your browser [localStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage) to save the data. |
-| [Quotes for Inspiration and Love](quotes) | A selective collection of inspirational quotes. |
+### Small PHP Apps/Scripts
 
 
+| [**hn-pastebin**](https://dev.nrird.com/pastebin/)<br><small>A minimalist, secure and encrypted pastebin app.</small> |
+| [**hn-speedtest**](https://dev.nrird.com/speedtest/)<br><small>A minimalist, mobile-friendly speedtest webpage using my server location.</small> |
+| [**hn-writer**](https://dev.nrird.com/writer/)<br><small>A browser-based WYSIWYG editor for online documentation writing.</small> |
+| [**hn-link**](https://dev.nrird.com/link/create)<br><small>A minimalist URL shortening script.</small> |
+| [**Simple Image Hosting**](https://dev.nrird.com/imagehosting/)<br><small>A minimalist and personal image hosting script.</small> |
+| [**QR Code Generator**](https://heiswayi.nrird.com/qrcode)<br><small>A simple QR code generator API script.</small> |
 
-### Nostalgic Archives
+
+### mIRC Scripts & Revenge Scripts (Old Archives)
 
 mIRC is an Internet Relay Chat client for Windows, created in 1995. It is a fully functional chat utility, and its integrated scripting language makes it extensible and versatile. mIRC has been described as "one of the most popular IRC clients available for Windows".
 
-| [Dino IRC Sc. (Final Dev.).zip](https://www.dropbox.com/s/5m6fcpwfe998vg1/Dino%20IRC%20Sc.%20%28Final%20Dev.%29.zip?dl=0) | mIRC Script, made in circa 2004-2007 featuring casual use, channel & self protections, a set of utilities, etc. |
-| [Nikotin3.zip](https://www.dropbox.com/s/2cjjvfsw9m2wpwa/Nikotin3.zip?dl=0) | mIRC Script, made in circa 2004-2007 featuring War/Revenge. |
-| [WarLord.zip](https://www.dropbox.com/s/fala3ispr3b1ntc/WarLord.zip?dl=0) | mIRC Script, made in circa 2004-2007 featuring War/Revenge. |
-| [Yahoo! Group Archives 2005](https://drive.google.com/drive/u/0/folders/1YG3HsmF-m0x5s3nVP7lFT9tAZaJVDKsd) | A backup of my mIRC-related stuff (e.g. war scripts, code snippets). |
+| **Dino IRC Sc. (Final Dev.).zip**<br><small>mIRC Script, made in circa 2004-2007 featuring casual use, channel & self protections, a set of utilities, etc.</small> | [Download](https://drive.google.com/u/0/uc?id=13NahCR-1RiiswaQNTmldAuq7c0rCi8gV&export=download) |
+| **Nikotin3.zip**<br><small>mIRC Script, made in circa 2004-2007 featuring War/Revenge.</small> | [Download](https://drive.google.com/u/0/uc?id=1mkNs7yyIQWfs3xMcVpLGPOzwU0WQBWND&export=download) |
+| **WarLord.zip**<br><small>mIRC Script, made in circa 2004-2007 featuring War/Revenge.</small> | [Download](https://drive.google.com/u/0/uc?id=1L6MRWlyVJx-k0C8WFFedwLUaBZX5vHHf&export=download) |
+| **Yahoo! Group Archives 2005**<br><small>A backup of my mIRC-related stuff (e.g. war scripts, code snippets).</small> | [Download](https://drive.google.com/drive/u/0/folders/1YG3HsmF-m0x5s3nVP7lFT9tAZaJVDKsd)

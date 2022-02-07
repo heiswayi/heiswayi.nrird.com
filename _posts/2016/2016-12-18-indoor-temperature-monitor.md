@@ -3,7 +3,6 @@ layout: project
 title: Indoor Temperature Monitor
 description: A simple DIY project based on Arduino, a .NET app used to record and monitor indoor temperature.
 tags: [C#, SerialPort, Oxyplot, Arduino, Project, Open Source, Programming]
-comments: true
 ---
 
 Indoor Temperature Monitor is a simple DIY project based on Arduino, a .NET app that used to record and monitor indoor temperature. Since I have an old, unused Arduino Uno board, so I bought [1-wire digital temperature sensor (DS18B20)](https://www.maximintegrated.com/en/products/analog/sensors-and-sensor-interface/DS18B20.html) and made use of it for this project.

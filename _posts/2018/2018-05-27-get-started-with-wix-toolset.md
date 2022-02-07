@@ -1,9 +1,8 @@
 ---
 layout: post
-title: What is WiX Toolset & how to use it
+title: Creating basic MSI-based installer using WiX Toolset
 description: This is how I created a basic MSI setup for my app installer using WiX Toolset.
 tags: [WiX Toolset, Windows Installer, Programming]
-comments: true
 ---
 
 ### What is WiX Toolset?

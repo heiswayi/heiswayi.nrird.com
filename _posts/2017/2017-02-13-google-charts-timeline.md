@@ -3,7 +3,6 @@ layout: post
 title: Experimenting with Google Charts Timeline
 description: Creating my responsive daily routine timeline using Google Charts with just few lines of HTML and JavaScript code.
 tags: [Google Charts, JavaScript, Programming]
-comments: true
 ---
 
 ### Demo

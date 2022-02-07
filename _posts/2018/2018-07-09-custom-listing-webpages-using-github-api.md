@@ -3,7 +3,6 @@ layout: post
 title: Custom listing webpages for my repositories and snippets using GitHub API
 description: These are my custom listing webpages that I created for my GitHub repositories and snippets using GitHub API.
 tags: [JavaScript, GitHub API, Open Source]
-comments: true
 ---
 
 ### Listing webpage for my snippets on GitHub Gist

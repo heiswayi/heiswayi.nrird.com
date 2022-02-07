@@ -3,7 +3,6 @@ layout: post
 title: Commonly used git commands cheatsheet
 description: This is a simple collection of git commands that I have been using for most of the time.
 tags: [Git, Cheatsheet, Software Engineering]
-comments: true
 ---
 
 Git is the most popular distributed version-control system for tracking changes in source code during software development, and this is a simple collection of git commands that I have been using for most of the time.

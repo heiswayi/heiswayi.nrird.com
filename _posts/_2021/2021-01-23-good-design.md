@@ -1,9 +1,8 @@
 ---
 layout: post
-title: Good design, Good UX
-description: 
-tags: []
-comments: true
+title: What is meant by "Good Design" and "Good UX"
+description: Summaries about "good design" and "good UX".
+tags: [Design, UX]
 ---
 
 **Good Design** ([Dieter Rams, Braun et al.](https://www.vitsoe.com/us/about/good-design))<br>

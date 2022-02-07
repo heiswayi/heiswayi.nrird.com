@@ -3,7 +3,6 @@ layout: project
 title: Directory Crawler
 description: A simple command-line utility program to crawl all accessible directories recursively within a target directory.
 tags: [C#, Utility, Project, Open Source]
-comments: true
 ---
 
 Directory Crawler is a simple command-line utility program written in .NET C# to crawl all accessible directories within a target directory (entry point) and save the results into a text file. I created this utility program because I need to monitor some shared directories in some local networks.

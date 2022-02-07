@@ -3,7 +3,6 @@ layout: post
 title: How to create WPF Cascaded ComboBox in MVVM
 description: A simple .NET C# tutorial for creating WPF Cascaded ComboBox using MVVM design pattern.
 tags: [C#, WPF, MVVM, Programming]
-comments: true
 ---
 
 ### What is MVVM?

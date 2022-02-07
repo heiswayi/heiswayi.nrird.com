@@ -3,7 +3,6 @@ layout: post
 title: Commonly used PHP code snippets
 description: A compilation of (some) commonly used PHP code snippets that I have been using for years in my PHP projects.
 tags: [PHP, Programming]
-comments: true
 ---
 
 A few years ago I have been actively developing PHP apps, and most of them are built from scratch. Within those years, I have been using some of these PHP functions in most of my projects. Until today, some of them are still useful when I code some PHP apps.
@@ -372,3 +371,6 @@ function decryptString($key, $string) {
 }
 ?>
 ```
+
+{:.warning}
+**UPDATE:** `mcrypt_encrypt` and `mcrypt_decrypt` function have been DEPRECATED as of PHP 7.1.0 and REMOVED as of PHP 7.2.0. Alternatively, you should use [openssl_encrypt](https://www.php.net/manual/en/function.openssl-encrypt.php) or [openssl_decrypt](https://www.php.net/manual/en/function.openssl-decrypt.php).

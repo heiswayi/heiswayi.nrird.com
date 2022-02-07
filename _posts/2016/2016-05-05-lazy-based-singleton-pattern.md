@@ -1,47 +1,39 @@
 ---
 layout: post
-title: How to create a Lazy-based singleton class in .NET
-description: "Convert your C# class to become a singleton pattern based on System.Lazy<T>"
+title: Creating Lazy-based singleton class in .NET
+description: "How to convert your C# class to become a singleton pattern based on System.Lazy<T>"
 tags: [Singleton, C#, Programming]
-comments: true
 ---
 
-To convert your C# class into a singleton pattern based on [System.Lazy](https://docs.microsoft.com/en-us/dotnet/api/system.lazy-1), all you need to do is just adding these two lines of code into your class:
-
-```csharp
-private static readonly Lazy<YourClass> lazy = new Lazy<YourClass>(() => new YourClass());
-public static YourClass Instance { get { return lazy.Value; } }
-```
-
-Example:
+Here is an example to convert a C# class into a singleton pattern based [System.Lazy](https://docs.microsoft.com/en-us/dotnet/api/system.lazy-1):
 
 ```csharp
 using System;
 
-namespace YourNamespace
+namespace MyNamespace
 {
-    // 1. Make your class as a "public sealed" class
-    public sealed class YourClass
+    // 1. Make the class as a "public sealed"
+    public sealed class MyClassName
     {
         // 2. Add these lines of code
-        private static readonly Lazy<YourClass> lazy = new Lazy<YourClass>(() => new YourClass());
-        public static YourClass Instance { get { return lazy.Value; } }
+        private static readonly Lazy<MyClassName> lazy = new Lazy<MyClassName>(() => new MyClassName());
+        public static MyClassName Instance { get { return lazy.Value; } }
 
-        // 3. Make your constructor as "private"
-        private YourClass() {}
+        // 3. Make the constructor as "private"
+        private MyClassName() {}
 
-        // 4. Example methods you want to expose
-        public void Foo() {}
-        public void Bar() {}
+        // 4. Example methods we want to expose
+        public void MyFooFunction() {}
+        public void MyBarFunction() {}
     }
 }
 ```
 
-And this is how you or other people will use your singleton class:
+Here is how we will use it:
 
 ```csharp
 using System;
-using YourNamespace;
+using MyNamespace;
 
 namespace ExampleProgram
 {
@@ -49,8 +41,8 @@ namespace ExampleProgram
     {
         static void Main(string[] args)
         {
-            YourClass.Instance.Foo();
-            YourClass.Instance.Bar();
+            MyClassName.Instance.MyFooFunction();
+            MyClassName.Instance.MyBarFunction();
         }
     }
 }

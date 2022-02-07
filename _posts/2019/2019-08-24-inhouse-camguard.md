@@ -3,7 +3,6 @@ layout: project
 title: Inhouse Camguard
 description: A simple .NET GUI application based on AForge libraries to analyze motion, capture image and perform data logging from a live webcam feed.
 tags: [C#, WPF, Project]
-comments: true
 ---
 
 I built Inhouse Camguard few months ago in my spare time to experiment with some AForge libraries using C# and WPF. [AForge.NET Framework](http://www.aforgenet.com/framework/) is easy to use, and we can do many great applications with it. The purpose of this app is to automatically detect a motion from a video feed like a webcam video while plotting a continuous graph showing the sensitivity of that motion. This app can do some data logging and it's able to capture a static image of the video when the motion sensitivity hits the threshold.
