@@ -59,13 +59,3 @@ description: A small collection of my selective works or projects.
 | [**hn-link**](https://dev.nrird.com/link/create)<br><small>A minimalist URL shortening script.</small> |
 | [**Simple Image Hosting**](https://dev.nrird.com/imagehosting/)<br><small>A minimalist and personal image hosting script.</small> |
 | [**QR Code Generator**](https://heiswayi.nrird.com/qrcode)<br><small>A simple QR code generator API script.</small> |
-
-
-### mIRC Scripts & Revenge Scripts (Old Archives)
-
-mIRC is an Internet Relay Chat client for Windows, created in 1995. It is a fully functional chat utility, and its integrated scripting language makes it extensible and versatile. mIRC has been described as "one of the most popular IRC clients available for Windows".
-
-| **Dino IRC Sc. (Final Dev.).zip**<br><small>mIRC Script, made in circa 2004-2007 featuring casual use, channel & self protections, a set of utilities, etc.</small> | [Download](https://drive.google.com/u/0/uc?id=13NahCR-1RiiswaQNTmldAuq7c0rCi8gV&export=download) |
-| **Nikotin3.zip**<br><small>mIRC Script, made in circa 2004-2007 featuring War/Revenge.</small> | [Download](https://drive.google.com/u/0/uc?id=1mkNs7yyIQWfs3xMcVpLGPOzwU0WQBWND&export=download) |
-| **WarLord.zip**<br><small>mIRC Script, made in circa 2004-2007 featuring War/Revenge.</small> | [Download](https://drive.google.com/u/0/uc?id=1L6MRWlyVJx-k0C8WFFedwLUaBZX5vHHf&export=download) |
-| **Yahoo! Group Archives 2005**<br><small>A backup of my mIRC-related stuff (e.g. war scripts, code snippets).</small> | [Download](https://drive.google.com/drive/u/0/folders/1YG3HsmF-m0x5s3nVP7lFT9tAZaJVDKsd)
