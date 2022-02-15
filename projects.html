@@ -1,7 +1,7 @@
 ---
 layout: compress
 published: true
-title: Home
+title: Projects
 ---
 
 <!DOCTYPE html>
@@ -13,9 +13,36 @@ title: Home
 	.container {
 		margin-bottom: 5rem;
 	}
-	span.desc {
-		line-height: 1.4;
+	.desc {
+		line-height: 1.2;
 		font-size: small;
+	}
+	.sounds-list {
+		padding: 0;
+		margin: 0;
+		display: flex;
+	}
+	.sounds {
+		margin-right: 5px;
+		padding: 7px;
+		width: 37px;
+		height: 37px;
+		cursor: pointer;
+		user-drag: none;
+		user-select: none;
+		-moz-user-select: none;
+		-webkit-user-drag: none;
+		-webkit-user-select: none;
+		-ms-user-select: none;
+	}
+	.sounds:hover {
+		cursor: pointer;
+	}
+	#sound_on {
+		opacity: 1;
+	}
+	#sound_off {
+		opacity: 0.6;
 	}
 	</style>
 </head>
@@ -36,22 +63,22 @@ title: Home
 			<tbody>
 			<tr>
 			<td style="width:200px"><img src="https://camo.githubusercontent.com/74765fa50b2b2e81f2fd43678a1c9df6aff868ec4c4d302b680a68d53100a100/68747470733a2f2f692e696d6775722e636f6d2f4649544b4e31482e706e67" alt="image" style="width: 200px; height: auto"></td>
-			<td><strong>The Plain</strong><br><span class="desc">Center aligned. Single column layout. Ideal for personal blogging purpose.</span><br>
+			<td><strong>The Plain</strong><div class="desc">Center aligned. Single column layout. Ideal for personal blogging purpose.</div>
 			<a href="https://github.com/heiswayi/the-plain">GitHub</a> &middot; <a href="https://heiswayi.github.io/the-plain/">Demo</a></td>
 			</tr>
 			<tr>
 			<td style="width:200px"><img src="https://camo.githubusercontent.com/c41d621d281f5d38b3a1e24b207daa24838f6f1de49e2260dabc1877eedc4ee3/68747470733a2f2f692e696d6775722e636f6d2f3159533037386b2e706e67" alt="image" style="width: 200px; height: auto"></td>
-			<td><strong>Thinkspace</strong><br><span class="desc">Center aligned. Single column layout. Ideal for technical writing style blog.</span><br>
+			<td><strong>Thinkspace</strong><div class="desc">Center aligned. Single column layout. Ideal for technical writing style blog.</div>
 			<a href="https://github.com/heiswayi/thinkspace">GitHub</a> &middot; <a href="https://heiswayi.github.io/thinkspace/">Demo</a></td>
 			</tr>
 			<tr>
 			<td style="width:200px"><img src="https://camo.githubusercontent.com/d9112b05a8c010244d05210a9de10a4c539b5ee35df418a33a1dbd98832142cb/68747470733a2f2f692e696d6775722e636f6d2f795871624d34532e706e67" alt="image" style="width: 200px; height: auto"></td>
-			<td><strong>TextLog</strong><br><span class="desc">Left aligned. Single column layout. No site menu in post layout. Ideal for logging notes or technical documentations.</span><br>
+			<td><strong>TextLog</strong><div class="desc">Left aligned. Single column layout. No site menu in post layout. Ideal for logging notes or technical documentations.</div>
 			<a href="https://github.com/heiswayi/textlog">GitHub</a> &middot; <a href="https://heiswayi.github.io/textlog/">Demo</a></td>
 			</tr>
 			<tr>
 			<td style="width:200px"><img src="https://i.imgur.com/JxnN0S6.png" alt="image" style="width: 200px; height: auto"></td>
-			<td><strong>Barebone</strong><br><span class="desc">The most barebone Jekyll theme. No Sass/SCSS file. Run with almost pure HTML.</span><br>
+			<td><strong>Barebone</strong><div class="desc">The most barebone Jekyll theme. No Sass/SCSS file. Run with almost pure HTML.</div>
 			<a href="https://github.com/heiswayi/hn-barebone">GitHub</a> &middot; <a href="https://heiswayi.github.io/hn-barebone/">Demo</a></td>
 			</tr>
 			</tbody>
@@ -62,26 +89,26 @@ title: Home
 			<tbody>
 			<tr>
 			<td>
-				<a href="https://heiswayi.github.io/pgp/"><strong>PGP Suite</strong></a><br>
-				<span class="desc">A simple and easy-to-use client-side PGP tool to generate, sign and verify PGP keys via your web browser.</span>
+				<a href="https://heiswayi.github.io/pgp/"><strong>PGP Suite</strong></a>
+				<div class="desc">A simple and easy-to-use client-side PGP tool to generate, sign and verify PGP keys via your web browser.</div>
 			</td>
 			</tr>
 			<tr>
 			<td>
-				<a href="https://heiswayi.github.io/markdown-editor"><strong>Markdown-HTML Live Preview Editor</strong></a><br>
-				<span class="desc">Just another simple Markdown-HTML preview online editor based on GitHub-flavored Markdown.</span>
+				<a href="https://heiswayi.github.io/markdown-editor"><strong>Markdown-HTML Live Preview Editor</strong></a>
+				<div class="desc">Just another simple Markdown-HTML preview online editor based on GitHub-flavored Markdown.</div>
 			</td>
 			</tr>
 			<tr>
 			<td>
-				<a href="https://heiswayi.github.io/website-checklist/"><strong>Website Checklist</strong></a><br>
-				<span class="desc">Interactive checklist for web developer that uses your browser <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage">localStorage</a> to save the checklist data.</span>
+				<a href="https://heiswayi.github.io/website-checklist/"><strong>Website Checklist</strong></a>
+				<div class="desc">Interactive checklist for web developer that uses your browser <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage">localStorage</a> to save the checklist data.</div>
 			</td>
 			</tr>
 			<tr>
 			<td>
-				<a href="https://heiswayi.github.io/simple-tools/"><strong>Simple Tools</strong></a><br>
-				<span class="desc">A collection of simple web tools created for personal use.</span>
+				<a href="https://heiswayi.github.io/simple-tools/"><strong>Simple Tools</strong></a>
+				<div class="desc">A collection of simple web tools created for personal use.</div>
 			</td>
 			</tr>
 			</tbody>
@@ -92,14 +119,14 @@ title: Home
 			<tbody>
 			<tr>
 			<td>
-				<a href="https://heiswayi.github.io/w4y1/"><strong>W4Y1</strong></a><br>
-				<span class="desc">Experimental AI chatbot app based on <a href="https://www.masswerk.at/elizabot/">elizabot.js</a>.</span>
+				<a href="https://heiswayi.github.io/w4y1/"><strong>W4Y1</strong></a>
+				<div class="desc">Experimental AI chatbot app based on <a href="https://www.masswerk.at/elizabot/">elizabot.js</a>.</div>
 			</td>
 			</tr>
 			<tr>
 			<td>
-				<a href="https://heiswayi.github.io/hellobot/"><strong>HelloBot</strong></a><br>
-				<span class="desc">Experimental AI chatbot app based on <a href="https://www.rivescript.com/">RiveScript</a>.</span>
+				<a href="https://heiswayi.github.io/hellobot/"><strong>HelloBot</strong></a>
+				<div class="desc">Experimental AI chatbot app based on <a href="https://www.rivescript.com/">RiveScript</a>.</div>
 			</td>
 			</tr>
 			</tbody>
@@ -110,47 +137,145 @@ title: Home
 			<tbody>
 			<tr>
 			<td>
-				<a href="https://dev.nrird.com/pastebin/"><strong>hn-pastebin</strong></a><br>
-				<span class="desc">A minimalist, secure and encrypted pastebin app.</span>
+				<a href="https://dev.nrird.com/pastebin/"><strong>hn-pastebin</strong></a>
+				<div class="desc">A minimalist, secure and encrypted pastebin app.</div>
 			</td>
 			</tr>
 			<tr>
 			<td>
-				<a href="https://dev.nrird.com/speedtest/"><strong>hn-speedtest</strong></a><br>
-				<span class="desc">A minimalist, mobile-friendly speedtest webpage using my server location.</span>
+				<a href="https://dev.nrird.com/speedtest/"><strong>hn-speedtest</strong></a>
+				<div class="desc">A minimalist, mobile-friendly speedtest webpage using my server location.</div>
 			</td>
 			</tr>
 			<tr>
 			<td>
-				<a href="https://dev.nrird.com/writer/"><strong>hn-writer</strong></a><br>
-				<span class="desc">A browser-based WYSIWYG editor for online documentation writing.</span>
+				<a href="https://dev.nrird.com/writer/"><strong>hn-writer</strong></a>
+				<div class="desc">A browser-based WYSIWYG editor for online documentation writing.</div>
 			</td>
 			</tr>
 			<tr>
 			<td>
-				<a href="https://dev.nrird.com/link/create"><strong>hn-link</strong></a><br>
-				<span class="desc">A minimalist URL shortening script.</span>
+				<a href="https://dev.nrird.com/link/create"><strong>hn-link</strong></a>
+				<div class="desc">A minimalist URL shortening script.</div>
 			</td>
 			</tr>
 			<tr>
 			<td>
-				<a href="https://dev.nrird.com/imagehosting/"><strong>Simple Image Hosting</strong></a><br>
-				<span class="desc">A minimalist and personal image hosting script.</span>
+				<a href="https://dev.nrird.com/imagehosting/"><strong>Simple Image Hosting</strong></a>
+				<div class="desc">A minimalist and personal image hosting script.</div>
 			</td>
 			</tr>
 			<tr>
 			<td>
-				<a href="https://heiswayi.nrird.com/qrcode"><strong>QR Code Generator</strong></a><br>
-				<span class="desc">A simple QR code generator API script.</span>
+				<a href="https://heiswayi.nrird.com/qrcode"><strong>QR Code Generator</strong></a>
+				<div class="desc">A simple QR code generator API script.</div>
 			</td>
 			</tr>
 			</tbody>
 		</table>
+
+		<h3>Nature Sounds</h3>
+		<p style="margin: 0">Click on any icon below to play respective sound:</p>
+		<div class="sounds-list" id="sounds-list"></div>
 	</div>
 
   </div>
 
   {% include footer.html %}
+
+  <script>
+	(function(){
+	  let sounds = [
+	  {
+		  class: "camp",
+		  file: "campfire",
+		  name: "Campfire",
+		  volume: 80
+	  },
+	  {
+		  class: "bird",
+		  file: "garden",
+		  name: "Garden",
+		  volume: 100
+	  },
+	  {
+		  class: "rain",
+		  file: "rain",
+		  name: "Rain",
+		  volume: 20
+	  },
+	  {
+		  class: "beach",
+		  file: "seaside",
+		  name: "Beach",
+		  volume: 50
+	  },
+	  {
+		  class: "storm",
+		  file: "storm",
+		  name: "Storm",
+		  volume: 80
+	  },
+	  {
+		  class: "night",
+		  file: "summer-night",
+		  name: "Night",
+		  volume: 100
+	  },
+	  {
+		  class: "stream",
+		  file: "water-stream",
+		  name: "Stream",
+		  volume: 40
+	  },
+	  {
+		  class: "leaf",
+		  file: "wind",
+		  name: "Wind",
+		  volume: 100
+	  }
+	];
+  
+	function loadSounds() {
+	  let i = 1;
+	  for (let sound of sounds) {
+		  let audio = document.createElement("audio");
+		  audio.loop = true;
+		  audio.id = sound.class;
+		  audio.src = "https://dev.nrird.com/static/meditation/" + sound.file + ".mp3";
+		  audio.preload = "auto";
+  
+		  let img = document.createElement("img");
+		  img.src = "https://dev.nrird.com/static/meditation/" + sound.file + ".svg";
+		  img.className = "sounds " + sound.class + " play";
+		  img.id = "sound_off";
+		  img.alt = sound.file;
+		  img.addEventListener("click", function () {
+			  togglePlay(sound);
+		  });
+  
+		  let div = document.getElementById("sounds-list");
+		  let option = document.createElement("div");
+		  option.appendChild(audio);
+		  option.appendChild(img);
+		  div.appendChild(option);
+		  if (i % 2 === 0) {
+			  div.appendChild(document.createElement("br"));
+		  }
+		  i++;
+	  }
+	}
+  
+	function togglePlay(sound) {
+	  let audio = document.getElementById(sound.class);
+	  let icon = document.getElementsByClassName(sound.class)[0];
+	  audio.paused ? audio.play() : audio.pause();
+	  !audio.paused ? (icon.id = "sound_on") : (icon.id = "sound_off");
+	}
+  
+	document.addEventListener('DOMContentLoaded', loadSounds);
+	})();
+	</script>
 		
 </body>
 
