@@ -70,7 +70,7 @@
         font-family: $body-font;
         font-size: 1rem;
         display: list-item;
-        list-style-type: disc;
+        list-style-type: none;
         list-style-position: outside;
         &:hover {
           list-style-type: none;
