@@ -5,28 +5,15 @@
 
 .message {
   margin-bottom: 1rem;
-  color: #717171;
-  background-color: #f9f9f9;
-  border: 1px solid #ddd;
+  color: var(--message-color);
+  background-color: var(--message-bg);
+  border: 1px solid var(--message-border);
   padding: 1rem;
-}
-
-.switch-index {
-  margin-top: -1rem;
-  margin-bottom: 1rem;
-  text-align: right;
-  font-family: $use-gridview-font;
-  font-size: 0.65rem;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  a {
-    border-bottom: none;
-  }
 }
 
 .spacer {
   display: block;
-  border-bottom: 1px solid $silver;
+  border-bottom: 1px solid var(--spacer-border);
   width: 5rem;
   margin-top: 5rem;
   margin-bottom: 5rem;
@@ -56,7 +43,7 @@
 // }
 
 .mark {
-  color: $red;
+  color: var(--color-red);
 }
 
 p.elsewhere {
@@ -68,30 +55,30 @@ p.elsewhere {
 
 p.warning {
   padding: 0.5rem 1rem;
-  background: #f8dc81;
+  background: var(--warning-bg);
   border-radius: 2px;
 }
 
 .cat-red {
-  color: #D50000;
+  color: var(--color-red);
 }
 .cat-blue {
-  color: #2962FF;
+  color: var(--color-blue);
 }
 .cat-green {
-  color: #00C853;
+  color: var(--color-green);
 }
 .cat-yellow {
-  color: #FFD600;
+  color: var(--color-yellow);
 }
 .cat-orange {
-  color: #FF6D00;
+  color: var(--color-orange);
 }
 .cat-purple {
-  color: #AA00FF;
+  color: var(--color-purple);
 }
 .cat-pink {
-  color: #C51162;
+  color: var(--color-fuchsia);
 }
 
 h1,
@@ -104,16 +91,73 @@ h1,
   width: fit-content;
   // text-transform: uppercase;
   background: linear-gradient(219deg, 
-    var(--color-1) 19%, 
+    var(--brand-color-1) 19%, 
     transparent 19%,transparent 20%, 
-    var(--color-2) 20%, var(--color-2)  39%,
+    var(--brand-color-2) 20%, var(--brand-color-2)  39%,
     transparent 39%,transparent 40%, 
-    var(--color-3) 40%,var(--color-3) 59% ,
+    var(--brand-color-3) 40%,var(--brand-color-3) 59% ,
     transparent 59%,transparent 60%, 
-    var(--color-4) 60%, var(--color-4) 79%,
+    var(--brand-color-4) 60%, var(--brand-color-4) 79%,
     transparent 79%, transparent 80%, 
-    var(--color-5) 80%);
+    var(--brand-color-5) 80%);
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
+}
+
+.post-label {
+  margin-bottom: 1rem;
+}
+.post-label > a,
+.post-label > a:hover {
+  border: 1px solid var(--postlabel-border);
+  padding: 4px 8px;
+  background: transparent;
+  color: var(--postlabel-color);
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  text-transform: uppercase;
+  font-family: monospace;
+}
+@media print {
+  .post-date {
+    color: var(--postdate-color);
+  }
+}
+
+#sunIcon {
+  display: none;
+  a {
+    color: var(--color-orange);
+  }
+}
+#moonIcon {
+  display: none;
+  a {
+    color: var(--color-black);
+  }
+}
+.light-theme-link,
+.dark-theme-link {
+  display: none;
+}
+
+::-webkit-scrollbar {
+  height: 10px;
+  width: 10px;
+}
+::-webkit-scrollbar-corner {
+  background-color: var(--sb-corner-bg);
+}
+::-webkit-scrollbar-track {
+  background-color: var(--sb-track-bg);
+  border: 1px solid var(--sb-track-border);
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--sb-thumb-bg);
+  border: 1px solid var(--sb-thumb-border);
+  &:hover {
+    background-color: var(--sb-thumb-hover-bg);
+  }
 }

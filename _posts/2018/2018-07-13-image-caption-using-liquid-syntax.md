@@ -165,7 +165,7 @@ figure {
         padding-left: 2rem;
         padding-right: 2rem;
         line-height: 1.6;
-        font-family: $figcaption-font;
+        font-family: $font-figcaption;
         span {
             background-color: #fff;
             padding: 0.2rem 0.5rem;

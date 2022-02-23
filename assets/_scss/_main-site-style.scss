@@ -13,12 +13,12 @@ body {
     margin: 0;
     padding: 0;
     height: 100%;
-    color: #414141;
-    background-color: #fff;
-    font-family: $body-font;
+    color: var(--body-color);
+    background-color: var(--body-bg);
+    font-family: $font-body;
     font-size: 16px;
     line-height: 1.6;
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
+    text-shadow: 1px 1px 1px var(--body-text-shadow);
     text-rendering: optimizeLegibility !important;
     scroll-behavior: smooth;
     font-kerning: normal;
@@ -26,7 +26,7 @@ body {
 }
 
 a {
-    color: $linkblue;
+    color: var(--link-1);
     text-decoration: none;
     transition: all 500ms ease;
     overflow-wrap: break-word;
@@ -34,11 +34,11 @@ a {
     word-break: break-all;
     word-break: break-word;
     hyphens: auto;
-    border-bottom: 1px solid $linkblue;
+    border-bottom: 1px solid var(--link-1);
     &:hover {
         background-image: none;
-        background-color: $linkblue;
-        color: #fff;
+        background-color: var(--link-1);
+        color: var(--link-hover-color);
     }
 }
 
@@ -50,27 +50,27 @@ h5,
 h6 {
     margin-bottom: 1rem;
     line-height: 1.25;
-    color: #313131;
+    color: var(--heading-color);
     text-align: left;
     font-weight: 700;
 }
 
 h1 {
     font-size: 2rem;
-    font-family: $headingh1-font;
+    font-family: $font-h1;
 }
 
 h2 {
     margin-top: 1rem;
     font-size: 1.5rem;
-    font-family: $headingh2-font;
+    font-family: $font-h2;
 }
 
 h3 {
     // margin-top: 2rem;
     margin-top: 4rem;
     font-size: 1.25rem;
-    font-family: $headingh3-font;
+    font-family: $font-h3;
     &:first-of-type {
         margin-top: 2rem;
     }
@@ -81,7 +81,7 @@ h5,
 h6 {
     margin-top: 1.5rem;
     font-size: 1.1rem;
-    font-family: $headingh456-font;
+    font-family: $font-h456;
 }
 
 dt {
@@ -95,29 +95,28 @@ dd {
 hr {
     position: relative;
     border: 0;
-    border-top: 1px solid #ccc;
+    border-top: 1px solid var(--hrline-color);
     margin: 1.5rem 0;
 }
 
 abbr {
     font-weight: 700;
-    color: #555;
+    color: var(--abbr-color);
     text-transform: uppercase;
     &[title] {
         cursor: help;
-        border-bottom: 1px dotted #e5e5e5;
+        border-bottom: 1px dotted var(--abbr-border);
     }
 }
 
 code,
 pre {
-    font-family: $precode-font;
+    font-family: $font-precode;
 }
 
 code {
-    // color: #f14e32;
-    background: #eee;
-    color: $black;
+    background: var(--code-bg);
+    color: var(--code-color);
 }
 
 pre {
@@ -152,11 +151,11 @@ pre {
 }
 
 blockquote {
-    color: #7a7a7a;
-    border-left: 0.25rem solid #ddd;
+    color: var(--blockquote-color);
+    border-left: 0.25rem solid var(--blockquote-border);
     margin: 0.8rem 0;
     padding: 0.5rem 1rem;
-    background: #f8f8f8;
+    background: var(--blockquote-bg);
 }
 
 img {
@@ -165,7 +164,7 @@ img {
     margin: 1rem auto;
     max-width: 100%;
     height: auto;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 1px 3px var(--img-shadow);
 }
 
 figure {
@@ -175,24 +174,22 @@ figure {
     padding-right: 2rem;
     margin-left: -2rem;
     margin-right: -2rem;
-    background: repeating-linear-gradient(135deg, #dfdfdf 0, #dfdfdf 1%, #ffffff 0, #ffffff 50%) 0 / 20px 20px;
+    background: repeating-linear-gradient(135deg, var(--figure-bg-1) 0, var(--figure-bg-1) 1%, var(--figure-bg-2) 0, var(--figure-bg-2) 50%) 0 / 20px 20px;
     text-align: center;
     img {
         margin: 0 auto 0.2rem auto;
-        // box-shadow: 3px 3px rgba(0, 0, 0, 0.1);
-        border: 1px solid #ddd;
-        // background-color: #fdfdfd;
+        border: 1px solid var(--figure-img-border);
         box-shadow: none;
-        background-color: #fff;
+        background-color: var(--figure-img-bg);
     }
     figcaption {
         font-size: 0.9rem;
         padding-left: 2rem;
         padding-right: 2rem;
         line-height: 1.6;
-        font-family: $figcaption-font;
+        font-family: $font-figcaption;
         span {
-            background-color: #fff;
+            background-color: var(--figure-caption-bg);
             padding: 0.2rem 0.5rem;
         }
         a:hover {
@@ -204,7 +201,7 @@ figure {
 table {
     margin-bottom: 1rem;
     width: 100%;
-    border: 1px solid #e5e5e5;
+    border: 1px solid var(--table-border);
     border-collapse: collapse;
     td a {
         word-break: keep-all;
@@ -213,14 +210,14 @@ table {
 
 td,
 th {
-    border: 1px solid #e5e5e5;
+    border: 1px solid var(--table-border);
     padding: 0.25rem 0.5rem;
 }
 
 tbody tr:nth-child(odd) {
     td,
     th {
-        background-color: #f9f9f9;
+        background-color: var(--table-row-odd-bg);
     }
 }
 
@@ -242,13 +239,13 @@ tbody tr:nth-child(odd) {
 }
 
 .dot-red {
-    color: #ff4136;
+    color: var(--brand-red);
 }
 .dot-yellow {
-    color: #ffdc00;
+    color: var(--brand-yellow);
 }
 .dot-green {
-    color: #2ecc40;
+    color: var(--brand-green);
 }
 
 .page,
@@ -269,23 +266,23 @@ tbody tr:nth-child(odd) {
         margin-top: 2rem;
     }
     .tagged a {
-        border: 1px solid #ddd;
+        border: 1px solid var(--tag-border);
         padding: 2px 5px;
         background: transparent;
         display: inline-block;
-        color: #999;
+        color: var(--tag-color);
         outline: 0;
         text-decoration: none;
         user-select: none;
-        font-family: $tag-font;
+        font-family: $font-tagging;
         font-size: 0.8rem;
         border-radius: 3px;
     }
     .tagged a:hover {
         cursor: pointer;
-        border: 1px solid #555;
-        background: #444;
-        color: #fff;
+        border: 1px solid var(--tag-hover-border);
+        background: var(--tag-hover-bg);
+        color: var(--tag-hover-color);
     }
 }
 
@@ -309,13 +306,13 @@ tbody tr:nth-child(odd) {
     &.footnote {
         border-bottom: none;
         background: transparent;
-        color: $linkblue;
-        background: $silver;
+        color: var(--link-1);
+        background: var(--footnote-post-bg);
         padding-left: 3px;
         padding-right: 3px;
         &:hover {
-            background: $linkbluedarker !important;
-            color: #fff;
+            background: var(--link-2) !important;
+            color: var(--link-hover-color);
         }
     }
 }
@@ -357,13 +354,13 @@ blockquote p:last-child {
 .post-date {
     letter-spacing: 1px;
     text-transform: uppercase;
-    font-family: $postmeta-font;
+    font-family: $font-postmeta;
     font-size: 0.9rem;
-    color: #888;
+    color: var(--postdate-color);
 }
 
 .post-list-date small {
-    color: #757575;
+    color: var(--postlistdate-color);
     display: inline-block;
     letter-spacing: 1px;
     text-transform: uppercase;
@@ -378,11 +375,11 @@ blockquote p:last-child {
 }
 
 .post-list-desc {
-    color: #505050;
+    color: var(--postlistdesc-color);
     font-size: 1rem;
     margin-bottom: 1rem;
     small {
-        color: #aaa;
+        color: var(--postlistdesc-small-color);
         display: inline-block;
         font-style: italic;
     }
@@ -390,16 +387,16 @@ blockquote p:last-child {
 
 .post-list-tags {
     line-height: 1.3;
-    color: #888;
+    color: var(--post-tag-color);
     span {
         font-weight: normal;
         font-size: 0.8rem;
-        border: 1px solid #ddd;
+        border: 1px solid var(--post-tag-border);
         padding-left: 4px;
         padding-right: 4px;
         display: inline-block;
         border-radius: 2px;
-        background: #f6f6f6;
+        background: var(--post-tag-bg);
     }
 }
 
@@ -409,8 +406,8 @@ blockquote p:last-child {
 }
 
 .hrline {
-    background: #ddd;
-    background: linear-gradient(to right, rgba(255, 255, 255, 0), #ccc, rgba(255, 255, 255, 0));
+    background: var(--ghrline-1);
+    background: linear-gradient(to right, var(--ghrline-2), var(--ghrline-3), var(--ghrline-2));
     height: 1px;
     margin: 2.5em 0;
 }
@@ -418,7 +415,7 @@ blockquote p:last-child {
 .copyright {
     padding-bottom: 1rem;
     font-size: 0.8rem;
-    color: #888;
+    color: var(--copyright-color);
     a {
         background-image: none;
         border: none;
@@ -440,26 +437,6 @@ blockquote p:last-child {
     letter-spacing: 1px;
 }
 
-.footer-social-links {
-    font-size: 1rem;
-    margin-top: 5px;
-    a {
-        padding: 3px 10px;
-        height: auto;
-        position: relative;
-        text-align: center;
-        display: inline-block;
-        color: #777;
-        transition: all 0.27s cubic-bezier(0.3, 0.1, 0.58, 1);
-        background: rgba(0, 0, 0, 0.03);
-        border-radius: 3px;
-        &:hover {
-            color: #fff;
-            background: #111;
-        }
-    }
-}
-
 .skip {
     position: absolute;
     top: -1000px;
@@ -468,8 +445,8 @@ blockquote p:last-child {
     width: 1px;
     text-align: left;
     overflow: hidden;
-    background-color: #f00;
-    color: #fff;
+    background-color: var(--skip-bg);
+    color: var(--skip-color);
     padding-left: 5px;
     padding-right: 5px;
 }
@@ -497,32 +474,18 @@ a.skip:hover {
         display: inline-block;
         border-radius: 3px;
         line-height: 2;
-        font-family: $tag-font;
+        font-family: $font-tagging;
 
         &.tag-anchor {
-            background: #f0f0f0;
-            color: #444;
+            background: var(--tagcloud-bg);
+            color: var(--tagcloud-color);
             border: none;
 
             &:active,
             &:focus,
             &:hover {
-                background: $linkbluedarker;
-                color: #fff;
-                border: none;
-            }
-        }
-
-        &.tag-anchor-red {
-            background: #ff4136;
-            color: #fff;
-            border: none;
-
-            &:active,
-            &:focus,
-            &:hover {
-                background: $linkbluedarker;
-                color: #fff;
+                background: var(--link-2);
+                color: var(--link-hover-color);
                 border: none;
             }
         }
@@ -530,8 +493,7 @@ a.skip:hover {
 }
 
 .tag-cloud-small {
-    a.tag-anchor,
-    a.tag-anchor-red {
+    a.tag-anchor {
         font-size: 0.8rem;
     }
 }
@@ -547,9 +509,9 @@ a.skip:hover {
 }
 
 .footnotes {
-    background-color: #f3f3f3;
+    background-color: var(--footnote-bg);
     margin-top: 2rem;
-    font-family: $footnote-font;
+    font-family: $font-footnote;
     font-size: 0.8rem;
     padding: 1rem;
     ol {
@@ -564,7 +526,7 @@ a.skip:hover {
         content: " /\\/";
         display: block;
         padding-top: 0;
-        color: #aaa;
+        color: var(--footnote-logo-color);
     }
 }
 
@@ -588,15 +550,6 @@ a.skip:hover {
                 width: 100%;
             }
         }
-        // p {
-        //     a {
-        //         color: $black;
-        //         border: none;
-        //         &:hover {
-        //             color: $white;
-        //         }
-        //     }
-        // }
     }
 }
 
@@ -610,7 +563,7 @@ a.skip:hover {
         width: 100%;
         text-align: center;
         display: block;
-        color: #aaa;
+        color: var(--breaker-color);
         letter-spacing: 4px;
         position: relative;
         top: -8px;
@@ -620,7 +573,7 @@ a.skip:hover {
 .related-post {
     margin-top: 2rem;
     .title {
-        font-family: $precode-font;
+        font-family: $font-precode;
         font-size: 0.8rem;
         text-transform: uppercase;
         font-weight: bold;
@@ -637,7 +590,7 @@ a.skip:hover {
         flex-direction: row;
         width: 100%;
         .post-date {
-            font-family: $postmeta-font;
+            font-family: $font-postmeta;
             width: fit-content;
             word-wrap: none;
             white-space: nowrap;
@@ -648,16 +601,16 @@ a.skip:hover {
             flex: 1;
             a {
                 border: none;
-                color: $linkbluedarker;
+                color: var(--link-2);
                 &:hover {
-                    color: #fff;
+                    color: var(--link-hover-color);
                 }
                 .project-label {
                     opacity: 0.7;
-                    font-family: $precode-font;
+                    font-family: $font-precode;
                     font-size: 0.8em;
                     text-transform: uppercase;
-                    border: 1px solid $linkbluedarker;
+                    border: 1px solid var(--link-2);
                     margin-right: 5px;
                     padding-left: 2px;
                     padding-right: 2px;
@@ -669,8 +622,8 @@ a.skip:hover {
         background-image: none;
     }
     .year {
-        color: #bbb;
-        font-family: $year-label-font;
+        color: var(--year-color);
+        font-family: $font-year;
         margin-bottom: 1rem;
     }
 }
@@ -686,45 +639,6 @@ ul.task-list {
             vertical-align: middle !important;
             position: relative !important;
             bottom: 1px !important;
-        }
-    }
-}
-
-.prev-next-post {
-    margin-top: 2rem;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    border-top: 1px dashed $gray;
-    border-bottom: 1px dashed $gray;
-    background: #f3f3f3;
-    padding: 1ch;
-    .prev-post {
-        width: 50%;
-        text-align: left;
-        padding-right: 1rem;
-        display: flex;
-        flex-direction: row;
-        a {
-            border: none;
-            flex: 1;
-        }
-        span {
-            padding-right: 1ch;
-        }
-    }
-    .next-post {
-        width: 50%;
-        text-align: right;
-        padding-left: 1rem;
-        display: flex;
-        flex-direction: row;
-        a {
-            border: none;
-            flex: 1;
-        }
-        span {
-            padding-left: 1ch;
         }
     }
 }

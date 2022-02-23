@@ -53,8 +53,8 @@ h1 {
 }
 
 mark {
-  background: #ff0;
-  color: #000;
+  background: var(--normalize-mark-bg);
+  color: var(--normalize-mark-color);
 }
 
 small {

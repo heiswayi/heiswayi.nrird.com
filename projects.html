@@ -176,6 +176,12 @@ title: Projects
 
 		<h3>Nature Sounds</h3>
 		<p style="margin: 0">Click on any icon below to play respective sound:</p>
+		<noscript>
+			{% 
+				include no-js-notice.html
+				message="This section requires JavaScript enabled in order to play some musics."
+			%}
+		</noscript>
 		<div class="sounds-list" id="sounds-list"></div>
 	</div>
 

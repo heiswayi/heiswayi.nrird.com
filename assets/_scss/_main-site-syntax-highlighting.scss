@@ -1,14 +1,14 @@
 pre {
-  background-color: #f8f8f8;
-  border: 1px solid #dddddd;
+  background-color: var(--pre-bg);
+  border: 1px solid var(--pre-border);
   code {
-      color: /*#93a1a1*/ #008000;
+      color: var(--pre-code-color);
       background-color: transparent;
   }
   .line-number {
-      border-right: 1px dashed #cccccc;
+      border-right: 1px dashed var(--pre-line-border);
       span {
-          color: #cccccc;
+          color: var(--pre-line-color);
       }
   }
 }

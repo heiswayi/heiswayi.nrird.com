@@ -6,7 +6,10 @@
     &middot; <a href="{{ '/disclaimer' | prepend: site.baseurl | prepend: site.url }}">disclaimer</a> 
     {% if site.show_tags %} &middot; <a href="{{ '/tags' | prepend: site.baseurl | prepend: site.url }}">tags</a>{% endif %} 
     &middot; <a href="{{ '/feed.xml' | prepend: site.baseurl | prepend: site.url }}">rss</a> 
-    &middot; <a href="#top" class="back-to-top-anchor">back-to-top</a><br>
+    &middot; <a href="#top" class="back-to-top-anchor">back-to-top</a>
+    <span class="light-theme-link"> &middot; <a href="" onclick="toggleTheme('light'); return false;" title="Switch to light theme">light</a></span>
+    <span class="dark-theme-link"> &middot; <a href="" onclick="toggleTheme('dark'); return false;" title="Switch to dark theme">dark</a></span>
+    <br>
     &copy; 2015-{{ site.time | date: "%Y" }} Heiswayi Nrird<br><br>
     <div class="page-load"></div>
     <div class="version">Site Build Version: jekyll.{{ site.version }}</div>
@@ -38,6 +41,40 @@ window.addEventListener('load', () => {
         }
     }
 })();
+
+function showMoonIcon() {
+  document.getElementById('sunIcon').style.display = 'none';
+  document.getElementsByClassName('light-theme-link')[0].style.display = 'none';
+  document.getElementById('moonIcon').style.display = 'inline-block';
+  document.getElementsByClassName('dark-theme-link')[0].style.display = 'inline-block';
+}
+function showSunIcon() {
+  document.getElementById('moonIcon').style.display = 'none';
+  document.getElementsByClassName('dark-theme-link')[0].style.display = 'none';
+  document.getElementById('sunIcon').style.display = 'inline-block';
+  document.getElementsByClassName('light-theme-link')[0].style.display = 'inline-block';
+}
+function toggleTheme(targetTheme) {
+  if (targetTheme === "dark") {
+    showSunIcon();
+  } else {
+    showMoonIcon();
+  }
+  document.documentElement.setAttribute('data-theme', targetTheme);
+  localStorage.setItem('theme', targetTheme);
+}
+function init() {
+  var storedTheme = localStorage.getItem('theme') || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+  if (storedTheme) {
+    document.documentElement.setAttribute('data-theme', storedTheme);
+    if (storedTheme === "dark") {
+      showSunIcon();
+    } else {
+      showMoonIcon();
+    }
+  }
+}
+init();
 </script>
 
 {% include new-window-fix.html %}

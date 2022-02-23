@@ -1,55 +1,202 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Shizuru&display=swap');
 
-$__default__: 'Roboto', -apple-system, Helvetica, Arial, sans-serif;
-$__monospace__: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono",
+$__DEFAULT: 'Roboto', -apple-system, Helvetica, Arial, sans-serif;
+$monospace: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono",
   "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
 
-$body-font: $__default__;
-$heading-font: $__default__;
-$button-font: $__default__;
-$topmenu-font: $__default__;
-
-$logo-font: $__monospace__;
-$figcaption-font: $__monospace__;
-$precode-font: $__monospace__;
-$tag-font: $__monospace__;
-$postmeta-font: $__monospace__;
-$footnote-font: $__monospace__;
-
-$headingh1-font: 'Shizuru', cursive;
-$headingh2-font: $__default__;
-$headingh3-font: $__default__;
-$headingh456-font: $__default__;
-
-$year-label-font: $__monospace__;
-$use-gridview-font: $__monospace__;
-
-$linkblue: #06b;
-$linkbluedarker: #069;
-
-$navy: #001F3F;
-$blue: #0074D9;
-$aqua: #7FDBFF;
-$teal: #39CCCC;
-$olive: #3D9970;
-$green: #2ECC40;
-$lime: #01FF70;
-$yellow: #FFDC00;
-$orange: #FF851B;
-$red: #FF4136;
-$fuchsia: #F012BE;
-$purple: #B10DC9;
-$maroon: #85144B;
-$white: #FFFFFF;
-$silver: #DDDDDD;
-$gray: #AAAAAA;
-$black: #111111;
+$font-body: $__DEFAULT;
+$font-heading: $__DEFAULT;
+$font-h1: 'Shizuru', cursive;
+$font-h2: $__DEFAULT;
+$font-h3: $__DEFAULT;
+$font-h456: $__DEFAULT;
+$font-button: $__DEFAULT;
+$font-topmenu: $__DEFAULT;
+$font-brand: $monospace;
+$font-figcaption: $monospace;
+$font-precode: $monospace;
+$font-tagging: $monospace;
+$font-postmeta: $monospace;
+$font-footnote: $monospace;
+$font-year: $monospace;
 
 :root {
-  --color-1: #186cb8;
-  --color-2: #2a9a9f;
-  --color-3: #f1b211;
-  --color-4: #e83611;
-  --color-5: #f9002f;
+  --brand-color-1: #186cb8;
+  --brand-color-2: #2a9a9f;
+  --brand-color-3: #f1b211;
+  --brand-color-4: #e83611;
+  --brand-color-5: #f9002f;
+
+  --brand-green: #2ecc40;
+  --brand-yellow: #ffdc00;
+  --brand-red: #ff4136;
+
+  --color-navy: #001F3F;
+  --color-blue: #0074D9;
+  --color-aqua: #7FDBFF;
+  --color-teal: #39CCCC;
+  --color-olive: #3D9970;
+  --color-green: #2ECC40;
+  --color-lime: #01FF70;
+  --color-yellow: #FFDC00;
+  --color-orange: #FF851B;
+  --color-red: #FF4136;
+  --color-fuchsia: #F012BE;
+  --color-purple: #B10DC9;
+  --color-maroon: #85144B;
+  --color-white: #FFFFFF;
+  --color-silver: #DDDDDD;
+  --color-gray: #AAAAAA;
+  --color-black: #111111;
+
+  --link-1: #06b;
+  --link-2: #069;
+  --link-hover-color: #fff;
+
+  --normalize-mark-bg: #ff0;
+  --normalize-mark-color: #000;
+
+  --button-bg: #fff;
+  --button-border: #333;
+  --button-color: #333;
+  --button-hover-color: #fff;
+  --button-shadow: rgba(0, 0, 0, 0.2);
+
+  --message-color: #717171;
+  --message-bg: #f9f9f9;
+  --message-border: #ddd;
+
+  --body-color: #414141;
+  --body-bg: #fff;
+  --body-text-shadow: rgba(0, 0, 0, 0.004);
+
+  --heading-color: #313131;
+
+  --abbr-color: #555;
+  --abbr-border: #e5e5e5;
+
+  --blockquote-color: #7a7a7a;
+  --blockquote-border: #ddd;
+  --blockquote-bg: #f8f8f8;
+
+  --img-shadow: rgba(0, 0, 0, 0.25);
+
+  --tag-color: #999;
+  --tag-border: #ddd;
+  --tag-hover-border: #555;
+  --tag-hover-color: #fff;
+  --tag-hover-bg: #444;
+
+  --postdate-color: #888;
+  --postlistdate-color: #757575;
+  --postlistdesc-color: #505050;
+  --postlistdesc-small-color: #aaa;
+
+  --post-tag-color: #888;
+  --post-tag-border: #ddd;
+  --post-tag-bg: #f6f6f6;
+
+  --copyright-color: #888;
+
+  --tagcloud-color: #444;
+  --tagcloud-bg: #f0f0f0;
+
+  --skip-bg: #f00;
+  --skip-color: #fff;
+
+  --print-pre-bg: #f8f8f8;
+  --warning-bg: #f8dc81;
+  --hrline-color: #ccc;
+  --year-color: #bbb;
+  --breaker-color: #aaa;
+  --spacer-border: #ddd;
+  --header-border: #ddd;
+
+  --code-color: #000;
+  --code-bg: #eee;
+
+  --footnote-logo-color: #aaa;
+  --footnote-bg: #f3f3f3;
+  --footnote-post-bg: #ddd;
+
+  --ghrline-1: #ddd;
+  --ghrline-2: rgba(255, 255, 255, 0);
+  --ghrline-3: #ccc;
+
+  --table-row-odd-bg: #f9f9f9;
+  --table-border: #e5e5e5;
+
+  --figure-bg-1: #dfdfdf;
+  --figure-bg-2: #ffffff;
+  --figure-img-border: #ddd;
+  --figure-img-bg: #fff;
+  --figure-caption-bg: #fff;
+  --figure-img-shadow: rgba(0, 0, 0, 0.1);
+
+  --postlabel-border: #ddd;
+  --postlabel-color: #ccc;
+
+  --pre-bg: #f8f8f8;
+  --pre-border: #dddddd;
+  --pre-code-color: #008000;
+  --pre-line-border: #cccccc;
+  --pre-line-color: #cccccc;
+
+  --sb-corner-bg: #d4d4d4;
+  --sb-track-bg: #d4d4d4;
+  --sb-track-border: #d4d4d4;
+  --sb-thumb-bg: #eaeaea;
+  --sb-thumb-border: #d4d4d4;
+  --sb-thumb-hover-bg: #848484;
+}
+
+[data-theme="dark"] {
+  --body-bg: #000;
+  --body-color: #aaa;
+  --body-text-shadow: rgba(255, 255, 255, 0.004);
+  --header-border: #333;
+  --spacer-border: #333;
+  --hrline-color: #333;
+  --tag-border: #333;
+  --link-1: #0087BE;
+  --link-2: #0087BE;
+  --link-hover-color: #000;
+  --postdate-color: #444;
+  --postlabel-border: #333;
+  --postlabel-color: #444;
+  --button-bg: #111;
+  --button-border: #888;
+  --button-color: #aaa;
+  --button-hover-color: #000;
+  --button-shadow: rgba(255, 255, 255, 0.5);
+  --heading-color: #bbb;
+  --code-color: #ccc;
+  --code-bg: #333;
+  --pre-bg: #222;
+  --pre-border: #333;
+  --pre-code-color: #008000;
+  --pre-line-border: #333;
+  --pre-line-color: #333;
+  --sb-corner-bg: #393939;
+  --sb-track-bg: #393939;
+  --sb-track-border: #393939;
+  --sb-thumb-bg: #606060;
+  --sb-thumb-border: #393939;
+  --sb-thumb-hover-bg: #868686;
+  --blockquote-color: #999;
+  --blockquote-border: #333;
+  --blockquote-bg: #1a1a1a;
+  --table-row-odd-bg: #0a0a0a;
+  --table-border: #333;
+  --figure-bg-1: #333;
+  --figure-bg-2: #000;
+  --figure-img-border: #444;
+  --figure-img-bg: #000;
+  --figure-caption-bg: #000;
+  --figure-img-shadow: rgba(255, 255, 255, 0.4);
+  --tagcloud-color: #888;
+  --tagcloud-bg: #1e1e1e;
+  --postlistdesc-color: #888;
+  --postlistdesc-small-color: #444;
 }

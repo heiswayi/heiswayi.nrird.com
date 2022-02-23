@@ -1,6 +1,6 @@
 .header {
     margin-bottom: 2rem;
-    border-bottom: 1px solid $silver;
+    border-bottom: 1px solid var(--header-border);
     width: 100%;
     z-index: 1000;
     overflow-x: hidden;
@@ -42,20 +42,20 @@
             display: inline-block;
             padding: 5px 12px;
             white-space: nowrap;
-            font-family: $topmenu-font;
+            font-family: $font-topmenu;
             font-size: 14px;
-            color: $linkblue;
+            color: var(--link-1);
             margin-bottom: 0;
             border-bottom: none;
             &:hover {
                 background: none;
                 text-decoration: underline;
-                color: $linkblue;
+                color: var(--link-2);
             }
             &.active {
                 background: none;
                 text-decoration: underline;
-                color: $purple;
+                color: var(--color-purple);
             }
         }
     }

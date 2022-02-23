@@ -18,7 +18,6 @@
     padding-top: 0;
   }
   .header,
-  .footer-social-links,
   .back,
   #disqus,
   .edit-this-page,
@@ -70,7 +69,7 @@
     white-space: pre-wrap;
     word-wrap: break-word;
     max-height: none;
-    background: #f8f8f8;
+    background: var(--print-pre-bg);
     code {
       white-space: pre-wrap;
       word-wrap: break-word;

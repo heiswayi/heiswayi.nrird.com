@@ -7,7 +7,6 @@
         width: 100%;
         height: auto;
         margin-bottom: 1rem;
-        background: #f3f3f3;
         margin-left: 0px;
         img {
           display: block;
@@ -42,7 +41,7 @@
       padding-left: 0px;
       padding-right: 0px;
       img {
-        box-shadow: 1px 1px rgba(0, 0, 0, 0.1);
+        box-shadow: 1px 1px var(--figure-img-shadow);
       }
     }
     .post-date {
@@ -67,7 +66,7 @@
         display: none !important;
       }
       .full-title {
-        font-family: $body-font;
+        font-family: $font-body;
         font-size: 1rem;
         display: list-item;
         list-style-type: none;
