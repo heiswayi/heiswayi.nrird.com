@@ -47,7 +47,11 @@ published: true
           <div class="post-label">
             <a href="{{ '/tags#project' | prepend: site.baseurl | prepend: site.url }}">Project</a>
           </div>
-          <div class="post-date"><span class="date">{{ page.date | date: "%B %d, %Y" }}</span><!--<span class="hypen"> — </span><span class="author">By {{ site.author.name }}</span>--></div>
+          <div class="post-date">
+            <span class="date">{{ page.date | date: "%B %d, %Y" }}</span>
+            <!--<span class="author">By {{ site.author.name }}</span>-->
+            <span class="readtime">{% include reading-time.html %}</span>
+          </div>
           <h1 class="post-title">{{ page.title }}</h1>
         </div>
 
