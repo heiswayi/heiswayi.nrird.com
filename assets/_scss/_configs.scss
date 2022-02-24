@@ -112,6 +112,7 @@ $font-year: $monospace;
   --breaker-color: #aaa;
   --spacer-border: #ddd;
   --header-border: #ddd;
+  --nav-active-color: #B10DC9;
 
   --code-color: #000;
   --code-bg: #eee;
@@ -146,7 +147,7 @@ $font-year: $monospace;
   --sb-corner-bg: #d4d4d4;
   --sb-track-bg: #d4d4d4;
   --sb-track-border: #d4d4d4;
-  --sb-thumb-bg: #eaeaea;
+  --sb-thumb-bg: #aaa;
   --sb-thumb-border: #d4d4d4;
   --sb-thumb-hover-bg: #848484;
 }
@@ -199,4 +200,5 @@ $font-year: $monospace;
   --tagcloud-bg: #1e1e1e;
   --postlistdesc-color: #888;
   --postlistdesc-small-color: #444;
+  --nav-active-color: #F012BE;
 }

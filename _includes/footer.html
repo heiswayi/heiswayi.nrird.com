@@ -7,9 +7,8 @@
     {% if site.show_tags %} &middot; <a href="{{ '/tags' | prepend: site.baseurl | prepend: site.url }}">tags</a>{% endif %} 
     &middot; <a href="{{ '/feed.xml' | prepend: site.baseurl | prepend: site.url }}">rss</a> 
     &middot; <a href="#top" class="back-to-top-anchor">back-to-top</a>
-    <span class="light-theme-link"> &middot; <a href="" onclick="toggleTheme('light'); return false;" title="Switch to light theme">light</a></span>
-    <span class="dark-theme-link"> &middot; <a href="" onclick="toggleTheme('dark'); return false;" title="Switch to dark theme">dark</a></span>
-    <br>
+    <div class="light-theme-link"><a href="" onclick="toggleTheme('light'); return false;">switch to light theme</a></div>
+    <div class="dark-theme-link"><a href="" onclick="toggleTheme('dark'); return false;">switch to dark theme</a></div>
     &copy; 2015-{{ site.time | date: "%Y" }} Heiswayi Nrird<br><br>
     <div class="page-load"></div>
     <div class="version">Site Build Version: jekyll.{{ site.version }}</div>
@@ -42,17 +41,21 @@ window.addEventListener('load', () => {
     }
 })();
 
+var sunicon = document.getElementById('sunIcon');
+var moonicon = document.getElementById('moonIcon');
+var lightlink = document.getElementsByClassName('light-theme-link')[0];
+var darklink = document.getElementsByClassName('dark-theme-link')[0];
 function showMoonIcon() {
-  document.getElementById('sunIcon').style.display = 'none';
-  document.getElementsByClassName('light-theme-link')[0].style.display = 'none';
-  document.getElementById('moonIcon').style.display = 'inline-block';
-  document.getElementsByClassName('dark-theme-link')[0].style.display = 'inline-block';
+  if (sunicon) { sunicon.style.display = 'none'; }
+  if (lightlink) { lightlink.style.display = 'none'; }
+  if (moonicon) { moonicon.style.display = 'inline-block'; }
+  if (darklink) { darklink.style.display = 'block'; }
 }
 function showSunIcon() {
-  document.getElementById('moonIcon').style.display = 'none';
-  document.getElementsByClassName('dark-theme-link')[0].style.display = 'none';
-  document.getElementById('sunIcon').style.display = 'inline-block';
-  document.getElementsByClassName('light-theme-link')[0].style.display = 'inline-block';
+  if (moonicon) { moonicon.style.display = 'none'; }
+  if (darklink) { darklink.style.display = 'none'; }
+  if (sunicon) { sunicon.style.display = 'inline-block'; }
+  if (lightlink) { lightlink.style.display = 'block'; }
 }
 function toggleTheme(targetTheme) {
   if (targetTheme === "dark") {
@@ -74,7 +77,7 @@ function init() {
     }
   }
 }
-init();
+document.addEventListener("DOMContentLoaded", init);
 </script>
 
 {% include new-window-fix.html %}

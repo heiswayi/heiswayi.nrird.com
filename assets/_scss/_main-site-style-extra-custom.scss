@@ -126,18 +126,8 @@ h1,
   }
 }
 
-#sunIcon {
-  display: none;
-  a {
-    color: var(--color-orange);
-  }
-}
-#moonIcon {
-  display: none;
-  a {
-    color: var(--color-black);
-  }
-}
+#sunIcon,
+#moonIcon,
 .light-theme-link,
 .dark-theme-link {
   display: none;
