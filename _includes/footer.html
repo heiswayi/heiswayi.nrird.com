@@ -1,83 +1,95 @@
-<hr/>
+<hr />
 <div class="footer">
-	<div class="copyright">
-    <a href="{{ '/' | prepend: site.baseurl | prepend: site.url }}">home</a> 
-    &middot; <a href="{{ '/contact' | prepend: site.baseurl | prepend: site.url }}">contact</a> 
-    &middot; <a href="{{ '/disclaimer' | prepend: site.baseurl | prepend: site.url }}">disclaimer</a> 
-    {% if site.show_tags %} &middot; <a href="{{ '/tags' | prepend: site.baseurl | prepend: site.url }}">tags</a>{% endif %} 
-    &middot; <a href="{{ '/feed.xml' | prepend: site.baseurl | prepend: site.url }}">rss</a> 
-    &middot; <a href="#top" class="back-to-top-anchor">back-to-top</a>
+  <div class="copyright">
+    <div class="misc-link">
+      <a href="{{ '/' | prepend: site.baseurl | prepend: site.url }}">home</a>
+      &middot; <a href="{{ '/contact' | prepend: site.baseurl | prepend: site.url }}">contact</a>
+      &middot; <a href="{{ '/disclaimer' | prepend: site.baseurl | prepend: site.url }}">disclaimer</a>
+      {% if site.show_tags %} &middot; <a href="{{ '/tags' | prepend: site.baseurl | prepend: site.url }}">tags</a>{%
+      endif %}
+      &middot; <a href="{{ '/feed.xml' | prepend: site.baseurl | prepend: site.url }}">rss</a>
+      &middot; <a href="#top" class="back-to-top-anchor">back-to-top</a>
+    </div>
     <div class="light-theme-link"><a href="" onclick="toggleTheme('light'); return false;">switch to light theme</a></div>
     <div class="dark-theme-link"><a href="" onclick="toggleTheme('dark'); return false;">switch to dark theme</a></div>
     &copy; 2015-{{ site.time | date: "%Y" }} Heiswayi Nrird<br><br>
     <div class="page-load"></div>
     <div class="version">Site Build Version: jekyll.{{ site.version }}</div>
-	</div>
+  </div>
 </div>
 
 <script>
-window.addEventListener('load', () => {
-  setTimeout(() => {
-    const t = window.performance && performance.timing;
-    const round2 = num => Math.round(num * 100) / 100;
-    if (t) {
-      const timingStats = document.querySelector('.page-load');
-      const loadTime = (t.loadEventEnd - t.navigationStart) / 1000;
-      let timingStatsHTML = `Page Load Time: ${round2(loadTime)} sec.`;
-      timingStats.innerHTML = timingStatsHTML;
-    }
-  }, 0);
-});
-(function() {
+  function showCodeLineNo() {
     var pre = document.getElementsByTagName('pre'),
-        pl = pre.length;
+      pl = pre.length;
     for (var i = 0; i < pl; i++) {
-        pre[i].innerHTML = '<span class="line-number"></span>' + pre[i].innerHTML + '<span class="cl"></span>';
-        var num = pre[i].innerHTML.split(/\n/).length;
-        for (var j = 0; j < (num - 1); j++) {
-            var line_num = pre[i].getElementsByTagName('span')[0];
-            line_num.innerHTML += '<span>' + (j + 1) + '</span>';
-        }
+      pre[i].innerHTML = '<span class="line-number"></span>' + pre[i].innerHTML + '<span class="cl"></span>';
+      var num = pre[i].innerHTML.split(/\n/).length;
+      for (var j = 0; j < (num - 1); j++) {
+        var line_num = pre[i].getElementsByTagName('span')[0];
+        line_num.innerHTML += '<span>' + (j + 1) + '</span>';
+      }
     }
-})();
+  }
 
-var sunicon = document.getElementById('sunIcon');
-var moonicon = document.getElementById('moonIcon');
-var lightlink = document.getElementsByClassName('light-theme-link')[0];
-var darklink = document.getElementsByClassName('dark-theme-link')[0];
-function showMoonIcon() {
-  if (sunicon) { sunicon.style.display = 'none'; }
-  if (lightlink) { lightlink.style.display = 'none'; }
-  if (moonicon) { moonicon.style.display = 'inline-block'; }
-  if (darklink) { darklink.style.display = 'block'; }
-}
-function showSunIcon() {
-  if (moonicon) { moonicon.style.display = 'none'; }
-  if (darklink) { darklink.style.display = 'none'; }
-  if (sunicon) { sunicon.style.display = 'inline-block'; }
-  if (lightlink) { lightlink.style.display = 'block'; }
-}
-function toggleTheme(targetTheme) {
-  if (targetTheme === "dark") {
-    showSunIcon();
-  } else {
-    showMoonIcon();
+  var sunIcon = document.getElementById('sunIcon'),
+    moonIcon = document.getElementById('moonIcon'),
+    lightThemeLink = document.getElementsByClassName('light-theme-link')[0],
+    darkThemeLink = document.getElementsByClassName('dark-theme-link')[0];
+
+  function enableLightTheme() {
+    if (sunIcon) { sunIcon.style.display = 'none'; }
+    if (lightThemeLink) { lightThemeLink.style.display = 'none'; }
+    if (moonIcon) { moonIcon.style.display = 'inline-block'; }
+    if (darkThemeLink) { darkThemeLink.style.display = 'block'; }
   }
-  document.documentElement.setAttribute('data-theme', targetTheme);
-  localStorage.setItem('theme', targetTheme);
-}
-function init() {
-  var storedTheme = localStorage.getItem('theme') || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
-  if (storedTheme) {
-    document.documentElement.setAttribute('data-theme', storedTheme);
-    if (storedTheme === "dark") {
-      showSunIcon();
+
+  function enableDarkTheme() {
+    if (moonIcon) { moonIcon.style.display = 'none'; }
+    if (darkThemeLink) { darkThemeLink.style.display = 'none'; }
+    if (sunIcon) { sunIcon.style.display = 'inline-block'; }
+    if (lightThemeLink) { lightThemeLink.style.display = 'block'; }
+  }
+
+  function toggleTheme(targetTheme) {
+    if (targetTheme === "dark") {
+      enableDarkTheme();
     } else {
-      showMoonIcon();
+      enableLightTheme();
+    }
+    document.documentElement.setAttribute('data-theme', targetTheme);
+    localStorage.setItem('theme', targetTheme);
+  }
+
+  function getTheme() {
+    var storedTheme = localStorage.getItem('theme') || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+    if (storedTheme) {
+      document.documentElement.setAttribute('data-theme', storedTheme);
+      if (storedTheme === "dark") {
+        enableDarkTheme();
+      } else {
+        enableLightTheme();
+      }
     }
   }
-}
-document.addEventListener("DOMContentLoaded", init);
+
+  document.addEventListener("DOMContentLoaded", () => {
+    showCodeLineNo();
+    getTheme();
+  });
+
+  window.addEventListener('load', () => {
+    setTimeout(() => {
+      const t = window.performance && performance.timing;
+      const round2 = num => Math.round(num * 100) / 100;
+      if (t) {
+        const timingStats = document.querySelector('.page-load');
+        const loadTime = (t.loadEventEnd - t.navigationStart) / 1000;
+        let timingStatsHTML = `Page Load Time: ${round2(loadTime)} sec.`;
+        timingStats.innerHTML = timingStatsHTML;
+      }
+    }, 0);
+  });
 </script>
 
 {% include new-window-fix.html %}
