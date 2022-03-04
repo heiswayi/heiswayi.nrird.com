@@ -4,6 +4,9 @@
     width: 100%;
     z-index: 1000;
     overflow-x: hidden;
+    position: fixed;
+    top: 0;
+    background-color: var(--header-bg);
     .container {
         display: flex;
         flex-direction: row;
@@ -59,4 +62,8 @@
             }
         }
     }
+}
+
+div#content {
+    padding-top: 100px;
 }

@@ -111,8 +111,10 @@ $font-year: $monospace;
   --year-color: #bbb;
   --breaker-color: #aaa;
   --spacer-border: #ddd;
-  --header-border: #ddd;
   --nav-active-color: #B10DC9;
+
+  --header-border: #ddd;
+  --header-bg: #fff;
 
   --code-color: #000;
   --code-bg: #eee;
@@ -157,6 +159,7 @@ $font-year: $monospace;
   --body-color: #aaa;
   --body-text-shadow: rgba(255, 255, 255, 0.004);
   --header-border: #333;
+  --header-bg: #000;
   --spacer-border: #333;
   --hrline-color: #333;
   --tag-border: #333;

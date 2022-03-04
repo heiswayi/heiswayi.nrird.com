@@ -1,0 +1,136 @@
+---
+published: true
+title: My Unsplash
+---
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en" class="no-js" itemscope itemtype="http://schema.org/WebPage">
+
+<head>
+	{% include head.html %}
+	<style>
+	.content {
+		padding-left: 1rem;
+		padding-right: 1rem;
+	}
+	.photos {
+		width: 100%;
+		margin: 0 auto;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+	}
+	.photo {
+		width: 200px;
+		line-height: 1.4;
+		border: 1px solid transparent;
+        margin-right: 1rem;
+        margin-bottom: 1rem;
+	}
+    div.photo:last-of-type {
+        margin-right: 0;
+    }
+	.container {
+		padding-top: 0;
+	}
+    img {
+        display: block;
+        margin: 0 auto;
+        max-width: 100%;
+        height: auto;
+    }
+	</style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/halkabox@1.6.0/dist/halkaBox.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/halkabox@1.6.0/dist/halkaBox.min.js"></script>
+</head>
+
+<body>
+
+  <a href="#content" class="skip">Skip to Main Content</a>
+
+  <div class="wrap">
+
+	{% include topnav.html position='center' %}
+
+    <div id="content">
+
+			<div class="container">
+
+                <h2 style="text-align: center;">{{ page.title }}</h2>
+                <p style="text-align: center;">"When words become unclear, I shall focus with photographs. When images become inadequate, I shall be content with silence." ― Ansel Adams</p>
+
+                <noscript>
+                    {% 
+                        include no-js-notice.html
+                        message="This page requires JavaScript enabled in order to render a photo gallery view."
+                    %}
+                </noscript>
+            
+            </div>
+			
+			<div class="photos" id="photos" data-gridify="4-columns">
+			</div>
+
+            <div class="container" style="margin-top: 4rem;">
+                <p style="text-align: center; font-size: 0.8rem;">
+                    Photos by <a href="https://unsplash.com/@heiswayi_nrird">Heiswayi Nrird</a> on <a href="https://unsplash.com/">Unsplash</a>
+                </p>
+            </div>
+			
+	</div>
+	
+  </div>
+
+	{% include footer.html %}
+
+	<script>
+    var Gridify={gridify:document.querySelectorAll("[data-gridify]"),columns:[],init:function(){Array.prototype.forEach.call(this.gridify,function(e,t){var r=e.getAttribute("data-gridify"),i=r.substr(0,r.indexOf("-columns"));if(e.querySelectorAll(":scope > div").length!=i||e.querySelectorAll(":scope > div")[0].getAttribute("class")!="column size-1of"+i){for(var o=[],n=1;n<=i;n++){var c=document.createElement("div");c.setAttribute("class","column size-1of"+i),Gridify.columns.push(c)}Array.prototype.forEach.call(e.querySelectorAll(":scope > div"),function(e,t){var r=document.createElement("div");r.innerHTML=e.outerHTML.trim(),r=r.firstChild,o.push(r)}),e.innerHTML="",Array.prototype.forEach.call(Gridify.columns,function(t,r){e.appendChild(t)}),Gridify.appendItems(o)}})},destroy:function(){Array.prototype.forEach.call(Gridify.gridify,function(e,t){if(0!=Gridify.columns.length){var r=document.createElement("div");r.setAttribute("data-items",""),e.appendChild(r);var i=[];Array.prototype.forEach.call(e.querySelectorAll(":scope > div"),function(e,t){Array.prototype.forEach.call(e.querySelectorAll(":scope > div"),function(e,t){i.push({index:parseInt(e.getAttribute("data-index")),item:e})})}),i.sort(function(e,t){return e.index<t.index?-1:e.index>t.index?1:0}),Array.prototype.forEach.call(i,function(e,t){e.item.removeAttribute("data-index"),r.appendChild(e.item)}),Gridify.columns=[],e.innerHTML=r.innerHTML}})},reInit:function(){Gridify.destroy(),Gridify.init()},appendItems:function(e){Array.prototype.forEach.call(e,function(e,t){Gridify.appendItem(e,t)})},appendItem:function(e,t){var r=0;Array.prototype.forEach.call(Gridify.columns[0].querySelectorAll(":scope > div"),function(e,t){r+=e.offsetHeight});for(var i={height:r,column:0},o=1;o<Gridify.columns.length;o++){r=0;Array.prototype.forEach.call(Gridify.columns[o].querySelectorAll(":scope > div"),function(e,t){r+=e.offsetHeight}),r<i.height&&(i={height:r,column:o})}e.setAttribute("data-index",t),Gridify.columns[i.column].appendChild(e)}};let gridify=Gridify;
+    gridify.init();
+    // !function(t,e){"function"==typeof define&&define.amd?define(e):"object"==typeof exports?module.exports=e():t.Minigrid=e()}(this,function(t){"use strict";function e(t,e){for(var i in e)e.hasOwnProperty(i)&&(t[i]=e[i]);return t}var i=function(t){var i=t.container instanceof Node?t.container:document.querySelector(t.container),r=t.item instanceof NodeList?t.item:i.querySelectorAll(t.item);this.props=e(t,{container:i,nodeList:r})};return i.prototype.mount=function(){if(!this.props.container)return!1;if(!this.props.nodeList||0===this.props.nodeList.length)return!1;var t="number"==typeof this.props.gutter&&isFinite(this.props.gutter)&&Math.floor(this.props.gutter)===this.props.gutter?this.props.gutter:0,e=this.props.done,i=this.props.container,r=this.props.nodeList;i.style.width="";var n=Array.prototype.forEach,o=i.getBoundingClientRect().width,s=r[0].getBoundingClientRect().width+t,p=Math.max(Math.floor((o-t)/s),1),a=0;o=s*p+t+"px",i.style.width=o,i.style.position="relative";for(var c=[],u=[],l=0;l<p;++l)u.push(l*s+t),c.push(t);this.props.rtl&&u.reverse(),n.call(r,function(e){var i=c.slice(0).sort(function(t,e){return t-e}).shift();i=c.indexOf(i);var r=parseInt(u[i]),n=parseInt(c[i]);e.style.position="absolute",e.style.webkitBackfaceVisibility=e.style.backfaceVisibility="hidden",e.style.transformStyle="preserve-3d",e.style.transform="translate3D("+r+"px,"+n+"px, 0)",c[i]+=e.getBoundingClientRect().height+t,a+=1}),i.style.display="";var f=c.slice(0).sort(function(t,e){return t-e}).pop();i.style.height=f+"px","function"==typeof e&&e(r)},i});
+    var container = document.getElementById('photos');
+    // var grid;
+    fetch('https://api.unsplash.com/users/heiswayi_nrird/photos?client_id=B0hs08YkyAX_2CZCeTnng39G4SBkYQnnZRWImLEckiU')
+    .then(res => res.json())
+    .then((out) => {
+        for(var i = 0; i < out.length; i++) {
+            var obj = out[i];
+            var img = new Image();
+            img.src = obj.urls.small_s3;
+            var link = document.createElement('a');
+            link.setAttribute('href', obj.urls.regular);
+            link.setAttribute('class', 'gallery1');
+            link.setAttribute('title', obj.description);
+            link.appendChild(img);
+            var photo = document.createElement('div');
+            photo.setAttribute('class', 'photo item');
+            photo.appendChild(link);
+            // container.appendChild(photo);
+            gridify.appendItem(photo);
+        }
+    })
+    .catch(err => {
+        console.log('Something went wrong: ' + err);
+    });
+    window.addEventListener('load', () => {
+        console.log('load');
+        // gridify.init();
+        halkaBox.run("gallery1", {
+            theme: "dark"
+        });
+        // grid = new Minigrid({
+        //     container: '.photos',
+        //     item: '.photo',
+        //     gutter: 16
+        // });
+        // grid.mount();
+    });
+    window.addEventListener('resize', () => {
+        // gridify.reInit();
+        // grid.mount();
+    });
+	</script>
+		
+</body>
+
+</html>
