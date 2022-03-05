@@ -33,41 +33,23 @@ Here's the Arduino sketch, compiled with [Arduino software](https://www.arduino.
 #include <OneWire.h>
 #include <DallasTemperature.h>
 
-#define ONE_WIRE_BUS 2 /* Connect to Pin 2 */
+#define ONE_WIRE_BUS 2
 
-/* Set up a oneWire instance to communicate with any OneWire device*/
 OneWire ourWire(ONE_WIRE_BUS);
-
-/* Tell Dallas Temperature Library to use oneWire Library */
 DallasTemperature sensors(&ourWire);
 
-void setup() /* SETUP: RUNS ONCE */
+void setup()
 {
-
-delay(1000);
-Serial.begin(9600);
-//Serial.println("Temperature Sensor: DS18B20");
-delay(1000);
-
-/* Start up the DallasTemperature library */
-sensors.begin();
-
+    delay(1000);
+    Serial.begin(9600);
+    delay(1000);
+    sensors.begin();
 }
 
-
-void loop() /* LOOP: RUNS CONSTANTLY */
+void loop()
 {
-
-//Serial.println();
-//Serial.print("Requesting temperature...");
-sensors.requestTemperatures(); // Send the command to get temperatures
-//Serial.println("DONE");
-
-//Serial.print("Device 1 (index 0) = ");
-//Serial.print(sensors.getTempCByIndex(0));
-Serial.println(sensors.getTempCByIndex(0));
-//Serial.println(" Degrees C");
-delay(1000);
-
+    sensors.requestTemperatures();
+    Serial.println(sensors.getTempCByIndex(0));
+    delay(1000);
 }
 ```
