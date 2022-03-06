@@ -13,8 +13,8 @@
     <div class="light-theme-link"><a href="" onclick="toggleTheme('light'); return false;">switch to light theme</a></div>
     <div class="dark-theme-link"><a href="" onclick="toggleTheme('dark'); return false;">switch to dark theme</a></div>
     &copy; 2015-{{ site.time | date: "%Y" }} Heiswayi Nrird<br><br>
-    <div class="page-load"></div>
-    <div class="version">Site Build Version: jekyll.{{ site.version }}</div>
+    <!-- <div class="page-load"></div> -->
+    <!-- <div class="version">Site Build Version: jekyll.{{ site.version }}</div> -->
   </div>
 </div>
 
@@ -78,6 +78,7 @@
     getTheme();
   });
 
+  /*
   window.addEventListener('load', () => {
     setTimeout(() => {
       const t = window.performance && performance.timing;
@@ -90,6 +91,7 @@
       }
     }, 0);
   });
+  */
 </script>
 
 {% include new-window-fix.html %}
