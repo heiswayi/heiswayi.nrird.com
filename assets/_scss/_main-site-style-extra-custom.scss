@@ -151,3 +151,38 @@ p.warning {
     background-color: var(--sb-thumb-hover-bg);
   }
 }
+
+.box-container {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-bottom: 3rem;
+  .box {
+    width: 16rem;
+    line-height: 1.4;
+    background-color: var(--pre-bg);
+    border: 1px solid var(--pre-border);
+    padding: 1rem;
+    margin: 8px;
+    .box-title {
+      font-weight: bold;
+    }
+    .box-desc {
+      font-size: 0.9rem;
+      opacity: 0.8;
+    }
+    .box-links {
+      margin-top: 1ch;
+    }
+    .box-img {
+      img {
+        height: 200px;
+        width: max-content;
+        object-fit: cover;
+      }
+    }
+  }
+}

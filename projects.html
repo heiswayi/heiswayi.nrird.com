@@ -10,38 +10,9 @@ title: Projects
 <head>
 	{% include head.html %}
 	<style>
-	.container {
-		margin-bottom: 5rem;
-	}
-	.desc {
-		opacity: 0.7;
-	}
-	.sounds-list {
-		padding: 0;
-		margin: 0;
-		display: flex;
-	}
-	.sounds {
-		margin-right: 5px;
-		padding: 7px;
-		width: 37px;
-		height: 37px;
-		cursor: pointer;
-		user-drag: none;
-		user-select: none;
-		-moz-user-select: none;
-		-webkit-user-drag: none;
-		-webkit-user-select: none;
-		-ms-user-select: none;
-	}
-	.sounds:hover {
-		cursor: pointer;
-	}
-	#sound_on {
-		opacity: 1;
-	}
-	#sound_off {
-		opacity: 0.6;
+	.content {
+		padding-left: 1rem;
+		padding-right: 1rem;
 	}
 	</style>
 </head>
@@ -54,122 +25,127 @@ title: Projects
 
 	{% include topnav.html position='center' %}
 
-    <div id="content" class="container content">
-		<h1 class="colorize">Projects</h1>
-		<h3>Jekyll Themes</h3>
-		<p><a href="https://jekyllrb.com/">Jekyll</a> is a popular static site generator written in Ruby. Over the past years, I have created some of <strong>minimalist</strong> Jekyll themes and published the source code on GitHub. Similarly to this site, which is built and compiled using Jekyll.</p>
-		<table>
-			<tbody>
-			<tr>
-			<td style="width:200px"><img src="https://camo.githubusercontent.com/74765fa50b2b2e81f2fd43678a1c9df6aff868ec4c4d302b680a68d53100a100/68747470733a2f2f692e696d6775722e636f6d2f4649544b4e31482e706e67" alt="image" style="width: 200px; height: auto"></td>
-			<td><strong>The Plain</strong><div class="desc">Center aligned. Single column layout. Ideal for personal blogging purpose.</div>
-			<a href="https://github.com/heiswayi/the-plain">GitHub</a> &middot; <a href="https://heiswayi.github.io/the-plain/">Demo</a></td>
-			</tr>
-			<tr>
-			<td style="width:200px"><img src="https://camo.githubusercontent.com/c41d621d281f5d38b3a1e24b207daa24838f6f1de49e2260dabc1877eedc4ee3/68747470733a2f2f692e696d6775722e636f6d2f3159533037386b2e706e67" alt="image" style="width: 200px; height: auto"></td>
-			<td><strong>Thinkspace</strong><div class="desc">Center aligned. Single column layout. Ideal for technical writing style blog.</div>
-			<a href="https://github.com/heiswayi/thinkspace">GitHub</a> &middot; <a href="https://heiswayi.github.io/thinkspace/">Demo</a></td>
-			</tr>
-			<tr>
-			<td style="width:200px"><img src="https://camo.githubusercontent.com/d9112b05a8c010244d05210a9de10a4c539b5ee35df418a33a1dbd98832142cb/68747470733a2f2f692e696d6775722e636f6d2f795871624d34532e706e67" alt="image" style="width: 200px; height: auto"></td>
-			<td><strong>TextLog</strong><div class="desc">Left aligned. Single column layout. No site menu in post layout. Ideal for logging notes or technical documentations.</div>
-			<a href="https://github.com/heiswayi/textlog">GitHub</a> &middot; <a href="https://heiswayi.github.io/textlog/">Demo</a></td>
-			</tr>
-			<tr>
-			<td style="width:200px"><img src="https://i.imgur.com/JxnN0S6.png" alt="image" style="width: 200px; height: auto"></td>
-			<td><strong>Barebone</strong><div class="desc">The most barebone Jekyll theme. No Sass/SCSS file. Run with almost pure HTML.</div>
-			<a href="https://github.com/heiswayi/hn-barebone">GitHub</a> &middot; <a href="https://heiswayi.github.io/hn-barebone/">Demo</a></td>
-			</tr>
-			</tbody>
-		</table>
+    <div id="content" class="content">
+		<div class="container">
+			<h1 class="colorize">Projects</h1>
+		</div>
 
-		<h3>Simple JS-based Apps</h3>
-		<table>
-			<tbody>
-			<tr>
-			<td>
-				<a href="https://heiswayi.github.io/pgp/"><strong>PGP Suite</strong></a> &middot; (<a href="https://github.com/heiswayi/pgp">GitHub</a>)
-				<div class="desc">A simple and easy-to-use client-side PGP tool to generate, sign and verify PGP keys via your web browser.</div>
-			</td>
-			</tr>
-			<tr>
-			<td>
-				<a href="https://heiswayi.github.io/website-checklist/"><strong>Website Checklist</strong></a> &middot; (<a href="https://github.com/heiswayi/website-checklist">GitHub</a>)
-				<div class="desc">Interactive checklist for web developer that uses your browser <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage">localStorage</a> to save the checklist data.</div>
-			</td>
-			</tr>
-			</tbody>
-		</table>
+		<div class="container box-section">
+			<h3>Jekyll Themes</h3>
+			<p><a href="https://jekyllrb.com/">Jekyll</a> is a popular static site generator written in Ruby. Over the past years, I've created some of <strong>minimalist</strong> Jekyll themes and published their source code on GitHub. This site also is built and compiled using Jekyll engine to become a static site.</p>
+		</div>
+		<div class="box-container">
+			<div class="box">
+				<div class="box-img"><img src="https://i.imgur.com/9oJcI0w.png" alt="image"></div>
+				<div class="box-title">The Plain</div>
+				<div class="box-desc">Center aligned. Single column layout. Ideal for personal blogging purpose.</div>
+				<div class="box-links">
+					<a href="https://github.com/heiswayi/the-plain">GitHub</a> &middot; <a href="https://heiswayi.github.io/the-plain/">Demo</a>
+				</div>
+			</div>
+			<div class="box">
+				<div class="box-img"><img src="https://i.imgur.com/jYuXZ8G.png" alt="image"></div>
+				<div class="box-title">Thinkspace</div>
+				<div class="box-desc">Center aligned. Single column layout. Ideal for technical writing style blog.</div>
+				<div class="box-links">
+					<a href="https://github.com/heiswayi/thinkspace">GitHub</a> &middot; <a href="https://heiswayi.github.io/thinkspace/">Demo</a>
+				</div>
+			</div>
+			<div class="box">
+				<div class="box-img"><img src="https://i.imgur.com/MgWtfH1.png" alt="image"></div>
+				<div class="box-title">TextLog</div>
+				<div class="box-desc">Left aligned. Single column layout. No site menu in post layout. Ideal for logging notes or technical documentations.</div>
+				<div class="box-links">
+					<a href="https://github.com/heiswayi/textlog">GitHub</a> &middot; <a href="https://heiswayi.github.io/textlog/">Demo</a>
+				</div>
+			</div>
+			<div class="box">
+				<div class="box-img"><img src="https://i.imgur.com/GP7xsz8.png" alt="image"></div>
+				<div class="box-title">Barebone</div>
+				<div class="box-desc">The most barebone Jekyll theme. No Sass/SCSS file. Run with almost pure HTML.</div>
+				<div class="box-links">
+					<a href="https://github.com/heiswayi/hn-barebone">GitHub</a> &middot; <a href="https://heiswayi.github.io/hn-barebone/">Demo</a>
+				</div>
+			</div>
+		</div>
 
-		<h3>Experimental AI Chatbot Apps</h3>
-		<table>
-			<tbody>
-			<tr>
-			<td>
-				<a href="https://heiswayi.github.io/w4y1/"><strong>W4Y1</strong></a> &middot; (<a href="https://github.com/heiswayi/w4y1">GitHub</a>)
-				<div class="desc">Experimental AI chatbot app based on <a href="https://www.masswerk.at/elizabot/">elizabot.js</a>.</div>
-			</td>
-			</tr>
-			<tr>
-			<td>
-				<a href="https://heiswayi.github.io/hellobot/"><strong>HelloBot</strong></a> &middot; (<a href="https://github.com/heiswayi/hellobot">GitHub</a>)
-				<div class="desc">Experimental AI chatbot app based on <a href="https://www.rivescript.com/">RiveScript</a>.</div>
-			</td>
-			</tr>
-			</tbody>
-		</table>
+		<div class="container box-section">
+			<h3>Small PHP Apps/Scripts</h3>
+			<p>Most of these PHP scripts I made are for personal use.</p>
+		</div>
+		<div class="box-container">
+			<div class="box">
+				<div class="box-title"><a href="https://dev.nrird.com/pastebin/">hn-pastebin</a></div>
+				<div class="box-desc">A minimalist, secure and encrypted pastebin app.</div>
+			</div>
+			<div class="box">
+				<div class="box-title"><a href="https://dev.nrird.com/speedtest/">hn-speedtest</a></div>
+				<div class="box-desc">A minimalist, mobile-friendly speedtest webpage using my server location.</div>
+			</div>
+			<div class="box">
+				<div class="box-title"><a href="https://dev.nrird.com/writer/">hn-writer</a></div>
+				<div class="box-desc">A browser-based WYSIWYG editor for online documentation writing.</div>
+			</div>
+			<div class="box">
+				<div class="box-title"><a href="https://dev.nrird.com/link/create">hn-link</a></div>
+				<div class="box-desc">A minimalist URL shortening script.</div>
+			</div>
+			<div class="box">
+				<div class="box-title"><a href="https://dev.nrird.com/imagehosting/">Simple Image Hosting</a></div>
+				<div class="box-desc">A minimalist and personal image hosting script.</div>
+			</div>
+			<div class="box">
+				<div class="box-title"><a href="https://heiswayi.nrird.com/qrcode">QR Code Generator</a></div>
+				<div class="box-desc">A simple QR code generator API script.</div>
+			</div>
+		</div>
 
-		<h3>Small PHP Apps/Scripts</h3>
-		<table>
-			<tbody>
-			<tr>
-			<td>
-				<a href="https://dev.nrird.com/pastebin/"><strong>hn-pastebin</strong></a>
-				<div class="desc">A minimalist, secure and encrypted pastebin app.</div>
-			</td>
-			</tr>
-			<tr>
-			<td>
-				<a href="https://dev.nrird.com/speedtest/"><strong>hn-speedtest</strong></a>
-				<div class="desc">A minimalist, mobile-friendly speedtest webpage using my server location.</div>
-			</td>
-			</tr>
-			<tr>
-			<td>
-				<a href="https://dev.nrird.com/writer/"><strong>hn-writer</strong></a>
-				<div class="desc">A browser-based WYSIWYG editor for online documentation writing.</div>
-			</td>
-			</tr>
-			<tr>
-			<td>
-				<a href="https://dev.nrird.com/link/create"><strong>hn-link</strong></a>
-				<div class="desc">A minimalist URL shortening script.</div>
-			</td>
-			</tr>
-			<tr>
-			<td>
-				<a href="https://dev.nrird.com/imagehosting/"><strong>Simple Image Hosting</strong></a>
-				<div class="desc">A minimalist and personal image hosting script.</div>
-			</td>
-			</tr>
-			<tr>
-			<td>
-				<a href="https://heiswayi.nrird.com/qrcode"><strong>QR Code Generator</strong></a>
-				<div class="desc">A simple QR code generator API script.</div>
-			</td>
-			</tr>
-			</tbody>
-		</table>
+		<div class="container box-section">
+			<h3>Simple JS-based Apps</h3>
+			<p>These are simple JS apps that still widely used by people.</p>
+		</div>
+		<div class="box-container">
+			<div class="box">
+				<div class="box-img"><img src="https://i.imgur.com/RQOinwm.png" alt="image"></div>
+				<div class="box-title"><a href="https://heiswayi.github.io/pgp/">PGP Suite</a></div>
+				<div class="box-desc">A simple and easy-to-use client-side PGP tool to generate, sign and verify PGP keys via your web browser.</div>
+				<div class="box-links">
+					<a href="https://github.com/heiswayi/pgp">GitHub</a>
+				</div>
+			</div>
+			<div class="box">
+				<div class="box-img"><img src="https://i.imgur.com/A2APFAp.png" alt="image"></div>
+				<div class="box-title"><a href="https://heiswayi.github.io/website-checklist/">Website Checklist</a></div>
+				<div class="box-desc">Interactive checklist for web developer that uses your browser <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage">localStorage</a> to save the checklist data.</div>
+				<div class="box-links">
+					<a href="https://github.com/heiswayi/website-checklist">GitHub</a>
+				</div>
+			</div>
+		</div>
 
-		<h3>MIDI Sounds</h3>
-		<p style="margin: 0">Simply click on the icon below to play respective sound:</p>
-		<noscript>
-			{% 
-				include no-js-notice.html
-				message="This section requires JavaScript enabled in order to play some musics."
-			%}
-		</noscript>
-		<div class="sounds-list" id="sounds-list"></div>
+		<div class="container box-section">
+			<h3>Experimental AI Chatbot Apps</h3>
+			<p>Previously I did some experimental coding to try out some frameworks for building a chatbot app.</p>
+		</div>
+		<div class="box-container">
+			<div class="box">
+				<div class="box-img"><img src="https://i.imgur.com/aQ7iX6Q.png" alt="image"></div>
+				<div class="box-title"><a href="https://heiswayi.github.io/w4y1/">W4Y1</a></div>
+				<div class="box-desc">Experimental AI chatbot app based on <a href="https://www.masswerk.at/elizabot/">elizabot.js</a>.</div>
+				<div class="box-links">
+					<a href="https://github.com/heiswayi/w4y1">GitHub</a>
+				</div>
+			</div>
+			<div class="box">
+				<div class="box-img"><img src="https://i.imgur.com/FRrgkHf.png" alt="image"></div>
+				<div class="box-title"><a href="https://heiswayi.github.io/hellobot/">HelloBot</a></div>
+				<div class="box-desc">Experimental AI chatbot app based on <a href="https://www.rivescript.com/">RiveScript</a>.</div>
+				<div class="box-links">
+					<a href="https://github.com/heiswayi/hellobot">GitHub</a>
+				</div>
+			</div>
+		</div>
+
 	</div>
 
   </div>
@@ -177,98 +153,7 @@ title: Projects
   {% include footer.html %}
 
   <script>
-	(function(){
-	  let sounds = [
-	  {
-		  class: "camp",
-		  file: "campfire",
-		  name: "Campfire",
-		  volume: 80
-	  },
-	  {
-		  class: "bird",
-		  file: "garden",
-		  name: "Garden",
-		  volume: 100
-	  },
-	  {
-		  class: "rain",
-		  file: "rain",
-		  name: "Rain",
-		  volume: 20
-	  },
-	  {
-		  class: "beach",
-		  file: "seaside",
-		  name: "Beach",
-		  volume: 50
-	  },
-	  {
-		  class: "storm",
-		  file: "storm",
-		  name: "Storm",
-		  volume: 80
-	  },
-	  {
-		  class: "night",
-		  file: "summer-night",
-		  name: "Night",
-		  volume: 100
-	  },
-	  {
-		  class: "stream",
-		  file: "water-stream",
-		  name: "Stream",
-		  volume: 40
-	  },
-	  {
-		  class: "leaf",
-		  file: "wind",
-		  name: "Wind",
-		  volume: 100
-	  }
-	];
-  
-	function loadSounds() {
-	  let i = 1;
-	  for (let sound of sounds) {
-		  let audio = document.createElement("audio");
-		  audio.loop = true;
-		  audio.id = sound.class;
-		  audio.src = "https://dev.nrird.com/static/meditation/" + sound.file + ".mp3";
-		  audio.preload = "auto";
-  
-		  let img = document.createElement("img");
-		  img.src = "https://dev.nrird.com/static/meditation/" + sound.file + ".svg";
-		  img.className = "sounds " + sound.class + " play";
-		  img.id = "sound_off";
-		  img.alt = sound.file;
-		  img.addEventListener("click", function () {
-			  togglePlay(sound);
-		  });
-  
-		  let div = document.getElementById("sounds-list");
-		  let option = document.createElement("div");
-		  option.appendChild(audio);
-		  option.appendChild(img);
-		  div.appendChild(option);
-		  if (i % 2 === 0) {
-			  div.appendChild(document.createElement("br"));
-		  }
-		  i++;
-	  }
-	}
-  
-	function togglePlay(sound) {
-	  let audio = document.getElementById(sound.class);
-	  let icon = document.getElementsByClassName(sound.class)[0];
-	  audio.paused ? audio.play() : audio.pause();
-	  !audio.paused ? (icon.id = "sound_on") : (icon.id = "sound_off");
-	}
-  
-	document.addEventListener('DOMContentLoaded', loadSounds);
-	})();
-	</script>
+  </script>
 		
 </body>
 
