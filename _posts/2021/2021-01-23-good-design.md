@@ -1,11 +1,11 @@
 ---
 layout: post
-title: What is meant by "Good Design" and "Good UX"
-description: Summaries about "good design" and "good UX".
+title: Good Design & Good UX
+description: Short summaries on "good design" and "good UX".
 tags: [Design, UX]
 ---
 
-**Good Design** ([Dieter Rams, Braun et al.](https://www.vitsoe.com/us/about/good-design))<br>
+**Good Design**<br>
 is innovative<br>
 makes a product useful<br>
 is aesthetic<br>
@@ -15,13 +15,15 @@ is honest<br>
 is long-lasting<br>
 is thorough down to the last detail<br>
 is environmentally-friendly<br>
-is as little design as possible
+is as little design as possible<br>
+_(Source: [Dieter Rams, Braun et al.](https://www.vitsoe.com/us/about/good-design))_
 
-**Good UX** ([Peter Morville](http://semanticstudios.com/user_experience_design/))<br>
+**Good UX**<br>
 is useful<br>
 is usable<br>
 is desirable<br>
 is findable<br>
 is accessible<br>
 is credible<br>
-is valuable
+is valuable<br>
+_(Source: [Peter Morville](http://semanticstudios.com/user_experience_design/))_

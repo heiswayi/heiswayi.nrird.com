@@ -8,7 +8,7 @@ tags: [Programming, PHP, Encryption, Decryption]
 {:.warning}
 **UPDATE:** `mcrypt` library was DEPRECATED in PHP 7.1.0, and REMOVED in PHP 7.2.0. Alternative to this library is to use [Sodium](https://www.php.net/manual/en/book.sodium.php) (available as of PHP 7.2.0) or [OpenSSL](https://www.php.net/manual/en/book.openssl.php).
 
-These code snippets are the encryption and decryption function that I used the most when I need to encrypt/decrypt any sensitive data. These PHP functions are written based on  [mcrypt_encrypt](https://www.php.net/manual/en/function.mcrypt-encrypt.php) and [mcrypt_decrypt](https://www.php.net/manual/en/function.mcrypt-decrypt.php) respectively.
+The following code snippets are encryption and decryption function that I used the most when I need to encrypt and decrypt some sensitive data. These PHP functions are written based on [mcrypt_encrypt](https://www.php.net/manual/en/function.mcrypt-encrypt.php) and [mcrypt_decrypt](https://www.php.net/manual/en/function.mcrypt-decrypt.php) respectively.
 
 ### Encryption
 
@@ -34,7 +34,7 @@ echo Encrypt('myPass123', 'Welcome to Flippancy 25');
 ?>
 ```
 
-When you execute the function for multiple times with the same parameters, you will notice the encrypted string will keep changing. This is because we have `mt_rand()` function that is used to generate the _salt_.
+The output will keep changing each time the function is being executed. This is due to `mt_rand()` function is used to generate the _salt_.
 
 Example:
 
@@ -74,13 +74,13 @@ echo Decrypt('myPass123', 'U2FsdGVkX18OQ8puUN8BBi+d6vAjEzDTZqM2WaKQD1atOykkYl9MY
 
 ### FAQ
 
-#### Can I use this encryption method to protect a password?
+#### Can this encryption method able to be used to protect a password?
 
-The answer is no.
+Answer: No
 
-To secure a user password, the best practice is to implement a **one-way hashing algorithm technique**. This implementation is irreversible. Unlike the encryptions, they are formulated to be decryptable. In PHP, it is recommended to use the built-in functions to securely hash the user password, e.g. [password_hash](http://php.net/manual/en/function.password-hash.php) or [crypt](http://php.net/manual/en/function.crypt.php).
+To secure a user password, the best practice is to implement a **one-way hashing algorithm technique**. This implementation is irreversible. Unlike the encryptions, they are formulated to be decryptable. In PHP, it is recommended to use the built-in functions to securely hash the user password, i.e. [password_hash](http://php.net/manual/en/function.password-hash.php) or [crypt](http://php.net/manual/en/function.crypt.php).
 
-In my previous PHP apps development, I used this custom function to **hash** the user password securely:
+In some of my previous PHP apps, I did use the following custom function to hash the user password securely:
 
 ```php
 <?php
@@ -99,4 +99,4 @@ echo hashPassword('myPa55w0rd', 'Flipp@ncy25');
 ?>
 ```
 
-To learn more about password hashing, it is recommended for you to read [this article](https://crackstation.net/hashing-security.htm).
+If you want to learn more about password hashing, I recommend you to read [this article](https://crackstation.net/hashing-security.htm).

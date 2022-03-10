@@ -5,7 +5,7 @@ description: A simple .NET GUI application based on AForge libraries to analyze 
 tags: [C#, WPF, Project]
 ---
 
-I built Inhouse Camguard few months ago in my spare time to experiment with some AForge libraries using C# and WPF. [AForge.NET Framework](http://www.aforgenet.com/framework/) is easy to use, and we can do many great applications with it. The purpose of this app is to automatically detect a motion from a video feed like a webcam video while plotting a continuous graph showing the sensitivity of that motion. This app can do some data logging and it's able to capture a static image of the video when the motion sensitivity hits the threshold.
+I developed Inhouse Camguard app few months ago in my spare time to experiment with some AForge libraries using C# and WPF. [AForge.NET Framework](http://www.aforgenet.com/framework/) is easy to use, and we can do many great applications with it. The purpose of this app is to automatically detect a motion from a video feed like a webcam video while plotting a continuous graph showing the sensitivity of that motion. This app can do some data logging and able to capture a static image of the video when the motion sensitivity hits certain threshold.
 
 <a href="https://github.com/heiswayi/inhousecamguard" class="button big">Source Code on GitHub</a>
 
@@ -17,7 +17,7 @@ I built Inhouse Camguard few months ago in my spare time to experiment with some
 
 
 
-### Detailed features
+### App features
 
 - Contains 2 types of motion detection algorithms.
 - Contains 4 types of motion processing algorithms.

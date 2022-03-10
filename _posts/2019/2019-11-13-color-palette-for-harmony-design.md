@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Defining essential colors for harmony design
+title: Color palette for harmony design
 description: A good color set to get started with new design project that can work better for both in light and dark theme.
 tags: [Colors]
 ---
@@ -92,9 +92,7 @@ tags: [Colors]
 }
 </style>
 
-Creating harmony design application or website is not that easy. Choosing the wrong color palette may result in design inconsistency and visually undersatisfying user experience. Before this, I could say that I have been struggle a lot to get started with some base colors. After doing some study, I found this color palette is a good color set to get started and these colors are _redefined_ to work better in both light and dark theme of the design.
-
-
+This color palette contains a basic set of colors to get started for harmony design. This set is _redefined_ to work better in both light and dark theme of the design.
 
 <section class="blue hue">
     <div class="light-blue color">

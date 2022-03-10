@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Some notes on learning about Computer Security
+title: Notes on learning about Computer Security
 description: This is an opinionated guide to learning about computer security (independently of a university or training program), starting with the absolute basics (suitable for someone without any exposure to or knowledge of computer security) and moving into progressively more difficult subject matter.
 tags: [Computer Security, Notes]
 ---

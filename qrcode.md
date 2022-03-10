@@ -5,7 +5,7 @@ description: Simple QR code generator API
 keywords: qrcode, qrcode generator, qrcode api, qrcode google, qrcode php
 ---
 
-This is a simple QR Code generator API that you can simply use.
+This is a simple QR Code generator API that you can use.
 
 **API URL:** [https://dev.nrird.com/qrcode/](https://dev.nrird.com/qrcode/)
 
