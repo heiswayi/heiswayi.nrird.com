@@ -184,5 +184,8 @@ p.warning {
         object-fit: cover;
       }
     }
+    &:hover {
+      border-color: var(--link-1);
+    }
   }
 }
