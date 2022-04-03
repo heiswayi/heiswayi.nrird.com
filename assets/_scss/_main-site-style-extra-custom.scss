@@ -160,13 +160,13 @@ p.warning {
   flex-wrap: wrap;
   justify-content: center;
   padding-bottom: 3rem;
+  gap: 1rem;
   .box {
     width: 16rem;
     line-height: 1.4;
     background-color: var(--pre-bg);
     border: 1px solid var(--pre-border);
     padding: 1rem;
-    margin: 8px;
     .box-title {
       font-weight: bold;
     }
@@ -188,4 +188,8 @@ p.warning {
       border-color: var(--link-1);
     }
   }
+}
+
+dl.project-list {
+  margin-left: 0px;
 }
