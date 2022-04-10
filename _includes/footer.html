@@ -1,6 +1,8 @@
 <hr class="hidden-on-print" />
 <div class="footer">
   <div class="copyright">
+    <div class="light-theme-link">(<a href="" onclick="toggleTheme('light'); return false;">disable dark mode</a>)</div>
+    <div class="dark-theme-link">(<a href="" onclick="toggleTheme('dark'); return false;">enable dark mode</a>)</div>
     <div class="misc-link">
       <a href="{{ '/' | prepend: site.baseurl | prepend: site.url }}">home</a>
       &middot; <a href="{{ '/contact' | prepend: site.baseurl | prepend: site.url }}">contact</a>
@@ -10,8 +12,6 @@
       &middot; <a href="{{ '/feed.xml' | prepend: site.baseurl | prepend: site.url }}">rss</a>
       &middot; <a href="#top" class="back-to-top-anchor">back-to-top</a>
     </div>
-    <div class="light-theme-link"><a href="" onclick="toggleTheme('light'); return false;">switch to light theme</a></div>
-    <div class="dark-theme-link"><a href="" onclick="toggleTheme('dark'); return false;">switch to dark theme</a></div>
     &copy; 2015-{{ site.time | date: "%Y" }} Heiswayi Nrird<br><br>
     <!-- <div class="page-load"></div> -->
     <!-- <div class="version">Site Build Version: jekyll.{{ site.version }}</div> -->
@@ -32,22 +32,16 @@
     }
   }
 
-  var sunIcon = document.getElementById('sunIcon'),
-    moonIcon = document.getElementById('moonIcon'),
-    lightThemeLink = document.getElementsByClassName('light-theme-link')[0],
+  var lightThemeLink = document.getElementsByClassName('light-theme-link')[0],
     darkThemeLink = document.getElementsByClassName('dark-theme-link')[0];
 
   function enableLightTheme() {
-    if (sunIcon) { sunIcon.style.display = 'none'; }
     if (lightThemeLink) { lightThemeLink.style.display = 'none'; }
-    if (moonIcon) { moonIcon.style.display = 'inline-block'; }
     if (darkThemeLink) { darkThemeLink.style.display = 'block'; }
   }
 
   function enableDarkTheme() {
-    if (moonIcon) { moonIcon.style.display = 'none'; }
     if (darkThemeLink) { darkThemeLink.style.display = 'none'; }
-    if (sunIcon) { sunIcon.style.display = 'inline-block'; }
     if (lightThemeLink) { lightThemeLink.style.display = 'block'; }
   }
 
