@@ -1,8 +1,10 @@
 ---
-layout: post
-title: Markdown Cheatsheet
-date: 2022-02-23
+layout: page
+title: Markdown Test
 ---
+
+{:.warning}
+This markdown sample is prepared by Heiswayi Nrird for site testing and development purpose.
 
 # Typography
 
@@ -503,10 +505,6 @@ Adding matching footnote definitions at the end of writing, for example:
     Subsequent paragraphs are indented to show that they
 belong to the previous footnote.
 ```
-
-# Colophon
-
-This markdown cheatsheet was originally prepared by Heiswayi Nrird for [https://heiswayi.nrird.com](https://heiswayi.nrird.com) development purpose.
 
 # Footnote references
 

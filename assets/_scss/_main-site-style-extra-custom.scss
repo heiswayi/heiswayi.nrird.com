@@ -126,30 +126,9 @@ p.warning {
   }
 }
 
-#sunIcon,
-#moonIcon,
 .light-theme-link,
 .dark-theme-link {
   display: none;
-}
-
-::-webkit-scrollbar {
-  height: 10px;
-  width: 10px;
-}
-::-webkit-scrollbar-corner {
-  background-color: var(--sb-corner-bg);
-}
-::-webkit-scrollbar-track {
-  background-color: var(--sb-track-bg);
-  border: 1px solid var(--sb-track-border);
-}
-::-webkit-scrollbar-thumb {
-  background-color: var(--sb-thumb-bg);
-  border: 1px solid var(--sb-thumb-border);
-  &:hover {
-    background-color: var(--sb-thumb-hover-bg);
-  }
 }
 
 .box-container {

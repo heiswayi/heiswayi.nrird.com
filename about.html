@@ -1,0 +1,73 @@
+---
+layout: compress
+published: true
+title: About
+---
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en" class="no-js" itemscope itemtype="http://schema.org/WebPage">
+
+<head>
+	{% include head.html %}
+	<style>
+	.container {
+		margin-bottom: 2rem;
+	}
+	</style>
+</head>
+
+<body>
+
+  <a href="#content" class="skip">Skip to Main Content</a>
+
+  <div class="wrap">
+
+	{% include topnav.html position='center' %}
+
+    <div id="content" class="container content">
+
+		<h1 class="colorize">About</h1>
+
+		<div class="intro">
+			<!-- <h1 style="margin-bottom: 0;" class="main-title colorize">{{ site.title }}</h1>
+			<div class="lead">Learning &middot; Programming &middot; Simplifying</div> -->
+			<div class="author-info" style="margin-top: 2rem;">
+				<div class="with-avatar">
+					<div class="photo">
+						<img src="{{ "/assets/wayi_280x280.jpg" | prepend: site.baseurl | prepend: site.url }}" alt="Heiswayi Nrird">
+					</div>
+					<p>Hi. I am Wayi. I work with computers (mostly). Currently, I design, build and ship software at <a href="https://www.keysight.com/">Keysight Technologies</a> (Penang, MY).</p>
+					<p><small class="muted">PREVIOUS CAREERS</small><br>
+					ITD World &middot; IME Technologies &middot; CEDEC USM</p>
+					<p><small class="muted">EDUCATION</small><br>
+					BEng (Hons), Electronics Engineering, USM</p>
+					<div><small class="muted">THINGS I DO</small>
+					<ul>
+						<li>Design and code.</li>
+						<li>Contribute to some open source projects.</li>
+						<li>Play some computer games.</li>
+						<li>Move around and capture some landscape photographs.</li>
+						<li>Read some books.</li>
+						<li>Meditate virtually.</li>
+					</ul></div>
+					<p class="elsewhere">
+						<small class="muted">ELSEWHERE</small><br>
+						<a href="https://www.linkedin.com/in/heiswayi">LinkedIn</a> &middot; <a
+							href="https://github.com/heiswayi?tab=repositories">GitHub</a> &middot; <a
+							href="https://gist.github.com/heiswayi">Gist</a> &middot; <a
+							href="https://codepen.io/heiswayi/pens/public">CodePen</a> &middot; <a
+							href="https://jsfiddle.net/user/heiswayi/">JSFiddle</a> &middot; <a
+							href="https://unsplash.com/@heiswayi_nrird">Unsplash</a>
+					</p>
+				</div>
+			</div>
+		</div>
+
+	</div>
+  </div>
+
+  {% include footer.html %}
+		
+</body>
+
+</html>

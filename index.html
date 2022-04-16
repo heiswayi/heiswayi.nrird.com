@@ -4,6 +4,25 @@ published: true
 title: Home
 ---
 
+{% assign rawtags = "" %}
+{% for post in site.posts %}
+	{% assign ttags = post.tags | join:'|' | append:'|' %}
+	{% assign rawtags = rawtags | append:ttags %}
+{% endfor %}
+{% assign rawtags = rawtags | split:'|' | sort %}
+
+{% assign tags = "" %}
+{% for tag in rawtags %}
+	{% if tag != "" %}
+		{% if tags == "" %}
+			{% assign tags = tag | split:'|' %}
+		{% endif %}
+		{% unless tags contains tag %}
+			{% assign tags = tags | join:'|' | append:'|' | append:tag | split:'|' %}
+		{% endunless %}
+	{% endif %}
+{% endfor %}
+
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en" class="no-js" itemscope itemtype="http://schema.org/WebPage">
 
@@ -12,6 +31,9 @@ title: Home
 	<style>
 	.container {
 		margin-bottom: 2rem;
+	}
+	.ender {
+		margin-top: 1rem;
 	}
 	</style>
 </head>
@@ -26,40 +48,43 @@ title: Home
 
     <div id="content" class="container content">
 
-		<div class="intro">
+		<div class="intro" style="margin-bottom: 2rem;">
 			<h1 style="margin-bottom: 0;" class="main-title colorize">{{ site.title }}</h1>
 			<div class="lead">Learning &middot; Programming &middot; Simplifying</div>
-			<div class="author-info" style="margin-top: 2rem;">
-				<div class="with-avatar">
-					<div class="photo">
-						<img src="{{ "/assets/wayi_280x280.jpg" | prepend: site.baseurl | prepend: site.url }}" alt="Heiswayi Nrird">
-					</div>
-					<p>Hi. I am Wayi. I work with computers (mostly). Currently, I design, build and ship software at <a href="https://www.keysight.com/">Keysight Technologies</a> (Penang, MY).</p>
-					<p><small class="muted">PREVIOUS CAREERS</small><br>
-					ITD World &middot; IME Technologies &middot; CEDEC USM</p>
-					<p><small class="muted">EDUCATION</small><br>
-					BEng (Hons), Electronics Engineering, USM</p>
-					<div><small class="muted">THINGS I DO</small>
-					<ul>
-						<li>Design and code.</li>
-						<li>Contribute to some open source projects.</li>
-						<li>Play some computer games.</li>
-						<li>Move around and capture some landscape photographs.</li>
-						<li>Read some books.</li>
-						<li>Meditate virtually.</li>
-					</ul></div>
-					<p class="elsewhere">
-						<small class="muted">ELSEWHERE</small><br>
-						<a href="https://www.linkedin.com/in/heiswayi">LinkedIn</a> &middot; <a
-							href="https://github.com/heiswayi?tab=repositories">GitHub</a> &middot; <a
-							href="https://gist.github.com/heiswayi">Gist</a> &middot; <a
-							href="https://codepen.io/heiswayi/pens/public">CodePen</a> &middot; <a
-							href="https://jsfiddle.net/user/heiswayi/">JSFiddle</a> &middot; <a
-							href="https://unsplash.com/@heiswayi_nrird">Unsplash</a>
-					</p>
-				</div>
-			</div>
 		</div>
+
+			<div class="posts archives">
+			{% for post in site.posts %}
+
+			{% unless post.next %}
+				<h2 class="year colorize">{{ post.date | date: '%Y' }}</h2>
+			{% else %}
+				{% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
+				{% capture nyear %}{{ post.next.date | date: '%Y' }}{% endcapture %}
+				{% if year != nyear %}
+					<h2 class="year colorize">{{ post.date | date: '%Y' }}</h2>
+				{% endif %}
+			{% endunless %}
+
+				{% if post.tags contains "Project" %}
+					<div class="post-list-archives">
+						<div class="post-title">
+							<span class="post-date" title="Published on {{ post.date | date: '%B %d, %Y' }}">{{ post.date | date: "%d/%m" }}</span>
+							<span class="full-title"><a href="{{ post.url }}"><span class="project-label">Project</span>{{ post.title }}</a></span>
+						</div>
+					</div>
+				{% else %}
+					<div class="post-list-archives">
+						<div class="post-title">
+							<span class="post-date" title="Published on {{ post.date | date: '%B %d, %Y' }}">{{ post.date | date: "%d/%m" }}</span>
+							<span class="full-title"><a href="{{ post.url }}">{{ post.title }}</a></span>
+						</div>
+					</div>
+				{% endif %}
+
+			{% endfor %}
+
+			</div>
 
 	</div>
   </div>

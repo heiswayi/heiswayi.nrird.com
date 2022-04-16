@@ -1,30 +1,22 @@
-{% assign posts = '' %}
-{% assign about = '' %}
-{% assign projects = '' %}
-{% assign photos = '' %}
 {% assign home = '' %}
-{% assign resume = '' %}
+{% assign projects = '' %}
+{% assign about = '' %}
+{% assign photos = '' %}
 
 {% case page.url %}
-    {% when "/writing" %}
-        {% assign posts = 'active' %}
-    {% when "/about" %}
-        {% assign about = 'active' %}
-    {% when "/projects" %}
-        {% assign projects = 'active' %}
-    {% when "/photography" %}
-        {% assign photos = 'active' %}
     {% when "/" %}
         {% assign home = 'active' %}
-    {% when "/resume" %}
-        {% assign resume = 'active' %}
+    {% when "/projects" %}
+        {% assign jekyll-themes = 'active' %}
+    {% when "/about" %}
+        {% assign about = 'active' %}
+    {% when "/photos" %}
+        {% assign photos = 'active' %}
     {% else %}
-        {% assign posts = '' %}
-        {% assign about = '' %}
-        {% assign projects = '' %}
-        {% assign photos = '' %}
         {% assign home = '' %}
-        {% assign resume = '' %}
+        {% assign projects = '' %}
+        {% assign about = '' %}
+        {% assign photos = '' %}
 {% endcase %}
 
 <div class="header">
@@ -39,9 +31,9 @@
             <div class="site-nav">
                 <ul>
                     <li><a href="{{ "/" | prepend: site.baseurl | prepend: site.url }}" class="menu {{home}}">home</a></li>
-                    <li><a href="{{ "/writing" | prepend: site.baseurl | prepend: site.url }}" class="menu {{posts}}">writing</a></li>
                     <li><a href="{{ "/projects" | prepend: site.baseurl | prepend: site.url }}" class="menu {{projects}}">projects</a></li>
-                    <li><a href="{{ "/photography" | prepend: site.baseurl | prepend: site.url }}" class="menu {{photos}}">photos</a></li>
+                    <li><a href="{{ "/about" | prepend: site.baseurl | prepend: site.url }}" class="menu {{about}}">about</a></li>
+                    <li><a href="{{ "/photos" | prepend: site.baseurl | prepend: site.url }}" class="menu {{photos}}">photos</a></li>
                 </ul>
             </div>
         </nav>
