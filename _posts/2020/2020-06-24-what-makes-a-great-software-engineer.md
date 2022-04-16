@@ -5,9 +5,7 @@ description: Engineering values that make a software engineer becomes a great on
 tags: [Software Engineering, Engineering Values]
 ---
 
-> A software engineer is a person who applies the principles of software engineering to the design, development, maintenance, testing and evaluation of computer software. (Wikipedia)
-
-Anyone with sufficient training and dedication can become a software engineer. But to become a **great** software engineer, there are more than just training and dedication.
+Definition from Wikipedia, _"a software engineer is a person who applies the principles of software engineering to the design, development, maintenance, testing and evaluation of computer software"_. Anyone with sufficient training and dedication can become a software engineer. But to become a **great** software engineer, there are more than just training and dedication.
 
 
 

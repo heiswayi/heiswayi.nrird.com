@@ -13,7 +13,7 @@ Lately, I have been doing frontend development using Angular Framework. Sometime
 
 Angular project files should be organized into a proper folder structure that is easy to scale.
 
-Example of organized folder structure:
+Example of an organized folder structure:
 
 ```
 angular-project
@@ -39,7 +39,7 @@ angular-project
 
 As you can see, we have been splitting the project structure into three modules; **core**, **shared** and **feature module**.
 
-Here the full project structure (folders + files):
+Example of a full project structure (folders + files):
 
 ```
 angular-project
@@ -232,7 +232,7 @@ export class SharedModule {}
 
 Page URL: [https://angular.io/guide/styleguide](ttps://angular.io/guide/styleguide)
 
-Angular Coding Style Guide provides very good explanation if you are curious on "why".
+Angular Coding Style Guide provides very good explanation if you are curious on the "why" part.
 
 
 
@@ -293,15 +293,8 @@ this.http.get('/userlist')
 ```
 
 
+### 8. Take care of the code linting
 
-### 8. Minimize use of logic in HTML templates
-
-Using logic in HTML templates may introduce more complexity and makes the code less maintainability as the code becomes hard to adapt the change that comes it quickly.
-
-
-
-### 9. Take care of code linting
-
-- Use `ng lint` command to check for any code linting error and ensure that we don't have any error.
-- If a certain linting rule does not apply, we should update `tslint.json` file instead of repetitively use comments to disable the linting error checking intellisense.
-- Always tidy up the code - TypeScript, HTML and SCSS.
+- Use `ng lint` command to check/review for any code linting error and ensure that we fix it when there is any.
+- If a certain linting rule does not apply, we should update `tslint.json` file instead of repetitively use in-code comments to disable the linting error checking intellisense.
+- Always tidy up the code - TypeScript, HTML and SCSS. Simple!

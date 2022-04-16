@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Creating basic MSI-based installer using WiX Toolset
+title: Creating a basic MSI-based installer using WiX Toolset
 description: This is how I created a basic MSI setup for my app installer using WiX Toolset.
 tags: [WiX Toolset, Windows Installer, Programming]
 ---

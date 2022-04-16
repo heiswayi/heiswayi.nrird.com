@@ -92,7 +92,7 @@ tags: [Colors]
 }
 </style>
 
-This color palette contains a basic set of colors to get started for harmony design. This set is _redefined_ to work better in both light and dark theme of the design.
+This color palette contains a basic set of colors to get started for a harmony design. This set is _redefined_ to work better in both light and dark theme of the design.
 
 <section class="blue hue">
     <div class="light-blue color">
