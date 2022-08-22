@@ -5,7 +5,7 @@ description: Event Bus provides a simple communication between Angular component
 tags: [Angular, TypeScript, Best Practices, Programming]
 ---
 
-Event Bus Service enables intercomponent communication within Angular project using `Subject` and `Subscription` from RxJS.
+Event Bus enables a simple intercomponent communication within Angular project using `Subject` and `Subscription` from RxJS.
 
 ### Event Bus Service
 
@@ -85,7 +85,7 @@ export class AppComponent {
 File: _other.component.ts_
 
 ```ts
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { EventBusService, Events } from './services/event-bus.service';
 
@@ -96,7 +96,7 @@ import { EventBusService, Events } from './services/event-bus.service';
 })
 export class OtherComponent implements OnInit {
 
-  private _sub$: Subscription;
+  private _eventBusSub: Subscription;
   dataToShow: any;
 
   constructor(
@@ -104,9 +104,13 @@ export class OtherComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this._sub$ = this.eventBusService.on(Events.exampleEvent1, (data: any) => {
+    this._eventBusSub = this.eventBusService.on(Events.exampleEvent1, (data: any) => {
       this.dataToShow = data;
     });
+  }
+
+  ngOnDestroy() {
+    if (this._eventBusSub) { this._eventBusSub.unsubscribe(); }
   }
 
 }
