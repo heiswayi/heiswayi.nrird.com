@@ -1,19 +1,16 @@
+# frozen_string_literal: true
+
 Gem::Specification.new do |spec|
 	spec.name          = "heiswayi.nrird.com"
-	spec.version       = "2020.0.0"
+	spec.version       = "22.8.28"
 	spec.authors       = ["Heiswayi Nrird"]
-    spec.email         = ["hnrird@gmail.com"]
-    
-	spec.summary       = "Heiswayi Nrird's Website"
+	spec.email         = ["hnrird@gmail.com"]
+  
+	spec.summary       = "Jekyll source code for https://heiswayi.nrird.com site"
 	spec.homepage      = "https://heiswayi.nrird.com"
 	spec.license       = "MIT"
-
-	spec.metadata["plugin_type"] = "theme"
-
-	spec.files         = `git ls-files -z`.split("\x0").select { |f| f.match(%r!^(assets|_layouts|_includes|_sass|(LICENSE|README)((\.(txt|md|markdown)|$)))!i) }
-
-	spec.add_runtime_dependency "jekyll", "~> 3.5"
-
-	spec.add_development_dependency "bundler", "~> 1.15"
-	spec.add_development_dependency "rake", "~> 12.0"
-end
+  
+	spec.files         = `git ls-files -z`.split("\x0").select { |f| f.match(%r!^(assets|_layouts|_includes|_sass|LICENSE|README|_config\.yml)!i) }
+  
+	spec.add_runtime_dependency "jekyll", "~> 3.3"
+  end  

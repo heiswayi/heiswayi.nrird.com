@@ -4,12 +4,12 @@
     <div class="light-theme-link">(<a href="" onclick="toggleTheme('light'); return false;">disable dark mode</a>)</div>
     <div class="dark-theme-link">(<a href="" onclick="toggleTheme('dark'); return false;">enable dark mode</a>)</div>
     <div class="misc-link">
-      <a href="{{ '/' | prepend: site.baseurl | prepend: site.url }}">home</a>
-      &middot; <a href="{{ '/contact' | prepend: site.baseurl | prepend: site.url }}">contact</a>
-      &middot; <a href="{{ '/disclaimer' | prepend: site.baseurl | prepend: site.url }}">disclaimer</a>
-      {% if site.show_tags %} &middot; <a href="{{ '/tags' | prepend: site.baseurl | prepend: site.url }}">tags</a>{%
+      <a href="{{ '/' | prepend: site.baseurl }}">home</a>
+      &middot; <a href="{{ '/contact' | prepend: site.baseurl }}">contact</a>
+      &middot; <a href="{{ '/disclaimer' | prepend: site.baseurl }}">disclaimer</a>
+      {% if site.show_tags %} &middot; <a href="{{ '/tags' | prepend: site.baseurl }}">tags</a>{%
       endif %}
-      &middot; <a href="{{ '/feed.xml' | prepend: site.baseurl | prepend: site.url }}">rss</a>
+      &middot; <a href="{{ '/feed.xml' | prepend: site.baseurl }}">rss</a>
       &middot; <a href="#top" class="back-to-top-anchor">back-to-top</a>
     </div>
     &copy; 2015-{{ site.time | date: "%Y" }} Heiswayi Nrird<br><br>

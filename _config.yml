@@ -4,7 +4,7 @@ tagline                 : "Heiswayi Nrird - Software Engineer" # jekyll-seo-tag
 description             : "Learning · Programming · Simplifying"
 keywords                : "frontend developer, ux designer, human-factor engineering, open source, photography, programming"
 logo                    : "/assets/cover.gif" # jekyll-seo-tag
-version                 : "20220311"
+version                 : "22.8.28"
 
 # SITE OWNERSHIP VERIFICATIONS
 webmaster_verifications:
@@ -16,8 +16,7 @@ webmaster_verifications:
   wot                   : "5cf878109d0d39f281fd"
 
 # SITE URL
-url                     : https://heiswayi.nrird.com # main url, jekyll-seo-tag
-baseurl                 : null # for github-pages only
+baseurl                 : "" # main url, jekyll-seo-tag
 
 # AUTHOR INFO
 author:
@@ -72,7 +71,6 @@ exclude:
   - Gemfile.lock
   - "*.gemspec"
   - "*.psd"
-  - logo.png
 
 compress_html:
   clippings             : all
@@ -90,12 +88,4 @@ sass:
 
 plugins:
   - jekyll-sitemap
-  - jekyll-autoprefixer
-  - jekyll-purgecss
   - jekyll-seo-tag
-
-autoprefixer:
-  browsers:
-  - last 3 version
-
-css_dir: assets/css
