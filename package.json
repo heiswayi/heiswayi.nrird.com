@@ -3,10 +3,20 @@
   "version": "22.8.28",
   "description": "Jekyll source code for https://heiswayi.nrird.com site",
   "main": "index.js",
-  "devDependencies": {},
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^5.1.0",
+    "sass": "^1.54.5"
+  },
   "scripts": {
     "jekyll-build": "bundle exec jekyll build",
-    "jekyll-serve": "bundle exec jekyll serve --watch"
+    "jekyll-serve": "bundle exec jekyll serve --watch",
+    "finalize-css": "gulp compile-scss",
+    "build": "npm run jekyll-build && npm run finalize-css",
+    "serve": "npm run jekyll-serve"
   },
   "repository": {
     "type": "git",
