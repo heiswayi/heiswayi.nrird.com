@@ -21,5 +21,5 @@ gulp.task('compile-scss', () => {
         .pipe(rename({
             dirname: destDir
         }))
-        .pipe(gulp.dest(baseDir));
+        .pipe(gulp.dest('.'));
 });
