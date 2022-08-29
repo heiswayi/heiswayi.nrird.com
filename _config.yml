@@ -71,6 +71,7 @@ exclude:
   - Gemfile.lock
   - "*.gemspec"
   - "*.psd"
+  - Dockerfile
 
 compress_html:
   clippings             : all
