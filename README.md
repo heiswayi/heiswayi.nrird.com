@@ -25,5 +25,6 @@ npm run build
 
 If build and test-run using Docker:
 ```
-docker build .
+docker build . -t heiswayi-nrird-com
+docker container run -p 4000:4000 heiswayi-nrird-com
 ```
