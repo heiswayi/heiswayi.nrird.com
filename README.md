@@ -13,9 +13,9 @@ bundle exec jekyll build
 
 ### Optional prequisites
 
-- NodeJS (optional)
-- Gulp (optional)
-- Docker (optional)
+- NodeJS
+- Gulp
+- Docker
 
 Key commands:
 ```
