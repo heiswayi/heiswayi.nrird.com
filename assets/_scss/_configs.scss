@@ -1,9 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Londrina+Outline&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap');
 
 $__DEFAULT: 'Roboto', -apple-system, Helvetica, Arial, sans-serif;
-$monospace: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono",
-  "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
+// $monospace: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono",
+//   "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
+$monospace: 'JetBrains Mono', monospace;
 
 $font-body: $__DEFAULT;
 $font-heading: $__DEFAULT;
@@ -93,7 +95,7 @@ $font-year: $monospace;
   --year-color: #bbb;
   --breaker-color: #aaa;
   --spacer-border: #ddd;
-  --nav-active-color: #B10DC9;
+  --nav-active-color: #e83611;
   --header-border: #ddd;
   --header-bg: #fff;
   --code-color: #000;
@@ -130,6 +132,8 @@ $font-year: $monospace;
   --spacer-border: #333;
   --hrline-color: #333;
   --tag-border: #333;
+  --link-1: #2a9a9f;
+  --link-2: #2a9a9f;
   --link-hover-color: #000;
   --postdate-color: #444;
   --postlabel-border: #333;
@@ -162,5 +166,4 @@ $font-year: $monospace;
   --tagcloud-bg: #1e1e1e;
   --postlistdesc-color: #888;
   --postlistdesc-small-color: #444;
-  --nav-active-color: #F012BE;
 }
