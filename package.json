@@ -16,7 +16,10 @@
     "jekyll-serve": "bundle exec jekyll serve --watch",
     "finalize-css": "gulp compile-scss",
     "build": "npm run jekyll-build && npm run finalize-css",
-    "serve": "npm run jekyll-serve"
+    "serve": "npm run jekyll-serve",
+    "docker-build": "docker build . -t hnsite:latest",
+    "docker-run": "docker run --rm --name hnsite-container -p 4000:4000 hnsite:latest",
+    "docker": "npm run docker-build && npm run docker-run"
   },
   "repository": {
     "type": "git",

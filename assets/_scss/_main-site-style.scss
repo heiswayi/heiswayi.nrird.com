@@ -283,6 +283,7 @@ tbody tr:nth-child(odd) {
         font-family: $font-tagging;
         font-size: 0.8rem;
         border-radius: 3px;
+        line-height: 1.2;
     }
     .tagged a:hover {
         cursor: pointer;
