@@ -40,16 +40,14 @@ published: true
           <div class="spacer"></div>
         {% endif %}
 
-        <!-- <div class="post-date post-bottom-meta">{{ page.date | date: "%B %d, %Y" }} — By {{ site.author.name }}</div> -->
-
         {% if site.show_tags %}
         {% assign post = page %}
-          {% if post.tags.size > 0 %}
+        {% if post.tags.size > 0 %}
 
           {% assign tags_content = "" %}
           {% for post_tag in post.tags %}
             {% capture tags_content_temp %}
-              {{ tags_content }}<a href="{{ site.url }}{{ site.baseurl }}/tags#{{ post_tag | slugify }}"><i class="fa fa-hashtag muted" aria-hidden="true"></i><span class="hidden">#</span>{{ post_tag | replace: "#", "sharp" | slugify | downcase }}</a>
+              {{ tags_content }}<a href="{{ site.baseurl }}/tags#{{ post_tag | replace: '#', 'sharp' | slugify | downcase }}"><i class="fa fa-hashtag muted" aria-hidden="true"></i><span class="hidden">#</span>{{ post_tag | replace: "#", "sharp" | slugify | downcase }}</a>
             {% endcapture %}
             {% assign tags_content = tags_content_temp %}
           {% endfor %}

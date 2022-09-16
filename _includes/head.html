@@ -2,10 +2,10 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="wot-verification" content="{{ site.webmaster_verifications.wot }}"/>
 
 {% seo %}
 
 <link rel="alternate" type="application/rss+xml" title="RSS" href="{{ '/feed.xml' | prepend: site.baseurl }}">
 <link rel="shortcut icon" type="image/x-icon" href="{{ '/favicon.ico' | prepend: site.baseurl }}">
-<meta name="wot-verification" content="{{ site.webmaster_verifications.wot }}"/>
-<link rel="stylesheet" href="{{ "/assets/css/main.css" | prepend: site.baseurl }}?{{ site.version }}.{{ site.time | date: "%d%H%M"}}">
+<link rel="stylesheet" href="{{ '/assets/css/main.css' | prepend: site.baseurl }}?{{ site.version }}.{{ site.time | date: '%d%H%M' }}">

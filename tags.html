@@ -25,7 +25,7 @@ title: Tags
 {% if tags %}
 <div class="tag-cloud tag-cloud-small" id="Tags">
   {% for tag in tags %}
-    <a class="tag-anchor" href="#{{ tag | slugify }}"><span class="hidden">#</span>{{ tag | replace: "#", "sharp" | slugify | downcase }}</a>
+    <a class="tag-anchor" href="#{{ tag | replace: '#', 'sharp' | slugify | downcase }}"><span class="hidden">#</span>{{ tag | replace: "#", "sharp" | slugify | downcase }}</a>
   {% endfor %}
 </div>
 {% endif %}
@@ -34,28 +34,28 @@ title: Tags
   {% for tag in tags %}
 
 	<style>
-	#{{ tag | slugify }} {
+	#{{ tag | replace: '#', 'sharp' | slugify | downcase }} {
 		transition: opacity 0.5s ease-out;
     	opacity: 0;
     	height: 0;
     	overflow: hidden;
 	}
 
-	#{{ tag | slugify }}:target {
+	#{{ tag | replace: '#', 'sharp' | slugify | downcase }}:target {
 		opacity: 1;
     	height: auto;
 	}
 	</style>
 
-	<div id="{{ tag | slugify }}">
-    <h2 class="year"><span class="mark">#</span>{{ tag | replace: "#", "sharp" | slugify | downcase }}</h2>
+	<div id="{{ tag | replace: '#', 'sharp' | slugify | downcase }}">
+    <h2 class="year" style="padding-top: 100px;"><span class="mark">#</span>{{ tag | replace: "#", "sharp" | slugify | downcase }}</h2>
 
     {% for post in site.posts %}
     {% if post.tags contains tag %}
 
     <div class="post-list">
 	    <div class="post-list-title"><a href="{{ post.url }}">{{ post.title }}</a></div>
-        <div class="post-list-desc">{{ post.description }} <small>— {{ post.date | date: "%Y.%m.%d" }}</small></div>
+        <!-- <div class="post-list-desc">{{ post.description }} <small>— {{ post.date | date: "%Y·%m·%d" }}</small></div> -->
     </div>
 
 		{% endif %}

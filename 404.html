@@ -1,89 +1,37 @@
 ---
 layout: compress
+published: true
+title: Error 404
 ---
 
-<!doctype html>
-
-<html lang="en">
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en" class="no-js" itemscope itemtype="http://schema.org/WebPage">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Error 404 | {{ site.title }}</title>
-    <meta name="description" content="{{ site.description }}">
-    <meta name="author" content="{{ site.author.name }}">
+    {% include head.html %}
 
     <style>
-        html,
-        body {
-            height: 100%;
-            margin: 0;
-        }
-
-        body {
-            -webkit-align-items: center;
-            -ms-flex-align: center;
-            align-items: center;
-            background: #fff;
-            display: -webkit-flex;
-            display: flex;
-            font-family: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono",
-  "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
-            color: #333;
-            font-size: 16px;
-            line-height: 1.6;
-        }
-
-        .container {
-            margin: 0 auto;
-            padding: 2em;
-            max-width: 32em;
-        }
-
-        h1 {
-            font-size: 2.5em;
-        }
-
-        a {
-            text-decoration: none;
-            color: #369;
-        }
-
-        a:hover {
-            background: #369;
-            color: #fff;
-        }
-
-        .logo {
-            display: block;
-        }
-
-        .dot-red {
-            color: #FF4136;
-        }
-
-        .dot-yellow {
-            color: #FFDC00;
-        }
-
-        .dot-green {
-            color: #2ECC40;
-        }
+    body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    a {
+        border-bottom: none;
+    }
     </style>
-
-    <!--[if lt IE 9]>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
-    <![endif]-->
 </head>
 
 <body>
-    <div class="container">
-        <div class="ender"><span class="dot-red" aria-hidden="true">/</span><span class="dot-yellow"
-                aria-hidden="true">\</span><span class="dot-green" aria-hidden="true">/</span></div>
-        <h3>Error 404 - Page not found</h3>
-        <p>Sorry, I've misplaced that URL, or it's pointing to something that doesn't exist. 😞 Head back home to try
-            finding it again.</p>
-        <p><a href="{{ "/" | prepend: site.baseurl }}">Head back home &rarr;</a></p>
+    <div class="container centerize">
+        <h1 class="colorize">{{ site.title }}</h1>
+        <h2>Error 404 - Page not found</h2>
+        <p>Sorry, I've misplaced that URL, or it's pointing to something that doesn't exist. 😞<br>
+            Head back home to try finding it again.</p>
+        <p><a href="{{ '/'' | prepend: site.baseurl }}">&larr; Head back home</a></p>
     </div>
 </body>
 
