@@ -15,7 +15,7 @@ I have been working with Windows-based installation development for some time an
 
 ### Example screenshot
 
-{% include figure.html src="assets/images/9RPzlsd.png" caption="Installer UI - welcome dialog" %}
+{% include image.html src="assets/images/9RPzlsd.png" caption="Installer UI - welcome dialog" %}
 
 
 
@@ -132,7 +132,7 @@ Below is the script for my primary WiX file to create the MSI installer package.
 - Custom upgrade dialog
 - Custom install dir dialog (for Desktop shortcut option checkbox)
 
-{% include figure.html src="assets/images/FPHfm08.png" caption="With Create Desktop shortcut option" %}
+{% include image.html src="assets/images/FPHfm08.png" caption="With Create Desktop shortcut option" %}
 
 These are some **extra features other than the defaults** that have been implemented into the script:
 
@@ -428,9 +428,9 @@ File name: `Product.wxs`
 
 ### More example screenshots
 
-{% include figure.html src="assets/images/sXeMVyS.png" caption="License agreement dialog" %}
+{% include image.html src="assets/images/sXeMVyS.png" caption="License agreement dialog" %}
 
-{% include figure.html src="assets/images/WaHqBhg.png" caption="When existing version already installed - upgrade dialog" %}
+{% include image.html src="assets/images/WaHqBhg.png" caption="When existing version already installed - upgrade dialog" %}
 
 
 
@@ -515,7 +515,7 @@ Here's the final project structure after I run `MakeInstaller.bat` script:
 
 Here's the example screenshot showing the installation progress dialog after I run the `.msi` file and proceed with the installation:
 
-{% include figure.html src="assets/images/DZAhwKu.png" caption="Installation progress dialog" %}
+{% include image.html src="assets/images/DZAhwKu.png" caption="Installation progress dialog" %}
 
 
 

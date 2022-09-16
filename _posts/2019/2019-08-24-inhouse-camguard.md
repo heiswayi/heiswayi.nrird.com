@@ -13,7 +13,7 @@ I created _this Inhouse Camguard app_ few months ago in my spare time to experim
 
 ### Screenshot
 
-{% include figure.html src="assets/images/1vAwAmW.png" caption="Inhouse Camguard 1.0" %}
+{% include image.html src="assets/images/1vAwAmW.png" caption="Inhouse Camguard 1.0" %}
 
 
 

@@ -7,7 +7,7 @@ tags: [JavaScript, GitHub API, Open Source]
 
 ### Listing webpage for my snippets on GitHub Gist
 
-{% include figure.html src="assets/images/PhFnkj1.png" %}
+{% include image.html src="assets/images/PhFnkj1.png" %}
 
 <a href="https://heiswayi.github.io/gist/" class="button big">Live Demo</a> <a href="https://github.com/heiswayi/gist" class="button big">Source Code on GitHub</a>
 
@@ -15,7 +15,7 @@ tags: [JavaScript, GitHub API, Open Source]
 
 ### Listing webpage for my repositories on GitHub
 
-{% include figure.html src="assets/images/JYGyS2m.png" %}
+{% include image.html src="assets/images/JYGyS2m.png" %}
 
 <a href="https://heiswayi.github.io/repo/" class="button big">Live Demo</a> <a href="https://github.com/heiswayi/repo" class="button big">Source Code on GitHub</a>
 

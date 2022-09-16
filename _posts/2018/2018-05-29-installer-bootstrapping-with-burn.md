@@ -13,7 +13,7 @@ tags: [WiX Toolset, Windows Installer, Programming]
 
 ### Example screenshot of my setup.exe
 
-{% include figure.html src="assets/images/G6mL3rE.png" caption="Bootstrapper dialog UI" %}
+{% include image.html src="assets/images/G6mL3rE.png" caption="Bootstrapper dialog UI" %}
 
 
 
@@ -136,9 +136,9 @@ File name: `MakeBootstrapper.bat`
 
 ### Example screenshots of my custom bootstrapper dialogs
 
-{% include figure.html src="assets/images/0dMOkiD.png" caption="Bootstrapper installing the packages" %}
+{% include image.html src="assets/images/0dMOkiD.png" caption="Bootstrapper installing the packages" %}
 
-{% include figure.html src="assets/images/3Ou5t8d.png" caption="When user cancelled the installation" %}
+{% include image.html src="assets/images/3Ou5t8d.png" caption="When user cancelled the installation" %}
 
 
 

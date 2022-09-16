@@ -18,7 +18,7 @@ And as you grow, I pray you'll know<br>
 I love you so.
 
 {%
-    include figure.html 
+    include image.html 
     src="assets/images/dear-mawar-allyssa-growing-old-comic.jpg" 
     caption="Growing Old by Beardo Comics - Dan Dougherty"
 %}

@@ -13,7 +13,7 @@ Indoor Temperature Monitor is a simple DIY project based on Arduino, a .NET app 
 
 Indoor Temperature Monitor is a simple GUI app written in .NET C# and WPF. This application uses [OxyPlot](http://www.oxyplot.org/) library to plot the graph that reads temperature values sent by Arduino board using [serial port](https://msdn.microsoft.com/en-us/library/system.io.ports.serialport) connection. The background color of the current temperature will automatically change based on a certain temperature range. The temperature reading will be logged into a CSV file for a certain interval of time.
 
-{% include figure.html src="assets/images/8CPtSVg.png" caption="IndoorTempMonitor - simple GUI app written .NET C# and WPF" %}
+{% include image.html src="assets/images/8CPtSVg.png" caption="IndoorTempMonitor - simple GUI app written .NET C# and WPF" %}
 
 <a href="https://github.com/heiswayi/IndoorTempMonitor" class="button big">Source Code on GitHub</a>
 
@@ -23,7 +23,7 @@ Indoor Temperature Monitor is a simple GUI app written in .NET C# and WPF. This 
 
 #### Arduino board setup with DS18B20
 
-{% include figure.html src="assets/images/9OlPFLG.png" caption="Graphical representation for DS18B20 with Arduino Uno" %}
+{% include image.html src="assets/images/9OlPFLG.png" caption="Graphical representation for DS18B20 with Arduino Uno" %}
 
 #### Arduino code
 

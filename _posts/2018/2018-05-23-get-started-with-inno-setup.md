@@ -39,7 +39,7 @@ iscc "path\to\myinstaller.iss"
 
 ### Example screenshot
 
-{% include figure.html src="assets/images/rodYZ00.png" caption="Installer welcome dialog" %}
+{% include image.html src="assets/images/rodYZ00.png" caption="Installer welcome dialog" %}
 
 
 
@@ -209,7 +209,7 @@ For other available flags, you can refer to [Inno Setup documentation here](http
 
 #### Example screenshot
 
-{% include figure.html src="assets/images/BeKgNvo.png" caption="Components-based installation dialog" %}
+{% include image.html src="assets/images/BeKgNvo.png" caption="Components-based installation dialog" %}
 
 #### Example of Inno Setup script
 

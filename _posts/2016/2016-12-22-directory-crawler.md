@@ -13,7 +13,7 @@ Directory Crawler is a simple command-line utility program that is written in .N
 
 ### Screenshot
 
-{% include figure.html src="assets/images/Re1267D.gif" caption="Animated example of the program" %}
+{% include image.html src="assets/images/Re1267D.gif" caption="Animated example of the program" %}
 
 
 
@@ -27,4 +27,4 @@ DirectoryCrawler.exe /targetdir=<PATH_TO_TARGET_FOLDER>
 
 Example result (screenshot):
 
-{% include figure.html src="assets/images/qaUZ9n3.png" %}
+{% include image.html src="assets/images/qaUZ9n3.png" %}

@@ -13,13 +13,13 @@ Mini App Killer is a simple utility program I wrote in .NET C# that will sit in 
 
 ### Screenshots
 
-{% include figure.html src="assets/images/z5hJFH8.png" caption="Listing all running applications" %}
+{% include image.html src="assets/images/z5hJFH8.png" caption="Listing all running applications" %}
 
-{% include figure.html src="assets/images/TJG1sV1.png" caption="To kill the selected running application/process" %}
+{% include image.html src="assets/images/TJG1sV1.png" caption="To kill the selected running application/process" %}
 
-{% include figure.html src="assets/images/CxYg1gU.png" caption="Customize filter..." %}
+{% include image.html src="assets/images/CxYg1gU.png" caption="Customize filter..." %}
 
-{% include figure.html src="assets/images/jHb3HqI.png" caption="List of processes once filtered by the process name" %}
+{% include image.html src="assets/images/jHb3HqI.png" caption="List of processes once filtered by the process name" %}
 
 
 

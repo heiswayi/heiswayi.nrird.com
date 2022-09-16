@@ -18,21 +18,21 @@ Here is a remake version of [jpmik's Asynchronously Execute PowerShell Scripts](
 
 ### Screenshots
 
-{% include figure.html src="assets/images/jwH7z94.png" caption="Loading all preset scripts" %}
+{% include image.html src="assets/images/jwH7z94.png" caption="Loading all preset scripts" %}
 
 During application startup or adding/removing preset script will display this Loader overlay to show that the application is loading/reloading all preset script files from `presets` folder.
 
-{% include figure.html src="assets/images/QIiIiPb.png" caption="Application UI once finished loading preset scripts" %}
+{% include image.html src="assets/images/QIiIiPb.png" caption="Application UI once finished loading preset scripts" %}
 
-{% include figure.html src="assets/images/aumSwRz.png" caption="Example of executing PowerShell script from selected preset script" %}
+{% include image.html src="assets/images/aumSwRz.png" caption="Example of executing PowerShell script from selected preset script" %}
 
-{% include figure.html src="assets/images/wkeT8Yo.png" caption="Example of selecting output lines for exporting to a text file" %}
+{% include image.html src="assets/images/wkeT8Yo.png" caption="Example of selecting output lines for exporting to a text file" %}
 
-{% include figure.html src="assets/images/cJBS41G.png" caption="Example of saving current script as new preset script" %}
+{% include image.html src="assets/images/cJBS41G.png" caption="Example of saving current script as new preset script" %}
 
-{% include figure.html src="assets/images/DGwi2J7.png" caption="Create a new name for the script" %}
+{% include image.html src="assets/images/DGwi2J7.png" caption="Create a new name for the script" %}
 
-{% include figure.html src="assets/images/D6rnHDz.png" caption="Importing script from PowerShell script file (.ps1)" %}
+{% include image.html src="assets/images/D6rnHDz.png" caption="Importing script from PowerShell script file (.ps1)" %}
 
 
 

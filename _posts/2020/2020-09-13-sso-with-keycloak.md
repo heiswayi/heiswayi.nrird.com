@@ -36,7 +36,7 @@ A Keycloak _realm_ is like a namespace that allows you to manage all of your met
 
 Following image illustrates the architecture of Keycloak software;
 
-{% include figure.html src="assets/images/c7irtZ4.png" caption="Credit: Courtesy of Thomas Darimont" %}
+{% include image.html src="assets/images/c7irtZ4.png" caption="Credit: Courtesy of Thomas Darimont" %}
 
 
 
@@ -46,7 +46,7 @@ Following image illustrates the architecture of Keycloak software;
 
 Following image illustrates how a user is authenticated when accessing the frontend application;
 
-{% include figure.html src="assets/images/g5eZLph.png" caption="Credit: Courtesy of Thomas Darimont" %}
+{% include image.html src="assets/images/g5eZLph.png" caption="Credit: Courtesy of Thomas Darimont" %}
 
 #### SSO Integration
 
@@ -54,13 +54,13 @@ Web SSO is the most useful feature where you login once to access all applicatio
 
 Following image illustrates the authentication flow of a logged-in user accessing another frontend application;
 
-{% include figure.html src="assets/images/0ug7eMI.png" caption="Credit: Courtesy of Thomas Darimont" %}
+{% include image.html src="assets/images/0ug7eMI.png" caption="Credit: Courtesy of Thomas Darimont" %}
 
 #### How backend services work with Keycloak
 
 Following image illustrates the flow on how the backend services work with Keycloak to validate the access token;
 
-{% include figure.html src="assets/images/Fi77aj0.png" caption="Credit: Courtesy of Thomas Darimont" %}
+{% include image.html src="assets/images/Fi77aj0.png" caption="Credit: Courtesy of Thomas Darimont" %}
 
 
 
@@ -87,11 +87,11 @@ Following are the available types of token when authenticating with Keycloak:
 
 #### Keycloak Admin Console
 
-{% include figure.html src="assets/images/nIYaSsl.png" caption="Keycloak Admin Console (v11)" %}
+{% include image.html src="assets/images/nIYaSsl.png" caption="Keycloak Admin Console (v11)" %}
 
 #### Keycloak User Account Console
 
-{% include figure.html src="assets/images/QN5i0dn.png" caption="Keycloak User Account Console (v11)" %}
+{% include image.html src="assets/images/QN5i0dn.png" caption="Keycloak User Account Console (v11)" %}
 
 
 

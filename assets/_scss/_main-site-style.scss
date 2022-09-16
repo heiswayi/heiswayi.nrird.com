@@ -184,7 +184,7 @@ figure {
     img {
         margin: 0 auto 0.2rem auto;
         border: 1px solid var(--figure-img-border);
-        box-shadow: none;
+        // box-shadow: none;
         background-color: var(--figure-img-bg);
     }
     figcaption {

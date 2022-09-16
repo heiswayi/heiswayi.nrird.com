@@ -10,7 +10,7 @@ tags: [C#, WPF, MVVM, Programming]
 MVVM is stand for Model-View-ViewModel. It's one of popular design patterns when working with .NET C# and WPF.
 
 {%
-    include figure.html 
+    include image.html 
     src="assets/images/kLUzCAs.gif" 
     caption="MVVM architecture"
 %}
@@ -203,7 +203,7 @@ The code above contains 3 ComboBox elements. The first ComboBox is for `enum`-ty
 #### Example of UI snapshot
 
 {%
-    include figure.html 
+    include image.html 
     src="assets/images/OjRjTdJ.png" 
     caption="UI snapshot"
 %}
@@ -526,7 +526,7 @@ Here's the final code for MainWindow.xaml file after I included the _View_ from 
 ### Final result
 
 {%
-    include figure.html 
+    include image.html 
     src="assets/images/LlC4BmP.png" 
     caption="Cascaded ComboBox demo"
 %}

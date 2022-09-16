@@ -61,7 +61,7 @@ This should be a way better than using the standard Markdown syntax. **However, 
 
 The best way to insert the captioned image is to use the Liquid syntax. All I need to do is **to implement the [Liquid template](https://jekyllrb.com/docs/templates/) once**, and then I can just use the [**include**](https://jekyllrb.com/docs/includes/) tag each time I want to insert the captioned image in a blog post. Here's how I created the figure caption template in my Jekyll source;
 
-I created a file called `figure.html` and placed it inside `_includes` folder. Here's the source code for `figure.html` file:
+I created a file called `image.html` and placed it inside `_includes` folder. Here's the source code for `image.html` file:
 
 {% raw %}
 ```html
@@ -101,7 +101,7 @@ And this is how I use the Liquid **include** tag in my blog post when I need to 
 {% raw %}
 ```liquid
 {%
-    include figure.html 
+    include image.html 
     src="assets/images/7yOUCeG.jpg" 
     caption="Fossil Creek Reservoir, Fort Collins, CO"
 %}
@@ -111,7 +111,7 @@ And this is how I use the Liquid **include** tag in my blog post when I need to 
 Demo:
 
 {%
-    include figure.html 
+    include image.html 
     src="assets/images/7yOUCeG.jpg" 
     caption="Fossil Creek Reservoir, Fort Collins, CO"
 %}
@@ -123,7 +123,7 @@ Sometimes it could be as complex as below:
 {% raw %}
 ```liquid
 {%
-    include figure.html 
+    include image.html 
     src="assets/images/7yOUCeG.jpg" 
     caption="Fossil Creek Reservoir, Fort Collins, CO (<a href='https://heiswayi.nrird.com/photography'>source</a>)"
     href="https://heiswayi.nrird.com/photography"
@@ -134,7 +134,7 @@ Sometimes it could be as complex as below:
 Demo:
 
 {%
-    include figure.html 
+    include image.html 
     src="assets/images/7yOUCeG.jpg" 
     caption="Fossil Creek Reservoir, Fort Collins, CO (<a href='https://heiswayi.nrird.com/photography'>source</a>)"
     href="https://heiswayi.nrird.com/photography"
