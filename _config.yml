@@ -101,6 +101,6 @@ defaults:
     values:
       sitemap:         false
   - scope:
-      path:            unsplash.html
+      path:            markdown-test.md
     values:
       sitemap:         false
