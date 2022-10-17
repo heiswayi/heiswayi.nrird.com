@@ -1,10 +1,10 @@
 ---
-layout: post
-title: Inspiration — Growing Old
+layout: page
+title: Dear Mawar Allyssa
 description: A sweet and inspiring comic dedicated to my beloved daughter, Mawar Allyssa about the feeling that I had when I'm growing old.
-tags: [Inspiration, Poem]
 ---
 
+Dear Mawar Allyssa,<br>
 My sweet girl, you are a blessing;<br>
 the most wonderful piece of my life<br>
 and the one person<br>
