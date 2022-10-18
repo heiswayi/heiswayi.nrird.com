@@ -16,7 +16,7 @@ The implementation consists of four functions:-
 - `password_needs_rehash()` - To check if a password meets the desired hash settings (algorithm, cost)
 - `password_get_info()` - To return information about the hash such as algorithm and cost
 
-> NOTE: `password_hash()` creates a new password hash using a strong one-way hashing algorithm and compatible with [**crypt()**](http://php.net/manual/en/function.crypt.php).
+> **NOTE**<br>`password_hash()` creates a new password hash using a strong one-way hashing algorithm and compatible with [**crypt()**](http://php.net/manual/en/function.crypt.php).
 
 
 

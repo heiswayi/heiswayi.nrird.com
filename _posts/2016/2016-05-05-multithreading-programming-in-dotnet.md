@@ -28,7 +28,6 @@ All the following code snippets have been tested on my PC with the following spe
 The `Thread` class is used for creating and manipulating a [thread](http://msdn.microsoft.com/en-us/library/windows/desktop/ms684841%28v=vs.85%29.aspx) in Windows.
 
 ```csharp
-Stopwatch sw = Stopwatch.StartNew();
 Thread[] t = new Thread[threadCount];
 for (int i = 0; i < threadCount; i++)
 {
@@ -43,8 +42,6 @@ foreach (var ct in t)
 {
     ct.Join();
 }
-sw.Stop();
-Console.WriteLine("Elapsed time: {0}ms", sw.ElapsedMilliseconds);
 ```
 
 #### ThreadPool class
@@ -52,7 +49,6 @@ Console.WriteLine("Elapsed time: {0}ms", sw.ElapsedMilliseconds);
 The `ThreadPool` class manages a group of threads in which tasks are added to a queue and automatically started when threads are created.
 
 ```csharp
-Stopwatch sw = Stopwatch.StartNew();
 using (CountdownEvent signaler = new CountdownEvent(threadCount))
 {
     for (int i = 0; i < threadCount; i++)
@@ -65,8 +61,6 @@ using (CountdownEvent signaler = new CountdownEvent(threadCount))
     }
     signaler.Wait();
 }
-sw.Stop();
-Console.WriteLine("Elapsed time: {0}ms", sw.ElapsedMilliseconds);
 ```
 
 #### Task class
@@ -74,7 +68,6 @@ Console.WriteLine("Elapsed time: {0}ms", sw.ElapsedMilliseconds);
 A `Task` represents asynchronous operation and is part of the [Task Parallel Library](http://msdn.microsoft.com/en-us/library/dd460717%28v=vs.110%29.aspx), a set of APIs for running tasks asynchronously and in parallel.
 
 ```csharp
-Stopwatch sw = Stopwatch.StartNew();
 Task[] taskList = new Task[threadCount];
 for (int i = 0; i < threadCount; i++)
 {
@@ -85,8 +78,6 @@ for (int i = 0; i < threadCount; i++)
     taskList[i].Start();
 }
 Task.WaitAll(taskList);
-sw.Stop();
-Console.WriteLine("Elapsed time: {0}ms", sw.ElapsedMilliseconds);
 ```
 
 #### BackgroundWorker class
@@ -94,7 +85,6 @@ Console.WriteLine("Elapsed time: {0}ms", sw.ElapsedMilliseconds);
 The `BackgroundWorker` class executes an operation on a separate thread.
 
 ```csharp
-Stopwatch sw = Stopwatch.StartNew();
 BackgroundWorker[] backgroundWorkerList = new BackgroundWorker[threadCount];
 using (CountdownEvent signaler = new CountdownEvent(threadCount))
 {
@@ -110,8 +100,6 @@ using (CountdownEvent signaler = new CountdownEvent(threadCount))
     }
     signaler.Wait();
 }
-sw.Stop();
-Console.WriteLine("Elapsed time: {0}ms", sw.ElapsedMilliseconds);
 ```
 
 #### Benchmark results
