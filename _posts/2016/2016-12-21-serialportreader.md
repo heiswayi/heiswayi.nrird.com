@@ -7,7 +7,7 @@ tags: [Programming, PowerShell, SerialPort, Scripting]
 
 ### Full source code ([Gist](https://gist.github.com/heiswayi/10b412aa96d3f35d85f5f8c2e0075a33))
 
-```ps1
+```powershell
 <#
 .SYNOPSIS
    Listens to and read data from a serial port (e.g. COM port)
