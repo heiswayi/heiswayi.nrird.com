@@ -177,27 +177,30 @@ img {
 figure {
     padding-top: 2rem;
     padding-bottom: 2rem;
-    padding-left: 2rem;
-    padding-right: 2rem;
-    margin-left: -2rem;
-    margin-right: -2rem;
-    background: repeating-linear-gradient(135deg, var(--figure-bg-1) 0, var(--figure-bg-1) 1%, var(--figure-bg-2) 0, var(--figure-bg-2) 50%) 0 / 20px 20px;
-    text-align: center;
+    // padding-left: 2rem;
+    // padding-right: 2rem;
+    // margin-left: -2rem;
+    // margin-right: -2rem;
+    margin: 0;
+    // background: repeating-linear-gradient(135deg, var(--figure-bg-1) 0, var(--figure-bg-1) 1%, var(--figure-bg-2) 0, var(--figure-bg-2) 50%) 0 / 20px 20px;
+    // text-align: center;
     img {
-        margin: 0 auto 0.2rem auto;
+        // margin: 0 0 0.2rem 0;
+        margin: 0;
         border: 1px solid var(--figure-img-border);
         // box-shadow: none;
-        background-color: var(--figure-img-bg);
+        // background-color: var(--figure-img-bg);
+        background: repeating-linear-gradient(135deg, var(--figure-bg-1) 0, var(--figure-bg-1) 1%, var(--figure-bg-2) 0, var(--figure-bg-2) 50%) 0 / 20px 20px;
     }
     figcaption {
         font-size: 0.9rem;
-        padding-left: 2rem;
-        padding-right: 2rem;
+        // padding-left: 2rem;
+        // padding-right: 2rem;
         line-height: 1.6;
         font-family: $font-figcaption;
         span {
             background-color: var(--figure-caption-bg);
-            padding: 0.2rem 0.5rem;
+            // padding: 0.2rem 0.5rem;
         }
         a:hover {
             cursor: pointer;
@@ -238,11 +241,10 @@ tbody tr:nth-child(odd) {
 .container {
     padding-left: 2rem;
     padding-right: 2rem;
-    max-width: 44rem;
+    // max-width: 44rem;
+    max-width: 1366px;
     z-index: 99;
     position: relative;
-    margin-left: auto;
-    margin-right: auto;
     background-color: var(--body-bg);
 }
 
@@ -430,13 +432,12 @@ blockquote p:last-child {
 }
 
 .footer {
-    margin: 1rem auto 2rem auto;
+    margin: 1rem 0 2rem 0;
     max-width: 28rem;
     z-index: 99;
     position: relative;
     padding-left: 2rem;
     padding-right: 2rem;
-    text-align: center;
 }
 
 .back {

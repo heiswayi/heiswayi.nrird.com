@@ -1,20 +1,20 @@
 <hr class="hidden-on-print" />
 <div class="footer">
   <div class="copyright">
-    <div class="light-theme-link">(<a href="" onclick="toggleTheme('light'); return false;">switch to light mode</a>)</div>
-    <div class="dark-theme-link">(<a href="" onclick="toggleTheme('dark'); return false;">switch to dark mode</a>)</div>
+    <div class="light-theme-link"><a href="" onclick="toggleTheme('light'); return false;">/switch-to-light-mode</a></div>
+    <div class="dark-theme-link"><a href="" onclick="toggleTheme('dark'); return false;">/switch-to-dark-mode</a></div>
     <div class="misc-link">
-      <a href="{{ '/' | prepend: site.baseurl }}">home</a>
-      &middot; <a href="{{ '/contact' | prepend: site.baseurl }}">contact</a>
-      &middot; <a href="{{ '/disclaimer' | prepend: site.baseurl }}">disclaimer</a>
-      {% if site.show_tags %} &middot; <a href="{{ '/tags' | prepend: site.baseurl }}">tags</a>{%
+      <a href="{{ '/' | prepend: site.baseurl }}">/home</a>
+      &middot; <a href="{{ '/contact' | prepend: site.baseurl }}">/contact</a>
+      &middot; <a href="{{ '/disclaimer' | prepend: site.baseurl }}">/disclaimer</a>
+      {% if site.show_tags %} &middot; <a href="{{ '/tags' | prepend: site.baseurl }}">/tags</a>{%
       endif %}
-      &middot; <a href="{{ '/feed.xml' | prepend: site.baseurl }}">rss</a>
-      &middot; <a href="#top" class="back-to-top-anchor">back-to-top &uarr;</a>
+      &middot; <a href="{{ '/feed.xml' | prepend: site.baseurl }}">/rss</a>
+      &middot; <a href="#top" class="back-to-top-anchor">/back-to-top &uarr;</a>
     </div>
     &copy; 2015-{{ site.time | date: "%Y" }} Heiswayi Nrird<br><br>
-    <!-- <div class="page-load"></div> -->
-    <!-- <div class="version">Site Build Version: jekyll.{{ site.version }}</div> -->
+    <div class="page-load"></div>
+    <div class="version">ver. {{ site.version }}</div>
   </div>
 </div>
 
@@ -72,7 +72,6 @@
     getTheme();
   });
 
-  /*
   window.addEventListener('load', () => {
     setTimeout(() => {
       const t = window.performance && performance.timing;
@@ -80,12 +79,11 @@
       if (t) {
         const timingStats = document.querySelector('.page-load');
         const loadTime = (t.loadEventEnd - t.navigationStart) / 1000;
-        let timingStatsHTML = `Page Load Time: ${round2(loadTime)} sec.`;
+        let timingStatsHTML = `page perf. ${round2(loadTime)} sec.`;
         timingStats.innerHTML = timingStatsHTML;
       }
     }, 0);
   });
-  */
 </script>
 
 {% include new-window-fix.html %}

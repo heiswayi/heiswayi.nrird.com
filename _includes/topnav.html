@@ -20,20 +20,14 @@
 {% endcase %}
 
 <div class="header">
-    {% if include.position == 'center' %}
-    <div class="container" style="justify-content: center;">
-    {% elsif include.position == 'wide-left' %}
     <div class="container" style="max-width: 100%; padding-left: 1rem; padding-right: 1rem;">
-    {% else %}
-    <div class="container">
-    {% endif %}
         <nav>
             <div class="site-nav">
                 <ul>
-                    <li><a href="{{ '/' | prepend: site.baseurl }}" class="menu {{home}}">home</a></li>
-                    <li><a href="{{ '/projects' | prepend: site.baseurl }}" class="menu {{projects}}">projects</a></li>
-                    <li><a href="{{ '/about' | prepend: site.baseurl }}" class="menu {{about}}">about</a></li>
-                    <li><a href="{{ '/photos' | prepend: site.baseurl }}" class="menu {{photos}}">photos</a></li>
+                    <li><a href="{{ '/' | prepend: site.baseurl }}" class="menu {{home}}">/home</a></li>
+                    <li><a href="{{ '/projects' | prepend: site.baseurl }}" class="menu {{projects}}">/projects</a></li>
+                    <li><a href="{{ '/about' | prepend: site.baseurl }}" class="menu {{about}}">/about</a></li>
+                    <li><a href="{{ '/photos' | prepend: site.baseurl }}" class="menu {{photos}}">/photos</a></li>
                 </ul>
             </div>
         </nav>
