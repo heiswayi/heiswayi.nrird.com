@@ -15,7 +15,7 @@ Encryption is the process of converting plaintext, or unencrypted data, into cip
 
 Decryption is the reverse process of encryption. It involves applying the same mathematical transformation to the ciphertext, using the appropriate decryption key, in order to convert it back into plaintext. This allows authorized users to access and read the original unencrypted data.
 
-PHP provides several built-in functions for performing encryption and decryption. The most commonly used ones are mcrypt_encrypt() and mcrypt_decrypt(), which use the libmcrypt library for encryption and decryption.
+PHP provides several built-in functions for performing encryption and decryption. The most commonly used ones are `mcrypt_encrypt()` and `mcrypt_decrypt()`, which use the libmcrypt library for encryption and decryption.
 
 Here is an example of how to use these functions to encrypt and decrypt data in PHP:
 
