@@ -133,12 +133,14 @@ p.warning {
 
 .box-container {
   width: 100%;
-  margin: 0 2rem;
+  margin: 0;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: flex-start;
   padding-bottom: 3rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
   gap: 1rem;
   .box {
     width: 16rem;
