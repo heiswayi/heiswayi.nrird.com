@@ -9,6 +9,11 @@ title: Projects
 
 <head>
 	{% include head.html %}
+	<style>
+	dl, ol, p, ul {
+		margin-bottom: 0;
+	}
+	</style>
 </head>
 
 <body>
@@ -19,12 +24,12 @@ title: Projects
 
 	{% include topnav.html %}
 
-    <div id="content" class="content">
-		<div class="container">
+    <div id="content" class="container content">
+		<div>
 			<h1 class="colorize">Projects</h1>
 		</div>
 
-		<div class="container box-section">
+		<div class="box-section">
 			<h3>Minimalist Jekyll Templates</h3>
 			<p><a href="https://jekyllrb.com/">Jekyll</a> is a popular static site generator written in Ruby. I have been using Jekyll for this site since 2015. In the meantime, I created some of minimalist Jekyll templates on my own and published them on GitHub.</p>
 		</div>
@@ -63,7 +68,7 @@ title: Projects
 			</div>
 		</div>
 
-		<div class="container box-section">
+		<div class="box-section">
 			<h3>PHP Scripts</h3>
 			<p>There are some mini projects or services that I developed using PHP scripts and use them personally.</p>
 			<dl class="project-list">
@@ -90,7 +95,7 @@ title: Projects
 			</dl>
 		</div>
 
-		<div class="container box-section">
+		<div class="box-section">
 			<h3>Misc. Stuffs</h3>
 			<dl class="project-list">
 				<dt><a href="https://dev.nrird.com/todo/">Todo (Bullet Journal)</a></dt>

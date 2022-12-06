@@ -241,11 +241,12 @@ tbody tr:nth-child(odd) {
 .container {
     padding-left: 2rem;
     padding-right: 2rem;
-    // max-width: 44rem;
-    max-width: 1366px;
+    max-width: 44rem;
+    // max-width: 1366px;
     z-index: 99;
     position: relative;
     background-color: var(--body-bg);
+    border-right: 1px solid var(--header-border);
 }
 
 .dot-red {
@@ -260,7 +261,7 @@ tbody tr:nth-child(odd) {
 
 .page,
 .post {
-    margin-bottom: 4em;
+    padding-bottom: 4em;
     font-size: 1rem;
     text-align: left;
     i.em {
@@ -638,4 +639,8 @@ ul.task-list {
             bottom: 1px !important;
         }
     }
+}
+
+.footer-hr {
+    margin-top: 0;
 }

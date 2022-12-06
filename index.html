@@ -29,9 +29,6 @@ title: Home
 <head>
 	{% include head.html %}
 	<style>
-	.container {
-		margin-bottom: 2rem;
-	}
 	.ender {
 		margin-top: 1rem;
 	}
@@ -44,7 +41,7 @@ title: Home
 
   <div class="wrap">
 
-	{% include topnav.html position='center' %}
+	{% include topnav.html %}
 
     <div id="content" class="container content">
 
@@ -53,7 +50,7 @@ title: Home
 			<div class="lead">{{ site.description }}</div>
 		</div>
 
-			<div class="posts archives">
+			<div class="posts archives" style="padding-bottom: 2rem;">
 			{% for post in site.posts %}
 
 				{% if post.tags contains "Project" %}
