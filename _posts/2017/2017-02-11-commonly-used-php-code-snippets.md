@@ -5,7 +5,7 @@ description: A compilation of (some) commonly used PHP code snippets that I have
 tags: [PHP, Programming]
 ---
 
-A few years ago I have been actively developing PHP apps, and most of them are built from scratch. Within those years, I have been using some of these PHP functions in most of my projects. Until today, some of them are still useful when I code some PHP apps.
+A few years ago, I was actively developing PHP apps, most of which were built from scratch. During those years, I used some of these PHP functions in most of my projects. Even today, some of them are still useful when I code PHP apps.
 
 
 
@@ -19,7 +19,7 @@ function hashUserPassword($salt, $password) {
 ?>
 ```
 
-Alternatively, you can check my previous post on [What you need to know about PHP native password hashing API](https://heiswayi.nrird.com/php-native-password-hashing-api).
+Alternatively, you can check my previous post on [How to use PHP native password hashing API](https://heiswayi.nrird.com/php-native-password-hashing-api).
 
 
 
@@ -360,6 +360,10 @@ function isValidUrl($url) {
 
 ```php
 <?php
+
+// UPDATE: 
+// mcrypt_encrypt and mcrypt_decrypt function have been DEPRECATED as of PHP 7.1.0 and REMOVED as of PHP 7.2.0. Alternatively, you should use openssl_encrypt or openssl_decrypt.
+
 // Encrypt a plain string.
 function encryptString($key, $string) {
     return base64_encode(mcrypt_encrypt(MCRYPT_RIJNDAEL_256, md5($key), $string, MCRYPT_MODE_CBC, md5(md5($key))));
@@ -371,6 +375,3 @@ function decryptString($key, $string) {
 }
 ?>
 ```
-
-{:.warning}
-**UPDATE:** `mcrypt_encrypt` and `mcrypt_decrypt` function have been DEPRECATED as of PHP 7.1.0 and REMOVED as of PHP 7.2.0. Alternatively, you should use [openssl_encrypt](https://www.php.net/manual/en/function.openssl-encrypt.php) or [openssl_decrypt](https://www.php.net/manual/en/function.openssl-decrypt.php).

@@ -5,9 +5,9 @@ description: This is how I created a simple CRUD-based web app for internal equi
 tags: [PHP, CRUD, AJAX, DataTables, jQuery, JavaScript, Programming]
 ---
 
-A couple of weeks ago I was asked to gather and compile a proper list of equipment that has been borrowed by other engineers/contractors who are working with my department. Unfortunately, the list that I had received is recorded in Excel file. So, whenever I need to check the status of the equipment, I have to wait those engineers/contractors to send me the updated list by email or through the shared drive. To me, this will be a quite tedious work.
+A few weeks ago, my department asked me to gather and compile a comprehensive list of equipment that has been borrowed by other engineers or contractors. Unfortunately, the list I received was recorded in an Excel file. This means that whenever I need to check the status of the equipment, I have to wait for the engineers or contractors to send me an updated list by email or through a shared drive. This can be quite tedious.
 
-So, I decided to create a web app for that. Instead of using Excel file, those engineers/contractors can just go to the web app and then update the equipment record or status. By doing this, anytime I need the latest list to do the audit, I can just simply export the data from the app. At the end, this is the outcome of how I spent my weekend.
+So, I decided to create a web app for this purpose. Instead of using an Excel file, the engineers and contractors can simply go to the web app to update the equipment record or status. This way, whenever I need the latest list for an audit, I can easily export the data from the app. This is how I spent my weekend and the result of my efforts.
 
 
 
@@ -25,11 +25,11 @@ The app name is **Equipment Tracking** or **Etrac** for short, and successfully 
 
 ### About Etrac
 
-Etrac is built from scratch in PHP using [DataTables](https://datatables.net/), jQuery and MySQL as its database. The UI is designed using [Bootstrap](http://getbootstrap.com/) and [Google-style theme](https://todc.github.io/todc-bootstrap/).
+Etrac is a custom-built PHP app that uses [DataTables](https://datatables.net/), jQuery, and MySQL as its database. The UI is designed with [Bootstrap](http://getbootstrap.com/) and a [Google-style theme](https://todc.github.io/todc-bootstrap/).
 
-I hosted Etrac on IIS7, in one of virtual machines and only can be accessed within the company's intranet. Since the app is running using IIS, I can use the session to capture user's Active Directory (AD) account that used the company network. So, I don't need to implement user authentication module here.
+I hosted Etrac on an IIS7 virtual machine, where it is only accessible within the company's intranet. Since the app is running on IIS, I can use the session to capture the user's Active Directory (AD) account, which is used on the company network. This means that I don't need to implement a user authentication module.
 
-Etrac also supports data exporting into PDF, Excel and CSV file.
+Etrac also supports exporting data to PDF, Excel, and CSV files.
 
 
 

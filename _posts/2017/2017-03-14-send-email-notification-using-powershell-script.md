@@ -5,13 +5,13 @@ description: Automate your task on sending email notification in Windows system 
 tags: [PowerShell, Programming]
 ---
 
-While working as a _Build and Release Engineer_, one of my job routines is to set up a software build automation in Windows system. There are a bunch of automation tools that have been developed internally by myself, and one that is commonly used a lot is to send email notification. So, the easiest way and lightweight to perform this task is to use PowerShell script. This is because I can simply modify or update the script to cater any kind of system environments or workflows. Some people don't like to install any notifier app in their PC, so they want almost anything to be sent into their email.
+As a Build and Release Engineer, one of my job responsibilities is to set up software build automation on Windows systems. I have developed a number of automation tools internally, and one that is frequently used is for sending email notifications. The easiest and most lightweight way to perform this task is to use a PowerShell script. This is because I can easily modify or update the script to fit various system environments or workflows. Some people don't like to install notification apps on their PCs, so they prefer to receive notifications via email.
 
 
 
 ### PowerShell script
 
-Here's how I wrote the script to be used as a tool for sending the email notification. It's not a full complete script used in my actual works, but from the snippet, you will get the idea on how it works.
+Here's how I wrote the script to be used as a tool for sending email notifications. It's not a full, complete script from my actual work, but the snippet should give you an idea of how it works.
 
 ```powershell
 # 1. SETTING UP NECESSARY PARAMETERS
@@ -107,7 +107,7 @@ Param
 # YOUR SCRIPT GOES HERE...
 ```
 
-Then, you can execute your PowerShell script using this way, depending on what kind of program you use to execute the command. Some programs may need you to provide the full path to the script file and the script parameters explicitly.
+You can execute your PowerShell script in different ways, depending on the program you use to run the command. Some programs may require you to provide the full path to the script file and its parameters explicitly.
 
 Example:
 
@@ -119,7 +119,7 @@ Example:
 
 ### Handling the PowerShell script in more proper way
 
-Sometimes, your PowerShell script may become complex and contains hundred lines of code. In this case, you might want to organize and separate them into multiple parameterized functions. The example snippet below will show you how it should be done:
+Sometimes, your PowerShell script may become complex and contain hundreds of lines of code. In this case, you may want to organize and separate it into multiple parameterized functions. The example snippet below shows how this can be done:
 
 ```powershell
 [CmdletBinding(SupportsShouldProcess=$true, ConfirmImpact='Medium')]

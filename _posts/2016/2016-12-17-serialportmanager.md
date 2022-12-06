@@ -5,7 +5,7 @@ description: A snippet of singleton class written in .NET C# for handling serial
 tags: [Programming, C#, SerialPort]
 ---
 
-_SerialPortManager.cs_ file contains a snippet of singleton class written in .NET C# that I wrote and used in some of my .NET projects to handle serial data communication, especially for the projects that required interfacing with [Arduino](https://www.arduino.cc/) board. This class basically is a wrapper written on top of [System.IO.Ports.SerialPort class](https://msdn.microsoft.com/en-us/library/system.io.ports.serialport).
+The `SerialPortManager.cs` file contains a snippet of a singleton class written in .NET C# that I wrote and used in some of my .NET projects to handle serial data communication, particularly for projects that required interfacing with an Arduino board. This class is essentially a wrapper written on top of the [`System.IO.Ports.SerialPort`](https://msdn.microsoft.com/en-us/library/system.io.ports.serialport) class.
 
 ### Full source code ([Gist](https://gist.github.com/heiswayi/80eda1a6905ba4edee8bd21a45f3a22d))
 

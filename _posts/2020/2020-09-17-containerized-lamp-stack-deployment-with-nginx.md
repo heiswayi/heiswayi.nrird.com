@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Containerized LAMP stack deployment with nginx
+title: Containerized LAMP stack deployment with Nginx
 description: This is how I configure my EC2 instance to work with multiple DNS and proxify the traffic through nginx to respective services that are running in Docker containers.
 tags: [nginx, Cloud Computing, EC2, Docker, DNS]
 ---
 
 ### Overview
 
-Following diagram is to illustrate on how I configure a **single virtual server** to work with **multiple subdomains** that are proxified to **their respective services** via [nginx](https://nginx.org/en/);
+Following diagram is to illustrate on how I configure a **single virtual server** to work with **multiple subdomains** that are proxified to **their respective services** via [Nginx](https://nginx.org/en/);
 
-{% include image.html src="assets/images/hOHgcpY.png" caption="Proxify with nginx" %}
+{% include image.html src="assets/images/hOHgcpY.png" caption="Proxify with Nginx" %}
 
 > A "service" here is referred to an application that is running from inside a Docker container.
 
@@ -48,9 +48,9 @@ I enabled the DNS to be proxified by Cloudflare so I can get the benefit of Clou
 
 
 
-### nginx
+### Nginx
 
-nginx is used as an entry point to the EC2 instance and also works as a load balancer that will proxify the incoming traffic to the respective services.
+Nginx is used as an entry point to the EC2 instance and also works as a load balancer that will proxify the incoming traffic to the respective services.
 
 Following diagram is to illustrate on how the traffic is routed from Cloudflare DNS to a particular service;
 

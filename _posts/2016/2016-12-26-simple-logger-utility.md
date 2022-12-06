@@ -5,7 +5,7 @@ description: Just another simple logger utility class that I wrote for my own us
 tags: [C#, Utility, Programming]
 ---
 
-This is a simple C# utility class that I wrote to do the app logging for small .NET projects.
+This is a simple C# utility class that I wrote to handle logging for small .NET projects.
 
 ### Full source code ([Gist](https://gist.github.com/heiswayi/69ef5413c0f28b3a58d964447c275058))
 

@@ -7,16 +7,16 @@ tags: [Keycloak, User Authentication, Open Source]
 
 ### Brief Introduction about Keycloak
 
-Keycloak is a robust solution for user identity and access management. It's open source software that you can self-hosting by your own. It makes securing your applications and services become easier with minimum fuss. So, you don't need to deal with storing users or authenticating users. Everything is all available out of the box. Following are the great features that being offered by the Keycloak software:-
+Keycloak is an open source solution for user identity and access management that you can self-host. It makes securing your applications and services easier with minimal effort. You don't need to deal with storing or authenticating users as everything is available out of the box. Keycloak offers the following features:
 
-- Single sign-on (SSO) and single logout.
-- Supports Standard Protocols such as OpenID Connect (OIDC), OAuth 2.0 and SAML 2.0.
-- Flexible Authentication and Authorization.
-- Multi-Factor Authentication (MFA) such as One-time Password (OTP).
-- Social logins such as Google, Facebook, Twitter, etc..
-- Provides centralized user management.
-- Supports Directory Services such as LDAP and Active Directory.
-- Customizable and extensible.
+- Single sign-on and single logout
+- Support for standard protocols such as OpenID Connect (OIDC), OAuth 2.0, and SAML 2.0
+- Flexible authentication and authorization
+- Multi-factor authentication (MFA) such as one-time passwords (OTP)
+- Social logins such as Google, Facebook, and Twitter
+- Centralized user management
+- Support for directory services such as LDAP and Active Directory
+- Customization and extensibility
 - Easy setup and integration using provided client adapters.
 
 

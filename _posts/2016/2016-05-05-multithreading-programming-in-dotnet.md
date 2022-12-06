@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Multithreading programming in .NET
+title: Multithreading programming benchmarks in .NET
 description: Demonstrating multithreading programming available in .NET System.Threading.
-tags: [C#, Multithreading, Programming]
+tags: [C#, Multithreading, Programming, Algorithm]
 ---
 
 ### What is multithreading?
 
-Multithreading is a widespread programming and execution model that allows multiple threads to exist within the context of one process. They share the process's resources, but they are able to execute independently while the single threading is the processing of one command at a time.
+Multithreading is a widespread programming and execution model that allows multiple threads to exist within the context of a single process. They share the process's resources, but they are able to execute independently. Single threading, on the other hand, involves the processing of one command at a time.
 
-The purpose of threading is to allow computer to do more than one thing at a time. In a single core computer, multithreading won't give much advantages for overall speed. But for computer with multiple processor cores (which is so common these days), multithreading can take advantage of additional cores to perform separate instructions at the same time or by splitting the tasks between the cores.
+The purpose of threading is to enable a computer to do more than one thing at a time. In a single-core computer, multithreading won't offer much of an advantage in terms of overall speed. However, in computers with multiple processor cores, which are common these days, multithreading can take advantage of the additional cores to perform separate instructions simultaneously, or by splitting the tasks between the cores.
 
 ### Multithreading programming in .NET
 
@@ -110,4 +110,4 @@ using (CountdownEvent signaler = new CountdownEvent(threadCount))
 | Multithreading using Task | 3061ms |
 | Multithreading using BackgroundWorker | 3100ms |
 
-To summarize, `ThreadPool`, `Task` and `BackgroundWorker` can perform 2x faster compared to `Thread` and single threading method. So, if you're going to perform any CPU intensive task, you can always take advantage of multithreading programming in your code to have better performance in your application. I could say that `BackgroundWorker` class is easy to use and very popular among developers I have been working with.
+To summarize, `ThreadPool`, `Task`, and `BackgroundWorker` can perform up to 2 times faster compared to `Thread` and the single threading method. Therefore, if you are going to perform any CPU-intensive task, you can always take advantage of multithreading programming in your code to improve the performance of your application. I have found that the `BackgroundWorker` class is easy to use and is very popular among developers I have worked with.

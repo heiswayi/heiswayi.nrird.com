@@ -1,6 +1,6 @@
 ---
 layout: post
-title: What makes a great Software Engineer
+title: What makes a great software engineer
 description: Engineering values that make a software engineer becomes a great one.
 tags: [Software Engineering, Engineering Values]
 ---

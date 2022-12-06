@@ -7,9 +7,9 @@ tags: [InstallShield, InstallScript, Windows Installer, Programming]
 
 ### Problem
 
-I have a metadata file that contains the installation path of my application (executable), and this metadata file is installed by my application installer (setup) in a different location than my application files. The purpose of this metadata file is that it would be used by other application to display my application info and also to know the install location of my application.
+I have a metadata file that contains the installation path of my application (executable), and this file is installed by my application installer (setup) in a different location than my application files. The purpose of this metadata file is to be used by other applications to display my application info and to know the install location of my application.
 
-The problem is that the installation path is hard-coded (default path) in that metadata file, and when the user has changed the install location to a different path during the installation time, the installation path now becomes mismatched with the one in the metadata file. Thus, this has caused the other application cannot recognize the present of my application. My application installer is created using InstallShield 2016 Basic MSI project.
+The problem is that the installation path is hard-coded (default path) in the metadata file, and when the user changes the install location during installation, the path in the metadata file becomes mismatched with the actual install location. This causes other applications to be unable to recognize the presence of my application. My application installer was created using an InstallShield 2016 Basic MSI project.
 
 
 
@@ -109,4 +109,4 @@ end;
 
 
 
-The script above should be self-explanatory. If you encountered the similar problem as mine, you may need to change `<PATH_TO_METADATA_FILE>` and `<STRING_TO_FIND>` to your own strings. Be aware of possible deadlock, if any, you may need to apply certain conditional statement (checking). Hopefully this method may help others who are in the similar situation.
+The script above should be self-explanatory. If you encountered the similar problem as mine, you may need to change `<PATH_TO_METADATA_FILE>` and `<STRING_TO_FIND>` to your own strings. Beware of possible deadlock, if any, you may need to apply certain conditional statement (checking). Hopefully this method may help others who are in the similar situation.
