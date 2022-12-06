@@ -5,221 +5,53 @@ description: Starting PHP version 5.5 onwards, password hashing in PHP applicati
 tags: [PHP, Password, Programming]
 ---
 
-As of PHP 5.5, a [native and simple password hashing API](https://wiki.php.net/rfc/password_hash) was introduced to safely handle both hashing and verifying password in a secure manner. When talking about hashing the password, the two most important considerations are the computational expense and the salt. The more computationally expensive the hashing algorithm, the longer it will take to **bruteforce** its output. So, the suggested algorithm to use when hashing the password is Blowfish, which is also the default hashing algorithm used by this password hashing API.
+PHP is a popular programming language used for web development, and it includes a built-in native password hashing API. This API allows developers to easily hash passwords in a secure manner, ensuring that sensitive user information is protected.
 
-### Implementation of native password hashing API
+When storing passwords in a database, it is important to never store them in plain text. This is because if a database were to be compromised, the attacker would have immediate access to all of the user's passwords. Instead, passwords should be hashed using a secure algorithm.
 
-The implementation consists of four functions:-
+PHP's native password hashing API makes this process easy and secure. It uses the bcrypt algorithm, which is a widely-used and secure method for hashing passwords. Bcrypt is a "salted" hashing algorithm, which means that it uses a randomly generated string of characters (the "salt") to make the resulting hash even more secure.
 
-- `password_hash()` - To create a new password hash
-- `password_verify()` - To confirm a given password matches with the hash
-- `password_needs_rehash()` - To check if a password meets the desired hash settings (algorithm, cost)
-- `password_get_info()` - To return information about the hash such as algorithm and cost
+To use PHP's password hashing API, developers simply need to call the `password_hash()` function and pass in the password they want to hash. This function returns the hashed password, which can then be safely stored in a database.
 
-> **NOTE**<br>`password_hash()` creates a new password hash using a strong one-way hashing algorithm and compatible with [**crypt()**](http://php.net/manual/en/function.crypt.php).
-
-
-
-### password_hash using PASSWORD_DEFAULT
-
-`password_hash()` example with `PASSWORD_DEFAULT`
+For example, to hash a password with PHP's native password hashing API, you could use the following code:
 
 ```php
 <?php
-/**
- * We just want to hash our password using the current DEFAULT algorithm.
- * This is presently BCRYPT, and will produce a 60 character result.
- *
- * Beware that DEFAULT may change over time, so you would want to prepare
- * By allowing your storage to expand past 60 characters (255 would be good)
- */
-echo password_hash("KittenDies", PASSWORD_DEFAULT)."\n";
+$password = 'mypassword';
+$hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 ?>
 ```
 
-Output:
-
-```
-$2y$10$kZ8eWlGS30qABEthikt.uOvdYETzS3azGCutmfOdtXMzEvFuNoMWe
-```
-
-
-
-### password_hash using cost option
-
-`password_hash()` example with manual setting of `cost`
+Once the password has been hashed, it can be verified by calling the `password_verify()` function. This function takes the plain text password and the hashed password as arguments, and returns `true` if the passwords match and `false` if they don't.
 
 ```php
 <?php
-/**
- * In this case, we want to increase the default cost for BCRYPT to 12.
- * Note that we also switched to BCRYPT, which will always be 60 characters.
- */
-$options = [
-    'cost' => 12,
-];
-echo password_hash("KittenDies", PASSWORD_BCRYPT, $options)."\n";
-?>
-```
+$password = 'mypassword';
+$hashedPassword = '$2y$10$SOMEHASHEDPASSWORD';
 
-Output:
-
-```
-$2y$12$gsF2.s.PkKLusBMsgHrQnOmB5mzG0bHGE97.SA5250aQ0ZTt0Klty
-```
-
-> The role of the cost is **to ensure that the passwords remain difficult to bruteforce even as hardware gets faster**. You will need to continuously tweak your cost as your own hardware changes. However, if you are not careful and just crank it up to 11 (figuratively speaking) your passwords will take too long to generate, tying up web server threads and can easily lead to a denial-of-service (DoS) attack.
-
-Here's the code to benchmark your server in order **to determine how high of a cost you can afford**:
-
-```php
-<?php
-
-$timeTarget = 0.05; // 50 milliseconds
-
-$cost = 8;
-do {
-    $cost++;
-    $start = microtime(true);
-    password_hash("test", PASSWORD_BCRYPT, ["cost" => $cost]);
-    $end = microtime(true);
-} while (($end - $start) < $timeTarget);
-
-echo "Appropriate Cost Found: " . $cost . "\n";
-?>
-```
-
-Output:
-
-```
-Appropriate Cost Found: 10
-```
-
-This is good if you want to set the highest cost that you can without slowing down your server too much. **8 - 10 is a good baseline**, and is good if your servers are fast enough. The code above aims for less than 50ms stretching time, which is a good baseline for systems handling interactive logins.
-
-
-
-### password_hash using cost and salt option
-
-`password_hash()` example with manual setting of `cost` and `salt`
-
-```php
-<?php
-/**
- * Note that the salt here is randomly generated.
- * Never use a static salt or one that is not randomly generated.
- *
- * For the VAST majority of use-cases, let password_hash generate the salt randomly for you
- */
-$options = [
-    'cost' => 11,
-    'salt' => mcrypt_create_iv(22, MCRYPT_DEV_URANDOM),
-];
-echo password_hash("KittenDies", PASSWORD_BCRYPT, $options)."\n";
-?>
-```
-
-Output:
-
-```
-$2y$11$dtSMAuO41g5QZcAG76FqTehpk35Dcf0lkEpBffEW7dRqQsrR2E8VO
-```
-
-> NOTE: It is strongly recommended that you do not generate your own salt for this function. It will create a secure salt automatically for you if you do not specify one.
-
-
-
-### password_verify
-
-`password_verify()` example
-
-```php
-<?php
-
-$hash = '$2y$11$dtSMAuO41g5QZcAG76FqTehpk35Dcf0lkEpBffEW7dRqQsrR2E8VO';
-
-if (password_verify('KittenDies', $hash)) {
-    echo 'Password is valid!';
+if (password_verify($password, $hashedPassword)) {
+    // Password is correct
 } else {
-    echo 'Invalid password.';
+    // Password is incorrect
 }
 ?>
 ```
 
-Output:
-
-```
-Password is valid!
-```
-
-> If you get incorrect false responses from `password_verify()` when manually including the hash variable (e.g. for testing) and you know it should be correct, make sure you are enclosing the hash variable in single quotes (') and not double quotes (").
-
-
-
-### password_needs_rehash
-
-`password_needs_rehash()` example
+In addition to the `PASSWORD_DEFAULT` constant, PHP's password hashing API also offers the `PASSWORD_BCRYPT` constant. This constant can be used to explicitly specify that the bcrypt algorithm should be used for password hashing.
 
 ```php
 <?php
-
-$password = 'rasmuslerdorf';
-$hash = '$2y$10$YCFsG6elYca568hBi2pZ0.3LDL5wjgxct1N8w/oLR/jfHsiQwCqTS';
-
-// The cost parameter can change over time as hardware improves
-$options = array('cost' => 11);
-
-// Verify stored hash against plain-text password
-if (password_verify($password, $hash)) {
-    // Check if a newer hashing algorithm is available
-    // or the cost has changed
-    if (password_needs_rehash($hash, PASSWORD_DEFAULT, $options)) {
-        // If so, create a new hash, and replace the old one
-        $newHash = password_hash($password, PASSWORD_DEFAULT, $options);
-    }
-
-    // Log user in
-}
+$password = 'mypassword';
+$hashedPassword = password_hash($password, PASSWORD_BCRYPT);
 ?>
 ```
 
-
-
-### password_get_info
-
-`password_get_info()` example
-
-```php
-<?php
-
-$hash = '$2y$11$dtSMAuO41g5QZcAG76FqTehpk35Dcf0lkEpBffEW7dRqQsrR2E8VO';
-var_dump(password_get_info($hash));
-
-?>
-```
-
-Output:
-
-```
-array (size=3)
-  'algo' => int 1
-  'algoName' => string 'bcrypt' (length=6)
-  'options' =>
-    array (size=1)
-      'cost' => int 11
-```
-
-
-
-### Compatibility issue
-
-If you are using PHP version before 5.5, there is a [pure PHP compatibility library](https://github.com/ircmaxell/password_compat) available for PHP 5.3.7 and later.
-
+Overall, PHP's native password hashing API is a simple and secure way to hash passwords and protect sensitive user information. It is important for developers to use this API, or another secure method, to ensure that their user's passwords are properly protected.
 
 
 ### Cryptographic salt
 
-A cryptographic salt is a data which is applied during the hashing process in order to eliminate the possibility of the output being looked up in a list of pre-calculated pairs of hashes and their input, known as a rainbow table.
+Cryptographic salt is a random string of characters that is used as an additional input to a one-way hashing function. The purpose of a salt is to make it more difficult for attackers to crack a password by pre-computing hashes for a dictionary of common passwords. When a password is hashed, the salt is concatenated with the password before it is passed through the hashing function, resulting in a unique hash that cannot be easily cracked by attackers. Cryptographic salt is typically generated using a cryptographically secure random number generator and is stored alongside the hashed password in a database.
 
 `password_hash()` will create a random salt if one is not provided, and this is generally the easiest and the most secure approach.
 

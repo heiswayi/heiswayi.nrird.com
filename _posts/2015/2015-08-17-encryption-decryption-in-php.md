@@ -9,66 +9,35 @@ tags: [Programming, PHP, Encryption, Decryption]
 **UPDATE**<br>
 `mcrypt` library was DEPRECATED in PHP 7.1.0, and REMOVED in PHP 7.2.0. Alternative to this library is to use [Sodium](https://www.php.net/manual/en/book.sodium.php) (available as of PHP 7.2.0) or [OpenSSL](https://www.php.net/manual/en/book.openssl.php).
 
-The following code snippets are encryption and decryption function that I used the most when I need to encrypt and decrypt some sensitive data. These PHP functions are written based on [mcrypt_encrypt](https://www.php.net/manual/en/function.mcrypt-encrypt.php) and [mcrypt_decrypt](https://www.php.net/manual/en/function.mcrypt-decrypt.php) respectively.
+Encryption and decryption are essential components of modern data security. They allow us to protect sensitive information from unauthorized access and ensure that only authorized users can read and make use of it. In this blog post, we will take a closer look at encryption and decryption in PHP, a popular programming language used for web development.
 
-### Encryption
+Encryption is the process of converting plaintext, or unencrypted data, into ciphertext, or encrypted data. This is done using an algorithm, known as a cipher, which applies a mathematical transformation to the data. The resulting ciphertext is scrambled and unreadable to anyone who does not have the proper decryption key.
 
-```php
-<?php
-function Encrypt($password, $data)
-{
-    $salt = substr(md5(mt_rand(), true), 8);
-    $key = md5($password . $salt, true);
-    $iv  = md5($key . $password . $salt, true);
-    $ct = mcrypt_encrypt(MCRYPT_RIJNDAEL_128, $key, $data, MCRYPT_MODE_CBC, $iv);
-    return base64_encode('Salted__' . $salt . $ct);
-}
-?>
-```
+Decryption is the reverse process of encryption. It involves applying the same mathematical transformation to the ciphertext, using the appropriate decryption key, in order to convert it back into plaintext. This allows authorized users to access and read the original unencrypted data.
 
-Example:
+PHP provides several built-in functions for performing encryption and decryption. The most commonly used ones are mcrypt_encrypt() and mcrypt_decrypt(), which use the libmcrypt library for encryption and decryption.
+
+Here is an example of how to use these functions to encrypt and decrypt data in PHP:
 
 ```php
 <?php
-echo Encrypt('myPass123', 'Welcome to Flippancy 25');
-// Output: U2FsdGVkX19LYv5Y5EDmFbjH8bGMDFwlid30h2x1ybibT1Dwp0vekJ0OT4tb7/j6
+
+// Encrypt a message
+$message = 'This is a secret message';
+$key = 'my secret key';
+$encrypted_message = mcrypt_encrypt(MCRYPT_RIJNDAEL_128, $key, $message, MCRYPT_MODE_CBC);
+
+// Decrypt an encrypted message
+$decrypted_message = mcrypt_decrypt(MCRYPT_RIJNDAEL_128, $key, $encrypted_message, MCRYPT_MODE_CBC);
+
+// Output the decrypted message
+echo $decrypted_message;
+
 ?>
 ```
 
-The output will keep changing each time the function is being executed. This is due to `mt_rand()` function is used to generate the _salt_.
+In the example above, we use the Rijndael cipher with a 128-bit key to encrypt and decrypt the message. The ciphertext is encrypted using the Cipher Block Chaining (CBC) mode, which is a popular mode of operation for block ciphers.
 
-Example:
+It is important to note that the encryption and decryption keys used in the example above are simply examples and should not be used in real-world applications. In practice, the keys should be generated using a secure random number generator and should be long and complex enough to prevent brute-force attacks.
 
-```
-// Output 1: U2FsdGVkX19LYv5Y5EDmFbjH8bGMDFwlid30h2x1ybibT1Dwp0vekJ0OT4tb7/j6
-// Output 2: U2FsdGVkX1/3zxJCcE8p89t67nJNp8blNkezNxTVn4IDFQLM755K2+OSfFHewDLI
-// Output 3: U2FsdGVkX18OQ8puUN8BBi+d6vAjEzDTZqM2WaKQD1atOykkYl9MY7NQM1DqI4Kw
-```
-
-### Decryption
-
-```php
-<?php
-function Decrypt($password, $data)
-{
-    $data = base64_decode($data);
-    $salt = substr($data, 8, 8);
-    $ct   = substr($data, 16);
-    $key = md5($password . $salt, true);
-    $iv  = md5($key . $password . $salt, true);
-    $pt = mcrypt_decrypt(MCRYPT_RIJNDAEL_128, $key, $ct, MCRYPT_MODE_CBC, $iv);
-    return $pt;
-}
-?>
-```
-
-Example:
-
-```php
-<?php
-echo Decrypt('myPass123', 'U2FsdGVkX19LYv5Y5EDmFbjH8bGMDFwlid30h2x1ybibT1Dwp0vekJ0OT4tb7/j6');
-echo Decrypt('myPass123', 'U2FsdGVkX1/3zxJCcE8p89t67nJNp8blNkezNxTVn4IDFQLM755K2+OSfFHewDLI');
-echo Decrypt('myPass123', 'U2FsdGVkX18OQ8puUN8BBi+d6vAjEzDTZqM2WaKQD1atOykkYl9MY7NQM1DqI4Kw');
-// All of the above operations output the same decrypted data: "Welcome to Flippancy 25"
-?>
-```
+Encryption and decryption are crucial for ensuring the security of sensitive data. By using the built-in functions provided by PHP, we can easily implement encryption and decryption in our web applications and protect our data from unauthorized access.
