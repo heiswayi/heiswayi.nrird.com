@@ -8,47 +8,21 @@ published: true
 
 <head>
   {% include head.html %}
-  <style>
-    @media print {
-      pre .line-number,
-      .hidden-on-print {
-        display: none;
-      }
-      .post-date {
-        color: #aaa;
-      }
-    }
-  </style>
 </head>
 
 <body>
 
-  <a href="#content" class="skip">Skip to Main Content</a>
+  {% include topnav-post.html %}
 
-  <div class="wrap">
-
-    {% include topnav-post.html %}
-
-    <div id="content" class="container content">
-
-      <div class="post">
-        <div class="post-top-meta">
-          <div class="post-date">
-            <span class="date">{{ page.date | date: "%B %d, %Y" }}</span>
-            <span class="readtime">{% include reading-time.html %}</span>
-          </div>
-          <h1 class="post-title colorize">{{ page.title }}</h1>
-        </div>
-
-        <article id="article">
-        {{ content }}
-        </article>
-
-        {% if site.show_tags %}
-          <div class="spacer"></div>
-        {% endif %}
-
-        {% if site.show_tags %}
+  <div class="container">
+    <div class="content">
+      <div class="post-meta">
+        <span class="date">{{ page.date | date: "%B %d, %Y" }}</span>
+        <span class="readtime">{% include reading-time.html %}</span>
+      </div>
+      <h1 class="post-title colorize">{{ page.title }}</h1>
+      <div class="post-content">{{ content }}</div>
+      {% if site.show_tags %}
         {% assign post = page %}
         {% if post.tags.size > 0 %}
 
@@ -60,14 +34,11 @@ published: true
             {% assign tags_content = tags_content_temp %}
           {% endfor %}
 
-          <div class="tagged">
+          <div class="post-tags">
             {{ tags_content }}
           </div>
         {% endif %}
-        {% endif %}
-
-      </div>
-
+      {% endif %}
     </div>
   </div>
 

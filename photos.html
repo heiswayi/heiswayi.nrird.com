@@ -21,6 +21,9 @@ title: Photos
     .nanogallery_theme_light .nanoGalleryContainer .nanoGalleryThumbnailContainer .subcontainer {
         border: 0 solid transparent;
     }
+    .container {
+        display: block;
+    }
 </style>
 <script src="{{ '/assets/nanogallery/jquery.min.js' | prepend: site.baseurl }}"></script>
 <script src="{{ '/assets/nanogallery/jquery.nanogallery.min.js' | prepend: site.baseurl }}"></script>
@@ -28,28 +31,18 @@ title: Photos
 
 <body>
 
-    <a href="#content" class="skip">Skip to Main Content</a>
+    {% include topnav.html %}
 
-    <div class="wrap">
-
-        {% include topnav.html %}
-
-        <div id="content">
-
-            <div class="container">
-
-                <noscript>
-                    {% 
-                        include no-js-notice.html
-                        message="This page requires JavaScript enabled in order to render a photo gallery in masonry layout view."
-                    %}
-                </noscript>
-
-            </div>
-
-            <div id="nanoGallery"></div>
-
+    <div class="container">
+        <div class="content" style="border-right: none;">
+            <noscript>
+                {% 
+                    include no-js-notice.html
+                    message="This page requires JavaScript enabled in order to render a photo gallery in masonry layout view."
+                %}
+            </noscript>
         </div>
+        <div id="nanoGallery"></div>
     </div>
 
     {% include footer.html %}

@@ -28,52 +28,36 @@ title: Home
 
 <head>
 	{% include head.html %}
-	<style>
-	.ender {
-		margin-top: 1rem;
-	}
-	</style>
 </head>
 
 <body>
 
-  <a href="#content" class="skip">Skip to Main Content</a>
+  {% include topnav.html %}
 
-  <div class="wrap">
-
-	{% include topnav.html %}
-
-    <div id="content" class="container content">
-
-		<div class="intro" style="margin-bottom: 2rem;">
-			<h1 style="margin-bottom: 0;" class="main-title colorize">{{ site.title }}</h1>
+  <div class="container">
+    <div class="content">
+		<div style="margin-bottom: 2rem;">
+			<h1 style="margin-bottom: 0;" class="colorize">{{ site.title }}</h1>
 			<div class="lead">{{ site.description }}</div>
 		</div>
-
-			<div class="posts archives" style="padding-bottom: 2rem;">
+      	<div class="page-content">
 			{% for post in site.posts %}
 
 				{% if post.tags contains "Project" %}
-					<div class="post-list-archives">
-						<div class="post-title">
-							<span class="post-date" title="Published on {{ post.date | date: '%B %d, %Y' }}">{{ post.date | date: "%y%m%d" | replace: "0", "·" }}</span>
-							<span class="full-title"><a href="{{ post.url }}"><span class="project-label">Proj/App</span>{{ post.title }}</a></span>
-						</div>
-					</div>
+				<div class="index-post-title">
+					<span class="date" title="Published on {{ post.date | date: '%B %d, %Y' }}">{{ post.date | date: "%y·%m·%d" }}</span>
+					<span class="title"><a href="{{ post.url }}"><span class="label">Proj/App</span>{{ post.title }}</a></span>
+				</div>
 				{% else %}
-					<div class="post-list-archives">
-						<div class="post-title">
-							<span class="post-date" title="Published on {{ post.date | date: '%B %d, %Y' }}">{{ post.date | date: "%y%m%d" | replace: "0", "·" }}</span>
-							<span class="full-title"><a href="{{ post.url }}">{{ post.title }}</a></span>
-						</div>
-					</div>
+				<div class="index-post-title">
+					<span class="date" title="Published on {{ post.date | date: '%B %d, %Y' }}">{{ post.date | date: "%y·%m·%d" }}</span>
+					<span class="title"><a href="{{ post.url }}">{{ post.title }}</a></span>
+				</div>
 				{% endif %}
 
 			{% endfor %}
-
-			</div>
-
-	</div>
+		</div>
+    </div>
   </div>
 
   {% include footer.html %}

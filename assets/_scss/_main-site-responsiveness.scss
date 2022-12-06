@@ -1,103 +1,39 @@
-@media (max-width: 280px) {
-  .author-info {
-    .with-avatar {
-      .photo {
-        float: none;
-        display: block;
-        width: 100%;
-        height: auto;
-        margin-bottom: 1rem;
-        margin-left: 0px;
-        img {
-          display: block;
-          height: 100%;
-          width: 100%;
-        }
-      }
-      .intro-text {
-        margin-left: 0;
-        display: block;
-      }
-    }
-  }
-}
+// @media (max-width: 280px) {
+// }
 
-/* Landscape phones and down */
-@media (max-width: 480px) {
-  .container img {
-    transform: none;
-    border-radius: 0px;
-  }
-  .page,
-  .post {
-    text-align: left;
-    pre {
-      margin-left: -2rem;
-      margin-right: -2rem;
-      border-left: none;
-      border-right: none;
-    }
-    figure {
-      padding-left: 0px;
-      padding-right: 0px;
-      img {
-        box-shadow: 1px 1px var(--figure-img-shadow);
-      }
-    }
-    .post-date {
-      .hypen {
-        display: none;
-      }
-      .date {
-        display: block;
-      }
-      .author {
-        display: block;
-        font-size: 0.6rem;
-        margin-bottom: 1rem;
-      }
-    }
-  }
-  .archives {
-    .post-list-archives {
-      margin-bottom: 0.5rem;
-      line-height: 1.2;
-      .date-full {
-        display: none !important;
-      }
-      .full-title {
-        font-family: $font-body;
-        font-size: 1rem;
-        display: list-item;
-        list-style-type: none;
-        list-style-position: outside;
-        &:hover {
-          list-style-type: none;
-        }
-      }
-      .post-date {
-        display: none;
-      }
-    }
-  }
-  .prev-next-post {
-    flex-direction: column;
-    margin-left: -2rem;
-    margin-right: -2rem;
-    .prev-post {
-      width: 100%;
-    }
-    .next-post {
-      width: 100%;
-      margin-top: 1rem;
-    }
-  }
-}
+// /* Landscape phones and down */
+// @media (max-width: 480px) {
+// }
 
 /* Landscape phone to portrait tablet */
 @media (max-width: 767px) {
-  pre {
-    max-height: 500px;
+  .header {
+    .site-nav {
+      ul {
+        flex-wrap: wrap;
+        line-height: 2;
+        justify-content: center;
+      }
+    }
+  }
+  .index-post-title {
+    &:not(:last-child) {
+      border-bottom: 1px dashed var(--hrline-color);
+    }
+    .date {
+      display: none;
+    }
+  }
+  .misc-link {
+    a {
+      white-space: nowrap;
+    }
+  }
+  .content {
+    border-right: none;
+    .post-meta {
+      font-size: 0.7rem !important;
+    }
   }
 }
 

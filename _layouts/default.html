@@ -12,13 +12,10 @@ published: true
 
 <body>
 
-  <a href="#content" class="skip">Skip to Main Content</a>
+  {% include topnav.html %}
 
-  <div class="wrap">
-
-    {% include topnav.html %}
-
-    <div id="content" class="container content">
+  <div class="container">
+    <div class="content">
       {{ content }}
     </div>
   </div>

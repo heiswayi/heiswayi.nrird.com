@@ -1,71 +1,31 @@
 .header {
-    margin-bottom: 2rem;
+    display: flex;
+    padding: 1rem 2rem;
     border-bottom: 1px solid var(--header-border);
-    width: 100%;
-    z-index: 1000;
-    overflow-x: hidden;
-    position: fixed;
-    top: 0;
     background-color: var(--header-bg);
-    .container {
-        display: flex;
-        flex-direction: row;
-        align-items: flex-start;
-        justify-content: space-between;
-        margin-top: 0px;
-        margin-bottom: 0px;
-        background-color: transparent !important;
-        .site-logo {    
-            a {
-                background: none;
-                border: none;
-                width: 34px;
-                height: 34px;
-                display: flex;
-                align-items: center;
-                margin-top: 2ch;
-                margin-bottom: 2ch;
-                img {
-                    box-shadow: none;
-                    border-radius: none;
-                    margin: none;
+    .site-nav {
+        ul {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: row;
+            list-style: none;
+            gap: 1ch;
+            li {
+                a {
+                    padding: 5px 12px;
+                    white-space: nowrap;
+                    font-family: $font-topmenu;
+                    border: 1px solid var(--link-1);
+                    &.active {
+                        background: repeating-linear-gradient(135deg, var(--link-1) 0, var(--link-1) 1%, var(--header-bg) 0, var(--header-bg) 50%) 0 / 20px 20px;
+                        color: var(--link-1);
+                    }
+                }
+                &:last-child {
+                    margin: 0;
                 }
             }
         }
-        nav ul {
-            padding: 0;
-            background-color: none;
-            margin-top: 2ch;
-            margin-bottom: 2ch;
-            margin-left: 0;
-            margin-right: 0;
-        }
-        nav ul li {
-            display: inline-block;
-        }
-        nav ul li a {
-            display: inline-block;
-            padding: 5px 12px;
-            white-space: nowrap;
-            font-family: $font-topmenu;
-            // font-size: 14px;
-            color: var(--link-1);
-            margin-bottom: 0;
-            border-bottom: none;
-            &:hover {
-                // background: none;
-                text-decoration: none;
-                color: var(--link-hover-color);
-            }
-            &.active {
-                background: none;
-                text-decoration: underline;
-                color: var(--nav-active-color);
-            }
-        }
     }
-}
-
-div#content {
-    padding-top: 100px;
 }

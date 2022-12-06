@@ -10,81 +10,64 @@ tags: [Inspiration, Illustration Arts]
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en" class="no-js" itemscope itemtype="http://schema.org/WebPage">
 
 <head>
-{% include head.html %}
-<style>
-#photos {
-    /* margin-left: 2rem;
-    margin-right: 2rem; */
-    margin: 1rem;
-}
-#photos img {
-    width: 200px;
-    height: 200px;
-}
-</style>
+	{% include head.html %}
+    <style>
+    #photos {
+        margin: 0 1rem;
+    }
+    #photos img {
+        width: 200px;
+        height: 200px;
+    }
+    </style>
 </head>
 
 <body>
 
-    <a href="#content" class="skip">Skip to Main Content</a>
+  {% include topnav-post.html %}
 
-    <div class="wrap">
+  <div class="container">
+    <div class="content">
+        <div class="post-meta">
+            <span class="date">{{ page.date | date: "%B %d, %Y" }}</span>
+        </div>
+        <h1 class="post-title colorize">{{ page.title }}</h1>
+        <div class="post-content">
+            <p>100-day Illustration Arts is an inspiring collection of open source illustrations kit by <a href="https://illlustrations.co/">Vijay Verma</a>, which is <a href="https://illlustrations.co/license/">free for both commercial and personal use</a>. These awesome illustrations are part of design challenge where the author designed one illustration per day for 100 days of duration. I use <a href="https://minigrid.js.org/">Minigrid</a> to display all the illustration pictures below in randomly order each time this page is refreshed/reloaded.</p>
 
-        {% include topnav-post.html %}
-
-        <div id="content">
-
-            <div class="container">
-
-                <div class="post-date">{{ page.date | date: "%B %d, %Y" }}</div>
-                <h1 class="post-title colorize">{{ page.title }}</h1>
-
-                <p>100-day Illustration Arts is an inspiring collection of open source illustrations kit by <a href="https://illlustrations.co/">Vijay Verma</a>, which is <a href="https://illlustrations.co/license/">free for both commercial and personal use</a>. These awesome illustrations are part of design challenge where the author designed one illustration per day for 100 days of duration. I use <a href="https://minigrid.js.org/">Minigrid</a> to display all the illustration pictures below in randomly order each time this page is refreshed/reloaded.</p>
-
-                <noscript>
-                    {% 
-                        include no-js-notice.html
-                        message="This page requires JavaScript enabled for the Minigrid to render all illustration pictures in randomly ordered grid view."
-                    %}
-                </noscript>
-                
-            </div>
-
-            <div id="photos"></div>
-
-            <div class="container">
-                <div class="post">
-                    {% if site.show_tags or site.show_post_sharer or site.show_related_posts or site.show_disqus_comment %}
-                        <div class="spacer"></div>
-                    {% endif %}
-            
-                    {% if site.show_tags %}
-                    {% assign post = page %}
-                    {% if post.tags.size > 0 %}
-            
-                        {% assign tags_content = "" %}
-                        {% for post_tag in post.tags %}
-                        {% capture tags_content_temp %}
-                            {{ tags_content }}<a href="{{ site.url }}{{ site.baseurl }}/tags#{{ post_tag | slugify }}"><i class="fa fa-hashtag muted" aria-hidden="true"></i><span class="hidden">#</span>{{ post_tag | replace: "#", "sharp" | slugify | downcase }}</a>
-                        {% endcapture %}
-                        {% assign tags_content = tags_content_temp %}
-                        {% endfor %}
-            
-                        <div class="tagged">
-                        {{ tags_content }}
-                        </div>
-                    {% endif %}
-                    {% endif %}
-            
-                </div>
-            </div>
-
+            <noscript>
+                {% 
+                    include no-js-notice.html
+                    message="This page requires JavaScript enabled for the Minigrid to render all illustration pictures in randomly ordered grid view."
+                %}
+            </noscript>
         </div>
     </div>
+    <div id="photos"></div>
+    <div class="content">
+        {% if site.show_tags %}
+        {% assign post = page %}
+        {% if post.tags.size > 0 %}
 
-    {% include footer.html %}
+          {% assign tags_content = "" %}
+          {% for post_tag in post.tags %}
+            {% capture tags_content_temp %}
+              {{ tags_content }}<a href="{{ site.baseurl }}/tags#{{ post_tag | replace: '#', 'sharp' | slugify | downcase }}"><i class="fa fa-hashtag muted" aria-hidden="true"></i><span class="hidden">#</span>{{ post_tag | replace: "#", "sharp" | slugify | downcase }}</a>
+            {% endcapture %}
+            {% assign tags_content = tags_content_temp %}
+          {% endfor %}
 
-    <script>
+          <div class="post-tags">
+            {{ tags_content }}
+          </div>
+        {% endif %}
+        {% endif %}
+    </div>
+  </div>
+
+  {% include footer.html %}
+
+  <script>
     var arr = [
     "day34-ticket.png",
     "day17-walkie-talkie.png",
@@ -225,8 +208,8 @@ tags: [Inspiration, Illustration Arts]
 		document.addEventListener('DOMContentLoaded', init);
 		window.addEventListener('resize', update);
 	})();
-    </script>            
-
+    </script>    
+		
 </body>
-</html>
 
+</html>

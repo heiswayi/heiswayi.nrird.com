@@ -23,15 +23,16 @@ title: Tags
 {% endfor %}
 
 {% if tags %}
-<div class="tag-cloud tag-cloud-small" id="Tags">
+<div class="tag-cloud" id="Tags">
   {% for tag in tags %}
-    <a class="tag-anchor" href="#{{ tag | replace: '#', 'sharp' | slugify | downcase }}"><span class="hidden">#</span>{{ tag | replace: "#", "sharp" | slugify | downcase }}</a>
+    <a class="tag-anchor" href="#{{ tag | replace: '#', 'sharp' | slugify | downcase }}"><span>#</span>{{ tag | replace: "#", "sharp" | slugify | downcase }}</a>
   {% endfor %}
 </div>
 {% endif %}
 
-<div class="posts">
-  {% for tag in tags %}
+<div class="tagged-posts">
+	
+  	{% for tag in tags %}
 
 	<style>
 	#{{ tag | replace: '#', 'sharp' | slugify | downcase }} {
@@ -48,21 +49,23 @@ title: Tags
 	</style>
 
 	<div id="{{ tag | replace: '#', 'sharp' | slugify | downcase }}">
-    <h2 class="year" style="padding-top: 100px;"><span class="mark">#</span>{{ tag | replace: "#", "sharp" | slugify | downcase }}</h2>
+    <h2 class="current-tag"><span class="mark">#</span>{{ tag | replace: "#", "sharp" | slugify | downcase }}</h2>
 
+	<ul>
     {% for post in site.posts %}
     {% if post.tags contains tag %}
 
-    <div class="post-list">
-	    <div class="post-list-title"><a href="{{ post.url }}">{{ post.title }}</a></div>
-        <!-- <div class="post-list-desc">{{ post.description }} <small>— {{ post.date | date: "%Y·%m·%d" }}</small></div> -->
-    </div>
+    <li class="tagged-post">
+	    <a href="{{ post.url }}" class="tagged-post-title">{{ post.title }}</a><br>
+		<span>{{ post.description }}</span>
+	</li>
 
-		{% endif %}
-		<span class="hidden">&nbsp;</span>
-		{% endfor %}
+	{% endif %}
+	{% endfor %}
+	</ul>
 
 	</div>
 
-  {% endfor %}
+  	{% endfor %}
+
 </div>

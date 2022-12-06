@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Contact Info
+title: Contact
 ---
 
 | **Email** | heiswayi (at) nrird.com |
