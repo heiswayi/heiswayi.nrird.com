@@ -2,7 +2,7 @@
 layout: post
 title: What makes a great software engineer
 description: Engineering values that make a software engineer becomes a great one.
-tags: [Software Engineering, Engineering Values]
+tags: [Software Engineering, Engineering Values, Software Engineer]
 ---
 
 There are several values and principles that are important for a great software engineer. Some of the most important ones include:
