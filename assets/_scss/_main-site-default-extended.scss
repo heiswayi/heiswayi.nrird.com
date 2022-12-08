@@ -17,7 +17,9 @@
 .container {
   display: flex;
   flex-direction: column;
+  background: repeating-linear-gradient(135deg, var(--figure-bg-1) 0, var(--figure-bg-1) 1%, var(--figure-bg-2) 0, var(--figure-bg-2) 50%) 0 / 20px 20px;
   .content {
+    background-color: var(--body-bg);
     margin: 0;
     padding: 1rem 2rem;
     display: flex;

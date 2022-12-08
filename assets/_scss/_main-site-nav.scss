@@ -17,6 +17,7 @@
                     white-space: nowrap;
                     font-family: $font-topmenu;
                     border: 1px solid var(--link-1);
+                    box-shadow: 2px 2px var(--button-shadow);
                     &.active {
                         background: repeating-linear-gradient(135deg, var(--link-1) 0, var(--link-1) 1%, var(--header-bg) 0, var(--header-bg) 50%) 0 / 20px 20px;
                         color: var(--link-1);

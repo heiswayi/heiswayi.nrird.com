@@ -174,6 +174,7 @@ figure {
     img {
         margin: 0 0 0.2rem 0;
         border: 1px solid var(--figure-img-border);
+        background-color: var(--figure-caption-bg);
         // box-shadow: none;
         // background-color: var(--figure-img-bg);
     }
