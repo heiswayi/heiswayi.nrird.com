@@ -1,6 +1,6 @@
 ---
 layout: post
-title: How to avoid procrastination at work as a software engineer
+title: Avoiding procrastination at work as a software engineer
 description: Procrastination is a common problem among software engineers, so here are some strategies to avoid it.
 tags: [Work Life, Software Engineer]
 ---
