@@ -7,15 +7,15 @@ title: About
 
 Hi. I'm Heiswayi Nrird. In short, people call me `wayi`. I'm a _software engineer_ at [Keysight Technologies](https://www.keysight.com/) (Penang, Malaysia) where I specialize in developing and maintaining software systems that enable the company to deliver innovative solutions to its clients.
 
-PREVIOUS CAREERS
+<small class="muted">PREVIOUS CAREERS</small>
 - Global IT Manager @ ITD World
 - Application Engineer @ IME Technologies (Penang)
 - App Developer @ CEDEC USM
 
-EDUCATION
+<small class="muted">EDUCATION</small>
 - BEng (Hons), Electronics Engineering, USM
 
-THINGS I USUALLY DO
+<small class="muted">THINGS I USUALLY DO</small>
 - Design and code.
 - Contribute to some open source projects.
 - Play some computer games.
@@ -23,7 +23,7 @@ THINGS I USUALLY DO
 - Read some (e)books.
 - Meditate virtually.
 
-EXPERTISE IN
+<small class="muted">EXPERTISE IN</small>
 - End-to-end software product development
 - UI/UX design
 - Microservices architecture deployment
