@@ -5,15 +5,31 @@ title: About
 
 ![Heiswayi Nrird](https://ik.imagekit.io/nrirddotcom/HN/hn_D6guerPbf.jpg?tr=h-200)
 
-Hi, my name is Heiswayi Nrird, but most people call me Wayi. I am currently a software engineer at [Keysight Technologies](https://www.keysight.com/) in Penang, Malaysia.
+Hi. I'm Heiswayi Nrird. In short, people call me `wayi`. I'm a _software engineer_ at [Keysight Technologies](https://www.keysight.com/) (Penang, Malaysia) where I specialize in developing and maintaining software systems that enable the company to deliver innovative solutions to its clients.
 
-In my previous careers, I have worked as a Global IT Manager at ITD World and as an Application Engineer at IME Technologies. I have also worked as an app developer at CEDEC USM.
+PREVIOUS CAREERS
+- Global IT Manager @ ITD World
+- Application Engineer @ IME Technologies (Penang)
+- App Developer @ CEDEC USM
 
-I hold a Bachelor of Engineering (Hons) in Electronics Engineering from the Universiti Sains Malaysia (USM).
+EDUCATION
+- BEng (Hons), Electronics Engineering, USM
 
-In my free time, I enjoy designing and coding, contributing to open source projects, playing computer games, taking landscape photographs, reading books, and meditating virtually.
+THINGS I USUALLY DO
+- Design and code.
+- Contribute to some open source projects.
+- Play some computer games.
+- Move around and capture some landscape photographs.
+- Read some (e)books.
+- Meditate virtually.
 
-I have expertise in end-to-end software product development, UI/UX design, microservices architecture deployment, AWS/Kubernetes/Docker, web API development, and agile Scrum. I am proficient in HTML + CSS, C#/C++, TypeScript/JavaScript, PHP, and Python/PowerShell.
+EXPERTISE IN
+- End-to-end software product development
+- UI/UX design
+- Microservices architecture deployment
+- AWS/Kubernetes/Docker
+- Web API development
+- Agile Scrum
 
 <p class="elsewhere">
 	<small class="muted">ELSEWHERE</small><br>
