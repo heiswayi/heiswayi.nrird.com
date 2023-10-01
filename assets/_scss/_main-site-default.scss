@@ -164,16 +164,16 @@ img {
     margin: 1rem 0;
     max-width: 100%;
     height: auto;
-    box-shadow: 0 1px 3px var(--img-shadow);
+    // box-shadow: 0 1px 3px var(--img-shadow);
 }
 
 figure {
     padding: 1rem 0;
     margin: 0 0 1rem 0;
-    background: repeating-linear-gradient(135deg, var(--figure-bg-1) 0, var(--figure-bg-1) 1%, var(--figure-bg-2) 0, var(--figure-bg-2) 50%) 0 / 20px 20px;
+    // background: repeating-linear-gradient(135deg, var(--figure-bg-1) 0, var(--figure-bg-1) 1%, var(--figure-bg-2) 0, var(--figure-bg-2) 50%) 0 / 20px 20px;
     img {
         margin: 0 0 0.2rem 0;
-        border: 1px solid var(--figure-img-border);
+        // border: 1px solid var(--figure-img-border);
         background-color: var(--figure-caption-bg);
         // box-shadow: none;
         // background-color: var(--figure-img-bg);
