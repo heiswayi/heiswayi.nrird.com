@@ -4,7 +4,7 @@ tagline                 : "Heiswayi Nrird - Software Engineer" # jekyll-seo-tag
 description             : "Learning · Programming · Simplifying"
 keywords                : "frontend developer, ux designer, human-factor engineering, open source, photography, programming"
 logo                    : "/assets/cover.gif" # jekyll-seo-tag
-version                 : "23.10.01"
+version                 : "23.10.06"
 
 # SITE OWNERSHIP VERIFICATIONS
 webmaster_verifications:
