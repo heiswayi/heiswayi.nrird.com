@@ -8,6 +8,21 @@
     padding: 0;
 }
 
+* {
+    scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
+    &::-webkit-scrollbar {
+        width: 10px;
+        height: 10px;
+    }
+    &::-webkit-scrollbar-track {
+        background: var(--sb-track-color);
+    }
+    &::-webkit-scrollbar-thumb {
+        background: var(--sb-thumb-color);
+        border-radius: 2px;
+    }
+}
+
 html,
 body {
     margin: 0;
