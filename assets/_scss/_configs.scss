@@ -104,6 +104,8 @@ $font-footnote: $monospace;
   --pre-line-color: #cccccc;
   --sb-track-color: #232E33;
   --sb-thumb-color: #186cb8;
+  --nav-color: #414141;
+  --nav-bg: #e8e8e8;
 }
 
 [data-theme="dark"] {
@@ -148,4 +150,6 @@ $font-footnote: $monospace;
   --figure-img-shadow: rgba(255, 255, 255, 0.4);
   --footnote-bg: #111;
   --sb-thumb-color: #2a9a9f;
+  --nav-color: #aaa;
+  --nav-bg: #111;
 }

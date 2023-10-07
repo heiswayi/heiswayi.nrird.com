@@ -7,7 +7,7 @@
         max-width: 960px;
         width: 100%;
         margin: 0 auto;
-        padding: 2rem 2rem 0 2rem;
+        padding: 2rem 2rem 1rem 2rem;
         h1 {
             margin-top: 0;
             margin-bottom: 0;
@@ -20,7 +20,7 @@
         max-width: 960px;
         width: 100%;
         margin: 0 auto;
-        padding: 2rem;
+        padding: 0 2rem 2rem 2rem;
         // border-right: 1px dashed var(--hrline-color);
         // border-left: 1px dashed var(--hrline-color);
         ul {
@@ -35,18 +35,21 @@
                     padding: 5px 12px;
                     white-space: nowrap;
                     font-family: $font-topmenu;
-                    border: 1px solid var(--button-border);
-                    color: var(--button-color);
-                    box-shadow: 2px 2px var(--button-shadow);
-                    border-radius: 2px;
+                    // border: 1px solid var(--button-border);
+                    border: 1px solid transparent;
+                    color: var(--nav-color);
+                    // box-shadow: 2px 2px var(--button-shadow);
+                    // border-radius: 2px;
+                    background-color: var(--nav-bg);
                     &:hover {
-                        color: var(--button-hover-color);
+                        color: var(--link-hover-color);
+                        background-color: var(--link-1);
                     }
                     &.active {
                         // background: repeating-linear-gradient(135deg, var(--link-1) 0, var(--link-1) 1%, var(--header-bg) 0, var(--header-bg) 50%) 0 / 20px 20px;
-                        background-color: var(--header-bg);
-                        border: 1px solid var(--link-1);
-                        color: var(--link-1);
+                        // background-color: var(--header-bg);
+                        border-bottom: 1px solid var(--link-1);
+                        // color: var(--link-1);
                     }
                 }
                 &:last-child {
