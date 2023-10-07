@@ -1,7 +1,21 @@
 .header {
     display: flex;
+    flex-direction: column;
     border-bottom: 1px solid var(--header-border);
     background-color: var(--header-bg);
+    .site-title {
+        max-width: 960px;
+        width: 100%;
+        margin: 0 auto;
+        padding: 2rem 2rem 0 2rem;
+        h1 {
+            margin-top: 0;
+            margin-bottom: 0;
+            font-family: $monospace;
+            font-weight: normal;
+            font-size: medium;
+        }
+    }
     .site-nav {
         max-width: 960px;
         width: 100%;
