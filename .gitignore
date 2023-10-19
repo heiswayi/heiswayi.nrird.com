@@ -9,8 +9,6 @@ DRAFT-*.md
 DRAFT-*.html
 _deleted/
 node_modules/
-Gemfile.lock
-package-lock.json
 *-draft.md
 _draft/
 

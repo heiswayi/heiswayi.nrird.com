@@ -12,22 +12,12 @@
     "sass": "^1.54.5"
   },
   "scripts": {
-    "jekyll-build": "bundle exec jekyll build",
-    "jekyll-serve": "bundle exec jekyll serve --watch",
-    "compile-css": "gulp compile-scss",
-    "build": "npm run jekyll-build && npm run compile-css"
+    "compile-sass": "gulp compile-sass"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/heiswayi/heiswayi.nrird.com.git"
+    "url": "git+https://github.com/heiswayi/heiswayi.nrird.com.git"
   },
-  "keywords": [
-    "jekyll",
-    "static-site-generator",
-    "heiswayi-nrird",
-    "personal-blog",
-    "minimalist-site"
-  ],
   "author": "Heiswayi Nrird",
   "license": "MIT"
 }
