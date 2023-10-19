@@ -12,8 +12,8 @@ const scssDir = [
     'assets/_scss/**/**/*.scss'
 ];
 
-gulp.task('compile-scss', () => {
-    console.log('Compiling .scss files using gulp...');
+gulp.task('compile-sass', () => {
+    console.log('Compiling SCSS files using gulp...');
     return gulp.src(scssDir)
         .pipe(sass())
         .pipe(prefixer('last 3 version', 'ie 9'))

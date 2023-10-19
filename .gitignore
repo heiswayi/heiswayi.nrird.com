@@ -3,12 +3,12 @@
 #################
 _site/
 .sass-cache
+.jekyll-cache
 *.draft
 DRAFT-*.md
 DRAFT-*.html
 _deleted/
 node_modules/
-Gemfile.lock
 *-draft.md
 _draft/
 

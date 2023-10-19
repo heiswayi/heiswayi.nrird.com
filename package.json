@@ -1,7 +1,7 @@
 {
   "name": "heiswayi.nrird.com",
-  "version": "22.8.28",
-  "description": "Jekyll source code for https://heiswayi.nrird.com site",
+  "version": "23.10.19",
+  "description": "Jekyll source code for heiswayi.nrird.com",
   "main": "index.js",
   "devDependencies": {
     "gulp": "^4.0.2",
@@ -12,27 +12,12 @@
     "sass": "^1.54.5"
   },
   "scripts": {
-    "jekyll-build": "bundle exec jekyll build",
-    "jekyll-serve": "bundle exec jekyll serve --watch",
-    "finalize-css": "gulp compile-scss",
-    "build": "npm run jekyll-build && npm run finalize-css",
-    "serve": "npm run jekyll-serve",
-    "docker-build": "docker build . -t hnsite:latest",
-    "docker-run": "docker run --rm --name hnsite-container -p 4000:4000 hnsite:latest",
-    "docker": "npm run docker-build && npm run docker-run",
-    "redocker": "docker rm hnsite-container -f && npm run docker"
+    "compile-sass": "gulp compile-sass"
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@bitbucket.org/heiswayi/heiswayi.nrird.com.git"
+    "url": "git+https://github.com/heiswayi/heiswayi.nrird.com.git"
   },
-  "keywords": [
-    "jekyll",
-    "static-site-generator",
-    "heiswayi-nrird",
-    "personal-blog",
-    "minimalist-site"
-  ],
   "author": "Heiswayi Nrird",
-  "license": "ISC"
+  "license": "MIT"
 }
