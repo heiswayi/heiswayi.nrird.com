@@ -276,20 +276,17 @@ dl.project-list {
   padding: 1rem 0;
 }
 
-.index-post-title {
-  display: flex;
-  flex-direction: row;
-  .date {
+.index-page-table {
+  .post-date {
     font-family: $font-postmeta;
-    width: fit-content;
     word-wrap: none;
     white-space: nowrap;
     padding-top: 0.1rem;
     padding-right: 1rem;
     opacity: 0.5;
+    text-align: center;
   }
-  .title {
-    flex: 1;
+  .post-title {
     a {
       border-bottom: none;
       .label {

@@ -15,14 +15,6 @@
       }
     }
   }
-  .index-post-title {
-    &:not(:last-child) {
-      border-bottom: 1px dashed var(--hrline-color);
-    }
-    .date {
-      display: none;
-    }
-  }
   .misc-link {
     a {
       white-space: nowrap;

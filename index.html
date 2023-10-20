@@ -37,25 +37,28 @@ title: Home
   <div class="container">
     <div class="content">
       	<div class="page-content">
-			<div class="index-post-title">
-				<span class="date">YY·MM·DD</span>
-				<span class="title"></span>
-			</div>
-			{% for post in site.posts %}
+			<table class="index-page-table">
+				<tr>
+					<td class="post-date">YY·MM·DD</td>
+					<td class="post-title"></td>
+				</tr>
+			
+				{% for post in site.posts %}
 
-				{% if post.tags contains "Project" %}
-				<div class="index-post-title">
-					<span class="date" title="Published on {{ post.date | date: '%B %d, %Y' }}">{{ post.date | date: "%y·%m·%d" }}</span>
-					<span class="title"><a href="{{ post.url }}"><span class="label">Proj/App</span>{{ post.title }}</a></span>
-				</div>
-				{% else %}
-				<div class="index-post-title">
-					<span class="date" title="Published on {{ post.date | date: '%B %d, %Y' }}">{{ post.date | date: "%y·%m·%d" }}</span>
-					<span class="title"><a href="{{ post.url }}">{{ post.title }}</a></span>
-				</div>
-				{% endif %}
+					{% if post.tags contains "Project" %}
+					<tr>
+						<td class="post-date">{{ post.date | date: "%y·%m·%d" }}</td>
+						<td class="post-title"><a href="{{ post.url }}"><span class="label">Proj/App</span>{{ post.title }}</a></td>
+					</tr>
+					{% else %}
+					<tr>
+						<td class="post-date">{{ post.date | date: "%y·%m·%d" }}</td>
+						<td class="post-title"><a href="{{ post.url }}">{{ post.title }}</a></td>
+					</tr>
+					{% endif %}
 
-			{% endfor %}
+				{% endfor %}
+			</table>
 		</div>
     </div>
   </div>
