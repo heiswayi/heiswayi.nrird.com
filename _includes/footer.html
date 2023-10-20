@@ -1,20 +1,20 @@
 <div class="footer">
   <div class="copyright">
-    <div class="light-theme-link"><a href="" onclick="toggleTheme('light'); return false;">/switch-to-light-mode</a></div>
-    <div class="dark-theme-link"><a href="" onclick="toggleTheme('dark'); return false;">/switch-to-dark-mode</a></div>
+    <div class="light-theme-link"><a href="" onclick="toggleTheme('light'); return false;">use-light-mode</a></div>
+    <div class="dark-theme-link"><a href="" onclick="toggleTheme('dark'); return false;">use-dark-mode</a></div>
     <div class="misc-link">
-      <a href="{{ '/' | prepend: site.baseurl }}">/home</a>
-      &middot; <a href="{{ '/contact' | prepend: site.baseurl }}">/contact</a>
-      &middot; <a href="{{ '/disclaimer' | prepend: site.baseurl }}">/disclaimer</a>
-      {% if site.show_tags %} &middot; <a href="{{ '/tags' | prepend: site.baseurl }}">/tags</a>{%
+      <a href="{{ '/' | prepend: site.baseurl }}">home</a>
+      &middot; <a href="{{ '/contact' | prepend: site.baseurl }}">contact</a>
+      &middot; <a href="{{ '/disclaimer' | prepend: site.baseurl }}">disclaimer</a>
+      {% if site.show_tags %} &middot; <a href="{{ '/tags' | prepend: site.baseurl }}">tags</a>{%
       endif %}
-      &middot; <a href="{{ '/feed.xml' | prepend: site.baseurl }}">/rss</a>
-      &middot; <a href="#top" class="back-to-top-anchor">/back-to-top &uarr;</a>
+      &middot; <a href="{{ '/feed.xml' | prepend: site.baseurl }}">rss</a>
+      &middot; <a href="#top" class="back-to-top-anchor">back-to-top &uarr;</a>
     </div>
     &copy; 2015-{{ site.time | date: "%Y" }} Heiswayi Nrird<br><br>
     <div class="page-load"></div>
-    <div class="version">build ver. {{ site.version }} (jekyll)</div>
-    <div class="made-with"><em>Made with &hearts; from Penang, Malaysia.</em></div>
+    <div class="version">site v{{ site.version }} built with jekyll and nodejs (gulp)</div>
+    <div class="made-with">made in penang, malaysia</div>
   </div>
 </div>
 
@@ -79,7 +79,7 @@
       if (t) {
         const timingStats = document.querySelector('.page-load');
         const loadTime = (t.loadEventEnd - t.navigationStart) / 1000;
-        let timingStatsHTML = `page perf. ${round2(loadTime)} sec.`;
+        let timingStatsHTML = `page load time: ${round2(loadTime)}s`;
         timingStats.innerHTML = timingStatsHTML;
       }
     }, 0);
