@@ -4,7 +4,7 @@ tagline                 : "Heiswayi Nrird - Software Engineer" # jekyll-seo-tag
 description             : "i wish i can write something cool here"
 keywords                : "frontend developer, ux designer, human-factor engineering, open source, photography, programming"
 logo                    : "/assets/cover.gif" # jekyll-seo-tag
-version                 : "23.10.06"
+version                 : "23.10.20"
 
 # SITE OWNERSHIP VERIFICATIONS
 webmaster_verifications:
@@ -38,7 +38,6 @@ social:
     - https://github.com/heiswayi
     - https://my.linkedin.com/in/heiswayi
     - https://codepen.io/heiswayi/
-    - https://keybase.io/heiswayi
     - https://unsplash.com/@heiswayi_nrird
     - https://gist.github.com/heiswayi
     - https://jsfiddle.net/user/heiswayi/
