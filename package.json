@@ -12,7 +12,9 @@
     "sass": "^1.54.5"
   },
   "scripts": {
-    "compile-sass": "gulp compile-sass"
+    "compile-sass": "gulp compile-sass",
+    "jekyll-serve": "bundle exec jekyll serve",
+    "jekyll-build": "bundle exec jekyll build"
   },
   "repository": {
     "type": "git",

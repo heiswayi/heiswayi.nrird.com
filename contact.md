@@ -3,4 +3,4 @@ layout: page
 title: Contact
 ---
 
-| **Email** | heiswayi (at) nrird.com |
+Just ping me via email first: **heiswayi (at) nrird.com**

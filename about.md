@@ -5,38 +5,32 @@ title: About
 
 ![Heiswayi Nrird](https://ik.imagekit.io/nrirddotcom/HN/hn_D6guerPbf.jpg?tr=h-200)
 
-Hi. I'm Heiswayi Nrird. In short, people call me `wayi`. I'm a _software engineer_ at [Keysight Technologies](https://www.keysight.com/) (Penang, Malaysia) where I specialize in developing and maintaining software systems that enable the company to deliver innovative solutions to its clients.
+Hello there, I'm **Heiswayi Nrird**, but most folks simply call me **Wayi**. By profession, I'm a _software engineer_ at [Keysight Technologies](https://www.keysight.com/). My area of expertise lies in full-stack application development and cloud-based infrastructure software solutions.
 
-<small class="muted">PREVIOUS CAREERS</small>
-- Global IT Manager @ ITD World
-- Application Engineer @ IME Technologies (Penang)
-- App Developer @ CEDEC USM
+When I'm not immersed in the world of code, I have a few other interests that keep life interesting. I enjoy capturing the beauty of landscapes through my camera lens. It's a hobby that offers a welcome escape from the digital realm.
 
-<small class="muted">EDUCATION</small>
-- BEng (Hons), Electronics Engineering, USM
+I'm also an avid reader of tech articles and news. Staying up to date with the latest in the tech world is something I find both enjoyable and informative. And, like many, I appreciate the occasional computer and mobile game to unwind.
 
-<small class="muted">THINGS I USUALLY DO</small>
-- Design and code.
-- Contribute to some open source projects.
-- Play some computer games.
-- Move around and capture some landscape photographs.
-- Read some (e)books.
-- Meditate virtually.
+This blog serves as an outlet for my thoughts and experiences, offering a glimpse into various aspects of my life. Sometimes, it's all about coding and web apps, while at other times, it's just a repository for random musings. I hope this brief introduction gives you a clearer picture of who I am and what I'm all about. Thanks for dropping by.
 
-<small class="muted">EXPERTISE IN</small>
-- End-to-end software product development
-- UI/UX design
-- Microservices architecture deployment
-- AWS/Kubernetes/Docker
-- Web API development
-- Agile Scrum
+## Me on elsewhere
 
-<p class="elsewhere">
-	<small class="muted">ELSEWHERE</small><br>
-	<a href="https://www.linkedin.com/in/heiswayi">LinkedIn</a> &middot; 
-	<a href="https://github.com/heiswayi?tab=repositories">GitHub</a> &middot; 
-	<a href="https://gist.github.com/heiswayi">Gist</a> &middot; 
-	<a href="https://codepen.io/heiswayi/pens/public">CodePen</a> &middot; 
-	<a href="https://jsfiddle.net/user/heiswayi/">JSFiddle</a> &middot; 
-	<a href="https://unsplash.com/@heiswayi_nrird">Unsplash</a>
-</p>
+- [LinkedIn](https://www.linkedin.com/in/heiswayi)
+- [GitHub](https://github.com/heiswayi)
+- [Gist](https://gist.github.com/heiswayi)
+- [CodePen](https://codepen.io/heiswayi/pens/public)
+- [JSFiddle](https://jsfiddle.net/user/heiswayi/)
+- [Unsplash](https://unsplash.com/@heiswayi_nrird)
+
+I have socmed accounts (e.g. Facebook, Instagram, Twitter, etc.) but not really serious using them.
+
+## Tech stack behind this site
+
+- Made using [Jekyll](https://jekyllrb.com/) and [NodeJS](https://nodejs.org/) ([gulp](https://gulpjs.com/))
+- Source code hosted on [GitHub](https://github.com/)
+- Built and served automatically by [Cloudflare Pages](https://pages.cloudflare.com/)
+- Site domain managed using [Cloudflare DNS](https://www.cloudflare.com/)
+
+## Contact info
+
+Email: **heiswayi (at) nrird.com**
