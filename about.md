@@ -1,19 +1,19 @@
 ---
 layout: page
-title: About
+title: about
 ---
 
 ![Heiswayi Nrird](https://ik.imagekit.io/nrirddotcom/HN/hn_D6guerPbf.jpg?tr=h-200)
 
-Hello there, I'm **Heiswayi Nrird**, but most folks simply call me **Wayi**. By profession, I'm a _software engineer_ at [Keysight Technologies](https://www.keysight.com/). My area of expertise lies in full-stack application development and cloud-based infrastructure software solutions.
+hello there, i'm **Heiswayi Nrird**, but most folks simply call me **Wayi**. by profession, i'm a _software engineer_ at [Keysight Technologies](https://www.keysight.com/). my area of expertise lies in full-stack application development and cloud-based infrastructure software solutions.
 
-When I'm not immersed in the world of code, I have a few other interests that keep life interesting. I enjoy capturing the beauty of landscapes through my camera lens. It's a hobby that offers a welcome escape from the digital realm.
+when i'm not immersed in the world of code, i have a few other interests that keep life interesting. i enjoy capturing the beauty of landscapes through my camera lens. it's a hobby that offers a welcome escape from the digital realm.
 
-I'm also an avid reader of tech articles and news. Staying up to date with the latest in the tech world is something I find both enjoyable and informative. And, like many, I appreciate the occasional computer and mobile game to unwind.
+i'm also an avid reader of tech articles and news. staying up to date with the latest in the tech world is something i find both enjoyable and informative. and, like many, i appreciate the occasional computer and mobile game to unwind.
 
-This blog serves as an outlet for my thoughts and experiences, offering a glimpse into various aspects of my life. Sometimes, it's all about coding and web apps, while at other times, it's just a repository for random musings. I hope this brief introduction gives you a clearer picture of who I am and what I'm all about. Thanks for dropping by.
+this blog serves as an outlet for my thoughts and experiences, offering a glimpse into various aspects of my life. sometimes, it's all about coding and web apps, while at other times, it's just a repository for random musings. i hope this brief introduction gives you a clearer picture of who i am and what i'm all about. thanks for dropping by. ツ
 
-## Me on elsewhere
+## me on elsewhere
 
 - [LinkedIn](https://www.linkedin.com/in/heiswayi)
 - [GitHub](https://github.com/heiswayi)
@@ -22,15 +22,15 @@ This blog serves as an outlet for my thoughts and experiences, offering a glimps
 - [JSFiddle](https://jsfiddle.net/user/heiswayi/)
 - [Unsplash](https://unsplash.com/@heiswayi_nrird)
 
-I have socmed accounts (e.g. Facebook, Instagram, Twitter, etc.) but not really serious using them.
+i have socmed accounts (e.g. Facebook, Instagram, Twitter, etc.) but not really serious using them.
 
-## Tech stack behind this site
+## tech stack behind this site
 
-- Made using [Jekyll](https://jekyllrb.com/) and [NodeJS](https://nodejs.org/) ([gulp](https://gulpjs.com/))
-- Source code hosted on [GitHub](https://github.com/)
-- Built and served automatically by [Cloudflare Pages](https://pages.cloudflare.com/)
-- Site domain managed using [Cloudflare DNS](https://www.cloudflare.com/)
+- made using [Jekyll](https://jekyllrb.com/) and [NodeJS](https://nodejs.org/) ([gulp](https://gulpjs.com/))
+- source code is hosted on [GitHub](https://github.com/)
+- built and served automatically by [Cloudflare Pages](https://pages.cloudflare.com/)
+- site domain is managed using [Cloudflare DNS](https://www.cloudflare.com/)
 
-## Contact info
+## contact info
 
-Email: **heiswayi (at) nrird.com**
+email: **heiswayi (at) nrird.com**
