@@ -1,7 +1,7 @@
 ---
 layout: compress
 published: true
-title: Home
+title: home
 ---
 
 {% assign rawtags = "" %}
@@ -45,10 +45,10 @@ title: Home
 			
 				{% for post in site.posts %}
 
-					{% if post.tags contains "Project" %}
+					{% if post.tags contains "sponsored" %}
 					<tr>
 						<td class="post-date">{{ post.date | date: "%y·%m·%d" }}</td>
-						<td class="post-title"><a href="{{ post.url }}"><span class="label">Proj/App</span>{{ post.title }}</a></td>
+						<td class="post-title"><a href="{{ post.url }}"><span class="label">sponsored</span>{{ post.title }}</a></td>
 					</tr>
 					{% else %}
 					<tr>

@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Contact
+title: contact
 ---
 
-Just ping me via email first: **heiswayi (at) nrird.com**
+just ping me via email first: **heiswayi (at) nrird.com**
