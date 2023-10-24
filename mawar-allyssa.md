@@ -1,21 +1,20 @@
 ---
 layout: page
-title: Dear Mawar Allyssa
-description: A sweet and inspiring comic dedicated to my beloved daughter, Mawar Allyssa about the feeling that I had when I'm growing old.
+title: dear Mawar Allyssa
 ---
 
-Dear Mawar Allyssa,<br>
-My sweet girl, you are a blessing;<br>
+dear Mawar Allyssa,<br>
+my sweet girl, you are a blessing;<br>
 the most wonderful piece of my life<br>
 and the one person<br>
-I love above all others.
+i love above all others.
 
-You are my light<br>
+you are my light<br>
 and my world,<br>
 my reason for being.
 
-And as you grow, I pray you'll know<br>
-I love you so.
+and as you grow, i pray you'll know<br>
+i love you so.
 
 {%
     include image.html 
