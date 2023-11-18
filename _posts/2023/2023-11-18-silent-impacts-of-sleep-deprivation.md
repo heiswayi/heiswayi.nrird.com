@@ -1,9 +1,11 @@
 ---
 layout: post
 title: the silent impacts of sleep deprivation
-description: what happened to the physical body and mental when a person is lacking of sleep he/she needed
+description: what occurs to the physical and mental aspects of an individual when they experience a deficiency in the sleep they require?
 tags: [sleep-deprivation]
 ---
+
+so, i've been losing sleep lately because i'm hooked on playing online games. i looked into the downsides of this habit, and here's what i've figured out for now. there are probably more bad things, but these are the ones that pop up the most.
 
 ### impacts to physical body
 
@@ -11,27 +13,15 @@ tags: [sleep-deprivation]
 - sleep deprivation can suppress the immune system, making the body more susceptible to infections. [^2]
 - chronic sleep deprivation is associated with an increased risk of conditions such as obesity, diabetes, and cardiovascular diseases. [^3]
 
-_in layman's terms:_
-
-- it would be harder to focus, remember things, and make good decisions.
-- it will be more likely to catch a cold or get sick.
-- high chances of getting serious health issues like being overweight, diabetes, and heart problems.
-
 ### impacts to mental
 
 - sleep deprivation can contribute to irritability, mood swings, and an increased risk of mood disorders such as depression and anxiety. [^4]
 - lack of sleep can impair emotional regulation and increase emotional reactivity. [^5]
 - chronic sleep deprivation may contribute to long-term cognitive decline and an increased risk of neurodegenerative diseases. [^6]
 
-_in layman's terms:_
-
-- easy to feel irritable, moody, and stressed out. it can even raise the risk of having depression or anxiety.
-- it's harder to control the feelings, and might react more strongly to things.
-- chronic lack of sleep could mess with the brain in the long run, making it harder to think and increasing your risk of brain diseases.
-
 _note: it's important to note that individual responses to sleep deprivation can vary, and the severity of effects may depend on factors such as the duration of sleep deprivation and the individual's overall health._
 
-### amount of sleep needed
+### so, what is the right amount of sleep a person should have?
 
 the amount of sleep needed for adults can vary, but generally, the [National Sleep Foundation](https://www.thensf.org/) provides the following recommendations for different age groups:
 
