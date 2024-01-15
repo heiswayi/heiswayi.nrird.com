@@ -1,10 +1,10 @@
 # SITE METADATA
-title                   : "./heiswayi-nrird-site/"
+title                   : "heiswayi·nrird·site"
 tagline                 : "Heiswayi Nrird - Software Engineer" # jekyll-seo-tag
 description             : "i wish i can write something cool here"
 keywords                : "frontend developer, ux designer, human-factor engineering, open source, photography, programming"
 logo                    : "/assets/cover.gif" # jekyll-seo-tag
-version                 : "23.10.20"
+version                 : "24.01.16"
 
 # SITE OWNERSHIP VERIFICATIONS
 webmaster_verifications:
