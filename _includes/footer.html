@@ -1,7 +1,5 @@
 <div class="footer">
   <div class="copyright">
-    <div class="light-theme-link"><a href="" onclick="toggleTheme('light'); return false;">use-light-mode</a></div>
-    <div class="dark-theme-link"><a href="" onclick="toggleTheme('dark'); return false;">use-dark-mode</a></div>
     <div class="misc-link">
       <a href="{{ '/' | prepend: site.baseurl }}">home</a>
       &middot; <a href="{{ '/contact' | prepend: site.baseurl }}">contact</a>
@@ -19,59 +17,6 @@
 </div>
 
 <script>
-  function showCodeLineNo() {
-    var pre = document.getElementsByTagName('pre'),
-      pl = pre.length;
-    for (var i = 0; i < pl; i++) {
-      pre[i].innerHTML = '<span class="line-number"></span>' + pre[i].innerHTML + '<span class="cl"></span>';
-      var num = pre[i].innerHTML.split(/\n/).length;
-      for (var j = 0; j < (num - 1); j++) {
-        var line_num = pre[i].getElementsByTagName('span')[0];
-        line_num.innerHTML += '<span>' + (j + 1) + '</span>';
-      }
-    }
-  }
-
-  var lightThemeLink = document.getElementsByClassName('light-theme-link')[0],
-    darkThemeLink = document.getElementsByClassName('dark-theme-link')[0];
-
-  function enableLightTheme() {
-    if (lightThemeLink) { lightThemeLink.style.display = 'none'; }
-    if (darkThemeLink) { darkThemeLink.style.display = 'block'; }
-  }
-
-  function enableDarkTheme() {
-    if (darkThemeLink) { darkThemeLink.style.display = 'none'; }
-    if (lightThemeLink) { lightThemeLink.style.display = 'block'; }
-  }
-
-  function toggleTheme(targetTheme) {
-    if (targetTheme === "dark") {
-      enableDarkTheme();
-    } else {
-      enableLightTheme();
-    }
-    document.documentElement.setAttribute('data-theme', targetTheme);
-    localStorage.setItem('theme', targetTheme);
-  }
-
-  function getTheme() {
-    var storedTheme = localStorage.getItem('theme') || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
-    if (storedTheme) {
-      document.documentElement.setAttribute('data-theme', storedTheme);
-      if (storedTheme === "dark") {
-        enableDarkTheme();
-      } else {
-        enableLightTheme();
-      }
-    }
-  }
-
-  document.addEventListener("DOMContentLoaded", () => {
-    showCodeLineNo();
-    getTheme();
-  });
-
   window.addEventListener('load', () => {
     setTimeout(() => {
       const t = window.performance && performance.timing;

@@ -1,28 +1,43 @@
 .header {
     display: flex;
     flex-direction: column;
-    border-bottom: 1px solid var(--header-border);
+    border-bottom: 1px solid var(--color-silver);
     background-color: var(--header-bg);
     .site-title {
         max-width: 960px;
         width: 100%;
         margin: 0 auto;
         padding: 2rem 2rem 1rem 2rem;
-        h1 {
-            margin-top: 0;
-            margin-bottom: 0;
-            font-family: $monospace;
-            font-weight: normal;
-            font-size: medium;
+        font-family: $font-brand;
+        font-optical-sizing: auto;
+        color: var(--color-black);
+        &:hover {
+            text-decoration: none;
+            color: var(--color-blue);
         }
+    }
+    .page-title {
+        max-width: 960px;
+        width: 100%;
+        margin: 0 auto;
+        padding: 0 2rem 0 2rem;
+    }
+    .page-meta {
+        max-width: 960px;
+        width: 100%;
+        margin: 0 auto;
+        padding: 0 2rem 2rem 2rem;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        font-family: $font-postmeta;
+        font-size: 0.9rem;
+        opacity: 0.8;
     }
     .site-nav {
         max-width: 960px;
         width: 100%;
         margin: 0 auto;
         padding: 0 2rem 2rem 2rem;
-        // border-right: 1px dashed var(--hrline-color);
-        // border-left: 1px dashed var(--hrline-color);
         ul {
             margin: 0;
             padding: 0;
@@ -35,21 +50,15 @@
                     padding: 5px 12px;
                     white-space: nowrap;
                     font-family: $font-topmenu;
-                    // border: 1px solid var(--button-border);
-                    border: 1px solid transparent;
-                    color: var(--nav-color);
-                    // box-shadow: 2px 2px var(--button-shadow);
-                    // border-radius: 2px;
-                    background-color: var(--nav-bg);
+                    //border: 1px solid var(--color-silver);
+                    color: var(--color-black);
+                    background-color: var(--nav-btn-bg);
+                    font-size: 0.8rem;
                     &:hover {
-                        color: var(--link-hover-color);
-                        background-color: var(--link-1);
-                    }
-                    &.active {
-                        // background: repeating-linear-gradient(135deg, var(--link-1) 0, var(--link-1) 1%, var(--header-bg) 0, var(--header-bg) 50%) 0 / 20px 20px;
-                        // background-color: var(--header-bg);
-                        border-bottom: 1px solid var(--link-1);
-                        // color: var(--link-1);
+                        //border: 1px solid var(--color-black);
+                        text-decoration: none;
+                        background-color: var(--color-blue);
+                        color: var(--color-white);
                     }
                 }
                 &:last-child {
