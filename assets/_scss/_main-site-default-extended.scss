@@ -253,7 +253,6 @@ dl.project-list {
   }
   .post-title {
     a {
-      border-bottom: none;
       color: var(--color-black);
       .label {
         opacity: 0.7;
@@ -264,6 +263,9 @@ dl.project-list {
         margin-right: 5px;
         padding-left: 2px;
         padding-right: 2px;
+      }
+      &:hover {
+        color: var(--color-blue);
       }
     }
   }
