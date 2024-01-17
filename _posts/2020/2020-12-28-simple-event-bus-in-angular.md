@@ -7,7 +7,7 @@ tags: [angular, typescript, best-practices, coding-tips]
 
 Event Bus enables a simple intercomponent communication within Angular project using `Subject` and `Subscription` from RxJS.
 
-## Event Bus Service
+## Creating Event Bus Service
 
 File: _event-bus.service.ts_
 

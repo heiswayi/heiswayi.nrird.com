@@ -2,7 +2,7 @@
 layout: post
 title: Lambda Expression, Delegate, Predicate and Closure in .NET
 description: Let's learn how to use lambda expression, delegate, predicate and closure in .NET C# code.
-tags: [csharp]
+tags: [csharp, dotnet]
 ---
 
 ## Lambda Expression

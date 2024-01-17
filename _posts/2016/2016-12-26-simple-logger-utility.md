@@ -7,7 +7,7 @@ tags: [csharp, dotnet, logger]
 
 I've created a straightforward C# utility class for handling application logging in small .NET projects.
 
-### Full source code ([Gist](https://gist.github.com/heiswayi/69ef5413c0f28b3a58d964447c275058))
+Full source code ([Gist](https://gist.github.com/heiswayi/69ef5413c0f28b3a58d964447c275058))
 
 ```cs
 /*

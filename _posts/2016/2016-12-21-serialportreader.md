@@ -7,7 +7,7 @@ tags: [serial-port, powershell]
 
 This PowerShell script allows users to configure and establish a connection to a serial port, continuously read data from it, and log the data to a file. The user can customize the script's behavior by providing parameters such as port name, baud rate, parity, etc.
 
-### Full source code ([Gist](https://gist.github.com/heiswayi/10b412aa96d3f35d85f5f8c2e0075a33))
+Full source code ([Gist](https://gist.github.com/heiswayi/10b412aa96d3f35d85f5f8c2e0075a33))
 
 ```powershell
 <#

@@ -5,13 +5,13 @@ description: This is how I dynamically modify the file content by using deferred
 tags: [installshield, installscript, windows-installer]
 ---
 
-## The Problem
+## Situation
 
 I have a metadata file that contains the installation path of my application (executable), and this metadata file is installed by my application installer (setup) in a different location than my application files. The purpose of this metadata file is that it would be used by other application to display my application info and also to know the install location of my application.
 
 The problem is that the installation path is hard-coded (default path) in that metadata file, and when the user has changed the install location to a different path during the installation time, the installation path now becomes mismatched with the one in the metadata file. Thus, this has caused the other application cannot recognize the present of my application. My application installer is created using InstallShield 2016 Basic MSI project.
 
-## The Solution
+## Solution
 
 To solve this problem, I figured it out that I need to apply a deferred custom action using InstallScript. The reason for using the deferred custom action is because I need to make a change to the system and only the deferred custom action can be run in elevated context.
 

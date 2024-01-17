@@ -77,15 +77,11 @@ And below are the events or restrictions that occured during the duration of MCO
 
 ## Visualizations for Malaysia COVID-19
 
-<iframe src="https://ourworldindata.org/grapher/total-and-daily-cases-covid-19?country=~MYS" loading="lazy" style="width: 100%; height: 600px; border: 0px none;"></iframe>
+<iframe src="https://ourworldindata.org/grapher/covid-daily-vs-total-cases-per-million?country=~MYS" loading="lazy" style="width: 100%; height: 600px; border: 0px none;"></iframe>
 
 <br><br>
 
 <iframe src="https://ourworldindata.org/grapher/covid-confirmed-cases-since-100th-case?country=~MYS" loading="lazy" style="width: 100%; height: 600px; border: 0px none;"></iframe>
-
-<br><br>
-
-<iframe src="https://ourworldindata.org/grapher/covid-daily-vs-total-cases?country=~MYS" loading="lazy" style="width: 100%; height: 600px; border: 0px none;"></iframe>
 
 ## COVID-19 Trackers for Malaysia
 
