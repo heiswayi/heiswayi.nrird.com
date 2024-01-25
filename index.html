@@ -37,24 +37,24 @@ title: home
   <div class="container">
     <div class="content">
       	<div class="page-content">
-			<table class="index-page-table">
+			<div class="index-page">
 			
 				{% for post in site.posts %}
 
-					{% if post.tags contains "sponsored" %}
-					<tr>
-						<td class="post-date">{{ post.date | date: "%y·%m·%d" }}</td>
-						<td class="post-title"><a href="{{ post.url }}"><span class="label">sponsored</span>{{ post.title }}</a></td>
-					</tr>
-					{% else %}
-					<tr>
-						<td class="post-date">{{ post.date | date: "%y·%m·%d" }}</td>
-						<td class="post-title"><a href="{{ post.url }}">{{ post.title }}</a></td>
-					</tr>
-					{% endif %}
+					<div class="index-row">
+						<div class="post-date">{{ post.date | date: "%y·%m·%d" }}</div>
+						<div class="post-title">
+							<a href="{{ post.url }}">
+								{% if post.tags contains "sponsored" %}
+									<span class="label">sponsored</span>
+								{% endif %}
+							{{ post.title }}
+							</a>
+						</div>
+					</div>
 
 				{% endfor %}
-			</table>
+				</div>
 		</div>
     </div>
   </div>
