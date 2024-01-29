@@ -1,13 +1,11 @@
----
-layout: compress
-published: true
-title: Error 404 - Page not found
----
-
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en" class="no-js" itemscope itemtype="http://schema.org/WebPage">
 
 <head>
+    <link rel="canonical" href="{{ page.redirect_to }}"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta http-equiv="refresh" content="5;url={{ page.redirect_to }}" />
+
     {% include head.html %}
 
     <style>
@@ -29,12 +27,14 @@ title: Error 404 - Page not found
     <div class="error-page">
         <div class="error-content">
             <h1 class="colorize">{{ site.title }}</h1>
-            <h2>error 404 - page not found</h2>
-            <p>sorry, i've misplaced that URL, or it's pointing to something that doesn't exist. 😞<br>
-                Head back home to try finding it again.</p>
-            <p><a href="{{ '/' | prepend: site.baseurl }}">&larr; head back home</a></p>
+            <h2>redirecting...</h2>
+            <p>you will be redirected to the following link in 5 seconds:<br>
+                <a href="{{ page.redirect_to }}">{{ page.redirect_to }}</a>
+            </p>
+            <p>click on the link above if you are not redirected.</p>
         </div>
     </div>
+    <!-- <script>location='{{ page.redirect_to }}'</script> -->
 </body>
 
 </html>

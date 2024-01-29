@@ -281,6 +281,10 @@ dl.project-list {
   align-items: center;
   justify-content: center;
   .error-content {
+    h1 {
+      font-family: $font-precode;
+      font-size: 1rem;
+    }
     h2 {
       font-family: $font-precode;
     }

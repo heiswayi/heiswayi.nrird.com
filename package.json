@@ -1,6 +1,6 @@
 {
   "name": "heiswayi.nrird.com",
-  "version": "23.10.19",
+  "version": "24.0.0",
   "description": "Jekyll source code for heiswayi.nrird.com",
   "main": "index.js",
   "devDependencies": {
