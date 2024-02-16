@@ -1,0 +1,475 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
+
+@keyframes panning {
+  0% {
+    opacity: 0
+  }
+  5% {
+    opacity: 1
+  }
+  95% {
+    transform: scale3d(1.5, 1.5, 1.5);
+    animation-timing-function: ease-in;
+    opacity: 1
+  }
+  100% {
+    transform: scale3d(1.5, 1.5, 1.5);
+    opacity: 0
+  }
+}
+
+@-webkit-keyframes hero-bounce {
+  0%, 20%, 50%, 80%, 100% {
+    -webkit-transform: translateX(0)
+  }
+  40% {
+    -webkit-transform: translateX(30px)
+  }
+  60% {
+    -webkit-transform: translateX(15px)
+  }
+}
+
+@-moz-keyframes hero-bounce {
+  0%, 20%, 50%, 80%, 100% {
+    -moz-transform: translateX(0)
+  }
+  40% {
+    -moz-transform: translateX(30px)
+  }
+  60% {
+    -moz-transform: translateX(15px)
+  }
+}
+
+@keyframes hero-bounce {
+  0%, 20%, 50%, 80%, 100% {
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+    transform: translateX(0)
+  }
+  40% {
+    -webkit-transform: translateX(30px);
+    -moz-transform: translateX(30px);
+    -ms-transform: translateX(30px);
+    -o-transform: translateX(30px);
+    transform: translateX(30px)
+  }
+  60% {
+    -webkit-transform: translateX(15px);
+    -moz-transform: translateX(15px);
+    -ms-transform: translateX(15px);
+    -o-transform: translateX(15px);
+    transform: translateX(15px)
+  }
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0
+}
+
+.sr-only-focusable:active, .sr-only-focusable:focus {
+  position: static;
+  width: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  clip: auto
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  -webkit-font-smoothing: subpixel-antialiased;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box
+}
+
+html {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Space Mono', Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
+}
+
+.container {
+  width: 100%;
+  min-height: 100%;
+  height: 100%;
+  position: relative
+}
+
+@media only screen and (min-width: 1000px) {
+  .container {
+    height: 100%;
+    overflow: hidden
+  }
+}
+
+.left {
+  position: relative;
+  float: left;
+  width: 100%;
+  min-height: 100%;
+  height: 100%;
+  z-index: 99999;
+  padding: 20px 20px
+}
+
+@media only screen and (min-width: 750px) {
+  .left {
+    position: relative;
+    float: left;
+    width: 70%;
+    height: 100%;
+    background: -moz-linear-gradient(left, rgba(255, 255, 255, 0.71) 0%, rgba(255, 255, 255, 0.71) 41%, rgba(255, 255, 255, 0.55) 92%, transparent 100%);
+    background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0.71) 0%, rgba(255, 255, 255, 0.71) 41%, rgba(255, 255, 255, 0.55) 92%, transparent 100%);
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.71) 0%, rgba(255, 255, 255, 0.71) 41%, rgba(255, 255, 255, 0.55) 92%, transparent 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b5ffffff', endColorstr='#00ffffff', GradientType=1)
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .left {
+    width: 600px;
+    height: 100%;
+    padding: 100px
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .left {
+    width: 800px;
+    height: 100%;
+    padding: 100px
+  }
+}
+
+.left .content {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%)
+}
+
+.right {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0
+}
+
+@media only screen and (min-width: 750px) {
+  .right {
+    position: relative;
+    float: left;
+    width: 30%;
+    height: 100%
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .right {
+    width: calc(100% - 600px);
+    height: 100%
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .right {
+    width: calc(100% - 800px);
+    height: 100%
+  }
+}
+
+.scene {
+  height: 100%;
+  width: 100%;
+  display: block;
+  position: relative;
+  opacity: .3;
+  overflow: hidden
+}
+
+@media only screen and (min-width: 1000px) {
+  .scene {
+    opacity: 1
+  }
+}
+
+.scene ul {
+  list-style: none;
+  display: block;
+  padding: 0;
+  margin: 0
+}
+
+.scene li {
+  position: absolute;
+  display: block;
+  height: 100%;
+  width: 100%
+}
+
+.scene li .tenth {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  left: 50%;
+  bottom: 40%
+}
+
+.scene li .tenth svg .st0 {
+  fill: none;
+  stroke: #DA4453;
+  stroke-width: 50
+}
+
+.scene li .ninth {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  right: 10%;
+  bottom: 10%
+}
+
+.scene li .ninth svg .st0 {
+  fill: none;
+  stroke: #E9573F;
+  stroke-width: 36
+}
+
+.scene li .eighth {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  left: 20%;
+  bottom: 30%
+}
+
+.scene li .eighth svg .st0 {
+  fill: none;
+  stroke: #F6BB42;
+  stroke-width: 50
+}
+
+.scene li .seventh {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  left: -50%;
+  bottom: 17%
+}
+
+.scene li .seventh svg .st0 {
+  fill: none;
+  stroke: #8CC152;
+  stroke-width: 50
+}
+
+.scene li .sixth {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  left: 10%;
+  bottom: 10%
+}
+
+.scene li .sixth svg .st0 {
+  fill: none;
+  stroke: #37BC9B;
+  stroke-width: 36
+}
+
+.scene li .fifth {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  right: 5%;
+  top: 10%
+}
+
+.scene li .fifth svg .st0 {
+  fill: none;
+  stroke: #3BAFDA;
+  stroke-width: 36
+}
+
+.scene li .fourth {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  left: 80%;
+  top: 45%
+}
+
+.scene li .fourth svg .st0 {
+  fill: none;
+  stroke: #4A89DC;
+  stroke-width: 50
+}
+
+.scene li .third {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  left: 40%;
+  top: 25%
+}
+
+.scene li .third svg .st0 {
+  fill: none;
+  stroke: #967ADC;
+  stroke-width: 50
+}
+
+.scene li .second {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  left: 5%;
+  top: 10%
+}
+
+.scene li .second svg .st0 {
+  fill: none;
+  stroke: #D770AD;
+  stroke-width: 50
+}
+
+.scene li .first {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  left: -20%;
+  top: 20%
+}
+
+.scene li .first svg .st0 {
+  fill: none;
+  stroke: #05c7c7;
+  stroke-width: 36
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 1rem;
+}
+
+@media only screen and (min-width: 1000px) {
+  h1 {
+    font-size: 42px;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  h1 {
+    font-size: 48px;
+  }
+}
+
+p {
+  font-size: 14px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+@media only screen and (min-width: 550px) {
+  p {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+}
+
+@media only screen and (min-width: 750px) {
+  p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  p {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+}
+
+i {
+  font-weight: 300;
+  font-size: 14px;
+  display: inline-block;
+  text-decoration: none;
+  margin-left: 10px;
+  -webkit-animation: hero-bounce 2s infinite;
+  animation: hero-bounce 2s infinite
+}
+
+@media only screen and (min-width: 750px) {
+  i {
+    font-size: 16px
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  i {
+    font-size: 18px
+  }
+}
+
+a {
+  text-decoration: none;
+  color: blue;
+}
+
+a:hover, a:focus, a:active, a:visited {
+  border-bottom: 1px solid blue;
+}
+
+.colorize {
+  font-weight: 900;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  background: linear-gradient(219deg, 
+  #186cb8 19%, 
+  transparent 19%, transparent 20%, 
+  #2a9a9f 20%, #2a9a9f  39%,
+  transparent 39%, transparent 40%, 
+  #f1b211 40%, #f1b211 59% ,
+  transparent 59%, transparent 60%, 
+  #e83611 60%, #e83611 79%,
+  transparent 79%, transparent 80%, 
+  #f9002f 80%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}

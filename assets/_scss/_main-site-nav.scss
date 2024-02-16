@@ -10,11 +10,6 @@
         padding: 2rem 2rem 1rem 2rem;
         font-family: $font-brand;
         font-optical-sizing: auto;
-        color: var(--color-black);
-        &:hover {
-            text-decoration: none;
-            color: var(--color-blue);
-        }
     }
     .page-title {
         max-width: 960px;

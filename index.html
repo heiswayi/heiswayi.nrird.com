@@ -1,66 +1,125 @@
 ---
 layout: compress
 published: true
-title: home
+title: Heiswayi Nrird
 ---
 
-{% assign rawtags = "" %}
-{% for post in site.posts %}
-	{% assign ttags = post.tags | join:'|' | append:'|' %}
-	{% assign rawtags = rawtags | append:ttags %}
-{% endfor %}
-{% assign rawtags = rawtags | split:'|' | sort %}
-
-{% assign tags = "" %}
-{% for tag in rawtags %}
-	{% if tag != "" %}
-		{% if tags == "" %}
-			{% assign tags = tag | split:'|' %}
-		{% endif %}
-		{% unless tags contains tag %}
-			{% assign tags = tags | join:'|' | append:'|' | append:tag | split:'|' %}
-		{% endunless %}
-	{% endif %}
-{% endfor %}
-
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en" class="no-js" itemscope itemtype="http://schema.org/WebPage">
-
-<head>
-	{% include head.html %}
-</head>
-
-<body>
-
-  {% include topnav.html %}
-
-  <div class="container">
-    <div class="content">
-      	<div class="page-content">
-			<div class="index-page">
-			
-				{% for post in site.posts %}
-
-					<div class="index-row">
-						<div class="post-date">{{ post.date | date: "%y·%m·%d" }}</div>
-						<div class="post-title">
-							<a href="{{ post.url }}">
-								{% if post.tags contains "sponsored" %}
-									<span class="label">sponsored</span>
-								{% endif %}
-							{{ post.title }}
-							</a>
-						</div>
-					</div>
-
-				{% endfor %}
-				</div>
-		</div>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{page.title}}</title>
+    <link rel="shortcut icon" type="image/x-icon" href="{{ '/favicon.ico' | prepend: site.baseurl }}">
+    <link rel="stylesheet" href="{{ '/assets/index-html/style.css' | prepend: site.baseurl }}?{{ site.version }}.{{ site.time | date: '%d%H%M' }}">
+  </head>
+  <body>
+    <div class="container">
+      <div class="left">
+        <div class="content">
+          <h1 class="colorize">Heiswayi Nrird</h1>
+          <p>Hi, there! I'm a senior software engineer at <a href="https://keysight.com">Keysight Technologies</a>, specializing in full-stack development and cloud-based solutions. </p>
+          <p>With expertise in web applications, microservices, and cybersecurity, I offer tailored consultations to enhance your projects. If you'd like to learn more, feel free to shoot me an email.</p>
+          <p>Email: <strong>heiswayi (at) nrird.com</strong>
+          </p>
+        </div>
+      </div>
+      <div class="right">
+        <ul id="scene" class="scene" style="transform: translate3d(0px, 0px, 0px); transform-style: preserve-3d; backface-visibility: hidden;">
+          <li class="layer" data-depth="-0.50" style="position: relative; display: block; left: 0px; top: 0px; transform: translate3d(-39.3131px, 44.1206px, 0px); transform-style: preserve-3d; backface-visibility: hidden;">
+            <div class="tenth">
+              <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 600 600" style="enable-background:new 0 0 600 600;" xml:space="preserve">
+                <path class="st0" d="M121.6,310.2c0.1,96,79.2,174.9,175.2,174.8c96-0.1,174.9-79.2,174.8-175.2"></path>
+              </svg>
+            </div>
+          </li>
+          <li class="layer" data-depth="-1.50" style="position: absolute; display: block; left: 0px; top: 0px; transform: translate3d(-117.939px, 132.362px, 0px); transform-style: preserve-3d; backface-visibility: hidden;">
+            <div class="ninth">
+              <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 600 600" style="enable-background:new 0 0 600 600;" xml:space="preserve">
+                <g>
+                  <path class="st0" d="M297.1,209.1L431.4,474H163.5L297.1,209.1 M297,147L118,502h359L297,147L297,147z"></path>
+                </g>
+              </svg>
+            </div>
+          </li>
+          <li class="layer" data-depth="0.32" style="position: absolute; display: block; left: 0px; top: 0px; transform: translate3d(25.1604px, -28.2372px, 0px); transform-style: preserve-3d; backface-visibility: hidden;">
+            <div class="eighth">
+              <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 600 600" style="enable-background:new 0 0 600 600;" xml:space="preserve">
+                <path class="st0" d="M71,71c-15.9,49.6-6.9,65.8,0,72c7.1,6.5,17,6.7,74,1c53.5-5.4,63.5-7.5,71,0c7.1,7.1,6,16.9,0,72
+	c-4.7,43.3-7,65,0,72c7.1,7.1,16.8,6,72,0c43.3-4.7,65.1-6.9,72,0c7.6,7.6,5.7,17.9,0,73c-5.7,56.1-5.8,65.5,1,72
+	c8,7.7,18.6,4.7,71-1c55.9-6.1,65.3-5,72,1c5.8,5.1,17.1,20.5,1,72"></path>
+              </svg>
+            </div>
+          </li>
+          <li class="layer" data-depth="0.86" style="position: absolute; display: block; left: 0px; top: 0px; transform: translate3d(67.6186px, -75.8875px, 0px); transform-style: preserve-3d; backface-visibility: hidden;">
+            <div class="seventh">
+              <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 600 600" style="enable-background:new 0 0 600 600;" xml:space="preserve">
+                <g>
+                  <polyline class="st0" points="297,134 297,310 297,485 	"></polyline>
+                  <line class="st0" x1="122" y1="310" x2="472" y2="310"></line>
+                </g>
+              </svg>
+            </div>
+          </li>
+          <li class="layer" data-depth="0.24" style="position: absolute; display: block; left: 0px; top: 0px; transform: translate3d(18.8703px, -21.1779px, 0px); transform-style: preserve-3d; backface-visibility: hidden;">
+            <div class="sixth">
+              <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 600 600" style="enable-background:new 0 0 600 600;" xml:space="preserve">
+                <g>
+                  <polyline class="st0" points="297,134 297,310 297,485 	"></polyline>
+                  <line class="st0" x1="122" y1="310" x2="472" y2="310"></line>
+                </g>
+              </svg>
+            </div>
+          </li>
+          <li class="layer" data-depth="-1.42" style="position: absolute; display: block; left: 0px; top: 0px; transform: translate3d(-111.649px, 125.303px, 0px); transform-style: preserve-3d; backface-visibility: hidden;">
+            <div class="fifth">
+              <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 600 600" style="enable-background:new 0 0 600 600;" xml:space="preserve">
+                <g>
+                  <path class="st0" d="M297.1,209.1L431.4,474H163.5L297.1,209.1 M297,147L118,502h359L297,147L297,147z"></path>
+                </g>
+              </svg>
+            </div>
+          </li>
+          <li class="layer" data-depth="0.60" style="position: absolute; display: block; left: 0px; top: 0px; transform: translate3d(47.1758px, -52.9447px, 0px); transform-style: preserve-3d; backface-visibility: hidden;">
+            <div class="fourth">
+              <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 600 600" style="enable-background:new 0 0 600 600;" xml:space="preserve">
+                <path class="st0" d="M71,71c-15.9,49.6-6.9,65.8,0,72c7.1,6.5,17,6.7,74,1c53.5-5.4,63.5-7.5,71,0c7.1,7.1,6,16.9,0,72
+	c-4.7,43.3-7,65,0,72c7.1,7.1,16.8,6,72,0c43.3-4.7,65.1-6.9,72,0c7.6,7.6,5.7,17.9,0,73c-5.7,56.1-5.8,65.5,1,72
+	c8,7.7,18.6,4.7,71-1c55.9-6.1,65.3-5,72,1c5.8,5.1,17.1,20.5,1,72"></path>
+              </svg>
+            </div>
+          </li>
+          <li class="layer" data-depth="-1.70" style="position: absolute; display: block; left: 0px; top: 0px; transform: translate3d(-133.665px, 150.01px, 0px); transform-style: preserve-3d; backface-visibility: hidden;">
+            <div class="third">
+              <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 600 600" style="enable-background:new 0 0 600 600;" xml:space="preserve">
+                <g>
+                  <polyline class="st0" points="297,134 297,310 297,485 	"></polyline>
+                  <line class="st0" x1="122" y1="310" x2="472" y2="310"></line>
+                </g>
+              </svg>
+            </div>
+          </li>
+          <li class="layer" data-depth="-0.60" style="position: absolute; display: block; left: 0px; top: 0px; transform: translate3d(-47.1758px, 52.9447px, 0px); transform-style: preserve-3d; backface-visibility: hidden;">
+            <div class="second">
+              <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 600 600" style="enable-background:new 0 0 600 600;" xml:space="preserve">
+                <path class="st0" d="M121.6,310.2c0.1,96,79.2,174.9,175.2,174.8c96-0.1,174.9-79.2,174.8-175.2"></path>
+              </svg>
+            </div>
+          </li>
+          <li class="layer" data-depth="-0.75" style="position: absolute; display: block; left: 0px; top: 0px; transform: translate3d(-58.9697px, 66.1809px, 0px); transform-style: preserve-3d; backface-visibility: hidden;">
+            <div class="first">
+              <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 600 600" style="enable-background:new 0 0 600 600;" xml:space="preserve">
+                <g>
+                  <path class="st0" d="M297.1,209.1L431.4,474H163.5L297.1,209.1 M297,147L118,502h359L297,147L297,147z"></path>
+                </g>
+              </svg>
+            </div>
+          </li>
+        </ul>
+      </div>
     </div>
-  </div>
-
-  {% include footer.html %}
-		
-</body>
-
+    <script src="{{ '/assets/index-html/jquery-latest.min.js' | prepend: site.baseurl }}"></script>
+    <script src="{{ '/assets/index-html/parallax.js' | prepend: site.baseurl }}"></script>
+  </body>
 </html>

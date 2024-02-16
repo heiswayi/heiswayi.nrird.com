@@ -2,17 +2,18 @@
   <div class="copyright">
     <div class="misc-link">
       <a href="{{ '/' | prepend: site.baseurl }}">home</a>
-      &middot; <a href="{{ '/contact' | prepend: site.baseurl }}">contact</a>
-      &middot; <a href="{{ '/disclaimer' | prepend: site.baseurl }}">disclaimer</a>
-      {% if site.show_tags %} &middot; <a href="{{ '/tags' | prepend: site.baseurl }}">tags</a>{%
+      &middot; <a href="{{ '/archive' | prepend: site.baseurl }}">archive</a>
+      &middot; <a href="{{ '/site-disclaimer' | prepend: site.baseurl }}">disclaimer</a>
+      &middot; <a href="{{ '/site-tech-stack' | prepend: site.baseurl }}">tech-stack</a>
+      {% if site.show_tags %} &middot; <a href="{{ '/tagging' | prepend: site.baseurl }}">tagging</a>{%
       endif %}
       &middot; <a href="{{ '/feed.xml' | prepend: site.baseurl }}">rss</a>
       &middot; <a href="#top" class="back-to-top-anchor">back-to-top &uarr;</a>
     </div>
     &copy; 2015-{{ site.time | date: "%Y" }} Heiswayi Nrird<br><br>
     <div class="page-load"></div>
-    <div class="version">site v{{ site.version }} built with jekyll and nodejs (gulp)</div>
-    <div class="made-with">made in penang, malaysia</div>
+    <div class="version">site v{{ site.version }} built with <a href="https://jekyllrb.com/">jekyll</a> and <a href="https://nodejs.org/en">nodejs</a> (<a href="https://gulpjs.com/">gulp</a>)</div>
+    <div class="made-with">made in <a href="https://en.wikipedia.org/wiki/Penang">penang, malaysia</a></div>
   </div>
 </div>
 
