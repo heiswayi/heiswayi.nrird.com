@@ -20,7 +20,9 @@
 {% endcase %}
 
 <div class="header">
-    <a href="{{ '/' | prepend: site.baseurl }}" class="site-title">{{site.title}}</a>
+    <div class="site-title">
+        <span class="colorize">{{site.title}}</span> &times; <a href="{{ '/' | prepend: site.baseurl }}">Home/</a>
+    </div>
     <div class="site-nav">
         <ul>
             <li><a href="{{ '/' | prepend: site.baseurl }}" class="menu {{home}}">home</a></li>

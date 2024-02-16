@@ -1,10 +1,9 @@
 # SITE METADATA
-title                   : "heiswayi·nrird·site"
+title                   : "Heiswayi Nrird"
 tagline                 : "Heiswayi Nrird - Software Engineer" # jekyll-seo-tag
-description             : "i wish i can write something cool here"
-keywords                : "frontend developer, ux designer, human-factor engineering, open source, photography, programming"
+description             : "Heiswayi Nrird - Software Engineer" # feed.xml
 logo                    : "/assets/cover.gif" # jekyll-seo-tag
-version                 : "24.01.16"
+version                 : "24.02.16"
 
 # SITE OWNERSHIP VERIFICATIONS
 webmaster_verifications:
@@ -48,7 +47,7 @@ show_tags               : true
 # JEKYLL BUILD SETTINGS
 source                  : ./
 destination             : ./_site
-permalink               : /:title
+permalink               : /:title:output_ext
 markdown                : kramdown
 highlighter             : rouge
 timezone                : Asia/Kuala_Lumpur

@@ -1,0 +1,82 @@
+---
+layout: compress
+published: true
+title: Archive
+---
+
+{% assign rawtags = "" %}
+{% for post in site.posts %}
+	{% assign ttags = post.tags | join:'|' | append:'|' %}
+	{% assign rawtags = rawtags | append:ttags %}
+{% endfor %}
+{% assign rawtags = rawtags | split:'|' | sort %}
+
+{% assign tags = "" %}
+{% for tag in rawtags %}
+	{% if tag != "" %}
+		{% if tags == "" %}
+			{% assign tags = tag | split:'|' %}
+		{% endif %}
+		{% unless tags contains tag %}
+			{% assign tags = tags | join:'|' | append:'|' | append:tag | split:'|' %}
+		{% endunless %}
+	{% endif %}
+{% endfor %}
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en" class="no-js" itemscope itemtype="http://schema.org/WebPage">
+
+<head>
+	{% include head.html %}
+</head>
+
+<body>
+
+  {% include topnav-page.html %}
+
+  <div class="container">
+    <div class="content">
+		<h3><code class="muted">PAGE/</code></h3>
+		<div class="page-content">
+			<div class="index-page">
+
+					<div class="index-row">
+						<div class="post-date">--------</div>
+						<div class="post-title"><a href="{{ '/jekyll-themes' | prepend: site.baseurl }}">Minimalist Jekyll Themes</a></div>
+					</div>
+					<div class="index-row">
+						<div class="post-date">--------</div>
+						<div class="post-title"><a href="{{ '/flickr' | prepend: site.baseurl }}">My Photos on Flickr</a></div>
+					</div>
+
+			</div>
+		</div>
+		<h3><code class="muted">POST/</code></h3>
+      	<div class="page-content">
+			<div class="index-page">
+			
+				{% for post in site.posts %}
+
+					<div class="index-row">
+						<div class="post-date" title="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date: "%y·%m·%d" }}</div>
+						<div class="post-title">
+							<a href="{{ post.url }}">
+								{% if post.tags contains "sponsored" %}
+									<span class="label">sponsored</span>
+								{% endif %}
+							{{ post.title }}
+							</a>
+						</div>
+					</div>
+
+				{% endfor %}
+				</div>
+		</div>
+    </div>
+  </div>
+
+  {% include footer.html %}
+		
+</body>
+
+</html>

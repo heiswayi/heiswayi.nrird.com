@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Markdown Test
+title: Site Markdown Testing
 ---
 
 {:.warning}

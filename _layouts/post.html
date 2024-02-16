@@ -24,7 +24,7 @@ published: true
           {% assign tags_content = "" %}
           {% for post_tag in post.tags %}
             {% capture tags_content_temp %}
-              {{ tags_content }}<a href="{{ site.baseurl }}/tags#{{ post_tag | replace: '#', 'sharp' | slugify | downcase }}"><i class="fa fa-hashtag muted" aria-hidden="true"></i><span class="hidden">#</span>{{ post_tag | replace: "#", "sharp" | slugify | downcase }}</a>
+              {{ tags_content }}<a href="{{ site.baseurl }}/tagging#{{ post_tag | replace: '#', 'sharp' | slugify | downcase }}"><i class="fa fa-hashtag muted" aria-hidden="true"></i><span class="hidden">#</span>{{ post_tag | replace: "#", "sharp" | slugify | downcase }}</a>
             {% endcapture %}
             {% assign tags_content = tags_content_temp %}
           {% endfor %}
