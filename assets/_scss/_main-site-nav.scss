@@ -10,6 +10,31 @@
         padding: 2rem 2rem 1rem 2rem;
         font-family: $font-brand;
         font-optical-sizing: auto;
+        a {
+            .colorize {
+                text-decoration: none;
+                font-weight: 900;
+                width: -webkit-fit-content;
+                width: -moz-fit-content;
+                width: fit-content;
+                background: linear-gradient(219deg, 
+                    var(--brand-color-1) 19%, 
+                    transparent 19%,transparent 20%, 
+                    var(--brand-color-2) 20%, var(--brand-color-2)  39%,
+                    transparent 39%,transparent 40%, 
+                    var(--brand-color-3) 40%,var(--brand-color-3) 59% ,
+                    transparent 59%,transparent 60%, 
+                    var(--brand-color-4) 60%, var(--brand-color-4) 79%,
+                    transparent 79%, transparent 80%, 
+                    var(--brand-color-5) 80%);
+                background-clip: text;
+                -webkit-background-clip: text;
+                color: transparent;
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+        }
     }
     .page-title {
         max-width: 960px;
