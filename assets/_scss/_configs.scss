@@ -1,9 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
+
 $sans-serif: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Cantarell, Ubuntu, roboto, noto, arial, sans-serif;
 $serif: Iowan Old Style, Apple Garamond, Baskerville, Times New Roman, Droid Serif, Times, Source Serif Pro, serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
-$__DEFAULT: $serif;
-$monospace: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono",
-  "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
+$monospace: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
 
+$__DEFAULT: 'Inter', $sans-serif;
+$__CODE: 'Space Mono', $monospace;
 
 $font-body: $__DEFAULT;
 $font-heading: $__DEFAULT;
@@ -11,14 +14,14 @@ $font-h1: $__DEFAULT;
 $font-h2: $__DEFAULT;
 $font-h3: $__DEFAULT;
 $font-h456: $__DEFAULT;
-$font-button: $monospace;
-$font-topmenu: $monospace;
-$font-brand: $monospace;
+$font-button: $__CODE;
+$font-topmenu: $__CODE;
+$font-brand: $__CODE;
 $font-figcaption: $__DEFAULT;
-$font-precode: $monospace;
-$font-tagging: $monospace;
-$font-postmeta: $monospace;
-$font-footnote: $monospace;
+$font-precode: $__CODE;
+$font-tagging: $__CODE;
+$font-postmeta: $__CODE;
+$font-footnote: $__CODE;
 
 :root {
   --brand-color-1: #186cb8;

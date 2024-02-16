@@ -238,34 +238,36 @@ dl.project-list {
   padding: 1rem 0;
 }
 
-.index-page-table {
-  td {
-    border: 1px solid transparent !important;
-    background-color: transparent !important;
-  }
-  .post-date {
-    font-family: $font-postmeta;
-    word-wrap: none;
-    white-space: nowrap;
-    opacity: 0.5;
-    text-align: center;
-    width: 1%;
-  }
-  .post-title {
-    a {
-      color: var(--color-black);
-      .label {
-        opacity: 0.7;
-        font-family: $font-precode;
-        font-size: 0.8em;
-        text-transform: uppercase;
-        border: 1px solid var(--color-silver);
-        margin-right: 5px;
-        padding-left: 2px;
-        padding-right: 2px;
-      }
-      &:hover {
-        color: var(--color-blue);
+.index-page {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  .index-row {
+    display: flex;
+    flex-direction: row;
+    .post-date {
+      font-family: $font-postmeta;
+      word-wrap: none;
+      white-space: nowrap;
+      opacity: 0.5;
+      margin-right: 1rem;
+    }
+    .post-title {
+      a {
+        color: var(--color-black);
+        .label {
+          opacity: 0.7;
+          font-family: $font-precode;
+          font-size: 0.8em;
+          text-transform: uppercase;
+          border: 1px solid var(--color-silver);
+          margin-right: 5px;
+          padding-left: 2px;
+          padding-right: 2px;
+        }
+        &:hover {
+          color: var(--color-blue);
+        }
       }
     }
   }
@@ -279,6 +281,10 @@ dl.project-list {
   align-items: center;
   justify-content: center;
   .error-content {
+    h1 {
+      font-family: $font-precode;
+      font-size: 1rem;
+    }
     h2 {
       font-family: $font-precode;
     }
