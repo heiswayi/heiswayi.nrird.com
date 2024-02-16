@@ -1,7 +1,7 @@
 ---
 layout: post
-title: words of wisdom
-description: a succinct collection of life lessons on time, empathy, personal growth, resilience, happiness, family, and embracing life's opportunities with urgency
+title: Words of wisdom
+description: A succinct collection of life lessons on time, empathy, personal growth, resilience, happiness, family, and embracing life's opportunities with urgency.
 tags: [life-advice, poem]
 ---
 

@@ -3,7 +3,7 @@ layout: page
 title: Site Tech Stack
 ---
 
-### Current Build: {{site.version}}
+### Build v{{site.version}}
 
 - This site is made using [Jekyll](https://jekyllrb.com/) and [NodeJS](https://nodejs.org/) ([gulp](https://gulpjs.com/)).
 - The source code is hosted on [GitHub](https://github.com/) (Private Repo).

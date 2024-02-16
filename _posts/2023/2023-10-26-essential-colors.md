@@ -1,7 +1,7 @@
 ---
 layout: post
-title: essential colors
-description: this is a foundational palette of essential colors, curated set embodies simplicity and versatility, ensuring a timeless and user-friendly aesthetic.
+title: Essential colors
+description: This is a foundational palette of essential colors, curated set embodies simplicity and versatility, ensuring a timeless and user-friendly aesthetic.
 tags: [colors, uiux]
 ---
 
@@ -92,7 +92,7 @@ tags: [colors, uiux]
 }
 </style>
 
-a curated set of essential colors that i used in my application design. this set embodies simplicity and versatility, ensuring a timeless and user-friendly aesthetic.
+A curated set of essential colors that I used in my application design. This set embodies simplicity and versatility, ensuring a timeless and user-friendly aesthetic.
 
 <section class="blue hue">
     <div class="light-blue color">
