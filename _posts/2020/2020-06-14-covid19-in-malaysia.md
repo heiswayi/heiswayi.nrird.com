@@ -13,8 +13,6 @@ COVID-19 or coronavirus disease 2019 is defined as illness caused by novel coron
 
 (Source: [Medscape](https://www.medscape.com/answers/2500114-197401/what-is-covid-19))
 
-<div class="flourish-embed flourish-map" data-src="story/225979"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
-
 ### Things that happened in my country (Malaysia) during the COVID-19 outbreak
 
 Most of the countries around the world have been doing their best to [flatten the curve](https://www.livescience.com/coronavirus-flatten-the-curve.html) during this outbreak and my country is one of them.
@@ -74,14 +72,6 @@ And below are the events or restrictions that occured during the duration of MCO
 - Banking institutions have provide automatic deferment of all loan/financing repayments for a period of 6 months effectively from April 1, 2020 to all the people.
 - People also can withdraw their EPF money from Account II up to maximum of RM500 for a period of 12 months.
 - Work from home becomes a new working culture for those who can work from home.
-
-## Visualizations for Malaysia COVID-19
-
-<iframe src="https://ourworldindata.org/grapher/covid-daily-vs-total-cases-per-million?country=~MYS" loading="lazy" style="width: 100%; height: 600px; border: 0px none;"></iframe>
-
-<br><br>
-
-<iframe src="https://ourworldindata.org/grapher/covid-confirmed-cases-since-100th-case?country=~MYS" loading="lazy" style="width: 100%; height: 600px; border: 0px none;"></iframe>
 
 ## COVID-19 Trackers for Malaysia
 

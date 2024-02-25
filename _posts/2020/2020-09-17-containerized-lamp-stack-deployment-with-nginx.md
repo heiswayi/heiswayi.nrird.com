@@ -9,13 +9,13 @@ tags: [nginx, cloud-computing, ec2, docker, dns]
 
 Configuring a single virtual server to handle multiple subdomains involves several key components, including the choice of a virtual server, DNS management, the use of nginx as a proxy, and the deployment of a LAMP stack. In this illustration, I detail the setup process using an Amazon EC2 instance, Cloudflare Managed DNS, nginx, and Docker containers (represented as "Service_*").
 
-![Proxify with nginx](assets/post-images/nginx1.png)
+![Proxify with nginx](/assets/post-images/nginx1.png)
 
 ## Virtual Server
 
 For this configuration, an Amazon EC2 instance from AWS serves as the virtual server. EC2 provides scalability to meet changing cloud computing needs. The firewall solution, known as a Security Group, manages incoming and outgoing traffic to the EC2 instance.
 
-![Example of incoming traffic configurations in a security group](assets/post-images/nginx2.png)
+![Example of incoming traffic configurations in a security group](/assets/post-images/nginx2.png)
 
 For those seeking a more cost-effective and streamlined server instance, AWS offers a service called [Lightsail](https://aws.amazon.com/lightsail/).
 
@@ -34,7 +34,7 @@ Example DNS records:
 
 nginx serves as both an entry point to the EC2 instance and a load balancer, directing traffic to the respective services running in Docker containers. The nginx configuration includes server blocks for each subdomain.
 
-![Example of traffic routes](assets/post-images/nginx3.png)
+![Example of traffic routes](/assets/post-images/nginx3.png)
 
 ### nginx.conf
 

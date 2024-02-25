@@ -107,6 +107,7 @@ html {
 body {
   width: 100%;
   height: 100%;
+  color: #000;
   background: #fff;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -476,4 +477,47 @@ a:hover, a:focus, a:active, a:visited {
 
 .font-mono {
   font-family: 'Space Mono', Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
+}
+
+hr {
+  margin: 2rem 0;
+  border: 0;
+  border-top: 0.5px solid #ddd;
+}
+
+.hrbox {
+  display: flex;
+  width: 100%;
+  height: 3px;
+  margin: 2rem 0px;
+}
+
+.hrboxsmall {
+  height: 3px;
+  margin: 0;
+  flex-grow: 1;
+}
+
+.bgred {
+  background-color: #f9002f;
+}
+
+.bgorange {
+  background-color: #e83611;
+}
+
+.bgyellow {
+  background-color: #f1b211;
+}
+
+.bggreen {
+  background-color: #3DCD49;
+}
+
+.bgbluelight {
+  background-color: #2a9a9f;
+}
+
+.bgbluedark {
+  background-color: #186cb8;
 }
