@@ -5,29 +5,29 @@ description: What occurs to the physical and mental aspects of an individual whe
 tags: [sleep-deprivation]
 ---
 
-So, I've been losing sleep lately because I'm hooked on playing online games. I looked into the downsides of this habit, and here's what I've figured out for now. There are probably more bad things, but these are the ones that pop up the most.
+So, I've been losing sleep lately because I'm hooked on playing online games. I looked into the downsides of this habit, and here's what I've figured out for now. There are probably more bad things, but these are the ones that pop up the most;
 
-### Impacts to physical body
+### 1. Impacts to physical body
 
 - Lack of sleep can lead to impaired attention, memory, and decision-making. [^1]
 - Sleep deprivation can suppress the immune system, making the body more susceptible to infections. [^2]
 - Chronic sleep deprivation is associated with an increased risk of conditions such as obesity, diabetes, and cardiovascular diseases. [^3]
 
-### Impacts to mental
+### 2. Impacts to mental
 
 - Sleep deprivation can contribute to irritability, mood swings, and an increased risk of mood disorders such as depression and anxiety. [^4]
 - Lack of sleep can impair emotional regulation and increase emotional reactivity. [^5]
 - Chronic sleep deprivation may contribute to long-term cognitive decline and an increased risk of neurodegenerative diseases. [^6]
 
-_Note: It's important to note that individual responses to sleep deprivation can vary, and the severity of effects may depend on factors such as the duration of sleep deprivation and the individual's overall health._
+> _Note: It's important to note that individual responses to sleep deprivation can vary, and the severity of effects may depend on factors such as the duration of sleep deprivation and the individual's overall health._
 
 ### So, what is the right amount of sleep a person should have?
 
 The amount of sleep needed for adults can vary, but generally, the [National Sleep Foundation](https://www.thensf.org/) provides the following recommendations for different age groups:
 
-- Young adults (18-25 years): 7-9 hours per night
-- Adults (26-64 years): 7-9 hours per night
-- Older adults (65 years and older): 7-8 hours per night
+| Young adults | 18-25 years | 7-9 hours per night |
+| Adults | 26-64 years | 7-9 hours per night |
+| Older adults | 65 years and older | 7-8 hours per night |
 
 [^1]: Walker, M. P. (2009). The Role of Sleep in Cognition and Emotion. Annals of the New York Academy of Sciences, 1156, 168–197.
 [^2]: Irwin, M. (2015). Why Sleep Is Important for Health: A Psychoneuroimmunology Perspective. Annual Review of Psychology, 66, 143–172.

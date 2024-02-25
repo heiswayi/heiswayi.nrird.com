@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Blog Reset
+title: Blog reset
 description: I have decided to embark on a journey of renewal and growth by hitting the reset button on this blog.
 tags: [reset, random]
 ---

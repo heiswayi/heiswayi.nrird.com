@@ -34,7 +34,7 @@ Keycloak operates within a realm, a namespace where you manage metadata and conf
 
 The architecture of Keycloak is illustrated below:
 
-![Keycloak Core Concepts and Architecture (Credit: Courtesy of Thomas Darimont)](assets/post-images/keycloak1.png)
+![Keycloak Core Concepts and Architecture (Credit: Courtesy of Thomas Darimont)](/assets/post-images/keycloak1.png)
 
 ## User Authentication using Keycloak
 
@@ -42,19 +42,19 @@ The architecture of Keycloak is illustrated below:
 
 User authentication when accessing a frontend application is depicted in the following image:
 
-![Keycloak as Identity Provider to Frontend Application (Credit: Courtesy of Thomas Darimont)](assets/post-images/keycloak2.png)
+![Keycloak as Identity Provider to Frontend Application (Credit: Courtesy of Thomas Darimont)](/assets/post-images/keycloak2.png)
 
 ### Single Sign-On (SSO) Integration
 
 Keycloak supports Web SSO, enabling users to log in once to access all applications. It also facilitates single logout across various platforms, including web, mobile, and desktop applications. The authentication flow for a logged-in user accessing another frontend application is illustrated below:
 
-![Single Sign-On (SSO) Integration (Credit: Courtesy of Thomas Darimont)](assets/post-images/keycloak3.png)
+![Single Sign-On (SSO) Integration (Credit: Courtesy of Thomas Darimont)](/assets/post-images/keycloak3.png)
 
 ### How Backend Services Work with Keycloak
 
 The flow of how backend services interact with Keycloak to validate access tokens is outlined in the following image:
 
-![How Backend Services Work with Keycloak (Credit: Courtesy of Thomas Darimont)](assets/post-images/keycloak4.png)
+![How Backend Services Work with Keycloak (Credit: Courtesy of Thomas Darimont)](/assets/post-images/keycloak4.png)
 
 ## Understanding Keycloak Tokens
 
@@ -77,11 +77,11 @@ Types of tokens when authenticating with Keycloak:
 
 Keycloak Admin Console:
 
-![Keycloak Admin Console (v11)](assets/post-images/keycloak5.png)
+![Keycloak Admin Console (v11)](/assets/post-images/keycloak5.png)
 
 Keycloak User Account Console:
 
-![Keycloak User Account Console (v11)](assets/post-images/keycloak6.png)
+![Keycloak User Account Console (v11)](/assets/post-images/keycloak6.png)
 
 ## Keycloak Admin REST API Examples
 
