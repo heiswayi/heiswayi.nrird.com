@@ -35,6 +35,7 @@
       font-family: $font-postmeta;
       font-size: 0.9rem;
       opacity: 0.8;
+      margin-top: 0.5rem;
       margin-bottom: 1rem;
     }
     .post-title,
@@ -214,11 +215,6 @@ p.warning {
     }
     .box-links {
       margin-top: 1ch;
-    }
-    .box-img {
-      img {
-        max-width: 100%;
-      }
     }
     &:hover {
       border-color: var(--color-black);
