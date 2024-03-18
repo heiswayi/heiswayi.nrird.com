@@ -217,9 +217,7 @@ p.warning {
     }
     .box-img {
       img {
-        height: 200px;
-        width: max-content;
-        object-fit: cover;
+        max-width: 100%;
       }
     }
     &:hover {
