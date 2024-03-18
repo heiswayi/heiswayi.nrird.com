@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Site Tech Stack
+title: :)
 ---
 
 ![Heiswayi Nrird](https://ik.imagekit.io/nrirddotcom/HN/hn_D6guerPbf.jpg?tr=h-200)
@@ -23,13 +23,6 @@ This blog serves as an outlet for my thoughts and experiences, offering a glimps
 - [Unsplash](https://unsplash.com/@heiswayi_nrird)
 
 I have _socmed_ accounts (e.g. Facebook, Instagram, Twitter, etc.) but not really using them.
-
-## Tech stack behind this site
-
-- Made using [Jekyll](https://jekyllrb.com/) and [NodeJS](https://nodejs.org/) ([gulp](https://gulpjs.com/))
-- Source code is hosted on [GitHub](https://github.com/)
-- Built and served automatically by [Cloudflare Pages](https://pages.cloudflare.com/)
-- Site domain is managed using [Cloudflare DNS](https://www.cloudflare.com/)
 
 ## Contact info
 

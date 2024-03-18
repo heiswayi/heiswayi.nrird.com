@@ -1,3 +1,18 @@
+div.highlighter-rouge {
+    margin: 0 -2rem;
+    background-color: var(--footnote-bg);
+    .highlight {
+        pre {
+            padding: 1rem 2rem
+        }
+    }
+}
+
+code.highlighter-rouge {
+    margin: 0;
+    background-color: var(--footnote-bg);
+}
+
 /* Solarized Light 
 
 For use with Jekyll and Pygments
