@@ -13,7 +13,7 @@ tags: [illustration, vector-graphic, inspiration]
 	{% include head.html %}
     <style>
     #photos {
-        margin: 0 auto;
+        margin: 0 1rem;
         width: 100%;
     }
     #photos img {
@@ -32,6 +32,10 @@ tags: [illustration, vector-graphic, inspiration]
 
   <div class="container">
     <div class="content">
+        <h1 class="post-title">{{page.title}}</h1>
+        <div class="post-meta">
+            <span class="date">{{ page.date | date: "%B %d, %Y" }}</span>
+        </div>
         <div class="post-content">
             <p>
                 I found this pretty cool collection of illustration artwork by Vijay Verma called <a href="https://illlustrations.co/">100-days Illustrations</a>. I'm really like it. As all the images are <a href="https://illlustrations.co/license/">free</a> to use, I thought I'd showcase them here in a grid format using <a href="https://minigrid.js.org/">Minigrid</a>. The images will be arranged in a random order every time the page is refreshed.
@@ -217,7 +221,7 @@ tags: [illustration, vector-graphic, inspiration]
 
     var allImages = "";
     for (var i = 0; i < arr.length; i++) {
-        allImages += '<a href="assets/100days-illustrations/'+arr[i]+'"><img src="/assets/100days-illustrations/'+arr[i]+'" alt="'+arr[i].replace(".png", "")+'"></a>';
+        allImages += '<a href="/assets/100days-illustrations/'+arr[i]+'"><img src="/assets/100days-illustrations/'+arr[i]+'" alt="'+arr[i].replace(".png", "")+'"></a>';
     }
     document.getElementById('photos').innerHTML = allImages;
 

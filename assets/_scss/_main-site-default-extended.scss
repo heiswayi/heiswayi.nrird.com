@@ -8,7 +8,7 @@
     font-size: 0.8rem;
     max-width: 960px;
     width: 100%;
-    margin: 0 auto;
+    margin: 0;
     padding: 2rem;
     a {
       border: none;
@@ -19,23 +19,33 @@
 .container {
   display: flex;
   flex-direction: column;
+  width: 100%;
   .content {
     background-color: var(--color-white);
-    margin: 0 auto;
+    margin: 0;
     padding: 2rem;
     display: flex;
     flex-direction: column;
-    max-width: 960px;
+    // max-width: 960px;
     width: 100%;
-    .post-meta {
+    .post-meta,
+    .page-meta {
       letter-spacing: 1px;
       text-transform: uppercase;
       font-family: $font-postmeta;
       font-size: 0.9rem;
       opacity: 0.8;
+      margin-top: 0.5rem;
+      margin-bottom: 1rem;
     }
-    .post-title {
+    .post-title,
+    .page-title {
       margin-top: 0;
+      margin-bottom: 0;
+    }
+    h1, h2, h3, h4, h5, h6, p, table, blockquote, form, ul, ol, img, figure,
+    .footnotes {
+      max-width: 960px;
     }
   }
 }
@@ -95,6 +105,7 @@
   .current-tag {
     border-top: 1px solid var(--color-silver);
     padding-top: 1rem;
+    font-family: $font-precode;
   }
   ul {
     margin-left: 1.2rem;
@@ -205,13 +216,6 @@ p.warning {
     }
     .box-links {
       margin-top: 1ch;
-    }
-    .box-img {
-      img {
-        height: 200px;
-        width: max-content;
-        object-fit: cover;
-      }
     }
     &:hover {
       border-color: var(--color-black);

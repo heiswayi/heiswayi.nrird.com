@@ -3,7 +3,7 @@ title                   : "Heiswayi Nrird"
 tagline                 : "Heiswayi Nrird - Software Engineer" # jekyll-seo-tag
 description             : "Heiswayi Nrird - Software Engineer" # feed.xml
 logo                    : "/assets/cover.gif" # jekyll-seo-tag
-version                 : "24.02.25"
+version                 : "24.03.25"
 
 # SITE OWNERSHIP VERIFICATIONS
 webmaster_verifications:
@@ -96,5 +96,9 @@ defaults:
       sitemap:         false
   - scope:
       path:            site-markdown-testing.md
+    values:
+      sitemap:         false
+  - scope:
+      path:            qr-mi-band-8.md
     values:
       sitemap:         false
