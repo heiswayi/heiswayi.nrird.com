@@ -257,21 +257,32 @@ dl.project-list {
       margin-right: 1rem;
     }
     .post-title {
+      .label {
+        opacity: 0.7;
+        font-family: $font-precode;
+        font-size: 0.8em;
+        text-transform: uppercase;
+        border: 1px solid var(--color-silver);
+        margin-right: 5px;
+        padding-left: 2px;
+        padding-right: 2px;
+      }
       a {
+        margin-right: 1ch;
         color: var(--color-black);
-        .label {
-          opacity: 0.7;
-          font-family: $font-precode;
-          font-size: 0.8em;
-          text-transform: uppercase;
-          border: 1px solid var(--color-silver);
-          margin-right: 5px;
-          padding-left: 2px;
-          padding-right: 2px;
-        }
         &:hover {
           color: var(--color-blue);
         }
+      }
+      .code-label {
+        opacity: 0.7;
+        font-family: $font-precode;
+        font-size: 0.8em;
+        text-transform: uppercase;
+        border: 1px solid var(--color-silver);
+        margin-right: 2px;
+        padding-left: 2px;
+        padding-right: 2px;
       }
     }
   }

@@ -7,6 +7,7 @@ tags: [angular, typescript, best-practices, coding-tips]
 
 Service subscription is quite common in [Angular](https://angular.io/) development. However, if you are implementing incorrectly, it could cause the memory leak to be happened in your application. So, it is really important for you to know a proper way to do a service subscription in your Angular components. In this post, I would like to share one of the methods that I usually use when I work on the Angular project.
 
+{:.message}
 **Assumption:** Lets say in your Angular project, you have a `ComponentA` that is going to subscribe to an event from a `ServiceX`. Lets say this event is called `onSomethingChanged`.
 
 Example of an event declaration in your `ServiceX`:
@@ -75,7 +76,7 @@ ngOnInit() {
 
 This assumes you want to listen to `onSomethingChanged` event from the beginning of your _ComponentA_ is loaded. So, whenever your _ComponentA_ is unloaded, the subscription to the event will be destroyed automatically.
 
-## The Differences: _Subject_ vs _BehaviorSubject_ vs _ReplaySubject_
+## The differences
 
 | `Subject` | A subscriber will only get published values that were emitted **after** the subscription. |
 | `BehaviorSubject` | The last value is cached. A subscriber will get the latest value **upon** initial subscription. BehaviorSubject requires an initial value to be defined. |

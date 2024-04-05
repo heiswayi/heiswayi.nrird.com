@@ -1,3 +1,12 @@
+<!--
+    To use this template, create a new page with the following front matter:
+    ---
+    layout: redirect    
+    redirect_to: "https://example.com"
+    tags: redirect
+    ---
+-->
+
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en" class="no-js" itemscope itemtype="http://schema.org/WebPage">
 
@@ -27,11 +36,11 @@
     <div class="error-page">
         <div class="error-content">
             <h1 class="colorize">{{ site.title }}</h1>
-            <h2>redirecting...</h2>
-            <p>you will be redirected to the following link in 5 seconds:<br>
+            <h2>Redirecting...</h2>
+            <p>You will be redirected to the following link in 5 seconds:<br>
                 <a href="{{ page.redirect_to }}">{{ page.redirect_to }}</a>
             </p>
-            <p>click on the link above if you are not redirected.</p>
+            <p>Click on the link above if you are not redirected.</p>
         </div>
     </div>
     <!-- <script>location='{{ page.redirect_to }}'</script> -->

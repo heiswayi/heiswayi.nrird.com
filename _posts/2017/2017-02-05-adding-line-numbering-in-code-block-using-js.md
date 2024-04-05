@@ -10,7 +10,7 @@ Utilizing a code block in Markdown format results in its conversion to HTML code
 ```js
 (function() {
   var pre = document.getElementsByTagName('pre'),
-      pl = pre.length;
+    pl = pre.length;
   for (var i = 0; i < pl; i++) {
     pre[i].innerHTML = '<span class="line-number"></span>' + pre[i].innerHTML + '<span class="cl"></span>';
     var num = pre[i].innerHTML.split(/\n/).length;
@@ -27,35 +27,45 @@ And, this is the example of SCSS code that I used:
 ```scss
 code,
 pre {
-    font-family: monospace;
-    font-variant-ligatures: none;
-    font-feature-settings: "liga" 0;
+  font-family: monospace;
+  font-variant-ligatures: none;
+  font-feature-settings: "liga"0;
 }
 
 pre {
-    width: 100%;
-    margin: 0 0 1rem 0;
-    line-height: 1.4;
-    white-space: pre;
-    overflow: auto;
-    padding: 0.5rem 2rem 0.5rem 0.5rem;
-    font-size: 0.9rem;
-    code {
-        padding: 0;
+  width: 100%;
+  margin: 0 0 1rem 0;
+  line-height: 1.4;
+  white-space: pre;
+  overflow: auto;
+  padding: 0.5rem 2rem 0.5rem 0.5rem;
+  font-size: 0.9rem;
+
+  code {
+    padding: 0;
+  }
+
+  .line-number {
+    float: left;
+    margin: 0 1em 0 -1em;
+    user-select: none;
+    text-align: right;
+    border-right: 1px solid red;
+
+    span {
+      display: block;
+      padding: 0 0.5em 0 1em;
+      color: red;
     }
-    .line-number {
-        float: left;
-        margin: 0 1em 0 -1em;
-        user-select: none;
-        text-align: right;
-        span {
-            display: block;
-            padding: 0 0.5em 0 1em;
-        }
-    }
-    .cl {
-        display: block;
-        clear: both;
-    }
+  }
+
+  .cl {
+    display: block;
+    clear: both;
+  }
 }
 ```
+
+## Demo
+
+<script async src="//jsfiddle.net/heiswayi/kqrt5wrL/embed/result/"></script>

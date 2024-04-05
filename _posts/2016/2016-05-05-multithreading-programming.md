@@ -20,7 +20,7 @@ In the context of .NET, there are several methods for implementing multithreadin
 | **Task class** | Represents asynchronous operations and is part of the Task Parallel Library for running tasks asynchronously and in parallel. |
 | **BackgroundWorker class** | Executes operations on a separate thread. |
 
-## Code examples and performance metrics
+## Example C# code
 
 Thread class:
 
@@ -94,6 +94,8 @@ using (CountdownEvent signaler = new CountdownEvent(threadCount))
 ```
 
 ### Benchmark summary
+
+The following benchmark data presented herein are derived from the specifications of my personal computer:
 
 | Single threading | 8419ms |
 | Multithreading using Thread | 7532ms |
