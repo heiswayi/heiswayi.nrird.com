@@ -5,7 +5,7 @@ title: About
 
 ![Heiswayi Nrird](https://ik.imagekit.io/nrirddotcom/HN/hn_D6guerPbf.jpg?tr=h-200)
 
-Hi! I'm Heiswayi Nrird. Call me `Wayi`. I'm a software geek by day, and a gamer by night. Currently working as a **software engineer** at [Keysight Technologies](https://keysight.com). This blog is my Internet home. **I write occasionally.** A place I share my thoughts and experiences. Sometimes, it's all about _coding_ and _web stuffs_. Other times, it's just a repository for random musings. ツ
+I'm Heiswayi Nrird. Call me `Wayi`. I'm a software geek by day, and a gamer by night. Currently working as a **Software Engineer** at [Keysight Technologies](https://keysight.com). This blog is like my Internet home. **I write occasionally here.** It's a place I share my thoughts and experiences. Sometimes, it's all about _coding_ and _tech stuffs_. Other times, it's just a repository for random musings. ツ
 
 - [LinkedIn](https://www.linkedin.com/in/heiswayi) - my career journey profile
 - [GitHub](https://github.com/heiswayi) - my code repo
@@ -14,11 +14,11 @@ Hi! I'm Heiswayi Nrird. Call me `Wayi`. I'm a software geek by day, and a gamer 
 - [CodePen](https://codepen.io/heiswayi/pens/public) - web playground
 - [JSFiddle](https://jsfiddle.net/user/heiswayi/) - another web playground
 - [Flickr](/flickr) - a collection of my landscape photographs that I hosted on Flickr site
-- [Unsplash](https://unsplash.com/@heiswayi_nrird) - my royalty-free photographs on Unsplash (experimental)
+- [Unsplash](https://unsplash.com/@heiswayi_nrird) - my royalty-free photographs on Unsplash (just trying and not active)
 
-No socmed profile because I'm a socmed interovert, so I didn't really use them much.
+No _socmed_ profile because I'm a _socmed_ interovert, so I didn't really use them much.
 
-- Contact Email: [heiswayi@nrird.com](mailto:heiswayi@nrird.com)
+- Contact: [heiswayi@nrird.com](mailto:heiswayi@nrird.com) - I check it often
 - [Keyoxide.org Profile](https://keyoxide.org/aspe:keyoxide.org:EGFQVPRQAFJQWKWNROITMVLLWA)
 
 ## Site tech stack
