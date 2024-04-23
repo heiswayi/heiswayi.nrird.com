@@ -5,9 +5,9 @@ description: Just another simple logger utility class that I wrote for my own us
 tags: [csharp, dotnet, logger, snippet]
 ---
 
-I've created a straightforward C# utility class for handling application logging in small .NET projects.
+I've created a straightforward C# utility class for handling application logging in small .NET projects. The following code snippet is also available on [Gist](https://gist.github.com/heiswayi/69ef5413c0f28b3a58d964447c275058).
 
-Full source code ([Gist](https://gist.github.com/heiswayi/69ef5413c0f28b3a58d964447c275058))
+## The code snippet
 
 ```cs
 /*

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Containerized LAMP stack deployment with nginx
-description: This is how I configure my EC2 instance to work with multiple DNS and proxify the traffic through nginx to respective services that are running in Docker containers.
+title: Containerized LAMP stack deployment with Nginx
+description: This is how I configure my EC2 instance to work with multiple DNS and proxify the traffic through Nginx to respective services that are running in Docker containers.
 tags: [nginx, cloud-computing, ec2, docker, dns]
 ---
 
@@ -9,7 +9,7 @@ tags: [nginx, cloud-computing, ec2, docker, dns]
 
 Configuring a single virtual server to handle multiple subdomains involves several key components, including the choice of a virtual server, DNS management, the use of nginx as a proxy, and the deployment of a LAMP stack. In this illustration, I detail the setup process using an Amazon EC2 instance, Cloudflare Managed DNS, nginx, and Docker containers (represented as "Service_*").
 
-![Proxify with nginx](/assets/post-images/nginx1.png)
+![Proxify with Nginx](/assets/post-images/nginx1.png)
 
 ## Virtual Server
 
@@ -30,7 +30,7 @@ Example DNS records:
 | A | `b.nrird.com` | `EC2_Instance_IP` | Yes |
 | A | `c.nrird.com` | `EC2_Instance_IP` | Yes |
 
-## nginx
+## Nginx
 
 nginx serves as both an entry point to the EC2 instance and a load balancer, directing traffic to the respective services running in Docker containers. The nginx configuration includes server blocks for each subdomain.
 

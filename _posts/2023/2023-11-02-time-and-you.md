@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Time and you
+title: time and you
 description: A succinct collection of life lessons on time, empathy, personal growth, resilience, happiness, family, and embracing life's opportunities with urgency.
 tags: [life-advice, poem]
 ---

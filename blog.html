@@ -53,6 +53,9 @@ title: Blog
 							{% if post.tags contains "snippet" %}
 								<span class="label">snippet</span>
 							{% endif %}
+							{% if post.tags contains "poem" %}
+								<span class="label">poem</span>
+							{% endif %}
 							<a href="{{ post.url }}">
 							{{ post.title }}
 							</a>

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Essential colors
-description: This is a foundational palette of essential colors, curated set embodies simplicity and versatility, ensuring a timeless and user-friendly aesthetic.
+title: Basic color palette
+description: A curated set of essential colors that I used in my application design.
 tags: [colors, uiux]
 ---
 
