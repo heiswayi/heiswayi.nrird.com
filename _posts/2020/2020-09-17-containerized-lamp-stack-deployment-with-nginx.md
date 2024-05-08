@@ -26,6 +26,7 @@ For those seeking a more cost-effective and streamlined server instance, AWS off
 Example DNS records:
 
 | **Type** | **Name** | **Content** | **Proxy status** |
+|---|---|---|---|
 | A | `a.nrird.com` | `EC2_Instance_IP` | Yes |
 | A | `b.nrird.com` | `EC2_Instance_IP` | Yes |
 | A | `c.nrird.com` | `EC2_Instance_IP` | Yes |

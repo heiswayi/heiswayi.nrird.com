@@ -25,6 +25,7 @@ So, I've been losing sleep lately because I'm hooked on playing online games. I 
 
 The amount of sleep needed for adults can vary, but generally, the [National Sleep Foundation](https://www.thensf.org/) provides the following recommendations for different age groups:
 
+|---|---|---|
 | Young adults | 18-25 years | 7-9 hours per night |
 | Adults | 26-64 years | 7-9 hours per night |
 | Older adults | 65 years and older | 7-8 hours per night |
