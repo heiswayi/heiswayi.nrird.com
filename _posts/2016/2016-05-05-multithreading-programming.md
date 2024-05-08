@@ -15,6 +15,7 @@ The primary aim of multithreading is to enable computers to perform more than on
 
 In the context of .NET, there are several methods for implementing multithreading, including:
 
+|Multithreading|Description|
 |---|---|
 | **Thread class** | Responsible for creating and manipulating threads in Windows. |
 | **ThreadPool class** | Manages a group of threads, automatically starting tasks when threads are created. |
@@ -98,6 +99,7 @@ using (CountdownEvent signaler = new CountdownEvent(threadCount))
 
 The following benchmark data presented herein are derived from the specifications of my personal computer:
 
+|Test|Time Taken|
 |---|---|
 | Single threading | 8419ms |
 | Multithreading using Thread | 7532ms |

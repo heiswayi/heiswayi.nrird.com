@@ -68,6 +68,8 @@ Keycloak operates based on tokens, especially for OAuth2 and OIDC protocols. Key
 
 Types of tokens when authenticating with Keycloak:
 
+|Type|Description|
+|---|---|
 | Access token | Short-lived (minutes), used for accessing resources. |
 | Refresh token | Long-lived (days), used for requesting new tokens. |
 | Offline token | A special refresh token that "never" expires. |

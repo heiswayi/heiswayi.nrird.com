@@ -77,6 +77,8 @@ This assumes you want to listen to `onSomethingChanged` event from the beginning
 
 ## Subject vs. BehaviorSubject vs. ReplaySubject
 
+|Type|Description|
+|---|---|
 | `Subject` | A subscriber will only get published values that were emitted **after** the subscription. |
 | `BehaviorSubject` | The last value is cached. A subscriber will get the latest value **upon** initial subscription. BehaviorSubject requires an initial value to be defined. |
 | `ReplaySubject` | It can cache up to a specified number of published values or emissions. Any subscriber will get **all** the cached values **upon** subscription. |
