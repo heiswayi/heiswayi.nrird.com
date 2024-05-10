@@ -14,7 +14,8 @@
   "scripts": {
     "compile-sass": "gulp compile-sass",
     "jekyll-serve": "bundle exec jekyll serve",
-    "jekyll-build": "bundle exec jekyll build"
+    "jekyll-build": "bundle exec jekyll build",
+    "serve": "npm run jekyll-serve"
   },
   "repository": {
     "type": "git",
