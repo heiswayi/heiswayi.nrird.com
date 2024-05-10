@@ -1,7 +1,7 @@
 ---
 layout: post
 title: From mIRC scripting to AI chatbots
-description: 
+description: A personal journey in building conversational AI bot.
 tags: [mirc, ai, chatbot]
 ---
 

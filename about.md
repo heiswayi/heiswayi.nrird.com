@@ -5,25 +5,29 @@ title: About
 
 ![Heiswayi Nrird](https://ik.imagekit.io/nrirddotcom/HN/hn_D6guerPbf.jpg?tr=h-200)
 
-I'm Heiswayi Nrird. Call me `Wayi`. I'm a software geek by day, and a gamer by night. Currently working as a **Software Engineer** at [Keysight Technologies](https://keysight.com). This blog is like my Internet home. **I write occasionally here.** It's a place I share my thoughts and experiences. Sometimes, it's all about _coding_ and _tech stuffs_. Other times, it's just a repository for random musings. ツ
+Hey there! I'm Heiswayi Nrird, or just Wayi is fine. By day, I wrangle code as a **Software Engineer** at [Keysight Technologies](https://keysight.com) (think software geek!). By night? Well, that's for epic gaming adventures.
+
+This blog is my little corner of the internet. **I don't write all the time**, but when I do, it's a place to share what's on my mind.  Sometimes it's all about coding and tech, other times it's just whatever pops into my head.  Think of it as a chill hangout spot for my thoughts! ツ
 
 - [LinkedIn](https://www.linkedin.com/in/heiswayi) - my career journey profile
 - [GitHub](https://github.com/heiswayi) - my code repo
-- [Gist](https://gist.github.com/heiswayi) - my personal pastebin
+- [Gist](https://gist.github.com/heiswayi) - my personal pastebin / scratchcodepad
 - [Codeberg](https://codeberg.org/hn) - my another code repo, less GitHub-thingy
 - [CodePen](https://codepen.io/heiswayi/pens/public) - web playground
 - [JSFiddle](https://jsfiddle.net/user/heiswayi/) - another web playground
-- [Flickr](/flickr) - a collection of my landscape photographs that I hosted on Flickr site
-- [Unsplash](https://unsplash.com/@heiswayi_nrird) - my royalty-free photographs on Unsplash (just trying and not active)
+- [Flickr](/flickr) - a collection of my landscape photographs that I previously hosted on Flickr site
+- [Unsplash](https://unsplash.com/@heiswayi_nrird) - my royalty-free photographs on Unsplash (just trying this Unsplash thing)
 
-No _socmed_ profile because I'm a _socmed_ interovert, so I didn't really use them much.
+No socmed profile because I'm a socmed interovert, so I didn't really use them much.
 
-- Contact: [heiswayi@nrird.com](mailto:heiswayi@nrird.com) - I check it often
+- Contact: [heiswayi@nrird.com](mailto:heiswayi@nrird.com) - I check it often ヾ(⌐■_■)ノ
 - [Keyoxide.org Profile](https://keyoxide.org/aspe:keyoxide.org:EGFQVPRQAFJQWKWNROITMVLLWA)
 
 ## Site tech stack
 
-This site is made using [Jekyll](https://jekyllrb.com/), a static site generator, and [NodeJS](https://nodejs.org/) ([gulp](https://gulpjs.com/)) to compile my SCSS files. The source code is hosted on [GitHub](https://github.com/) (Private Repo). It is built and served automatically by [Cloudflare Pages](https://pages.cloudflare.com/) with free of charge. I manage my site domain using [Cloudflare DNS](https://www.cloudflare.com/). Coded in [VS Code](https://code.visualstudio.com/) editor with [vscode-pets](https://marketplace.visualstudio.com/items?itemName=tonybaloney.vscode-pets)-enabled.
+This site is made using [Jekyll](https://jekyllrb.com/) [FOC], a static site generator, and [NodeJS](https://nodejs.org/) ([gulp](https://gulpjs.com/)) to compile my SCSS files. The source code is hosted on [GitHub](https://github.com/) [FOC]. It is built and served automatically by [Cloudflare Pages](https://pages.cloudflare.com/) [FOC]. I manage my site domain using [Cloudflare DNS](https://www.cloudflare.com/) [FOC]. Coded in [VS Code](https://code.visualstudio.com/) editor with [vscode-pets](https://marketplace.visualstudio.com/items?itemName=tonybaloney.vscode-pets)-enabled.
+
+FOC = free of charge / zero cost!
 
 ## Site disclaimer
 

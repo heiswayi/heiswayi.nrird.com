@@ -68,4 +68,4 @@ pre {
 
 ## Demo
 
-<script async src="//jsfiddle.net/heiswayi/kqrt5wrL/embed/result/"></script>
+<p><script async src="//jsfiddle.net/heiswayi/kqrt5wrL/embed/result/"></script></p>
