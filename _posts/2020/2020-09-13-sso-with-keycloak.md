@@ -2,7 +2,7 @@
 layout: post
 title: SSO with Keycloak
 description: Keycloak is an open source Single Sign-On (SSO) solution for web apps and RESTful web services.
-tags: [keycloak, user-authentication, sso, rest-api, docker-compose]
+tags: [keycloak, user-authentication, sso, rest-api, docker-compose, programming]
 ---
 
 ## Introduction to Keycloak

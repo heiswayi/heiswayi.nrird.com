@@ -2,7 +2,7 @@
 layout: post
 title: Adding line numbering in code block
 description: This is how I added a line numbering in my code block by using a few lines of vanilla JavaScript and some SCSS for styling.
-tags: [jekyll, scss, javascript]
+tags: [jekyll, scss, javascript, programming]
 ---
 
 Utilizing a code block in Markdown format results in its conversion to HTML code, encapsulated within `<pre><code>` markup. By default, there is no line numbering. It's a straightforward code block display. To incorporate line numbering and apply some CSS styling through SCSS, I employed vanilla JavaScript code:

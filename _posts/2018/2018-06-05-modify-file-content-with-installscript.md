@@ -2,7 +2,7 @@
 layout: post
 title: How to modify file content with InstallScript using deferred custom action
 description: This is how I dynamically modify the file content by using deferred custom action with InstallScript to do a find-and-replace of a string during installation time in InstallShield Basic MSI.
-tags: [installshield, installscript, windows-installer]
+tags: [installshield, installscript, windows-installer, programming]
 ---
 
 ## Situation

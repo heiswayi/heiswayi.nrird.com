@@ -2,7 +2,7 @@
 layout: post
 title: The silent impacts of sleep deprivation
 description: What occurs to the physical and mental aspects of an individual when they experience a deficiency in the sleep they require?
-tags: [sleep-deprivation]
+tags: [sleep-deprivation, lifestyle]
 ---
 
 So, I've been losing sleep lately because I'm hooked on playing online games. I looked into the downsides of this habit, and here's what I've figured out for now. There are probably more bad things, but these are the ones that pop up the most;

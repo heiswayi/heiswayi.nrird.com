@@ -2,7 +2,7 @@
 layout: post
 title: Service subscription in Angular
 description: Tips on how to do proper service subscription in Angular component using ReplaySubject(1) and takeUntil pipe.
-tags: [angular, typescript, best-practices, coding-tips]
+tags: [angular, typescript, best-practices, coding-tips, programming]
 ---
 
 Service subscription is quite common in [Angular](https://angular.io/) development. However, if you are implementing incorrectly, it could cause the memory leak to be happened in your application. So, it is really important for you to know a proper way to do a service subscription in your Angular components. In this post, I would like to share one of the methods that I usually use when I work on the Angular project.

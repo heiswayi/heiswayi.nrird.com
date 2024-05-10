@@ -2,7 +2,7 @@
 layout: post
 title: Multithreading programming in .NET
 description: Demonstrating multithreading programming available in .NET System.Threading.
-tags: [csharp, multithreading, dotnet]
+tags: [csharp, multithreading, dotnet, programming]
 ---
 
 ## Understanding multithreading

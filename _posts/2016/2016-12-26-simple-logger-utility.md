@@ -2,7 +2,7 @@
 layout: post
 title: Simple logger utility class in .NET
 description: Just another simple logger utility class that I wrote for my own use in some of my .NET projects.
-tags: [csharp, dotnet, logger, snippet]
+tags: [csharp, dotnet, logger, snippet, programming]
 ---
 
 I've created a straightforward C# utility class for handling application logging in small .NET projects. The following code snippet is also available on [Gist](https://gist.github.com/heiswayi/69ef5413c0f28b3a58d964447c275058).

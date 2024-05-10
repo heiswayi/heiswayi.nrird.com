@@ -2,7 +2,7 @@
 layout: post
 title: SerialPortManager.cs
 description: A snippet of singleton class implemented in .NET C# to manage serial data communication.
-tags: [dotnet, csharp, serial-port, arduino, snippet]
+tags: [dotnet, csharp, serial-port, arduino, snippet, programming]
 ---
 
 The _SerialPortManager.cs_ file contains a snippet of a singleton class implemented in .NET C#, which I created and utilized in various .NET projects to manage serial data communication, particularly for projects involving interaction with an [Arduino](https://www.arduino.cc/) board. This class serves as a wrapper built on top of the [System.IO.Ports.SerialPort](https://msdn.microsoft.com/en-us/library/system.io.ports.serialport) class. The following code snippet is also available on [Gist](https://gist.github.com/heiswayi/80eda1a6905ba4edee8bd21a45f3a22d).

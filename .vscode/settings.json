@@ -1,2 +1,9 @@
 {
+    "workbench.colorCustomizations": {
+        "[Default Dark Modern]": {
+            "activityBar.background": "#790117",
+            "activityBar.inactiveForeground": "#f19d9d",
+            "activityBar.foreground": "#ffffff"
+        }
+    }
 }

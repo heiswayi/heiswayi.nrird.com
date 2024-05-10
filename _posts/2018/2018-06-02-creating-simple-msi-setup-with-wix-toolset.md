@@ -2,7 +2,7 @@
 layout: post
 title: Learn to create a simple MSI setup with WiX Toolset
 description: This is a step-by-step walkthrough on how to write XML script to create a simple MSI setup with WiX Toolset.
-tags: [wix-toolset, windows-installer]
+tags: [wix-toolset, windows-installer, programming]
 ---
 
 Creating a simple MSI setup is easier with [WiX Toolset](http://wixtoolset.org/) if you just need a simple file copy style installation of your Windows-based application. MSI setup is referred to [Windows Installer](https://docs.microsoft.com/en-us/windows/desktop/msi/windows-installer-portal) (`.msi` file). In this guide, I have been using [WiX Toolset Compiler v3.11.1.2318](http://wixtoolset.org/releases/v3.11.1/stable).

@@ -2,7 +2,7 @@
 layout: post
 title: Creating a simple Event Bus in Angular
 description: Event Bus provides a simple communication between Angular components.
-tags: [angular, typescript, best-practices, coding-tips]
+tags: [angular, typescript, best-practices, coding-tips, programming]
 ---
 
 Event Bus enables a simple intercomponent communication within Angular project using **`Subject`** and **`Subscription`** from RxJS.
