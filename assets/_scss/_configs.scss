@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Grandstander:ital,wght@0,100..900;1,100..900&display=swap');
 
 $sans-serif: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Cantarell, Ubuntu, roboto, noto, arial, sans-serif;
 $serif: Iowan Old Style, Apple Garamond, Baskerville, Times New Roman, Droid Serif, Times, Source Serif Pro, serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
@@ -9,10 +9,10 @@ $__CODE: "DM Mono", monospace;
 
 $font-body: $__DEFAULT;
 $font-heading: $__DEFAULT;
-$font-h1: $__DEFAULT;
-$font-h2: $__DEFAULT;
-$font-h3: $__DEFAULT;
-$font-h456: $__DEFAULT;
+$font-h1: "Grandstander", cursive;
+$font-h2: "Grandstander", cursive;
+$font-h3: "Grandstander", cursive;
+$font-h456: "Grandstander", cursive;
 $font-button: $__CODE;
 $font-topmenu: $__CODE;
 $font-brand: $__CODE;
