@@ -5,7 +5,7 @@ title: About
 
 ![Heiswayi Nrird](https://ik.imagekit.io/nrirddotcom/HN/hn_D6guerPbf.jpg?tr=h-200)
 
-Hey there! I'm Heiswayi Nrird, or just Wayi is fine. By day, I wrangle code as a **Software Engineer** at [Keysight Technologies](https://keysight.com) (think software geek!). By night? Well, that's for epic gaming adventures.
+Hey there! I'm Heiswayi Nrird, or Wayi for short. I'm a **Software Engineer** at [Keysight Technologies](https://keysight.com) with passion for crafting innovative solutions. Outside of the code world, I enjoy the serenity of landscape photography and the competitive thrill of computer gaming. Based in Penang, MY, I find inspiration in both the digital and natural landscapes.
 
 This blog is my little corner of the internet. **I don't write all the time**, but when I do, it's a place to share what's on my mind.  Sometimes it's all about coding and tech, other times it's just whatever pops into my head.  Think of it as a chill hangout spot for my thoughts! ツ
 
