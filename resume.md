@@ -8,6 +8,8 @@ title: Resume
 
 A highly skilled Software Engineer with over 10 years of experience in designing, developing, and implementing secure cloud-based solutions, microservices architecture, and enterprise software across various industries. Proven ability to lead UI/UX development, integrate DevSecOps practices, and spearhead DevOps initiatives. Extensive technical expertise in programming languages, frameworks, APIs, and cloud deployment strategies.
 
+---
+
 ## Experience
 
 **Senior Software Engineer** | February 2013 - Current<br>
@@ -78,24 +80,28 @@ A highly skilled Software Engineer with over 10 years of experience in designing
 - Additional Achievements:
   - 2nd Place, Intel Cup 2012 Undergraduate Electronic Design Contest (Shanghai): Developed a Sign Language Translator System using an Intel Atom board for glove sensor data translation and on-screen display. (C++, C#, .NET WinForms, Windows CE)
 
+---
+
 ## Education
 
 Universiti Sains Malaysia (USM) | 2009 - 2013 (4yrs)<br>
 BEng (Hons), Electronics Engineering
 
+---
+
 ## Skills & Tech Stack
 
-- Cloud Platforms: AWS, Azure
-- DevOps Tools: Docker, K8s, Jenkins, GitLab CI, Terraform, Prometheus, Grafana, Maven/Gradle
-- Architectures: Microservices, Client-Server, MVC/MVVM, Event-Driven, WebAPI (REST)
-- Databases: MySQL, MSSQL, PostgreSQL, MongoDB, SQLite, Redis
-- Frontend Development: Angular, React, Bootstrap/Tailwind
-- Backend (Web) Development: FastAPI, ASP.NET Core, NodeJS/Express.js
-- Desktop Development: .NET WPF, .NET Core, Electron
-- Messaging & Communications: REST API, MQTT, gRPC, WebSocket, RabbitMQ
-- Agile Methodologies: Scrum, Kanban
-- Project Management: Git, Jira/Trello, Confluence/Notion, Jekyll/MkDocs (SSG), “package.json”
-- DevSecOps Tools: OWASP, Black Duck, Nessus, Burp Suite, SonarQube, Unit Testing
+- **Cloud Platforms:** AWS, Azure, GCP, DigitalOcean, Vercel
+- **DevOps Tools:** Docker/Podman, K8s, Jenkins, GitLab CI, TeamCity, Terraform, Team Foundation Build
+- **Architectures:** Microservices, Client-Server, MVC/MVVM, Event-Driven, WebAPI (REST)
+- **Databases:** MySQL, MSSQL, PostgreSQL, MongoDB, SQLite, Redis, JSON
+- **Frontend Development:** Angular, React, Bootstrap/Tailwind, jQuery/JS, CSS3/SCSS
+- **Backend (Web) Development:** FastAPI, ASP.NET Core, NodeJS/Express.js
+- **Desktop Development:** .NET WPF, .NET Core, Electron, Qt
+- **Messaging & Communications:** REST API, MQTT, gRPC, WebSocket, RabbitMQ
+- **Agile Methodologies:** Scrum, Kanban
+- **Project Management:** Git, Jira/Trello, Confluence/Notion, Jekyll/MkDocs (SSG), “package.json”
+- **DevSecOps Tools:** OWASP, Black Duck, Nessus, Burp Suite, SonarQube
 
 ## Programming Languages
 

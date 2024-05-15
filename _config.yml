@@ -3,7 +3,7 @@ title                   : "Heiswayi Nrird"
 tagline                 : "Heiswayi Nrird - Software Engineer" # jekyll-seo-tag
 description             : "Heiswayi Nrird - Software Engineer" # feed.xml
 logo                    : "/assets/cover.gif" # jekyll-seo-tag
-version                 : "24.03.25"
+version                 : "24.05.15"
 
 # SITE OWNERSHIP VERIFICATIONS
 webmaster_verifications:
@@ -20,11 +20,11 @@ baseurl                 : "" # main url, jekyll-seo-tag
 # AUTHOR INFO
 author:
   name                  : "Heiswayi Nrird"
-  url                   : https://heiswayi.nrird.com
+  url                   : https://nrird.com
 
 # SOCIAL MEDIA
 twitter:
-  username              : heiswayi
+  username              : heiswayi_nrird
   card                  : summary
 facebook:
   app_id                : null

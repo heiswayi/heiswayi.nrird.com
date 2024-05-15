@@ -7,27 +7,14 @@
 
 /* Landscape phone to portrait tablet */
 @media (max-width: 767px) {
-  .header {
-    .site-nav {
-      ul {
-        flex-wrap: wrap;
-        line-height: 2;
-      }
-    }
+  .top-nav {
+    flex-direction: column;
   }
   .misc-link {
     a {
       white-space: nowrap;
     }
   }
-  // .index-page {
-  //   .index-row {
-  //     flex-direction: column;
-  //     .post-date {
-  //       margin-right: 0;
-  //     }
-  //   }
-  // }
 }
 
 /* Portrait tablet to landscape and desktop */
