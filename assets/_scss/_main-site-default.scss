@@ -132,6 +132,14 @@ img {
     margin: 1rem 0;
     max-width: 100%;
     height: auto;
+    &.align-right {
+        float: right;
+        margin-left: 1rem;
+    }
+    &.align-left {
+        float: left;
+        margin-right: 1rem;
+    }
 }
 
 figure {
@@ -164,6 +172,7 @@ td,
 th {
     border: 1px solid var(--color-silver);
     padding: 0.25rem 0.5rem;
+    text-align: left;
 }
 
 tbody tr:nth-child(odd) {

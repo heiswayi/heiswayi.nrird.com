@@ -2,7 +2,7 @@
 layout: post
 title: SSO with Keycloak
 description: Keycloak is an open source Single Sign-On (SSO) solution for web apps and RESTful web services.
-tags: [keycloak, user-authentication, sso, rest-api, docker-compose]
+tags: [keycloak, user-authentication, sso, rest-api, docker-compose, programming]
 ---
 
 ## Introduction to Keycloak
@@ -19,7 +19,7 @@ Keycloak is a powerful solution designed for user identity and access management
 - Customizable and Extensible
 - Easy Setup and Integration using provided client adapters
 
-## Keycloak Core Concepts and Architecture
+## Keycloak core concepts and architecture
 
 Keycloak operates within a realm, a namespace where you manage metadata and configurations. The default realm, `master`, is reserved for Keycloak management and should not be used for your applications. Key components managed within a realm include:
 
@@ -36,27 +36,27 @@ The architecture of Keycloak is illustrated below:
 
 ![Keycloak Core Concepts and Architecture (Credit: Courtesy of Thomas Darimont)](/assets/post-images/keycloak1.png)
 
-## User Authentication using Keycloak
+## User authentication using Keycloak
 
-### Keycloak as Identity Provider to Frontend Application
+### Keycloak as Identity Provider (IdP) to frontend application
 
 User authentication when accessing a frontend application is depicted in the following image:
 
 ![Keycloak as Identity Provider to Frontend Application (Credit: Courtesy of Thomas Darimont)](/assets/post-images/keycloak2.png)
 
-### Single Sign-On (SSO) Integration
+### Single Sign-On (SSO) integration
 
 Keycloak supports Web SSO, enabling users to log in once to access all applications. It also facilitates single logout across various platforms, including web, mobile, and desktop applications. The authentication flow for a logged-in user accessing another frontend application is illustrated below:
 
 ![Single Sign-On (SSO) Integration (Credit: Courtesy of Thomas Darimont)](/assets/post-images/keycloak3.png)
 
-### How Backend Services Work with Keycloak
+### How backend services work with Keycloak
 
 The flow of how backend services interact with Keycloak to validate access tokens is outlined in the following image:
 
 ![How Backend Services Work with Keycloak (Credit: Courtesy of Thomas Darimont)](/assets/post-images/keycloak4.png)
 
-## Understanding Keycloak Tokens
+## Understanding Keycloak tokens
 
 Keycloak operates based on tokens, especially for OAuth2 and OIDC protocols. Key points about Keycloak tokens:
 
@@ -68,12 +68,14 @@ Keycloak operates based on tokens, especially for OAuth2 and OIDC protocols. Key
 
 Types of tokens when authenticating with Keycloak:
 
+|Type|Description|
+|---|---|
 | Access token | Short-lived (minutes), used for accessing resources. |
 | Refresh token | Long-lived (days), used for requesting new tokens. |
 | Offline token | A special refresh token that "never" expires. |
 | ID token | Contains information about the user (used by OIDC). |
 
-## Example Screenshots of Keycloak UI
+## Example screenshots of Keycloak UI
 
 Keycloak Admin Console:
 
@@ -83,7 +85,7 @@ Keycloak User Account Console:
 
 ![Keycloak User Account Console (v11)](/assets/post-images/keycloak6.png)
 
-## Keycloak Admin REST API Examples
+## Keycloak Admin REST API examples
 
 Here are some common Keycloak Admin REST API examples for application management. Refer to the [Keycloak Admin REST API documentation page](https://www.keycloak.org/docs-api/5.0/rest-api/index.html) for more details.
 
@@ -98,7 +100,7 @@ curl --location --request POST '<KEYCLOAK_SERVER>/auth/realms/master/protocol/op
 --data-urlencode 'client_id=admin-cli'
 ```
 
-### Get User List Executed from a Specific User Account
+### Get user list executed from a specific user account
 
 Following are the prerequisite steps that needed to be applied on Keycloak Admin Console:
 
@@ -174,7 +176,7 @@ curl --location --request GET '<KEYCLOAK_SERVER>/auth/admin/realms/<REALM>/users
 --header 'Authorization: Bearer <ACCESS_TOKEN>'
 ```
 
-## Quick Deployment of Keycloak via Docker Compose
+## Quick deployment of Keycloak via Docker Compose
 
 Here's an example of a `docker-compose.yml` file for a quick Keycloak deployment using Docker Compose:
 

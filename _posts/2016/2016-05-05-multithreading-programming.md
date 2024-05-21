@@ -2,7 +2,7 @@
 layout: post
 title: Multithreading programming in .NET
 description: Demonstrating multithreading programming available in .NET System.Threading.
-tags: [csharp, multithreading, dotnet]
+tags: [csharp, multithreading, dotnet, programming]
 ---
 
 ## Understanding multithreading
@@ -15,12 +15,14 @@ The primary aim of multithreading is to enable computers to perform more than on
 
 In the context of .NET, there are several methods for implementing multithreading, including:
 
+|Multithreading|Description|
+|---|---|
 | **Thread class** | Responsible for creating and manipulating threads in Windows. |
 | **ThreadPool class** | Manages a group of threads, automatically starting tasks when threads are created. |
 | **Task class** | Represents asynchronous operations and is part of the Task Parallel Library for running tasks asynchronously and in parallel. |
 | **BackgroundWorker class** | Executes operations on a separate thread. |
 
-## Code examples and performance metrics
+## Example C# code
 
 Thread class:
 
@@ -95,6 +97,10 @@ using (CountdownEvent signaler = new CountdownEvent(threadCount))
 
 ### Benchmark summary
 
+The following benchmark data presented herein are derived from the specifications of my personal computer:
+
+|Test|Time Taken|
+|---|---|
 | Single threading | 8419ms |
 | Multithreading using Thread | 7532ms |
 | Multithreading using ThreadPool | 2901ms |

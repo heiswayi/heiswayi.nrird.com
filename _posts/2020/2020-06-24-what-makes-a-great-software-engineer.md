@@ -7,42 +7,42 @@ tags: [software-engineering]
 
 In simple terms, a software engineer is someone who uses computer skills to create, maintain, and test computer software. Anyone can become a software engineer with the right training and dedication, but becoming a great one involves more than just learning.
 
-## Love for Coding
+<h2 class="special-font">Love for Coding</h2>
 
 To be a great software engineer, you need to really love coding. It means being super passionate about helping shape the future of the tech world. Great software engineers are experts at what they do and always push themselves to learn more.
 
-## Stay Humble and Learn
+<h2 class="special-font">Stay Humble and Learn</h2>
 
 A top-notch software engineer is humble and always eager to learn. They know it's important to grow their skills, listen to others, and challenge the norm to make things better every day.
 
-## Strive for Technical Excellence
+<h2 class="special-font">Strive for Technical Excellence</h2>
 
 A great software engineer always aims for technical excellence. They're always trying to get better at what they do, never settling for mediocrity. They know their weaknesses and work hard to improve every aspect of their work.
 
-## Share Your Experiences
+<h2 class="special-font">Share Your Experiences</h2>
 
 Good software engineers share their experiences. They know the value of helping their team by sharing what they've learned. They look for ways to support others and make the whole team better.
 
-## Embrace Challenges
+<h2 class="special-font">Embrace Challenges</h2>
 
 A great software engineer isn't afraid to fail. They don't run away from problems; instead, they face difficult challenges head-on. They're the ones who solve problems and don't shy away from tough situations.
 
-## Stick to Deadlines
+<h2 class="special-font">Stick to Deadlines</h2>
 
 A great software engineer is committed to meeting deadlines. They understand how important it is for the whole team to know and achieve deadlines. They're willing to help others to make sure everyone crosses the finish line on time.
 
-## Quality Matters
+<h2 class="special-font">Quality Matters</h2>
 
 Top software engineers take pride in the quality of their work. They don't compromise on quality and manage their time well to deliver the best solutions within the given constraints.
 
-## "Get Stuff Done" Attitude
+<h2 class="special-font">"Get Stuff Done" Attitude</h2>
 
 A great software engineer has a "get stuff done" attitude. They love building things and won't stop until they finish what they started. They prioritize results over the process, while still recognizing the value of the process.
 
-## Critique Ideas, Not People
+<h2 class="special-font">Critique Ideas, Not People</h2>
 
 Great software engineers critique ideas, not people. They judge ideas based on their merit, not the person suggesting them. They believe that ideas should stand or fall on their own.
 
-## Improve the Workplace
+<h2 class="special-font">Improve the Workplace</h2>
 
 A great software engineer always looks for ways to make the workplace better. They work together with their team to create a more enjoyable work environment. They respect and improve upon what's already there.

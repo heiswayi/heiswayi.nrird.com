@@ -13,7 +13,7 @@ COVID-19 or coronavirus disease 2019 is defined as illness caused by novel coron
 
 (Source: [Medscape](https://www.medscape.com/answers/2500114-197401/what-is-covid-19))
 
-### Things that happened in my country (Malaysia) during the COVID-19 outbreak
+## Things that happened in my country (Malaysia) during the COVID-19 outbreak
 
 Most of the countries around the world have been doing their best to [flatten the curve](https://www.livescience.com/coronavirus-flatten-the-curve.html) during this outbreak and my country is one of them.
 
@@ -32,7 +32,7 @@ Following periods are the phases that implemented during the MCO:
 - Phase 5: 13/05/2020 - 09/06/2020 (CMCO)
 - Phase 6: 10/06/2020 - 31/08/2020 (RMCO)
 
-_Enhanced MCO (EMCO) only applied to specific locations or states of the country._
+> Enhanced MCO (EMCO) only applied to specific locations or states of the country.
 
 And below are the events or restrictions that occured during the duration of MCO:
 

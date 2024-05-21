@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Service subscription in Angular using ReplaySubject(1) and takeUntil pipe
+title: Service subscription in Angular
 description: Tips on how to do proper service subscription in Angular component using ReplaySubject(1) and takeUntil pipe.
-tags: [angular, typescript, best-practices, coding-tips]
+tags: [angular, typescript, best-practices, coding-tips, programming]
 ---
 
 Service subscription is quite common in [Angular](https://angular.io/) development. However, if you are implementing incorrectly, it could cause the memory leak to be happened in your application. So, it is really important for you to know a proper way to do a service subscription in your Angular components. In this post, I would like to share one of the methods that I usually use when I work on the Angular project.
 
-**Assumption:** Lets say in your Angular project, you have a `ComponentA` that is going to subscribe to an event from a `ServiceX`. Lets say this event is called `onSomethingChanged`.
+**Assumption:** Let's say in your Angular project, you have a `ComponentA` that is going to subscribe to an event from a `ServiceX`. Let's say this event is called `onSomethingChanged`.
 
 Example of an event declaration in your `ServiceX`:
 
@@ -18,14 +18,14 @@ public onSomethingChanged = this._onSomethingChanged.asObservable();
 
 ## Here are what you need to do in your `ComponentA`
 
-(1) Import the following [RxJS](https://rxjs.dev/guide/overview) modules. We're going to use `ReplaySubject` and `takeUntil` pipe.
+Import the following [RxJS](https://rxjs.dev/guide/overview) modules. We're going to use **`ReplaySubject`** and **`takeUntil`** pipe.
 
 ```js
 import { ReplaySubject } from 'rxjs/ReplaySubject';
 import { takeUntil } from 'rxjs/operators';
 ```
 
-(2) Your _ComponentA_ needs to implement both `OnInit` and `OnDestroy`.
+Your _ComponentA_ needs to implement both `OnInit` and `OnDestroy`.
 
 ```js
 @Component({
@@ -38,13 +38,13 @@ export class ComponentA implements OnInit, OnDestroy {
 }
 ```
 
-(3) Add this declaration on top of your _ComponentA constructor_.
+Add this declaration on top of your _ComponentA constructor_.
 
 ```js
 private destroyed$: ReplaySubject<boolean> = new ReplaySubject(1);
 ```
 
-(4) Put this in your `ngOnDestroy()` function.
+Put this in your `ngOnDestroy()` function.
 
 ```js
 ngOnDestroy() {
@@ -53,7 +53,7 @@ ngOnDestroy() {
 }
 ```
 
-(5) Inject your `ServiceX` into your _ComponentA_ `constructor`.
+Inject your `ServiceX` into your _ComponentA_ `constructor`.
 
 ```js
 constructor(
@@ -61,7 +61,7 @@ constructor(
 ) { }
 ```
 
-(6) Finally, you can subscribe to `onSomethingChanged` event from your _ServiceX_ in your `ngOnInit()` function.
+Finally, you can subscribe to `onSomethingChanged` event from your _ServiceX_ in your `ngOnInit()` function.
 
 ```js
 ngOnInit() {
@@ -75,8 +75,10 @@ ngOnInit() {
 
 This assumes you want to listen to `onSomethingChanged` event from the beginning of your _ComponentA_ is loaded. So, whenever your _ComponentA_ is unloaded, the subscription to the event will be destroyed automatically.
 
-## The Differences: _Subject_ vs _BehaviorSubject_ vs _ReplaySubject_
+## Subject vs. BehaviorSubject vs. ReplaySubject
 
+|Type|Description|
+|---|---|
 | `Subject` | A subscriber will only get published values that were emitted **after** the subscription. |
 | `BehaviorSubject` | The last value is cached. A subscriber will get the latest value **upon** initial subscription. BehaviorSubject requires an initial value to be defined. |
 | `ReplaySubject` | It can cache up to a specified number of published values or emissions. Any subscriber will get **all** the cached values **upon** subscription. |

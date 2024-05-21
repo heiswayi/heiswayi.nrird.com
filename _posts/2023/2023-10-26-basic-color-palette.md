@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Essential colors
-description: This is a foundational palette of essential colors, curated set embodies simplicity and versatility, ensuring a timeless and user-friendly aesthetic.
+title: Basic color palette
+description: A curated set of essential colors that I used in my application design.
 tags: [colors, uiux]
 ---
 
@@ -23,15 +23,17 @@ tags: [colors, uiux]
   font-weight: 700;
   letter-spacing: 0.056em;
   line-height: 1.258;
-  color: rgba(255, 255, 255, 0.8);
+  color: white;
   background: grey;
+  font-family: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
+  font-size: 18px;
+  max-width: 10em;
 }
 .color .name {
   font-size: 0.778em;
   margin-bottom: 0.382em;
 }
 .color .value {
-  color: rgba(255, 255, 255, 0.5);
   font-size: 0.618em;
   margin-bottom: 0.236em;
 }
@@ -40,10 +42,10 @@ tags: [colors, uiux]
 }
 .color.light-blue {
   background: #78dcfa;
-  color: rgba(50, 65, 85, 0.8);
+  color: black;
 }
 .color.light-blue .value {
-  color: rgba(50, 65, 85, 0.5);
+  color: black;
 }
 .color.medium-blue {
   background: #00aadc;
@@ -53,24 +55,24 @@ tags: [colors, uiux]
 }
 .color.ultralight-gray {
   background: #f4f8fa;
-  color: rgba(50, 65, 85, 0.8);
+  color: black;
 }
 .color.ultralight-gray .value {
-  color: rgba(50, 65, 85, 0.5);
+  color: black;
 }
 .color.light-gray {
   background: #e8f0f5;
-  color: rgba(50, 65, 85, 0.8);
+  color: black;
 }
 .color.light-gray .value {
-  color: rgba(50, 65, 85, 0.5);
+  color: black;
 }
 .color.medium-gray {
   background: #d2dee6;
-  color: rgba(50, 65, 85, 0.8);
+  color: black;
 }
 .color.medium-gray .value {
-  color: rgba(50, 65, 85, 0.5);
+  color: black;
 }
 .color.dark-gray {
   background: #324155;
@@ -80,6 +82,10 @@ tags: [colors, uiux]
 }
 .color.jazzy-orange {
   background: #f0821e;
+  color: black;
+}
+.color.jazzy-orange .value {
+  color: black;
 }
 .color.red-alert {
   background: #dd3d36;
@@ -89,6 +95,10 @@ tags: [colors, uiux]
 }
 .color.yellow-alert {
   background: #ffba00;
+  color: black;
+}
+.color.yellow-alert .value {
+  color: black;
 }
 </style>
 

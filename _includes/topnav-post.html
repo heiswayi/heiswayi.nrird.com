@@ -1,5 +1,18 @@
 <div class="header">
-    <div class="site-title">
-        <a href="{{ '/' | prepend: site.baseurl }}" class="colorize">{{site.title}}</a> / <a href="{{ '/blog' | prepend: site.baseurl }}">Blog</a>
+    <div class="top-nav">
+        <div class="site-title">
+            <span class="brand-bg"><a href="{{ '/' | prepend: site.baseurl }}"
+                    class="colorize">{{site.title}}</a></span>
+            <div class="theme-toggle">
+                <input type="checkbox" class="checkbox" id="theme-toggle">
+                <label for="theme-toggle" class="checkbox-label">
+                    <i class="fas fa-moon"></i>
+                    <i class="fas fa-sun"></i>
+                    <span class="ball"></span>
+                </label>
+            </div>
+            <a href="{{ '/blog' | prepend: site.baseurl }}">Back to Blog Index</a>
+        </div>
+
     </div>
 </div>

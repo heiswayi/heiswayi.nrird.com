@@ -44,10 +44,19 @@ title: Blog
 					<div class="index-row">
 						<div class="post-date" title="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date: "%y·%m·%d" }}</div>
 						<div class="post-title">
+							{% if post.tags contains "redirect" %}
+								<span class="label">link ↗</span>
+							{% endif %}
+							{% if post.tags contains "sponsored" %}
+								<span class="label">sponsored</span>
+							{% endif %}
+							{% if post.tags contains "snippet" %}
+								<span class="label">snippet</span>
+							{% endif %}
+							{% if post.tags contains "poem" %}
+								<span class="label">poem</span>
+							{% endif %}
 							<a href="{{ post.url }}">
-								{% if post.tags contains "sponsored" %}
-									<span class="label">sponsored</span>
-								{% endif %}
 							{{ post.title }}
 							</a>
 						</div>

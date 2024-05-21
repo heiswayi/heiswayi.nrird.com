@@ -2,7 +2,7 @@
 layout: post
 title: The silent impacts of sleep deprivation
 description: What occurs to the physical and mental aspects of an individual when they experience a deficiency in the sleep they require?
-tags: [sleep-deprivation]
+tags: [sleep-deprivation, lifestyle]
 ---
 
 So, I've been losing sleep lately because I'm hooked on playing online games. I looked into the downsides of this habit, and here's what I've figured out for now. There are probably more bad things, but these are the ones that pop up the most;
@@ -25,6 +25,8 @@ So, I've been losing sleep lately because I'm hooked on playing online games. I 
 
 The amount of sleep needed for adults can vary, but generally, the [National Sleep Foundation](https://www.thensf.org/) provides the following recommendations for different age groups:
 
+|Category|Age Range|Sleep Duration|
+|---|---|---|
 | Young adults | 18-25 years | 7-9 hours per night |
 | Adults | 26-64 years | 7-9 hours per night |
 | Older adults | 65 years and older | 7-8 hours per night |

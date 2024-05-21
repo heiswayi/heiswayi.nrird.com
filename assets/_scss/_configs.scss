@@ -1,16 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Grandstander:ital,wght@0,100..900;1,100..900&display=swap');
+
 $sans-serif: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Cantarell, Ubuntu, roboto, noto, arial, sans-serif;
 $serif: Iowan Old Style, Apple Garamond, Baskerville, Times New Roman, Droid Serif, Times, Source Serif Pro, serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
 $monospace: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
 
-$__DEFAULT: $sans-serif;
-$__CODE: $monospace;
+$__DEFAULT: "Open Sans", sans-serif;
+$__CODE: "DM Mono", monospace;
 
 $font-body: $__DEFAULT;
 $font-heading: $__DEFAULT;
-$font-h1: $__DEFAULT;
-$font-h2: $__DEFAULT;
-$font-h3: $__DEFAULT;
-$font-h456: $__DEFAULT;
+$font-h1: "Grandstander", cursive;
+$font-h2: "Grandstander", cursive;
+$font-h3: "Grandstander", cursive;
+$font-h456: "Grandstander", cursive;
 $font-button: $__CODE;
 $font-topmenu: $__CODE;
 $font-brand: $__CODE;
@@ -48,7 +50,55 @@ $font-footnote: $__CODE;
   --color-black: black;
   --table-row-odd-bg: #f6f6f6;
   --footnote-bg: #f6f6f6;
-  --header-bg: #f6f6f6;
-  --nav-btn-bg: #e9e9e9;
-  --nav-btn-bg-hover: #ccc;
+  --brand-bg: #f6f6f6;
+  --code-syntax-1: #444444;
+  --code-syntax-2: #0000FF;
+  --code-syntax-3: #009C00;
+  --code-syntax-4: #FF0000;
+  --code-syntax-5: #CC00A3;
+  --code-syntax-6: #C34E00;
+  --code-syntax-7: #007575;
+  --code-syntax-8: #C34E00;
+  --theme-toggle-1: #1E2129;
+  --theme-toggle-2: #fff;
+}
+
+html[data-theme='dark'] {
+  --color-navy: navy;
+  --color-blue: #5e8bde;
+  --color-aqua: aqua;
+  --color-teal: teal;
+  --color-olive: olive;
+  --color-green: green;
+  --color-lime: lime;
+  --color-yellow: yellow;
+  --color-orange: orange;
+  --color-red: red;
+  --color-fuchsia: fuchsia;
+  --color-purple: purple;
+  --color-maroon: maroon;
+  --color-white: #1E2129;
+  --color-silver: #353840;
+  --color-gray: #85888F;
+  --color-black: #BCBEC4;
+  --table-row-odd-bg: #272A35;
+  --footnote-bg: #272A35;
+  --brand-bg: #272A35;
+  --code-syntax-1: #BCBEC4;
+  --code-syntax-2: #6ab825;
+  --code-syntax-3: #888888;
+  --code-syntax-4: #ed9d13;
+  --code-syntax-5: #BF40BF;
+  --code-syntax-6: #C34E00;
+  --code-syntax-7: #007575;
+  --code-syntax-8: #C34E00;
+  --theme-toggle-1: #353840;
+  --theme-toggle-2: #1E2129;
+}
+
+.special-font {
+  font-family: "Caveat", cursive;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
 }
