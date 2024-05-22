@@ -1,0 +1,73 @@
+<style>
+.image-gallery {
+    margin-bottom: 2rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    text-align: left;
+}
+.image-gallery .image {
+    break-inside: avoid;
+    page-break-inside: avoid;
+    -webkit-column-break-inside: avoid;
+    margin-bottom: 1rem;
+}
+.image-gallery .image img {
+    margin: 0 0 1rem 0;
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {
+    .image-gallery {
+        column-count: 2;
+        --webkit-column-count: 2;
+        --moz-column-count: 2;
+    }
+}
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 1199px) {
+    .image-gallery {
+        column-count: 4;
+        --webkit-column-count: 4;
+        --moz-column-count: 4;
+    }
+}
+/* Large desktop */
+/* @media (min-width: 1200px) { */
+@media (min-width: 1200px) and (max-width: 1599px) {
+    .image-gallery {
+        column-count: 6;
+        --webkit-column-count: 6;
+        --moz-column-count: 6;
+    }
+}
+@media (min-width: 1600px) {
+    .image-gallery {
+        column-count: 8;
+        --webkit-column-count: 8;
+        --moz-column-count: 8;
+    }
+}
+</style>
+
+<div class="image-gallery">
+{% for file in site.static_files %}
+    {% if file.path contains include.folder %}
+        {% assign fileext = file.extname | downcase %}
+        {% if fileext == '.jpg' or 
+            fileext == '.jpeg' or
+            fileext == '.png' or
+            fileext == '.webp' %}
+
+            {% assign filenameparts = file.path | split: "/" %}
+            {% assign filename = filenameparts | last | replace: file.extname,"" %}
+
+            <div class="image">
+                <a href="{{ file.path }}"><img src="{{ file.path }}" alt="Image: {{ filename }}" /></a>
+            </div>
+        {% endif %}
+    {% endif %}
+{% endfor %}
+</div>

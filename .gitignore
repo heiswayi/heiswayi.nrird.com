@@ -11,6 +11,7 @@ _deleted/
 node_modules/
 *-draft.md
 _draft/
+_trash/
 
 #################
 ## Eclipse
