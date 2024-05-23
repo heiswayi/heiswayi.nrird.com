@@ -3,20 +3,18 @@ layout: page
 title: Now
 ---
 
-{:.muted}
-_This is my "now" page, inspired by [Derek Sivers](https://sive.rs/nowff) and [nownownow.com](https://nownownow.com/)._
-
----
-
+Hi, this is my "now" page!<br>
 I'm based in Penang, 🇲🇾, where the local time here right now is <strong id="localTime">MYLOCALTIME</strong>.
 
-## What I've been doing right now...
+## What I'm doing...
 
 - Procrastinating...
 - Looking for some inspirations to do something meaningful for my life.
 - Looking for interesting book to read.
 
 Last update: 2024-05-23
+
+<small>Inspired by [Derek Sivers](https://sive.rs/nowff) and [nownownow.com](https://nownownow.com/) community.</small>
 
 <script>
 function updateClock() {
