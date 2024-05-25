@@ -9,10 +9,12 @@ I'm based in Penang, 🇲🇾, where the local time here right now is <strong id
 ## What I'm doing...
 
 - Procrastinating...
-- Looking for some inspirations to do something meaningful for my life.
-- Looking for interesting book to read.
+- EValuating my career path... sometimes, looking for better chances.
+- Planning to complete [Elements of AI course](https://course.elementsofai.com/).
+- Planning to complete my reading for "The Psychology of Money" book by Morgan Housel.
+- Looking for new investment vectors...
 
-Last update: 2024-05-23
+Last update: 2024-05-26
 
 <small>Inspired by [Derek Sivers](https://sive.rs/nowff) and [nownownow.com](https://nownownow.com/) community.</small>
 
