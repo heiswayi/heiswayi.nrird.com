@@ -15,9 +15,9 @@ This blog is my little corner of the internet. **I don't write very often**, but
 - [Codeberg](https://codeberg.org/hn) - my another code repo, less GitHub-thingy
 - [CodePen](https://codepen.io/heiswayi/pens/public) - web playground
 - [JSFiddle](https://jsfiddle.net/user/heiswayi/) - another web playground
-- [Flickr](/flickr) - a collection of my landscape photographs that I previously hosted on Flickr site
+- [nrird.com/flickr](/flickr) - a collection of my landscape photographs that I previously hosted on Flickr site
 - [Unsplash](https://unsplash.com/@heiswayi_nrird) - my royalty-free photographs on Unsplash (just trying this Unsplash thing)
-- [Snippets](https://snippets.nrird.com) - used to store my snippets (memos experimental)
+- [snippets.nrird.com](https://snippets.nrird.com) - used to store my snippets (memos experimental)
 
 No socmed profile because I didn't really use them, officially.
 
