@@ -20,21 +20,8 @@
   </div>
 </div>
 
-<script>
-  window.addEventListener('load', () => {
-    setTimeout(() => {
-      const t = window.performance && performance.timing;
-      const round2 = num => Math.round(num * 100) / 100;
-      if (t) {
-        const timingStats = document.querySelector('.page-load');
-        const loadTime = (t.loadEventEnd - t.navigationStart) / 1000;
-        let timingStatsHTML = `page load time: ${round2(loadTime)}s`;
-        timingStats.innerHTML = timingStatsHTML;
-      }
-    }, 0);
-  });
-</script>
+{% include js-page-load-time.html %}
 
-{% include new-window-fix.html %}
+{% include js-new-window-fix.html %}
 
-{% include light-dark-switch.html %}
+{% include js-darkmode-switch.html %}
