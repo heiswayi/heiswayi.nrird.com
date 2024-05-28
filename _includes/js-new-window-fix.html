@@ -1,0 +1,26 @@
+<script>
+    const externalNewWindow = () => {
+        const links = document.getElementsByTagName("a");
+        for (let i = 0; i < links.length; i++) {
+            const link = links[i];
+            if (link.getAttribute("href") && link.hostname !== location.hostname) {
+                link.target = "_blank";
+                link.rel = "noopener";
+            }
+        }
+    };
+    const pdfNewWindow = () => {
+        if (!document.getElementsByTagName) return false;
+        const links = document.getElementsByTagName("a");
+        for (let i = 0; i < links.length; i++) {
+            if (links[i].href.indexOf('.pdf') !== -1 || links[i].href.indexOf('.doc') !== -1 || links[i].href.indexOf('.docx') !== -1) {
+                links[i].onclick = function () {
+                    window.open(this.href);
+                    return false;
+                }
+            }
+        }
+    };
+    pdfNewWindow();
+    externalNewWindow();
+</script>

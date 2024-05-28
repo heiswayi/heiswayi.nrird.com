@@ -1,7 +1,5 @@
 <script>
-
     const storageKey = 'theme-preference';
-
     const onClick = () => {
         theme.value = theme.value === 'light'
             ? 'dark'
@@ -9,7 +7,6 @@
 
         setPreference();
     };
-
     const getColorPreference = () => {
         if (localStorage.getItem(storageKey)) {
             return localStorage.getItem(storageKey);
@@ -19,12 +16,10 @@
                 : 'light';
         }
     };
-
     const setPreference = () => {
         localStorage.setItem(storageKey, theme.value);
         reflectPreference()
     };
-
     const reflectPreference = () => {
         document.firstElementChild
             .setAttribute('data-theme', theme.value);
@@ -41,25 +36,20 @@
                 .removeAttribute('checked');
         }
     };
-
     const theme = {
         value: getColorPreference(),
     };
-
     reflectPreference();
-
     window.onload = () => {
         reflectPreference();
         document
             .querySelector('#theme-toggle')
             .addEventListener('click', onClick);
     };
-
     window
         .matchMedia('(prefers-color-scheme: dark)')
         .addEventListener('change', ({ matches: isDark }) => {
             theme.value = isDark ? 'dark' : 'light';
             setPreference();
         });
-
 </script>
