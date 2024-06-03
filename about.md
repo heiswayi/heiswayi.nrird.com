@@ -15,7 +15,6 @@ This blog is my little corner of the internet. **I don't write very often**, but
 - [Codeberg](https://codeberg.org/hn) - my another code repo, less GitHub-thingy
 - [CodePen](https://codepen.io/heiswayi/pens/public) - web playground
 - [JSFiddle](https://jsfiddle.net/user/heiswayi/) - another web playground
-- [snippets.nrird.com](https://snippets.nrird.com) - used to store my snippets (memos experimental)
 
 No socmed profile because I didn't really use them, officially.
 
