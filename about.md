@@ -5,7 +5,7 @@ title: About
 
 ![Heiswayi Nrird](https://ik.imagekit.io/nrirddotcom/HN/hn_D6guerPbf.jpg?tr=h-200){:.align-right}
 
-Hey there! I'm Heiswayi Nrird, or Wayi for short. I'm a **Software Engineer** at [Keysight Technologies](https://keysight.com). Outside of the code world, I enjoy the serenity of landscape photography and the competitive thrill of computer gaming. I'm based in Penang, MY.
+Hey there! I'm Heiswayi Nrird, or Wayi for short. I'm a Software Development Lead (UI/UX Specialist) at Altera, an [Intel](https://www.intel.com/content/www/us/en/products/programmable.html) company. Outside of the code world, I enjoy the serenity of landscape photography and the competitive thrill of computer gaming. I'm based in Penang, MY.
 
 This blog is my little corner of the internet. **I don't write very often**, but when I do, it would be a place for me to share what's on my mind. Sometimes it's all about coding and tech, other times it's just whatever pops into my head. Think of it as a chill hangout spot for my thoughts! ツ
 

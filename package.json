@@ -22,5 +22,8 @@
     "url": "git+https://github.com/heiswayi/heiswayi.nrird.com.git"
   },
   "author": "Heiswayi Nrird",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "heiswayi.nrird.com": "file:"
+  }
 }
