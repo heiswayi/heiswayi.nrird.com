@@ -9,7 +9,7 @@ Hey there! I'm Heiswayi Nrird, or Wayi for short. I'm a Software Development Lea
 
 This blog is my little corner of the internet. **I don't write very often**, but when I do, it would be a place for me to share what's on my mind. Sometimes it's all about coding and tech, other times it's just whatever pops into my head. Think of it as a chill hangout spot for my thoughts! ツ
 
-- [LinkedIn](https://www.linkedin.com/in/heiswayi) - my career journey profile
+- [LinkedIn](https://www.linkedin.com/in/nrird) - my career journey profile
 - [GitHub](https://github.com/heiswayi) - my code repo
 - [Gist](https://gist.github.com/heiswayi) - my personal pastebin / scratchcodepad
 - [Codeberg](https://codeberg.org/hn) - my another code repo, less GitHub-thingy
