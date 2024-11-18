@@ -9,6 +9,7 @@ I'm based in Penang, 🇲🇾, where the local time here right now is <strong id
 ## What I'm doing...
 
 - Planning to complete my reading for "The Psychology of Money" book by Morgan Housel.
+- Minimizing my life... Removing things I no longer need.
 
 Last update: 2024-09-26
 
