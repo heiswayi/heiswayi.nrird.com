@@ -31,4 +31,4 @@ The evolution of chatbots showcases both technological progress and creative inn
 
 **Update #1:** After a while, I also created [HelloBot](https://github.com/heiswayi/hellobot) and [hnbot](https://github.com/heiswayi/hnbot) which are based on [rivescript-js](https://github.com/aichaos/rivescript-js) and [RiveScript interpreter engine](http://www.rivescript.com/) respectively.
 
-**Update #2:** I managed to back up some of [my mIRC scripts](https://php.nrird.com/mirc/index.php) and also [archives from Yahoo Group](https://php.nrird.com/mirc/index.php?b=mIRC-YahooGroup-Archives-2005).
+**Update #2:** I managed to back up some of [my mIRC scripts](https://public.nrird.com/mirc/index.php) and also [archives from Yahoo Group](https://public.nrird.com/mirc/index.php?b=mIRC-YahooGroup-Archives-2005).
