@@ -8,10 +8,11 @@ I'm based in Penang, 🇲🇾, where the local time here right now is <strong id
 
 ## What I'm doing...
 
-- Planning to complete my reading for "The Psychology of Money" book by Morgan Housel.
-- Minimizing my life... Removing things I no longer need.
+- In progress completing my book reading titled "The Psychology of Money" by Morgan Housel.
+- Becoming minimalist, removing things I no longer need.
+- Diversifying my investment portfolio.
 
-Last update: 2024-09-26
+Last update: 2025-01-05
 
 <small>Inspired by [Derek Sivers](https://sive.rs/nowff) and [nownownow.com](https://nownownow.com/) community.</small>
 
