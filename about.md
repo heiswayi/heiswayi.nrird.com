@@ -7,7 +7,7 @@ title: About
 
 ![Me selfie at Estes Park, Colorado, USA](/assets/hn_h200.jpg){:.align-right}
 
-Hey there! I'm Heiswayi Nrird, or just Wayi. I'm a **Software Development Lead** and **UI/UX Specialist** at [Altera](https://www.altera.com/), an [Intel](https://www.intel.com/) company, based in Penang, 🇲🇾. Beyond the code, I find peace in landscape photography and occasionally dive into the thrill of competitive computer gaming.
+Hey there! I'm Heiswayi Nrird, or just Wayi. I'm a **Software Development Lead** and **UI/UX Specialist** at [Altera](https://www.altera.com/) company, based in Penang, 🇲🇾. Beyond the code, I find peace in landscape photography and occasionally dive into the thrill of competitive computer gaming.
 
 This blog is my little corner of the internet. **I don't write very often**, but when I do, it would be a place for me to share what's on my mind. Sometimes it's all about coding and tech, other times it's just whatever pops into my head. Think of it as a chill hangout spot for my thoughts! ツ
 
